@@ -8,6 +8,9 @@
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.scss';
 
+import 'popper.js'
+import 'bootstrap'
+
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 // import $ from 'jquery';
 
