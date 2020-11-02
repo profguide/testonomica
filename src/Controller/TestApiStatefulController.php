@@ -2,9 +2,12 @@
 
 namespace App\Controller;
 
+use App\Entity\Answer;
 use App\Entity\Test;
-use App\Test\Answer;
-use http\Exception\RuntimeException;
+use App\Service\AnswerService;
+use App\Service\TestService;
+use App\Service\TestSourceService;
+use RuntimeException;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -15,12 +18,18 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class TestApiStatefulController extends TestApiAbstract
 {
+    /**@var AnswerService */
+    private $answerService;
+
+    public function __construct(TestService $testService, TestSourceService $sourceService, AnswerService $answerService)
+    {
+        $this->answerService = $answerService;
+        parent::__construct($testService, $sourceService);
+    }
+
     protected function saveAnswer(Test $test, $questionId, $value): void
     {
-//        $answerValue = $request->get('answer');
-//        $questionId = $request->get('question');
-        $answer = Answer::create($questionId, $value);
-        throw new RuntimeException("Saving is not unsupported yet");
+        $this->answerService->save($test, Answer::create($questionId, $value));
     }
 
     public function end(Test $test)
@@ -43,7 +52,11 @@ class TestApiStatefulController extends TestApiAbstract
 
     public function restore(Test $test)
     {
-        return $this->sourceService->getFirstQuestion($test);
+        if (($lastId = $this->answerService->getLastId($test)) != null) {
+            return $this->sourceService->getNextQuestion($test, $lastId);
+        } else {
+            return $this->sourceService->getFirstQuestion($test);
+        }
     }
 
 //    /**

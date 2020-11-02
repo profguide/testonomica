@@ -8,8 +8,6 @@ namespace App\Controller;
 
 
 use App\Entity\Test;
-use http\Exception\RuntimeException;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -27,13 +25,13 @@ class TestApiStatelessController extends TestApiAbstract
     public function saveResults()
     {
         // todo
-        throw new RuntimeException("Ending is not unsupported yet");
+        throw new \RuntimeException("Ending is not unsupported yet");
     }
 
     public function end(Test $test)
     {
         // todo
-        throw new RuntimeException("Ending is not unsupported yet");
+        throw new \RuntimeException("Ending is not unsupported yet");
     }
 
     protected function saveAnswer(Test $test, string $questionId, string $value): void

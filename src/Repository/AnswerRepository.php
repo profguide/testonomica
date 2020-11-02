@@ -55,6 +55,7 @@ class AnswerRepository
 
     public function getLastIdByTest(Test $test): ?int
     {
+        return array_key_last($this->loadFromSession($test));
     }
 
     /**

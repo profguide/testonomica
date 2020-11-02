@@ -6,8 +6,7 @@
 
 namespace App\Util;
 
-
-use App\Test\Answer;
+use App\Entity\Answer;
 
 class AnswersUtil
 {
