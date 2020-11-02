@@ -2,10 +2,15 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CategoryRepository")
+ * @Vich\Uploadable
  * @author: adavydov
  * @since: 20.10.2020
  */
@@ -38,10 +43,16 @@ class Category
     private $nameEn;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      * @var string
      */
     private $pic;
+
+    /**
+     * @Vich\UploadableField(mapping="thumbnails", fileNameProperty="pic")
+     * @var UploadedFile
+     */
+    private $picFile;
 
     /**
      * @ORM\Column(type="boolean")
@@ -49,12 +60,23 @@ class Category
      */
     private $active;
 
-//    public function __construct(string $slug, string $name)
-//    {
-//        $this->slug = $slug;
-//        $this->name = $name;
-//        $this->active = 1;
-//    }
+    /**
+     * @ORM\Column(type="datetime", name="updated_at")
+     * @var
+     */
+    private $updatedAt;
+
+    /**
+     * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="Test", mappedBy="catalog")
+     */
+    private $tests;
+
+    public function __construct()
+    {
+        $this->tests = new ArrayCollection();
+        $this->updatedAt = new \DateTime('now');
+    }
 
     /**
      * @return int
@@ -115,7 +137,7 @@ class Category
     /**
      * @return string
      */
-    public function getPic(): string
+    public function getPic(): ?string
     {
         return $this->pic;
     }
@@ -123,9 +145,34 @@ class Category
     /**
      * @param string $pic
      */
-    public function setPic(string $pic): void
+    public function setPic(?string $pic): void
     {
         $this->pic = $pic;
+    }
+
+    /**
+     * @return UploadedFile
+     */
+    public function getPicFile()
+    {
+        return $this->picFile;
+    }
+
+    /**
+     * @param UploadedFile $picFile
+     */
+    public function setPicFile($picFile): void
+    {
+        $this->picFile = $picFile;
+        //otherwise the event listeners won't be called and the file is lost
+        if ($picFile) {
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
+
+    public function setActive(int $value): void
+    {
+        $this->active = $value;
     }
 
     /**
@@ -144,5 +191,58 @@ class Category
     public function deActivate(): void
     {
         $this->active = 0;
+    }
+
+    public function getActive(): ?bool
+    {
+        return $this->active;
+    }
+
+    /**
+     * @return Collection|Test[]
+     */
+    public function getTests(): Collection
+    {
+        return $this->tests;
+    }
+
+    public function addTest(Test $test): self
+    {
+        if (!$this->tests->contains($test)) {
+            $this->tests[] = $test;
+            $test->setCatalog($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTest(Test $test): self
+    {
+        if ($this->tests->contains($test)) {
+            $this->tests->removeElement($test);
+            // set the owning side to null (unless already changed)
+            if ($test->getCatalog() === $this) {
+                $test->setCatalog(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->name;
     }
 }

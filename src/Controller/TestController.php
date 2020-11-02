@@ -6,6 +6,7 @@ use App\Entity\Test;
 use App\Form\TestType;
 use App\Service\CategoryService;
 use App\Service\TestService;
+use App\Test\TestStatus;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -16,7 +17,7 @@ use Symfony\Component\Routing\Annotation\Route;
  * Class TestsController
  * @package App\Controller
  */
-class TestsController extends AbstractController
+class TestController extends AbstractController
 {
     private $testService;
     private $categoryService;
@@ -91,9 +92,12 @@ class TestsController extends AbstractController
     {
         $test = $this->loadBySlug($slug);
         self::assertActive($test);
+        $category = $test->getCatalog();
         self::assertTestInCategory($test, $categorySlug);
         return $this->render('tests/view.html.twig', [
             'test' => $test,
+            'category' => $category,
+            'status' => TestStatus::none(),
         ]);
     }
 

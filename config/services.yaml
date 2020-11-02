@@ -29,3 +29,10 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+#    answer-service:
+#      class: \App\Service\TestAnswerService
+#    App\Repository\AnswerRepository:
+#      public: true
+    App\Service\AnswerService:
+          public: true

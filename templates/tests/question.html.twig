@@ -1,0 +1,105 @@
+{% block body %}
+    <style>
+        #testonomica_header {
+            display: none;
+        }
+
+        #testonomica_test__ajax-screen {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+    <script>
+        let count = {{ count }};
+        let progress = {{ progress }};
+        let answers = [];
+        let showAnswer = {{ question.showAnswer ? 'true' : 'false' }};
+        let textOnRight = {{ question.right ? ("'#{question.right}'"|raw) : 'null' }};
+        let textOnWrong = {{ question.wrong ? ("'#{question.wrong}'"|raw) : 'null' }};
+    </script>
+    <form method="post" class="test__question-form">
+        <input type="hidden" name="test" value="{{ test.id }}"/>
+        {% if question.group %}
+            <input type="hidden" name="group" value="{{ question.group }}"/>
+        {% endif %}
+        <input type="hidden" class="question" name="question" value="{{ question.id }}"/>
+        <input type="hidden" name="timer" value="">
+        <article class="test__question-content">
+            <div class="test__top">
+                <div class="container-fluid">
+                    <div class="test__top-inner">
+                        <div class="test__progress-counter"><span class="of">{{ progress }}</span>/<span
+                                    class="out">{{ count }}</span></div>
+                        {#{% if mode != "api" %}#}
+                        {#<a class="test__exit-btn" href="/test/" title="{% trans "Go to all tests" %}"><span class="material-icons">close</span></a>#}
+                        {#{% endif %}#}
+                    </div>
+                </div>
+            </div>
+            <div class="test__quiz test__quiz_{{ question.method|lower }}">
+                <div class="container">
+                    {% if question.img %}
+                        <div class="test__img-wrapper">
+                            <img class="test__img" src="{{ question.img }}" alt="{{ question.name }}"/></div>
+                    {% endif %}
+                    <div class="test__name">{{ progress }}. {{ question.name }}</div>
+                    {% if question.text %}
+                        <div class="test__text">{{ question.text }}</div>
+                    {% endif %}
+                    <div class="test__options_holder">
+                        {% if question.method == 'OPTION' %}
+                            {% for option in question.options %}
+                                <div class="test__option">
+                                    <input type="radio" name="answer" value="{{ option.value }}"
+                                           id="answer-{{ loop.index }}" class="radio"
+                                           data-is-correct="{{ option.correct }}">
+                                    <label for="answer-{{ loop.index }}">{{ option.text }}</label>
+                                    <div class="test__option-reveal"></div>
+                                </div>
+                            {% endfor %}
+                        {% elseif question.method == 'TEXT' %}
+                            {% for option in question.fields %}
+                                <div class="test__option">
+                                    <input type="text" name="answer" id="answer-{{ loop.index }}"
+                                           data-method="TEXT"
+                                           placeholder="{% if option.placeholder %}{{ option.placeholder }}{% endif %}"
+                                           class="form-control">
+                                </div>
+                            {% endfor %}
+                        {% elseif question.method == 'CHECKBOX' %}
+                            {% for option in question.options %}
+                                <div class="test__option">
+                                    <input type="checkbox" name="answer" value="{{ option.value }}"
+                                           id="answer-{{ loop.index }}" data-method="CHECKBOX"
+                                           data-limit="{{ question.count }}" class="checkbox">
+                                    <label for="answer-{{ loop.index }}">{{ option.text }}</label>
+                                </div>
+                            {% endfor %}
+                        {% elseif question.method == 'RATING' %}
+                            {% for option in question.options %}
+                                <div class="test__option">
+                                    <input type="radio" name="answer" value="{{ option.value }}"
+                                           id="answer-{{ loop.index }}" data-method="RATING" class="radio">
+                                    <label for="answer-{{ loop.index }}">{{ option.text }}</label>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="test__btn-row" id="test-question-btn-row">
+                        <button class="test__btn-direct btn btn-light {% if question.enabledBack and progress > 0 %}test__btn-direct_forced{% endif %}"
+                                id="test-question-back-btn"><span class="material-icons">arrow_back</span></button>
+                        <button class="test__btn-direct btn btn-light {% if question.enabledForward or question.method == 'TEXT' %}test__btn-direct_forced{% endif %}"
+                                id="test-question-next-btn"><span class="material-icons">arrow_forward</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="test__progress_line progress">
+                <div class="progress-bar" role="progressbar" style="width: {{ percent }}%" aria-valuenow="{{ percent }}"
+                     aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </article>
+    </form>
+{% endblock %}

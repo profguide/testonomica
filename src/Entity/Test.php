@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\TestRepository"))
@@ -20,15 +21,16 @@ class Test
      */
     private $id;
 
-    /**
-     * @ORM\Column(type="integer", name="catalog_id")
-     * @var int
-     */
-    private $catalogId;
+//    /**
+//     * @ORM\Column(type="integer", name="catalog_id")
+//     * @var int
+//     */
+//    private $catalogId;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Category")
      * @var Category
+     * @ORM\ManyToOne(targetEntity="Category", inversedBy="tests")
+     * @ORM\JoinColumn(name="catalog_id")
      */
     private $catalog;
 
@@ -45,7 +47,7 @@ class Test
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255, name="name_en")
+     * @ORM\Column(type="string", length=255, name="name_en", nullable=true)
      * @var string
      */
     private $nameEn;
@@ -57,7 +59,7 @@ class Test
     private $description;
 
     /**
-     * @ORM\Column(type="text", name="description_en")
+     * @ORM\Column(type="text", name="description_en", nullable=true)
      * @var string
      */
     private $descriptionEn;
@@ -69,7 +71,7 @@ class Test
     private $annotation;
 
     /**
-     * @ORM\Column(type="text", name="annotation_en")
+     * @ORM\Column(type="text", name="annotation_en", nullable=true)
      * @var string
      */
     private $annotationEn;
@@ -124,23 +126,23 @@ class Test
         return $this->id;
     }
 
-    /**
-     * @return int
-     */
-    public function getCatalogId(): int
-    {
-        return $this->catalogId;
-    }
+//    /**
+//     * @return int
+//     */
+//    public function getCatalogId(): int
+//    {
+//        return $this->catalogId;
+//    }
+//
+//    /**
+//     * @param int $catalogId
+//     */
+//    public function setCatalogId(int $catalogId): void
+//    {
+//        $this->catalogId = $catalogId;
+//    }
 
-    /**
-     * @param int $catalogId
-     */
-    public function setCatalogId(int $catalogId): void
-    {
-        $this->catalogId = $catalogId;
-    }
-
-    public function getCatalog()
+    public function getCatalog(): ?Category
     {
         return $this->catalog;
     }
@@ -330,5 +332,15 @@ class Test
     public function setXmlFilename($xmlFilename): void
     {
         $this->xmlFilename = $xmlFilename;
+    }
+
+    public function getActive(): ?bool
+    {
+        return $this->active;
+    }
+
+    public function getActiveEn(): ?bool
+    {
+        return $this->activeEn;
     }
 }

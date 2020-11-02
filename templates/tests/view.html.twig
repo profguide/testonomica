@@ -3,7 +3,35 @@
 {% block title %}{{ test.name }}{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <h1>{{ test.name }}</h1>
+    <div id="test-screens-wrapper" class="lite">
+        <section id="test__preview-screen" class="container" {% if status == 'finished' %} style="display: none"{% endif %}>
+            <form method="post" id="test__start-form">
+                <input type="hidden" name="test" value="{{ test.id }}">
+                {#<input type="hidden" name="mode" value="{{ mode }}">#}
+                {#<div class="test__preview-screen-icon-wrapper">#}
+                    {#<img src="{{ "/images/thumbnails/#{category.pic}" }}" class="test__preview-screen-icon"#}
+                         {#alt="{{ test.name }}"/>#}
+                {#</div>#}
+                <h1 class="test__preview-screen-h1">{{ test.name }}</h1>
+                <div style="text-align: center">
+                    {% if status == 'progress' %}
+                        <p>Вы уже начали прохождение теста:</p>
+                        <a href="#"
+                           class="btn btn-primary btn-pill transition-3d-hover restore-test">Продолжить?</a>
+                        <a href="#"
+                           class="btn btn-light btn-pill transition-3d-hover start-test">Начать сначала</a>
+                    {% else %}
+                        <a href="#"
+                           class="btn btn-primary btn-pill transition-3d-hover start-test">Начать тест</a>
+                    {% endif %}
+                </div>
+                <div class="test__description">{{ test.description|raw }}</div>
+            </form>
+        </section>
+        <section id="test__ajax-screen">
+            {% if status == 'finished' %}
+                {% include "_result.html" %}
+            {% endif %}
+        </section>
     </div>
 {% endblock %}
