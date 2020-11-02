@@ -63,8 +63,6 @@ class TestRepository extends ServiceEntityRepository implements TestRepositoryIn
     /**
      * @param Test $test
      * @return Test
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
      */
     public function save(Test $test): Test
     {
@@ -76,8 +74,6 @@ class TestRepository extends ServiceEntityRepository implements TestRepositoryIn
     /**
      * @param Test $test
      * @return Test
-     * @throws \Doctrine\ORM\ORMException
-     * @throws \Doctrine\ORM\OptimisticLockException
      */
     public function update(Test $test): Test
     {

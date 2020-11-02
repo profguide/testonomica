@@ -46,24 +46,17 @@ abstract class TestApiAbstract extends AbstractController
      */
     public function api(Request $request)
     {
-        $operationName = $this->operationByRequest($request);
-        self::validateAnswerFormat($operationName, $request);
         $test = $this->loadTestByRequest($request);
-        $question = null;
+        $operationName = $this->operationByRequest($request);
+        self::assertFormat($operationName, $request);
         if ($operationName == self::OPERATION_NEXT) {
-            $questionId = $request->get('question');
-            $answerValue = $request->get('answer');
-            $question = $this->sourceService->getNextQuestion($test, $questionId);
-            $this->saveAnswer($test, $questionId, $answerValue);
+            $question = $this->next($test, $request->get('question'));
+            $this->saveAnswer($test, $request->get('question'), $request->get('answer'));
             if (!$question) {
                 return $this->end($test);
             }
         } elseif ($operationName == self::OPERATION_BACK) {
-            $questionId = $request->get('question');
-            $question = $this->sourceService->getPrevQuestion($test, $questionId);
-            if (!$question) {
-                $question = $this->sourceService->getFirstQuestion($test);
-            }
+            $question = $this->back($test, $request->get('question'));
         } elseif ($operationName == self::OPERATION_CLEAR) {
             $question = $this->clear($test);
         } elseif ($operationName == self::OPERATION_RESTORE) {
@@ -91,7 +84,7 @@ abstract class TestApiAbstract extends AbstractController
 
     protected abstract function end(Test $test);
 
-    private static function validateAnswerFormat(string $operationName, Request $request)
+    private static function assertFormat(string $operationName, Request $request)
     {
         $question = $request->get('question');
         $answer = $request->get('answer');
@@ -137,5 +130,15 @@ abstract class TestApiAbstract extends AbstractController
             throw new BadRequestHttpException("\"test\" parameter is required");
         }
         return $this->loadTestById($id);
+    }
+
+    private function back(Test $test, string $questionId)
+    {
+        return $this->sourceService->getPrevQuestion($test, $questionId) ?? $this->sourceService->getFirstQuestion($test);
+    }
+
+    private function next($test, string $questionId)
+    {
+        return $this->sourceService->getNextQuestion($test, $questionId);
     }
 }

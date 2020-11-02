@@ -95,10 +95,16 @@ class Test
     private $activeEn;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=20, nullable=true)
      * @var string|null
      */
     private $xmlFilename;
+
+    /**
+     * @ORM\Column(type="string", length=20, nullable=true)
+     * @var string|null
+     */
+    private $calculatorName;
 
     public static function initDefault(): Test
     {
@@ -332,6 +338,22 @@ class Test
     public function setXmlFilename($xmlFilename): void
     {
         $this->xmlFilename = $xmlFilename;
+    }
+
+    /**
+     * @return null|string
+     */
+    public function getCalculatorName(): ?string
+    {
+        return $this->calculatorName;
+    }
+
+    /**
+     * @param null|string $calculatorName
+     */
+    public function setCalculatorName(?string $calculatorName): void
+    {
+        $this->calculatorName = $calculatorName;
     }
 
     public function getActive(): ?bool

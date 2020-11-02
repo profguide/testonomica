@@ -35,4 +35,6 @@ services:
 #    App\Repository\AnswerRepository:
 #      public: true
     App\Service\AnswerService:
-          public: true
+        public: true
+    App\Service\ResultService:
+        public: true

@@ -3,12 +3,17 @@
 namespace App\Controller;
 
 use App\Entity\Answer;
+use App\Entity\Result;
 use App\Entity\Test;
 use App\Service\AnswerService;
+use App\Service\ResultService;
 use App\Service\TestService;
 use App\Service\TestSourceService;
-use RuntimeException;
+use App\Test\AnswersSerializer;
+use App\Test\TestStatus;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Uid\Uuid;
 
 /**
  * @Route("/tests/api", name="tests_api")
@@ -21,9 +26,22 @@ class TestApiStatefulController extends TestApiAbstract
     /**@var AnswerService */
     private $answerService;
 
-    public function __construct(TestService $testService, TestSourceService $sourceService, AnswerService $answerService)
+    /**@var ResultService */
+    private $resultService;
+
+    /**@var AnswersSerializer */
+    private $serializer;
+
+    public function __construct(
+        TestService $testService,
+        TestSourceService $sourceService,
+        AnswerService $answerService,
+        ResultService $resultService,
+        AnswersSerializer $serializer)
     {
         $this->answerService = $answerService;
+        $this->resultService = $resultService;
+        $this->serializer = $serializer;
         parent::__construct($testService, $sourceService);
     }
 
@@ -34,15 +52,17 @@ class TestApiStatefulController extends TestApiAbstract
 
     public function end(Test $test)
     {
-        // todo
-        throw new RuntimeException("Ending is not unsupported yet");
-//        return new Response(
-//            "Обработка результата",
-//            Response::HTTP_OK,
-//            [
-//                'Access-Control-Expose-Headers' => 'Test-Status',
-//                'Test-Status' => TestStatus::finished()
-//            ]);
+        $answers = $this->answerService->getAll($test);
+        $result = Result::create($test, Uuid::v4(), $this->serializer->serialize($answers));
+        $this->resultService->save($result);
+        return new Response(
+            "Обработка результата",
+            Response::HTTP_OK,
+            [
+                'Access-Control-Expose-Headers' => 'test-status, result-uuid',
+                'test-status' => TestStatus::finished(),
+                'result-uuid' => $result->getUuid(),
+            ]);
     }
 
     public function clear(Test $test)
@@ -58,114 +78,4 @@ class TestApiStatefulController extends TestApiAbstract
             return $this->sourceService->getFirstQuestion($test);
         }
     }
-
-//    /**
-//     * @Route("/stateless", name=".stateless", stateless=true)
-//     * @param Request $request
-//     * @return Response
-//     */
-//    public function stateless(Request $request)
-//    {
-//        return $this->render('tests/question.html.twig', $this->api($request));
-//    }
-//
-//    /**
-//     * @Route("/", name=".stateful")
-//     * @param Request $request
-//     * @return Response
-//     */
-//    public function stateful(Request $request)
-//    {
-//        $operationName = $this->operationByRequest($request);
-//        self::validateAnswerFormat($operationName, $request);
-//        $test = $this->loadTestByRequest($request);
-//        $question = null;
-//        if ($operationName == self::OPERATION_NEXT) {
-//            $question = $this->next($test, $request->get('question'));
-////            $question = $this->sourceService->getNextQuestion($test, $questionId);
-//            if (!$question) {
-//                return new Response(
-//                    "Обработка результата",
-//                    Response::HTTP_OK,
-//                    [
-//                        'Access-Control-Expose-Headers' => 'Test-Status',
-//                        'Test-Status' => TestStatus::finished()
-//                    ]);
-//            }
-//        } elseif ($operationName == self::OPERATION_BACK) {
-//            $question = $this->back($test, $request->get('question'));
-////            $question = $this->sourceService->getPrevQuestion($test, $questionId);
-////            if (!$question) {
-////                $question = $this->sourceService->getFirstQuestion($test);
-////            }
-//        } elseif ($operationName == self::OPERATION_CLEAR) {
-//            $question = $this->first($test);
-////            $question = $this->sourceService->getFirstQuestion($test);
-//        } elseif ($operationName == self::OPERATION_RESTORE) {
-//            $question = $this->restore($test);
-////            $question = $this->sourceService->getFirstQuestion($test);
-//        } else {
-//            throw new RuntimeException("Unknown operation");
-//        }
-//
-////        /**@var QuestionFlowDao $dao */
-////        $dao = $this->api($request);
-////        if ($dao['operation'] == self::OPERATION_NEXT) {
-////            $this->answersService->save($dao['test'], self::answerFromRequest($request));
-////        }
-//////        if ($dao['progress'] == $dao['count']) {
-//////            $uuid = $this->resultService->save($this['test'], $this->answersService->getAll());
-//////            $this->redirect($uuid);
-//////        }
-////        return $this->render('tests/question.html.twig', $dao);
-//    }
-//
-//    private function api(Request $request)
-//    {
-//        // определим тип операции
-//        $operationName = $this->operationByRequest($request);
-//        // провалидизируем формат
-//        self::validateAnswerFormat($operationName, $request);
-//        // найдем тест
-//        $test = $this->loadTestByRequest($request);
-//        $questionId = $request->get('question');
-//        $question = null;
-//        if ($operationName == self::OPERATION_NEXT) {
-////            $time_start = microtime(true);
-//            $question = $this->sourceService->getNextQuestion($test, $questionId);
-////            echo microtime(true) - $time_start;
-////            dd($question);
-//            if (!$question) {
-//                return new Response(
-//                    "Обработка результата",
-//                    Response::HTTP_OK,
-//                    [
-//                        'Access-Control-Expose-Headers' => 'Test-Status',
-//                        'Test-Status' => TestStatus::finished()
-//                    ]);
-//            }
-//        } elseif ($operationName == self::OPERATION_BACK) {
-//            $question = $this->sourceService->getPrevQuestion($test, $questionId);
-//            if (!$question) {
-//                $question = $this->sourceService->getFirstQuestion($test);
-//            }
-//            // todo clear and restore remove to stateful
-//        } elseif ($operationName == self::OPERATION_CLEAR) {
-//            $question = $this->sourceService->getFirstQuestion($test);
-//        } elseif ($operationName == self::OPERATION_RESTORE) {
-//            $question = $this->sourceService->getFirstQuestion($test);
-//        } else {
-//            throw new RuntimeException("Unknown operation");
-//        }
-//        $count = $this->sourceService->getTotalCount($test);
-//        $progress = $this->sourceService->getQuestionNumber($test, $question);
-//        return [
-//            'operation' => $operationName,
-//            'test' => $test,
-//            'question' => $question,
-//            'count' => $count,
-//            'progress' => $progress,
-//            'percent' => $progress * 100 / $count,
-//        ];
-//    }
 }

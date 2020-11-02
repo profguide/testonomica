@@ -26,6 +26,7 @@ class TestFixture extends Fixture
         $test->setActiveEn(1);
         $test->setDuration(5);
         $test->setXmlFilename('test'); // << %kernel.project_dir%/xml/test.xml
+        $test->setCalculatorName('test'); // << %kernel.project_dir%/xml/test.xml
         $manager->persist($test);
         $manager->flush();
     }

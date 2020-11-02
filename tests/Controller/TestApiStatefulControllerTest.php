@@ -9,9 +9,13 @@ namespace App\Tests\Controller;
 
 use App\DataFixtures\TestFixture;
 use App\Entity\Answer;
+use App\Entity\Result;
 use App\Entity\Test;
 use App\Repository\AnswerRepository;
+use App\Repository\ResultRepository;
 use App\Repository\TestRepositoryInterface;
+use App\Test\AnswersSerializer;
+use App\Test\TestStatus;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\DomCrawler\Crawler;
@@ -30,6 +34,12 @@ class TestApiStatefulControllerTest extends WebTestCase
     /**@var AnswerRepository */
     private $answerRepository;
 
+    /**@var ResultRepository */
+    private $resultRepository;
+
+    /**@var AnswersSerializer */
+    private $serializer;
+
     /**@var KernelBrowser */
     private $client;
 
@@ -44,6 +54,8 @@ class TestApiStatefulControllerTest extends WebTestCase
         $this->client = static::createClient();
         $this->testRepository = self::$container->get(TestRepositoryInterface::class);
         $this->answerRepository = self::$container->get(AnswerRepository::class);
+        $this->resultRepository = self::$container->get(ResultRepository::class);
+        $this->serializer = self::$container->get(AnswersSerializer::class);
         $this->session = self::$container->get('session');
         $this->test = $this->testRepository->findOneBySlug(TestFixture::TEST_1_SLUG);
     }
@@ -65,7 +77,35 @@ class TestApiStatefulControllerTest extends WebTestCase
         $this->assertForm($testId, $nextQuestionId);
     }
 
-    // todo next end
+    /*
+     * Next последний
+     * Ожидаем
+     * - сохранение последнего элемента
+     * - сохранение в базу Result
+     * - возврат заголовков и текст
+     */
+    public function testApiNextEnd()
+    {
+        $testId = $this->test->getId();
+        $currentQuestionId = 12;
+        $this->client->request('POST', '/tests/api/', ['test' => $testId, 'question' => $currentQuestionId, 'answer' => 'my-answer']);
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        // ответ сохранён
+        $this->assertEquals(1, $this->answerRepository->count($this->test));
+        // сохранён результат теста
+        $results = $this->resultRepository->findAll();
+        $this->assertCount(1, $results);
+        /**@var Result $result */
+        $result = $results[0];
+        $this->assertEquals('{"12":{"questionId":"12","value":"my-answer"}}', $result->getData());
+        // Текст сообщения
+        $this->assertEquals("Обработка результата", $this->client->getResponse()->getContent());
+        // Заголовки
+        $this->assertEquals('test-status, result-uuid', $this->client->getResponse()->headers->get('access-control-expose-headers'));
+        $this->assertEquals(TestStatus::FINISHED, $this->client->getResponse()->headers->get('test-status'));
+        $this->assertNotNull($this->client->getResponse()->headers->get('result-uuid'));
+    }
+
 
     /**
      * Back

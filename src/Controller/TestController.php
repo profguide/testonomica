@@ -3,12 +3,13 @@
 namespace App\Controller;
 
 use App\Entity\Test;
-use App\Form\TestType;
+use App\Service\CalculatorService;
 use App\Service\CategoryService;
+use App\Service\ResultService;
 use App\Service\TestService;
 use App\Test\TestStatus;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -19,13 +20,28 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class TestController extends AbstractController
 {
+    /**@var TestService */
     private $testService;
+
+    /**@var CategoryService */
     private $categoryService;
 
-    public function __construct(TestService $testService, CategoryService $categoryService)
+    /**@var ResultService */
+    private $resultService;
+
+    /**@var CalculatorService */
+    private $calculatorService;
+
+    public function __construct(
+        TestService $testService,
+        CategoryService $categoryService,
+        ResultService $resultService,
+        CalculatorService $calculatorService)
     {
         $this->testService = $testService;
         $this->categoryService = $categoryService;
+        $this->resultService = $resultService;
+        $this->calculatorService = $calculatorService;
     }
 
     /**
@@ -41,45 +57,17 @@ class TestController extends AbstractController
     }
 
     /**
-     * @Route("/create/", name="create")
-     * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/result/{uuid}/", name="result")
+     * @param string $uuid
+     * @return Response
      */
-    public function create(Request $request)
+    public function result(string $uuid)
     {
-        $test = Test::initDefault();
-        $form = $this->createForm(TestType::class, $test);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $test = $form->getData();
-            $test = $this->testService->create($test);
-            $this->addFlash('success', 'Saved!');
-            return $this->redirect($this->generateUrl('tests.update', ['id' => $test->getId()]));
-        }
-        return $this->render('tests/form.html.twig', [
-            'form' => $form->createView(),
-        ]);
-    }
-
-    /**
-     * @Route("/update/{id}/", name="update")
-     * @param Test $test
-     * @param Request $request
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function update(Test $test, Request $request)
-    {
-        $form = $this->createForm(TestType::class, $test);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $test = $form->getData();
-            $test = $this->testService->update($test);
-            $this->addFlash('success', 'Saved!');
-            return $this->redirect($this->generateUrl('tests.update', ['id' => $test->getId()]));
-        }
-        return $this->render('tests/form.html.twig', [
-            'form' => $form->createView(),
-        ]);
+        $result = $this->loadResultByUuid($uuid);
+        $test = $result->getTest();
+        return $this->render('tests/result.html.twig', array_merge([
+            'test' => $test,
+        ], $this->calculatorService->calculate($test, $result)));
     }
 
     /**
@@ -97,7 +85,7 @@ class TestController extends AbstractController
         return $this->render('tests/view.html.twig', [
             'test' => $test,
             'category' => $category,
-            'status' => TestStatus::none(),
+            'status' => TestStatus::none(), // <<
         ]);
     }
 
@@ -122,4 +110,51 @@ class TestController extends AbstractController
             throw new NotFoundHttpException();
         }
     }
+
+    private function loadResultByUuid(string $uuid)
+    {
+        return $this->resultService->findByUuid($uuid);
+    }
 }
+
+///**
+// * @Route("/create/", name="create")
+// * @param Request $request
+// * @return \Symfony\Component\HttpFoundation\Response
+// */
+//public function create(Request $request)
+//{
+//    $test = Test::initDefault();
+//    $form = $this->createForm(TestType::class, $test);
+//    $form->handleRequest($request);
+//    if ($form->isSubmitted() && $form->isValid()) {
+//        $test = $form->getData();
+//        $test = $this->testService->create($test);
+//        $this->addFlash('success', 'Saved!');
+//        return $this->redirect($this->generateUrl('tests.update', ['id' => $test->getId()]));
+//    }
+//    return $this->render('tests/form.html.twig', [
+//        'form' => $form->createView(),
+//    ]);
+//}
+//
+///**
+// * @Route("/update/{id}/", name="update")
+// * @param Test $test
+// * @param Request $request
+// * @return \Symfony\Component\HttpFoundation\Response
+// */
+//public function update(Test $test, Request $request)
+//{
+//    $form = $this->createForm(TestType::class, $test);
+//    $form->handleRequest($request);
+//    if ($form->isSubmitted() && $form->isValid()) {
+//        $test = $form->getData();
+//        $test = $this->testService->update($test);
+//        $this->addFlash('success', 'Saved!');
+//        return $this->redirect($this->generateUrl('tests.update', ['id' => $test->getId()]));
+//    }
+//    return $this->render('tests/form.html.twig', [
+//        'form' => $form->createView(),
+//    ]);
+//}

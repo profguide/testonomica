@@ -9,8 +9,8 @@ namespace App\Entity;
 
 class Answer
 {
-    private $questionId;
-    private $value;
+    public $questionId;
+    public $value;
 
     private function __construct(string $id, string $value)
     {
