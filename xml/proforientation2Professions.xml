@@ -683,19 +683,7 @@
         </combs>
     </profession>
     <profession>
-        <name>Каскадёр</name>
-        <combs>
-            <comb comb="body"/>
-        </combs>
-    </profession>
-    <profession>
         <name>Спортсмен</name>
-        <combs>
-            <comb comb="body"/>
-        </combs>
-    </profession>
-    <profession>
-        <name>Spa-терапевт</name>
         <combs>
             <comb comb="body"/>
         </combs>
@@ -959,4 +947,16 @@
             <comb comb="com,it"/>
         </combs>
     </profession>
+    <!--<profession>-->
+    <!--<name>Каскадёр</name>-->
+    <!--<combs>-->
+    <!--<comb comb="body"/>-->
+    <!--</combs>-->
+    <!--</profession>-->
+    <!--<profession>-->
+        <!--<name>Spa-терапевт</name>-->
+        <!--<combs>-->
+            <!--<comb comb="natural,body"/>-->
+        <!--</combs>-->
+    <!--</profession>-->
 </professions>
