@@ -114,48 +114,9 @@ class TestController extends AbstractController
 
     private function loadResultByUuid(string $uuid)
     {
-        return $this->resultService->findByUuid($uuid);
+        if (($result = $this->resultService->findByUuid($uuid)) == null) {
+            throw new NotFoundHttpException();
+        }
+        return $result;
     }
 }
-
-///**
-// * @Route("/create/", name="create")
-// * @param Request $request
-// * @return \Symfony\Component\HttpFoundation\Response
-// */
-//public function create(Request $request)
-//{
-//    $test = Test::initDefault();
-//    $form = $this->createForm(TestType::class, $test);
-//    $form->handleRequest($request);
-//    if ($form->isSubmitted() && $form->isValid()) {
-//        $test = $form->getData();
-//        $test = $this->testService->create($test);
-//        $this->addFlash('success', 'Saved!');
-//        return $this->redirect($this->generateUrl('tests.update', ['id' => $test->getId()]));
-//    }
-//    return $this->render('tests/form.html.twig', [
-//        'form' => $form->createView(),
-//    ]);
-//}
-//
-///**
-// * @Route("/update/{id}/", name="update")
-// * @param Test $test
-// * @param Request $request
-// * @return \Symfony\Component\HttpFoundation\Response
-// */
-//public function update(Test $test, Request $request)
-//{
-//    $form = $this->createForm(TestType::class, $test);
-//    $form->handleRequest($request);
-//    if ($form->isSubmitted() && $form->isValid()) {
-//        $test = $form->getData();
-//        $test = $this->testService->update($test);
-//        $this->addFlash('success', 'Saved!');
-//        return $this->redirect($this->generateUrl('tests.update', ['id' => $test->getId()]));
-//    }
-//    return $this->render('tests/form.html.twig', [
-//        'form' => $form->createView(),
-//    ]);
-//}
