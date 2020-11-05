@@ -158,14 +158,9 @@
         </combs>
     </profession>
     <profession>
-        <name>Торговый представитель</name>
+        <name>Специалист по продажам</name>
         <combs>
-            <comb comb="com"/>
-        </combs>
-    </profession>
-    <profession>
-        <name>Менеджер по туризму</name>
-        <combs>
+            <comb comb="com,math"/>
             <comb comb="com"/>
         </combs>
     </profession>
