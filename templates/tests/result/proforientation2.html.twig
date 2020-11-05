@@ -1,0 +1,13 @@
+{% extends('tests/result.html.twig') %}
+
+{% block body %}
+
+    <div class="container">
+        <ul>
+        {% for name, value in professions %}
+            <li>{{ name }}: {{ value }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}

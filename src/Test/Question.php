@@ -281,4 +281,18 @@ class Question
     {
         $this->fields[] = $field;
     }
+
+    public function getCorrectValues()
+    {
+        $values = [];
+        if ($this->method == self::METHOD_TEXT) {
+            /**@var Field $field */
+            foreach ($this->fields as $field) {
+                $values[] = $field->getCorrect();
+            }
+        } else {
+            throw new \RuntimeException('Not supported for other types yet');
+        }
+        return $values;
+    }
 }

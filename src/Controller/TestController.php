@@ -7,6 +7,7 @@ use App\Service\CalculatorService;
 use App\Service\CategoryService;
 use App\Service\ResultService;
 use App\Service\TestService;
+use App\Test\ResultUtil;
 use App\Test\TestStatus;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -65,9 +66,9 @@ class TestController extends AbstractController
     {
         $result = $this->loadResultByUuid($uuid);
         $test = $result->getTest();
-        return $this->render('tests/result.html.twig', array_merge([
-            'test' => $test,
-        ], $this->calculatorService->calculate($test, $result)));
+        $resultData = $this->calculatorService->calculate($test, $result);
+        return $this->render('tests/result/' . ResultUtil::resolveViewName($test) . '.html.twig',
+            array_merge(['test' => $test], $resultData));
     }
 
     /**

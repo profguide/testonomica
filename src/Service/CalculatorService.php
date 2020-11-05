@@ -12,17 +12,22 @@ use App\Entity\Test;
 use App\Test\AnswersHolder;
 use App\Test\AnswersSerializer;
 use App\Test\CalculatorInterface;
+use Symfony\Component\HttpKernel\KernelInterface;
 
 class CalculatorService
 {
     /**@var AnswersSerializer */
     private $serializer;
 
+    /**@var KernelInterface */
+    private $kernel;
+
     const CALCULATORS_NAMESPACE = '\App\Test\Calculator\\';
 
-    public function __construct(AnswersSerializer $serializer)
+    public function __construct(AnswersSerializer $serializer, KernelInterface $kernel)
     {
         $this->serializer = $serializer;
+        $this->kernel = $kernel;
     }
 
     public function calculate(Test $test, Result $result): array
@@ -34,7 +39,7 @@ class CalculatorService
     private function getCalculator(Test $test): CalculatorInterface
     {
         $calculatorName = self::CALCULATORS_NAMESPACE . ucfirst($this->resolveCalculatorName($test)) . 'Calculator';
-        return new $calculatorName();
+        return new $calculatorName($this->kernel);
     }
 
     private function resolveCalculatorName(Test $test): string

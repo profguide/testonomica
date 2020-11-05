@@ -18,7 +18,7 @@ window.testonomica = (function () {
             window.location.replace(window.testonomica.resultUrl(uuid));
         },
         'resultUrl': function (uuid) {
-            return "/test/r/" + uuid + "/";
+            return "/tests/result/" + uuid + "/";
         }
     }
 })();

@@ -16,7 +16,7 @@ class Field
 
     public function __construct($type, $placeholder, $correct)
     {
-        $this->type = $type; // todo assert type or even create FieldType class
+        $this->type = $type; // todo assert type
         $this->placeholder = $placeholder;
         $this->correct = $correct;
     }

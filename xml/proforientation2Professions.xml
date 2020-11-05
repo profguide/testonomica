@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<professions>
+    <profession>
+        <name>Архитектор</name>
+        <combs>
+            <comb comb="art,tech"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Актёр</name>
+        <combs>
+            <comb comb="human,body,art,com"/>
+            <comb comb="body,art,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Режиссер</name>
+        <combs>
+            <comb comb="human,art,com"/>
+            <comb comb="human,art"/>
+            <comb comb="art"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Кинооператор</name>
+        <combs>
+            <comb comb="art"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Звукорежиссер</name>
+        <combs>
+            <comb comb="art"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Гример</name>
+        <combs>
+            <comb comb="art,craft"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Мастер маникюра</name>
+        <combs>
+            <comb comb="art,craft"/>
+            <comb comb="craft"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Дизайнер</name>
+        <combs>
+            <comb comb="art"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Дизайнер интерьера</name>
+        <combs>
+            <comb comb="art,com,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Композитор</name>
+        <combs>
+            <comb comb="art"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Музыкант-исполнитель</name>
+        <combs>
+            <comb comb="art"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Клоун</name>
+        <combs>
+            <comb comb="body,art,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Скульптор</name>
+        <combs>
+            <comb comb="craft,art"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Художник-живописец</name>
+        <combs>
+            <comb comb="art"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Искусствовед</name>
+        <combs>
+            <comb comb="human"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Ювелир</name>
+        <combs>
+            <comb comb="art,craft"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Хореограф</name>
+        <combs>
+            <comb comb="art,body,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Стилист</name>
+        <combs>
+            <comb comb="art,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Мастер кукол</name>
+        <combs>
+            <comb comb="art,craft"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Парикмахер</name>
+        <combs>
+            <comb comb="art,craft"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Танцор</name>
+        <combs>
+            <comb comb="art,body"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Маркетолог</name>
+        <combs>
+            <comb comb="boss,human,math"/>
+            <comb comb="human,math"/>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Логист</name>
+        <combs>
+            <comb comb="com,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Баер</name>
+        <combs>
+            <comb comb="com,math"/>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Специалист по таможенному оформлению</name>
+        <combs>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Торговый представитель</name>
+        <combs>
+            <comb comb="com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Менеджер по туризму</name>
+        <combs>
+            <comb comb="com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Риэлтор</name>
+        <combs>
+            <comb comb="com,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Продюсер</name>
+        <combs>
+            <comb comb="com,boss"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Товаровед</name>
+        <combs>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Юрист</name>
+        <combs>
+            <comb comb="com,human"/>
+            <comb comb="human"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Военнослужащий (солдат, боец)</name>
+        <combs>
+            <comb comb="body,war,com"/>
+            <comb comb="body,war"/>
+            <comb comb="war"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Полицейский</name>
+        <combs>
+            <comb comb="body,war,com"/>
+            <comb comb="body,war"/>
+            <comb comb="war"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Социолог</name>
+        <combs>
+            <comb comb="human,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Философ</name>
+        <combs>
+            <comb comb="human"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Политолог</name>
+        <combs>
+            <comb comb="human"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Психолог</name>
+        <combs>
+            <comb comb="human,com,natural"/>
+            <comb comb="human,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Литературный редактор</name>
+        <combs>
+            <comb comb="human"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>PR-менеджер</name>
+        <combs>
+            <comb comb="com,human"/>
+            <comb comb="human"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Переводчик</name>
+        <combs>
+            <comb comb="human,com"/>
+            <comb comb="human"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Филолог</name>
+        <combs>
+            <comb comb="human"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Журналист</name>
+        <combs>
+            <comb comb="human,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Дипломат</name>
+        <combs>
+            <comb comb="com,human"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Социальный работник</name>
+        <combs>
+            <comb comb="com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Учитель</name>
+        <combs>
+            <comb comb="human,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Повар</name>
+        <combs>
+            <comb comb="craft,body"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Бионформатик</name>
+        <combs>
+            <comb comb="math,natural"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Зоолог</name>
+        <combs>
+            <comb comb="natural"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Ботаник</name>
+        <combs>
+            <comb comb="natural"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Геолог</name>
+        <combs>
+            <comb comb="tech,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Генетик</name>
+        <combs>
+            <comb comb="natural,math"/>
+            <comb comb="natural"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Почвовед</name>
+        <combs>
+            <comb comb="natural,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Эколог</name>
+        <combs>
+            <comb comb="natural,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Химик-технолог</name>
+        <combs>
+            <comb comb="natural,tech,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Физик-теоретик</name>
+        <combs>
+            <comb comb="tech,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Астрофизик</name>
+        <combs>
+            <comb comb="tech,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Геофизик</name>
+        <combs>
+            <comb comb="tech,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Зооинженер</name>
+        <combs>
+            <comb comb="natural,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Садовник</name>
+        <combs>
+            <comb comb="natural,body,craft"/>
+            <comb comb="body,craft"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Океанолог</name>
+        <combs>
+            <comb comb="natural,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Пчеловод</name>
+        <combs>
+            <comb comb="natural,body,craft"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Флорист</name>
+        <combs>
+            <comb comb="art,craft"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Кинолог</name>
+        <combs>
+            <comb comb="natural,body,com"/>
+            <comb comb="body,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Фармаколог</name>
+        <combs>
+            <comb comb="natural,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Материаловед</name>
+        <combs>
+            <comb comb="tech,math"/>
+            <comb comb="tech"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Пилот</name>
+        <combs>
+            <comb comb="tech,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Мехатроник (робототехник)</name>
+        <combs>
+            <comb comb="tech,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Сервисный инженер</name>
+        <combs>
+            <comb comb="tech"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Инженер-разработчик оборудования</name>
+        <combs>
+            <comb comb="tech,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Фрезеровщик</name>
+        <combs>
+            <comb comb="craft"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Слесарь</name>
+        <combs>
+            <comb comb="craft"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Водитель поезда</name>
+        <combs>
+            <comb comb="craft"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Автомеханик</name>
+        <combs>
+            <comb comb="body,craft"/>
+            <comb comb="craft"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Электрик (электромонтер)</name>
+        <combs>
+            <comb comb="tech,body,craft"/>
+            <comb comb="tech,craft"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Сметчик</name>
+        <combs>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Технолог пищевого производства</name>
+        <combs>
+            <comb comb="natural,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Капитан речного или морского корабля</name>
+        <combs>
+            <comb comb="body,tech"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>MICE-менеджер</name>
+        <combs>
+            <comb comb="com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Бортпроводник</name>
+        <combs>
+            <comb comb="body,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Математик</name>
+        <combs>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Аналитик больших данных</name>
+        <combs>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Медсестра</name>
+        <combs>
+            <comb comb="body,natural,com"/>
+            <comb comb="body,natural"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Врач</name>
+        <combs>
+            <comb comb="natural,com,body"/>
+            <comb comb="natural,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Врач лабораторной диагностики</name>
+        <combs>
+            <comb comb="natural"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Массажист</name>
+        <combs>
+            <comb comb="natural,body"/>
+            <comb comb="body"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Фармацевт</name>
+        <combs>
+            <comb comb="natural,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Психотерапевт</name>
+        <combs>
+            <comb comb="natural,human,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Психиатр</name>
+        <combs>
+            <comb comb="natural,human,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Тренер ЛФК</name>
+        <combs>
+            <comb comb="natural,body,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Ветеринар</name>
+        <combs>
+            <comb comb="natural,body"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Учитель</name>
+        <combs>
+            <comb comb="human,com"/>
+            <comb comb="tech,com"/>
+            <comb comb="natural,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Логопед</name>
+        <combs>
+            <comb comb="natural,human,com"/>
+            <comb comb="human,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Менеджер по персоналу</name>
+        <combs>
+            <comb comb="human,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Менеджер в спорте</name>
+        <combs>
+            <comb comb="com,math,boss"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Печник</name>
+        <combs>
+            <comb comb="craft,body"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Столяр</name>
+        <combs>
+            <comb comb="craft,body"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Плотник</name>
+        <combs>
+            <comb comb="craft,body"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Маляр</name>
+        <combs>
+            <comb comb="craft,body"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Священник</name>
+        <combs>
+            <comb comb="human,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Сантехник</name>
+        <combs>
+            <comb comb="craft,body"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Кузнец</name>
+        <combs>
+            <comb comb="craft,body"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Сварщик</name>
+        <combs>
+            <comb comb="craft,body"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Грумер</name>
+        <combs>
+            <comb comb="craft,body"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Бармен</name>
+        <combs>
+            <comb comb="craft,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Бариста</name>
+        <combs>
+            <comb comb="craft,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Отельер</name>
+        <combs>
+            <comb comb="com,boss,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Менеджер хозяйственной службы</name>
+        <combs>
+            <comb comb="hoz,math,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Инструктор по туризму</name>
+        <combs>
+            <comb comb="body,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Гид-экскурсовод</name>
+        <combs>
+            <comb comb="human,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Спасатель МЧС, пожарный</name>
+        <combs>
+            <comb comb="body"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Каскадёр</name>
+        <combs>
+            <comb comb="body"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Спортсмен</name>
+        <combs>
+            <comb comb="body"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Spa-терапевт</name>
+        <combs>
+            <comb comb="body"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Спортивный, фитнес тренер</name>
+        <combs>
+            <comb comb="body,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Технолог промышленности</name>
+        <combs>
+            <comb comb="tech,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Менеджер проектов</name>
+        <combs>
+            <comb comb="com,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Менеджер инженерных проектов</name>
+        <combs>
+            <comb comb="com,math,tech"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Менеджер строительных проектов</name>
+        <combs>
+            <comb comb="com,math,tech"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Финансовый аналитик</name>
+        <combs>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Бухгалтер</name>
+        <combs>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Аудитор</name>
+        <combs>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Финансовый брокер</name>
+        <combs>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Страховой агент</name>
+        <combs>
+            <comb comb="com,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Актуарий</name>
+        <combs>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Финансовый консультант</name>
+        <combs>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Экономист, специалист по управленческому учёту</name>
+        <combs>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Налоговый консультант</name>
+        <combs>
+            <comb comb="math,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Налоговый инспектор</name>
+        <combs>
+            <comb comb="math,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Риск-менеджер</name>
+        <combs>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Финансовый обозреватель рынков</name>
+        <combs>
+            <comb comb="math,human"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Аналитик финансовых рынков</name>
+        <combs>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Разработчик компьютерных программ</name>
+        <combs>
+            <comb comb="tech,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Системный администратор</name>
+        <combs>
+            <comb comb="tech,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Специалист по информационной безопасности</name>
+        <combs>
+            <comb comb="tech,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Бизнес-аналитик</name>
+        <combs>
+            <comb comb="math,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Uх-дизайнер</name>
+        <combs>
+            <comb comb="com,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Ui-дизайнер</name>
+        <combs>
+            <comb comb="art"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Тестировщик программного обеспечения</name>
+        <combs>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Интернет-маркетолог</name>
+        <combs>
+            <comb comb="human,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Менеджер IT-проекта</name>
+        <combs>
+            <comb comb="com,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>SEO-специалист</name>
+        <combs>
+            <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Гейм-дизайнер</name>
+        <combs>
+            <comb comb="art,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>3D-визуализатор</name>
+        <combs>
+            <comb comb="art,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Компьютерный лингвист</name>
+        <combs>
+            <comb comb="math,human"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Web-дизайнер</name>
+        <combs>
+            <comb comb="art"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Проводник вагонов</name>
+        <combs>
+            <comb comb="body,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Историк</name>
+        <combs>
+            <comb comb="human"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Архивариус</name>
+        <combs>
+            <comb comb="human"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Девопс-инженер</name>
+        <combs>
+            <comb comb="tech,math"/>
+        </combs>
+    </profession>
+</professions>

@@ -6,12 +6,38 @@
 
 namespace App\Util;
 
-use App\Entity\Answer;
+use App\Test\AnswersHolder;
+use App\Test\Question;
 
 class AnswersUtil
 {
-    public static function toJson(Answer $answer): string
+    /**
+     * todo write description and how to use
+     * @param array $questions
+     * @param AnswersHolder $answersHolder
+     * @return int
+     */
+    public static function sum(array $questions, AnswersHolder $answersHolder)
     {
-        return json_encode($answer);
+        $sum = 0;
+        /**@var Question $question */
+        foreach ($questions as $question) {
+            $value = $answersHolder->getValue($question->getId()) ?? 0;
+            if ($question->getMethod() == Question::METHOD_OPTION) {
+                $sum += (int)$value;
+            } elseif ($question->getMethod() == Question::METHOD_TEXT) {
+                $correctValues = $question->getCorrectValues();
+//                if (count($correctValues) == count($value))... когда $value будет массивом
+                if (in_array($value, $correctValues)) {
+                    $sum += 1;
+                }
+            } elseif ($question->getMethod() == Question::METHOD_OPTION) {
+                // todo
+                throw new \RuntimeException('Not supported other methods yet');
+            } else {
+                throw new \RuntimeException('Unsupportable method');
+            }
+        }
+        return $sum;
     }
 }
