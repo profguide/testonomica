@@ -956,4 +956,12 @@
             <comb comb="hoz"/>
         </combs>
     </profession>
+    <profession>
+        <name>Продуктовый менеджер</name>
+        <combs>
+            <comb comb="com,math,it"/>
+            <comb comb="com,math"/>
+            <comb comb="com,it"/>
+        </combs>
+    </profession>
 </professions>
