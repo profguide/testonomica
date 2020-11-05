@@ -816,19 +816,29 @@
     <profession>
         <name>Разработчик компьютерных программ</name>
         <combs>
+            <comb comb="it,tech,math"/>
+            <comb comb="it,tech"/>
+            <comb comb="it,math"/>
             <comb comb="tech,math"/>
+            <comb comb="it"/>
         </combs>
     </profession>
     <profession>
         <name>Системный администратор</name>
         <combs>
+            <comb comb="tech,math,it"/>
             <comb comb="tech,math"/>
+            <comb comb="tech,it"/>
+            <comb comb="it"/>
         </combs>
     </profession>
     <profession>
         <name>Специалист по информационной безопасности</name>
         <combs>
+            <comb comb="tech,math,it"/>
             <comb comb="tech,math"/>
+            <comb comb="tech,it"/>
+            <comb comb="it"/>
         </combs>
     </profession>
     <profession>
@@ -840,43 +850,61 @@
     <profession>
         <name>Uх-дизайнер</name>
         <combs>
+            <comb comb="it,com,math"/>
+            <comb comb="it,com"/>
             <comb comb="com,math"/>
         </combs>
     </profession>
     <profession>
         <name>Ui-дизайнер</name>
         <combs>
+            <comb comb="art,it,com"/>
+            <comb comb="art,it"/>
             <comb comb="art"/>
         </combs>
     </profession>
     <profession>
         <name>Тестировщик программного обеспечения</name>
         <combs>
-            <comb comb="math"/>
+            <comb comb="it,math"/>
+            <comb comb="it"/>
         </combs>
     </profession>
     <profession>
         <name>Интернет-маркетолог</name>
         <combs>
+            <comb comb="human,math,it"/>
             <comb comb="human,math"/>
         </combs>
     </profession>
     <profession>
         <name>Менеджер IT-проекта</name>
         <combs>
-            <comb comb="com,math"/>
+            <comb comb="it,com,math"/>
+            <comb comb="it,com"/>
         </combs>
     </profession>
     <profession>
         <name>SEO-специалист</name>
         <combs>
+            <comb comb="math,com,it"/>
+            <comb comb="math,com"/>
             <comb comb="math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>SMM</name>
+        <combs>
+            <comb comb="human,it,com"/>
+            <comb comb="human,it"/>
+            <comb comb="human"/>
         </combs>
     </profession>
     <profession>
         <name>Гейм-дизайнер</name>
         <combs>
-            <comb comb="art,com"/>
+            <comb comb="art,com,it,human"/>
+            <comb comb="art,com,it"/>
         </combs>
     </profession>
     <profession>
@@ -919,6 +947,13 @@
         <name>Девопс-инженер</name>
         <combs>
             <comb comb="tech,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Гостиничный менеджер</name>
+        <combs>
+            <comb comb="hoz,com"/>
+            <comb comb="hoz"/>
         </combs>
     </profession>
 </professions>
