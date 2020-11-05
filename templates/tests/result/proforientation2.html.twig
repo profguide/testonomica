@@ -3,11 +3,29 @@
 {% block body %}
 
     <div class="container">
+        <h3>Профессии:</h3>
         <ul>
-        {% for name, value in professions %}
-            <li>{{ name }}: {{ value }}</li>
-        {% endfor %}
+            {% for name, value in professions %}
+                <li>{{ name }}: {{ value }}</li>
+            {% endfor %}
         </ul>
+        <hr/>
+        <h3>DEBUG</h3>
+        <div class="card card-body">
+            <h4>Типы со сгруппированными значениями</h4>
+            <ol>
+                {% for name, value in types_single_percent %}
+                    <li>{{ name }}: {{ value }}%</li>
+                {% endfor %}
+            </ol>
+        </div>
+        <div class="card card-body mt-4">
+            <h4>Типы и значения по группам (усилия | интерес | способности)</h4>
+            <ol>
+                {% for name, value in types_group_percent %}
+                    <li>{{ name }}: {{ value.0 }} | {{ value.1 }} | {{ value.2 }}%</li>
+                {% endfor %}
+            </ol>
+        </div>
     </div>
-
 {% endblock %}

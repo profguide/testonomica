@@ -32,8 +32,12 @@ class Proforientation2Calculator implements CalculatorInterface
 
     public function calculate(AnswersHolder $answersHolder): array
     {
-        $professions = $this->stepCalculateByTypesPercent($this->sumTypesGroups($this->calculateTypesGroups($answersHolder)));
+        $typesGroupsPercent = $this->calculateTypesGroups($answersHolder);
+        $typesSinglePercent = $this->sumTypesGroups($typesGroupsPercent);
+        $professions = $this->stepCalculateByTypesPercent($typesSinglePercent);
         return [
+            'types_group_percent' => $typesGroupsPercent,
+            'types_single_percent' => $typesSinglePercent,
             'professions' => $professions
         ];
     }
@@ -79,7 +83,7 @@ class Proforientation2Calculator implements CalculatorInterface
     {
         $result = [];
         foreach ($typesScored as $name => $groups) {
-            $result[$name] = array_sum($groups) / count($groups);
+            $result[$name] = round(array_sum($groups) / count($groups));
         }
         return $result;
     }
