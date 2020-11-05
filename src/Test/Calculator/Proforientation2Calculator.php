@@ -38,6 +38,7 @@ class Proforientation2Calculator implements CalculatorInterface
         return [
             'types_group_percent' => $typesGroupsPercent,
             'types_single_percent' => $typesSinglePercent,
+            'types_top' => $this->filterTopTypes($typesSinglePercent),
             'professions' => $professions
         ];
     }

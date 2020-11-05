@@ -12,6 +12,14 @@
         <hr/>
         <h3>DEBUG</h3>
         <div class="card card-body">
+            <h4>Топовые типы</h4>
+            <ol>
+                {% for name, value in types_top %}
+                    <li>{{ name }}: {{ value }}%</li>
+                {% endfor %}
+            </ol>
+        </div>
+        <div class="card card-body mt-4">
             <h4>Типы со сгруппированными значениями</h4>
             <ol>
                 {% for name, value in types_single_percent %}
