@@ -507,14 +507,11 @@
         <!-- Телесник -->
         <!-- Телесник: Усилия -->
         <item id="300" group="body-force">
-            <name>Что из этого делаешь с удовольствием?</name>
+            <name>Что из этого делаешь систематически и с удовольствием?</name>
             <options>
-                <option value="1">пилить</option>
-                <option value="1">стрелять</option>
                 <option value="1">делать массаж</option>
                 <option value="1">плыть</option>
                 <option value="1">танцевать</option>
-                <option value="1">петь</option>
                 <option value="1">бежать</option>
                 <option value="1">качать мышцы</option>
                 <option value="0">ничего из этого</option>
@@ -524,8 +521,8 @@
             <name>Занимались ли вы физическими упражнениями, спортом, танцами?</name>
             <options>
                 <option value="1">Да, я это делаю систематически и с удовольствием</option>
-                <option value="1">Да, я это делаю потому что меня заставляют родители</option>
-                <option value="1">Я танцую или занимаюсь спортом на уроках физкульуры, как и все</option>
+                <option value="0">Да, я это делаю потому что меня заставляют родители</option>
+                <option value="0">Я танцую или занимаюсь спортом на уроках физкульуры, как и все</option>
                 <option value="0">Нет, ничем таким я не занимаюсь</option>
             </options>
         </item>
