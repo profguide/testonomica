@@ -8,6 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\TestRepository"))
+ * @ORM\Table(indexes={@ORM\Index(columns={"slug"})})
  * @author: adavydov
  * @since: 20.10.2020
  */

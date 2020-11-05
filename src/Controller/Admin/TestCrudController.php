@@ -37,7 +37,8 @@ class TestCrudController extends AbstractCrudController
             TextEditorField::new('descriptionEn', 'Описание на странице (en)')->hideOnIndex(),
             BooleanField::new('active', 'Активность'),
             BooleanField::new('activeEn', 'Активность (en)'),
-            Field::new('xmlFilename', 'xml')->onlyOnForms(),
+            Field::new('xmlFilename', 'Xml name')->onlyOnForms(),
+            Field::new('calculatorName', 'Calculator prefix name')->onlyOnForms(),
         ];
     }
 }

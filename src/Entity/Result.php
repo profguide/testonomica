@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ResultRepository")
+ * @ORM\Table(indexes={@ORM\Index(columns={"uuid"})})
  * @ORM\HasLifecycleCallbacks()
  * @author: adavydov
  * @since: 20.10.2020

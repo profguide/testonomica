@@ -10,6 +10,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CategoryRepository")
+ * @ORM\Table(indexes={@ORM\Index(columns={"slug"})})
  * @Vich\Uploadable
  * @author: adavydov
  * @since: 20.10.2020
