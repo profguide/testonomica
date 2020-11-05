@@ -13,18 +13,15 @@
         }
     </style>
     <script>
-        let count = {{ count }};
-        let progress = {{ progress }};
-        let answers = [];
-        let showAnswer = {{ question.showAnswer ? 'true' : 'false' }};
-        let textOnRight = {{ question.right ? ("'#{question.right}'"|raw) : 'null' }};
-        let textOnWrong = {{ question.wrong ? ("'#{question.wrong}'"|raw) : 'null' }};
+        var count = {{ count }};
+        var progress = {{ progress }};
+        var answers = [];
+        var showAnswer = {{ question.showAnswer ? 'true' : 'false' }};
+        var textOnRight = {{ question.right ? ("'#{question.right}'"|raw) : 'null' }};
+        var textOnWrong = {{ question.wrong ? ("'#{question.wrong}'"|raw) : 'null' }};
     </script>
     <form method="post" class="test__question-form">
         <input type="hidden" name="test" value="{{ test.id }}"/>
-        {% if question.group %}
-            <input type="hidden" name="group" value="{{ question.group }}"/>
-        {% endif %}
         <input type="hidden" class="question" name="question" value="{{ question.id }}"/>
         <input type="hidden" name="timer" value="">
         <article class="test__question-content">
