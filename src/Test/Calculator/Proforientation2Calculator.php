@@ -161,9 +161,10 @@ class Proforientation2Calculator implements CalculatorInterface
         arsort($values); // сортируем
         $maxValue = $values[array_key_first($values)]; // максимальное
         $top = [];
+        $topOffset = 25; // от топа вниз на сколько процентов считаем топом
         foreach ($values as $name => $percent) {
             // примитивная логика: берём все максимумы и то, что чуть до максимума не добрали
-            if ($percent == $maxValue || $percent == $maxValue - 10) {
+            if ($percent == $maxValue || $percent == $maxValue - $topOffset) {
                 $top[$name] = $percent;
             }
         }
