@@ -523,6 +523,12 @@
         </combs>
     </profession>
     <profession>
+        <name>Spa-терапевт</name>
+        <combs>
+            <comb comb="body,com"/>
+        </combs>
+    </profession>
+    <profession>
         <name>Массажист</name>
         <combs>
             <comb comb="natural,body"/>
@@ -952,11 +958,5 @@
     <!--<combs>-->
     <!--<comb comb="body"/>-->
     <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-        <!--<name>Spa-терапевт</name>-->
-        <!--<combs>-->
-            <!--<comb comb="natural,body"/>-->
-        <!--</combs>-->
     <!--</profession>-->
 </professions>
