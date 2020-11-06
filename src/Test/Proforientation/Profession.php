@@ -13,6 +13,8 @@ class Profession
 
     private $combs;
 
+//    private $is...
+
     public function __construct(string $name, array $combs)
     {
         $this->name = $name;
