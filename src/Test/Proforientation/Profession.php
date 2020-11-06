@@ -13,12 +13,13 @@ class Profession
 
     private $combs;
 
-//    private $is...
+    private $not = [];
 
-    public function __construct(string $name, array $combs)
+    public function __construct(string $name, array $combs, $not = [])
     {
         $this->name = $name;
         $this->combs = $combs;
+        $this->not = $not;
     }
 
     public function getName()
@@ -29,5 +30,10 @@ class Profession
     public function getCombs()
     {
         return $this->combs;
+    }
+
+    public function getNot()
+    {
+        return $this->not;
     }
 }

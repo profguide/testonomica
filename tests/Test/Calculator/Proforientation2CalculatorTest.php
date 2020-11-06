@@ -108,32 +108,32 @@ class Proforientation2CalculatorTest extends KernelTestCase
             'it' => 30,
             'body' => 0,
         ]);
-        $this->assertEquals(['tech' => 50, 'human' => 40, 'it' => 30], $result);
+        $this->assertEquals(['tech' => 50, 'human' => 40], $result);
     }
 
     public function testOneCombsRating()
     {
 //         чего-то не хватает - это рейтинг 0
-        $this->assertEquals(0.0, $this->calculator->oneCombRating(
+        $this->assertEquals(0, $this->calculator->oneCombRating(
             ['natural' => 100], ['natural', 'tech']));
         // полное совпадение - рейтинг 1
-        $this->assertEquals(1.0, $this->calculator->oneCombRating(
+        $this->assertEquals(200, $this->calculator->oneCombRating(
             ['natural' => 100, 'tech' => 100], ['natural', 'tech']));
 //        // среднее - 0.5
-        $this->assertEquals(0.5, $this->calculator->oneCombRating(
+        $this->assertEquals(100, $this->calculator->oneCombRating(
             ['natural' => 100, 'tech' => 0], ['natural', 'tech']));
         // лишнее - не считаем
-        $this->assertEquals(0.5, $this->calculator->oneCombRating(
+        $this->assertEquals(100, $this->calculator->oneCombRating(
             ['natural' => 100, 'tech' => 0, 'body' => 100], ['natural', 'tech']));
     }
 
     public function testAllCombsRating()
     {
         // Один вариант со 100% совпадением - это 1
-        $this->assertEquals(1, $this->calculator->combsRating(
+        $this->assertEquals(200, $this->calculator->combsRating(
             ['natural' => 100, 'tech' => 100], [['natural', 'tech']]));
         // Два варианта, один 100%, другой 0 - это 1
-        $this->assertEquals(1, $this->calculator->combsRating(
+        $this->assertEquals(200, $this->calculator->combsRating(
             ['natural' => 100, 'tech' => 100], [['natural', 'tech'], ['natural', 'tech', 'body']]));
         // Два варианта, один 0 и другой 0 - это 0
         $this->assertEquals(0, $this->calculator->combsRating(

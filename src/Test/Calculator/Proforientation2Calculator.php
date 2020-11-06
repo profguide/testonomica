@@ -102,7 +102,7 @@ class Proforientation2Calculator implements CalculatorInterface
         $topTypes = $this->filterTopTypes($typesScored); // топовые типы
         foreach ($this->getProfessions() as $profession) {
             // посчитаем рейтинг профессии
-            $rating = $this->combsRating($topTypes, $profession->getCombs());
+            $rating = $this->combsRating($topTypes, $profession);
             // отсекаем профессии с нулевым совпадением
             if ($rating > 0) {
                 $resultProfessions[$profession->getName()] = $rating;
@@ -112,24 +112,31 @@ class Proforientation2Calculator implements CalculatorInterface
         return $resultProfessions;
     }
 
-    public function combsRating(array $types, array $combs): float
+    public function combsRating(array $types, Profession $profession): float
     {
         $max = 0.0;
-        foreach ($combs as $comb) {
-            if (($combRating = $this->oneCombRating($types, $comb)) > $max) {
+        foreach ($profession->getCombs() as $comb) {
+            if (($combRating = $this->oneCombRating($types, $comb, $profession->getNot())) > $max) {
                 $max = $combRating;
             }
         }
         return $max;
     }
 
-    public function oneCombRating(array $typesScored, array $typesNeeded): float
+    public function oneCombRating(array $typesScored, array $typesNeeded, array $not = []): float
     {
         $keysTypesScored = array_keys($typesScored);
 
         // если не набраны все требуемые типы, то это не подходит
         foreach ($typesNeeded as $typeNeed) {
             if (!in_array($typeNeed, $keysTypesScored)) {
+                return 0;
+            }
+        }
+
+        // если набранный тип указан в $not, профессия не подходит
+        foreach (array_keys($typesScored) as $typeScored) {
+            if (in_array($typeScored, $not)) {
                 return 0;
             }
         }
@@ -142,8 +149,11 @@ class Proforientation2Calculator implements CalculatorInterface
             }
         }
 
-        // получим среднее, чтобы рейтинг был максимум 100% и приведем к дроби, где 1 - это 100%
-        return $rate / count($typesNeeded) / 100;
+//        // получим среднее, чтобы рейтинг был максимум 100% и приведем к дроби, где 1 - это 100%
+//        return $rate / count($typesNeeded) / 100;
+
+        // получим сумму сильных качеств
+        return $rate;
     }
 
     /*
@@ -157,12 +167,16 @@ class Proforientation2Calculator implements CalculatorInterface
         arsort($values); // сортируем
         $maxValue = $values[array_key_first($values)]; // максимальное
         $top = [];
-        $offsetTopValues = 25; // от топа вниз на сколько процентов считаем топом
+//        $offsetTopValues = 20; // от топа вниз на сколько процентов считаем топом
+//        $offsetTopValues = 35; // от топа вниз на сколько процентов считаем топом
+        $allowMinValue = $maxValue - $maxValue / 1.5;
         $maxCount = 4;
-        foreach ($values as $name => $percent) {
-            // примитивная логика: берём все максимумы и то, что чуть до максимума не добрали
-            if ($percent >= $maxValue - $offsetTopValues) {
-                $top[$name] = $percent;
+        foreach ($values as $name => $value) {
+//            if ($percent >= $maxValue - $offsetTopValues) {
+//                $top[$name] = $percent;
+//            }
+            if ($value >= $maxValue - $allowMinValue) {
+                $top[$name] = $value;
             }
             if (count($top) >= $maxCount) {
                 break;
@@ -189,7 +203,8 @@ class Proforientation2Calculator implements CalculatorInterface
     {
         return new Profession(
             $crawler->children('name')->text(),
-            $this->parseCombs($crawler->children('combs')));
+            $this->parseCombs($crawler->children('combs')),
+            $this->parseProfessionNot($crawler));
     }
 
     public function parseCombs(Crawler $combs): array
@@ -198,6 +213,19 @@ class Proforientation2Calculator implements CalculatorInterface
         /**@var \DOMElement $comb */
         foreach ($combs->children() as $comb) {
             $arr[] = explode(",", trim($comb->getAttribute('comb')));
+        }
+        return $arr;
+    }
+
+
+    private function parseProfessionNot(Crawler $crawler)
+    {
+        $arr = [];
+        $not = $crawler->attr('not');
+        if (!empty($not)) {
+            foreach (explode(",", $not) as $word) {
+                $arr[] = trim($word);
+            }
         }
         return $arr;
     }
