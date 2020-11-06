@@ -9,6 +9,7 @@ namespace App\Test\Calculator;
 
 use App\Test\AnswersHolder;
 use App\Test\CalculatorInterface;
+use App\Test\Proforientation\Profession;
 use App\Test\QuestionsHolder;
 use App\Test\QuestionXmlMapper;
 use App\Test\CrawlerUtil;
@@ -99,17 +100,12 @@ class Proforientation2Calculator implements CalculatorInterface
     {
         $resultProfessions = [];
         $topTypes = $this->filterTopTypes($typesScored); // топовые типы
-        //
-        foreach ($this->loadProfessionsCrawler() as $professionNode) {
-            $professionCrawler = (new Crawler($professionNode));
-            // переведем xml комбинации профессии в список вида [['art', 'body'], ['body']]
-            $typesNeeded = $this->parseCombs($professionCrawler->children('combs'));
+        foreach ($this->getProfessions() as $profession) {
             // посчитаем рейтинг профессии
-            $rating = $this->combsRating($topTypes, $typesNeeded);
+            $rating = $this->combsRating($topTypes, $profession->getCombs());
             // отсекаем профессии с нулевым совпадением
             if ($rating > 0) {
-                $name = $professionCrawler->children('name')->text();
-                $resultProfessions[$name] = $rating;
+                $resultProfessions[$profession->getName()] = $rating;
             }
         }
         arsort($resultProfessions);
@@ -175,7 +171,27 @@ class Proforientation2Calculator implements CalculatorInterface
         return $top;
     }
 
+    /**
+     * @return Profession[]
+     */
+    public function getProfessions(): array
+    {
+        $professions = [];
+        $crawler = CrawlerUtil::load($this->kernel->getProjectDir() . "/xml/proforientation2Professions.xml");
+        foreach ($crawler as $professionNode) {
+            $professions[] = $this->mapProfession((new Crawler($professionNode)));
+        }
+        return $professions;
+    }
+
     // todo phpunit
+    private function mapProfession(Crawler $crawler): Profession
+    {
+        return new Profession(
+            $crawler->children('name')->text(),
+            $this->parseCombs($crawler->children('combs')));
+    }
+
     public function parseCombs(Crawler $combs): array
     {
         $arr = [];
@@ -184,13 +200,6 @@ class Proforientation2Calculator implements CalculatorInterface
             $arr[] = explode(",", trim($comb->getAttribute('comb')));
         }
         return $arr;
-    }
-
-    public function loadProfessionsCrawler(): Crawler
-    {
-        $professionsXmlFileName = $this->kernel->getProjectDir() . "/xml/proforientation2Professions.xml";
-        $crawler = new Crawler(file_get_contents($professionsXmlFileName));
-        return $crawler->children();
     }
 
     private function loadQuestions()

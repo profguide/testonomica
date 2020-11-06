@@ -108,7 +108,7 @@ class Proforientation2CalculatorTest extends KernelTestCase
             'it' => 30,
             'body' => 0,
         ]);
-        $this->assertEquals(['tech' => 50, 'human' => 40], $result);
+        $this->assertEquals(['tech' => 50, 'human' => 40, 'it' => 30], $result);
     }
 
     public function testOneCombsRating()
