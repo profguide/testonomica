@@ -9,6 +9,7 @@ namespace App\Tests\Test\Calculator;
 use App\Entity\Answer;
 use App\Test\AnswersHolder;
 use App\Test\Calculator\Proforientation2Calculator;
+use App\Test\Proforientation\Profession;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\HttpKernel\KernelInterface;
 
@@ -131,13 +132,13 @@ class Proforientation2CalculatorTest extends KernelTestCase
     {
         // Один вариант со 100% совпадением - это 1
         $this->assertEquals(200, $this->calculator->combsRating(
-            ['natural' => 100, 'tech' => 100], [['natural', 'tech']]));
+            ['natural' => 100, 'tech' => 100], new Profession('some', [['natural', 'tech']])));
         // Два варианта, один 100%, другой 0 - это 1
         $this->assertEquals(200, $this->calculator->combsRating(
-            ['natural' => 100, 'tech' => 100], [['natural', 'tech'], ['natural', 'tech', 'body']]));
+            ['natural' => 100, 'tech' => 100], new Profession('some', [['natural', 'tech'], ['natural', 'tech', 'body']])));
         // Два варианта, один 0 и другой 0 - это 0
         $this->assertEquals(0, $this->calculator->combsRating(
-            ['natural' => 100], [['natural', 'tech'], ['natural', 'tech', 'body']]));
+            ['natural' => 100], new Profession('some', [['natural', 'tech'], ['natural', 'tech', 'body']])));
     }
 
     private function constructAnswersHolder(array $array): AnswersHolder
