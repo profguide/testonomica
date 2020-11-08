@@ -29,6 +29,17 @@ class SourceRepository implements SourceRepositoryInterface
         $this->kernel = $kernel;
     }
 
+    function getQuestion(Test $test, $itemId)
+    {
+        $items = $this->getItems($test);
+        $position = $this->getItemPosition($items, $itemId);
+        /**@var DOMElement $item */
+        if (($item = $items->getNode($position))) {
+            return QuestionXmlMapper::map($item);
+        }
+        return null;
+    }
+
     public function getNextQuestion(Test $test, $itemId): ?Question
     {
         $items = $this->getItems($test);

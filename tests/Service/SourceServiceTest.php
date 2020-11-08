@@ -31,6 +31,17 @@ class SourceServiceTest extends KernelTestCase
     }
 
     /**
+     * Exactly
+     * Expect next question
+     */
+    public function testQuestion()
+    {
+        $id = 12;
+        $question = $this->service->getQuestion($this->test, $id);
+        $this->assertEquals($question->getId(), $id);
+    }
+
+    /**
      * Next
      * Expect next question
      */

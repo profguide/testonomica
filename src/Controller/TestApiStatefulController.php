@@ -10,6 +10,7 @@ use App\Service\ResultService;
 use App\Service\TestService;
 use App\Service\TestSourceService;
 use App\Test\AnswersSerializer;
+use App\Test\Question;
 use App\Test\TestStatus;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -55,6 +56,7 @@ class TestApiStatefulController extends TestApiAbstract
         $answers = $this->answerService->getAll($test);
         $result = Result::create($test, Uuid::v4(), $this->serializer->serialize($answers));
         $this->resultService->save($result);
+        $this->resultService->saveSessionResult($result);
         return new Response(
             "Обработка результата",
             Response::HTTP_OK,
@@ -67,13 +69,21 @@ class TestApiStatefulController extends TestApiAbstract
 
     public function clear(Test $test)
     {
+        $this->answerService->clear($test);
+        $this->resultService->clearSessionResult($test);
         return $this->sourceService->getFirstQuestion($test);
     }
 
-    public function restore(Test $test)
+    public function restore(Test $test): ?Question
     {
         if (($lastId = $this->answerService->getLastId($test)) != null) {
-            return $this->sourceService->getNextQuestion($test, $lastId);
+            if (($question = $this->sourceService->getNextQuestion($test, $lastId)) != null) {
+                return $question;
+            } else {
+                // подстраховка на случай, когда Result по каким-то причинам не найден, а все вопросы уже отвечены
+                // вернем последний вопрос
+                return $this->sourceService->getQuestion($test, $lastId);
+            }
         } else {
             return $this->sourceService->getFirstQuestion($test);
         }

@@ -22,20 +22,9 @@ class AnswerService implements AnswerServiceInterface
         $this->repository = $repository;
     }
 
-    /**
-     * @param Test $test
-     * @param int $lastQuestionId
-     * @return TestStatus
-     */
-    function status(Test $test, int $lastQuestionId): TestStatus
+    public function hasAnswers(Test $test): bool
     {
-        if (($lastAnswerId = $this->repository->getLastIdByTest($test)) == null) {
-            return TestStatus::none();
-        } elseif ($lastAnswerId == $lastQuestionId) {
-            return TestStatus::finished();
-        } else {
-            return TestStatus::none();
-        }
+        return $this->repository->getLastIdByTest($test) != null;
     }
 
     function getLastId(Test $test): ?int

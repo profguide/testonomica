@@ -123,6 +123,15 @@ class Proforientation2Calculator implements CalculatorInterface
         return $max;
     }
 
+    /**
+     * @param array $typesScored
+     * @param array $typesNeeded
+     * @param array $not - не учитывать комбинации, где присутствуют опредённые типы.
+     * Пригождается, чтобы отсечь профессии, не требовательные к сложным навыками, когда человек их набрал.
+     * Например, слесарь - только body, а человек набрал и body и human и it. Если в профессии указано not="human",
+     * то рейтинг будет 0
+     * @return float
+     */
     public function oneCombRating(array $typesScored, array $typesNeeded, array $not = []): float
     {
         $keysTypesScored = array_keys($typesScored);

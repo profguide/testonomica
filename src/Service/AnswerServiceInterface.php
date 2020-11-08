@@ -13,7 +13,7 @@ use App\Test\TestStatus;
 
 interface AnswerServiceInterface
 {
-    function status(Test $test, int $lastQuestionId): TestStatus;
+    function hasAnswers(Test $test): bool;
 
     function getLastId(Test $test): ?int;
 

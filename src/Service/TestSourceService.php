@@ -21,6 +21,11 @@ class TestSourceService
         $this->repository = $sourceParser;
     }
 
+    public function getQuestion(Test $test, $id): Question
+    {
+        return $this->repository->getQuestion($test, $id);
+    }
+
     function getNextQuestion(Test $test, $itemId): ?Question
     {
         return $this->repository->getNextQuestion($test, $itemId);

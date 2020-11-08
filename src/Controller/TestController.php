@@ -2,11 +2,14 @@
 
 namespace App\Controller;
 
+use App\Entity\Result;
 use App\Entity\Test;
+use App\Service\AnswerService;
 use App\Service\CalculatorService;
 use App\Service\CategoryService;
 use App\Service\ResultService;
 use App\Service\TestService;
+use App\Service\TestSourceService;
 use App\Test\ResultUtil;
 use App\Test\TestStatus;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -30,18 +33,28 @@ class TestController extends AbstractController
     /**@var ResultService */
     private $resultService;
 
+    /**@var AnswerService */
+    private $answerService;
+
+    /**@var TestSourceService */
+    private $sourceService;
+
     /**@var CalculatorService */
     private $calculatorService;
 
     public function __construct(
         TestService $testService,
         CategoryService $categoryService,
+        AnswerService $answerService,
         ResultService $resultService,
+        TestSourceService $sourceService,
         CalculatorService $calculatorService)
     {
         $this->testService = $testService;
         $this->categoryService = $categoryService;
+        $this->answerService = $answerService;
         $this->resultService = $resultService;
+        $this->sourceService = $sourceService;
         $this->calculatorService = $calculatorService;
     }
 
@@ -65,10 +78,7 @@ class TestController extends AbstractController
     public function result(string $uuid)
     {
         $result = $this->loadResultByUuid($uuid);
-        $test = $result->getTest();
-        $resultData = $this->calculatorService->calculate($test, $result);
-        return $this->render('tests/result/' . ResultUtil::resolveViewName($test) . '.html.twig',
-            array_merge(['test' => $test], $resultData));
+        return $this->renderResult($result->getTest(), $result);
     }
 
     /**
@@ -83,10 +93,17 @@ class TestController extends AbstractController
         self::assertActive($test);
         $category = $test->getCatalog();
         self::assertTestInCategory($test, $categorySlug);
+        $result = $this->resultService->getSessionResult($test);
+        if ($result) {
+            return $this->renderResult($test, $result);
+        }
+        $status = $this->answerService->hasAnswers($test)
+            ? TestStatus::progress()
+            : TestStatus::none();
         return $this->render('tests/view.html.twig', [
             'test' => $test,
             'category' => $category,
-            'status' => TestStatus::none(), // <<
+            'status' => $status,
         ]);
     }
 
@@ -118,5 +135,16 @@ class TestController extends AbstractController
             throw new NotFoundHttpException();
         }
         return $result;
+    }
+
+    private function renderResult(Test $test, Result $result)
+    {
+        $resultData = $this->calculatorService->calculate($test, $result);
+        return $this->render('tests/result/' . ResultUtil::resolveViewName($test) . '.html.twig',
+            array_merge([
+                'test' => $test,
+                'uuid' => $result->getUuid(),
+                'status' => TestStatus::finished()
+            ], $resultData));
     }
 }

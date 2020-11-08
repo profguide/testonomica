@@ -13,6 +13,8 @@ interface SourceRepositoryInterface
 //    function parse();
 //    function getQuestion(Test $test, $operationName);
 
+    function getQuestion(Test $test, $id);
+
     function getNextQuestion(Test $test, $itemId);
 
     function getPrevQuestion(Test $test, $itemId);

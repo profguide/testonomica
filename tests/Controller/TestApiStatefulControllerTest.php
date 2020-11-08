@@ -14,6 +14,7 @@ use App\Entity\Test;
 use App\Repository\AnswerRepository;
 use App\Repository\ResultRepository;
 use App\Repository\TestRepositoryInterface;
+use App\Service\ResultService;
 use App\Test\AnswersSerializer;
 use App\Test\TestStatus;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
@@ -37,6 +38,9 @@ class TestApiStatefulControllerTest extends WebTestCase
     /**@var ResultRepository */
     private $resultRepository;
 
+    /**@var ResultService */
+    private $resultService;
+
     /**@var AnswersSerializer */
     private $serializer;
 
@@ -55,6 +59,7 @@ class TestApiStatefulControllerTest extends WebTestCase
         $this->testRepository = self::$container->get(TestRepositoryInterface::class);
         $this->answerRepository = self::$container->get(AnswerRepository::class);
         $this->resultRepository = self::$container->get(ResultRepository::class);
+        $this->resultService = self::$container->get(ResultService::class);
         $this->serializer = self::$container->get(AnswersSerializer::class);
         $this->session = self::$container->get('session');
         $this->test = $this->testRepository->findOneBySlug(TestFixture::TEST_1_SLUG);
@@ -98,6 +103,8 @@ class TestApiStatefulControllerTest extends WebTestCase
         /**@var Result $result */
         $result = $results[0];
         $this->assertEquals('{"12":{"questionId":"12","value":"my-answer"}}', $result->getData());
+        // результат сохранён в сессии
+        $this->assertNotNull($this->resultService->getSessionResult($this->test));
         // Текст сообщения
         $this->assertEquals("Обработка результата", $this->client->getResponse()->getContent());
         // Заголовки

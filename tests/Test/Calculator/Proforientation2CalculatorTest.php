@@ -126,6 +126,9 @@ class Proforientation2CalculatorTest extends KernelTestCase
         // лишнее - не считаем
         $this->assertEquals(100, $this->calculator->oneCombRating(
             ['natural' => 100, 'tech' => 0, 'body' => 100], ['natural', 'tech']));
+        // есть в аргументе not - 0
+        $this->assertEquals(0, $this->calculator->oneCombRating(
+            ['natural' => 100, 'war' => 90], ['natural'], ['war']));
     }
 
     public function testAllCombsRating()
