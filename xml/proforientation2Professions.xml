@@ -108,6 +108,12 @@ todo подумать:
         </combs>
     </profession>
     <profession>
+        <name>Арт-дилер, антиквар</name>
+        <combs>
+            <comb comb="com,hoz,boss"/>
+        </combs>
+    </profession>
+    <profession>
         <name>Ювелир</name>
         <combs>
             <comb comb="art,craft"/>
@@ -180,6 +186,8 @@ todo подумать:
     <profession>
         <name>Продюсер</name>
         <combs>
+            <comb comb="art,hoz,com,boss"/>
+            <comb comb="art,com,boss"/>
             <comb comb="com,boss"/>
         </combs>
     </profession>
@@ -198,8 +206,13 @@ todo подумать:
     </profession>
     <profession>
         <name>Военнослужащий (солдат, боец)</name>
+        <text>
+            В том числе, материально-техническое снабжение армии
+        </text>
         <combs>
+            <comb comb="hoz,com,boss,war"/>
             <comb comb="body,war,com"/>
+            <comb comb="hoz,boss,war"/> <!--снабженец? -->
             <comb comb="body,war"/>
             <comb comb="war"/>
         </combs>
@@ -440,7 +453,11 @@ todo подумать:
     </profession>
     <profession>
         <name>Пилот</name>
+        <text>
+            Виды: пилот гражданской авиации, военный пилот
+        </text>
         <combs>
+            <comb comb="tech,math,war"/>
             <comb comb="tech,math"/>
         </combs>
     </profession>
@@ -453,6 +470,7 @@ todo подумать:
     <profession>
         <name>Сервисный инженер</name>
         <combs>
+            <comb comb="tech,war"/>
             <comb comb="tech"/>
         </combs>
     </profession>
@@ -464,6 +482,7 @@ todo подумать:
         <combs>
             <comb comb="tech,math,natural"/>
             <comb comb="tech,math"/>
+            <comb comb="tech,war"/> <!--разработчик военного оборудования-->
         </combs>
     </profession>
     <profession>
@@ -542,7 +561,7 @@ todo подумать:
     <profession>
         <name>Капитан речного или морского корабля</name>
         <combs>
-            <comb comb="body,tech"/>
+            <comb comb="tech"/>
         </combs>
     </profession>
     <profession>
@@ -855,7 +874,8 @@ todo подумать:
     <profession>
         <name>Компьютерный лингвист</name>
         <combs>
-            <comb comb="math,human"/>
+            <comb comb="human,math,it"/>
+            <comb comb="human,it"/>
         </combs>
     </profession>
     <profession>
@@ -876,6 +896,15 @@ todo подумать:
             <comb comb="com,math,it"/>
             <comb comb="com,math"/>
             <comb comb="com,it"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Предприниматель</name>
+        <text>
+            Например, директор магазина
+        </text>
+        <combs>
+            <comb comb="hoz,boss,com"/>
         </combs>
     </profession>
     <!--<profession>-->
