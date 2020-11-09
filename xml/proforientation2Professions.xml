@@ -2,6 +2,10 @@
 <!--
 посмотреть максимальное число комбинаций в шторме:
 \w+,\w+,\w+,\w+
+todo подумать:
+1. параметр <comb top="max" comb="art"/>, что означает, что art займёт столько раз, сколько всего в топе типов оказалось.
+    Тогда при it=60,human=70,art=50 приведёт художник займёт 3 раза art.
+    И соответственно окажется среди профессий, но не самый высокий, потому что art набран меньше, чем остальные.
 -->
 <professions>
     <profession>
@@ -220,6 +224,7 @@
         <combs>
             <comb comb="human,com,natural"/>
             <comb comb="human,com"/>
+            <comb comb="human,natural"/>
         </combs>
     </profession>
     <profession>
@@ -569,6 +574,7 @@
         <combs>
             <comb comb="natural,human,com"/>
             <comb comb="human,com"/>
+            <comb comb="human,natural"/>
         </combs>
     </profession>
     <profession>
