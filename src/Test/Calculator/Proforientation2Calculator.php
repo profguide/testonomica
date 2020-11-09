@@ -87,6 +87,7 @@ class Proforientation2Calculator implements CalculatorInterface
         foreach ($typesScored as $name => $groups) {
             $result[$name] = round(array_sum($groups) / count($groups));
         }
+        arsort($result);
         return $result;
     }
 
