@@ -50,7 +50,6 @@ todo подумать:
     <profession not="it">
         <name>Мастер маникюра</name>
         <combs>
-            <comb comb="art,craft"/>
             <comb comb="craft"/>
         </combs>
     </profession>
@@ -64,6 +63,18 @@ todo подумать:
         <name>Дизайнер интерьера</name>
         <combs>
             <comb comb="art,com,math"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Ландшафтный дизайнер</name>
+        <combs>
+            <comb comb="natural,art"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Промышленный дизайнер</name>
+        <combs>
+            <comb comb="art,tech"/>
         </combs>
     </profession>
     <profession>
@@ -117,7 +128,7 @@ todo подумать:
     <profession>
         <name>Парикмахер</name>
         <combs>
-            <comb comb="art,craft"/>
+            <comb comb="craft"/>
         </combs>
     </profession>
     <profession>
@@ -199,6 +210,12 @@ todo подумать:
             <comb comb="body,war,com"/>
             <comb comb="body,war"/>
             <comb comb="war"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Офицер радиоционной, химический и биологической защиты</name>
+        <combs>
+            <comb comb="natural,war"/>
         </combs>
     </profession>
     <profession>
@@ -284,9 +301,17 @@ todo подумать:
         </combs>
     </profession>
     <profession>
+        <name>Геолог</name>
+        <combs>
+            <comb comb="tech,math"/>
+        </combs>
+    </profession>
+    <profession>
         <name>Бионформатик</name>
         <combs>
+            <comb comb="math,natural,it"/>
             <comb comb="math,natural"/>
+            <comb comb="natural,it"/>
         </combs>
     </profession>
     <profession>
@@ -296,16 +321,32 @@ todo подумать:
         </combs>
     </profession>
     <profession>
-        <name>Геолог</name>
+        <name>Растениевод, селекционер</name>
         <combs>
-            <comb comb="tech,math"/>
+            <comb comb="natural,craft"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Агроном</name>
+        <combs>
+            <comb comb="natural"/>
         </combs>
     </profession>
     <profession>
         <name>Генетик</name>
+        <text>
+            Виды: генетик, биотехнолог
+        </text>
         <combs>
             <comb comb="natural,math"/>
             <comb comb="natural"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Биоинформатик</name>
+        <combs>
+            <comb comb="natural,it,math"/>
+            <comb comb="natural,it"/>
         </combs>
     </profession>
     <profession>
@@ -321,9 +362,13 @@ todo подумать:
         </combs>
     </profession>
     <profession>
-        <name>Химик-технолог</name>
+        <name>Химик</name>
+        <text>
+            Примеры: химик, химик-технолог, химик-исследователь, биохимик, фармаколог
+        </text>
         <combs>
-            <comb comb="natural,tech,math"/>
+            <comb comb="natural,tech,math"/> <!--химик-технолог-->
+            <comb comb="natural,math"/> <!--химик-исследователь-->
         </combs>
     </profession>
     <profession>
@@ -347,19 +392,24 @@ todo подумать:
     <profession>
         <name>Зооинженер</name>
         <combs>
-            <comb comb="natural,math"/>
+            <comb comb="natural,hoz"/>
+            <comb comb="natural"/>
         </combs>
     </profession>
     <profession>
         <name>Океанолог</name>
         <combs>
+            <comb comb="natural,tech"/> <!-- если океанолог в геологии -->
             <comb comb="natural,math"/>
+            <comb comb="natural"/>
         </combs>
     </profession>
     <profession>
-        <name>Пчеловод</name>
+        <name>Пчеловод, пасечник</name>
         <combs>
-            <comb comb="natural,body,craft"/>
+            <comb comb="natural,craft,hoz"/>
+            <comb comb="natural,craft"/>
+            <comb comb="natural,hoz"/>
         </combs>
     </profession>
     <profession>
@@ -408,64 +458,79 @@ todo подумать:
     </profession>
     <profession>
         <name>Инженер-разработчик оборудования</name>
+        <text>
+            Примеры: разработчик биомедицинского оборудования
+        </text>
         <combs>
+            <comb comb="tech,math,natural"/>
             <comb comb="tech,math"/>
         </combs>
     </profession>
-    <profession not="it,logic">
-        <name>Фрезеровщик</name>
-        <combs>
-            <comb comb="craft"/>
-        </combs>
-    </profession>
-    <profession not="it,logic">
-        <name>Слесарь</name>
-        <combs>
-            <comb comb="craft"/>
-        </combs>
-    </profession>
     <profession>
-        <name>Столяр, плотник</name>
+        <name>Наладчик оборудования</name>
         <combs>
-            <comb comb="craft,body"/>
-        </combs>
-    </profession>
-    <profession>
-        <name>Сантехник</name>
-        <combs>
-            <comb comb="craft,body"/>
-        </combs>
-    </profession>
-    <profession>
-        <name>Кузнец</name>
-        <combs>
-            <comb comb="craft,body"/>
-        </combs>
-    </profession>
-    <profession>
-        <name>Сварщик</name>
-        <combs>
-            <comb comb="craft,body"/>
-        </combs>
-    </profession>
-    <profession not="it,logic">
-        <name>Автомеханик</name>
-        <combs>
-            <comb comb="body,craft"/>
-            <comb comb="craft"/>
-        </combs>
-    </profession>
-    <profession not="logic">
-        <name>Электрик (электромонтер)</name>
-        <combs>
-            <comb comb="tech,body,craft"/>
             <comb comb="tech,craft"/>
         </combs>
     </profession>
-    <profession not="it,logic">
-        <name>Водитель поезда</name>
+    <profession>
+        <name>Инженер АСУ ТП</name>
         <combs>
+            <comb comb="tech,it"/>
+        </combs>
+    </profession>
+    <profession not="it,human,natural,logic">
+        <name>Фрезеровщик</name>
+        <combs>
+            <comb comb="tech,craft"/>
+        </combs>
+    </profession>
+    <profession not="it,human,natural,logic">
+        <name>Слесарь</name>
+        <combs>
+            <comb comb="tech,craft"/>
+        </combs>
+    </profession>
+    <profession not="it,human,natural,logic">
+        <name>Столяр, плотник</name>
+        <combs>
+            <comb comb="tech,craft"/>
             <comb comb="craft"/>
+        </combs>
+    </profession>
+    <profession not="it,human,natural,logic">
+        <name>Сантехник</name>
+        <combs>
+            <comb comb="tech,craft"/>
+        </combs>
+    </profession>
+    <profession not="it,human,natural,logic">
+        <name>Кузнец</name>
+        <combs>
+            <comb comb="tech,craft"/>
+        </combs>
+    </profession>
+    <profession not="it,human,natural,logic">
+        <name>Сварщик</name>
+        <combs>
+            <comb comb="tech,craft"/>
+        </combs>
+    </profession>
+    <profession not="it,human,natural,logic">
+        <name>Автомеханик</name>
+        <combs>
+            <comb comb="tech,craft"/>
+        </combs>
+    </profession>
+    <profession not="it,human,natural,logic">
+        <name>Электрик (электромонтер)</name>
+        <combs>
+            <comb comb="tech,craft"/>
+        </combs>
+    </profession>
+    <profession not="it,human,natural,logic">
+        <name>Машинист поезда</name>
+        <combs>
+            <comb comb="tech"/>
         </combs>
     </profession>
     <profession>
@@ -505,17 +570,33 @@ todo подумать:
         </combs>
     </profession>
     <profession>
-        <name>Медсестра</name>
+        <name>Фермер</name>
+        <combs>
+            <comb comb="natural,boss"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Медсестра (медбрат)</name>
         <combs>
             <comb comb="body,natural,com"/>
             <comb comb="body,natural"/>
+            <comb comb="natural,craft"/>
         </combs>
     </profession>
     <profession>
         <name>Врач</name>
+        <text>
+            Виды: врач-косметолог
+        </text>
         <combs>
-            <comb comb="natural,com,body"/>
             <comb comb="natural,com"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Хирург</name>
+        <combs>
+            <comb comb="natural,craft,tech"/>
+            <comb comb="natural,craft"/>
         </combs>
     </profession>
     <profession>
@@ -527,7 +608,9 @@ todo подумать:
     <profession not="logic">
         <name>Массажист</name>
         <combs>
+            <comb comb="natural,body,craft"/>
             <comb comb="natural,body"/>
+            <comb comb="natural,craft"/>
             <comb comb="body"/>
         </combs>
     </profession>
@@ -547,6 +630,7 @@ todo подумать:
         <name>Психиатр</name>
         <combs>
             <comb comb="natural,human,com"/>
+            <comb comb="natural,human"/>
         </combs>
     </profession>
     <profession>
@@ -571,10 +655,13 @@ todo подумать:
     </profession>
     <profession>
         <name>Логопед</name>
+        <text>
+            Примеры: логопед, дефектолог
+        </text>
         <combs>
             <comb comb="natural,human,com"/>
-            <comb comb="human,com"/>
             <comb comb="human,natural"/>
+            <comb comb="human,com"/>
         </combs>
     </profession>
     <profession>
@@ -606,7 +693,7 @@ todo подумать:
     <profession>
         <name>Специалист жилищно-коммунального хозяйства</name>
         <combs>
-            <comb comb="hoz,math"/>
+            <comb comb="tech,hoz"/>
         </combs>
     </profession>
     <profession>
@@ -705,16 +792,13 @@ todo подумать:
         <name>Системный администратор</name>
         <combs>
             <comb comb="tech,math,it"/>
-            <comb comb="tech,math"/>
             <comb comb="tech,it"/>
-            <comb comb="it"/>
         </combs>
     </profession>
     <profession>
         <name>Специалист по информационной безопасности</name>
         <combs>
             <comb comb="tech,math,it"/>
-            <comb comb="tech,math"/>
             <comb comb="tech,it"/>
             <comb comb="it"/>
         </combs>
