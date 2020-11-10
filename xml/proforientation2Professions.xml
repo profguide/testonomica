@@ -147,6 +147,7 @@ todo подумать:
         <name>Маркетолог</name>
         <combs>
             <comb comb="boss,human,math"/>
+            <!--<comb comb="human,boss"/>-->
             <comb comb="human,math"/>
             <comb comb="math"/>
         </combs>
@@ -320,14 +321,6 @@ todo подумать:
         </combs>
     </profession>
     <profession>
-        <name>Бионформатик</name>
-        <combs>
-            <comb comb="math,natural,it"/>
-            <comb comb="math,natural"/>
-            <comb comb="natural,it"/>
-        </combs>
-    </profession>
-    <profession>
         <name>Биолог</name>
         <combs>
             <comb comb="natural"/>
@@ -359,6 +352,7 @@ todo подумать:
         <name>Биоинформатик</name>
         <combs>
             <comb comb="natural,it,math"/>
+            <comb comb="natural,math"/>
             <comb comb="natural,it"/>
         </combs>
     </profession>
@@ -464,7 +458,7 @@ todo подумать:
     <profession>
         <name>Мехатроник (робототехник)</name>
         <combs>
-            <comb comb="tech,math"/>
+            <comb comb="tech,math,it"/>
         </combs>
     </profession>
     <profession>
@@ -494,6 +488,7 @@ todo подумать:
     <profession>
         <name>Инженер АСУ ТП</name>
         <combs>
+            <comb comb="tech,it,math"/>
             <comb comb="tech,it"/>
         </combs>
     </profession>
@@ -585,6 +580,7 @@ todo подумать:
     <profession>
         <name>Аналитик больших данных</name>
         <combs>
+            <comb comb="math,it"/>
             <comb comb="math"/>
         </combs>
     </profession>
@@ -712,6 +708,8 @@ todo подумать:
     <profession>
         <name>Специалист жилищно-коммунального хозяйства</name>
         <combs>
+            <comb comb="tech,math,hoz"/>
+            <comb comb="math,hoz"/>
             <comb comb="tech,hoz"/>
         </combs>
     </profession>
@@ -724,7 +722,8 @@ todo подумать:
     <profession>
         <name>Спасатель МЧС, пожарный</name>
         <combs>
-            <comb comb="body"/>
+            <comb comb="body,war"/>
+            <comb comb="war"/>
         </combs>
     </profession>
     <profession>
@@ -817,8 +816,7 @@ todo подумать:
     <profession>
         <name>Специалист по информационной безопасности</name>
         <combs>
-            <comb comb="tech,math,it"/>
-            <comb comb="tech,it"/>
+            <comb comb="math,it"/>
             <comb comb="it"/>
         </combs>
     </profession>
@@ -846,10 +844,11 @@ todo подумать:
     <profession>
         <name>Интернет-маркетолог</name>
         <text>
-            SMM, SEO...
+            Виды: SMM, SEO, SMM
         </text>
         <combs>
             <comb comb="human,math,it"/>
+            <!--<comb comb="human,boss"/>-->
             <comb comb="human,math"/>
         </combs>
     </profession>
