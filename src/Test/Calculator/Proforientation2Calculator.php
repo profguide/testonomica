@@ -35,11 +35,11 @@ class Proforientation2Calculator implements CalculatorInterface
     {
         $typesGroupsPercent = $this->calculateTypesGroups($answersHolder);
         $typesSinglePercent = $this->sumTypesGroups($typesGroupsPercent);
-        $professions = $this->stepCalculateByTypesPercent($typesSinglePercent);
+        $professions = $this->grabProfessionsByTypes($typesSinglePercent);
         return [
             'types_group_percent' => $typesGroupsPercent,
             'types_single_percent' => $typesSinglePercent,
-            'types_top' => $this->filterTopTypes($typesSinglePercent),
+            'types_top' => $this->grabTopTypes($typesSinglePercent),
             'professions' => $professions
         ];
     }
@@ -93,14 +93,22 @@ class Proforientation2Calculator implements CalculatorInterface
 
     /**
      * Считает рейтинг профессий, используя набранные типы
-     * todo pass Crawler with professions. Будет удобно тестировать отдельные профессии
      * @param array ['tech' => 20, 'body' => 50, 'human' => 0]
      * @return array ['Архитектор' => 1, 'Бариста' => 0.2]
      */
-    public function stepCalculateByTypesPercent(array $typesScored): array
+    public function grabProfessionsByTypes(array $typesScored): array
+    {
+        return $this->grabProfessionsByTypesCombs($this->grabTopTypes($typesScored));
+    }
+
+    /**
+     *
+     * @param array $topTypes
+     * @return array
+     */
+    public function grabProfessionsByTypesCombs(array $topTypes): array
     {
         $resultProfessions = [];
-        $topTypes = $this->filterTopTypes($typesScored); // топовые типы
         foreach ($this->getProfessions() as $profession) {
             // посчитаем рейтинг профессии
             $rating = $this->combsRating($topTypes, $profession);
@@ -172,7 +180,7 @@ class Proforientation2Calculator implements CalculatorInterface
      * =>
      * ['body' => 50, 'craft' => 40]
      */
-    public function filterTopTypes(array $values)
+    public function grabTopTypes(array $values)
     {
         arsort($values); // сортируем
         $maxValue = $values[array_key_first($values)]; // максимальное
@@ -226,7 +234,6 @@ class Proforientation2Calculator implements CalculatorInterface
         }
         return $arr;
     }
-
 
     private function parseProfessionNot(Crawler $crawler)
     {

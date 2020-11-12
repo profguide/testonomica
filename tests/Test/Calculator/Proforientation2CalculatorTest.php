@@ -6,6 +6,7 @@
 
 namespace App\Tests\Test\Calculator;
 
+use App\Controller\DevelopController;
 use App\Entity\Answer;
 use App\Test\AnswersHolder;
 use App\Test\Calculator\Proforientation2Calculator;
@@ -60,33 +61,7 @@ class Proforientation2CalculatorTest extends KernelTestCase
 //        dd(microtime(true) - $time);
     }
 
-    /*
-     * Промежуточный результат подсчёта (проценты) приводим к списку профессий, чтобы играть с настройками
-     */
-    public function testCalculateByTypesPercent()
-    {
-        $result = $this->calculator->stepCalculateByTypesPercent([
-            'natural' => 10,
-            'tech' => 0,
-            'human' => 0,
-            'body' => 20,
-            'math' => 10,
-            'it' => 0,
-            'craft' => 0,
-            'art' => 0,
-            'hoz' => 0,
-            'com' => 0,
-            'boss' => 0,
-            'war' => 0,
-        ]);
-        echo "\nРейтинг профессий: \n-----\n";
-        foreach ($result as $name => $rate) {
-            echo $name . ": " . $rate . "\n";
-        }
-        $this->assertEquals(1, 1);
-    }
-
-    public function testSupTypesGroups()
+    public function testSummationTypesGroups()
     {
         $types = [
             'natural' => [40, 40, 40],
@@ -100,9 +75,9 @@ class Proforientation2CalculatorTest extends KernelTestCase
         ], $this->calculator->sumTypesGroups($types));
     }
 
-    public function testFilterTopTypes()
+    public function testGrabTopTypes()
     {
-        $result = $this->calculator->filterTopTypes([
+        $result = $this->calculator->grabTopTypes([
             'natural' => 10,
             'tech' => 50,
             'human' => 40,
@@ -112,7 +87,7 @@ class Proforientation2CalculatorTest extends KernelTestCase
         $this->assertEquals(['tech' => 50, 'human' => 40], $result);
     }
 
-    public function testOneCombsRating()
+    public function testRatingCalculationForOneComb()
     {
 //         чего-то не хватает - это рейтинг 0
         $this->assertEquals(0, $this->calculator->oneCombRating(
@@ -131,7 +106,7 @@ class Proforientation2CalculatorTest extends KernelTestCase
             ['natural' => 100, 'war' => 90], ['natural'], ['war']));
     }
 
-    public function testAllCombsRating()
+    public function testRatingCalculationForAllCombs()
     {
         // Один вариант со 100% совпадением - это 1
         $this->assertEquals(200, $this->calculator->combsRating(
@@ -143,6 +118,65 @@ class Proforientation2CalculatorTest extends KernelTestCase
         $this->assertEquals(0, $this->calculator->combsRating(
             ['natural' => 100], new Profession('some', [['natural', 'tech'], ['natural', 'tech', 'body']])));
     }
+
+//    /**
+//     * Убедиться, что не существует комбинаций, которые не дают ни одной профессии
+//     */
+//    public function testThatNoCombsWithEmptyProfessionList()
+//    {
+//        // используем заранее скомпилированный список комбинаций без повторов
+//        foreach (DevelopController::COMBS_POSSIBLE as $comb) {
+//            $types = array_flip(explode(',', $comb));
+//            // поставим 100% для всех типов, чтобы точно все учлись
+//            $types = array_fill_keys(array_keys($types), 100);
+//            $professions = $this->calculator->grabProfessionsByTypesCombs($types);
+//            $this->assertNotEmpty($professions, "Combination \"$comb\" does not have any profession");
+//        }
+//    }
+
+    /**
+     *
+     */
+    public function testRandomComb()
+    {
+        $key = array_rand(DevelopController::COMBS_POSSIBLE);
+        $comb = DevelopController::COMBS_POSSIBLE[$key];
+        echo "\nRandom combination: $comb\n";
+        $types = array_flip(explode(',', $comb));
+        // поставим 100% для всех типов, чтобы точно все учлись
+        $types = array_fill_keys(array_keys($types), 100);
+        $professions = $this->calculator->grabProfessionsByTypesCombs($types);
+        $this->assertNotEmpty($professions, "Combination \"$comb\" does not have any profession");
+        foreach ($professions as $name => $value) {
+            echo $name . ': '. $value . "\n";
+        }
+    }
+
+//    /*
+//     * Промежуточный результат подсчёта (проценты) приводим к списку профессий, чтобы играть с настройками
+//     */
+//    public function testCalculateByTypesPercent()
+//    {
+//        $result = $this->calculator->grabProfessionsByTypes([
+//            'natural' => 10,
+//            'tech' => 0,
+//            'human' => 0,
+//            'body' => 20,
+//            'math' => 10,
+//            'it' => 0,
+//            'craft' => 0,
+//            'art' => 0,
+//            'hoz' => 0,
+//            'com' => 0,
+//            'boss' => 0,
+//            'war' => 0,
+//        ]);
+//        echo "\nРейтинг профессий: \n-----\n";
+//        foreach ($result as $name => $rate) {
+//            echo $name . ": " . $rate . "\n";
+//        }
+//        $this->assertEquals(1, 1);
+//    }
 
     private function constructAnswersHolder(array $array): AnswersHolder
     {

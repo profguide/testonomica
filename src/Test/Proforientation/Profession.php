@@ -36,4 +36,38 @@ class Profession
     {
         return $this->not;
     }
+
+    public function hasComb(string $str)
+    {
+        foreach ($this->combs as $comb) {
+            if ($str == implode(",", $comb)) {
+                return true;
+            }
+        }
+    }
+
+    public function combsString()
+    {
+        $combs = [];
+        foreach ($this->combs as $k => $comb) {
+            $combs[] = implode(",", $comb);
+        }
+        return implode("\n", $combs);
+    }
+
+    public function anyTypeList(string $str)
+    {
+        $typesNeed = explode(',', $str);
+        $list = [];
+        foreach ($this->combs as $comb) {
+            $cross = array_intersect($comb, $typesNeed);
+            if (!empty($cross)) {
+                $crossStr = implode(',', $cross);
+                if (!in_array($crossStr, $list)) {
+                    $list[] = $crossStr;
+                }
+            }
+        }
+        return implode(';', $list);
+    }
 }

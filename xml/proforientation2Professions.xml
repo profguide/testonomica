@@ -42,7 +42,7 @@ todo подумать:
         </combs>
     </profession>
     <profession>
-        <name>Гример</name>
+        <name>Визажист, гримёр</name>
         <combs>
             <comb comb="art,craft"/>
         </combs>
@@ -50,6 +50,7 @@ todo подумать:
     <profession not="it">
         <name>Мастер маникюра</name>
         <combs>
+            <comb comb="com,craft"/>
             <comb comb="craft"/>
         </combs>
     </profession>
@@ -104,13 +105,17 @@ todo подумать:
     <profession>
         <name>Искусствовед</name>
         <combs>
+            <comb comb="human,art,com"/> <!--todo art:interest-->
+            <comb comb="human,com"/>
             <comb comb="human"/>
         </combs>
     </profession>
     <profession>
         <name>Арт-дилер, антиквар</name>
         <combs>
+            <comb comb="com,hoz,boss,art"/> <!--todo art:interest-->
             <comb comb="com,hoz,boss"/>
+            <comb comb="boss,art"/> <!--todo art:interest-->
         </combs>
     </profession>
     <profession>
@@ -134,6 +139,7 @@ todo подумать:
     <profession>
         <name>Парикмахер</name>
         <combs>
+            <comb comb="com,craft"/>
             <comb comb="craft"/>
         </combs>
     </profession>
@@ -145,11 +151,15 @@ todo подумать:
     </profession>
     <profession>
         <name>Маркетолог</name>
+        <text>
+            Виды: маркетолог брендов, маркетолог-исследователь
+        </text>
         <combs>
-            <comb comb="boss,human,math"/>
-            <!--<comb comb="human,boss"/>-->
-            <comb comb="human,math"/>
-            <comb comb="math"/>
+            <comb comb="boss,human,math"/> <!--маркетолог-исследователь-->
+            <comb comb="human,math"/> <!--маркетолог-исследователь-->
+            <comb comb="human,boss,com"/> <!--маркетолог брендов-->
+            <comb comb="boss,com"/> <!--маркетолог брендов-->
+            <comb comb="math"/> <!--маркетолог-исследователь-->
         </combs>
     </profession>
     <profession>
@@ -213,8 +223,12 @@ todo подумать:
         <combs>
             <comb comb="hoz,com,boss,war"/>
             <comb comb="body,war,com"/>
-            <comb comb="hoz,boss,war"/> <!--снабженец? -->
             <comb comb="body,war"/>
+            <comb comb="com,war"/>
+            <comb comb="math,war"/> <!-- артилерист -->
+            <comb comb="craft,war"/> <!-- лопатой работать, снег красить -->
+            <comb comb="math,it"/> <!-- комьютерщик в армии -->
+            <comb comb="hoz,war"/>
             <comb comb="war"/>
         </combs>
     </profession>
@@ -269,6 +283,12 @@ todo подумать:
         <combs>
             <comb comb="com,human"/>
             <comb comb="human"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Менеджер гостиницы или ресторана</name>
+        <combs>
+            <comb comb="com,hoz"/>
         </combs>
     </profession>
     <profession>
@@ -492,6 +512,12 @@ todo подумать:
             <comb comb="tech,it"/>
         </combs>
     </profession>
+    <profession>
+        <name>Реставратор</name>
+        <combs>
+            <comb comb="craft,hoz"/>
+        </combs>
+    </profession>
     <profession not="it,human,natural,logic">
         <name>Фрезеровщик</name>
         <combs>
@@ -588,6 +614,7 @@ todo подумать:
         <name>Фермер</name>
         <combs>
             <comb comb="natural,boss"/>
+            <comb comb="boss,hoz"/>
         </combs>
     </profession>
     <profession>
@@ -596,6 +623,12 @@ todo подумать:
             <comb comb="body,natural,com"/>
             <comb comb="body,natural"/>
             <comb comb="natural,craft"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Главная медсестра</name>
+        <combs>
+            <comb comb="com,hoz"/>
         </combs>
     </profession>
     <profession>
@@ -890,11 +923,17 @@ todo подумать:
         </combs>
     </profession>
     <profession>
-        <name>Продуктовый менеджер</name>
+        <name>Продакт-менеджер</name>
         <combs>
-            <comb comb="com,math,it"/>
-            <comb comb="com,math"/>
+            <comb comb="com,it,boss"/>
             <comb comb="com,it"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Проджект-менеджер, менеджер ИТ-проекта</name>
+        <combs>
+            <comb comb="com,it"/>
+            <comb comb="com"/>
         </combs>
     </profession>
     <profession>
@@ -904,6 +943,14 @@ todo подумать:
         </text>
         <combs>
             <comb comb="hoz,boss,com"/>
+            <comb comb="boss,com"/>
+            <comb comb="boss"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Финансовый брокер</name>
+        <combs>
+            <comb comb="boss,math"/>
         </combs>
     </profession>
     <!--<profession>-->
@@ -1023,12 +1070,6 @@ todo подумать:
     <!--</profession>-->
     <!--<profession>-->
     <!--<name>Аудитор</name>-->
-    <!--<combs>-->
-    <!--<comb comb="math"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name>Финансовый брокер</name>-->
     <!--<combs>-->
     <!--<comb comb="math"/>-->
     <!--</combs>-->
