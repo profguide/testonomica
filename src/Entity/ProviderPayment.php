@@ -8,6 +8,7 @@ namespace App\Entity;
 
 use App\Payment\TokenableInterface;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Uid\Uuid;
 
 /**
  * @ORM\Entity
@@ -15,6 +16,7 @@ use Doctrine\ORM\Mapping as ORM;
  *     @ORM\Index(columns={"token"}),
  *     @ORM\Index(columns={"provider_id", "user"}),
  * })
+ * @ORM\HasLifecycleCallbacks()
  * @author: adavydov
  * @since: 9.11.2020
  */
@@ -31,25 +33,25 @@ class ProviderPayment implements TokenableInterface
     /**
      * @var Payment
      * @ORM\OneToOne(targetEntity="Payment")
-     * @ORM\JoinColumn(name="payment_id")
+     * @ORM\JoinColumn(name="payment_id", nullable=false)
      */
     private $payment;
 
     /**
-     * @ORM\Column(type="string", length=32)
+     * @ORM\Column(type="string", length=36, nullable=false)
      * @var string
      */
     private $token;
 
     /**
      * @var Provider
-     * @ORM\OneToOne(targetEntity="Provider")
-     * @ORM\JoinColumn(name="provider_id")
+     * @ORM\ManyToOne(targetEntity="Provider")
+     * @ORM\JoinColumn(name="provider_id", nullable=false)
      */
     private $provider;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=false)
      * @var string
      */
     private $user;
@@ -126,11 +128,13 @@ class ProviderPayment implements TokenableInterface
         $this->user = $user;
     }
 
-    public static function init(Provider $provider, string $user)
+    public static function init(Payment $payment, Provider $provider, string $user)
     {
         $providerPayment = new self();
-        $providerPayment->setProvider($provider);
-        $providerPayment->setUser($user);
+        $providerPayment->payment = $payment;
+        $providerPayment->provider = $provider;
+        $providerPayment->user = $user;
+        $providerPayment->token = Uuid::v4();
         return $providerPayment;
     }
 }

@@ -21,4 +21,18 @@ class AccessRepository extends ServiceEntityRepository
         $this->em = $entityManager;
         parent::__construct($registry, ProviderAccess::class);
     }
+
+    public function save(ProviderAccess $providerAccess): ProviderAccess
+    {
+        $this->em->persist($providerAccess);
+        $this->em->flush();
+        return $providerAccess;
+    }
+
+    public function findOneByToken(string $token): ?ProviderAccess
+    {
+        /**@var ProviderAccess $providerAccess */
+        $providerAccess = $this->findOneBy(['token' => $token]);
+        return $providerAccess;
+    }
 }

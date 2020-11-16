@@ -13,6 +13,18 @@ todo подумать:
         <combs>
             <comb comb="art,tech"/>
         </combs>
+        <public>
+            <pub>
+                <title>Актер - это исполнитель ролей в театре и кино.</title>
+                <pic>https://www.profguide.io/images/article/a/7/mZ3cMyfhgX.jpg</pic>
+                <link>https://www.profguide.io/professions/actor.html</link>
+                <text>
+                    Учат в кино- и театральных институтах, код специальности 52.05.01, при поступлении сдают литературу
+                    и русский язык, а также проходят творческий конкурс (стихотворение, проза, басня, спеть песню,
+                    показать этюд). Есть театральные колледжи, поступление через творческий конкурс.
+                </text>
+            </pub>
+        </public>
     </profession>
     <profession>
         <name>Актёр</name>
@@ -113,6 +125,7 @@ todo подумать:
     <profession>
         <name>Арт-дилер, антиквар</name>
         <combs>
+            <!--todo а точно hoz? -->
             <comb comb="com,hoz,boss,art"/> <!--todo art:interest-->
             <comb comb="com,hoz,boss"/>
             <comb comb="boss,art"/> <!--todo art:interest-->
@@ -212,7 +225,6 @@ todo подумать:
         <name>Юрист</name>
         <combs>
             <comb comb="com,human"/>
-            <comb comb="human"/>
         </combs>
     </profession>
     <profession>
@@ -282,13 +294,6 @@ todo подумать:
         <name>PR-менеджер</name>
         <combs>
             <comb comb="com,human"/>
-            <comb comb="human"/>
-        </combs>
-    </profession>
-    <profession>
-        <name>Менеджер гостиницы или ресторана</name>
-        <combs>
-            <comb comb="com,hoz"/>
         </combs>
     </profession>
     <profession>
@@ -732,10 +737,33 @@ todo подумать:
         </combs>
     </profession>
     <profession>
-        <name>Отельер</name>
+        <name>Менеджер гостиницы или ресторана</name>
         <combs>
-            <comb comb="com,hoz,math"/>
             <comb comb="com,hoz"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Домоправитель (дворецкий)</name>
+        <combs>
+            <comb comb="com,hoz"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Батлер (мажордом)</name>
+        <combs>
+            <comb comb="com,hoz"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Хаускипинг-менеджер (руководитель хозяйственной службы)</name>
+        <combs>
+            <comb comb="com,hoz"/>
+        </combs>
+    </profession>
+    <profession>
+        <name>Кастелянша, экономка, помощник по хозяйству, кладовщик</name>
+        <combs>
+            <comb comb="hoz"/>
         </combs>
     </profession>
     <profession>
@@ -943,6 +971,7 @@ todo подумать:
         </text>
         <combs>
             <comb comb="hoz,boss,com"/>
+            <comb comb="boss,it,com"/>
             <comb comb="boss,com"/>
             <comb comb="boss"/>
         </combs>

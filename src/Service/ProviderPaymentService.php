@@ -10,57 +10,102 @@ namespace App\Service;
 use App\Entity\Provider;
 use App\Entity\ProviderAccess;
 use App\Entity\ProviderPayment;
+use App\Payment\Service;
 use App\Payment\TokenableInterface;
 use App\Repository\AccessRepository;
+use App\Repository\PaymentRepository;
 use App\Repository\ProviderPaymentRepository;
 
 class ProviderPaymentService
 {
+    /**@var PaymentService */
+    private $paymentService;
+
+    /**@var AccessService */
+    private $accessService;
+
     /**@var ProviderPaymentRepository */
     private $providerPaymentRepository;
 
-    /**@var AccessRepository */
-    private $accessRepository;
-
     /**
-     * ProviderPaymentService constructor.
+     * @param PaymentService $paymentService
+     * @param AccessService $accessService
      * @param ProviderPaymentRepository $providerPaymentRepository
-     * @param AccessRepository $accessRepository
      */
-    public function __construct(ProviderPaymentRepository $providerPaymentRepository, AccessRepository $accessRepository)
+    public function __construct(
+        PaymentService $paymentService,
+        AccessService $accessService,
+        ProviderPaymentRepository $providerPaymentRepository)
     {
+        $this->paymentService = $paymentService;
+        $this->accessService = $accessService;
         $this->providerPaymentRepository = $providerPaymentRepository;
-        $this->accessRepository = $accessRepository;
     }
 
-    public function paymentOrAccess(Provider $provider, string $user): TokenableInterface
+    public function findOneByProviderAndUser(Provider $provider, string $user): ?ProviderPayment
     {
-        /*
-         * Партнёр обращается в PartnerAccessController чтобы получить токен к тесту
-         * 1. PartnerAccessController проверяет есть ли оплата.
-         * Если есть оплата:
-         *  вернем код доступа к тесту
-         * Если нет оплаты:
-         *  вернем код на оплату
-         * 2. Партнёр открывает вкладку с другим адресом. и там происходит редирект либо в плате, либо в тест.
-         * ---
-         * Токен можно сделать так, чтобы было понятно, что это токен оплаты или токен доступа.
-         * Например, добавлять в хвост ==p или ==a
-         *
-         * Payment или ProviderPayment. Однажды тут будет тоже платежный механизм. Не хотелось бы плодить разные штуки.
-         * Тогда может быть один Payment(id, created_at, provider_payment(null), executed_at)
-         * и ProviderPayment сделать уже отдельной таблицей
-         * Access
-         */
-        $providerPayment = $this->providerPaymentService->findOneByProviderAndUser($provider, $user);
-        if ($providerPayment == null) {
-            $providerPayment = ProviderPayment::init($provider, $user);
-            $providerPayment = $this->providerPaymentService->save($providerPayment);
-            return $providerPayment;
-        } elseif (!$providerPayment->isExecuted()) {
+        return $this->providerPaymentRepository->findOneByProviderAndUser($provider, $user);
+    }
+
+    /**
+     * @param Provider $provider
+     * @param string $user
+     * @return TokenableInterface
+     */
+    public function getToken(Provider $provider, string $user): TokenableInterface
+    {
+        if ($this->isPayed($provider, $user)) {
+            return $this->createAccessToken($provider);
+        } else {
+            return $this->getPaymentToken($provider, $user);
+        }
+    }
+
+    private function isPayed(Provider $provider, string $user)
+    {
+        if (($providerPayment = $this->findOneByProviderAndUser($provider, $user)) == null) {
+            return false;
+        }
+        return $providerPayment->getPayment()->isExecuted();
+    }
+
+    /**
+     * @param Provider $provider
+     * @param string $user
+     * @return ProviderPayment
+     */
+    private function getPaymentToken(Provider $provider, string $user): ProviderPayment
+    {
+        if (($providerPayment = $this->findOneByProviderAndUser($provider, $user)) != null) {
             return $providerPayment;
         }
+        return $this->create($provider, $user);
+    }
 
+    /**
+     * @param Provider $provider
+     * @return ProviderAccess
+     */
+    public function createAccessToken(Provider $provider): ProviderAccess
+    {
         return $this->accessService->createWithProvider($provider);
+    }
+
+    private function create(Provider $provider, string $user): ProviderPayment
+    {
+        $payment = $this->createPaymentForServiceTest();
+        $providerPayment = ProviderPayment::init($payment, $provider, $user);
+        return $this->providerPaymentRepository->save($providerPayment);
+    }
+
+    //
+    private function createPaymentForServiceTest()
+    {
+        return $this->paymentService->create(Service::TEST_PROFORIENTATION['price']);
+    }
+
+    public function findOneByToken(string $token): ?ProviderPayment
+    {
+        return $this->providerPaymentRepository->findByToken($token);
     }
 }

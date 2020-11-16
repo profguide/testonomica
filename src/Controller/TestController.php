@@ -9,11 +9,12 @@ use App\Service\CalculatorService;
 use App\Service\CategoryService;
 use App\Service\ResultService;
 use App\Service\TestService;
-use App\Service\TestSourceService;
 use App\Test\ResultUtil;
 use App\Test\TestStatus;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -36,9 +37,6 @@ class TestController extends AbstractController
     /**@var AnswerService */
     private $answerService;
 
-    /**@var TestSourceService */
-    private $sourceService;
-
     /**@var CalculatorService */
     private $calculatorService;
 
@@ -47,14 +45,12 @@ class TestController extends AbstractController
         CategoryService $categoryService,
         AnswerService $answerService,
         ResultService $resultService,
-        TestSourceService $sourceService,
         CalculatorService $calculatorService)
     {
         $this->testService = $testService;
         $this->categoryService = $categoryService;
         $this->answerService = $answerService;
         $this->resultService = $resultService;
-        $this->sourceService = $sourceService;
         $this->calculatorService = $calculatorService;
     }
 
@@ -83,26 +79,26 @@ class TestController extends AbstractController
 
     /**
      * @Route("/{categorySlug}/{slug}/", name="view")
+     * @param Request $request
      * @param string $categorySlug
      * @param string $slug
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function view(string $categorySlug, string $slug)
+    public function view(Request $request, string $categorySlug, string $slug)
     {
         $test = $this->loadBySlug($slug);
-        self::assertActive($test);
-        $category = $test->getCatalog();
-        self::assertTestInCategory($test, $categorySlug);
-        $result = $this->resultService->getSessionResult($test);
-        if ($result) {
+        if (($result = $this->resultService->getSessionResult($test)) != null) {
             return $this->renderResult($test, $result);
         }
+        $this->assertUrl($test, $categorySlug);
+        $this->assertActive($test);
+        $this->assertAccess($test, $request);
         $status = $this->answerService->hasAnswers($test)
             ? TestStatus::progress()
             : TestStatus::none();
         return $this->render('tests/view.html.twig', [
             'test' => $test,
-            'category' => $category,
+            'category' => $test->getCatalog(),
             'status' => $status,
         ]);
     }
@@ -115,7 +111,7 @@ class TestController extends AbstractController
         return $test;
     }
 
-    private static function assertTestInCategory(Test $test, string $categorySlug)
+    private static function assertUrl(Test $test, string $categorySlug)
     {
         if ($test->getCatalog()->getSlug() !== $categorySlug) {
             throw new NotFoundHttpException();
@@ -127,6 +123,22 @@ class TestController extends AbstractController
         if (!$test->isActive()) {
             throw new NotFoundHttpException();
         }
+    }
+
+    private function assertAccess(Test $test, Request $request)
+    {
+        if ($this->getParameter('kernel.environment') === 'dev') {
+            return;
+        }
+        // какой-то резолвер надо
+        if ($test->getSlug() !== 'test_2') {
+            return;
+        }
+        // а тут проверять доступ к конкретной услуге как-то надо
+        if (!empty($request->cookies->get('access'))) {
+            return;
+        }
+        throw new AccessDeniedHttpException();
     }
 
     private function loadResultByUuid(string $uuid)

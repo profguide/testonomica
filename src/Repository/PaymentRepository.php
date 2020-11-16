@@ -21,4 +21,17 @@ class PaymentRepository extends ServiceEntityRepository
         $this->em = $entityManager;
         parent::__construct($registry, Payment::class);
     }
+
+    public function save(Payment $payment): Payment
+    {
+        $this->em->persist($payment);
+        $this->em->flush();
+        return $payment;
+    }
+
+    public function update(Payment $payment): Payment
+    {
+        $this->em->flush();
+        return $payment;
+    }
 }

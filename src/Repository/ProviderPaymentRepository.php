@@ -7,6 +7,7 @@
 namespace App\Repository;
 
 
+use App\Entity\PaymentStatus;
 use App\Entity\Provider;
 use App\Entity\ProviderPayment;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
@@ -26,14 +27,21 @@ class ProviderPaymentRepository extends ServiceEntityRepository
     function findByToken(string $token): ?ProviderPayment
     {
         /**@var ProviderPayment $o */
-        $o = parent::findOneBy(['token' => $token]);
+        $o = $this->findOneBy(['token' => $token]);
         return $o;
     }
 
     public function findOneByProviderAndUser(Provider $provider, string $user): ?ProviderPayment
     {
         /**@var ProviderPayment $o */
-        $o = parent::findOneBy(['provider_id' => $provider->getId(), 'user' => $user]);
+        $o = $this->findOneBy(['provider' => $provider->getId(), 'user' => $user]);
         return $o;
+    }
+
+    public function save(ProviderPayment $providerPayment)
+    {
+        $this->em->persist($providerPayment);
+        $this->em->flush();
+        return $providerPayment;
     }
 }
