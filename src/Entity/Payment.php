@@ -123,4 +123,19 @@ class Payment
         $criteria = Criteria::create()->where(PaymentStatus::criteriaExecuted());
         return $this->statuses->matching($criteria)->count() > 0;
     }
+
+    public function addStatusPending(): void
+    {
+        $this->addStatus(new PaymentStatus(PaymentStatus::STATUS_PENDING));
+    }
+
+    public function addStatusExecuted(): void
+    {
+        $this->addStatus(new PaymentStatus(PaymentStatus::STATUS_EXECUTED));
+    }
+
+    public function addStatusFailed(): void
+    {
+        $this->addStatus(new PaymentStatus(PaymentStatus::STATUS_FAILED));
+    }
 }

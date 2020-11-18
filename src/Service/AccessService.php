@@ -7,9 +7,10 @@
 namespace App\Service;
 
 
-use App\Entity\Provider;
-use App\Entity\ProviderAccess;
+use App\Entity\Access;
 use App\Repository\AccessRepository;
+use Symfony\Component\HttpFoundation\Cookie;
+use Symfony\Component\HttpFoundation\Response;
 
 class AccessService
 {
@@ -25,18 +26,23 @@ class AccessService
         $this->repository = $repository;
     }
 
-    public function createWithProvider(Provider $provider): ?ProviderAccess
+    public function create(): ?Access
     {
-        return $this->save(ProviderAccess::init($provider));
+        return $this->save(Access::init());
     }
 
-    public function save(ProviderAccess $providerAccess)
+    public function save(Access $providerAccess)
     {
         return $this->repository->save($providerAccess);
     }
 
-    public function findOneByToken(string $token): ?ProviderAccess
+    public function findOneByToken(string $token): ?Access
     {
         return $this->repository->findOneByToken($token);
+    }
+
+    public function saveToCookie(Access $access, Response $response)
+    {
+        $response->headers->setCookie(Cookie::create('access', $access->getId(), 60 * 60 * 24 * 365));
     }
 }

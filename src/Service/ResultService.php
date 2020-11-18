@@ -10,7 +10,9 @@ namespace App\Service;
 use App\Entity\Result;
 use App\Entity\Test;
 use App\Repository\ResultRepository;
+use App\Test\AnswersSerializer;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\Uid\Uuid;
 
 class ResultService
 {
@@ -22,10 +24,17 @@ class ResultService
     /**@var SessionInterface */
     private $session;
 
-    public function __construct(SessionInterface $session, ResultRepository $repository)
+    /**@var AnswersSerializer */
+    private $serializer;
+
+    public function __construct(
+        SessionInterface $session,
+        ResultRepository $repository,
+        AnswersSerializer $serializer)
     {
         $this->repository = $repository;
         $this->session = $session;
+        $this->serializer = $serializer;
     }
 
     public function save(Result $result): Result
@@ -63,5 +72,11 @@ class ResultService
             return $this->findByUuid($uuid);
         }
         return null;
+    }
+
+    public function create(Test $test, array $answers): Result
+    {
+        $result = Result::create($test, Uuid::v1()->toBase58(), $this->serializer->serialize($answers));
+        return $this->save($result);
     }
 }

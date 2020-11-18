@@ -30,19 +30,14 @@ class TestApiStatefulController extends TestApiAbstract
     /**@var ResultService */
     private $resultService;
 
-    /**@var AnswersSerializer */
-    private $serializer;
-
     public function __construct(
         TestService $testService,
         TestSourceService $sourceService,
         AnswerService $answerService,
-        ResultService $resultService,
-        AnswersSerializer $serializer)
+        ResultService $resultService)
     {
         $this->answerService = $answerService;
         $this->resultService = $resultService;
-        $this->serializer = $serializer;
         parent::__construct($testService, $sourceService);
     }
 
@@ -53,9 +48,7 @@ class TestApiStatefulController extends TestApiAbstract
 
     public function end(Test $test)
     {
-        $answers = $this->answerService->getAll($test);
-        $result = Result::create($test, Uuid::v4(), $this->serializer->serialize($answers));
-        $this->resultService->save($result);
+        $result = $this->resultService->create($test, $this->answerService->getAll($test));
         $this->resultService->saveSessionResult($result);
         return new Response(
             "Обработка результата",

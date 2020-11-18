@@ -9,7 +9,7 @@ namespace App\Tests\Service;
 
 use App\DataFixtures\ProviderFixture;
 use App\Entity\Provider;
-use App\Entity\ProviderAccess;
+use App\Entity\Access;
 use App\Entity\ProviderPayment;
 use App\Repository\ProviderRepository;
 use App\Service\ProviderPaymentService;
@@ -60,9 +60,9 @@ class ProviderPaymentServiceTest extends KernelTestCase
     public function testPayed()
     {
         $tokenable1 = $this->service->getToken($this->provider, 'payed_user');
-        $this->assertEquals(ProviderAccess::class, get_class($tokenable1));
+        $this->assertEquals(Access::class, get_class($tokenable1));
         $tokenable2 = $this->service->getToken($this->provider, 'payed_user');
-        $this->assertEquals(ProviderAccess::class, get_class($tokenable2));
+        $this->assertEquals(Access::class, get_class($tokenable2));
         $this->assertFalse($tokenable1 === $tokenable2);
     }
 }

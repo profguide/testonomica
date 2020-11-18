@@ -8,12 +8,10 @@ namespace App\Service;
 
 
 use App\Entity\Provider;
-use App\Entity\ProviderAccess;
+use App\Entity\Access;
 use App\Entity\ProviderPayment;
 use App\Payment\Service;
 use App\Payment\TokenableInterface;
-use App\Repository\AccessRepository;
-use App\Repository\PaymentRepository;
 use App\Repository\ProviderPaymentRepository;
 
 class ProviderPaymentService
@@ -55,7 +53,7 @@ class ProviderPaymentService
     public function getToken(Provider $provider, string $user): TokenableInterface
     {
         if ($this->isPayed($provider, $user)) {
-            return $this->createAccessToken($provider);
+            return $this->createAccessToken();
         } else {
             return $this->getPaymentToken($provider, $user);
         }
@@ -83,12 +81,11 @@ class ProviderPaymentService
     }
 
     /**
-     * @param Provider $provider
-     * @return ProviderAccess
+     * @return Access
      */
-    public function createAccessToken(Provider $provider): ProviderAccess
+    public function createAccessToken(): Access
     {
-        return $this->accessService->createWithProvider($provider);
+        return $this->accessService->create();
     }
 
     private function create(Provider $provider, string $user): ProviderPayment

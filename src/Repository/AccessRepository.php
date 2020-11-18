@@ -7,7 +7,7 @@
 namespace App\Repository;
 
 
-use App\Entity\ProviderAccess;
+use App\Entity\Access;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;
@@ -19,19 +19,19 @@ class AccessRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry, EntityManagerInterface $entityManager)
     {
         $this->em = $entityManager;
-        parent::__construct($registry, ProviderAccess::class);
+        parent::__construct($registry, Access::class);
     }
 
-    public function save(ProviderAccess $providerAccess): ProviderAccess
+    public function save(Access $providerAccess): Access
     {
         $this->em->persist($providerAccess);
         $this->em->flush();
         return $providerAccess;
     }
 
-    public function findOneByToken(string $token): ?ProviderAccess
+    public function findOneByToken(string $token): ?Access
     {
-        /**@var ProviderAccess $providerAccess */
+        /**@var Access $providerAccess */
         $providerAccess = $this->findOneBy(['token' => $token]);
         return $providerAccess;
     }

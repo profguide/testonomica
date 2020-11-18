@@ -17,7 +17,7 @@ use Symfony\Component\Uid\Uuid;
  * @author: adavydov
  * @since: 9.11.2020
  */
-class ProviderAccess implements TokenableInterface
+class Access implements TokenableInterface
 {
     /**
      * @ORM\Id()
@@ -32,13 +32,6 @@ class ProviderAccess implements TokenableInterface
      * @var string
      */
     private $token;
-
-    /**
-     * @var Provider
-     * @ORM\ManyToOne(targetEntity="Provider")
-     * @ORM\JoinColumn(name="provider_id")
-     */
-    private $provider;
 
     /**
      * @ORM\Column(type="datetime", name="created_at")
@@ -63,12 +56,19 @@ class ProviderAccess implements TokenableInterface
         $this->createdAt = new \DateTime();
     }
 
-    public static function init(Provider $provider): self
+    public static function init(): self
     {
         $o = new self();
-        $o->provider = $provider;
         $o->token = Uuid::v4();
         return $o;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
     }
 
     public function isUsed(): bool
@@ -79,11 +79,6 @@ class ProviderAccess implements TokenableInterface
     public function setUsed(): void
     {
         $this->usedAt = new \DateTime();
-    }
-
-    public function setProvider(Provider $provider)
-    {
-        $this->provider = $provider;
     }
 
     public function setToken(string $token)

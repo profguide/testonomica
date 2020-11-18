@@ -9,6 +9,8 @@ namespace App\Service;
 
 use App\Entity\Payment;
 use App\Repository\PaymentRepository;
+use Symfony\Component\HttpFoundation\Cookie;
+use Symfony\Component\HttpFoundation\Response;
 
 class PaymentService
 {
@@ -24,8 +26,25 @@ class PaymentService
         $this->repository = $repository;
     }
 
-    public function create(int $price)
+    public function findOneById($id): Payment
+    {
+        /**@var Payment $payment */
+        $payment = $this->repository->find($id);
+        return $payment;
+    }
+
+    public function create(int $price): Payment
     {
         return $this->repository->save(Payment::init($price));
+    }
+
+    public function save($payment): Payment
+    {
+        return $this->repository->save($payment);
+    }
+
+    public function saveToCookie(Payment $payment, Response $response)
+    {
+        $response->headers->setCookie(Cookie::create('payment', $payment->getId(), 60 * 60 * 24 * 365));
     }
 }
