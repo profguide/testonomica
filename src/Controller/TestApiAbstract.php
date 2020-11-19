@@ -8,6 +8,7 @@ namespace App\Controller;
 
 
 use App\Entity\Test;
+use App\Service\ResultService;
 use App\Service\TestService;
 use App\Service\TestSourceService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -30,13 +31,17 @@ abstract class TestApiAbstract extends AbstractController
     /**@var TestService */
     protected $testService;
 
+    /**@var ResultService */
+    protected $resultService;
+
     /**@var TestSourceService */
     protected $sourceService;
 
-    public function __construct(TestService $testService, TestSourceService $sourceService)
+    public function __construct(TestService $testService, TestSourceService $sourceService, ResultService $resultService)
     {
         $this->testService = $testService;
         $this->sourceService = $sourceService;
+        $this->resultService = $resultService;
     }
 
     /**

@@ -8,11 +8,22 @@ namespace App\Controller;
 
 
 use App\Entity\Test;
+use App\Service\ResultService;
+use App\Service\TestService;
+use App\Service\TestSourceService;
+use App\Test\AnswersSerializer;
+use App\Test\TestStatus;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * todo написать какое-то правило, чтобы сделать роут доступным только для профгида. возможно, передача спецтокена
+ * Stateless API прохождения теста, промежуточные данные хранятся у клиента (браузер, сервисы).
+ * Для сохранения @see TestApiStatelessController::saveResults()
+ * todo написать какое-то правило, чтобы сделать роут доступным только для профгида.
+ * возможно, передача спецтокена во враппер метода api(Request $request)
  * @Route("/tests/cli", name="test_cli.", stateless=true)
  * @package App\Controller
  * @author: adavydov
@@ -20,19 +31,42 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class TestApiStatelessController extends TestApiAbstract
 {
-    /**
-     * @Route("/save/", name="save-results")
-     */
-    public function saveResults()
+    /**@var AnswersSerializer */
+    private $serializer;
+
+    public function __construct(
+        TestService $testService,
+        TestSourceService $sourceService,
+        ResultService $resultService,
+        AnswersSerializer $serializer)
     {
-        // todo
-        throw new \RuntimeException("Ending is not unsupported yet");
+        $this->serializer = $serializer;
+        parent::__construct($testService, $sourceService, $resultService);
+    }
+
+    /**
+     * @Route("/save/{id}/", name="save_results")
+     * @param int $id
+     * @param Request $request
+     * @return Response
+     */
+    public function saveResults(int $id, Request $request)
+    {
+        $test = $this->loadTest($id);
+        $answers = $this->serializer->deserialize($request->get('answers'));
+        $result = $this->resultService->create($test, $answers);
+        return new Response($result->getUuid());
     }
 
     public function end(Test $test)
     {
-        // todo
-        throw new \RuntimeException("Ending is not unsupported yet");
+        return new Response(
+            "Обработка результата",
+            Response::HTTP_OK,
+            [
+                'Access-Control-Expose-Headers' => 'test-status',
+                'test-status' => TestStatus::finished(),
+            ]);
     }
 
     protected function saveAnswer(Test $test, string $questionId, string $value): void
@@ -48,5 +82,13 @@ class TestApiStatelessController extends TestApiAbstract
     public function restore(Test $test)
     {
         throw new BadRequestHttpException("Unsupported operation");
+    }
+
+    private function loadTest($id): Test
+    {
+        if (($test = $this->testService->findById($id)) == null) {
+            throw new NotFoundHttpException('Test not found');
+        }
+        return $test;
     }
 }

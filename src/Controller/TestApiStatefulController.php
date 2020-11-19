@@ -3,18 +3,15 @@
 namespace App\Controller;
 
 use App\Entity\Answer;
-use App\Entity\Result;
 use App\Entity\Test;
 use App\Service\AnswerService;
 use App\Service\ResultService;
 use App\Service\TestService;
 use App\Service\TestSourceService;
-use App\Test\AnswersSerializer;
 use App\Test\Question;
 use App\Test\TestStatus;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Uid\Uuid;
 
 /**
  * @Route("/tests/api", name="tests_api")
@@ -27,9 +24,6 @@ class TestApiStatefulController extends TestApiAbstract
     /**@var AnswerService */
     private $answerService;
 
-    /**@var ResultService */
-    private $resultService;
-
     public function __construct(
         TestService $testService,
         TestSourceService $sourceService,
@@ -37,8 +31,7 @@ class TestApiStatefulController extends TestApiAbstract
         ResultService $resultService)
     {
         $this->answerService = $answerService;
-        $this->resultService = $resultService;
-        parent::__construct($testService, $sourceService);
+        parent::__construct($testService, $sourceService, $resultService);
     }
 
     protected function saveAnswer(Test $test, $questionId, $value): void

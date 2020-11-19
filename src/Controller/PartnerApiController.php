@@ -86,7 +86,7 @@ class PartnerApiController extends AbstractController
         return $service;
     }
 
-    // однажды проверка станет сложнее, возможно будут тонкие правила, такие как доступ к некоторым тестам от одного партнера
+    // однажды проверка станет сложнее, возможно будут тонкие правила, такие как доступ к некоторым услугам Service
     private function isFreeAccessAllowed(Provider $provider)
     {
         return $provider->getSlug() == 'profguide';

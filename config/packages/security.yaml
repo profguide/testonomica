@@ -6,6 +6,11 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+        # stateless interface to prevent creating auth tokens, what otherwise symfony do
+        cli:
+            pattern: ^/tests/cli
+            stateless: true
+            security: false
         main:
             anonymous: true
             lazy: true

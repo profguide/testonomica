@@ -11,8 +11,6 @@ use App\DataFixtures\TestFixture;
 use App\Entity\Answer;
 use App\Entity\Result;
 use App\Entity\Test;
-use App\Repository\AnswerRepository;
-use App\Repository\ResultRepository;
 use App\Repository\TestRepositoryInterface;
 use App\Service\AnswerService;
 use App\Service\ResultService;
