@@ -12,15 +12,20 @@ use App\Entity\Payment;
 use App\Entity\PaymentStatus;
 use App\Entity\Provider;
 use App\Entity\ProviderPayment;
+use App\Entity\Service;
 use App\Repository\PaymentRepository;
 use App\Repository\ProviderPaymentRepository;
 use App\Repository\ProviderRepository;
+use App\Repository\ServiceRepository;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class PaymentRepositoryTest extends KernelTestCase
 {
     /**@var PaymentRepository */
     private $paymentRepository;
+
+    /**@var ServiceRepository */
+    private $serviceRepository;
 
     /**@var ProviderPaymentRepository */
     private $providerPaymentRepository;
@@ -33,6 +38,7 @@ class PaymentRepositoryTest extends KernelTestCase
         self::bootKernel();
         $this->paymentRepository = self::$container->get(PaymentRepository::class);
         $this->providerPaymentRepository = self::$container->get(ProviderPaymentRepository::class);
+        $this->serviceRepository = self::$container->get(ServiceRepository::class);
         /**@var ProviderRepository $providerRepo */
         $providerRepo = self::$container->get(ProviderRepository::class);
         $this->provider = $providerRepo->findBySlug(ProviderFixture::TESTOMETRIKA);
@@ -62,7 +68,7 @@ class PaymentRepositoryTest extends KernelTestCase
 
     private function createPayment(): Payment
     {
-        $payment = Payment::init(349);
+        $payment = Payment::init($this->loadService(), 349);
         return $this->paymentRepository->save($payment);
     }
 
@@ -70,5 +76,10 @@ class PaymentRepositoryTest extends KernelTestCase
     {
         $providerPayment = ProviderPayment::init($payment, $this->provider, $user);
         return $this->providerPaymentRepository->save($providerPayment);
+    }
+
+    private function loadService(): Service
+    {
+        return $this->serviceRepository->findOneBySlug('service_1');
     }
 }

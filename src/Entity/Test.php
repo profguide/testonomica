@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\TestRepository"))
@@ -34,6 +34,11 @@ class Test
      * @ORM\JoinColumn(name="catalog_id")
      */
     private $catalog;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Service", mappedBy="tests")
+     */
+    private $services;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -115,15 +120,10 @@ class Test
         return $test;
     }
 
-//    public function __construct(int $catalogId, string $slug, string $name, int $duration)
-//    {
-//        $this->catalogId = $catalogId;
-//        $this->slug = $slug;
-//        $this->name = $name;
-//        $this->duration = $duration;
-//        $this->active = 0;
-//        $this->activeEn = 0;
-//    }
+    public function __construct()
+    {
+        $this->services = new ArrayCollection();
+    }
 
     /**
      * @return mixed
@@ -365,5 +365,13 @@ class Test
     public function getActiveEn(): ?bool
     {
         return $this->activeEn;
+    }
+
+    public function addService(Service $service)
+    {
+        if (!$this->services->contains($service)) {
+            $this->services[] = $service;
+        }
+        return $this;
     }
 }

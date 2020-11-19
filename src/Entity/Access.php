@@ -28,6 +28,13 @@ class Access implements TokenableInterface
     private $id;
 
     /**
+     * @var Service
+     * @ORM\ManyToOne(targetEntity="Service")
+     * @ORM\JoinColumn(name="service_id", nullable=false)
+     */
+    private $service;
+
+    /**
      * @ORM\Column(type="string", length=36)
      * @var string
      */
@@ -56,10 +63,11 @@ class Access implements TokenableInterface
         $this->createdAt = new \DateTime();
     }
 
-    public static function init(): self
+    public static function init(Service $service): self
     {
         $o = new self();
         $o->token = Uuid::v4();
+        $o->service = $service;
         return $o;
     }
 
@@ -84,5 +92,21 @@ class Access implements TokenableInterface
     public function setToken(string $token)
     {
         $this->token = $token;
+    }
+
+    /**
+     * @return Service
+     */
+    public function getService(): Service
+    {
+        return $this->service;
+    }
+
+    /**
+     * @param Service $service
+     */
+    public function setService(Service $service): void
+    {
+        $this->service = $service;
     }
 }

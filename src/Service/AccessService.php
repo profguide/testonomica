@@ -8,6 +8,7 @@ namespace App\Service;
 
 
 use App\Entity\Access;
+use App\Entity\Service;
 use App\Repository\AccessRepository;
 use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\Response;
@@ -26,9 +27,9 @@ class AccessService
         $this->repository = $repository;
     }
 
-    public function create(): ?Access
+    public function create(Service $service): ?Access
     {
-        return $this->save(Access::init());
+        return $this->save(Access::init($service));
     }
 
     public function save(Access $providerAccess)

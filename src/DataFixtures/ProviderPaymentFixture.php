@@ -10,9 +10,10 @@ use App\Entity\Payment;
 use App\Entity\Provider;
 use App\Entity\ProviderPayment;
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 
-class ProviderPaymentFixture extends Fixture
+class ProviderPaymentFixture extends Fixture implements DependentFixtureInterface
 {
     const PAYED_USER = 'payed_user';
     const UNPAYED_USER = 'not_payed_user';
@@ -53,5 +54,12 @@ class ProviderPaymentFixture extends Fixture
         $providerPaymentNotPayed->setUser(self::UNPAYED_USER);
         $providerPaymentNotPayed->setToken(self::UNPAYED_TOKEN);
         $manager->persist($providerPaymentNotPayed);
+    }
+
+    public function getDependencies()
+    {
+        return [
+            PaymentFixture::class
+        ];
     }
 }

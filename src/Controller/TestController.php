@@ -130,11 +130,12 @@ class TestController extends AbstractController
         if ($this->getParameter('kernel.environment') === 'dev') {
             return;
         }
-        // какой-то резолвер надо
+        // Определим является ли тест платным
+        // Надо создать Service (пакет), ServiceTests (тесты в пакете) и Access (доступ к пакету (добавить поле service_id))
         if ($test->getSlug() !== 'test_2') {
             return;
         }
-        // а тут проверять доступ к конкретной услуге как-то надо
+        // Из куки получать Access, находить Service по access.getService() и смотреть service.hasTest($test)
         if (!empty($request->cookies->get('access'))) {
             return;
         }

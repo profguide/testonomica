@@ -5,10 +5,14 @@ namespace App\DataFixtures;
 use App\Entity\Category;
 use App\Entity\Test;
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 
-class TestFixture extends Fixture
+class TestFixture extends Fixture implements DependentFixtureInterface
 {
+    const TEST_1 = 'test_1';
+    const TEST_2 = 'test_2';
+
     const TEST_1_SLUG = 'test_1';
     const TEST_2_SLUG = 'test_2';
 
@@ -29,6 +33,9 @@ class TestFixture extends Fixture
         $test->setXmlFilename('test'); // << %kernel.project_dir%/xml/test.xml
         $test->setCalculatorName('test'); // << \App\Test\Calculator\TestCalculator
         $manager->persist($test);
+        $manager->flush();
+
+        $this->addReference(self::TEST_1, $test);
 
         /**@var Category $category */
         $category = $this->getReference(CategoryFixture::CATEGORY_PSYCHOLOGICAL_REFERENCE);
@@ -45,7 +52,15 @@ class TestFixture extends Fixture
         $test->setXmlFilename('proforientation2'); // << %kernel.project_dir%/xml/test.xml
         $test->setCalculatorName('proforientation2'); // \App\Test\Calculator\Proforientation2Calculator
         $manager->persist($test);
-
         $manager->flush();
+
+        $this->addReference(self::TEST_2, $test);
+    }
+
+    public function getDependencies()
+    {
+        return [
+            CategoryFixture::class
+        ];
     }
 }

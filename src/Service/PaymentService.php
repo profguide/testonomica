@@ -8,6 +8,7 @@ namespace App\Service;
 
 
 use App\Entity\Payment;
+use App\Entity\Service;
 use App\Repository\PaymentRepository;
 use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\Response;
@@ -33,9 +34,9 @@ class PaymentService
         return $payment;
     }
 
-    public function create(int $price): Payment
+    public function create(Service $service, int $price): Payment
     {
-        return $this->repository->save(Payment::init($price));
+        return $this->repository->save(Payment::init($service, $price));
     }
 
     public function save($payment): Payment

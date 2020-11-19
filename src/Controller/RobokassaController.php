@@ -7,21 +7,19 @@
 namespace App\Controller;
 
 
+use App\Entity\Service;
 use App\Payment\Robokassa;
+use App\Repository\ServiceRepository;
 use App\Service\AccessService;
 use App\Service\PaymentService;
-use http\Exception\RuntimeException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
-use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\Exception\ServiceUnavailableHttpException;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Serializer\Exception\UnsupportedException;
 
 /**
  * @Route("/robokassa")
@@ -34,21 +32,27 @@ class RobokassaController extends AbstractController
     /**@var AccessService */
     private $accessService;
 
+    /**@var ServiceRepository */
+    private $serviceRepository;
+
     /**@var Robokassa */
     private $robokassa;
 
     /**
      * @param PaymentService $paymentService
      * @param AccessService $accessService
+     * @param ServiceRepository $serviceRepository
      * @param Robokassa $robokassa
      */
     public function __construct(
         PaymentService $paymentService,
         AccessService $accessService,
+        ServiceRepository $serviceRepository,
         Robokassa $robokassa)
     {
         $this->paymentService = $paymentService;
         $this->accessService = $accessService;
+        $this->serviceRepository = $serviceRepository;
         $this->robokassa = $robokassa;
     }
 
@@ -94,7 +98,7 @@ class RobokassaController extends AbstractController
             'categorySlug' => 'psychology',
             'slug' => 'test_2'
         ]));
-        $this->accessService->saveToCookie($this->accessService->create(), $response);
+        $this->accessService->saveToCookie($this->accessService->create($payment->getService()), $response);
         return $response;
     }
 

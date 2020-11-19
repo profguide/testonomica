@@ -10,7 +10,7 @@ namespace App\Service;
 use App\Entity\Provider;
 use App\Entity\Access;
 use App\Entity\ProviderPayment;
-use App\Payment\Service;
+use App\Entity\Service;
 use App\Payment\TokenableInterface;
 use App\Repository\ProviderPaymentRepository;
 
@@ -46,16 +46,17 @@ class ProviderPaymentService
     }
 
     /**
+     * @param Service $service
      * @param Provider $provider
      * @param string $user
      * @return TokenableInterface
      */
-    public function getToken(Provider $provider, string $user): TokenableInterface
+    public function getToken(Service $service, Provider $provider, string $user): TokenableInterface
     {
         if ($this->isPayed($provider, $user)) {
-            return $this->createAccessToken();
+            return $this->createAccessToken($service);
         } else {
-            return $this->getPaymentToken($provider, $user);
+            return $this->getPaymentToken($service, $provider, $user);
         }
     }
 
@@ -68,37 +69,39 @@ class ProviderPaymentService
     }
 
     /**
+     * @param Service $service
      * @param Provider $provider
      * @param string $user
      * @return ProviderPayment
      */
-    private function getPaymentToken(Provider $provider, string $user): ProviderPayment
+    private function getPaymentToken(Service $service, Provider $provider, string $user): ProviderPayment
     {
         if (($providerPayment = $this->findOneByProviderAndUser($provider, $user)) != null) {
             return $providerPayment;
         }
-        return $this->create($provider, $user);
+        return $this->create($service, $provider, $user);
     }
 
     /**
+     * @param Service $service
      * @return Access
      */
-    public function createAccessToken(): Access
+    public function createAccessToken(Service $service): Access
     {
-        return $this->accessService->create();
+        return $this->accessService->create($service);
     }
 
-    private function create(Provider $provider, string $user): ProviderPayment
+    private function create(Service $service, Provider $provider, string $user): ProviderPayment
     {
-        $payment = $this->createPaymentForServiceTest();
+        $payment = $this->createPaymentForServiceTest($service);
         $providerPayment = ProviderPayment::init($payment, $provider, $user);
         return $this->providerPaymentRepository->save($providerPayment);
     }
 
     //
-    private function createPaymentForServiceTest()
+    private function createPaymentForServiceTest(Service $service)
     {
-        return $this->paymentService->create(Service::TEST_PROFORIENTATION['price']);
+        return $this->paymentService->create($service, $service->getSum());
     }
 
     public function findOneByToken(string $token): ?ProviderPayment

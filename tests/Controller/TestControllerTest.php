@@ -62,6 +62,15 @@ class TestControllerTest extends WebTestCase
 //        dd($this->client->getResponse()->getContent());
 //    }
 
+    public function testViewPayableTestWithoutAccess()
+    {
+        $this->requestView();
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+//        $crawler = new Crawler($this->client->getResponse()->getContent());
+//        $this->assertEquals(1, $crawler->filter('.start-test')->count());
+//        $this->assertEquals(0, $crawler->filter('.restore-test')->count());
+    }
+
     public function testViewStatusNone()
     {
         $categorySlug = $this->test->getCatalog()->getSlug();
@@ -101,7 +110,6 @@ class TestControllerTest extends WebTestCase
     /**
      * Страница результата
      * Ожидаем, что страница найдена
-     * todo проверить содержимое, когда кальтулятор будет готов
      */
     public function testResult()
     {
@@ -119,5 +127,12 @@ class TestControllerTest extends WebTestCase
             $this->test,
             '00000000-0000-0000-0000-000000000',
             $serialized);
+    }
+
+    private function requestView()
+    {
+        $categorySlug = $this->test->getCatalog()->getSlug();
+        $testSlug = $this->test->getSlug();
+        $this->client->request('POST', "/tests/$categorySlug/$testSlug/");
     }
 }

@@ -31,6 +31,13 @@ class Payment
     private $id;
 
     /**
+     * @var Service
+     * @ORM\ManyToOne(targetEntity="Service")
+     * @ORM\JoinColumn(name="service_id", nullable=false)
+     */
+    private $service;
+
+    /**
      * @var PaymentStatus
      * @ORM\OneToMany(targetEntity="PaymentStatus", mappedBy="payment", cascade={"persist"})
      * @ORM\JoinColumn(name="payment_id")
@@ -52,9 +59,10 @@ class Payment
         $this->statuses = new ArrayCollection();
     }
 
-    public static function init(int $sum)
+    public static function init(Service $service, int $sum)
     {
         $payment = new self();
+        $payment->service = $service;
         $payment->sum = $sum;
         return $payment;
     }
@@ -108,6 +116,14 @@ class Payment
     public function setSum($sum): void
     {
         $this->sum = $sum;
+    }
+
+    /**
+     * @return Service
+     */
+    public function getService(): Service
+    {
+        return $this->service;
     }
 
     /**

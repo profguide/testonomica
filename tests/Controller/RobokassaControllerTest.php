@@ -8,7 +8,9 @@ namespace App\Tests\Controller;
 
 
 use App\Entity\Payment;
+use App\Entity\Service;
 use App\Payment\Robokassa;
+use App\Repository\ServiceRepository;
 use App\Service\PaymentService;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
@@ -22,10 +24,14 @@ class RobokassaControllerTest extends WebTestCase
     /**@var PaymentService */
     private $paymentService;
 
+    /**@var ServiceRepository */
+    private $serviceRepository;
+
     protected function setUp()
     {
         $this->client = static::createClient();
         $this->paymentService = self::$container->get(PaymentService::class);
+        $this->serviceRepository = self::$container->get(ServiceRepository::class);
     }
 
     /**
@@ -69,7 +75,7 @@ class RobokassaControllerTest extends WebTestCase
 
     private function createExecutedPayment(): Payment
     {
-        $payment = Payment::init(99);
+        $payment = Payment::init($this->loadService(), 99);
         $payment->addStatusExecuted();
         return $this->paymentService->save($payment);
     }
@@ -79,5 +85,10 @@ class RobokassaControllerTest extends WebTestCase
         $cookies = $this->client->getResponse()->headers->getCookies();
         $this->assertEquals($name, $cookies[0]->getName());
         $this->assertNotNull($cookies[0]->getValue());
+    }
+
+    private function loadService(): Service
+    {
+        return $this->serviceRepository->findOneBySlug('service_1');
     }
 }
