@@ -14,7 +14,8 @@
                         {% if profession.description|length == 0 %}
                             <div>{{ profession.name }}</div>
                         {% elseif profession.description|length > 1 %}
-                            <div>Называется так-то, есть несколько разновидностей, краткий очерк и ниже примеры:</div>
+                            {#<div>Называется так-то, есть несколько разновидностей, краткий очерк и ниже примеры:</div>#}
+                            <div>{{ profession.name }}</div>
                         {% endif %}
                         {% for kind in profession.description %}
                             <div>
@@ -22,7 +23,7 @@
                                     <div><a href="{{ kind.link }}" target="_blank">{{ kind.name }}</a></div>
                                 {% endif %}
                                 <div style="display: flex">
-                                    <img src="{{ kind.pic }}" alt="{{ profession.name }}" style="height: 200px;">
+                                    <img src="{{ kind.pic }}" alt="{{ profession.name }}" style="height: 100px;">
                                     <p style="margin-left: 20px;">{{ kind.text }}</p>
                                 </div>
                             </div>

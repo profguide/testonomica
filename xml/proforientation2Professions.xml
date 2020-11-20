@@ -149,6 +149,17 @@ todo подумать:
             <comb comb="com,craft"/>
             <comb comb="craft"/>
         </combs>
+        <description>
+            <kind>
+                <name>Мастер маникюра</name>
+                <pic>https://www.profguide.io/images/article/a/7/TWysE_-Lff.jpg</pic>
+                <link>https://www.profguide.io/professions/master-manikura.html</link>
+                <text>
+                    Мастер маникюра – специалист по уходу за ногтями и кожей на руках и ногах. Готовят в колледжах (код
+                    специальности мастер по предоставлению маникюрных и педикюрных услуг 33.003) или на курсах.
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Дизайнер</name>
@@ -329,10 +340,23 @@ todo подумать:
         </description>
     </profession>
     <profession>
-        <name>Стилист</name>
+        <name>Стилист-имиджмейкер</name>
         <combs>
             <comb comb="art,com"/>
         </combs>
+        <description>
+            <kind>
+                <name>Стилист-имиджмейкер</name>
+                <pic>https://www.profguide.io/images/article/a/7/INb31qt5YN.jpg</pic>
+                <link>https://www.profguide.io/professions/stylist_imagemaker.html</link>
+                <text>
+                    Стилист-имиджмейкер помогает клиенту создать наиболее эффективный образ для самопрезентации себя
+                    обществу. В отличие от стилиста, он работает не только с гардеробом, но и с манерой общения своего
+                    клиента, создавая целостный образ, влияние на который оказывает обстановка дома, увлечения,
+                    гардероб, стиль и многое другое.
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Парикмахер</name>
@@ -374,7 +398,7 @@ todo подумать:
     <profession>
         <name>Маркетолог</name>
         <text>
-            Виды: маркетолог брендов, маркетолог-исследователь, маркетолог-аналитик
+            Виды: маркетолог брендов, маркетолог-исследователь, маркетолог-аналитик, трейд-маркетолог
         </text>
         <combs>
             <comb comb="boss,human,math"/> <!--маркетолог-исследователь-->
@@ -404,6 +428,18 @@ todo подумать:
                     услуг, конкурентах и поведении потребителей, успешность маркетинговой стратегии компании-заказчика.
                     Готвят маркетологов в вузах (код специальности 38.03.02), при поступлении сдают русский язык,
                     математику и обществознание, иногда английский язык).
+                </text>
+            </kind>
+            <kind>
+                <name>Трейд-маркетолог</name>
+                <pic>https://www.profguide.io/images/article/a/0/Z-AraWQhTt.jpg</pic>
+                <link>https://www.profguide.io/professions/trade_marketer.html</link>
+                <text>
+                    Трейд-маркетолог — это специалист, который занимается продвижением разных групп товаров
+                    непосредственно в торговых точках. Он проводит обучающую работу с персоналом магазинов, принимает
+                    участие в создании рекламных материалов. Выучиться можно на факультете маркетинг (сдают профильную
+                    математику, обществознание и русский язык)? иногла и англйиский), а также на факультете менеджмент
+                    (сдают профильную математику, обществознание и русский язык).
                 </text>
             </kind>
         </description>
@@ -623,11 +659,51 @@ todo подумать:
     </profession>
     <profession>
         <name>Психолог</name>
+        <text>Виды: социальный психолог, клинический психолог, психолог-консультант, зоопсихолог</text>
         <combs>
             <comb comb="human,com,natural"/>
             <comb comb="human,com"/>
             <comb comb="human,natural"/>
         </combs>
+        <description>
+            <kind>
+                <name>Социальный психолог</name>
+                <pic>https://www.profguide.io/images/article/a/6/Jvn6IIPryk.jpg</pic>
+                <link>https://www.profguide.io/professions/socialniy_psiholog.html</link>
+                <text>
+                    Социальный психолог специализируется на изучении различных групп: малых, крупных, рабочих
+                    коллективов, населения региона, спортивных команд и т.п. Его интересуют феномены, возникающие и
+                    протекающие в этих группах, закономерности их развития, способы управления ими, а также социометрия,
+                    прогнозирование, психодиагностика и многое другое.
+                </text>
+            </kind>
+            <kind>
+                <name>Клинический психолог</name>
+                <pic>https://www.profguide.io/images/article/a/12/MC5nZtHXk9.jpg</pic>
+                <link>https://www.profguide.io/professions/klinicheskiy-psiholog.html</link>
+                <text>
+                    Клинический психолог – человек, специализирующийся на психологической диагностике, консультировании,
+                    разных видах психотерапии. Изучает психические явления и нарушения через призму их взаимосвязи с
+                    различными заболеваниями.
+                </text>
+            </kind>
+            <kind>
+                <name>Психолог-консультант</name>
+                <pic>https://www.profguide.io/images/article/a/7/9rixAEUn_O.jpg</pic>
+                <link>https://www.profguide.io/professions/psychologist.html</link>
+                <text>
+
+                </text>
+            </kind>
+            <kind>
+                <name>Зоопсихолог</name>
+                <pic>https://www.profguide.io/images/article/a/7/FfSyBWOrbL.jpg</pic>
+                <link>https://www.profguide.io/professions/Zoopsychologist.html</link>
+                <text>
+                    Зоопсихолог — психолог, специализирующийся на поведении животных.
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Литературный редактор</name>
@@ -1018,7 +1094,7 @@ todo подумать:
         </description>
     </profession>
     <profession>
-        <name>Пчеловод, пасечник</name>
+        <name>Пчеловод</name>
         <combs>
             <comb comb="natural,craft,hoz"/>
             <comb comb="natural,craft"/>
@@ -1061,13 +1137,6 @@ todo подумать:
                 </text>
             </kind>
         </description>
-    </profession>
-    <!--todo Фармаколог есть в Химике!. Что делать? -->
-    <profession>
-        <name>Фармаколог</name>
-        <combs>
-            <comb comb="natural,math"/>
-        </combs>
     </profession>
     <profession>
         <name>Материаловед</name>
@@ -1164,6 +1233,17 @@ todo подумать:
         <combs>
             <comb comb="craft,hoz"/>
         </combs>
+        <description>
+            <kind>
+                <name>Реставратор</name>
+                <pic>https://www.profguide.io/images/article/a/7/NQBVZtAmVJ.jpg</pic>
+                <link>https://www.profguide.io/professions/restavrator.html</link>
+                <text>
+                    Реставратор – специалист по сохранению и восстановлению предметов исторического и культурного
+                    наследия (произведений изобразительного, декоративно-прикладного искусства и архитектуры).
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession not="it,human,natural,logic">
         <name>Фрезеровщик</name>
@@ -1405,6 +1485,22 @@ todo подумать:
             <comb comb="math,it"/>
             <comb comb="math"/>
         </combs>
+        <description>
+            <kind>
+                <name>Аналитик больших данных</name>
+                <pic>https://www.profguide.io/images/article/a/21/qh97sWKg23.jpg</pic>
+                <link>https://www.profguide.io/professions/big-data-analyst.html</link>
+                <text>
+                    Собирает, обрабатывает и интерпретирует числовые данные, полученные в результате взаимодействия с
+                    рынком, исследования природы и общества.
+                    Результат его труда нужен для принятия решений во всех видах бизнеса, науке и политике. Хороший
+                    аналитик данных - это математик с навыками программиста, он должен понимать в бизнесе, для которого
+                    он работает. Готовят в вузах по специальностям математика (01.03.01), "прикладная математика"
+                    (01.03.04), "прикладная математика и информатика" (01.03.02), "статистика" (01.03.05). При
+                    поступлении в вузы сдают профильную математику, русский язык и информатику или физику.
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Фермер</name>
@@ -1618,12 +1714,27 @@ todo подумать:
         </combs>
     </profession>
     <profession>
-        <name>Менеджер качества, специалист по стандартизации и метрологии</name>
+        <name>Менеджер качества, инженер по стандартизации и метрологии</name>
         <combs>
             <comb comb="math,com"/>
             <comb comb="math"/>
         </combs>
         <description>
+            <kind>
+                <name>Менеджер качества</name>
+                <pic>https://www.profguide.io/images/article/a/5/g0nATv8vZz.jpg</pic>
+                <link>https://www.profguide.io/professions/Menedzher_po_kachestvu.html
+                </link>
+                <text>
+                    Менеджер качества занимается в компании внедрением системы менеджмента качества, которая
+                    должна повысить качество всего производственного процесса и управления им. Его зачада выстроить
+                    оптимальную систему взаимодействия и управления. А также он организует мониторинг качества
+                    выпускаемой продукции и услуг, организует процесс сертификации. Обучают в высших учебных заведениях.
+                    На факультете Управление качеством сдают профильную математику, информатику или обществознание, а
+                    также русский язык. Или на факультете Стандартизации и метрологии сдают профильную математику,
+                    информатику, русский язык.
+                </text>
+            </kind>
             <kind>
                 <name>Инженер по стандартизации и метрологии</name>
                 <pic>https://www.profguide.io/images/article/a/5/k3z9RTDmVH.jpg</pic>
@@ -1640,17 +1751,21 @@ todo подумать:
         </description>
     </profession>
     <profession>
-        <name>Менеджер гостиницы или ресторана</name>
+        <name>Менеджер гостиницы, менеджер ресторана</name>
         <combs>
             <comb comb="com,hoz"/>
         </combs>
         <description>
             <kind>
-                <name></name>
-                <pic>https://www.profguide.io</pic>
-                <link>https://www.profguide.io</link>
+                <name>Менеджер гостиницы (отельер)</name>
+                <pic>https://www.profguide.io/images/article/a/7/QgOUls5RxF.jpg</pic>
+                <link>https://www.profguide.io/professions/hotel-manager.html</link>
                 <text>
-
+                    Управляющий отелем — верхняя ступень в карьерной лестнице персонала гостиницы. Он руководит всеми
+                    подразделениями отеля: службами по бронированию мест, приему и размещению гостей, организации
+                    телефонной и информационной службы, сервисными подразделениями, рестораном, салонами красоты.
+                    Готовят гостиничныз менеджеров в коллдежах (поступают без экзаменов) и в вузах (сдают английский,
+                    язык, обществознание и русский язык или русский язык, историю и обществознание).
                 </text>
             </kind>
         </description>
@@ -1884,8 +1999,7 @@ todo подумать:
     <profession>
         <name>Разработчик компьютерных программ</name>
         <text>
-            Разработчик помпьютерных программ - это...
-            Примеры: frontend-разработчик, программист PHP/JAVA/Python, DevOps инженер...
+            Примеры: frontend-разработчик, программист PHP/JAVA/Python
         </text>
         <combs>
             <comb comb="it,tech,math"/>
@@ -1894,6 +2008,20 @@ todo подумать:
             <comb comb="tech,math"/>
             <comb comb="it"/>
         </combs>
+        <description>
+            <kind>
+                <name>Программист</name>
+                <pic>https://www.profguide.io/images/article/a/7/9UWbiqR8ZP.jpg</pic>
+                <link>https://www.profguide.io/professions/programmer.html</link>
+                <text>
+                    Занимается созданием компьютерных программ для всех видов человеческой деятельности: бизнес,
+                    производство, наука, образование, игры, кино и т.д. Обучают в колледжах (поступление без экзаменов
+                    по среднему баллу аттестата) и в вузах. В вузах на факультете "Прикладная информатика", "Программная
+                    инженерия". При поступлении сдают профильную математику, информатику или физику, а также русский
+                    язык.
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Системный администратор</name>
@@ -2054,7 +2182,7 @@ todo подумать:
     <profession>
         <name>Графический дизайнер</name>
         <text>
-            UI-дизайнер, 3D-визуализатор, Web-дизайнер, дизайн упаковки, дизайн логотипов и прочее.
+            UI-дизайнер, 3D-визуализатор, Web-дизайнер, Дизайнер упаковки, дизайн логотипов и прочее.
         </text>
         <combs>
             <comb comb="art,it,com"/>
@@ -2173,11 +2301,24 @@ todo подумать:
         </description>
     </profession>
     <profession>
-        <name>Проджект-менеджер, менеджер ИТ-проекта</name>
+        <name>Проджект-менеджер, менеджер IT-проекта</name>
         <combs>
             <comb comb="com,it"/>
             <comb comb="com"/>
         </combs>
+        <description>
+            <kind>
+                <name>Менеджер IT-проекта</name>
+                <pic>https://www.profguide.io/images/article/a/11/QklOsVsCW4.jpg</pic>
+                <link>https://www.profguide.io/professions/manager-it-proektov.html</link>
+                <text>
+                    Менеджер IT-проектов (Project Manager, PM) – это специалист, в обязанности которого входит
+                    беспрерывное управление проектом. В IT-команде он выполняет административно-управленческие функции:
+                    соблюдение сроков, решение текущих проблем, коммуникация. Обучают в вузах на специальности
+                    бизнес-информатика (сдают профильную математику и обществознание, также русский язык).
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Предприниматель</name>
