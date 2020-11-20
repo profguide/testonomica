@@ -14,6 +14,7 @@ use App\Test\QuestionsHolder;
 use App\Test\QuestionXmlMapper;
 use App\Test\CrawlerUtil;
 use App\Util\AnswersUtil;
+use DOMElement;
 use Symfony\Component\DomCrawler\Crawler;
 use Symfony\Component\HttpKernel\KernelInterface;
 
@@ -114,10 +115,18 @@ class Proforientation2Calculator implements CalculatorInterface
             $rating = $this->combsRating($topTypes, $profession);
             // отсекаем профессии с нулевым совпадением
             if ($rating > 0) {
-                $resultProfessions[$profession->getName()] = $rating;
+                $profession->setRating($rating);
+                $resultProfessions[] = $profession;
             }
         }
-        arsort($resultProfessions);
+        usort($resultProfessions, function ($a, $b) {
+            /**@var $a Profession */
+            /**@var $b Profession */
+            if ($a->getRating() == $b->getRating()) {
+                return 0;
+            }
+            return ($a->getRating() > $b->getRating()) ? -1 : 1;
+        });
         return $resultProfessions;
     }
 
@@ -222,7 +231,8 @@ class Proforientation2Calculator implements CalculatorInterface
         return new Profession(
             $crawler->children('name')->text(),
             $this->parseCombs($crawler->children('combs')),
-            $this->parseProfessionNot($crawler));
+            $this->parseProfessionNot($crawler),
+            $this->parseProfessionDescription($crawler));
     }
 
     public function parseCombs(Crawler $combs): array
@@ -245,6 +255,31 @@ class Proforientation2Calculator implements CalculatorInterface
             }
         }
         return $arr;
+    }
+
+    // если будет отнимать много времени, можно сделать lazy, то есть в Profession передавать Crawler всей профессии
+    // а когда надо парсить его и доставать нужные части. Вот для описания пригодилось бы. А парсить надо через хелпер
+    // ProforientationProfessionMapper::mapDescription($this->crawler);
+    // и вообще можно kind сделать объектом ProfessionDescriptionKind
+    private function parseProfessionDescription(Crawler $crawler)
+    {
+        $description = [];
+        $nodeDescription = $crawler->filterXPath('descendant-or-self::description');
+        if ($nodeDescription->count() > 0) {
+            $kindNodes = $nodeDescription->filterXPath('descendant-or-self::kind');
+            if ($kindNodes->count() > 0) {
+                foreach ($kindNodes as $kindNode) {
+                    $kindCrawler = new Crawler($kindNode);
+                    /**@var DOMElement $tag */
+                    $kind = [];
+                    foreach ($kindCrawler->children() as $tag) {
+                        $kind[$tag->nodeName] = $tag->textContent;
+                    }
+                    $description[] = $kind;
+                }
+            }
+        }
+        return $description;
     }
 
     private function loadQuestions()

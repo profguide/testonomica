@@ -15,11 +15,16 @@ class Profession
 
     private $not = [];
 
-    public function __construct(string $name, array $combs, $not = [])
+    private $description = [];
+
+    private $rating = 0;
+
+    public function __construct(string $name, array $combs, $not = [], $description = [])
     {
         $this->name = $name;
         $this->combs = $combs;
         $this->not = $not;
+        $this->description = $description;
     }
 
     public function getName()
@@ -44,6 +49,30 @@ class Profession
                 return true;
             }
         }
+    }
+
+    /**
+     * @return int
+     */
+    public function getRating(): int
+    {
+        return $this->rating;
+    }
+
+    /**
+     * @param int $rating
+     */
+    public function setRating(int $rating): void
+    {
+        $this->rating = $rating;
+    }
+
+    /**
+     * @return array
+     */
+    public function getDescription(): array
+    {
+        return $this->description;
     }
 
     public function combsString()
