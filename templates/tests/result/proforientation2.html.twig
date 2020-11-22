@@ -2,6 +2,18 @@
 
 {% block result %}
     {% set debug = app.request.get('debug') == 1 ? 1 : 0 %}
+    <style>
+        .profession {
+
+        }
+
+        .profession__img {
+            width: 150px;
+            min-width: 150px;
+            height: 100px;
+            background-size: cover;
+        }
+    </style>
     <div class="container">
         <h3>Профессии:</h3>
         <ol>
@@ -23,7 +35,7 @@
                                     <div><a href="{{ kind.link }}" target="_blank">{{ kind.name }}</a></div>
                                 {% endif %}
                                 <div style="display: flex">
-                                    <img src="{{ kind.pic }}" alt="{{ profession.name }}" style="height: 100px;">
+                                    <div class="profession__img" style="background-image: url({{ kind.pic }})"></div>
                                     <p style="margin-left: 20px;">{{ kind.text }}</p>
                                 </div>
                             </div>

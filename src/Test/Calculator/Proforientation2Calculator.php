@@ -20,6 +20,8 @@ use Symfony\Component\HttpKernel\KernelInterface;
 
 class Proforientation2Calculator implements CalculatorInterface
 {
+    const MAXIMUM_PROFESSIONS = 15;
+
     /**@var KernelInterface */
     private $kernel;
 
@@ -37,6 +39,7 @@ class Proforientation2Calculator implements CalculatorInterface
         $typesGroupsPercent = $this->calculateTypesGroups($answersHolder);
         $typesSinglePercent = $this->sumTypesGroups($typesGroupsPercent);
         $professions = $this->grabProfessionsByTypes($typesSinglePercent);
+        $professions = $this->sliceProfessions($professions);
         return [
             'types_group_percent' => $typesGroupsPercent,
             'types_single_percent' => $typesSinglePercent,
@@ -291,5 +294,10 @@ class Proforientation2Calculator implements CalculatorInterface
             $questions[] = QuestionXmlMapper::map($item);
         }
         return new QuestionsHolder($questions);
+    }
+
+    private function sliceProfessions($professions)
+    {
+        return array_slice($professions, 0, self::MAXIMUM_PROFESSIONS);
     }
 }
