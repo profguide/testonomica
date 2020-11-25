@@ -825,7 +825,7 @@ class DevelopController extends AbstractController
     }
 
     /**
-     * @Route("/xml")
+     * @Route("/xml/")
      */
     public function xml()
     {
@@ -845,7 +845,7 @@ class DevelopController extends AbstractController
 
     /**
      * For development
-     * @Route("/table", name=".table")
+     * @Route("/table/", name=".table")
      */
     public function table()
     {
