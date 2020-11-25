@@ -10,6 +10,7 @@ namespace App\Test\Calculator;
 use App\Test\AnswersHolder;
 use App\Test\CalculatorInterface;
 use App\Test\Proforientation\Profession;
+use App\Test\Proforientation\Types;
 use App\Test\QuestionsHolder;
 use App\Test\QuestionXmlMapper;
 use App\Test\CrawlerUtil;
@@ -43,6 +44,7 @@ class Proforientation2Calculator implements CalculatorInterface
         return [
             'types_group_percent' => $typesGroupsPercent,
             'types_single_percent' => $typesSinglePercent,
+            'types_descriptions' => $this->typesDescriptions($typesGroupsPercent),
             'types_top' => $this->grabTopTypes($typesSinglePercent),
             'professions' => $professions
         ];
@@ -299,5 +301,22 @@ class Proforientation2Calculator implements CalculatorInterface
     private function sliceProfessions($professions)
     {
         return array_slice($professions, 0, self::MAXIMUM_PROFESSIONS);
+    }
+
+    /**
+     * Подбирает текстовые описания всех типов по значениям групп: интересы и способности
+     * @param array $typesGroups
+     * @return array вида ['tech' => ['interest' => '...', 'skills' => '...'], 'natural' => ...]
+     */
+    private function typesDescriptions(array $typesGroups)
+    {
+        $descriptions = ['interest' => [], 'skills' => []];
+        foreach ($typesGroups as $typeName => $groups) {
+            $interest = ($groups[0] + $groups[1]) / 2;
+            $name = Types::name($typeName);
+            $descriptions['interest'][$typeName] = ['name' => $name, 'text' => Types::interestText($typeName, $interest)];
+            $descriptions['skills'][$typeName] = ['name' => $name, 'text' => Types::skillsText($typeName, $interest)];
+        }
+        return $descriptions;
     }
 }

@@ -3,6 +3,10 @@
 {% block result %}
     {% set debug = app.request.get('debug') == 1 ? 1 : 0 %}
     <style>
+        #testonomica_header {
+            display: none;
+        }
+
         .profession {
 
         }
@@ -15,7 +19,8 @@
         }
     </style>
     <div class="container">
-        <h3>Профессии:</h3>
+        <h1>Результат теста</h1>
+        <h3>Профессии</h3>
         <ol>
             {% for profession in professions %}
                 <li style="margin-bottom: 15px">
@@ -107,6 +112,28 @@
                 </table>
             </div>
         {% endif %}
+    </div>
+
+    <div class="container mt-4">
+        <div class="mb-4">
+            <h2>Интересы</h2>
+            {% for typeName, data in types_descriptions.interest %}
+                <div>
+                    <b>{{ data.name }}</b><br/>
+                    <p>{{ data.text }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="mb-4">
+            <h2>Способности</h2>
+            {% for typeName, data in types_descriptions.skills %}
+                <div>
+                    <b>{{ data.name }}</b><br/>
+                    <p>{{ data.text }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock result %}
 {#{% block javascripts %}#}

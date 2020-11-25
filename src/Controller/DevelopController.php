@@ -10,6 +10,7 @@ use App\Test\CrawlerUtil;
 use App\Test\Proforientation\Profession;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\DomCrawler\Crawler;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -821,6 +822,25 @@ class DevelopController extends AbstractController
     public function __construct(KernelInterface $kernel)
     {
         $this->kernel = $kernel;
+    }
+
+    /**
+     * @Route("/xml")
+     */
+    public function xml()
+    {
+        $questions = '';
+        $crawler = CrawlerUtil::load($this->kernel->getProjectDir() . "/xml/proforientation2.xml");
+        $items = $crawler->children('item');
+        foreach ($items as $itemElement) {
+            $itemCrawler = new Crawler($itemElement);
+            $questions
+                .= '<div style="margin-bottom: 10px">'
+                . '<span style="color: #888">' . $itemCrawler->attr('group') . '</span><br> '
+                . $itemCrawler->children('name')->text()
+                . '</div>';
+        }
+        return new Response($questions);
     }
 
     /**
