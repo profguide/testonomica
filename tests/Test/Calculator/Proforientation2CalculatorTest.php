@@ -36,7 +36,8 @@ class Proforientation2CalculatorTest extends KernelTestCase
             1 => 1, 2 => 1, 3 => 1, 4 => 1, 5 => 1, 6 => 1, // natural-force
             10 => 1, 11 => 1, // natural-interest
             // no natural-skills
-            100 => 1, 101 => 1, 102 => 1, //tech-force
+            100 => 1, 101 => 1, //tech-force;
+            102 => 1, // tech-force/it-force
             110 => 1, 111 => 1, 112 => 1, //tech-interest
             120 => 1, 121 => 1, 122 => 1, 123 => 40, //tech-interest
 
@@ -50,7 +51,7 @@ class Proforientation2CalculatorTest extends KernelTestCase
             'human' => [0, 0, 0],
             'body' => [0, 0, 0],
             'math' => [0, 0, 0],
-            'it' => [0, 0, 0],
+            'it' => [33, 0, 0], // one question of tech is also used in it
             'craft' => [0, 0, 0],
             'art' => [67, 0, 0],
             'hoz' => [0, 0, 0],
@@ -119,38 +120,42 @@ class Proforientation2CalculatorTest extends KernelTestCase
             ['natural' => 100], new Profession('some', [['natural', 'tech'], ['natural', 'tech', 'body']])));
     }
 
-//    /**
-//     * Убедиться, что не существует комбинаций, которые не дают ни одной профессии
-//     */
-//    public function testThatNoCombsWithEmptyProfessionList()
-//    {
-//        // используем заранее скомпилированный список комбинаций без повторов
-//        foreach (DevelopController::COMBS_POSSIBLE as $comb) {
-//            $types = array_flip(explode(',', $comb));
-//            // поставим 100% для всех типов, чтобы точно все учлись
-//            $types = array_fill_keys(array_keys($types), 100);
-//            $professions = $this->calculator->grabProfessionsByTypesCombs($types);
-//            $this->assertNotEmpty($professions, "Combination \"$comb\" does not have any profession");
-//        }
-//    }
-
     /**
-     *
+     * Убедиться, что не существует комбинаций, которые не дают ни одной профессии
+     * Закомментированно, потому что очень медленно работает
      */
-    public function testRandomComb()
+    public function testThatNoCombsWithEmptyProfessionList()
     {
-        $key = array_rand(DevelopController::COMBS_POSSIBLE);
-        $comb = DevelopController::COMBS_POSSIBLE[$key];
-        echo "\nRandom combination: $comb\n";
-        $types = array_flip(explode(',', $comb));
-        // поставим 100% для всех типов, чтобы точно все учлись
-        $types = array_fill_keys(array_keys($types), 100);
-        $professions = $this->calculator->grabProfessionsByTypesCombs($types);
-        $this->assertNotEmpty($professions, "Combination \"$comb\" does not have any profession");
-        foreach ($professions as $name => $value) {
-            echo $name . ': '. $value . "\n";
+        // используем заранее скомпилированный список комбинаций без повторов
+        foreach (DevelopController::COMBS_POSSIBLE as $comb) {
+            $types = array_flip(explode(',', $comb));
+            // поставим 100% для всех типов, чтобы точно все учлись
+            $types = array_fill_keys(array_keys($types), 100);
+            $professions = $this->calculator->grabProfessionsByTypesCombs($types);
+            $this->assertNotEmpty($professions, "Combination \"$comb\" does not have any profession");
         }
     }
+
+    /**
+     * Песочница, чтобы проверить соответствие комбинаций и профессий.
+     * Закомментированно, потому что по сути не является unit-тестом.
+     * Это скорее подошло бы для тестирования через веб-интерфейс.
+     * todo перенести в http, и вызывать оттуда. Например, DevController::proforientation2Types(?types=rand|tech,math),
+     */
+//    public function testRandomComb()
+//    {
+//        $key = array_rand(DevelopController::COMBS_POSSIBLE);
+//        $comb = DevelopController::COMBS_POSSIBLE[$key];
+//        echo "\nRandom combination: $comb\n";
+//        $types = array_flip(explode(',', $comb));
+//        // поставим 100% для всех типов, чтобы точно все учлись
+//        $types = array_fill_keys(array_keys($types), 100);
+//        $professions = $this->calculator->grabProfessionsByTypesCombs($types);
+//        $this->assertNotEmpty($professions, "Combination \"$comb\" does not have any profession");
+//        foreach ($professions as $name => $value) {
+//            echo $name . ': ' . $value . "\n";
+//        }
+//    }
 
 //    /*
 //     * Промежуточный результат подсчёта (проценты) приводим к списку профессий, чтобы играть с настройками

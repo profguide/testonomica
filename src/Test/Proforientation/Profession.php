@@ -99,4 +99,9 @@ class Profession
         }
         return implode(';', $list);
     }
+
+    public function __toString()
+    {
+        return $this->name;
+    }
 }

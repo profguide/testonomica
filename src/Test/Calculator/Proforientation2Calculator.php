@@ -65,6 +65,11 @@ class Proforientation2Calculator implements CalculatorInterface
         return $result;
     }
 
+    /**
+     * @param string $groupMainName e.g. tech
+     * @param AnswersHolder $answersHolder
+     * @return array
+     */
     private function calculateTypeGroups(string $groupMainName, AnswersHolder $answersHolder)
     {
         return [
@@ -74,11 +79,18 @@ class Proforientation2Calculator implements CalculatorInterface
         ];
     }
 
+    /**
+     * Высчитывает сумму положительных и правильных ответов для группы вопросов
+     * @param string $groupName e.g. tech-skills
+     * @param AnswersHolder $answersHolder
+     * @return float
+     */
     private function calculateTypeGroup(string $groupName, AnswersHolder $answersHolder)
     {
         $questions = $this->questions->group($groupName);
         $count = count($questions);
         $rightSum = AnswersUtil::sum($questions, $answersHolder);
+        $this->applyExtraAnswers($groupName, $answersHolder, $rightSum, $count);
         return (round($rightSum / $count * 100));
     }
 
@@ -312,11 +324,42 @@ class Proforientation2Calculator implements CalculatorInterface
     {
         $descriptions = ['interest' => [], 'skills' => []];
         foreach ($typesGroups as $typeName => $groups) {
-            $interest = ($groups[0] + $groups[1]) / 2;
             $name = Types::name($typeName);
-            $descriptions['interest'][$typeName] = ['name' => $name, 'text' => Types::interestText($typeName, $interest)];
-            $descriptions['skills'][$typeName] = ['name' => $name, 'text' => Types::skillsText($typeName, $interest)];
+            // интерес - это среднее от force + interest
+            $interestValue = ($groups[0] + $groups[1]) / 2;
+            $skillValue = $groups[2];
+            $descriptions['interest'][$typeName] = [
+                'name' => $name,
+                'text' => Types::interestText($typeName, $interestValue),
+                'level' => [
+                    'absolute' => Types::level($interestValue)
+                ]];
+            $descriptions['skills'][$typeName] = [
+                'name' => $name,
+                'text' => Types::skillsText($typeName, $skillValue),
+                'level' => [
+                    'absolute' => Types::level($skillValue)
+                ]];
         }
         return $descriptions;
+    }
+
+    /**
+     * Применяет дополнительные правила подсчета
+     * @param string $groupName
+     * @param AnswersHolder $answersHolder
+     * @param int $rightSum
+     * @param int $count
+     */
+    private function applyExtraAnswers(string $groupName, AnswersHolder $answersHolder, int &$rightSum, int &$count)
+    {
+        if ($groupName == 'it-force') {
+            $questionIds = [102];
+
+            foreach ($questionIds as $questionId) {
+                $rightSum += $answersHolder->getValue($questionId);
+            }
+            $count += count($questionIds);
+        }
     }
 }

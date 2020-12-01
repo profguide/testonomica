@@ -166,6 +166,19 @@ todo подумать:
         <combs>
             <comb comb="art"/>
         </combs>
+        <description>
+            <kind>
+                <name>Дизайнер</name>
+                <pic>https://www.profguide.io/images/article/a/10/3_xrq13rav.jpg</pic>
+                <link>https://www.profguide.io/professions/designer.html</link>
+                <text>
+                    Разрабатывает визуальную часть объекта - полиграфического (графический дизайнер), предметного
+                    (предметный дизайнер), технического (промышленный дизайнер), одежды (дизайнер одежды), интерьеров
+                    (дизайнер интерьеров), ландшафтов (ландшафтный дизайнер). Обучают в колледжах (по творческому
+                    конкурсу, или в вузах (сдают русский, литературу и рисунок).
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Дизайнер интерьера</name>
@@ -189,6 +202,18 @@ todo подумать:
         <combs>
             <comb comb="natural,art"/>
         </combs>
+        <description>
+            <kind>
+                <name>Ландшафтный дизайнер</name>
+                <pic>https://www.profguide.io/images/article/a/6/gzhs4VMvvE.jpg</pic>
+                <link>https://www.profguide.io/professions/Landshaftnyy_dizayner.html</link>
+                <text>
+                    Занимается проектированием садово-парковых участков, частных территоррий, знаком с вопросами
+                    садоводства и архитектуры ландшафтов. Обучают в коллдежах и вузах (сдают профильную математику,
+                    биологию и русский язык).
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Промышленный дизайнер</name>
@@ -266,17 +291,29 @@ todo подумать:
         </description>
     </profession>
     <profession>
-        <name>Художник-живописец</name>
+        <name>Художник-иллюстратор</name>
         <combs>
             <comb comb="art"/>
         </combs>
+        <description>
+            <kind>
+                <name>Художник-иллюстратор</name>
+                <pic>https://www.profguide.io/images/article/a/6/geEqwwHud_.jpg</pic>
+                <link>https://www.profguide.io/professions/artist_illustrator.html</link>
+                <text>
+                    Работает в книжных и журнальных издательствах, создает иллюстрации к книгам, журналам. Может
+                    работать для рекламы, при дополнительной подготовке может работать для сайтов, кино, анимации.
+                    Готовят иллюстраторов в вузах (припоступлении сдают русский язык и литературу, проходят творческий
+                    конкурс)
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Искусствовед</name>
         <combs>
             <comb comb="human,art,com"/> <!--todo art:interest-->
             <comb comb="human,com"/>
-            <comb comb="human"/>
         </combs>
         <description>
             <kind>
@@ -286,7 +323,7 @@ todo подумать:
                 <text>
                     Искусствовед – знаток художественных произведений (в первую очередь – изобразительного искусства),
                     он умеет определить подлинность произведения, назвать ему цену, он просвещает публику устно и
-                    письменно, организовывает выставки, продает произведения (арт-дилер).Искусствоведов готовят на
+                    письменно, организовывает выставки, продает произведения (арт-дилер). Искусствоведов готовят на
                     факультетх искусствоведения и истории искусств (сдают историю/литературу/иностранный и русский
                     язык).
                 </text>
@@ -301,6 +338,16 @@ todo подумать:
             <comb comb="com,hoz,boss"/>
             <comb comb="boss,art"/> <!--todo art:interest-->
         </combs>
+        <description>
+            <kind>
+                <name>Арт-дилер</name>
+                <text>
+                    Это искусствовед, зарабатывающий оценкой и продажей произведений искусства. Работает с музеями,
+                    выставочными залами, владельцами частных галерей, аукционными домами и художниками. Обучают на
+                    искусствоведческих факультетах университетов (сдают историю, иностранный язык и русский язык).
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Ювелир</name>
@@ -508,7 +555,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="it,art,natural">
         <name>Риэлтор</name>
         <combs>
             <comb comb="com,math"/>
@@ -547,7 +594,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="human,tech,it,math,art,natural,boss">
         <name>Товаровед</name>
         <combs>
             <comb comb="math"/>
@@ -571,6 +618,20 @@ todo подумать:
         <combs>
             <comb comb="com,human"/>
         </combs>
+        <description>
+            <kind>
+                <name>Юрист</name>
+                <pic>https://www.profguide.io/images/article/a/5/HvU_L4PNWd.jpg</pic>
+                <link>https://www.profguide.io/professions/jurist.html</link>
+                <text>
+                    Профессиональный знаток права страны, специализируется на определенных видах права (государственное,
+                    уголовное, международное и т.д.), Может работать как в коммерческой структуре (корпоративное,
+                    коммерческое, авторское и другоеи виды права), так и полностью в государственной (судья, прокурор.
+                    следователь, адвокат и т.д.). Обучают в колледжах (поступление без экзаменов) и в вузах) сдают
+                    историю, обществознание и русский, иногда иностранный - если международное право).
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Военнослужащий (солдат, боец)</name>
@@ -589,7 +650,7 @@ todo подумать:
             <comb comb="war"/>
         </combs>
     </profession>
-    <profession>
+    <profession not="tech,it,math,art,natural,boss">
         <name>Полицейский</name>
         <combs>
             <comb comb="body,war,com"/>
@@ -614,6 +675,19 @@ todo подумать:
         <combs>
             <comb comb="natural,war"/>
         </combs>
+        <description>
+            <kind>
+                <name>Офицер радиоционной, химический и биологической защиты</name>
+                <text>
+                    Организовывает защиту войск, населения и объектов тыла от радиационной, химической и биологической
+                    опасности как в мирное, так и в военное время. Проводит радиационную и химическую разведку разведки,
+                    дозиметрический и химический контроль. Снабжает армию средствами РХБ защиты;
+                    ремонт вооружения и средств РХБ защиты; Обучает личный состав других родов войск и гражданского
+                    населения поведению в аварийных ситуациях, связанных с РХБ загрязнением. Обучают специалистов в
+                    специализированный военных вузах ( сдают профильную математику, химию. и русский язык).
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Социолог</name>
@@ -814,7 +888,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession not="boss,logic">
+    <profession not="human,tech,it,math,art,natural,boss">
         <name>Социальный работник</name>
         <combs>
             <comb comb="com"/>
@@ -840,8 +914,21 @@ todo подумать:
             <comb comb="tech,com"/>
             <comb comb="natural,com"/>
         </combs>
+        <description>
+            <kind>
+                <name>Школьный учитель</name>
+                <pic>https://www.profguide.io/images/article/a/7/7TOnS64e7A.jpg</pic>
+                <link>https://www.profguide.io/professions/teacher.html</link>
+                <text>
+                    Обучает детей в школе или вне школы индвидуально как репетитор. Специализируется на предмете или
+                    преподает несколько предметов в начальной школе. Обучают учителей в педагогических училищах
+                    (поступление по среднему баллу аттестата) или в педагогических институтах (сдают предметы
+                    соответственной своей специализации).
+                </text>
+            </kind>
+        </description>
     </profession>
-    <profession>
+    <profession not="human,tech,it,math">
         <name>Повар</name>
         <combs>
             <comb comb="craft,body"/>
@@ -881,6 +968,22 @@ todo подумать:
         <combs>
             <comb comb="natural"/>
         </combs>
+        <description>
+            <kind>
+                <name>Биолог</name>
+                <pic>https://www.profguide.io/images/article/a/6/Eftfswy2N0.jpg</pic>
+                <link>https://www.profguide.io/professions/biolog.html</link>
+                <text>
+                    Исследует и описывает ту часть живой природы, на которй он специализируется (ихтиолог, орнитолог,
+                    энтомоло и т.п). Работая в НИИ - пишет научные статьи, работая в сельхозучреждении - вращивает
+                    животных и растений, борется с вредителями посевов. Работая в лесотехнической компании -
+                    сопсобствует выращиванию и лечению лесов. Работая в городском озеленении или ботаническом саду -
+                    выращивает и следит за жизнью растений. Работя в школе - обучает школьников биологии. Биологов
+                    готовят на биологических факультетах университетов ( сдают профильную математику, химию и биологию+
+                    русский язык), в педагогических институтах (сдают биологию и профильную математику+ русский язык)
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Растениевод, селекционер</name>
@@ -900,6 +1003,15 @@ todo подумать:
                     биофака университета (сдают профильную математику, биологию и химию+ русский язык)
                 </text>
             </kind>
+            <kind>
+                <name>Растениевод</name>
+                <text>
+                    Занимается плодоводством, виноградарством,овощеводством, выводит новые сорта растений (селекция) -
+                    на открытом и защищенном грунте, производит и перерабатывает лекарственные растения. Также
+                    занимается декоративным садоводством, газоноведением и флористикой. Обучают в селькохозяйственных
+                    вузах (сдают профильную математику, биологию и русский язык).
+                </text>
+            </kind>
         </description>
     </profession>
     <profession>
@@ -907,6 +1019,22 @@ todo подумать:
         <combs>
             <comb comb="natural"/>
         </combs>
+        <description>
+            <kind>
+                <name>Агроном</name>
+                <pic>https://www.profguide.io/images/article/a/4/tAMigK7qqm.jpg</pic>
+                <link>https://www.profguide.io/professions/agronom.html</link>
+                <text>
+                    Работает в сельскохозяйственной организации: внедряет передовые методы возделывания полевых,
+                    садовых, огородных культур; знает и внедряет технологии по борьбе с вредителями, болезнями растений
+                    и сорняками; повышает плодородие почв и увеличения урожайности сельскохозяйственных культур,
+                    приобретает семян растений, саженцев и удобрений, созданет семенной фонд, готовит почву к посеву,
+                    удобряет почву (руководит работнкиами, которые это делают), следит за всходами и поливом, обработкой
+                    их. Обучают в сельскохозяйственном вузе на факультете агрономии (сдают профильную математику,
+                    биологию и русский язык).
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Генетик</name>
@@ -1010,6 +1138,18 @@ todo подумать:
         </combs>
         <description>
             <kind>
+                <name>Химик</name>
+                <pic>https://www.profguide.io/images/article/a/7/Svdh8GOuJT.jpg</pic>
+                <link>https://www.profguide.io/professions/chemist.html</link>
+                <text>
+                    Химик — это любой специалист по химическим веществам: исследователь, создатель новых веществ и
+                    материалов (он волшебник!), технолог, ученый, преподаватель химии, фармаколог. Места работы -
+                    химические лаборатории в НИИ, в университете, на заводах, в школе. Химия удивительная и сложная
+                    наука, а химики очень востребованы. Обучают химиков в университетах, при поступлении сдают
+                    профильную математику, химию и русский язык.
+                </text>
+            </kind>
+            <kind>
                 <name>Химик-технолог</name>
                 <pic>https://www.profguide.io/images/article/a/5/cmjOy_zils.jpg</pic>
                 <link>https://www.profguide.io/professions/himik_technolog.html</link>
@@ -1029,6 +1169,17 @@ todo подумать:
                     лекарственных препаратов. Он занимается исследованиями, научной работой, клинической практикой.
                     Готовят фармакологов в химико-технологических университетах и на химической факультетах
                     университетов (при поступлении сдают профильную математику, химию и русский язык).
+                </text>
+            </kind>
+            <kind>
+                <name>Биохимик</name>
+                <pic>https://www.profguide.io/images/article/a/5/b989PABnML.jpg</pic>
+                <link>https://www.profguide.io/professions/biohimik.html</link>
+                <text>
+                    Работают в НИИ, исследуют механизмы развития заболеваний, помогают разрабатывать лекарства, повышать
+                    урожайность или вывводить новые сорта растений. Результаты их труда используют в технической
+                    биологии, витаминологии, растениеводстве и других научных отраслях. Обучают в университетах,
+                    медицинских институтах (сдают биологию,иногда химию или математику + русский язык).
                 </text>
             </kind>
         </description>
@@ -1093,7 +1244,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="human,art,it">
         <name>Пчеловод</name>
         <combs>
             <comb comb="natural,craft,hoz"/>
@@ -1113,13 +1264,13 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="human,tech,it,math">
         <name>Флорист</name>
         <combs>
             <comb comb="art,craft"/>
         </combs>
     </profession>
-    <profession not="logic">
+    <profession not="human,art,tech,it,math">
         <name>Кинолог</name>
         <combs>
             <comb comb="natural,body,com"/>
@@ -1215,7 +1366,7 @@ todo подумать:
             <comb comb="tech,war"/> <!--разработчик военного оборудования-->
         </combs>
     </profession>
-    <profession>
+    <profession not="human,art,war,natural">
         <name>Наладчик оборудования</name>
         <combs>
             <comb comb="tech,craft"/>
@@ -1245,7 +1396,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession not="it,human,natural,logic">
+    <profession not="it,human,natural,art">
         <name>Фрезеровщик</name>
         <combs>
             <comb comb="tech,craft"/>
@@ -1262,7 +1413,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession not="it,human,natural,logic">
+    <profession not="it,human,natural,art">
         <name>Слесарь</name>
         <combs>
             <comb comb="tech,craft"/>
@@ -1279,7 +1430,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession not="it,human,natural,logic">
+    <profession not="it,human,natural">
         <name>Столяр, плотник</name>
         <combs>
             <comb comb="tech,craft"/>
@@ -1307,13 +1458,13 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession not="it,human,natural,logic">
+    <profession not="it,human,natural,art,math">
         <name>Сантехник</name>
         <combs>
             <comb comb="tech,craft"/>
         </combs>
     </profession>
-    <profession not="it,human,natural,logic">
+    <profession not="it,human,natural,math">
         <name>Кузнец</name>
         <combs>
             <comb comb="tech,craft"/>
@@ -1329,7 +1480,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession not="it,human,natural,logic">
+    <profession not="it,human,natural,art">
         <name>Сварщик</name>
         <combs>
             <comb comb="tech,craft"/>
@@ -1347,7 +1498,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession not="it,human,natural,logic">
+    <profession not="it,human,natural,art">
         <name>Автомеханик</name>
         <combs>
             <comb comb="tech,craft"/>
@@ -1364,7 +1515,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession not="it,human,natural,logic">
+    <profession not="it,human,natural,art">
         <name>Электрик (электромонтер)</name>
         <combs>
             <comb comb="tech,craft"/>
@@ -1381,7 +1532,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession not="it,human,natural,logic">
+    <profession not="it,human,natural,art,boss">
         <name>Машинист поезда</name>
         <combs>
             <comb comb="tech"/>
@@ -1417,7 +1568,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="human,natural,art">
         <name>Капитан речного или морского корабля</name>
         <combs>
             <comb comb="tech"/>
@@ -1455,7 +1606,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession not="it,boss,logic">
+    <profession not="it,art,boss,tech,natural">
         <name>Бортпроводник</name>
         <combs>
             <comb comb="com"/>
@@ -1502,14 +1653,28 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="human">
         <name>Фермер</name>
         <combs>
             <comb comb="natural,boss"/>
             <comb comb="boss,hoz"/>
         </combs>
+        <description>
+            <kind>
+                <name>Фермер</name>
+                <text>
+                    Владелец или профессиональный работник сельскохозяйственного предприятия - животноводства (в
+                    частности, рыбоводства, птицеводства или пчеловодства) или растениеводства. Его цель - добыть
+                    продукты: молоко, мясо, рыбу, мед и т.д. В некоторых фермерских хозяйствах происходит переработка
+                    мяса, молока, растений в сыр творог, масло, сметану, компоты, варенья и т.д. Управляющие сельским
+                    хозяйством могут иметь сельскохозяйственное образование - (растениеводческое, животноводческое - при
+                    поступлении сдают биологию и профильнуюю математику, инженерное - сдают профильную математику и
+                    физику) или технологическое образование в пищевом институте (сдают профильную математику и химию).
+                </text>
+            </kind>
+        </description>
     </profession>
-    <profession>
+    <profession not="art,it,tech,war,math,boss">
         <name>Медсестра (медбрат)</name>
         <combs>
             <comb comb="body,natural,com"/>
@@ -1530,11 +1695,26 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="art,it,tech,war,craft,boss">
         <name>Главная медсестра</name>
         <combs>
             <comb comb="com,hoz"/>
         </combs>
+        <description>
+            <kind>
+                <name>Главная медсестра</name>
+                <pic>https://www.profguide.io/images/article/a/8/3lCsaHEBXs.jpg</pic>
+                <link>https://www.profguide.io/professions/home_nurse.html</link>
+                <text>
+                    Управляет средним медицинским персоналом и контролирует его работу: медицинские сестры,
+                    администраторы: формирует рабочие смены, ведет табель, подбирает персонал, оформляет документы для
+                    выписки больных, распределяет, хранит и ведет учет использования перевязочных материалов,
+                    медикаментов и лекарственных средств. Обучают в медицинском колледже (сестринское дело, фельдшерское
+                    дело - поступают без экзаменов) и в медицинском вузе на факультете Сестринское дело (при поступлении
+                    сдают биологию, химию и русский язык).
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Врач</name>
@@ -1544,6 +1724,18 @@ todo подумать:
         <combs>
             <comb comb="natural,com"/>
         </combs>
+        <description>
+            <kind>
+                <name>Врач</name>
+                <text>
+                    Врач - это специалист с законченным высшим медицинским образованием, всегда специализирующийся на
+                    лечении лекарствами, хирургическими методами или физиотерапевтическими методами - определенной
+                    системы органов (кардиолог, стоматолог, нефролог, невролог и т.д.) либо либо занимающийся
+                    диагностикой (функциональная диагностика, лабораторная диагностика) заболеваний. Обучают в
+                    медицинских вузах, при поступлении сдают биологию, химию и русский язык.
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Хирург</name>
@@ -1551,6 +1743,19 @@ todo подумать:
             <comb comb="natural,craft,tech"/>
             <comb comb="natural,craft"/>
         </combs>
+        <description>
+            <kind>
+                <name>Хирург</name>
+                <pic>https://www.profguide.io/images/article/a/10/y4-qEPkVjX.jpg</pic>
+                <link>https://www.profguide.io/professions/hirurg.html</link>
+                <text>
+                    Врач, человек с высшим медицинским образованием, умеет проводить хирургические операции (в каждом
+                    разделе медицины есть своя хирургия, нужна специальная подготовка и лля нейрохирургии, и для
+                    кардиохирургии, и для глазной хирургии и так далее). Обучают в медицинском вузе ( сдают химию.
+                    биологию и русский язык). Специализацию хирург получает в ординатуре.
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Врач лабораторной диагностики</name>
@@ -1569,7 +1774,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession not="logic">
+    <profession not="math,tech,it,art,human">
         <name>Массажист</name>
         <combs>
             <comb comb="natural,body,craft"/>
@@ -1589,7 +1794,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="art,human,it,tech">
         <name>Фармацевт</name>
         <combs>
             <comb comb="natural,com"/>
@@ -1712,6 +1917,21 @@ todo подумать:
         <combs>
             <comb comb="com,math,boss"/>
         </combs>
+        <description>
+            <kind>
+                <name>Спортивный менеджер</name>
+                <pic>https://www.profguide.io/images/article/a/19/wRwfrnqL-b.jpg</pic>
+                <link>https://www.profguide.io/professions/sportivnyj-menedzher.html</link>
+                <text>
+                    Руководит спортивным клубом, спортивным комплексом, организовывает спортивные соревнования, сборы,
+                    ищет талантливых ребят, ведет переговоры с другими спортивными клубами, работает спортивным агентом
+                    (представляет интересы спортсмена в разных клубах), занимается поиском спонсоров соревнования, может
+                    иметь свой магазин спортивных принадлежностей, продвигать как маркетолог услугу и продукт. Готовят
+                    на факультет спортивного менеджмента в вузах (сдают профильную математику, обществознание и русский
+                    язык).
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Менеджер качества, инженер по стандартизации и метрологии</name>
@@ -1723,8 +1943,7 @@ todo подумать:
             <kind>
                 <name>Менеджер качества</name>
                 <pic>https://www.profguide.io/images/article/a/5/g0nATv8vZz.jpg</pic>
-                <link>https://www.profguide.io/professions/Menedzher_po_kachestvu.html
-                </link>
+                <link>https://www.profguide.io/professions/Menedzher_po_kachestvu.html</link>
                 <text>
                     Менеджер качества занимается в компании внедрением системы менеджмента качества, которая
                     должна повысить качество всего производственного процесса и управления им. Его зачада выстроить
@@ -1768,41 +1987,129 @@ todo подумать:
                     язык, обществознание и русский язык или русский язык, историю и обществознание).
                 </text>
             </kind>
+            <kind>
+                <name>Менеджер ресторана</name>
+                <pic>https://www.profguide.io/images/article/a/12/n8bc1ntn8l.jpg</pic>
+                <link>https://www.profguide.io/professions/manager-restorana.html</link>
+                <text>
+                    Организовывает всю работу ресторана: взаимодействие подразделений между собой), распределяет работу
+                    сотрудников, составляет расписание работы смен, заказывает посуду и т.п., набирает и увольняет
+                    сотрудников, ведет документооборот, организовывает и контролирует проведения заказных мероприятий,
+                    решает конфликтные ситуации.
+                    Знает стандарты качества обслуживания и приучает сотрудников к ним. Обучают в колледжах и в вузах на
+                    факультете "Технология продукции и организация ресторанного дела" (сдают профильную математику,
+                    химию и русский язык).
+                </text>
+            </kind>
         </description>
     </profession>
-    <profession>
-        <name>Домоправитель (дворецкий)</name>
+    <profession not="human,art,it,natural,tech,boss">
+        <name>Мажордом-дворецкий</name>
         <combs>
             <comb comb="com,hoz"/>
         </combs>
+        <description>
+            <kind>
+                <name>Мажордом-дворецкий</name>
+                <pic>https://www.profguide.io/images/article/a/4/StI3baZ51B.jpg</pic>
+                <link>https://www.profguide.io/professions/major-dvoreckiy.html</link>
+                <text>
+                    Управляет домашним персоналом, составляет графики работы и контролирует качественное исполнение
+                    обязанностей домработниц, садовников, нянь, водителей, поваров и других специалистов, а также над
+                    сотрудниками коммунальных служб и бригадами строительных работников. Управляет расходами на ведение
+                    домашнего хозяйства, ведет документы по расходам ремонт, закупку продуктов, бытовых товаров.
+                    Отвечает за безопасность дома, как пожарную, так и общую, связанную с охраной участка. Выполняет
+                    разовые поручения: покупка билетов, организация транспорта и прочее. Специального образования не
+                    требуется, можно работать с любым обрзованием.
+                </text>
+            </kind>
+        </description>
     </profession>
-    <profession>
-        <name>Батлер (мажордом)</name>
-        <combs>
-            <comb comb="com,hoz"/>
-        </combs>
-    </profession>
-    <profession>
+    <profession not="human,art,it,natural,tech,boss">
         <name>Хаускипинг-менеджер (руководитель хозяйственной службы)</name>
         <combs>
             <comb comb="com,hoz"/>
         </combs>
+        <description>
+            <kind>
+                <name>Хаускипинг-менеджер</name>
+                <text>
+                    Организовывает уборку номерного фонда отеля, оббщественных зон, офисов в соотв. со стандартами
+                    отеля, планирует и составляет бюджет службы, составляет график сменности, табель учета рабочего
+                    времени дает задания работникам прачечной, заказывает необходимый для работы инвентарь, спец. химию,
+                    обучает персонал стандартам и процедурам службы, учитывает и выдает униформу другим службам.
+                    Специального образования не требуется, но требуется умени руководить, знать стандарты раюоты отеля,
+                    быть ответственным человеком.
+                </text>
+            </kind>
+        </description>
     </profession>
-    <profession>
-        <name>Кастелянша, экономка, помощник по хозяйству, кладовщик</name>
+    <profession not="human,art,it,natural,tech,boss,war">
+        <name>Экономка, помощник по хозяйству, кладовщик, кастелянша</name>
         <combs>
             <comb comb="hoz"/>
         </combs>
+        <description>
+            <kind>
+                <name>Экономка, помощник по хозяйству, кладовщик, кастелянша</name>
+                <link>https://www.profguide.io/professions/Kastelyansha.html</link>
+                <text>
+                    Кастелянша в больнице выдает одежду, белье и другие предметы быта. Комендант в общежитии следит за
+                    внутренним порядком, выдает постельное белье и пр. Экономка, помощница по хозяйству ведет домашнее
+                    хозяйство в доме у хозяев, готовит, убирает и закупает продукты.Кладовщик ведет учет товара на
+                    складе. Для этих работников специального образования не требуется.
+                </text>
+            </kind>
+        </description>
     </profession>
-    <profession>
+    <profession not="human,art,it,natural">
         <name>Специалист жилищно-коммунального хозяйства</name>
         <combs>
             <comb comb="tech,math,hoz"/>
             <comb comb="math,hoz"/>
             <comb comb="tech,hoz"/>
         </combs>
+        <description>
+            <kind>
+                <name>Специалист жилищно-коммунального хозяйства</name>
+                <text>
+                    Организовывает обслуживание, эксплуатацию объектов жилищного фонда (здания, прилегающие территории),
+                    Следит за уборкой и состоянием здаий и прилегающих земельных участков. Образвание можно получить в
+                    коллдеже и в строительном или ином вузе на факультете Жилищное хозяйство и коммунальная
+                    инфраструктура (сдают профильную математику, обществознание и русский язык).
+                </text>
+            </kind>
+        </description>
     </profession>
-    <profession>
+    <profession not="human,art,it,natural">
+        <name>Управляющий недвижимостью</name>
+        <combs>
+            <!-- todo ЭТО подходит? -->
+            <comb comb="tech,math,hoz"/>
+            <comb comb="math,hoz"/>
+            <comb comb="tech,hoz"/>
+        </combs>
+        <description>
+            <kind>
+                <name>Управляющий недвижимостью</name>
+                <pic>https://www.profguide.io/images/article/a/2/pSkLne7kAF.jpg</pic>
+                <link>https://www.profguide.io/professions/upravlyaushiy_nedvijimostiu.html</link>
+                <text>
+                    Комплексно управляет крупными объектами недвижимости: 1) коммерческими (торговые, офисные центры).
+                    Цель - чтобы недвижимость приносила деньги владельцам. Поэтому он организует процесс привлечения
+                    арендаторов и сбора арендных платежей. Обучает сотрудников и контролирует их работу, в том числе и
+                    технических служб, ведь здание должно находиться в хорошем состоянии. 2) Управление некоммерческой
+                    недвижимостью не предполагет сдачи помещений в аренду, но предполагает содержание его в надлежащем
+                    виде.
+                    Для этой работы возможно и высшее строительное образование (сдают физику, математику, русский язык),
+                    образование ЖКХ (сдают профильную математику, обществознание и русский язык), высшее финансовое или
+                    управленческое (управление недвижимостью: сдают профильную математику, обществознание и русский
+                    язык).
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession not="tech,it,natural,math,war,hoz">
         <name>Гид-экскурсовод</name>
         <combs>
             <comb comb="human,com"/>
@@ -1821,7 +2128,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="human,art,it,natural,boss">
         <name>Спасатель МЧС, пожарный</name>
         <combs>
             <comb comb="body,war"/>
@@ -1851,7 +2158,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="human,art,it,tech,math">
         <name>Спортсмен</name>
         <combs>
             <comb comb="body"/>
@@ -1869,7 +2176,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="human,art,it,tech,math">
         <name>Спортивный, фитнес тренер</name>
         <combs>
             <comb comb="body,com"/>
@@ -1893,6 +2200,17 @@ todo подумать:
         <combs>
             <comb comb="tech,math"/>
         </combs>
+        <description>
+            <kind>
+                <name>Технолог промышленности</name>
+                <text>
+                    Участвует в разработке продукта на производстве, каким бы оно ни было (пищевое, металлургическое,
+                    химическое, картонно-бумажное и т.д. Отвечает за качество производимых продуктов на всех этапах: от
+                    поступления сырья до момента упаковки готовой продукции. Образование получают ввузе на
+                    технолгическом факультете (сдают профильную математику, химию или физику и русский язык).
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Финансовый аналитик</name>
@@ -1914,7 +2232,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="human,art,it,tech,war,natural">
         <name>Бухгалтер, аудитор</name>
         <combs>
             <comb comb="math"/>
@@ -1939,11 +2257,23 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
-        <name>Специалист по страхованию и финансовым рискам</name>
+    <profession not="human,art,it,tech,war,natural">
+        <name>Специалист по страхованию финансовых рисков</name>
         <combs>
             <comb comb="com,math"/>
         </combs>
+        <description>
+            <kind>
+                <name>Специалист по страхованию финансовых рисков</name>
+                <text>
+                    Разрабатывает методологические и нормативные документы по страхованию ипотеки, страхованию имущества
+                    физических и юридических лиц (строения, квартиры). Работает в страховой компании, образование
+                    получает на факультетах банковское дело, финансы и кредит (сдают профильную математику,
+                    обществознание и русский язык) или на юридическом факультете (сдают историю, обществознание и
+                    русский язык).
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Актуарий</name>
@@ -1953,7 +2283,7 @@ todo подумать:
         <description>
             <kind>
                 <name>Актуарий</name>
-                <pic></pic>
+                <pic>https://www.profguide.io/images/article/a/22/BHN-xXIkE9.jpg</pic>
                 <link>https://www.profguide.io/professions/Aktuariy.html</link>
                 <text>
                     Актуарий – специалист по страховой математике, владеющий теорией актуарных расчетов.
@@ -1961,7 +2291,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="human,art,tech,war,natural">
         <name>Финансовый консультант, банковский специалист</name>
         <combs>
             <comb comb="math"/>
@@ -1978,23 +2308,55 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="human,art,tech,war,natural">
         <name>Экономист, специалист по управленческому учёту</name>
         <combs>
             <comb comb="math"/>
         </combs>
     </profession>
-    <profession>
+    <profession not="human,art,tech,war,natural">
         <name>Налоговый консультант, налоговый инспектор</name>
         <combs>
             <comb comb="math,com"/>
         </combs>
+        <description>
+            <kind>
+                <name>Налоговый консультант</name>
+                <pic>https://www.profguide.io/images/article/a/2/SNoJ3wq1p7.jpg</pic>
+                <link>https://www.profguide.io/professions/Nalogovyy_konsultant.html</link>
+                <text>
+                    Консультирует руководителей компаний по вопросам налогообложения, дает рекомендации по уплате
+                    налогов законным способом, помогает компании избегать налоговых рисков. Анализирует договоры
+                    компании на соответствие налоговому законодательству. Решает вопросы по налоговому аудиту и
+                    участвует в переговорах с УБЭП и другими государственными организациями. Образование налогового
+                    коснльтанта предполгает знанеи финансов предприятия и знание юриспруденции. Обучают на факультетах
+                    Финансы и кредит (сдают профильную математику, обществознание и русский язык) или на факультете
+                    Налоги, аудит и бизнес-анализ (сдают профильную математику, обществознание и русския язык).
+                    Налоговый инспектор работает в Государственной Налоговой Инспекции, он проверяет точность оплаты
+                    налогов, получает образование там же, где и налоговый консультант.
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Специалист рынка ценных бумаг, инвестиционный консультант</name>
         <combs>
             <comb comb="math"/>
         </combs>
+        <description>
+            <kind>
+                <name>Специалист рынка ценных бумаг, инвестиционный консультант</name>
+                <!--<pic>https://www.profguide.io</pic>-->
+                <!--<link>https://www.profguide.io</link>-->
+                <text>
+                    Совершает торговые операции с ценными бумагами, валютой и производными финансовыми инструментами на
+                    биржах и внебиржевых рынках; управляет ликвидностью портфеля компании, оценивает риски и доходность
+                    ценных бумаг и т.п. Обучение на факультетах Финансы и кредит (сдают профильную математику,
+                    оществознание и русский язык) и Математика (сдают математику, физику либо информатику и русский
+                    язык).
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Разработчик компьютерных программ</name>
@@ -2249,6 +2611,17 @@ todo подумать:
         <combs>
             <comb comb="human"/>
         </combs>
+        <description>
+            <kind>
+                <name>Историк</name>
+                <text>
+                    Специалист - исследователь прошлого. Специализируется на эпохе, на предмете (исторя искусства,исория
+                    костюма, история науки, история оружия, история еды, архитектуры и прочего). Зарабатывает
+                    преподаванием, популяризацией знаний, написанием статей, книг. Обучают в институтах на исторических
+                    факультетах (при поступлении сдают: историю, иностранный, русский языки или обществознание)
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession is="introvert">
         <name>Архивариус, библиотекарь</name>
@@ -2331,12 +2704,43 @@ todo подумать:
             <comb comb="boss,com"/>
             <comb comb="boss"/>
         </combs>
+        <description>
+            <kind>
+                <name>Предприниматель</name>
+                <text>
+                    Предприниматель - любой человек, который зарабатывает деньги самостоятельно, не работая наемно. Он
+                    сам находит Тему для производства, торговли или услуг. Он сам ставит себе задачи, сам управляет
+                    собой и своими сотрудниками, понимает про налоги, про рыночные отношения и про маркетинг, сам
+                    принимает все текущие решения. Где обучаться? Есть колледжи со специальностью Коммерция, Есть в
+                    вузах факультеты маркетинга, торгового дела (сдают математику, обществознанием и русский язык).Но
+                    бизнесы есть в разных сферах: рестораны, инженерия, торговля, строительство, перевозки, кино,
+                    медицина, образование и так далее. Поэтому предпринимателем можно стать и после того, как обучишься
+                    какому-либо делу из перечисленных. Нужно лишь будет к специальному образованию добавить
+                    доподготовку, например, по экономике или маркетингу.
+                </text>
+            </kind>
+        </description>
     </profession>
     <profession>
         <name>Финансовый брокер</name>
         <combs>
             <comb comb="boss,math"/>
         </combs>
+        <description>
+            <kind>
+                <name>Финансовый брокер</name>
+                <pic>https://www.profguide.io/images/article/a/1/L-sm2A_S1U.jpg</pic>
+                <link>https://www.profguide.io/professions/broker.html</link>
+                <text>
+                    Финансовый брокер – посредник между банком ( и другой финансовой компнией, биржей) и клиентом
+                    (компания или частное лицо). Он всегда знает про финансовые продукты банка ( ценные бумаги) и
+                    условия кредитования и помогает клиенту выбрать самые выгодные условия кредитования или покупки
+                    ценных бумаг. И готовит документы для кредитования или покупки ценных бумаг. Брокер получает
+                    комиссию от сделки. Обучается финансвый брокер на факультете Финансы и кредит университета. При
+                    поступлении сдают профильную математику, обществознание и русский язык.
+                </text>
+            </kind>
+        </description>
     </profession>
     <!--<profession>-->
     <!--<name>Каскадёр</name>-->
