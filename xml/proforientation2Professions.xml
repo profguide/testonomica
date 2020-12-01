@@ -115,7 +115,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="it,tech,human,natural">
         <name>Визажист, гримёр</name>
         <combs>
             <comb comb="art,craft"/>
@@ -143,7 +143,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession not="it">
+    <profession not="it,tech,human,natural">
         <name>Мастер маникюра</name>
         <combs>
             <comb comb="com,craft"/>
@@ -333,9 +333,8 @@ todo подумать:
     <profession>
         <name>Арт-дилер, антиквар</name>
         <combs>
-            <!--todo а точно hoz? -->
-            <comb comb="com,hoz,boss,art"/> <!--todo art:interest-->
-            <comb comb="com,hoz,boss"/>
+            <comb comb="com,boss,art"/> <!--todo art:interest-->
+            <comb comb="com,boss"/>
             <comb comb="boss,art"/> <!--todo art:interest-->
         </combs>
         <description>
@@ -405,7 +404,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="it,tech,human,natural">
         <name>Парикмахер</name>
         <combs>
             <comb comb="com,craft"/>
@@ -530,7 +529,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="art,human,natural">
         <name>Специалист по таможенному оформлению</name>
         <combs>
             <comb comb="math"/>
@@ -555,7 +554,7 @@ todo подумать:
             </kind>
         </description>
     </profession>
-    <profession not="it,art,natural">
+    <profession not="it,art,natural,human">
         <name>Риэлтор</name>
         <combs>
             <comb comb="com,math"/>
@@ -2084,10 +2083,9 @@ todo подумать:
     <profession not="human,art,it,natural">
         <name>Управляющий недвижимостью</name>
         <combs>
-            <!-- todo ЭТО подходит? -->
-            <comb comb="tech,math,hoz"/>
-            <comb comb="math,hoz"/>
-            <comb comb="tech,hoz"/>
+            <comb comb="com,tech,math,hoz,boss"/>
+            <comb comb="com,math,hoz,boss"/>
+            <comb comb="com,math,hoz"/>
         </combs>
         <description>
             <kind>
@@ -2313,6 +2311,21 @@ todo подумать:
         <combs>
             <comb comb="math"/>
         </combs>
+        <description>
+            <kind>
+                <name>Экономист, специалист по управленческому учёту</name>
+                <pic>https://www.profguide.io/images/article/a/4/xetOmwoaxc.jpg</pic>
+                <link>https://www.profguide.io/professions/economist.html</link>
+                <text>
+                    Разрабатывает систему управленческого финансового учета предприятия, фирмы. Ведет управленческий
+                    финансовый учет в компании, участвует в бюджетировании, формирует финансовые отчеты руководству
+                    компании;
+                    Обучают на факултетах Экономика предприятия, финансы и кредит (сдают профильную математику,
+                    обществознание и русский язык).
+                </text>
+            </kind>
+        </description>
+
     </profession>
     <profession not="human,art,tech,war,natural">
         <name>Налоговый консультант, налоговый инспектор</name>
@@ -2332,8 +2345,18 @@ todo подумать:
                     коснльтанта предполгает знанеи финансов предприятия и знание юриспруденции. Обучают на факультетах
                     Финансы и кредит (сдают профильную математику, обществознание и русский язык) или на факультете
                     Налоги, аудит и бизнес-анализ (сдают профильную математику, обществознание и русския язык).
+
+                </text>
+            </kind>
+            <kind>
+                <name>Налоговый инспектор</name>
+                <pic>https://www.profguide.io/images/article/a/9/NavSHDzTlj.jpg</pic>
+                <link>https://www.profguide.io/professions/nalogoviy-inspector.html</link>
+                <text>
                     Налоговый инспектор работает в Государственной Налоговой Инспекции, он проверяет точность оплаты
-                    налогов, получает образование там же, где и налоговый консультант.
+                    налогов, получает образование там же, где и налоговый консультант. Обучают на факультетах
+                    Финансы и кредит (сдают профильную математику, обществознание и русский язык) или на факультете
+                    Налоги, аудит и бизнес-анализ (сдают профильную математику, обществознание и русския язык).
                 </text>
             </kind>
         </description>
@@ -2346,8 +2369,6 @@ todo подумать:
         <description>
             <kind>
                 <name>Специалист рынка ценных бумаг, инвестиционный консультант</name>
-                <!--<pic>https://www.profguide.io</pic>-->
-                <!--<link>https://www.profguide.io</link>-->
                 <text>
                     Совершает торговые операции с ценными бумагами, валютой и производными финансовыми инструментами на
                     биржах и внебиржевых рынках; управляет ликвидностью портфеля компании, оценивает риски и доходность
@@ -2722,7 +2743,7 @@ todo подумать:
         </description>
     </profession>
     <profession>
-        <name>Финансовый брокер</name>
+        <name>Брокер</name>
         <combs>
             <comb comb="boss,math"/>
         </combs>
@@ -2732,8 +2753,8 @@ todo подумать:
                 <pic>https://www.profguide.io/images/article/a/1/L-sm2A_S1U.jpg</pic>
                 <link>https://www.profguide.io/professions/broker.html</link>
                 <text>
-                    Финансовый брокер – посредник между банком ( и другой финансовой компнией, биржей) и клиентом
-                    (компания или частное лицо). Он всегда знает про финансовые продукты банка ( ценные бумаги) и
+                    Финансовый брокер – посредник между банком (и другой финансовой компнией, биржей) и клиентом
+                    (компания или частное лицо). Он всегда знает про финансовые продукты банка (ценные бумаги) и
                     условия кредитования и помогает клиенту выбрать самые выгодные условия кредитования или покупки
                     ценных бумаг. И готовит документы для кредитования или покупки ценных бумаг. Брокер получает
                     комиссию от сделки. Обучается финансвый брокер на факультете Финансы и кредит университета. При
