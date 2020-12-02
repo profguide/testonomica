@@ -124,17 +124,17 @@ class Proforientation2CalculatorTest extends KernelTestCase
      * Убедиться, что не существует комбинаций, которые не дают ни одной профессии
      * Закомментированно, потому что очень медленно работает
      */
-    public function testThatNoCombsWithEmptyProfessionList()
-    {
-        // используем заранее скомпилированный список комбинаций без повторов
-        foreach (DevelopController::COMBS_POSSIBLE as $comb) {
-            $types = array_flip(explode(',', $comb));
-            // поставим 100% для всех типов, чтобы точно все учлись
-            $types = array_fill_keys(array_keys($types), 100);
-            $professions = $this->calculator->grabProfessionsByTypesCombs($types);
-            $this->assertNotEmpty($professions, "Combination \"$comb\" does not have any profession");
-        }
-    }
+//    public function testThatNoCombsWithEmptyProfessionList()
+//    {
+//        // используем заранее скомпилированный список комбинаций без повторов
+//        foreach (DevelopController::COMBS_POSSIBLE as $comb) {
+//            $types = array_flip(explode(',', $comb));
+//            // поставим 100% для всех типов, чтобы точно все учлись
+//            $types = array_fill_keys(array_keys($types), 100);
+//            $professions = $this->calculator->grabProfessionsByTypesCombs($types);
+//            $this->assertNotEmpty($professions, "Combination \"$comb\" does not have any profession");
+//        }
+//    }
 
     /**
      * Песочница, чтобы проверить соответствие комбинаций и профессий.

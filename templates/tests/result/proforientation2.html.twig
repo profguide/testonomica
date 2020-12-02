@@ -3,6 +3,13 @@
 {% block result %}
     {% set debug = app.request.get('debug') == 1 ? 1 : 0 %}
     <style>
+        h1, h2, h3 {
+            text-align: center;
+        }
+        h1 {
+            margin: 10px 0;
+        }
+
         #testonomica_header {
             display: none;
         }

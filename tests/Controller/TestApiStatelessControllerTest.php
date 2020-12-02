@@ -61,6 +61,20 @@ class TestApiStatelessControllerTest extends WebTestCase
         $this->test = $this->testRepository->findOneBySlug(TestFixture::TEST_1_SLUG);
     }
 
+    /**
+     * Start
+     * Загрузка первого вопроса
+     * Ожидаем первый вопрос
+     */
+    public function testFirst()
+    {
+        $testId = $this->test->getId();
+        $nextQuestionId = 1;
+        $this->request(['test' => $testId, 'start' => 1]);
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertHtml($testId, $nextQuestionId);
+    }
+
     /*
      * Next
      * Ожидаем следующий вопрос

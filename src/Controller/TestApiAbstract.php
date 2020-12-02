@@ -20,6 +20,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 abstract class TestApiAbstract extends AbstractController
 {
+    const OPERATION_START = 'start';
+
     const OPERATION_NEXT = 'next';
 
     const OPERATION_BACK = 'back';
@@ -53,8 +55,10 @@ abstract class TestApiAbstract extends AbstractController
     {
         $test = $this->loadTestByRequest($request);
         $operationName = $this->operationByRequest($request);
-        self::assertFormat($operationName, $request);
-        if ($operationName == self::OPERATION_NEXT) {
+        self::assertOperationFormat($operationName, $request);
+        if ($operationName == self::OPERATION_START) {
+            $question = $this->first($test);
+        } elseif ($operationName == self::OPERATION_NEXT) {
             $question = $this->next($test, $request->get('question'));
             $this->saveAnswer($test, $request->get('question'), $request->get('answer'));
             if (!$question) {
@@ -89,7 +93,7 @@ abstract class TestApiAbstract extends AbstractController
 
     protected abstract function end(Test $test);
 
-    private static function assertFormat(string $operationName, Request $request)
+    private static function assertOperationFormat(string $operationName, Request $request)
     {
         $question = $request->get('question');
         $answer = $request->get('answer');
@@ -116,6 +120,8 @@ abstract class TestApiAbstract extends AbstractController
             return self::OPERATION_CLEAR;
         } elseif ($request->get("restore")) {
             return self::OPERATION_RESTORE;
+        } elseif ($request->get('start')) {
+            return self::OPERATION_START;
         } else {
             return self::OPERATION_NEXT;
         }
@@ -145,5 +151,10 @@ abstract class TestApiAbstract extends AbstractController
     private function next($test, string $questionId)
     {
         return $this->sourceService->getNextQuestion($test, $questionId);
+    }
+
+    private function first($test)
+    {
+        return $this->sourceService->getFirstQuestion($test);
     }
 }
