@@ -22,13 +22,10 @@ class AnswersUtil
         $sum = 0;
         /**@var Question $question */
         foreach ($questions as $question) {
-            $value = $answersHolder->getValue($question->getId()) ?? 0;
             if ($question->getMethod() == Question::METHOD_OPTION) {
-                $sum += (int)$value;
+                $sum += $answersHolder->getValuesSum($question->getId());
             } elseif ($question->getMethod() == Question::METHOD_TEXT) {
-                $correctValues = $question->getCorrectValues();
-//                if (count($correctValues) == count($value))... когда $value будет массивом
-                if (in_array($value, $correctValues)) {
+                if (self::isCorrect($question, $answersHolder)) {
                     $sum += 1;
                 }
             } elseif ($question->getMethod() == Question::METHOD_OPTION) {
@@ -39,5 +36,21 @@ class AnswersUtil
             }
         }
         return $sum;
+    }
+
+    /**
+     * Проверяет является ли ответ равным и точным ожидаемым значениям
+     * @param Question $question
+     * @param AnswersHolder $answersHolder
+     * @return bool
+     */
+    private static function isCorrect(Question $question, AnswersHolder $answersHolder): bool
+    {
+        $correctValues = $question->getCorrectValues();
+        $scoredValues = $answersHolder->getValues($question->getId());
+        return empty(array_merge(
+            array_diff($scoredValues, $correctValues),
+            array_diff($correctValues, $scoredValues)
+        ));
     }
 }

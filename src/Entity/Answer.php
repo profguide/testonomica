@@ -6,19 +6,25 @@
 
 namespace App\Entity;
 
-
 class Answer
 {
+    /***
+     * @var string
+     */
     public $questionId;
+
+    /**
+     * @var array
+     */
     public $value;
 
-    private function __construct(string $id, string $value)
+    private function __construct(string $id, array $value)
     {
         $this->questionId = $id;
         $this->value = $value;
     }
 
-    public static function create(string $id, string $value)
+    public static function create(string $id, array $value)
     {
         return new static($id, $value);
     }
@@ -28,7 +34,7 @@ class Answer
         return $this->questionId;
     }
 
-    public function getValue(): string
+    public function getValue(): array
     {
         return $this->value;
     }

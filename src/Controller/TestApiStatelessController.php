@@ -31,6 +31,8 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class TestApiStatelessController extends TestApiAbstract
 {
+    const HEADER_STATUS = 'test-status';
+
     /**@var AnswersSerializer */
     private $serializer;
 
@@ -53,7 +55,7 @@ class TestApiStatelessController extends TestApiAbstract
     public function saveResults(int $id, Request $request)
     {
         $test = $this->loadTest($id);
-        $answers = $this->serializer->deserialize($request->get('answers'));
+        $answers = $this->serializer->deserialize($request->get('result'));
         $result = $this->resultService->create($test, $answers);
         return new Response($result->getUuid());
     }
@@ -64,12 +66,12 @@ class TestApiStatelessController extends TestApiAbstract
             "Обработка результата",
             Response::HTTP_OK,
             [
-                'Access-Control-Expose-Headers' => 'test-status',
-                'test-status' => TestStatus::finished(),
+                'Access-Control-Expose-Headers' => self::HEADER_STATUS,
+                self::HEADER_STATUS => TestStatus::finished(),
             ]);
     }
 
-    protected function saveAnswer(Test $test, string $questionId, string $value): void
+    protected function saveAnswer(Test $test, string $questionId, array $value): void
     {
         return; // no state - not save
     }

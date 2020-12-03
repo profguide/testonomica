@@ -8,8 +8,6 @@ namespace App\Tests\Controller;
 
 
 use App\DataFixtures\TestFixture;
-use App\Entity\Answer;
-use App\Entity\Result;
 use App\Entity\Test;
 use App\Repository\AnswerRepository;
 use App\Repository\ResultRepository;
@@ -121,7 +119,7 @@ class TestApiStatelessControllerTest extends WebTestCase
 
     public function testSaveResults()
     {
-        $dataSource = '{"1":{"questionId":"1","value":"my-answer"}}';
+        $dataSource = '{"1":["my-answer"]}';
         $this->requestSave($this->test, $dataSource);
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         $uuid = $this->client->getResponse()->getContent();
@@ -145,6 +143,6 @@ class TestApiStatelessControllerTest extends WebTestCase
 
     private function requestSave(Test $test, string $answers)
     {
-        $this->client->request('POST', "/tests/cli/save/{$test->getId()}/", ['answers' => $answers]);
+        $this->client->request('POST', "/tests/cli/save/{$test->getId()}/", ['result' => $answers]);
     }
 }

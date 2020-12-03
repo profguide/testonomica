@@ -102,7 +102,7 @@ class TestApiStatefulControllerTest extends WebTestCase
         $this->assertCount(1, $results);
         /**@var Result $result */
         $result = $results[0];
-        $this->assertEquals('{"12":{"questionId":"12","value":"my-answer"}}', $result->getData());
+        $this->assertEquals('{"12":["my-answer"]}', $result->getData());
         // результат сохранён в сессии
         $this->assertNotNull($this->resultService->getSessionResult($this->test));
         // Текст сообщения
@@ -152,7 +152,7 @@ class TestApiStatefulControllerTest extends WebTestCase
         $testId = $this->test->getId();
         $lastQuestionId = 2;
         $nextQuestionId = 3;
-        $this->answerRepository->save($this->test, Answer::create($lastQuestionId, 'some-value'));
+        $this->answerRepository->save($this->test, Answer::create($lastQuestionId, ['some-value']));
         $this->client->request('POST', '/tests/api/', ['test' => $testId, 'restore' => 1]);
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         // следующий вопрос

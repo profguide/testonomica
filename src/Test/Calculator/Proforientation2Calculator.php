@@ -357,7 +357,7 @@ class Proforientation2Calculator implements CalculatorInterface
             $questionIds = [102];
 
             foreach ($questionIds as $questionId) {
-                $rightSum += $answersHolder->getValue($questionId);
+                $rightSum += $answersHolder->getValuesSum($questionId);
             }
             $count += count($questionIds);
         }

@@ -33,16 +33,15 @@ class Proforientation2CalculatorTest extends KernelTestCase
     public function testCalculateTypesGroups()
     {
         $answersHolder = $this->constructAnswersHolder([
-            1 => 1, 2 => 1, 3 => 1, 4 => 1, 5 => 1, 6 => 1, // natural-force
-            10 => 1, 11 => 1, // natural-interest
+            1 => [1], 2 => [1], 3 => [1], 4 => [1], 5 => [1], 6 => [1], // natural-force
+            10 => [1], 11 => [1], // natural-interest
             // no natural-skills
-            100 => 1, 101 => 1, //tech-force;
-            102 => 1, // tech-force/it-force
-            110 => 1, 111 => 1, 112 => 1, //tech-interest
-            120 => 1, 121 => 1, 122 => 1, 123 => 40, //tech-interest
+            100 => [1], 101 => [1], //tech-force;
+            102 => [1], // tech-force/it-force
+            110 => [1], 111 => [1], 112 => [1], //tech-interest
+            120 => [1], 121 => [1], 122 => [1], 123 => [40], //tech-interest
 
-            700 => 1, 701 => 1
-
+            700 => [1], 701 => [1]
         ]);
 //        $time = microtime(true);
         $this->assertEquals([
@@ -120,10 +119,10 @@ class Proforientation2CalculatorTest extends KernelTestCase
             ['natural' => 100], new Profession('some', [['natural', 'tech'], ['natural', 'tech', 'body']])));
     }
 
-    /**
-     * Убедиться, что не существует комбинаций, которые не дают ни одной профессии
-     * Закомментированно, потому что очень медленно работает
-     */
+//    /**
+//     * Убедиться, что не существует комбинаций, которые не дают ни одной профессии
+//     * Закомментированно, потому что очень медленно работает
+//     */
 //    public function testThatNoCombsWithEmptyProfessionList()
 //    {
 //        // используем заранее скомпилированный список комбинаций без повторов
@@ -136,12 +135,12 @@ class Proforientation2CalculatorTest extends KernelTestCase
 //        }
 //    }
 
-    /**
-     * Песочница, чтобы проверить соответствие комбинаций и профессий.
-     * Закомментированно, потому что по сути не является unit-тестом.
-     * Это скорее подошло бы для тестирования через веб-интерфейс.
-     * todo перенести в http, и вызывать оттуда. Например, DevController::proforientation2Types(?types=rand|tech,math),
-     */
+//    /**
+//     * Песочница, чтобы проверить соответствие комбинаций и профессий.
+//     * Закомментированно, потому что по сути не является unit-тестом.
+//     * Это скорее подошло бы для тестирования через веб-интерфейс.
+//     * todo перенести в http, и вызывать оттуда. Например, DevController::proforientation2Types(?types=rand|tech,math),
+//     */
 //    public function testRandomComb()
 //    {
 //        $key = array_rand(DevelopController::COMBS_POSSIBLE);
@@ -187,7 +186,7 @@ class Proforientation2CalculatorTest extends KernelTestCase
     {
         $answers = [];
         foreach ($array as $id => $value) {
-            $answers[] = Answer::create($id, $value);
+            $answers[$id] = Answer::create($id, $value);
         }
         return new AnswersHolder($answers);
     }

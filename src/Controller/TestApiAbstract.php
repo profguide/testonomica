@@ -59,13 +59,13 @@ abstract class TestApiAbstract extends AbstractController
         if ($operationName == self::OPERATION_START) {
             $question = $this->first($test);
         } elseif ($operationName == self::OPERATION_NEXT) {
-            $question = $this->next($test, $request->get('question'));
-            $this->saveAnswer($test, $request->get('question'), $request->get('answer'));
+            $question = $this->next($test, $this->grabQuestion($request));
+            $this->saveAnswer($test, $this->grabQuestion($request), $this->grabAnswer($request));
             if (!$question) {
                 return $this->end($test);
             }
         } elseif ($operationName == self::OPERATION_BACK) {
-            $question = $this->back($test, $request->get('question'));
+            $question = $this->back($test, $this->grabQuestion($request));
         } elseif ($operationName == self::OPERATION_CLEAR) {
             $question = $this->clear($test);
         } elseif ($operationName == self::OPERATION_RESTORE) {
@@ -85,7 +85,7 @@ abstract class TestApiAbstract extends AbstractController
         ]);
     }
 
-    protected abstract function saveAnswer(Test $test, string $questionId, string $value): void;
+    protected abstract function saveAnswer(Test $test, string $questionId, array $value): void;
 
     protected abstract function clear(Test $test);
 
@@ -156,5 +156,20 @@ abstract class TestApiAbstract extends AbstractController
     private function first($test)
     {
         return $this->sourceService->getFirstQuestion($test);
+    }
+
+    private function grabAnswer(Request $request): array
+    {
+        $answer = $request->get('answer');
+        if (is_array($answer)) {
+            return $answer;
+        } else {
+            return [$answer];
+        }
+    }
+
+    private function grabQuestion(Request $request)
+    {
+        return $request->get('question');
     }
 }

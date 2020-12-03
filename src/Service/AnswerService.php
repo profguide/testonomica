@@ -10,7 +10,6 @@ namespace App\Service;
 use App\Entity\Answer;
 use App\Entity\Test;
 use App\Repository\AnswerRepository;
-use App\Test\TestStatus;
 
 class AnswerService implements AnswerServiceInterface
 {

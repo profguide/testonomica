@@ -34,7 +34,7 @@ class TestApiStatefulController extends TestApiAbstract
         parent::__construct($testService, $sourceService, $resultService);
     }
 
-    protected function saveAnswer(Test $test, $questionId, $value): void
+    protected function saveAnswer(Test $test, $questionId, array $value): void
     {
         $this->answerService->save($test, Answer::create($questionId, $value));
     }

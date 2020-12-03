@@ -7,25 +7,32 @@
 namespace App\Test;
 
 
-use Symfony\Component\Serializer\SerializerInterface;
+use App\Entity\Answer;
 
 class AnswersSerializer
 {
-    /**@var SerializerInterface */
-    private $serializer;
-
-    public function __construct(SerializerInterface $serializer)
-    {
-        $this->serializer = $serializer;
-    }
-
+    /**
+     * @param Answer[] $answers
+     * @return string
+     */
     public function serialize(array $answers): string
     {
-        return $this->serializer->serialize($answers, 'json');
+        $simpleAnswers = [];
+        foreach ($answers as $answer) {
+            $simpleAnswers[$answer->getQuestionId()] = $answer->getValue();
+        }
+        return json_encode($simpleAnswers);
+        //$this->serializer->serialize($simpleAnswers, 'json');
     }
 
     public function deserialize(string $json): array
     {
-        return $this->serializer->deserialize($json, 'App\Entity\Answer[]', 'json');
+        $jsonData = json_decode($json, true);
+        $answers = [];
+        foreach ($jsonData as $id => $values) {
+            $answers[$id] = Answer::create($id, $values);
+        }
+        return $answers;
+        //return $this->serializer->deserialize($json, 'App\Entity\Answer[]', 'json', [AbstractNormalizer::ATTRIBUTES => ['value']]);
     }
 }

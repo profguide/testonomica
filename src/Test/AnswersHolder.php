@@ -26,19 +26,28 @@ class AnswersHolder
     }
 
     /**
-     * Returns value for the Answer
-     * If Answer not found return null
+     * Returns values for the Answer
      * @param string $questionId
-     * @return string|null
+     * @return array. May be empty, if no Answer was found or if no value
      */
-    public function getValue(string $questionId): ?string
+    public function getValues(string $questionId): array
     {
         /**@var Answer $answer */
         $answer = $this->answersByQuestionId()[$questionId] ?? null;
         if ($answer) {
             return $answer->getValue();
         }
-        return null;
+        return [];
+    }
+
+    /**
+     * Calculates sum of values
+     * @param $questionId
+     * @return float|int
+     */
+    public function getValuesSum(string $questionId)
+    {
+        return array_sum($this->getValues($questionId));
     }
 
     private function answersByQuestionId()
@@ -48,8 +57,8 @@ class AnswersHolder
         }
         $answers = [];
         /**@var Answer $answer */
-        foreach ($this->answers as $answer) {
-            $answers[$answer->getQuestionId()] = $answer;
+        foreach ($this->answers as $id => $answer) {
+            $answers[$id] = $answer;
         }
         $this->answersByQuestionId = $answers;
         return $this->answersByQuestionId;
