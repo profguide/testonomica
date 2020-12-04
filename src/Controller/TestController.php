@@ -82,6 +82,9 @@ class TestController extends AbstractController
 
     /**
      * Возвращает посчитанный результат теста в JSON, то есть то, что возвращает калькулятор
+     * Логичнее разместить в TestApiStatelessController, но там нужна скорость,
+     * а калькулятор - это дполнительные ветви зависимостей. Нужно провести исследование.
+     * Есть еще вариант сделать отдельный контроллер для этого TestApiStatelessResultController
      * @Route("/result-raw/{uuid}/", name="result_raw")
      * @param string $uuid
      * @param SerializerInterface $serializer
