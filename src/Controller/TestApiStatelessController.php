@@ -31,7 +31,7 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class TestApiStatelessController extends TestApiAbstract
 {
-    const HEADER_STATUS = 'test-status';
+    const HEADER_STATUS = 'Test-Status';
 
     /**@var AnswersSerializer */
     private $serializer;
