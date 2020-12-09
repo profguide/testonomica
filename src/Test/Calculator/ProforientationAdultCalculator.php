@@ -21,7 +21,7 @@ class ProforientationAdultCalculator extends ProforientationAbstractCalculator
 
     protected function getTestSourceFileName(): string
     {
-        return $this->kernel->getProjectDir() . "/xml/proforientation2.xml";
+        return $this->kernel->getProjectDir() . "/xml/proforientationAdult.xml";
     }
 
     protected function getProfessionsFileName(): string

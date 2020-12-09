@@ -8,7 +8,7 @@ namespace App\Test\Calculator;
 
 use Symfony\Component\HttpKernel\KernelInterface;
 
-class Proforientation2Calculator extends ProforientationAbstractCalculator
+class ProforientationTeenCalculator extends ProforientationAbstractCalculator
 {
     /**@var KernelInterface */
     private $kernel;
@@ -21,7 +21,7 @@ class Proforientation2Calculator extends ProforientationAbstractCalculator
 
     protected function getTestSourceFileName(): string
     {
-        return $this->kernel->getProjectDir() . "/xml/proforientation2.xml";
+        return $this->kernel->getProjectDir() . "/xml/proforientationTeen.xml";
     }
 
     protected function getProfessionsFileName(): string

@@ -10,7 +10,7 @@ namespace App\Tests\Test\Calculator;
 use App\Test\Calculator\ProforientationAdultCalculator;
 use Symfony\Component\HttpKernel\KernelInterface;
 
-class ProforientationAdultCalculatorTest extends Proforientation2CalculatorTest
+class ProforientationAdultCalculatorTest extends ProforientationTeenCalculatorTest
 {
     public function setUp()
     {

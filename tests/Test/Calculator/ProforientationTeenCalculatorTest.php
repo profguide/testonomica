@@ -9,14 +9,14 @@ namespace App\Tests\Test\Calculator;
 use App\Controller\DevelopController;
 use App\Entity\Answer;
 use App\Test\AnswersHolder;
-use App\Test\Calculator\Proforientation2Calculator;
+use App\Test\Calculator\ProforientationTeenCalculator;
 use App\Test\Proforientation\Profession;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\HttpKernel\KernelInterface;
 
-class Proforientation2CalculatorTest extends KernelTestCase
+class ProforientationTeenCalculatorTest extends KernelTestCase
 {
-    /**@var Proforientation2Calculator */
+    /**@var ProforientationTeenCalculator */
     protected $calculator;
 
     public function setUp()
@@ -24,7 +24,7 @@ class Proforientation2CalculatorTest extends KernelTestCase
         self::bootKernel();
         /**@var KernelInterface $appKernel */
         $appKernel = self::$container->get(KernelInterface::class);
-        $this->calculator = new Proforientation2Calculator($appKernel);
+        $this->calculator = new ProforientationTeenCalculator($appKernel);
     }
 
     /**
