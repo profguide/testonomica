@@ -32,7 +32,12 @@ class CalculatorService
 
     public function calculate(Test $test, Result $result): array
     {
-        $answersHolder = new AnswersHolder($this->serializer->deserialize($result->getData()));
+        return $this->calculateJson($test, $result->getData());
+    }
+
+    public function calculateJson(Test $test, string $data): array
+    {
+        $answersHolder = new AnswersHolder($this->serializer->deserialize($data));
         return ($this->getCalculator($test))->calculate($answersHolder);
     }
 

@@ -99,8 +99,8 @@ class TestApiStatelessControllerTest extends WebTestCase
         $this->request(['test' => $testId, 'question' => $currentQuestionId, 'answer' => 'my-answer']);
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         $this->assertEquals("Обработка результата", $this->client->getResponse()->getContent());
-        $this->assertEquals('test-status', $this->client->getResponse()->headers->get('access-control-expose-headers'));
-        $this->assertEquals(TestStatus::FINISHED, $this->client->getResponse()->headers->get('test-status'));
+        $this->assertEquals('Test-Status', $this->client->getResponse()->headers->get('Access-Control-Expose-Headers'));
+        $this->assertEquals(TestStatus::FINISHED, $this->client->getResponse()->headers->get('Test-Status'));
     }
 
     /**
@@ -127,6 +127,15 @@ class TestApiStatelessControllerTest extends WebTestCase
         $result = $this->resultRepository->findByUuid($uuid);
         $this->assertNotNull($result);
         $this->assertEquals($dataSource, $result->getData(), 'Данные не исказились');
+    }
+
+    public function testCalculate()
+    {
+        $testId = $this->test->getId();
+        $dataSource = '{"1":["my-answer"]}';
+        $this->client->request('POST', "/tests/cli/calculate/{$testId}/", ['result' => $dataSource]);
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertEquals('{"1":{"questionId":"1","value":["my-answer"]}}', $this->client->getResponse()->getContent());
     }
 
     private function assertHtml($testId, $nextQuestionId)

@@ -8,16 +8,19 @@ namespace App\Controller;
 
 
 use App\Entity\Test;
+use App\Service\CalculatorService;
 use App\Service\ResultService;
 use App\Service\TestService;
 use App\Service\TestSourceService;
 use App\Test\AnswersSerializer;
 use App\Test\TestStatus;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\SerializerInterface;
 
 /**
  * Stateless API прохождения теста, промежуточные данные хранятся у клиента (браузер, сервисы).
@@ -47,6 +50,7 @@ class TestApiStatelessController extends TestApiAbstract
     }
 
     /**
+     * В данный момент нигде не используется, но наверно будет, когда и сама Тестономика перейдет на stateless
      * @Route("/save/{id}/", name="save_results")
      * @param int $id
      * @param Request $request
@@ -58,6 +62,25 @@ class TestApiStatelessController extends TestApiAbstract
         $answers = $this->serializer->deserialize($request->get('result'));
         $result = $this->resultService->create($test, $answers);
         return new Response($result->getUuid());
+    }
+
+    /**
+     * Возвращает результат подсчета для переданных данных
+     * @Route("/calculate/{id}/", name="result_raw")
+     * @param string $id
+     * @param Request $request
+     * @param SerializerInterface $serializer
+     * @param CalculatorService $calculatorService
+     * @return Response
+     */
+    public function calculate(string $id, Request $request, SerializerInterface $serializer, CalculatorService $calculatorService)
+    {
+        $test = $this->loadTest($id);
+        $data = $request->get('result');
+        $response = new JsonResponse();
+        $response->setJson($serializer->serialize($calculatorService->calculateJson($test, $data), 'json'));
+        $response->setEncodingOptions(JSON_UNESCAPED_UNICODE);
+        return $response;
     }
 
     public function end(Test $test)

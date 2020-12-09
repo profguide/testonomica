@@ -12,13 +12,11 @@ use App\Service\TestService;
 use App\Test\ResultUtil;
 use App\Test\TestStatus;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Serializer\SerializerInterface;
 
 /**
  * @Route("/tests", name="tests.")
@@ -78,25 +76,6 @@ class TestController extends AbstractController
     {
         $result = $this->loadResultByUuid($uuid);
         return $this->renderResult($result->getTest(), $result);
-    }
-
-    /**
-     * Возвращает посчитанный результат теста в JSON, то есть то, что возвращает калькулятор
-     * Логичнее разместить в TestApiStatelessController, но там нужна скорость,
-     * а калькулятор - это дполнительные ветви зависимостей. Нужно провести исследование.
-     * Есть еще вариант сделать отдельный контроллер для этого TestApiStatelessResultController
-     * @Route("/result-raw/{uuid}/", name="result_raw")
-     * @param string $uuid
-     * @param SerializerInterface $serializer
-     * @return Response
-     */
-    public function resultRaw(string $uuid, SerializerInterface $serializer)
-    {
-        $result = $this->loadResultByUuid($uuid);
-        $response = new JsonResponse();
-        $response->setJson($serializer->serialize($this->calculatorService->calculate($result->getTest(), $result), 'json'));
-        $response->setEncodingOptions(JSON_UNESCAPED_UNICODE);
-        return $response;
     }
 
     /**
