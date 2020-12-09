@@ -8,7 +8,7 @@ namespace App\Test\Calculator;
 
 use Symfony\Component\HttpKernel\KernelInterface;
 
-class Proforientation2Calculator extends ProforientationAbstractCalculator
+class ProforientationAdultCalculator extends ProforientationAbstractCalculator
 {
     /**@var KernelInterface */
     private $kernel;

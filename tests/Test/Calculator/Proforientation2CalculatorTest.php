@@ -17,11 +17,12 @@ use Symfony\Component\HttpKernel\KernelInterface;
 class Proforientation2CalculatorTest extends KernelTestCase
 {
     /**@var Proforientation2Calculator */
-    private $calculator;
+    protected $calculator;
 
     public function setUp()
     {
         self::bootKernel();
+        /**@var KernelInterface $appKernel */
         $appKernel = self::$container->get(KernelInterface::class);
         $this->calculator = new Proforientation2Calculator($appKernel);
     }
