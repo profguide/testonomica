@@ -6,17 +6,18 @@
 
 namespace App\Tests\Test\Calculator;
 
+use App\Test\Calculator\AdultProforientationCalculator;
 
-use App\Test\Calculator\ProforientationAdultCalculator;
-use Symfony\Component\HttpKernel\KernelInterface;
-
-class ProforientationAdultCalculatorTest extends ProforientationTeenCalculatorTest
+class ProforientationAdultCalculatorTest extends AbstractProforientationCalculatorTest
 {
     public function setUp()
     {
         self::bootKernel();
-        /**@var KernelInterface $appKernel */
-        $appKernel = self::$container->get(KernelInterface::class);
-        $this->calculator = new ProforientationAdultCalculator($appKernel);
+        $this->calculator = new AdultProforientationCalculator(self::$kernel);
+    }
+
+    protected function getSrcFilename(): string
+    {
+        return self::$kernel->getProjectDir() . "/xml/proforientationAdult.xml";
     }
 }

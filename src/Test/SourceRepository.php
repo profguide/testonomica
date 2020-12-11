@@ -29,7 +29,7 @@ class SourceRepository implements SourceRepositoryInterface
         $this->kernel = $kernel;
     }
 
-    function getQuestion(Test $test, $itemId)
+    public function getQuestion(Test $test, $itemId)
     {
         $items = $this->getItems($test);
         $position = $this->getItemPosition($items, $itemId);
@@ -80,6 +80,17 @@ class SourceRepository implements SourceRepositoryInterface
     public function getQuestionNumber(Test $test, Question $question)
     {
         return $this->getItemPosition($this->getItems($test), $question->getId()) + 1;
+    }
+
+    public function getAllQuestions(Test $test): array
+    {
+        $questions = [];
+        $nodes = $this->getItems($test);
+        foreach ($nodes as $node) {
+            $question = QuestionXmlMapper::map($node);
+            $questions[$question->getId()] = $question;
+        }
+        return $questions;
     }
 
     public function getTotalCount(Test $test)

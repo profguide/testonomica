@@ -18,21 +18,13 @@ use App\Util\AnswersUtil;
 use DOMElement;
 use Symfony\Component\DomCrawler\Crawler;
 
-abstract class ProforientationAbstractCalculator implements CalculatorInterface
+abstract class AbstractProforientationCalculator implements CalculatorInterface
 {
     const MAXIMUM_PROFESSIONS = 15;
 
-    /**@var QuestionsHolder */
-    private $questions;
-
-    public function __construct()
+    public function calculate(AnswersHolder $answersHolder, QuestionsHolder $questionsHolder): array
     {
-        $this->questions = $this->loadQuestions();
-    }
-
-    public function calculate(AnswersHolder $answersHolder): array
-    {
-        $typesGroupsPercent = $this->calculateTypesGroups($answersHolder);
+        $typesGroupsPercent = $this->calculateTypesGroups($answersHolder, $questionsHolder);
         $typesSinglePercent = $this->sumTypesGroups($typesGroupsPercent);
         $professions = $this->grabProfessionsByTypes($typesSinglePercent);
         $professions = $this->sliceProfessions($professions);
@@ -48,14 +40,15 @@ abstract class ProforientationAbstractCalculator implements CalculatorInterface
     /**
      * Из ответов формирует массив с процентами вида ['tech' => [33, 20, 50], 'body' => [0, 50, 0]]
      * @param AnswersHolder $answersHolder
+     * @param QuestionsHolder $questionsHolder
      * @return array
      */
-    public function calculateTypesGroups(AnswersHolder $answersHolder): array
+    public function calculateTypesGroups(AnswersHolder $answersHolder, QuestionsHolder $questionsHolder): array
     {
         $types = ['natural', 'tech', 'human', 'body', 'math', 'it', 'craft', 'art', 'hoz', 'com', 'boss', 'war'];
         $result = [];
         foreach ($types as $type) {
-            $result[$type] = $this->calculateTypeGroups($type, $answersHolder);
+            $result[$type] = $this->calculateTypeGroups($type, $answersHolder, $questionsHolder);
         }
         return $result;
     }
@@ -63,14 +56,15 @@ abstract class ProforientationAbstractCalculator implements CalculatorInterface
     /**
      * @param string $groupMainName e.g. tech
      * @param AnswersHolder $answersHolder
+     * @param QuestionsHolder $questionsHolder
      * @return array
      */
-    private function calculateTypeGroups(string $groupMainName, AnswersHolder $answersHolder)
+    private function calculateTypeGroups(string $groupMainName, AnswersHolder $answersHolder, QuestionsHolder $questionsHolder)
     {
         return [
-            $this->calculateTypeGroup($groupMainName . '-force', $answersHolder),
-            $this->calculateTypeGroup($groupMainName . '-interest', $answersHolder),
-            $this->calculateTypeGroup($groupMainName . '-skills', $answersHolder),
+            $this->calculateTypeGroup($groupMainName . '-force', $answersHolder, $questionsHolder),
+            $this->calculateTypeGroup($groupMainName . '-interest', $answersHolder, $questionsHolder),
+            $this->calculateTypeGroup($groupMainName . '-skills', $answersHolder, $questionsHolder),
         ];
     }
 
@@ -78,11 +72,12 @@ abstract class ProforientationAbstractCalculator implements CalculatorInterface
      * Высчитывает сумму положительных и правильных ответов для группы вопросов
      * @param string $groupName e.g. tech-skills
      * @param AnswersHolder $answersHolder
+     * @param QuestionsHolder $questionsHolder
      * @return float
      */
-    private function calculateTypeGroup(string $groupName, AnswersHolder $answersHolder)
+    private function calculateTypeGroup(string $groupName, AnswersHolder $answersHolder, QuestionsHolder $questionsHolder)
     {
-        $questions = $this->questions->group($groupName);
+        $questions = $questionsHolder->group($groupName);
         $count = count($questions);
         $rightSum = AnswersUtil::sum($questions, $answersHolder);
         $this->applyExtraAnswers($groupName, $answersHolder, $rightSum, $count);
@@ -294,17 +289,6 @@ abstract class ProforientationAbstractCalculator implements CalculatorInterface
         return $description;
     }
 
-    private function loadQuestions()
-    {
-        $items = CrawlerUtil::load($this->getTestSourceFileName());
-        $questions = [];
-        /**@var \DOMElement $item */
-        foreach ($items->children() as $item) {
-            $questions[] = QuestionXmlMapper::map($item);
-        }
-        return new QuestionsHolder($questions);
-    }
-
     private function sliceProfessions($professions)
     {
         return array_slice($professions, 0, self::MAXIMUM_PROFESSIONS);
@@ -357,8 +341,6 @@ abstract class ProforientationAbstractCalculator implements CalculatorInterface
             $count += count($questionIds);
         }
     }
-
-    protected abstract function getTestSourceFileName(): string;
 
     protected abstract function getProfessionsFileName(): string;
 }

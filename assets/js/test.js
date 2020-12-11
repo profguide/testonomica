@@ -1,12 +1,48 @@
-// var requestOptions = {
-//     crossDomain: true,
-//     isSameSite: 'None',
-//     secure: true,
-//     xhrFields: {
-//         withCredentials: true
-//     }
-// };
 import $ from "jquery";
+
+class TestContext {
+    constructor(count, progress, showAnswer, textOnRight, textOnWrong) {
+        this.answers = [];
+        this.count = count;
+        this.progress = progress;
+        this.showAnswer = showAnswer;
+        this.textOnRight = textOnRight;
+        this.textOnWrong = textOnWrong;
+    }
+
+    addAnswer(value) {
+        this.answers.push(value);
+    }
+
+    setAnswer(value) {
+        this.clearAnswers();
+        this.answers.push(value);
+    }
+
+    getAllAnswers() {
+        return this.answers;
+    }
+
+    getAnswer(i) {
+        return this.answers[i];
+    }
+
+    getAnswerKey(value) {
+        return this.answers.indexOf(value);
+    }
+
+    removeAnswer(i) {
+        this.answers.splice(i, 1);
+    }
+
+    clearAnswers() {
+        this.answers = [];
+    }
+}
+
+window.TestContext = TestContext;
+
+window.question = null;
 
 window.testonomica = (function () {
     return {
@@ -94,12 +130,12 @@ $(function () {
 
     const questionFormSerialize = function () {
         let formData = BODY.find(QUESTION_FORM_SELECTOR).serialize().replace(/&answer=(.*[^&])?/g, "");
-        let i;
-        for (i = 0; i < answers.length; i++) {
-            formData += "&answer=" + answers[i];
-        }
-        if (i === 0) {
-            formData += "&answer=";
+        if (question.getAllAnswers().length > 0) {
+            question.getAllAnswers().forEach(function (answer) {
+                formData += "&answer[]=" + answer;
+            });
+        } else {
+            formData += "&answer= ";
         }
         return formData;
     };
@@ -109,7 +145,7 @@ $(function () {
     };
 
     const onChangeRatingHandler = function (input) {
-        answers.push($(input).val());
+        question.addAnswer($(input).val());
         const left = $(input).parents(TEST_OPTIONS_HOLDER_SELECTOR).find(TEST_OPTION_SELECTOR).length;
         const optionBlock = $(input).parent(TEST_OPTION_SELECTOR);
         optionBlock.fadeOut(200).promise().done(function () {
@@ -125,17 +161,17 @@ $(function () {
     };
 
     const onChangeCheckBoxHandler = function (input) {
-        const index = answers.indexOf($(input).val());
+        const index = question.getAnswerKey($(input).val());
         enableNextBtn();
         if (index > -1) {
             $(input).prop("checked", false);
-            answers.splice(index, 1);
+            question.removeAnswer(index);
         } else {
             $(input).attr('checked', 'checked');
-            answers.push($(input).val());
+            question.addAnswer($(input).val());
         }
         const inputs = $(QUESTION_FORM_SELECTOR).find("input[type=\"checkbox\"]");
-        if (answers.length >= parseInt($(input).data("limit"))) {
+        if (question.getAllAnswers().length >= parseInt($(input).data("limit"))) {
             const checkedInputs = inputs.not(":checked");
             checkedInputs.attr("disabled", "disabled");
             checkedInputs.parent().addClass("disabled");
@@ -146,8 +182,8 @@ $(function () {
     };
 
     const onChangeRadioHandler = function (e, input) {
-        answers = [$(input).val()];
-        if (showAnswer) {
+        question.setAnswer($(input).val());
+        if (question.showAnswer) {
             enableNextBtn();
             $(".test__option").each(function (i, o) {
                 const _input = $(o).children("input");
@@ -155,13 +191,13 @@ $(function () {
                     $(o).addClass("test__option_chosen");
                     if ($(input).data("is-correct") === true) {
                         $(o).addClass("test__option_correct");
-                        if (textOnRight != null) {
-                            $(o).find(".test__option-reveal").html(textOnRight).show();
+                        if (question.textOnRight != null) {
+                            $(o).find(".test__option-reveal").html(question.textOnRight).show();
                         }
                     } else {
                         $(o).addClass("test__option_wrong");
-                        if (textOnWrong != null) {
-                            $(o).find(".test__option-reveal").html(textOnWrong).show();
+                        if (question.textOnWrong != null) {
+                            $(o).find(".test__option-reveal").html(question.textOnWrong).show();
                         }
                     }
                 } else if (_input.data("is-correct") === true) {
@@ -177,10 +213,10 @@ $(function () {
     };
 
     const onChangeTextHandler = function () {
-        answers = [];
+        question.clearAnswers();
         const _inputs = $(QUESTION_FORM_SELECTOR + " input[name=\"answer\"]");
         _inputs.each(function (i, o) {
-            answers.push($(o).val());
+            question.addAnswer($(o).val());
         });
     };
 

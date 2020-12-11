@@ -10,9 +10,6 @@ use App\Entity\Test;
  */
 interface SourceRepositoryInterface
 {
-//    function parse();
-//    function getQuestion(Test $test, $operationName);
-
     function getQuestion(Test $test, $id);
 
     function getNextQuestion(Test $test, $itemId);
@@ -20,6 +17,8 @@ interface SourceRepositoryInterface
     function getPrevQuestion(Test $test, $itemId);
 
     function getFirstQuestion(Test $test);
+
+    function getAllQuestions(Test $test): array;
 
     function getTotalCount(Test $test);
 

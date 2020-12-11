@@ -13,12 +13,13 @@
         }
     </style>
     <script>
-        let count = {{ count }};
-        let progress = {{ progress }};
-        let answers = [];
-        let showAnswer = {{ question.showAnswer ? 'true' : 'false' }};
-        let textOnRight = {{ question.right ? ("'#{question.right}'"|raw) : 'null' }};
-        let textOnWrong = {{ question.wrong ? ("'#{question.wrong}'"|raw) : 'null' }};
+        window.question = new window.TestContext({{ count }}, {{ progress }}, {{ question.showAnswer ? 'true' : 'false' }}, {{ question.right ? ("'#{question.right}'"|raw) : 'null' }}, {{ question.wrong ? ("'#{question.wrong}'"|raw) : 'null' }});
+        {#let count = {{ count }};#}
+        {#let progress = {{ progress }};#}
+        {#let answers = [];#}
+        {#let showAnswer = {{ question.showAnswer ? 'true' : 'false' }};#}
+        {#let textOnRight = {{ question.right ? ("'#{question.right}'"|raw) : 'null' }};#}
+        {#let textOnWrong = {{ question.wrong ? ("'#{question.wrong}'"|raw) : 'null' }};#}
     </script>
     <form method="post" class="test__question-form">
         <input type="hidden" name="test" value="{{ test.id }}"/>
@@ -44,7 +45,7 @@
                     {% endif %}
                     <div class="test__name">{{ progress }}. {{ question.name }}</div>
                     {% if question.text %}
-                        <div class="test__text">{{ question.text }}</div>
+                        <div class="test__text">{{ question.text|raw }}</div>
                     {% endif %}
                     <div class="test__options_holder">
                         {% if question.method == 'OPTION' %}
@@ -53,7 +54,7 @@
                                     <input type="radio" name="answer" value="{{ option.value }}"
                                            id="answer-{{ loop.index }}" class="radio"
                                            data-is-correct="{{ option.correct }}">
-                                    <label for="answer-{{ loop.index }}">{{ option.text }}</label>
+                                    <label for="answer-{{ loop.index }}">{{ option.text|raw }}</label>
                                     <div class="test__option-reveal"></div>
                                 </div>
                             {% endfor %}
@@ -72,7 +73,7 @@
                                     <input type="checkbox" name="answer" value="{{ option.value }}"
                                            id="answer-{{ loop.index }}" data-method="CHECKBOX"
                                            data-limit="{{ question.count }}" class="checkbox">
-                                    <label for="answer-{{ loop.index }}">{{ option.text }}</label>
+                                    <label for="answer-{{ loop.index }}">{{ option.text|raw }}</label>
                                 </div>
                             {% endfor %}
                         {% elseif question.method == 'RATING' %}
@@ -80,7 +81,7 @@
                                 <div class="test__option">
                                     <input type="radio" name="answer" value="{{ option.value }}"
                                            id="answer-{{ loop.index }}" data-method="RATING" class="radio">
-                                    <label for="answer-{{ loop.index }}">{{ option.text }}</label>
+                                    <label for="answer-{{ loop.index }}">{{ option.text|raw }}</label>
                                 </div>
                             {% endfor %}
                         {% endif %}

@@ -12,6 +12,8 @@ use App\Entity\Test;
 use App\Test\AnswersHolder;
 use App\Test\AnswersSerializer;
 use App\Test\CalculatorInterface;
+use App\Test\QuestionsHolder;
+use App\Test\SourceRepositoryInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
 
 class CalculatorService
@@ -22,11 +24,18 @@ class CalculatorService
     /**@var KernelInterface */
     private $kernel;
 
+    /**@var SourceRepositoryInterface */
+    private $sourceRepository;
+
     const CALCULATORS_NAMESPACE = '\App\Test\Calculator\\';
 
-    public function __construct(AnswersSerializer $serializer, KernelInterface $kernel)
+    public function __construct(
+        AnswersSerializer $serializer,
+        SourceRepositoryInterface $sourceRepository,
+        KernelInterface $kernel)
     {
         $this->serializer = $serializer;
+        $this->sourceRepository = $sourceRepository;
         $this->kernel = $kernel;
     }
 
@@ -37,8 +46,9 @@ class CalculatorService
 
     public function calculateJson(Test $test, string $data): array
     {
-        $answersHolder = new AnswersHolder($this->serializer->deserialize($data));
-        return ($this->getCalculator($test))->calculate($answersHolder);
+        return ($this->getCalculator($test))->calculate(
+            new AnswersHolder($this->serializer->deserialize($data)),
+            new QuestionsHolder($this->sourceRepository->getAllQuestions($test)));
     }
 
     private function getCalculator(Test $test): CalculatorInterface

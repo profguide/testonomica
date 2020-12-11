@@ -13,10 +13,12 @@ class TestFixture extends Fixture implements DependentFixtureInterface
     const TEST_1 = 'test_1';
     const TEST_2 = 'test_2';
     const TEST_3 = 'test_3';
+    const TEST_4 = 'test_3';
 
     const TEST_1_SLUG = 'test_1';
     const TEST_2_SLUG = 'test_2';
     const TEST_3_SLUG = 'test_3';
+    const TEST_4_SLUG = 'test_4';
 
     public function load(ObjectManager $manager)
     {
@@ -64,7 +66,7 @@ class TestFixture extends Fixture implements DependentFixtureInterface
         $test->setCatalog($category);
         $test->setName('Тест на профориентацию для взрослых');
         $test->setNameEn('Proforientation test adult');
-        $test->setSlug(self::TEST_2_SLUG);
+        $test->setSlug(self::TEST_3_SLUG);
         $test->setDescription('Some description');
         $test->setAnnotation('Some annotation');
         $test->setActive(1);
@@ -75,7 +77,24 @@ class TestFixture extends Fixture implements DependentFixtureInterface
         $manager->persist($test);
         $manager->flush();
 
-        $this->addReference(self::TEST_3, $test);
+        /**@var Category $category */
+        $category = $this->getReference(CategoryFixture::CATEGORY_PSYCHOLOGICAL_REFERENCE);
+        $test = new Test();
+        $test->setCatalog($category);
+        $test->setName('Личность и структура интеллекта');
+        $test->setNameEn('Personality and structure of intelligence');
+        $test->setSlug(self::TEST_4_SLUG);
+        $test->setDescription('Some description');
+        $test->setAnnotation('Some annotation');
+        $test->setActive(1);
+        $test->setActiveEn(1);
+        $test->setDuration(45);
+        $test->setXmlFilename('personIntel'); // << %kernel.project_dir%/xml/test.xml
+        $test->setCalculatorName('personIntel'); // \App\Test\Calculator\PersonIntelCalculator
+        $manager->persist($test);
+        $manager->flush();
+
+        $this->addReference(self::TEST_4, $test);
     }
 
     public function getDependencies()

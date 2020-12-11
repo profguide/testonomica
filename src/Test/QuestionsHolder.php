@@ -37,4 +37,9 @@ class QuestionsHolder
         $groups = $this->byGroups();
         return $groups[$name];
     }
+
+    public function get(string $id)
+    {
+        return $this->questions[$id];
+    }
 }

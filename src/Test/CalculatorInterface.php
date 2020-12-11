@@ -9,5 +9,5 @@ namespace App\Test;
 
 interface CalculatorInterface
 {
-    function calculate(AnswersHolder $answersHolder): array;
+    function calculate(AnswersHolder $answersHolder, QuestionsHolder $questionsHolder): array;
 }

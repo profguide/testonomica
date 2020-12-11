@@ -1,0 +1,1475 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz version="1.0">
+    <items>
+        <!-- Тест Туника на инициатора/креатора (воображение, любознательность) -->
+        <item id="1" group="creator">
+            <name>Лучше я буду делать всё привычным мне способом, чем искать новые способы.</name>
+            <options>
+                <option value="3">Верно</option>
+                <option value="2">Отчасти верно</option>
+                <option value="0">Нет</option>
+                <option value="1">Не знаю</option>
+            </options>
+        </item>
+        <item id="2" group="creator">
+            <name>Мне нравится обсуждать мои идеи с друзьями</name>
+            <options>
+                <option value="3">Верно</option>
+                <option value="2">Отчасти верно</option>
+                <option value="0">Нет</option>
+                <option value="1">Не знаю</option>
+            </options>
+        </item>
+        <item id="3" group="creator">
+            <name>Я выбираю друзей, которые всегда делают все привычным способом.</name>
+            <options>
+                <option value="3">Верно</option>
+                <option value="2">Отчасти верно</option>
+                <option value="0">Нет</option>
+                <option value="1">Не знаю</option>
+            </options>
+        </item>
+        <item id="4" group="creator">
+            <name>Мне нравится решать даже такую проблему, которая не имеет правильного ответа.</name>
+            <options>
+                <option value="3">Верно</option>
+                <option value="2">Отчасти верно</option>
+                <option value="0">Нет</option>
+                <option value="1">Не знаю</option>
+            </options>
+        </item>
+        <item id="5" group="creator">
+            <name>Существуют вещи, с которыми мне хотелось бы поэкспериментировать.</name>
+            <options>
+                <option value="3">Верно</option>
+                <option value="2">Отчасти верно</option>
+                <option value="0">Нет</option>
+                <option value="1">Не знаю</option>
+            </options>
+        </item>
+        <item id="6" group="creator">
+            <name>Если я однажды нашел ответ на вопрос, я буду придерживаться его, а не искать другие ответы.</name>
+            <options>
+                <option value="3">Верно</option>
+                <option value="2">Отчасти верно</option>
+                <option value="0">Нет</option>
+                <option value="1">Не знаю</option>
+            </options>
+        </item>
+        <item id="7" group="creator">
+            <name>Я люблю размышлять на темы "А что если..."?</name>
+            <options>
+                <option value="3">Верно</option>
+                <option value="2">Отчасти верно</option>
+                <option value="0">Нет</option>
+                <option value="1">Не знаю</option>
+            </options>
+        </item>
+        <item id="8" group="creator">
+            <name>Я люблю выдумывать что-то новое, даже если это невозможно применить на практике.</name>
+            <options>
+                <option value="3">Верно</option>
+                <option value="2">Отчасти верно</option>
+                <option value="0">Нет</option>
+                <option value="1">Не знаю</option>
+            </options>
+        </item>
+        <item id="9" group="creator">
+            <name>Я люблю браться за новое, чтобы посмотреть, что из этого выйдет.</name>
+            <options>
+                <option value="3">Верно</option>
+                <option value="2">Отчасти верно</option>
+                <option value="0">Нет</option>
+                <option value="1">Не знаю</option>
+            </options>
+        </item>
+        <item id="10" group="creator">
+            <name>Мне нравится размышлять о чем-то интересном, о том, что еще никому не приходило в голову.</name>
+            <options>
+                <option value="3">Верно</option>
+                <option value="2">Отчасти верно</option>
+                <option value="0">Нет</option>
+                <option value="1">Не знаю</option>
+            </options>
+        </item>
+        <item id="11" group="creator">
+            <name>Когда я вижу картину, на которой изображен кто-либо незнакомый мне, мне интересно узнать, кто это.
+            </name>
+            <options>
+                <option value="3">Верно</option>
+                <option value="2">Отчасти верно</option>
+                <option value="0">Нет</option>
+                <option value="1">Не знаю</option>
+            </options>
+        </item>
+        <item id="12" group="creator">
+            <name>Я люблю задавать вопросы о таких вещах, о которых другие люди не задумываются.</name>
+            <options>
+                <option value="3">Верно</option>
+                <option value="2">Отчасти верно</option>
+                <option value="0">Нет</option>
+                <option value="1">Не знаю</option>
+            </options>
+        </item>
+        <!-- Руководитель (тест кто вы лидер или исполнитель) -->
+        <item id="50" group="leader">
+            <name>Мне нужен пинок или похвала, чтобы хорошо учиться или работать.</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="51" group="leader">
+            <name>Нужно организовать дежурство в школе. Охотно ли ты возьмёшься за эту задачу?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="52" group="leader">
+            <name>Если в коллективе обсуждают сложную проблему, интересуются ли твоим мнением?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="53" group="leader">
+            <name>Если ты чувствуешь свою правоту, то твердо ли ты отстаиваешь своё мнение, даже если большинство думает
+                иначе?
+            </name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="54" group="leader">
+            <name>Во мне буйствует ревность, когда кому-то другому поручили ответственное дело.</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="55" group="leader">
+            <name>Если у тебя появилась здравая идея, ты будешь настаивать на том, чтобы она была реализована.</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="56" group="leader">
+            <name>Начинаешь ли ты беспокоиться и прикладывать усилия, когда ситуация становится стабильной?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="57" group="leader">
+            <name>Есть ли у тебя опыт управления командой в школе (ты был старостой, капитаном команды, ставил спектакли
+                и тд)?
+            </name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="58" group="leader">
+            <name>Ты часто анализируешь результаты своего труда, свои достижения, предъявляешь к себе требования.</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="59" group="leader">
+            <name>Я готов отвечать не только за себя, но и за вверенных мне людей?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="60" group="leader">
+            <name>Моя тревога за ответственное дело чаще всего бывает так велика, что лучше от этого дела отказаться.
+            </name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="61" group="leader">
+            <name>Я уступчивый и склонный к компромиссу человек.</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="62" group="leader">
+            <name>Если на меня оказывают сильное давление, то я уступаю, даже если этот вопрос важен для меня.</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <!--Тест Айзенка на интроверсию/экстраверсию (коммуникативность, в команде) -->
+        <item id="100" group="communicator">
+            <name>Предпочитаете ли вы чтение книг встречам с людьми?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="101" group="communicator">
+            <name>Любите ли вы часто бывать в компании?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="102" group="communicator">
+            <name>Стараетесь ли вы ограничить круг своих знакомств небольшим числом самых близких людей?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="103" group="communicator">
+            <name>Как вы думаете, считают ли вас человеком весёлым и живым?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="104" group="communicator">
+            <name>Чувствуете ли вы себя неуютно, находясь в большой компании?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="105" group="communicator">
+            <name>Вы бы предпочли найти ответ в книге, чем спросить у друзей?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="106" group="communicator">
+            <name>Нравится ли вам работа, требующая уединения?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="107" group="communicator">
+            <name>Бывает ли вам неприятно находиться в компании, где все подшучивают друг над другом?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="108" group="communicator">
+            <name>Верно ли, что вы так любите общение, что не упускаете любого удобного случая побеседовать с новым
+                человеком?
+            </name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="109" group="communicator">
+            <name>Огорчились бы вы, если бы не смогли долго видеться с друзьями?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="110" group="communicator">
+            <name>Трудно ли вам получить настоящее удовольствие от мероприятий, в которых участвует много людей?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="111" group="communicator">
+            <name>Сумели бы вы внести оживление в скучную компанию?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="112" group="communicator">
+            <name>Любите ли вы подшутить над другими?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="113" group="communicator">
+            <name>Нравится ли вам заводить новых друзей?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <!-- Уровень притязаний (Гербачевский) -->
+        <!-- Оценка своего потенциала -->
+        <item id="151" group="pretension-potential">
+            <name>Я чувствую себя сильным человеком.</name>
+            <options>
+                <option value="0">Нет</option>
+                <option value="1">Скорее нет</option>
+                <option value="2">Не уверен</option>
+                <option value="3">Скорее да</option>
+                <option value="4">Да</option>
+            </options>
+        </item>
+        <item id="152" group="pretension-potential">
+            <name>Я чувствую, что могу преодолеть все трудности на пути к цели.</name>
+            <options>
+                <option value="0">Нет</option>
+                <option value="1">Скорее нет</option>
+                <option value="2">Не уверен</option>
+                <option value="3">Скорее да</option>
+                <option value="4">Да</option>
+            </options>
+        </item>
+        <item id="153" group="pretension-potential">
+            <name>Когда я берусь за дело, обычно я чувствую, что у меня ничего не выйдет.</name>
+            <options>
+                <option value="4">Нет</option>
+                <option value="3">Скорее нет</option>
+                <option value="2">Не уверен</option>
+                <option value="1">Скорее да</option>
+                <option value="0">Да</option>
+            </options>
+        </item>
+        <!-- Мотив избегания -->
+        <item id="154" group="pretension-avoid">
+            <name>В школе я не стремлюсь стать отличником, я стремлюсь не стать троечником.</name>
+            <options>
+                <option value="0">Нет</option>
+                <option value="1">Скорее нет</option>
+                <option value="2">Не уверен</option>
+                <option value="3">Скорее да</option>
+                <option value="4">Да</option>
+            </options>
+        </item>
+        <item id="155" group="pretension-avoid">
+            <name>Обычно я не стремлюсь к победе, я стремлюсь к избеганию неудач.</name>
+            <options>
+                <option value="0">Нет</option>
+                <option value="1">Скорее нет</option>
+                <option value="2">Не уверен</option>
+                <option value="3">Скорее да</option>
+                <option value="4">Да</option>
+            </options>
+        </item>
+        <!-- Состязательный мотив -->
+        <item id="156" group="pretension-competition">
+            <name>Меня интересует, лучше или хуже меня сдали экзамены, выполнили задания мои одноклассники (коллеги).
+            </name>
+            <options>
+                <option value="0">Нет</option>
+                <option value="1">Скорее нет</option>
+                <option value="2">Не уверен</option>
+                <option value="3">Скорее да</option>
+                <option value="4">Да</option>
+            </options>
+        </item>
+        <item id="157" group="pretension-competition">
+            <name>Как правило, я стремлюсь к тому, чтобы мои результаты были лучше результатов одноклассников
+                (коллег).
+            </name>
+            <options>
+                <option value="0">Нет</option>
+                <option value="1">Скорее нет</option>
+                <option value="2">Не уверен</option>
+                <option value="3">Скорее да</option>
+                <option value="4">Да</option>
+            </options>
+        </item>
+        <!-- Инициативность -->
+        <item id="158" group="pretension-initiative">
+            <name>Я сам ставлю себе цели.</name>
+            <options>
+                <option value="0">Нет</option>
+                <option value="1">Скорее нет</option>
+                <option value="2">Не уверен</option>
+                <option value="3">Скорее да</option>
+                <option value="4">Да</option>
+            </options>
+        </item>
+        <item id="159" group="pretension-initiative">
+            <name>Я не люблю, когда мне цели навязывают.</name>
+            <options>
+                <option value="0">Нет</option>
+                <option value="1">Скорее нет</option>
+                <option value="2">Не уверен</option>
+                <option value="3">Скорее да</option>
+                <option value="4">Да</option>
+            </options>
+        </item>
+        <!-- Ожидаемый уровень результатов -->
+        <item id="160" group="pretension-expect">
+            <name>Если мне нравится какое-то дело, то я уверен, что у меня всё получится.</name>
+            <options>
+                <option value="0">Нет</option>
+                <option value="1">Скорее нет</option>
+                <option value="2">Не уверен</option>
+                <option value="3">Скорее да</option>
+                <option value="4">Да</option>
+            </options>
+        </item>
+        <item id="161" group="pretension-expect">
+            <name>Если я увлекаюсь каким-то занятием, то я уверен, что смогу добиться только средних результатов.</name>
+            <options>
+                <option value="4">Нет</option>
+                <option value="3">Скорее нет</option>
+                <option value="2">Не уверен</option>
+                <option value="1">Скорее да</option>
+                <option value="0">Да</option>
+            </options>
+        </item>
+        <!-- Волевое усилие -->
+        <item id="162" group="pretension-effort">
+            <name>Обычно я прикладываю все свои силы, если для меня задание важно.</name>
+            <options>
+                <option value="0">Нет</option>
+                <option value="1">Скорее нет</option>
+                <option value="2">Не уверен</option>
+                <option value="3">Скорее да</option>
+                <option value="4">Да</option>
+            </options>
+        </item>
+        <item id="163" group="pretension-effort">
+            <name>Если я понимаю зачем я это делаю, то я очень стараюсь.</name>
+            <options>
+                <option value="0">Нет</option>
+                <option value="1">Скорее нет</option>
+                <option value="2">Не уверен</option>
+                <option value="3">Скорее да</option>
+                <option value="4">Да</option>
+            </options>
+        </item>
+        <item id="164" group="pretension-effort">
+            <name>Даже когда задача важная, я работаю вполсилы</name>
+            <options>
+                <option value="0">Нет</option>
+                <option value="1">Скорее нет</option>
+                <option value="2">Не уверен</option>
+                <option value="3">Скорее да</option>
+                <option value="4">Да</option>
+            </options>
+        </item>
+        <!-- Темперамент Белова -->
+        <!-- Флегматик -->
+        <item id="201" group="temp-fleg">
+            <name>Вы молчаливы и не любите попусту болтать</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="202" group="temp-fleg">
+            <name>Вы легко сдерживаете свои порывы</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="203" group="temp-fleg">
+            <name>Вы последовательны, обстоятельны в делах</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="204" group="temp-fleg">
+            <name>Вы любите аккуратность во всем, порядок во всем</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="205" group="temp-fleg">
+            <name>Вы с трудом приспосабливаетесь к новой обстановке</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="206" group="temp-fleg">
+            <name>Вы инертны, малоподвижны, вялы</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <!-- Меланхолик-->
+        <item id="207" group="temp-mel">
+            <name>Вы не верите в свои силы</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="208" group="temp-mel">
+            <name>Вы стеснительны, застенчивы</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="209" group="temp-mel">
+            <name>Вы впечатлительны до слезливости</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="210" group="temp-mel">
+            <name>Вы склонны к подозрительности, мнительности</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="211" group="temp-mel">
+            <name>Вы чрезвычайно восприимчивы к одобрению и порицанию</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="212" group="temp-mel">
+            <name>Вы малоактивны и робки</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <!-- Холерик -->
+        <item id="213" group="temp-hol">
+            <name>Вы невыдержанны, вспыльчивы</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="214" group="temp-hol">
+            <name>Вы обладаете быстрой, страстной, сбивчивой речью</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="215" group="temp-hol">
+            <name>Обычно ваши движения резкие, порывистые</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="216" group="temp-hol">
+            <name>Вы решительны и инициативны</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="217" group="temp-hol">
+            <name>Вы резки и прямолинейны в отношениях с людьми</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="218" group="temp-hol">
+            <name>Вы склонны к риску</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <!-- Сангвиник -->
+        <item id="219" group="temp-san">
+            <name>Вы энергичны и деловиты</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="220" group="temp-san">
+            <name>Вы выносливы и работоспособны</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="221" group="temp-san">
+            <name>Вы сохраняете самообладание в неожиданной, сложной обстановке</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="222" group="temp-san">
+            <name>Вы легко переживаете неудачи и неприятности</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="223" group="temp-san">
+            <name>Вы веселы и жизнерадостны</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="224" group="temp-san">
+            <name>Вы общительны и отзывчивы, не чувствуете скованности с новыми для вас людьми</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <!-- Уверенность в себе, социальная смелость (Давыдова ЭХ, Давыдов АЮ) -->
+        <item id="250" group="confidence">
+            <name>Вам всегда страшно выступать на собрании</name>
+            <options>
+                <option value="1">Нет</option>
+                <option value="0">Да</option>
+            </options>
+        </item>
+        <item id="251" group="confidence">
+            <name>Вы легко можете позвонить в незнакомое вам место и задать вопрос</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="252" group="confidence">
+            <name>Вам сложно торговаться, если это нужно</name>
+            <options>
+                <option value="1">Нет</option>
+                <option value="0">Да</option>
+            </options>
+        </item>
+        <item id="253" group="confidence">
+            <name>Вы уверены, что можете сдать экзамены, если хорошо подготовитесь</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="254" group="confidence">
+            <name>Вы легко говорите "нет" людям, если вы не согласны что-то делать</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <!-- Эмпатия (сочувствие) Белов-->
+        <item id="300" group="empathy">
+            <name>Вы легко можете войти в доверие к человеку, если потребуется</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="301" group="empathy">
+            <name>Часто своими словами вы обижаете близких вам людей, не замечая этого</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="1">Нет</option>
+            </options>
+        </item>
+        <item id="302" group="empathy">
+            <name>Иногда близкие упрекают вас в чёрствости, в невнимании к ним</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="1">Нет</option>
+            </options>
+        </item>
+        <item id="303" group="empathy">
+            <name>Вам было бы трудно задушевно доверительно беседовать с замкнутым человеком</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="1">Нет</option>
+            </options>
+        </item>
+        <item id="304" group="empathy">
+            <name>Если окружающие проявляют признаки нервозности, вы обычно остаётесь спокойны</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="1">Нет</option>
+            </options>
+        </item>
+        <item id="305" group="empathy">
+            <name>Вы теряете душевное равновесие, если окружающие чем-то угнетены</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="306" group="empathy">
+            <name>Вы редко принимаете близко к сердцу проблемы ваших друзей</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="1">Нет</option>
+            </options>
+        </item>
+        <item id="307" group="empathy">
+            <name>Чужой смех обычно заражает вас</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="308" group="empathy">
+            <name>Вы расстраиваитесь, если видете плачущего человека</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="309" group="empathy">
+            <name>Вы больше верите доводам своего рассудка, чем интуиции</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="310" group="empathy">
+            <name>Часто, действуя наугад, вы тем не менее находите правильный подход к человеку</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="311" group="empathy">
+            <name>Вам проще подсознательно почувствовать суть человека, чем понять его, разложив его по полочкам</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="312" group="empathy">
+            <name>Обычно вы понимаете людей без лишних слов</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+
+        <!-- Система ценностей -->
+        <item id="350" group="system_values" method="RATING">
+            <name>Выберите в порядке значимости ценности, связанные с работой. Сначала самые значимые для Вас.</name>
+            <options>
+                <option value="salary">Высокая зарплата</option>
+                <option value="big-company">Работа в крупной компании</option>
+                <option value="prestige">Престижность</option>
+                <option value="travel">Ездить по всему миру</option>
+                <option value="promotion">Профессиональный рост, развитие</option>
+                <option value="self-employ">Работать на себя</option>
+                <option value="people">Работать с людьми</option>
+                <option value="work-alone">Работать в уединении</option>
+                <option value="gov">Госслужба</option>
+                <option value="benefit">Приносить пользу</option>
+                <option value="art">Творчество</option>
+                <option value="indoor">Работа в помещении</option>
+                <option value="outdoor">Работа на природе, на улице</option>
+                <option value="difference">Разнообразие действий</option>
+                <option value="publicity">Публичность</option>
+                <option value="safe">Безопасность</option>
+                <option value="result">Когда у работы есть результат</option>
+                <option value="intel">Интеллектуальный труд</option>
+                <option value="hands">Ручной труд, физическая активность</option>
+                <option value="free-time">Много свободного времени</option>
+                <option value="high-society">Добиться высокого положения в обществе</option>
+                <option value="light-work">Чистая и лёгкая работа</option>
+            </options>
+        </item>
+
+        <!-- Предприниматель ли ты-->
+        <!-- Тест Грецов и Азбель (свое дело или работа), взято кое-что -->
+        <item id="400" group="business-freedom">
+            <name>Я хочу иметь свое собственное дело, а не работать на кого-то.</name>
+            <options>
+                <option value="4">Согласен</option>
+                <option value="3">Скорее согласен</option>
+                <option value="2">Трудно сказать</option>
+                <option value="1">Скорее не согласен</option>
+                <option value="0">Не согласен</option>
+            </options>
+        </item>
+        <item id="401" group="business-stable">
+            <name>Для меня в работе социальные гарантии (выплата больничных, отпускных, будущая пенсия) важнее
+                свободного графика.
+            </name>
+            <options>
+                <option value="0">Согласен</option>
+                <option value="1">Скорее согласен</option>
+                <option value="2">Трудно сказать</option>
+                <option value="3">Скорее не согласен</option>
+                <option value="4">Не согласен</option>
+            </options>
+        </item>
+        <item id="402" group="business-responsibility">
+            <name>Мне комфортнее, когда у меня есть начальник, к которому можно обратиться, спросить совета, чем если бы
+                все зависело только от меня.
+            </name>
+            <options>
+                <option value="4">Согласен</option>
+                <option value="3">Скорее согласен</option>
+                <option value="2">Трудно сказать</option>
+                <option value="1">Скорее не согласен</option>
+                <option value="0">Не согласен</option>
+            </options>
+        </item>
+        <item id="403" group="business-stable">
+            <name>Пусть я даже не очень сильно продвинусь по карьерной лестнице, зато моя работа и зарплата будут
+                гарантированными.
+            </name>
+            <options>
+                <option value="0">Согласен</option>
+                <option value="1">Скорее согласен</option>
+                <option value="2">Трудно сказать</option>
+                <option value="3">Скорее не согласен</option>
+                <option value="4">Не согласен</option>
+            </options>
+        </item>
+        <item id="405" group="business-responsibility">
+            <name>Я был бы рад, чтобы именно я отвечал за благополучие всей компании: искал клиентов, платил бы налоги,
+                и организовывал работу сотрудников
+            </name>
+            <options>
+                <option value="4">Согласен</option>
+                <option value="3">Скорее согласен</option>
+                <option value="2">Трудно сказать</option>
+                <option value="1">Скорее не согласен</option>
+                <option value="0">Не согласен</option>
+            </options>
+        </item>
+        <item id="406" group="business-risk">
+            <name>Я готов рискнуть собственными средствами, вложив их в дело, даже если успех не гарантирован</name>
+            <options>
+                <option value="4">Согласен</option>
+                <option value="3">Скорее согласен</option>
+                <option value="2">Трудно сказать</option>
+                <option value="1">Скорее не согласен</option>
+                <option value="0">Не согласен</option>
+            </options>
+        </item>
+        <item id="407" group="business-responsibility">
+            <name>Я бы хотел, чтобы мои обязанности на работе были чётко обозначены начальством</name>
+            <options>
+                <option value="0">Согласен</option>
+                <option value="1">Скорее согласен</option>
+                <option value="2">Трудно сказать</option>
+                <option value="3">Скорее не согласен</option>
+                <option value="4">Не согласен</option>
+            </options>
+        </item>
+        <item id="408" group="business-risk">
+            <name>Не получать деньги, а зарабатывать их - это, по-моему, правильно</name>
+            <options>
+                <option value="4">Согласен</option>
+                <option value="3">Скорее согласен</option>
+                <option value="2">Трудно сказать</option>
+                <option value="1">Скорее не согласен</option>
+                <option value="0">Не согласен</option>
+            </options>
+        </item>
+        <item id="409" group="business-search">
+            <name>Для меня естественно все время думать о способах зарабатывания денег</name>
+            <options>
+                <option value="4">Согласен</option>
+                <option value="3">Скорее согласен</option>
+                <option value="2">Трудно сказать</option>
+                <option value="1">Скорее не согласен</option>
+                <option value="0">Не согласен</option>
+            </options>
+        </item>
+
+        <!-- Структура интеллекта (КОТ) -->
+        <item id="500" group="iq-verbal">
+            <name>Значение «заурядный» противоположно по смыслу:</name>
+            <options>
+                <option value="0">красивый</option>
+                <option value="0">престижный</option>
+                <option value="1" correct="true">выдающийся</option>
+                <option value="0">романтический</option>
+                <option value="0">богатый</option>
+            </options>
+        </item>
+        <item id="501" group="iq-verbal">
+            <name>Выберите наиболее изящное продолжение стихотворения:</name>
+            <text>
+                Я вижу школу из окна, по мне соскучилась она...
+            </text>
+            <options>
+                <option value="0">И я по ней давно скучал, но этого не замечал</option>
+                <option value="1" correct="true">И я по ней давно скучал, хотя и сам не замечал</option>
+                <option value="0">И я по ней уже скучал, скорей в неё попасть мечтал</option>
+            </options>
+        </item>
+        <item id="502" group="iq-logic">
+            <name>Какое слово лишнее?</name>
+            <options>
+                <option value="0">поэзия</option>
+                <option value="0">музыка</option>
+                <option value="0">живопись</option>
+                <option value="1" correct="true">искусствоведение</option>
+                <option value="0">кино</option>
+            </options>
+        </item>
+        <item id="503" group="iq-verbal">
+            <name>В каком предложении ошибка?</name>
+            <options>
+                <option value="0">Как бы ни было тяжело, а ты учись</option>
+                <option value="1" correct="true">Как бы не было тяжело, а ты учись</option>
+            </options>
+        </item>
+        <item id="504" group="iq-logic" method="CHECKBOX" count="2">
+            <name>Какие два слова определяют понятие «река» точнее всего:</name>
+            <options>
+                <option value="0" correct="true">берег</option>
+                <option value="1">рыба</option>
+                <option value="2">рыболов</option>
+                <option value="3" correct="true">вода</option>
+                <option value="4">ива</option>
+            </options>
+        </item>
+        <item id="505" group="iq-attention">
+            <name>Сколько раз буква «а» встречается в приведенном отрывке?</name>
+            <text>
+                <![CDATA[
+                    — Мне нравится эта птица... — сказал я. — Ты знаешь?
+                    Во время перелета коростель не летит, а по земле бежит.
+                    Перелетает только через реки и моря, а то всё пешком.
+                ]]>
+            </text>
+            <options>
+                <option value="0">7</option>
+                <option value="0">8</option>
+                <option value="0">9</option>
+                <option value="1" correct="true">10</option>
+                <option value="0">11</option>
+            </options>
+        </item>
+        <item id="506" group="iq-verbal">
+            <name>Найдите синоним слову «робкий»:</name>
+            <options>
+                <option value="0">испуганный</option>
+                <option value="0">жалкий</option>
+                <option value="1" correct="true">застенчивый</option>
+                <option value="0">стыдливый</option>
+                <option value="0">неопытный</option>
+            </options>
+        </item>
+        <item id="507" group="iq-math" method="TEXT">
+            <name>Один человек в 3 раза старше другого.
+                Если разность в их возрасте составляет 32 года, какова сумма их возрастов.
+            </name>
+            <fields>
+                <field type="number" placeholder="Введите число" correct="64"/> <!-- 64 -->
+            </fields>
+        </item>
+        <item id="508" group="iq-math" method="TEXT">
+            <name>Длина прямоугольника в 3 раза больше его удвоенной ширины.
+                Определи размеры прямоугольника, если его
+                периметр равен 168см.
+            </name>
+            <fields>
+                <field type="number" placeholder="Ширина" correct="12"/>
+                <field type="number" placeholder="Длина" correct="72"/>
+            </fields>
+        </item>
+        <item id="509" group="iq-attention">
+            <name>В каком ряду спрятано число 1071?</name>
+            <options>
+                <option value="0">120750938500385100175991271</option>
+                <option value="0">301780917047120184334072010</option>
+                <option value="1" correct="true">701256905930010717085673027</option>
+                <option value="0">107071956001763890194498910</option>
+            </options>
+        </item>
+        <item id="510" group="iq-verbal">
+            <name>«Дружеский» противоположно слову</name>
+            <options>
+                <option value="0">завистливый</option>
+                <option value="1" correct="true">враждебный</option>
+                <option value="0">приятельский</option>
+                <option value="0">братский</option>
+                <option value="0">хороший</option>
+            </options>
+        </item>
+        <item id="511" group="iq-math">
+            <name>20% от 200 это...</name>
+            <options>
+                <option value="0">20</option>
+                <option value="1" correct="true">40</option>
+                <option value="0">60</option>
+                <option value="0">80</option>
+            </options>
+        </item>
+        <item id="512" group="iq-verbal" method="TEXT">
+            <name>У этих слов одинаковое окончание. Найдите его и впишите в ответ.</name>
+            <text>за..., фла..., бал..., бе..., ко...</text>
+            <fields>
+                <field type="string" placeholder="Введите слог" correct="кон"/> <!-- кон -->
+            </fields>
+        </item>
+        <item id="513" group="iq-spatial">
+            <!-- todo заменить это на задачу 08.15 Математика для 5 класса -->
+            <name>Какой из приведенных ниже пяти рисунков наиболее отличен от других?</name>
+            <options>
+                <option value="0">
+                    <![CDATA[<img src="https://testonomica.com/static/img/4/g_2_4.svg" style="filter:invert(1);width:120px;height:70px;"/>]]></option>
+                <option value="0">
+                    <![CDATA[<img src="https://testonomica.com/static/img/4/g_3_3.svg" style="filter:invert(1);width:120px;height:70px;"/>]]></option>
+                <option value="0">
+                    <![CDATA[<img src="https://testonomica.com/static/img/4/g_2_1.svg" style="filter:invert(1);width:120px;height:70px;"/>]]></option>
+                <option value="1" correct="true">
+                    <![CDATA[<img src="https://testonomica.com/static/img/4/g_2_5.svg" style="filter:invert(1);width:100px;height:70px;"/>]]></option>
+                <option value="0">
+                    <![CDATA[<img src="https://testonomica.com/static/img/4/g_2_6.svg" style="filter:invert(1);width:120px;height:70px;"/>]]></option>
+            </options>
+        </item>
+        <item id="514" group="iq-math" method="TEXT">
+            <name>Два продавца продали 24 автомобиля.
+                Первый продал на 6 автомобилей больше, чем второй.
+                Сколько продал второй?
+            </name>
+            <fields>
+                <field type="number" placeholder="Введите число" correct="9"/> <!-- 9 -->
+            </fields>
+        </item>
+        <item id="515" group="iq-verbal" method="TEXT">
+            <name>Какое существительное подходит обоим прилагательным?</name>
+            <text>
+                <![CDATA[
+                    <ul>
+                        <li>царская</li>
+                        <li>больничная</li>
+                    </ul>
+                ]]>
+            </text>
+            <fields>
+                <field type="number" placeholder="Введите слово" correct="палата"/> <!-- палата -->
+            </fields>
+        </item>
+        <item id="516" group="iq-logic">
+            <name>Решите задачу</name>
+            <text>
+                В квартире живут 5 домашних животных: собаки и кошки.
+                Из всех животных только одно не является собакой. Сколько всего собак?
+            </text>
+            <options>
+                <option value="0">1</option>
+                <option value="0">2</option>
+                <option value="0">3</option>
+                <option value="1" correct="true">4</option>
+                <option value="0">5</option>
+            </options>
+        </item>
+        <item id="517" group="iq-logic" method="TEXT">
+            <name>Продолжите ряд чисел:</name>
+            <text>1 2 5 10 17 26 ... ...</text>
+            <fields>
+                <field type="number" placeholder="Введите число" correct="37"/> <!-- 37 -->
+                <field type="number" placeholder="Введите число" correct="50"/> <!-- 50 -->
+            </fields>
+        </item>
+        <item id="518" group="iq-logic">
+            <name>Сделайте вывод из двух утверждений:</name>
+            <text>
+                <![CDATA[
+                    <ul>
+                        <li>Ни один кит не дышит жабрами</li>
+                        <li>Все рыбы дышат жабрами</li>
+                    </ul>
+                ]]>
+            </text>
+            <options>
+                <option value="0">Всякая рыба - кит</option>
+                <option value="1" correct="1">Ни одна рыба не является китом</option>
+                <option value="0">Некоторые рыбы - киты</option>
+                <option value="0">Некоторые рыбы не являются китами</option>
+            </options>
+        </item>
+        <item id="519" group="iq-math" method="TEXT">
+            <name>Длина Петиного шага в среднем равна 60 см. Его отец делает шаги длиной в 80 см.
+                Какова разница в количестве их шагов на дистанции 2 километра и 400 метров?
+            </name>
+            <fields>
+                <field type="number" placeholder="Введите число" correct="1000"/> <!-- 1000 -->
+            </fields>
+        </item>
+        <item id="520" group="iq-logic">
+            <name>Бензобак Васиной машины был на 75% полон, когда Вася отправился на работу.
+                За весь день Вася использовал 40% имевшегося бензина. Какую часть бака Вася истратил (в процентах)?
+            </name>
+            <options>
+                <option value="0">10</option>
+                <option value="0">20</option>
+                <option value="1" correct="true">30</option>
+                <option value="0">40</option>
+                <option value="0">50</option>
+                <option value="0">60</option>
+                <option value="0">70</option>
+                <option value="0">80</option>
+                <option value="0">90</option>
+            </options>
+        </item>
+        <item id="521" group="iq-math" method="TEXT">
+            <name>Тыква весит два килограмма и еще столько, сколько весит полтыквы. Сколько весит тыква?
+            </name>
+            <fields>
+                <field type="number" placeholder="Введите число" correct="4"/> <!-- 4-->
+            </fields>
+        </item>
+        <item id="522" group="iq-spatial" method="TEXT">
+            <!-- todo Катя нарисует https://3.bp.blogspot.com/-FQgwzhaz_58/Vw9qDij_CKI/AAAAAAAAAZY/ap7Lvn6bXK4vClhhdWzBxQAbpFzP7_xbwCLcB/s1600/9_%25D0%25BB%25D0%25B8%25D1%2581%25D1%2582%2B%25D1%2581%25D0%25BB%25D0%25BE%25D0%25B6%25D0%25B8%25D0%25BB%25D0%25B8%2B%25D0%25B8%2B%25D0%25BE%25D1%2582%25D1%2580%25D0%25B5%25D0%25B7%25D0%25B0%25D0%25BB%25D0%25B8%2B%25D1%2583%25D0%25B3%25D0%25BE%25D0%25BB%25D0%25BE%25D0%25BA-02.jpg-->
+            <name>Разделите эту геометрическую фигуру прямой линией на две части так, чтобы, переместив одну из их в
+                другое место, можно было получить квадрат. В качестве ответа введите номера двух соединяемых точек.
+            </name>
+            <img>https://testonomica.com/static/img/4/g_1_1.svg</img>
+            <fields>
+                <field type="number" placeholder="Введите число" correct="2"/> <!-- 2 -->
+                <field type="number" placeholder="Введите число" correct="13"/> <!-- 13 -->
+            </fields>
+        </item>
+        <item id="523" group="iq-logic">
+            <name>Сделайте вывод из этих двух утверждений.</name>
+            <text>
+                <![CDATA[
+                    <ul>
+                        <li>Все ученики изучают математику в школе.</li>
+                        <li>Некоторые из учеников знают математику очень хорошо.</li>
+                    </ul>
+                ]]>
+            </text>
+            <options>
+                <option value="0">Все ученики знают математику очень хорошо.</option>
+                <option value="0">Те ученики, кто знает математику очень хорошо, учат её только в школе.</option>
+                <option value="1" correct="true">Не все ученики знают математику очень хорошо.</option>
+                <option value="0">Те, кто знает математику очень хорошо, не способнее тех, кто знает её хуже.
+                </option>
+            </options>
+        </item>
+        <item id="524" group="iq-math" method="TEXT">
+            <name>Маша прошла 200 метров за 3,5 минуты.
+                Сколько минут ей понадобится для того, чтобы с той же скоростью пройти 4 километра?
+            </name>
+            <fields>
+                <field type="number" placeholder="Введите число" correct="70"/> <!-- 70 -->
+            </fields>
+        </item>
+        <item id="525" group="iq-spatial" method="CHECKBOX" count="3">
+            <!-- todo заменить это этим: https://chudo-udo.info/razvivaem-logiku/881-najdi-figuru-po-proektsii
+                https://chudo-udo.info/media/k2/items/cache/893c4fdc824f051f07606f44d5d60e5a_XL.jpg-->
+            <name>Три из пяти фигур нужно соединить таким образом, чтобы получилась равнобедренная трапеция</name>
+            <options>
+                <option value="1" correct="true">
+                    <![CDATA[<img src="https://testonomica.com/static/img/4/g_4_1.svg" style="filter:invert(1);width:120px;height:70px;"/>]]></option>
+                <option value="2" correct="true">
+                    <![CDATA[<img src="https://testonomica.com/static/img/4/g_4_2.svg" style="filter:invert(1);width:120px;height:70px;"/>]]></option>
+                <option value="3">
+                    <![CDATA[<img src="https://testonomica.com/static/img/4/g_4_3.svg" style="filter:invert(1);width:60px;height:40px;"/>]]></option>
+                <option value="4" correct="true">
+                    <![CDATA[<img src="https://testonomica.com/static/img/4/g_4_4.svg" style="filter:invert(1);width:90px;height:70px;"/>]]></option>
+                <option value="5">
+                    <![CDATA[<img src="https://testonomica.com/static/img/4/g_4_5.svg" style="filter:invert(1);width:90px;height:70px;"/>]]></option>
+            </options>
+        </item>
+        <item id="526" group="iq-math" method="TEXT">
+            <name>
+                Старик нашел в лесу грибы. Идет он домой и думает: вот если бы к моим грибам прибавить половину и еще
+                десяток,
+                то у меня была бы целая сотня грибов.
+                Сколько грибов он собрал?
+            </name>
+            <fields>
+                <field type="number" placeholder="Введите число" correct="60"/>
+            </fields>
+        </item>
+        <item id="527" group="iq-logic">
+            <name>Значения следующих двух предложений</name>
+            <text>
+                <![CDATA[
+                    <ul>
+                        <li>Повторенье - мать ученья.</li>
+                        <li>Ученье - свет, а неученье - тьма.</li>
+                    </ul>
+                ]]>
+            </text>
+            <options>
+                <option value="0">сходны</option>
+                <option value="0">противоположны</option>
+                <option value="1" correct="true">ни сходны, ни противоположны</option>
+            </options>
+        </item>
+        <item id="528" group="iq-verbal">
+            <name>Если переставить буквы в слове ИРМАНДАН, получится название:</name>
+            <options>
+                <option value="0">города</option>
+                <option value="0">цветка</option>
+                <option value="0">животного</option>
+                <option value="1" correct="true">фрукта</option>
+                <option value="0">страны</option>
+            </options>
+        </item>
+        <item id="529" group="iq-logic">
+            <name>Найдите лишнее</name>
+            <options>
+                <option value="0">весы</option>
+                <option value="0">часы</option>
+                <option value="1" correct="true">календарь</option>
+                <option value="0">компас</option>
+            </options>
+        </item>
+        <item id="530" group="iq-verbal">
+            <name>Выберите слово, наиболее близкое по значению слову «адекватный»:</name>
+            <options>
+                <option value="0">счастливый</option>
+                <option value="1" correct="true">соответствующий</option>
+                <option value="0">честный</option>
+                <option value="0">быстрый</option>
+                <option value="0">решительный</option>
+            </options>
+        </item>
+        <item id="531" group="iq-logic">
+            <name>Отец брата и брат отца это:</name>
+            <options>
+                <option value="0">один человек</option>
+                <option value="1" correct="true">два разных человека</option>
+                <option value="0">возможны оба варианта</option>
+            </options>
+        </item>
+        <item id="532" group="iq-math" method="TEXT">
+            <name>У кондитера есть план по выпечке пирогов. За два часа он выполниляет 8% от плана.
+                За сколько дней он сможет выполнить план, если рабочий день ограничен 5 часами?
+            </name>
+            <fields>
+                <field type="number" placeholder="Введите число" correct="5"/> <!-- 5 -->
+            </fields>
+        </item>
+        <item id="533" group="iq-math" method="TEXT">
+            <name>Два брата получили в наследство 117 соток земли в соотношении 4:5.
+                Сколько соток получит каждый брат?
+            </name>
+            <fields>
+                <field type="number" placeholder="Введите число" correct="52"/> <!-- 52 -->
+                <field type="number" placeholder="Введите число" correct="65"/> <!-- 65 -->
+            </fields>
+        </item>
+        <item id="534" group="iq-verbal" method="CHECKBOX" count="2">
+            <name>Какие два слова определяют понятие «неделя» точнее всего:</name>
+            <options>
+                <option value="1" correct="true">выходные</option>
+                <option value="2">понедельник</option>
+                <option value="3" correct="true">будни</option>
+                <option value="4">воскресенье</option>
+                <option value="5">праздник</option>
+            </options>
+        </item>
+        <item id="535" group="iq-spatial">
+            <name>Какая из этих фигур наиболее отлична от других?</name>
+            <options>
+                <option value="1">
+                    <![CDATA[<img src="https://testonomica.com/static/img/4/g_2_4.svg" style="filter:invert(1);width:70px;height:70px;"/>]]></option>
+                <option value="2">
+                    <![CDATA[<img src="https://testonomica.com/static/img/4/g_3_3.svg" style="filter:invert(1);width:70px;height:70px;"/>]]></option>
+                <option value="3" correct="true">
+                    <![CDATA[<img src="https://testonomica.com/static/img/4/g_2_1.svg" style="filter:invert(1);width:70px;height:70px;"/>]]></option>
+                <option value="4">
+                    <![CDATA[<img src="https://testonomica.com/static/img/4/g_2_5.svg" style="filter:invert(1);width:70px;height:70px;"/>]]></option>
+                <option value="5">
+                    <![CDATA[<img src="https://testonomica.com/static/img/4/g_3_5.svg" style="filter:invert(1);width:70px;height:70px;"/>]]></option>
+            </options>
+        </item>
+        <!-- Абстрактное мышление -->
+        <item id="550" group="iq-abstract">
+            <name>Выберите аналогичную пару слов к: <![CDATA[Нарушение — Штраф]]></name>
+            <options>
+                <option value="0">Склад — Хранилище</option>
+                <option value="1" correct="true">Нагревание — Кипение</option>
+                <option value="0">Эскиз — Картина</option>
+            </options>
+        </item>
+        <item id="551" group="iq-abstract">
+            <name>Выберите аналогичную пару слов к: <![CDATA[Хирург — Операция]]></name>
+            <options>
+                <option value="0">Клетка — Организм</option>
+                <option value="1" correct="true">Картина — Художник</option>
+                <option value="0">Посев — Урожай</option>
+            </options>
+        </item>
+        <item id="552" group="iq-abstract">
+            <name>Выберите аналогичную пару слов к: <![CDATA[Идти — Шагать]]></name>
+            <options>
+                <option value="0">Высоко — Низко</option>
+                <option value="0">Рябина — Дерево</option>
+                <option value="1" correct="true">Скала — Утёс</option>
+            </options>
+        </item>
+        <item id="553" group="iq-abstract">
+            <name>Выберите аналогичную пару слов к: <![CDATA[Вагон — Поезд]]></name>
+            <options>
+                <option value="1" correct="true">Клетка — Организм</option>
+                <option value="0">Кондитер — Торт</option>
+                <option value="0">Сапоги — Обувь</option>
+            </options>
+        </item>
+        <item id="554" group="iq-abstract">
+            <name>Выберите аналогичную пару слов к: <![CDATA[Понедельник — Вторник]]></name>
+            <options>
+                <option value="0">Милый — Пригожий</option>
+                <option value="0">Щекотка — Смех</option>
+                <option value="1" correct="true">Сон — Пробуждение</option>
+            </options>
+        </item>
+        <item id="555" group="iq-abstract">
+            <name>Выберите аналогичную пару слов к: <![CDATA[Тепло — Холодно]]></name>
+            <options>
+                <option value="1" correct="true">Талантливо — Бездарно</option>
+                <option value="0">Абсурд — Нелепость</option>
+                <option value="0">Болезнь — Корь</option>
+            </options>
+        </item>
+        <item id="556" group="iq-abstract">
+            <name>Выберите аналогичную пару слов к: <![CDATA[Тарелка — Чашка]]></name>
+            <options>
+                <option value="0">Охотник — Добыча</option>
+                <option value="1" correct="true">Берёза — Липа</option>
+                <option value="0">Буря — Ураган</option>
+            </options>
+        </item>
+        <item id="557" group="iq-abstract">
+            <name>Выберите аналогичную пару слов к: <![CDATA[Орёл — Птица]]></name>
+            <options>
+                <option value="0">Зима — Весна</option>
+                <option value="0">Живое — Неживое</option>
+                <option value="1" correct="true">Автомобиль — Транспорт</option>
+            </options>
+        </item>
+        <item id="558" group="iq-abstract">
+            <name>Выберите аналогичную пару слов к: <![CDATA[Доктор — Врач]]></name>
+            <options>
+                <option value="1" correct="true">Буря — Ураган</option>
+                <option value="0">Актёр — Театр</option>
+                <option value="0">Бактерия — Вирус</option>
+            </options>
+        </item>
+        <item id="559" group="iq-abstract">
+            <name>Выберите аналогичную пару слов к: <![CDATA[Труд — Усталость]]></name>
+            <options>
+                <option value="0">Футболист — Гол</option>
+                <option value="1" correct="true">Взрыв — Разрушение</option>
+                <option value="0">Пустой — Полный</option>
+            </options>
+        </item>
+        <!-- ШТУР Эрудиция -->
+        <item id="600" group="iq-erudition">
+            <name>Гуманный - это ...</name>
+            <options>
+                <option value="0">общественный</option>
+                <option value="1" correct="true">человечный</option>
+                <option value="0">профессиональный</option>
+                <option value="0">прогрессивный</option>
+                <option value="0">пренебрежительный</option>
+            </options>
+        </item>
+        <item id="601" group="iq-erudition">
+            <name>Одинаковыми по смыслу являются слова "демократия" и ...</name>
+            <options>
+                <option value="0">анархия</option>
+                <option value="0">абсолютизм</option>
+                <option value="1" correct="true">народовластие</option>
+                <option value="0">династия</option>
+                <option value="0">классы</option>
+            </options>
+        </item>
+        <item id="602" group="iq-erudition">
+            <name>Наука о выведении лучших пород животных и сортов растений называется ...</name>
+            <options>
+                <option value="0">бионика</option>
+                <option value="0">химия</option>
+                <option value="1" correct="true">селекция</option>
+                <option value="0">ботаника</option>
+                <option value="0">физиология</option>
+            </options>
+        </item>
+        <item id="603" group="iq-erudition">
+            <name>Начитанность, глубокие и широкие познания - это ...</name>
+            <options>
+                <option value="0">интеллигентность</option>
+                <option value="0">опытность</option>
+                <option value="1" correct="true">эрудиция</option>
+                <option value="0">талант</option>
+                <option value="0">самомнение</option>
+            </options>
+        </item>
+        <item id="604" group="iq-erudition">
+            <name>Свод законов, относящихся к какой-либо области человеческой жизни и деятельности называется ...</name>
+            <options>
+                <option value="0">революцией</option>
+                <option value="0">постановлением</option>
+                <option value="0">традицией</option>
+                <option value="1" correct="true">кодексом</option>
+                <option value="0">проектом</option>
+            </options>
+        </item>
+        <item id="605" group="iq-erudition">
+            <name>Если спор заканчивается взаимными уступками, тогда говорят о ...</name>
+            <options>
+                <option value="1" correct="true">компромиссе</option>
+                <option value="0">общении</option>
+                <option value="0">объединении</option>
+                <option value="0">переговорах</option>
+                <option value="0">противоречии</option>
+            </options>
+        </item>
+        <item id="606" group="iq-erudition">
+            <name>Этика - это учение о ...</name>
+            <options>
+                <option value="0">психике</option>
+                <option value="1" correct="true">морали</option>
+                <option value="0">природе</option>
+                <option value="0">обществе</option>
+                <option value="0">искусстве</option>
+            </options>
+        </item>
+        <item id="607" group="iq-erudition">
+            <name>Противоположностью понятия "идентичный" будет ...</name>
+            <options>
+                <option value="1" correct="true">тождественный</option>
+                <option value="0">единственный</option>
+                <option value="0">внушительный</option>
+                <option value="0">различный</option>
+                <option value="0">изолированный</option>
+            </options>
+        </item>
+        <item id="608" group="iq-erudition">
+            <name>Освобождение от зависимости, предрассудков, уравнение в правах - это ...</name>
+            <options>
+                <option value="0">закон</option>
+                <option value="0">эмиграция</option>
+                <option value="0">воззрение</option>
+                <option value="0">действие</option>
+                <option value="1" correct="true">эмансипация</option>
+            </options>
+        </item>
+        <item id="609" group="iq-erudition">
+            <name>Человек, который скептически относится к прогрессу, является</name>
+            <options>
+                <option value="0">демократом</option>
+                <option value="0">радикалом</option>
+                <option value="1" correct="true">консерватором</option>
+                <option value="0">либералом</option>
+                <option value="0">анархистом</option>
+            </options>
+        </item>
+    </items>
+</quiz>

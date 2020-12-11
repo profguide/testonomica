@@ -282,6 +282,24 @@ class Question
         $this->fields[] = $field;
     }
 
+    /**
+     * Есть ли значения в вопросе, которые должны считаться "правильными"
+     * @return bool
+     */
+    public function hasCorrectValues(): bool
+    {
+        if ($this->method == self::METHOD_TEXT) {
+            return true;
+        } elseif ($this->method == self::METHOD_OPTION || $this->method == self::METHOD_CHECKBOX) {
+            foreach ($this->options as $option) {
+                if ($option->isCorrect()) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     public function getCorrectValues()
     {
         $values = [];
@@ -289,6 +307,13 @@ class Question
             /**@var Field $field */
             foreach ($this->fields as $field) {
                 $values[] = $field->getCorrect();
+            }
+        } elseif ($this->method == self::METHOD_OPTION || $this->method == self::METHOD_CHECKBOX) {
+            /**@var Option $option */
+            foreach ($this->options as $option) {
+                if ($option->isCorrect()) {
+                    $values[] = $option->getValue();
+                }
             }
         } else {
             throw new \RuntimeException('Not supported for other types yet');

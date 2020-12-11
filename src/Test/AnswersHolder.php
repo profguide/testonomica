@@ -63,4 +63,9 @@ class AnswersHolder
         $this->answersByQuestionId = $answers;
         return $this->answersByQuestionId;
     }
+
+    public function get(string $id)
+    {
+        return $this->answers[$id];
+    }
 }

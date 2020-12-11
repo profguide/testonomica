@@ -6,7 +6,9 @@
 
 namespace App\Util;
 
+use App\Entity\Answer;
 use App\Test\AnswersHolder;
+use App\Test\Option;
 use App\Test\Question;
 
 class AnswersUtil
@@ -22,24 +24,20 @@ class AnswersUtil
         $sum = 0;
         /**@var Question $question */
         foreach ($questions as $question) {
-            if ($question->getMethod() == Question::METHOD_OPTION) {
-                $sum += $answersHolder->getValuesSum($question->getId());
-            } elseif ($question->getMethod() == Question::METHOD_TEXT) {
+            // if the question assumes correct answer and the answer is correct, it will add "1"
+            if ($question->hasCorrectValues()) {
                 if (self::isCorrect($question, $answersHolder)) {
                     $sum += 1;
                 }
-            } elseif ($question->getMethod() == Question::METHOD_OPTION) {
-                // todo
-                throw new \RuntimeException('Not supported other methods yet');
             } else {
-                throw new \RuntimeException('Unsupportable method');
+                $sum += $answersHolder->getValuesSum($question->getId());
             }
         }
         return $sum;
     }
 
     /**
-     * Проверяет является ли ответ равным и точным ожидаемым значениям
+     * Checks if all answer's values match question's expected ones
      * @param Question $question
      * @param AnswersHolder $answersHolder
      * @return bool
@@ -53,4 +51,24 @@ class AnswersUtil
             array_diff($correctValues, $scoredValues)
         ));
     }
+
+    public static function ratingToTextArray(Question $question, Answer $answer)
+    {
+        $valuesSrc = [];
+        /**@var Option $option */
+        foreach ($question->getOptions() as $option) {
+            $valuesSrc[$option->getValue()] = $option->getText();
+        }
+        $texts = [];
+        foreach ($answer->getValue() as $value) {
+            $texts[] = $valuesSrc[$value];
+        }
+        return $texts;
+    }
+
+    /**
+     * Считает сумму максимальных вариантов ответов для указанных вопросов
+     * Могло бы пригодиться, чтобы уменьшить человеческий фактор, когда считают вручную
+     */
+    // public static function questionMaximumValuesSum(array $questions)
 }
