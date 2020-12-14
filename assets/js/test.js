@@ -44,22 +44,8 @@ window.TestContext = TestContext;
 
 window.question = null;
 
-window.testonomica = (function () {
-    return {
-        'nextUrl': function () {
-            return "/tests/api/";
-        },
-        'onFinish': function (uuid) {
-            console.log(uuid);
-            window.location.replace(window.testonomica.resultUrl(uuid));
-        },
-        'resultUrl': function (uuid) {
-            return "/tests/result/" + uuid + "/";
-        }
-    }
-})();
-
 $(function () {
+    const NEXT_URL = '/tests/api/';
     const BODY = $("body");
     const PREVIEW_SCREEN = $("#test-preview-screen");
     const PREVIEW_FORM = $("#test__start-form");
@@ -135,7 +121,7 @@ $(function () {
                 formData += "&answer[]=" + answer;
             });
         } else {
-            formData += "&answer= ";
+            formData += "&answer[]= ";
         }
         return formData;
     };
@@ -223,7 +209,7 @@ $(function () {
     const API = function () {
         // console.log(missed_var_to_check_google_analytics_error_report)
         this.next = function (data, success, fail) {
-            $.ajax(window.testonomica.nextUrl(), {
+            $.ajax(NEXT_URL, {
                 'data': data,
                 'method': 'POST'
             }).done(function (data, status, xhr) {
@@ -271,7 +257,7 @@ $(function () {
             renderHtml(data);
             // console.log(xhr.getResponseHeader('test-status'))
             if (xhr.getResponseHeader('result-uuid')) {
-                window.testonomica.onFinish(xhr.getResponseHeader('result-uuid'))
+                window.location.replace("/tests/result/" + xhr.getResponseHeader('result-uuid') + "/");
             }
         }, function () {
             toast("Произошла ошибка", "danger");
