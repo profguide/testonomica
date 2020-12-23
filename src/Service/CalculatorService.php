@@ -9,10 +9,14 @@ namespace App\Service;
 
 use App\Entity\Result;
 use App\Entity\Test;
+use App\Repository\TestRepositoryInterface;
+use App\Test\AbstractCalculator;
+use App\Test\AbstractComplexCalculator;
 use App\Test\AnswersHolder;
 use App\Test\AnswersSerializer;
 use App\Test\CalculatorInterface;
 use App\Test\QuestionsHolder;
+use App\Test\ResultUtil;
 use App\Test\SourceRepositoryInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
 
@@ -21,44 +25,74 @@ class CalculatorService
     /**@var AnswersSerializer */
     private $serializer;
 
-    /**@var KernelInterface */
-    private $kernel;
-
     /**@var SourceRepositoryInterface */
     private $sourceRepository;
+
+    /**@var TestRepositoryInterface */
+    private $testRepository;
+
+    /**@var KernelInterface */
+    private $kernel;
 
     const CALCULATORS_NAMESPACE = '\App\Test\Calculator\\';
 
     public function __construct(
         AnswersSerializer $serializer,
         SourceRepositoryInterface $sourceRepository,
+        TestRepositoryInterface $testRepository,
         KernelInterface $kernel)
     {
         $this->serializer = $serializer;
         $this->sourceRepository = $sourceRepository;
+        $this->testRepository = $testRepository;
         $this->kernel = $kernel;
     }
 
-    public function calculate(Test $test, Result $result): array
+    public function calculate(Result $result): array
     {
-        return $this->calculateJson($test, $result->getData());
+        $calculator = ResultUtil::isComplex($result) ?
+            $this->initComplexCalculator($result) :
+            $this->initSingleCalculator($result);
+        return $calculator->calculate();
     }
 
-    public function calculateJson(Test $test, string $data): array
+    private function initComplexCalculator(Result $complexResult): CalculatorInterface
     {
-        return ($this->getCalculator($test))->calculate(
-            new AnswersHolder($this->serializer->deserialize($data)),
-            new QuestionsHolder($this->sourceRepository->getAllQuestions($test)));
+        $calculators = [];
+        $jsonResults = json_decode($complexResult->getData(), true);
+        foreach ($jsonResults as $testId => $resultData) {
+            $result = new Result();
+            $result->setTest($this->loadTest($testId));
+            $result->setData(json_encode($resultData));
+            $calculators[$testId] = $this->initSingleCalculator($result);
+        }
+        /**@var AbstractComplexCalculator $calculatorName */
+        $calculatorName = $this->calculatorName($complexResult);
+        return new $calculatorName($calculators, $this->kernel);
     }
 
-    private function getCalculator(Test $test): CalculatorInterface
+    private function initSingleCalculator(Result $result): CalculatorInterface
     {
-        $calculatorName = self::CALCULATORS_NAMESPACE . ucfirst($this->resolveCalculatorName($test)) . 'Calculator';
-        return new $calculatorName($this->kernel);
+        /**@var AbstractCalculator $calculatorName */
+        $calculatorName = $this->calculatorName($result);
+        return new $calculatorName(
+            new AnswersHolder($this->serializer->deserialize($result->getData())),
+            new QuestionsHolder($this->sourceRepository->getAllQuestions($result->getTest())),
+            $this->kernel);
     }
 
-    private function resolveCalculatorName(Test $test): string
+    private function calculatorName(Result $result): string
     {
-        return $test->getCalculatorName() ?? $test->getId();
+        $test = $result->getTest();
+        $name = $test->getCalculatorName() ?? $test->getId();
+        return self::CALCULATORS_NAMESPACE . ucfirst($name) . 'Calculator';
+    }
+
+    private function loadTest(int $testId): Test
+    {
+        if (($test = $this->testRepository->findOneById($testId)) == null) {
+            throw new \RuntimeException("Test {$testId} not found");
+        }
+        return $test;
     }
 }

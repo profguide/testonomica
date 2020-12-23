@@ -7,6 +7,7 @@
 namespace App\Controller;
 
 
+use App\Entity\Result;
 use App\Entity\Test;
 use App\Service\CalculatorService;
 use App\Service\ResultService;
@@ -75,10 +76,11 @@ class TestApiStatelessController extends TestApiAbstract
      */
     public function calculate(string $id, Request $request, SerializerInterface $serializer, CalculatorService $calculatorService)
     {
-        $test = $this->loadTest($id);
-        $data = $request->get('result');
         $response = new JsonResponse();
-        $response->setJson($serializer->serialize($calculatorService->calculateJson($test, $data), 'json'));
+        $result = new Result();
+        $result->setData($request->get('result'));
+        $result->setTest($this->loadTest($id));
+        $response->setJson($serializer->serialize($calculatorService->calculate($result), 'json'));
         $response->setEncodingOptions(JSON_UNESCAPED_UNICODE);
         return $response;
     }

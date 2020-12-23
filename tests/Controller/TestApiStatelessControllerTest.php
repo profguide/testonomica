@@ -48,6 +48,9 @@ class TestApiStatelessControllerTest extends WebTestCase
     /**@var Test */
     private $test;
 
+    /**@var Test */
+    private $complexTest;
+
     protected function setUp()
     {
         $this->client = static::createClient();
@@ -57,6 +60,7 @@ class TestApiStatelessControllerTest extends WebTestCase
         $this->resultService = self::$container->get(ResultService::class);
         $this->serializer = self::$container->get(AnswersSerializer::class);
         $this->test = $this->testRepository->findOneBySlug(TestFixture::TEST_1_SLUG);
+        $this->complexTest = $this->testRepository->findOneBySlug(TestFixture::TEST_5_SLUG);
     }
 
     /**
@@ -129,13 +133,38 @@ class TestApiStatelessControllerTest extends WebTestCase
         $this->assertEquals($dataSource, $result->getData(), 'Данные не исказились');
     }
 
-    public function testCalculate()
+    public function testCalculateSingleResult()
     {
         $testId = $this->test->getId();
-        $dataSource = '{"1":["my-answer"]}';
+        $dataSource = '{"101":["my-answer"]}';
+        $dataExpect = '{"101":{"questionId":"101","value":["my-answer"]}}';
         $this->client->request('POST', "/tests/cli/calculate/{$testId}/", ['result' => $dataSource]);
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
-        $this->assertEquals('{"1":{"questionId":"1","value":["my-answer"]}}', $this->client->getResponse()->getContent());
+        $this->assertEquals($dataExpect, $this->client->getResponse()->getContent());
+    }
+
+    public function testCalculateComplexResult()
+    {
+        $partialTestId = $this->test->getId();
+        // {"12":{"1":["my-answer"]}}
+        $dataSource = json_encode([
+            $partialTestId => [
+                "101" => ["my-answer"]
+            ]
+        ]);
+        // {"12":{"1":{"questionId":"1","value":["my-answer"]}}}
+        $dataExpect = json_encode([
+            $partialTestId => [
+                "101" => [
+                    'questionId' => "101",
+                    'value' => ["my-answer"]
+                ]
+            ]
+        ]);
+        $complexTestId = $this->complexTest->getId();
+        $this->client->request('POST', "/tests/cli/calculate/{$complexTestId}/", ['result' => $dataSource]);
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertEquals($dataExpect, $this->client->getResponse()->getContent());
     }
 
     private function assertHtml($testId, $nextQuestionId)

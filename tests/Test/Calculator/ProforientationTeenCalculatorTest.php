@@ -6,14 +6,13 @@
 
 namespace App\Tests\Test\Calculator;
 
-use App\Test\Calculator\ProforientationTeenCalculator;
-
 class ProforientationTeenCalculatorTest extends AbstractProforientationCalculatorTest
 {
+    protected $calculatorName = 'App\Test\Calculator\ProforientationTeenCalculator';
+
     public function setUp()
     {
         self::bootKernel();
-        $this->calculator = new ProforientationTeenCalculator(self::$kernel);
     }
 
     protected function getSrcFilename(): string

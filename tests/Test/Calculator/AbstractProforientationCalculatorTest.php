@@ -18,8 +18,8 @@ use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 abstract class AbstractProforientationCalculatorTest extends KernelTestCase
 {
-    /**@var AbstractProforientationCalculator */
-    protected $calculator;
+    /**@var string */
+    protected $calculatorName;
 
     /**
      * Натуральный тест - как его бы видет тестируемый - передача ответов
@@ -38,6 +38,10 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
 
             700 => [1], 701 => [1]
         ]);
+
+        /**@var AbstractProforientationCalculator $calculator */
+        $calculator = new $this->calculatorName($answersHolder, $this->questionsHolder(), self::$kernel);
+
         $this->assertEquals([
             'natural' => [100, 50, 0],
             'tech' => [100, 100, 100],
@@ -51,11 +55,12 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
             'com' => [0, 0, 0],
             'boss' => [0, 0, 0],
             'war' => [0, 0, 0],
-        ], $this->calculator->calculateTypesGroups($answersHolder, $this->questionsHolder()));
+        ], $calculator->calculateTypesGroups());
     }
 
     public function testSummationTypesGroups()
     {
+        $calculator = $this->createEmptyCalculator();
         $types = [
             'natural' => [40, 40, 40],
             'tech' => [20, 40, 60],
@@ -65,12 +70,13 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
             'natural' => 40,
             'tech' => 40,
             'body' => 0
-        ], $this->calculator->sumTypesGroups($types));
+        ], $calculator->sumTypesGroups($types));
     }
 
     public function testGrabTopTypes()
     {
-        $result = $this->calculator->grabTopTypes([
+        $calculator = $this->createEmptyCalculator();
+        $result = $calculator->grabTopTypes([
             'natural' => 10,
             'tech' => 50,
             'human' => 40,
@@ -82,33 +88,35 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
 
     public function testRatingCalculationForOneComb()
     {
+        $calculator = $this->createEmptyCalculator();
 //         чего-то не хватает - это рейтинг 0
-        $this->assertEquals(0, $this->calculator->oneCombRating(
+        $this->assertEquals(0, $calculator->oneCombRating(
             ['natural' => 100], ['natural', 'tech']));
         // полное совпадение - рейтинг 1
-        $this->assertEquals(200, $this->calculator->oneCombRating(
+        $this->assertEquals(200, $calculator->oneCombRating(
             ['natural' => 100, 'tech' => 100], ['natural', 'tech']));
 //        // среднее - 0.5
-        $this->assertEquals(100, $this->calculator->oneCombRating(
+        $this->assertEquals(100, $calculator->oneCombRating(
             ['natural' => 100, 'tech' => 0], ['natural', 'tech']));
         // лишнее - не считаем
-        $this->assertEquals(100, $this->calculator->oneCombRating(
+        $this->assertEquals(100, $calculator->oneCombRating(
             ['natural' => 100, 'tech' => 0, 'body' => 100], ['natural', 'tech']));
         // есть в аргументе not - 0
-        $this->assertEquals(0, $this->calculator->oneCombRating(
+        $this->assertEquals(0, $calculator->oneCombRating(
             ['natural' => 100, 'war' => 90], ['natural'], ['war']));
     }
 
     public function testRatingCalculationForAllCombs()
     {
+        $calculator = $this->createEmptyCalculator();
         // Один вариант со 100% совпадением - это 1
-        $this->assertEquals(200, $this->calculator->combsRating(
+        $this->assertEquals(200, $calculator->combsRating(
             ['natural' => 100, 'tech' => 100], new Profession('some', [['natural', 'tech']])));
         // Два варианта, один 100%, другой 0 - это 1
-        $this->assertEquals(200, $this->calculator->combsRating(
+        $this->assertEquals(200, $calculator->combsRating(
             ['natural' => 100, 'tech' => 100], new Profession('some', [['natural', 'tech'], ['natural', 'tech', 'body']])));
         // Два варианта, один 0 и другой 0 - это 0
-        $this->assertEquals(0, $this->calculator->combsRating(
+        $this->assertEquals(0, $calculator->combsRating(
             ['natural' => 100], new Profession('some', [['natural', 'tech'], ['natural', 'tech', 'body']])));
     }
 
@@ -196,4 +204,9 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
     }
 
     protected abstract function getSrcFilename(): string;
+
+    private function createEmptyCalculator(): AbstractProforientationCalculator
+    {
+        return new $this->calculatorName(new AnswersHolder([]), new QuestionsHolder([]), self::$kernel);
+    }
 }

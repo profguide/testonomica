@@ -7,14 +7,12 @@
 namespace App\Test\Calculator;
 
 
-use App\Test\AnswersHolder;
-use App\Test\CalculatorInterface;
-use App\Test\QuestionsHolder;
+use App\Test\AbstractCalculator;
 
-class TestCalculator implements CalculatorInterface
+class TestCalculator extends AbstractCalculator
 {
-    function calculate(AnswersHolder $answersHolder, QuestionsHolder $questionsHolder): array
+    function calculate(): array
     {
-        return $answersHolder->getAll();
+        return $this->answersHolder->getAll();
     }
 }

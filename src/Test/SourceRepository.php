@@ -22,7 +22,8 @@ class SourceRepository implements SourceRepositoryInterface
 {
     private $kernel;
 
-    private static $xml = null;
+    // for request cache
+    private static $xml = [];
 
     public function __construct(KernelInterface $kernel)
     {
@@ -119,12 +120,12 @@ class SourceRepository implements SourceRepositoryInterface
 
     private function getXml(Test $test): Crawler
     {
-        if (self::$xml == null) {
+        if (empty(self::$xml[$test->getId()])) {
             $name = $test->getXmlFilename() ?? $test->getId(); // TestXmlFileNameResolver?
             $filename = $this->kernel->getProjectDir() . "/xml/{$name}.xml";
             $fileContent = file_get_contents($filename);
-            self::$xml = new Crawler($fileContent);
+            self::$xml[$test->getId()] = new Crawler($fileContent);
         }
-        return self::$xml;
+        return self::$xml[$test->getId()];
     }
 }

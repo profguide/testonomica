@@ -6,19 +6,17 @@
 
 namespace App\Test\Calculator;
 
-use App\Test\AnswersHolder;
-use App\Test\CalculatorInterface;
-use App\Test\QuestionsHolder;
+use App\Test\AbstractCalculator;
 use App\Util\AnswersUtil;
 
-class PersonIntelCalculator implements CalculatorInterface
+class PersonIntelCalculator extends AbstractCalculator
 {
-    function calculate(AnswersHolder $answersHolder, QuestionsHolder $questionsHolder): array
+    function calculate(): array
     {
-        $groups = $questionsHolder->byGroups();
+        $groups = $this->questionsHolder->byGroups();
         $sums = [];
         foreach ($groups as $k => $group) {
-            $sums[$k] = AnswersUtil::sum($group, $answersHolder);
+            $sums[$k] = AnswersUtil::sum($group, $this->answersHolder);
         }
         $result = [
             'creator' => round($sums['creator'] * 100 / 36),
@@ -79,8 +77,8 @@ class PersonIntelCalculator implements CalculatorInterface
                         $sums['iq-erudition']) * 100 / 56)
             ],
             'system_values' => AnswersUtil::ratingToTextArray(
-                $questionsHolder->get(350),
-                $answersHolder->get(350)),
+                $this->questionsHolder->get(350),
+                $this->answersHolder->get(350)),
         ];
 
         // todo compare sums and result - count number of groups ничего ли не забыл

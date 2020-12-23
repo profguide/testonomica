@@ -94,7 +94,7 @@ class TestController extends AbstractController
     {
         $result = $this->loadResultByUuid($uuid);
         $response = new JsonResponse();
-        $response->setJson($serializer->serialize($this->calculatorService->calculate($result->getTest(), $result), 'json'));
+        $response->setJson($serializer->serialize($this->calculatorService->calculate($result), 'json'));
         $response->setEncodingOptions(JSON_UNESCAPED_UNICODE);
         return $response;
     }
@@ -174,7 +174,7 @@ class TestController extends AbstractController
 
     private function renderResult(Test $test, Result $result)
     {
-        $resultData = $this->calculatorService->calculate($test, $result);
+        $resultData = $this->calculatorService->calculate($result);
         return $this->render('tests/result/' . ResultUtil::resolveViewName($test) . '.html.twig',
             array_merge([
                 'test' => $test,

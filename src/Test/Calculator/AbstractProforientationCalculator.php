@@ -7,27 +7,26 @@
 namespace App\Test\Calculator;
 
 
+use App\Test\AbstractCalculator;
 use App\Test\AnswersHolder;
-use App\Test\CalculatorInterface;
 use App\Test\Proforientation\Profession;
 use App\Test\Proforientation\Types;
 use App\Test\QuestionsHolder;
-use App\Test\QuestionXmlMapper;
 use App\Test\CrawlerUtil;
 use App\Util\AnswersUtil;
 use DOMElement;
 use Symfony\Component\DomCrawler\Crawler;
 
-abstract class AbstractProforientationCalculator implements CalculatorInterface
+abstract class AbstractProforientationCalculator extends AbstractCalculator
 {
     const MAXIMUM_PROFESSIONS = 15;
 
-    public function calculate(AnswersHolder $answersHolder, QuestionsHolder $questionsHolder): array
+    public function calculate(): array
     {
-        $typesGroupsPercent = $this->calculateTypesGroups($answersHolder, $questionsHolder);
+        $typesGroupsPercent = $this->calculateTypesGroups();
         $typesSinglePercent = $this->sumTypesGroups($typesGroupsPercent);
         $professions = $this->grabProfessionsByTypes($typesSinglePercent);
-        $professions = $this->sliceProfessions($professions);
+        $professions = $this->sliceProfessions($professions, self::MAXIMUM_PROFESSIONS);
         return [
             'types_group_percent' => $typesGroupsPercent,
             'types_single_percent' => $typesSinglePercent,
@@ -39,16 +38,14 @@ abstract class AbstractProforientationCalculator implements CalculatorInterface
 
     /**
      * Из ответов формирует массив с процентами вида ['tech' => [33, 20, 50], 'body' => [0, 50, 0]]
-     * @param AnswersHolder $answersHolder
-     * @param QuestionsHolder $questionsHolder
      * @return array
      */
-    public function calculateTypesGroups(AnswersHolder $answersHolder, QuestionsHolder $questionsHolder): array
+    public function calculateTypesGroups(): array
     {
         $types = ['natural', 'tech', 'human', 'body', 'math', 'it', 'craft', 'art', 'hoz', 'com', 'boss', 'war'];
         $result = [];
         foreach ($types as $type) {
-            $result[$type] = $this->calculateTypeGroups($type, $answersHolder, $questionsHolder);
+            $result[$type] = $this->calculateTypeGroups($type, $this->answersHolder, $this->questionsHolder);
         }
         return $result;
     }
@@ -289,9 +286,9 @@ abstract class AbstractProforientationCalculator implements CalculatorInterface
         return $description;
     }
 
-    private function sliceProfessions($professions)
+    private function sliceProfessions($professions, int $limit)
     {
-        return array_slice($professions, 0, self::MAXIMUM_PROFESSIONS);
+        return array_slice($professions, 0, $limit);
     }
 
     /**
