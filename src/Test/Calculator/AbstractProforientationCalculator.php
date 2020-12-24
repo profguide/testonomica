@@ -292,7 +292,7 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
     }
 
     /**
-     * Подбирает текстовые описания всех типов по значениям групп: интересы и способности
+     * Подбирает текстовые описания всех типов по значениям групп: интересы (среднее от усилий интересов) и способности
      * @param array $typesGroups
      * @return array вида ['tech' => ['interest' => '...', 'skills' => '...'], 'natural' => ...]
      */
