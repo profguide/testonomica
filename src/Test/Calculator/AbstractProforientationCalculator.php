@@ -21,8 +21,19 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
 {
     const MAXIMUM_PROFESSIONS = 15;
 
+    private function fitVersion(): void
+    {
+        // 2.0.1 - 26.12.2020
+        // added question 723
+        // Rule: Calculator must ignore question if no corresponding answer
+        if (!$this->answersHolder->has(723) && $this->questionsHolder->has(723)) {
+            $this->questionsHolder->remove(723);
+        }
+    }
+
     public function calculate(): array
     {
+        $this->fitVersion();
         $typesGroupsPercent = $this->calculateTypesGroups();
         $typesSinglePercent = $this->sumTypesGroups($typesGroupsPercent);
         $professions = $this->grabProfessionsByTypes($typesSinglePercent);

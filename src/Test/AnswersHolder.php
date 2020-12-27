@@ -68,4 +68,14 @@ class AnswersHolder
     {
         return $this->answers[$id];
     }
+
+    public function has(string $id): bool
+    {
+        return isset($this->asnwers[$id]);
+    }
+
+    public function remove(string $id): void
+    {
+        unset($this->answers[$id]);
+    }
 }

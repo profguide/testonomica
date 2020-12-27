@@ -12,6 +12,7 @@ use App\Test\AnswersHolder;
 use App\Test\Calculator\AbstractProforientationCalculator;
 use App\Test\CrawlerUtil;
 use App\Test\Proforientation\Profession;
+use App\Test\Question;
 use App\Test\QuestionsHolder;
 use App\Test\QuestionXmlMapper;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
@@ -118,6 +119,18 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
         // Два варианта, один 0 и другой 0 - это 0
         $this->assertEquals(0, $calculator->combsRating(
             ['natural' => 100], new Profession('some', [['natural', 'tech'], ['natural', 'tech', 'body']])));
+    }
+
+    public function testFitVersionV_2_0_1()
+    {
+        /**@var AbstractProforientationCalculator $calculator */
+        $calculator = new $this->calculatorName(new AnswersHolder([
+            720 => Answer::create(720, [1]),
+            721 => Answer::create(721, [1]),
+            722 => Answer::create(722, [1]),
+            // << absent 723 answer obliged Calculator to ignore 723 question
+        ]), $this->questionsHolder(), self::$kernel);
+        $this->assertEquals(100, $calculator->calculate()['types_group_percent']['art'][2]);
     }
 
 //    /**

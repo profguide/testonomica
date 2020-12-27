@@ -42,4 +42,14 @@ class QuestionsHolder
     {
         return $this->questions[$id];
     }
+
+    public function has(string $id): bool
+    {
+        return isset($this->questions[$id]);
+    }
+
+    public function remove(string $id): void
+    {
+        unset($this->questions[$id]);
+    }
 }
