@@ -121,7 +121,7 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
             ['natural' => 100], new Profession('some', [['natural', 'tech'], ['natural', 'tech', 'body']])));
     }
 
-    public function testFitVersionV_2_0_1()
+    public function testFitVersionV201()
     {
         /**@var AbstractProforientationCalculator $calculator */
         $calculator = new $this->calculatorName(new AnswersHolder([
