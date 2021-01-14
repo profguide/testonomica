@@ -53,7 +53,6 @@ class AnswersUtil
     /**
      * Counts percentage of repeated values and returns double map with percentage and sum of repeated values
      * e.g. ['1' => 'yes', '2' => 'yes', 3 => 'no']
-     * it is ['yes' => ['value' => 2, 'percentage' => 100, 'no' => ['value' => 1, 'percentage' => 50]]]
      * @param AnswersHolder $answersHolder
      * @param int $max - what is 100% value
      * @return array e.g. ['yes' => ['value' => 2, 'percentage' => 100], 'no' => ['value' => 1, 'percentage' => 50]]
@@ -108,6 +107,19 @@ class AnswersUtil
             $newMap[$name] = round($value * 100 / $max);
         }
         return $newMap;
+    }
+
+    /**
+     * @param array $map ['yes' => ['value' => 2, 'percentage' => 100], 'no' => ['value' => 1, 'percentage' => 50]
+     * @return int e.g. 3 as a sum of 2 and 1 in the case above
+     */
+    public static function sumValuesInDoubleMap(array $map): int
+    {
+        $sum = 0;
+        foreach ($map as $name => $sumMap) {
+            $sum += $sumMap['value'];
+        }
+        return $sum;
     }
 
     /**

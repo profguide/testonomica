@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>У меня есть привычка внимательно изучать лица и поведение людей, чтобы понять их характер, наклонности, способности.
+            </name>
+            <options>
+                <option value="Racionalniy">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Если окружающие проявляют признаки нервозности, я обычно остаюсь спокойным.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Emocionalniy">Нет
+                </option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Я больше верю доводам своего рассудка, чем интуиции.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Intuitivniy">Нет
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Я считаю вполне уместным для себя интересоваться домашними проблемами сослуживцев.
+            </name>
+            <options>
+                <option value="Ustanovki">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Я могу легко войти в доверие к человеку, если потребуется.
+            </name>
+            <options>
+                <option value="Pronikaushaya">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Обычно я с первой же встречи угадываю «родственную душу» в новом человеке.
+            </name>
+            <options>
+                <option value="Identifikaciya">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Я из любопытства обычно завожу разговор о жизни, работе, политике со случайными попутчиками в поезде, самолете.
+            </name>
+            <options>
+                <option value="Racionalniy">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Я теряю душевное равновесие, если окружающие чем-то угнетены.
+            </name>
+            <options>
+                <option value="Emocionalniy">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Моя интуиция — более надежное средство понимания окружающих, чем знания или опыт.
+            </name>
+            <options>
+                <option value="Intuitivniy">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Проявлять любопытство к внутреннему миру другой личности — бестактно.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Ustanovki">Нет
+                </option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Часто своими словами я обижаю близких мне людей, не замечая того.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Pronikaushaya">Нет
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>Я легко могу представить себя каким-либо животным, ощутить его повадки и состояния.
+            </name>
+            <options>
+                <option value="Identifikaciya">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>Я редко рассуждаю о причинах поступков людей, которые имеют ко мне непосредственное отношение.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Racionalniy">Нет
+                </option>
+            </options>
+        </item>
+        <item id="14">
+            <name>Я редко принимаю близко к сердцу проблемы своих друзей.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Emocionalniy">Нет
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>Обычно за несколько дней я чувствую: что-то должно случиться с близким мне человеком, и ожидания оправдываются.
+            </name>
+            <options>
+                <option value="Intuitivniy">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>В общении с деловыми партнерами обычно стараюсь избегать разговоров о личном.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Ustanovki">Нет
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>Иногда близкие упрекают меня в черствости, невнимании к ним.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Pronikaushaya">Нет
+                </option>
+            </options>
+        </item>
+        <item id="18">
+            <name>Мне легко удается копировать интонацию, мимику людей, подражая им.
+            </name>
+            <options>
+                <option value="Identifikaciya">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="19">
+            <name>Мой любопытный взгляд часто смущает новых партнеров.
+            </name>
+            <options>
+                <option value="Racionalniy">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="20">
+            <name>Чужой смех обычно заражает меня.
+            </name>
+            <options>
+                <option value="Emocionalniy">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="21">
+            <name>Часто, действуя наугад, я, тем не менее, нахожу пра­вильный подход к человеку.
+            </name>
+            <options>
+                <option value="Intuitivniy">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="22">
+            <name>Плакать от счастья глупо.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Ustanovki">Нет
+                </option>
+            </options>
+        </item>
+        <item id="23">
+            <name>Я способен полностью слиться с любимым человеком, как бы растворившись в нем.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Pronikaushaya">Нет
+                </option>
+            </options>
+        </item>
+        <item id="24">
+            <name>Мне редко встречались люди, которых я понимал бы без лишних слов.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Identifikaciya">Нет
+                </option>
+            </options>
+        </item>
+        <item id="25">
+            <name>Я невольно или из любопытства часто подслушиваю разговоры посторонних Людей.
+            </name>
+            <options>
+                <option value="Racionalniy">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="26">
+            <name>Я могу оставаться спокойным, даже если все вокруг меня волнуются.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Emocionalniy">Нет
+                </option>
+            </options>
+        </item>
+        <item id="27">
+            <name>Мне проще подсознательно почувствовать сущность человека, чем понять его, “разложив по полочкам”.
+            </name>
+            <options>
+                <option value="Intuitivniy">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="28">
+            <name>Я спокойно отношусь к мелким неприятностям, которые случаются у кого-либо из членов семьи.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Ustanovki">Нет
+                </option>
+            </options>
+        </item>
+        <item id="29">
+            <name>Мне было бы трудно задушевно, доверительно беседовать с настороженным, замкнутым человеком.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Pronikaushaya">Нет
+                </option>
+            </options>
+        </item>
+        <item id="30">
+            <name>У меня творческая натура — поэтическая, художественная, артистичная.
+            </name>
+            <options>
+                <option value="Identifikaciya">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="31">
+            <name>Я без особого любопытства выслушиваю исповеди новых знакомых.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Racionalniy">Нет
+                </option>
+            </options>
+        </item>
+        <item id="32">
+            <name>Я расстраиваюсь, если вижу плачущего человека.
+            </name>
+            <options>
+                <option value="Emocionalniy">Да
+                </option>
+                <option value="0">Нет
+                </option>
+            </options>
+        </item>
+        <item id="33">
+            <name>Мое мышление больше отличается конкретностью, строгостью, последовательностью, чем интуицией.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Intuitivniy">Нет
+                </option>
+            </options>
+        </item>
+        <item id="34">
+            <name>Когда друзья начинают говорить о своих неприятностях, я предпочитаю перевести разговор на другую тему.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Ustanovki">Нет
+                </option>
+            </options>
+        </item>
+        <item id="35">
+            <name>Если я вижу, что у кого-то из близких плохо на душе, то обычно воздерживаюсь от расспросов.
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Pronikaushaya">Нет
+                </option>
+            </options>
+        </item>
+        <item id="36">
+            <name>Мне трудно понять, почему пустяки могут так сильно огорчать людей
+            </name>
+            <options>
+                <option value="0">Да
+                </option>
+                <option value="Identifikaciya">Нет
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
