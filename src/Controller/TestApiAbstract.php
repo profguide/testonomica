@@ -130,7 +130,7 @@ abstract class TestApiAbstract extends AbstractController
     private function loadTestById(int $id): Test
     {
         if (($test = $this->testService->findById($id)) == null) {
-            throw new NotFoundHttpException();
+            throw new NotFoundHttpException($id);
         }
         return $test;
     }

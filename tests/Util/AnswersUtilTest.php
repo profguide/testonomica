@@ -68,8 +68,72 @@ class AnswersUtilTest extends KernelTestCase
         ]))));
     }
 
+    /*
+     * Мап сумм значений, где ключ - значение
+     */
+    public function testSumValuesMap()
+    {
+        $this->assertEquals([
+            'yes' => 2,
+            'no' => 1
+        ], AnswersUtil::sumValuesMap(new AnswersHolder(self::buildAnswers([
+            1 => 'yes',
+            2 => 'yes',
+            3 => 'no',
+        ]))));
+    }
 
-    private static function buildQuestions(array $array)
+    /*
+     * Мама процентов от значений
+     */
+    public function testPercentage()
+    {
+        $this->assertEquals([
+            'yes' => 100,
+            'no' => 50
+        ], AnswersUtil::percentage(new AnswersHolder(self::buildAnswers([
+            1 => 'yes',
+            2 => 'yes',
+            3 => 'no',
+        ])), 2));
+    }
+
+    /*
+     * Мапа процентов от значений
+     */
+    public function testPercentageOfSet()
+    {
+        $this->assertEquals([
+            'yes' => 100,
+            'no' => 50
+        ], AnswersUtil::percentageOfSet([
+            'yes' => 2,
+            'no' => 1
+        ], 2));
+    }
+
+    /*
+     * Мапа вида ['значение' => ['value' => 'сумма', 'percentage' => 'процент']...]
+     */
+    public function testPercentageWithValues()
+    {
+        $this->assertEquals([
+            'yes' => [
+                'value' => 2,
+                'percentage' => 100
+            ],
+            'no' => [
+                'value' => 1,
+                'percentage' => 50
+            ]
+        ], AnswersUtil::percentageWithValues(new AnswersHolder(self::buildAnswers([
+            1 => 'yes',
+            2 => 'yes',
+            3 => 'no',
+        ])), 2));
+    }
+
+    private static function buildQuestions(array $array): array
     {
         $questions = [];
         foreach ($array as $id => $values) {
@@ -78,7 +142,7 @@ class AnswersUtilTest extends KernelTestCase
         return $questions;
     }
 
-    private static function buildAnswers(array $array)
+    private static function buildAnswers(array $array): array
     {
         $answers = [];
         foreach ($array as $id => $value) {
@@ -87,10 +151,10 @@ class AnswersUtilTest extends KernelTestCase
         return $answers;
     }
 
-    private static function createAnswer($id, $answer)
+    private static function createAnswer($id, $value): Answer
     {
-        $answer = is_array($answer) ? $answer : [$answer];
-        return Answer::create($id, $answer);
+        $value = is_array($value) ? $value : [$value];
+        return Answer::create($id, $value);
     }
 
     /**
@@ -98,7 +162,7 @@ class AnswersUtilTest extends KernelTestCase
      * @param $options [0, 1, 2] or [0, 1 => 'correct', 2]
      * @return Question
      */
-    private static function createQuestionWithOptions(int $id, array $options)
+    private static function createQuestionWithOptions(int $id, array $options): Question
     {
         $q = new Question();
         $q->setId($id);
@@ -114,4 +178,5 @@ class AnswersUtilTest extends KernelTestCase
         $q->setOptions($o);
         return $q;
     }
+
 }

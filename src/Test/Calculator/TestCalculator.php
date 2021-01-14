@@ -9,6 +9,11 @@ namespace App\Test\Calculator;
 
 use App\Test\AbstractCalculator;
 
+/**
+ * This is a calculator for Unit tests
+ * Class TestCalculator
+ * @package App\Test\Calculator
+ */
 class TestCalculator extends AbstractCalculator
 {
     function calculate(): array

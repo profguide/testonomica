@@ -11,15 +11,20 @@ use App\Entity\Answer;
 
 class AnswersHolder
 {
-    private $answers;
+    /**@var Answer[] */
+    private array $answers;
 
-    private $answersByQuestionId;
+    /**@var Answer[] */
+    private array $answersByQuestionId = [];
 
     public function __construct(array $answers)
     {
         $this->answers = $answers;
     }
 
+    /**
+     * @return Answer[]
+     */
     public function getAll(): array
     {
         return $this->answers;
@@ -50,7 +55,7 @@ class AnswersHolder
         return array_sum($this->getValues($questionId));
     }
 
-    private function answersByQuestionId()
+    private function answersByQuestionId(): array
     {
         if ($this->answersByQuestionId != null) {
             return $this->answersByQuestionId;
@@ -64,7 +69,7 @@ class AnswersHolder
         return $this->answersByQuestionId;
     }
 
-    public function get(string $id)
+    public function get(string $id): Answer
     {
         return $this->answers[$id];
     }

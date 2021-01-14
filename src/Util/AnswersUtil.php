@@ -14,12 +14,12 @@ use App\Test\Question;
 class AnswersUtil
 {
     /**
-     * todo write description and how to use
+     * Counts sum of answers with numeric and correct values
      * @param array $questions
      * @param AnswersHolder $answersHolder
      * @return int
      */
-    public static function sum(array $questions, AnswersHolder $answersHolder)
+    public static function sum(array $questions, AnswersHolder $answersHolder): int
     {
         $sum = 0;
         /**@var Question $question */
@@ -34,6 +34,80 @@ class AnswersUtil
             }
         }
         return $sum;
+    }
+
+    /**
+     * Counts percentage of repeated values and builds map
+     * @param AnswersHolder $answersHolder ['1' => 'yes', '2' => 'yes', 3 => 'no']
+     * @param int $max - what is 100% value
+     * @return array e.g. ['yes' => 100, 'no' => 50]
+     */
+    public static function percentage(AnswersHolder $answersHolder, int $max): array
+    {
+        // 1. sum values at first
+        $valuesSums = AnswersUtil::sumValuesMap($answersHolder);
+        // 2. count percentages
+        return AnswersUtil::percentageOfSet($valuesSums, $max);
+    }
+
+    /**
+     * Counts percentage of repeated values and returns double map with percentage and sum of repeated values
+     * e.g. ['1' => 'yes', '2' => 'yes', 3 => 'no']
+     * it is ['yes' => ['value' => 2, 'percentage' => 100, 'no' => ['value' => 1, 'percentage' => 50]]]
+     * @param AnswersHolder $answersHolder
+     * @param int $max - what is 100% value
+     * @return array e.g. ['yes' => ['value' => 2, 'percentage' => 100], 'no' => ['value' => 1, 'percentage' => 50]]
+     */
+    public static function percentageWithValues(AnswersHolder $answersHolder, int $max): array
+    {
+        $newMap = [];
+        $valuesSums = AnswersUtil::sumValuesMap($answersHolder);
+        $percentageMap = AnswersUtil::percentageOfSet($valuesSums, $max);
+        foreach ($valuesSums as $name => $value) {
+            $newMap[$name] = [
+                'value' => $value,
+                'percentage' => $percentageMap[$name]
+            ];
+        }
+        return $newMap;
+    }
+
+    /**
+     * Counts sum of repeated values
+     * e.g. ['1' => 'yes', '2' => 'yes', 3 => 'no']
+     * In this case 'yes' repeats 2 times, and 'no' - once.
+     * @param AnswersHolder $answersHolder
+     * @return array ['yes' => 2, 'no' => 1]
+     */
+    public static function sumValuesMap(AnswersHolder $answersHolder): array
+    {
+        $map = [];
+        foreach ($answersHolder->getAll() as $answer) {
+            if (count($answer->getValue()) > 1) {
+                throw new \LogicException('This method does not involve range values.');
+            }
+            $value = $answer->getValue()[0];
+            if (!isset($map[$value])) {
+                $map[$value] = 0;
+            }
+            $map[$value] = $map[$value] + 1;
+        }
+        return $map;
+    }
+
+    /**
+     * Counts percentage for array
+     * @param array $map e.g. ['yes' => 2, 'no' => 1]
+     * @param int $max - what is 100% value
+     * @return array ['yes' => 100, 'no' => 50]
+     */
+    public static function percentageOfSet(array $map, int $max): array
+    {
+        $newMap = [];
+        foreach ($map as $name => $value) {
+            $newMap[$name] = round($value * 100 / $max);
+        }
+        return $newMap;
     }
 
     /**
@@ -52,7 +126,7 @@ class AnswersUtil
         ));
     }
 
-    public static function ratingToTextArray(Question $question, Answer $answer)
+    public static function ratingToTextArray(Question $question, Answer $answer): array
     {
         $valuesSrc = [];
         /**@var Option $option */

@@ -8,15 +8,9 @@ namespace App\Entity;
 
 class Answer
 {
-    /***
-     * @var string
-     */
-    public $questionId;
+    public string $questionId;
 
-    /**
-     * @var array
-     */
-    public $value;
+    public array $value;
 
     private function __construct(string $id, array $value)
     {
@@ -24,7 +18,7 @@ class Answer
         $this->value = $value;
     }
 
-    public static function create(string $id, array $value)
+    public static function create(string $id, array $value): Answer
     {
         return new static($id, $value);
     }

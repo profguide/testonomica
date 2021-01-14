@@ -11,14 +11,11 @@ use Symfony\Component\HttpKernel\KernelInterface;
 
 abstract class AbstractCalculator implements CalculatorInterface
 {
-    /**@var AnswersHolder */
-    protected $answersHolder;
+    protected AnswersHolder $answersHolder;
 
-    /**@var QuestionsHolder */
-    protected $questionsHolder;
+    protected QuestionsHolder $questionsHolder;
 
-    /**@var KernelInterface */
-    protected $kernel;
+    protected KernelInterface $kernel;
 
     public function __construct(
         AnswersHolder $answersHolder,
