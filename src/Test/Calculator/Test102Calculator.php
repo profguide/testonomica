@@ -10,10 +10,10 @@ namespace App\Test\Calculator;
 use App\Test\AbstractCalculator;
 use App\Util\AnswersUtil;
 
-class Test111Calculator extends AbstractCalculator
+class Test102Calculator extends AbstractCalculator
 {
     function calculate(): array
     {
-        return AnswersUtil::percentageWithValues($this->answersHolder, 12);
+        return AnswersUtil::percentageWithValues($this->answersHolder, 8);
     }
 }

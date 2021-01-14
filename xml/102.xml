@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Вы бы предпочли:</name>
+            <options>
+                <option value="nature">Ухаживать за животными</option>
+                <option value="technic">Обслуживать машины, приборы</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="human">Помогать больным людям</option>
+                <option value="sign">Составлять таблицы, схемы, программы вычислительных машин</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="artist">Следить за качеством книжных иллюстраций, плакатов, художественных открыток
+                </option>
+                <option value="nature">Следить за состоянием, развитием растений</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="technic">Обрабатывать материалы (дерево, ткань, металл, пластмассу)</option>
+                <option value="human">Доводить товары до потребителя (рекламировать, продавать)</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="sign">Обсуждать научно популярные книги, статьи</option>
+                <option value="artist">Обсуждать художественные книги</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="nature">Выращивать молодняк животных какой-либо породы</option>
+                <option value="human">Тренировать сверстников (или младших) в выполнении каких-либо действий
+                    (трудовых, учебных, спортивных)
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="artist">Копировать рисунки, изображения, настраивать музыкальные инструменты</option>
+                <option value="technic">Управлять каким-либо грузовым, подъемным транспортным средством (подъемным краном, трактором, тепловозом и др.)
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="human">Сообщать, разъяснять людям нужные им сведения (в справочном бюро, на экскурсии
+                    и т.п.)
+                </option>
+                <option value="artist">Художественно оформлять выставки, витрины, участвовать в подготовке пьес,
+                    концертов
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="technic">Ремонтировать изделия, вещи (одежду, технику), жилище</option>
+                <option value="sign">Искать и исправлять ошибки в текстах, таблицах, рисунках</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="nature">Лечить животных</option>
+                <option value="sign">Выполнять вычисления, расчеты</option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="nature">Выводить новые сорта растений</option>
+                <option value="technic">Конструировать, проектировать новые виды промышленных изделий (машины, одежду, дома, продукты питания)
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="human">Разбирать споры, ссоры между людьми, убеждать, разъяснять, поощрять,
+                    наказывать
+                </option>
+                <option value="sign">Разбираться в чертежах, схемах, таблицах (проверять, уточнять, приводить в
+                    порядок)
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="artist">Наблюдать, изучать работу кружков художественной самодеятельности</option>
+                <option value="nature">Наблюдать, изучать жизнь микробов</option>
+            </options>
+        </item>
+        <item id="14">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="technic">Обслуживать, налаживать медицинские приборы и аппараты</option>
+                <option value="human">Оказывать людям медицинскую помощь при ранениях, ушибах, ожогах и т.п.
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="sign">Составлять точные описания (отчеты) о наблюдаемых явлениях, событиях,
+                    измеряемых объектах
+                </option>
+                <option value="artist">Художественно описывать, изображать события, наблюдаемые или
+                    представляемые
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="nature">Делать лабораторные анализы в больнице.</option>
+                <option value="human">Принимать, осматривать больных, беседовать с ними, назначать лечение
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="artist">Красить или расписывать стены помещений, поверхность изделий</option>
+                <option value="technic">Осуществлять монтаж здания или сборку машин, приборов</option>
+            </options>
+        </item>
+        <item id="18">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="human">Организовывать культпоходы сверстников или младших товарищей в театры, музеи, на экскурсии, в туристические походы и т.п
+                </option>
+                <option value="artist">Играть на сцене, принимать участие в концертах</option>
+            </options>
+        </item>
+        <item id="19">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="technic">Изготовлять по чертежам детали изделия (машины, одежду), строить здания
+                </option>
+                <option value="sign">Заниматься черчением, копировать чертежи, карты</option>
+            </options>
+        </item>
+        <item id="20">
+            <name>Вы бы предпочли:
+            </name>
+            <options>
+                <option value="nature">Вести борьбу с болезнями растений, с вредителями леса, сада</option>
+                <option value="sign">Работать на клавишных машинах (пишущей машинке, телетайпе, наборной машине и
+                    др.)
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
