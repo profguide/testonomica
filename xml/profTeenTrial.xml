@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz version="2.0.1">
+    <items>
+        <item id="1" group="natural-force">
+            <name>Есть ли у вас опыт близкого взаимодействия с животными, растениями или людьми?
+                Примеры: вы лечили или принимали участие в лечении и уходе за больным человеком, животным, растением.
+            </name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="2" group="natural-force">
+            <name>Вы когда-нибудь проводили опыты с химией? Например: создавали смеси, вещества, проводили над ними
+                опыты, поджигали, взрывали и тому подобное.
+            </name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="3" group="natural-force">
+            <name>Стремились ли вы попасть в зоопарк, в зоологический музей, в ботанический сад, в лес или в лечебницу
+                чтобы ещё раз увидеть жизнь животных, растений, или увидеть как лечат людей и животных.
+            </name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="4" group="natural-force">
+            <name>Химии вы посвящаете больше своего внимания, чем другим предметам в школе?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="5" group="natural-force">
+            <name>В свободное время вы углублённо читаете о животных, растениях, вирусах и бактериях, устройстве
+                человека, его мозге и т.п.?
+            </name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="6" group="natural-force">
+            <name>Читаете ли вы в свободное время про химические вещества и опыты над ними?
+            </name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10" group="natural-interest">
+            <name>Хотели ли бы ежедневно работать с каким-нибудь из этих объектов природы: человеческое тело, мозг, тело
+                животных, растения, земля, вода, космос?
+            </name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="11" group="natural-interest">
+            <name>Было бы вам интересно ежедневно разрабатывать, анализировать химические вещества в лаборатории, на
+                заводе (например, кремы, лекарства, горючее и т.п.)?
+            </name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="12" group="natural-interest">
+            <name>Нравится ли вам хотя бы один из этих предметов в школе: химия, биология?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="13" group="natural-interest">
+            <name>Согласились ли бы вы учиться биологии или химии всерьез несколько лет в вузе?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="20" group="natural-skills">
+            <name>Есть ли у вас успехи хотя бы в одном из этих предметов в школе: химия, биология?
+            </name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="21" group="natural-skills">
+            <name>Зигота делится:</name>
+            <options>
+                <option value="1" correct="true">Митозом</option>
+                <option value="0">Мейозом</option>
+                <option value="0">Не знаю</option>
+            </options>
+        </item>
+        <item id="22" group="natural-skills">
+            <name>Как связаны гены и хромосомы?</name>
+            <options>
+                <option value="1" correct="true">Ген - это участок хромосомы</option>
+                <option value="0">Они связаны участком РНК</option>
+                <option value="0">Они вместе являются частью белка</option>
+                <option value="0">Ген состоит из РНК, а хромосомы из ДНК</option>
+                <option value="0">Не знаю</option>
+            </options>
+        </item>
+        <item id="23" group="natural-skills">
+            <name>Валентность это:</name>
+            <options>
+                <option value="0">количество электронов на верхнем электронном уровне</option>
+                <option value="1" correct="true">способность атомов вступать в соединение с другими атомами</option>
+                <option value="0">количество атомов в молекуле</option>
+                <option value="0">молекулярная масса</option>
+                <option value="0">Не знаю</option>
+            </options>
+        </item>
+        <item id="24" group="natural-skills">
+            <name>Формула какой кислоты перед вами?</name>
+            <img>
+                https://www.sigmaaldrich.com/content/dam/sigma-aldrich/structure6/163/mfcd00064589.eps/_jcr_content/renditions/mfcd00064589-medium.png
+            </img>
+            <options>
+                <option value="0">Соляная кислота</option>
+                <option value="0">Сероводородная</option>
+                <option value="1" correct="true">Серная</option>
+                <option value="0">Фосфорная</option>
+                <option value="0">Не знаю</option>
+            </options>
+        </item>
+    </items>
+</quiz>

@@ -68,6 +68,10 @@ class CalculatorService
         }
         /**@var AbstractComplexCalculator $calculatorName */
         $calculatorName = $this->calculatorName($complexResult);
+//        todo a check
+//        if (!$calculatorName instanceof AbstractComplexCalculator) {
+//            throw new \RuntimeException("The calculator is not a heir of AbstractComplexCalculator.");
+//        }
         return new $calculatorName($calculators, $this->kernel);
     }
 

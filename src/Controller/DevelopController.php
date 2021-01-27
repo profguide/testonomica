@@ -830,7 +830,7 @@ class DevelopController extends AbstractController
     public function xml()
     {
         $questions = '';
-        $crawler = CrawlerUtil::load($this->kernel->getProjectDir() . "/xml/proforientation2.xml");
+        $crawler = CrawlerUtil::load($this->kernel->getProjectDir() . "/xml/proforientationAdult.xml");
         $items = $crawler->children('item');
         foreach ($items as $itemElement) {
             $itemCrawler = new Crawler($itemElement);

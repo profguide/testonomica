@@ -21,7 +21,7 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
 {
     const MAXIMUM_PROFESSIONS = 15;
 
-    private function fitVersion(): void
+    protected function fitVersion(): void
     {
         // 2.0.1 - 26.12.2020
         // added question 723
@@ -67,7 +67,7 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
      * @param QuestionsHolder $questionsHolder
      * @return array
      */
-    private function calculateTypeGroups(string $groupMainName, AnswersHolder $answersHolder, QuestionsHolder $questionsHolder)
+    protected function calculateTypeGroups(string $groupMainName, AnswersHolder $answersHolder, QuestionsHolder $questionsHolder)
     {
         return [
             $this->calculateTypeGroup($groupMainName . '-force', $answersHolder, $questionsHolder),
@@ -307,7 +307,7 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
      * @param array $typesGroups
      * @return array вида ['tech' => ['interest' => '...', 'skills' => '...'], 'natural' => ...]
      */
-    private function typesDescriptions(array $typesGroups)
+    protected function typesDescriptions(array $typesGroups)
     {
         $descriptions = ['interest' => [], 'skills' => []];
         foreach ($typesGroups as $typeName => $groups) {

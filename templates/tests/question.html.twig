@@ -87,7 +87,7 @@
                         {% endif %}
                     </div>
                     <div class="test__btn-row" id="test-question-btn-row">
-                        <button class="test__btn-direct btn btn-light {% if question.enabledBack and progress > 0 %}test__btn-direct_forced{% endif %}"
+                        <button class="test__btn-direct btn btn-light {% if question.enabledBack and progress > 1 %}test__btn-direct_forced{% endif %}"
                                 id="test-question-back-btn"><span class="material-icons">arrow_back</span></button>
                         <button class="test__btn-direct btn btn-light {% if question.enabledForward or question.method == 'TEXT' %}test__btn-direct_forced{% endif %}"
                                 id="test-question-next-btn"><span class="material-icons">arrow_forward</span></button>

@@ -81,7 +81,7 @@ abstract class TestApiAbstract extends AbstractController
             'question' => $question,
             'count' => $count,
             'progress' => $progress,
-            'percent' => $progress * 100 / $count,
+            'percent' => ($progress - 1) * 100 / $count,
         ]);
     }
 
