@@ -138,6 +138,16 @@ class AnswersUtil
         ));
     }
 
+    /**
+     * E.g.:
+     * Entertainments
+     * Sports
+     * Communication
+     * ...
+     * @param Question $question
+     * @param Answer $answer
+     * @return array
+     */
     public static function ratingToTextArray(Question $question, Answer $answer): array
     {
         $valuesSrc = [];
@@ -147,7 +157,7 @@ class AnswersUtil
         }
         $texts = [];
         foreach ($answer->getValue() as $value) {
-            $texts[] = $valuesSrc[$value];
+            $texts[$value] = $valuesSrc[$value];
         }
         return $texts;
     }
