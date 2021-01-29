@@ -157,7 +157,7 @@
             </options>
         </item>
         <item id="56" group="leader">
-            <name>Начинаешь ли ты беспокоиться и прикладывать усилия, когда ситуация становится стабильной?</name>
+            <name>Начинаешь ли ты беспокоиться и прикладывать усилия, когда твои дела стабильно хороши?</name>
             <options>
                 <option value="1">Да</option>
                 <option value="0">Нет</option>
@@ -245,10 +245,10 @@
             </options>
         </item>
         <item id="105" group="communicator">
-            <name>Вы бы предпочли найти ответ в книге, чем спросить у друзей?</name>
+            <name>Если вы ищете ответ на вопрос, что вы обычно предпочитаете?</name>
             <options>
-                <option value="1">Да</option>
-                <option value="0">Нет</option>
+                <option value="1">Найти ответ в книге</option>
+                <option value="0">Спросить у друзей</option>
             </options>
         </item>
         <item id="106" group="communicator">
