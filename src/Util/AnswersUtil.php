@@ -37,6 +37,27 @@ class AnswersUtil
     }
 
     /**
+     * Counts sum of array values
+     * @param array $sums ['bmw' => 2, 'mercedes' => 2, 'ford' => 1]. Sum is 5
+     * @param array $onlyValues optional, e.g. ['bmw', 'mercedes']. In this case sum is 4. Safe way.
+     * If key is not presented in $sums, it will be ignored
+     * @return float|int|mixed
+     */
+    public static function arraySum(array $sums, ...$onlyValues)
+    {
+        if (empty($onlyValues)) {
+            return array_sum($sums);
+        }
+        $sum = 0;
+        foreach ($sums as $key => $value) {
+            if (in_array($key, $onlyValues, true)) {
+                $sum += $value;
+            }
+        }
+        return $sum;
+    }
+
+    /**
      * Counts percentage of repeated values and builds map
      * @param AnswersHolder $answersHolder ['1' => 'yes', '2' => 'yes', 3 => 'no']
      * @param int $max - what is 100% value

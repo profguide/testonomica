@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Трудно ли тебе держаться на одном уровне со всем классом?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Волнуешься ли ты, когда учитель говорит, что собирается проверить, насколько ты знаешь материал?
+            </name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Трудно ли тебе работать в классе так, как этого хочет учитель?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Снится ли тебе временами, что учитель в ярости от того, что ты не знаешь урок?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Случалось ли, что кто-нибудь из твоего класса бил или ударял тебя?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Часто ли тебе хочется, чтобы учитель не торопился при объяснении нового материала, пока ты не поймешь,
+                что он говорит?
+            </name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Сильно ли ты волнуешься при ответе или выполнении задания?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Случается ли с тобой, что ты боишься высказываться на уроке, потому что боишься сделать глупую
+                ошибку?
+            </name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Дрожат ли у тебя колени, когда тебя вызывают отвечать?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Часто ли твои одноклассники смеются над тобой, когда вы играете в разные игры?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Случается ли, что тебе ставят более низкую оценку, чем ты ожидал?</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="nesovpadenie">Нет</option>
+            </options>
+        </item>
+        <item id="12">
+            <name>Волнует ли тебя вопрос о том, не оставят ли тебя на второй год?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="13">
+            <name>Стараешься ли ты избегать игр, в которых делается выбор, потому что тебя, как правило, не выбирают?
+            </name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="14">
+            <name>Бывает ли временами, что ты весь дрожишь, когда тебя вызывают отвечать?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="15">
+            <name>Часто ли у тебя возникает ощущение, что никто из твоих одноклассников не хочет делать то, чего хочешь
+                ты?
+            </name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="16">
+            <name>Сильно ли ты волнуешься перед тем, как начать выполнять задание?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="17">
+            <name>Трудно ли тебе получать такие отметки, каких ждут от тебя родители?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="18">
+            <name>Боишься ли ты временами, что тебе станет дурно в классе?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="19">
+            <name>Будут ли твои одноклассники смеяться над тобой, ли ты сделаешь ошибку при ответе?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="20">
+            <name>Похож ли ты на своих одноклассников?</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="nesovpadenie">Нет</option>
+            </options>
+        </item>
+        <item id="21">
+            <name>Выполнив задание, беспокоишься ли ты о том, хорошо ли с ним справился?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="22">
+            <name>Когда ты работаешь в классе, уверен ли ты в том, что все хорошо запомнишь?</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="nesovpadenie">Нет</option>
+            </options>
+        </item>
+        <item id="23">
+            <name>Снится ли тебе иногда, что ты в школе и не можешь ответить на вопрос учителя?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="24">
+            <name>Верно ли, что большинство ребят относится к тебе по-дружески?</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="nesovpadenie">Нет</option>
+            </options>
+        </item>
+        <item id="25">
+            <name>Работаешь ли ты более усердно, если знаешь, что результаты твоей работы будут сравниваться в классе с
+                результатами твоих одноклассников?
+            </name>
+            <options>
+                <option value="da">Да</option>
+                <option value="nesovpadenie">Нет</option>
+            </options>
+        </item>
+        <item id="26">
+            <name>Часто ли ты мечтаешь о том, чтобы поменьше волноваться, когда тебя спрашивают?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="27">
+            <name>Боишься ли ты временами вступать в спор?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="28">
+            <name>Чувствуешь ли ты, что твое сердце начинает сильно биться, когда учитель говорит, что собирается
+                проверить твою готовность к уроку?
+            </name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="29">
+            <name>Когда ты получаешь хорошие отметки, думает ли кто-нибудь из твоих друзей, что ты хочешь выслужиться?
+            </name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="30">
+            <name>Хорошо ли ты себя чувствуешь с теми из твоих одноклассников, к которым ребята относятся с особым
+                вниманием?
+            </name>
+            <options>
+                <option value="da">Да</option>
+                <option value="nesovpadenie">Нет</option>
+            </options>
+        </item>
+        <item id="31">
+            <name>Бывает ли, что некоторые ребята в классе говорят что-то, что тебя задевает?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="32">
+            <name>Как ты думаешь, теряют ли расположение те из учеников, которые не справляются с учебой?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="33">
+            <name>Похоже ли на то, что большинство твоих одноклассников не обращают на тебя внимание?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="34">
+            <name>Часто ли ты боишься выглядеть нелепо?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="35">
+            <name>Доволен ли ты тем, как к тебе относятся учителя?</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="nesovpadenie">Нет</option>
+            </options>
+        </item>
+        <item id="36">
+            <name>Помогает ли твоя мама в организации вечеров, как другие мамы твоих одноклассников?</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="nesovpadenie">Нет</option>
+            </options>
+        </item>
+        <item id="37">
+            <name>Волновало ли тебя когда-нибудь, что думают о тебе окружающие?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="38">
+            <name>Надеешься ли ты в будущем учиться лучше, чем раньше?</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="nesovpadenie">Нет</option>
+            </options>
+        </item>
+        <item id="39">
+            <name>Считаешь ли ты, что одеваешься в школу так же хорошо, как и твои одноклассники?</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="nesovpadenie">Нет</option>
+            </options>
+        </item>
+        <item id="40">
+            <name>Часто ли ты задумываешься, отвечая на уроке, что думают о тебе в это время другие?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="41">
+            <name>Обладают ли способные ученики какими-то особыми правами, которых нет у других ребят в классе?</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="nesovpadenie">Нет</option>
+            </options>
+        </item>
+        <item id="42">
+            <name>Злятся ли некоторые из твоих одноклассников, когда тебе удается быть лучше их?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="43">
+            <name>Доволен ли ты тем, как к тебе относятся одноклассники?</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="nesovpadenie">Нет</option>
+            </options>
+        </item>
+        <item id="44">
+            <name>Хорошо ли ты себя чувствуешь, когда остаешься один на один с учителем?</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="nesovpadenie">Нет</option>
+            </options>
+        </item>
+        <item id="45">
+            <name>Высмеивают ли временами твои одноклассники твою внешность и поведение?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="46">
+            <name>Думаешь ли ты, что беспокоишься о своих школьных делах больше, чем другие ребята?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="47">
+            <name>Если ты не можешь ответить, когда тебя спрашивают, чувствуешь ли ты, что вот-вот расплачешься?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="48">
+            <name>Когда вечером ты лежишь в постели, думаешь ли ты временами с беспокойством о том, что будет завтра в
+                школе?
+            </name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="49">
+            <name>Работая над трудным заданием, чувствуешь ли ты порой, что совершенно забыл вещи, которые хорошо знал
+                раньше?
+            </name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="50">
+            <name>Дрожит ли слегка твоя рука, когда ты работаешь над заданием?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="51">
+            <name>Чувствуешь ли ты, что начинаешь нервничать, когда учитель говорит, что собирается дать классу
+                задание?
+            </name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="52">
+            <name>Пугает ли тебя проверка твоих знаний в школе?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="53">
+            <name>Когда учитель говорит, что собирается дать классу задание, чувствуешь ли ты страх, что не справишься с
+                ним?
+            </name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="54">
+            <name>Снилось ли тебе временами, что твои одноклассники могут сделать то, чего не можешь ты?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="55">
+            <name>Когда учитель объясняет материал, кажется ли тебе, что твои одноклассники понимают его лучше, чем
+                ты?
+            </name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="56">
+            <name>Беспокоишься ли ты по дороге в школу, что учитель может дать классу проверочную работу?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="57">
+            <name>Когда ты выполняешь задание, чувствуешь ли ты обычно, что делаешь это плохо?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="58">
+            <name>Дрожит ли слегка твоя рука, когда учитель просит сделать задание на доске перед всем классом?</name>
+            <options>
+                <option value="nesovpadenie">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+    </items>
+</quiz>

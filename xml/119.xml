@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Я несчастлив, занимаясь столькими вещами в одиночку</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Мне не с кем поговорить</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Для меня невыносимо быть таким одиноким</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Мне не хватает общения</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Я чувствую, будто никто действительно не понимает себя</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Я застаю себя в ожидании, что люди позвонят или напишут мне</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Нет никого, к кому я мог бы обратиться</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Я сейчас больше ни с кем не близок</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Те, кто меня окружает, не разделяют мои интересы и идеи</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Я чувствую себя покинутым</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Я не способен раскрепощаться и общаться с теми, кто меня окружает</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="12">
+            <name>Я чувствую себя совершенно одиноким</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="13">
+            <name>Мои социальные отношения и связи поверхностны</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="14">
+            <name>Я умираю по компании</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="15">
+            <name>В действительности никто как следует не знает меня</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="16">
+            <name>Я чувствую себя изолированным от других</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="17">
+            <name>Я несчастен, будучи таким отверженным</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="18">
+            <name>Мне трудно заводить друзей</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="19">
+            <name>Я чувствую себя исключенным и изолированным другими</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+        <item id="20">
+            <name>Люди вокруг меня, но не со мной</name>
+            <options>
+                <option value="chasto">часто</option>
+                <option value="inogda">иногда</option>
+                <option value="redko">редко</option>
+                <option value="nikogda">никогда</option>
+            </options>
+        </item>
+    </items>
+</quiz>

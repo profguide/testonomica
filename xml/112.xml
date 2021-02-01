@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Обычно к концу рабочего дня на моем лице заметна усталость.</name>
+            <options>
+                <option value="A">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Случается, что при первом знакомстве эмоции мешают мне произвести более благоприятное впечатление на
+                партнеров.
+            </name>
+            <options>
+                <option value="0">Да</option>
+                <option value="B">Нет</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>В общении мне часто недостает эмоциональности, выразительности.</name>
+            <options>
+                <option value="C">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Пожалуй, я кажусь окружающим слишком строгим.</name>
+            <options>
+                <option value="D">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Я в принципе против того, чтобы изображать учтивость, если тебе не хочется.</name>
+            <options>
+                <option value="E">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Я обычно умею скрыть от партнеров вспышки эмоций.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="A">Нет</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Часто в общении с коллегами я продолжаю думать о чем-то своем.</name>
+            <options>
+                <option value="B">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Бывает, я хочу выразить партнеру эмоциональную поддержку (внимание, сочувствие, переживание), но он
+                этого не чувствует.
+            </name>
+            <options>
+                <option value="C">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Чаще всего в моих глазах или выражении лица видна озабоченность.</name>
+            <options>
+                <option value="D">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>В деловом общении я стараюсь скрывать свои симпатии к партнерам.</name>
+            <options>
+                <option value="E">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Все мои неприятные переживания обычно написаны на моем лице.</name>
+            <options>
+                <option value="A">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="12">
+            <name>Если я увлекаюсь разговором, то моя мимика становится излишне выразительной.</name>
+            <options>
+                <option value="B">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="13">
+            <name>Пожалуй, я несколько скован, зажат.</name>
+            <options>
+                <option value="C">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="14">
+            <name>Я обычно нахожусь в состоянии нервного напряжения.</name>
+            <options>
+                <option value="D">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="15">
+            <name>Обычно я чувствую дискомфорт, когда приходится обмениваться рукопожатиями в деловой обстановке.</name>
+            <options>
+                <option value="E">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="16">
+            <name>Иногда близкие люди одергивают меня: расслабь мышцы лица, не криви губы, не морщи лицо и т. п.</name>
+            <options>
+                <option value="A">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="17">
+            <name>Разговаривая, я излишне жестикулирую.</name>
+            <options>
+                <option value="B">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="18">
+            <name>Обычно в новой ситуации мне трудно быть раскованным, естественным.</name>
+            <options>
+                <option value="C">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="19">
+            <name>Пожалуй, мое лицо часто выражает печаль или озабоченность, хотя на душе спокойно.</name>
+            <options>
+                <option value="D">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="20">
+            <name>Мне затруднительно смотреть в глаза при общении с малознакомым человеком.</name>
+            <options>
+                <option value="E">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="21">
+            <name>Если я хочу, то мне всегда удается скрыть свою неприязнь к плохому человеку.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="A">Нет</option>
+            </options>
+        </item>
+        <item id="22">
+            <name>Мне часто почему-то бывает весело без всякой причины.</name>
+            <options>
+                <option value="B">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="23">
+            <name>Мне очень просто сделать, по собственному желанию или по заказу, разные выражения лица: изобразить
+                печаль, радость, испуг, отчаяние и т. д.
+            </name>
+            <options>
+                <option value="0">Да</option>
+                <option value="C">Нет</option>
+            </options>
+        </item>
+        <item id="24">
+            <name>Мне говорили, что мой взгляд трудно выдержать.</name>
+            <options>
+                <option value="D">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="25">
+            <name>Мне что-то мешает выражать теплоту, симпатию человеку, даже если я испытываю эти чувства к нему.
+            </name>
+            <options>
+                <option value="E">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+    </items>
+</quiz>

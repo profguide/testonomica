@@ -1,0 +1,28 @@
+{% extends('tests/result.html.twig') %}
+
+{% block result %}
+    <div class="container">
+        <div class="mt-2 mb-2">
+            {% if sum >= 40 and sum <= 50 %}Очень высокий уровень тревоги{% endif %}
+            {% if sum >= 25 and sum < 40 %}Высокий уровень тревоги{% endif %}
+            {% if sum >= 15 and sum < 25 %}Средний уровень тревоги (с тенденцией к высокому){% endif %}
+            {% if sum >= 5 and sum < 15 %}Средний уровень тревоги (с тенденцией к низкому){% endif %}
+            {% if sum >= 0 and sum < 5 %}Низкий уровень тревоги{% endif %}
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ percentage }}%;"
+                 aria-valuenow="{{ percentage }}" aria-valuemin="0" aria-valuemax="100">{{ sum }} из 50
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <p><b>Степень правдивости ответов</b></p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: {{ true_percentage }}%;"
+                     aria-valuenow="{{ true_percentage }}" aria-valuemin="0" aria-valuemax="100">{{ true_sum }} из 10
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

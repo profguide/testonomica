@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+
+        <item id="1">
+            <name>Полезно читать книги, в которых содержатся мысли, противоположные моим собственным.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Меня раздражает, когда отвлекают от важной работы (например, просят совета.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Праздники нужно отмечать с родственниками.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Я могу быть в дружеских отношениях с людьми, чьи поступки не одобряю.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>В игре я предпочитаю выигрывать.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Когда я опаздываю куда-нибудь, я не в состоянии думать ни о чем другом, кроме как скорее доехать.
+            </name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Мне труднее сосредоточиться, чем другим.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Я много времени уделяю тому, чтобы все вещи лежали на своих местах.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Я очень напряженно работаю.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Неприличные шутки нередко вызывают у меня смех.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Уверен(а), что за мной спиной обо мне говорят.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="12">
+            <name>Меня легко переспорить.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="13">
+            <name>Я предпочитаю ходить известными маршрутами.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="14">
+            <name>Всю свою жизнь я строго следую принципам, основанным на чувстве долга.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="15">
+            <name>Временами мои мысли проносятся быстрее, чем я успеваю их высказывать.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="16">
+            <name>Бывает, что чья-то нелепая оплошность вызывает у меня смех.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="17">
+            <name>Бывает, что мне в голову приходят плохие слова, часто даже ругательства, и я не могу никак от них
+                избавиться.
+            </name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="18">
+            <name>Я уверен(а), что в мое отсутствие обо мне говорят.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="19">
+            <name>Я спокойно выхожу из дома, не беспокоясь о том, заперта ли дверь, выключен ли свет, газ и т.п.
+            </name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="20">
+            <name>Самое трудное для меня в любом деле – это начало.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="21">
+            <name>Я практически всегда сдерживаю свои обещания.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="22">
+            <name>Нельзя строго осуждать человека, нарушающего формальные правила.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="23">
+            <name>Мне часто приходилось выполнять распоряжения людей, гораздо меньше знающих, чем я.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="24">
+            <name>Я не всегда говорю правду.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="25">
+            <name>Мне трудно сосредоточиться на какой-либо задаче или работе.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="26">
+            <name>Кое-кто настроен против меня.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="27">
+            <name>Я люблю доводить начатое до конца.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="28">
+            <name>Я всегда стараюсь не откладывать на завтра то, что можно сделать сегодня.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="29">
+            <name>Когда я иду или еду по улице, я часто подмечаю изменения в окружающей обстановке – подстриженные
+                кусты, новые рекламные щиты и т.д.
+            </name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="30">
+            <name>Иногда я так настаиваю на своем, что люди теряют терпение.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="31">
+            <name>Иногда знакомые подшучивают над моей аккуратностью и педантичностью.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="32">
+            <name>Если я не прав(а), я не сержусь.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="33">
+            <name>Обычно меня настораживают люди, которые относятся ко мне дружелюбнее, чем я ожидал(а).</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="34">
+            <name>Мне трудно отвлечься от начатой работы даже ненадолго.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="35">
+            <name>Когда я вижу, что меня не понимают, я легко отказываюсь от намерения доказать что-либо.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="36">
+            <name>В трудные моменты я умею позаботиться о других.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="37">
+            <name>У меня тяга к перемене мест, и я счастлив(а), когда брожу где-нибудь или путешествую.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="38">
+            <name>Мне нелегко переключиться на новое дело, но потом, разобравшись, я справляюсь с ним лучше
+                других.
+            </name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="39">
+            <name>Мне нравится детально изучать то, чем я занимаюсь.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="40">
+            <name>Мать или отец заставляли меня подчиняться даже тогда, когда я считал(а) этот неразумным.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="41">
+            <name>Я умею быть спокойным(ой), и даже немного равнодушным(ой) при виде чужого несчастья.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="42">
+            <name>Я легко переключаюсь с одного дела на другое.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="43">
+            <name>Из всех мнений по спорному вопросу только одно действительно является верным.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="44">
+            <name>Я люблю доводить свои умения и навыки до автоматизма.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="45">
+            <name>Меня легко увлечь новыми затеями.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="46">
+            <name>Я пытаюсь добиться своего наперекор обстоятельствам.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="net">Нет</option>
+            </options>
+        </item>
+        <item id="47">
+            <name>Во время монотонной работы я невольно начинаю изменять способ действия, даже если это порой
+                ухудшает результат.
+            </name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="48">
+            <name>Люди порой завидуют моему терпению и дотошности.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="49">
+            <name>На улице, в транспорте я часто разглядываю окружающих людей.</name>
+            <options>
+                <option value="da">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="50">
+            <name>Если бы люди не были настроены против меня, я бы достиг(ла) в жизни гораздо большего.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        
+    </items>
+</quiz>

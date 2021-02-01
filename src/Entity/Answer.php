@@ -32,4 +32,19 @@ class Answer
     {
         return $this->value;
     }
+
+    public function hasValue(string $needle): bool
+    {
+        return in_array($needle, $this->getValue());
+    }
+
+    public function hasValues(array $needles): bool
+    {
+        foreach ($needles as $needle) {
+            if ($this->hasValue($needle)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

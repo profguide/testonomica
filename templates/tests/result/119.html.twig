@@ -1,0 +1,17 @@
+{% extends('tests/result.html.twig') %}
+
+{% block result %}
+    <div class="container">
+        {% if sum >= 40 and sum <= 60 %}Высокая степень одиночества{% endif %}
+        {% if sum >= 20 and sum <= 39 %}Средний уровень одиночества{% endif %}
+        {% if sum >= 0 and sum <= 19 %}Низкия уровень одиночества{% endif %}
+
+        <div class="progress mt-2">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale }}%;"
+                 aria-valuenow="{{ scale }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ sum }} из 60
+            </div>
+        </div>
+    </div>
+{% endblock %}
