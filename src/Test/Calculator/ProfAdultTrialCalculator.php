@@ -32,7 +32,7 @@ class ProfAdultTrialCalculator extends AbstractProforientationCalculator
      */
     public function calculateTypesGroups(): array
     {
-        $types = ['natural'];
+        $types = ['art', 'boss', 'com'];
         $result = [];
         foreach ($types as $type) {
             $result[$type] = $this->calculateTypeGroups($type, $this->answersHolder, $this->questionsHolder);

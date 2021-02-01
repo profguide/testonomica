@@ -1,136 +1,294 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <quiz version="2.0.1">
     <items>
-        <item id="1" group="natural-force">
-            <name>Есть ли у вас опыт близкого взаимодействия с животными, растениями или людьми?
-                Примеры: вы лечили или принимали участие в лечении и уходе за больным человеком, животным, растением.
+        <item id="900" group="com-force">
+            <name>Когда возникают конфликтные ситуации, берёте ли вы
+                на себя труд примирить конфликтующие стороны?
+            </name>
+            <options>
+                <option value="1">Да, я это делаю эффективно</option>
+                <option value="0">Нет, пусть разбираются сами</option>
+                <option value="0">Ко мне и не обращались за такой помощью</option>
+            </options>
+        </item>
+        <item id="910" group="com-interest">
+            <name>Нравится ли вам, общаясь с кем-то, подмечать интонации и язык тела, чтобы составить картину о
+                собеседнике?
             </name>
             <options>
                 <option value="1">Да</option>
                 <option value="0">Нет</option>
             </options>
         </item>
-        <item id="2" group="natural-force">
-            <name>Вы когда-нибудь проводили опыты с химией? Например: создавали смеси, вещества, проводили над ними
-                опыты, поджигали, взрывали и тому подобное.
+        <item id="1001" group="boss-force">
+            <name>Читаете ли вы статьи, книги, сайты о маркетинге и продажах?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="911" group="com-interest">
+            <name>Если вас взволновало какое-то событие, фильм, книга, то вы обычно делитесь с кем-либо своими
+                чувствами и мыслями?
             </name>
             <options>
                 <option value="1">Да</option>
                 <option value="0">Нет</option>
             </options>
         </item>
-        <item id="3" group="natural-force">
-            <name>Стремились ли вы попасть в зоопарк, в зоологический музей, в ботанический сад, в лес или в лечебницу
-                чтобы ещё раз увидеть жизнь животных, растений, или увидеть как лечат людей и животных.
+        <item id="700" group="art-force">
+            <name>Через неделю у важного для вас человека день рождения.
+                Хочется преподнести своё собственное произведение (песню,
+                поделку, картину, стихи и пр.). Ваши действия?
+            </name>
+            <options>
+                <option value="1">Заранее продумываю идеи, выразительные детали и дорабатываю
+                    до совершенства.
+                </option>
+                <option value="1">Всё придумаю и сделаю накануне.</option>
+                <option value="1">Вечеринка вечером? Вот утром что-нибудь и придумаю.</option>
+                <option value="1">Экспромт, только экспромт! На него спишу все несовершенства.</option>
+                <option value="0">Сам ничего не умею. Лучше куплю подарок в магазине.</option>
+            </options>
+        </item>
+        <item id="701" group="art-force">
+            <name>Случалось ли вам пожертвовать компьютерной игрой,
+                встречей с друзьями ради того, чтобы поработать над
+                своим творческим продуктом (песня, фильм, рисунок и т.п.)?
+            </name>
+            <options>
+                <option value="1">Бывало, и не раз. За работой время летит незаметно.</option>
+                <option value="0">Однажды было</option>
+                <option value="0">Что-то не припомню такого</option>
+            </options>
+        </item>
+        <item id="901" group="com-force">
+            <name>Трудно ли вам выступать перед аудиторией?</name>
+            <options>
+                <option value="1">Нет, мне это совсем не трудно</option>
+                <option value="0">Трудно, я очень волнуюсь и предпочитаю не выступать</option>
+            </options>
+        </item>
+        <item id="1000" group="boss-force">
+            <name>Пытались ли вы когда-нибудь заработать деньги по своей инициативе, не нанимаясь на работу?
+                Пример: инвестировали, перепродали, оказали кому-то услугу и т.п.
+            </name>
+            <options>
+                <option value="1">Да, у меня это хорошо получается</option>
+                <option value="0">Да, я пробовал, но мне не понравилось</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="902" group="com-force">
+            <name>Когда сотрудник просит вас объяснить непонятное по какому-то рабочему моменту:</name>
+            <options>
+                <option value="1">Вы с удовольствем берётесь объяснить и объясняете понятно</option>
+                <option value="0">Вы объясняете, но от вашего объяснения не становится понятно</option>
+                <option value="0">Вы отказываетесь, пусть объясняет кто-то другой</option>
+            </options>
+        </item>
+        <item id="912" group="com-interest">
+            <name>Вас несправедливо обошли с премией. Как вы поступите?</name>
+            <options>
+                <option value="0">Я промолчу</option>
+                <option value="1">Я подойду к начальнику и постараюсь прояснить ситуацию</option>
+            </options>
+        </item>
+        <item id="1020" group="boss-skills">
+            <name>Какая из этих моделей по сути не является предпринимательством:</name>
+            <options>
+                <option value="0">Компания получает доходы от свободных продаж своих товаров на рынке с риском провала
+                </option>
+                <option value="1">Производитель товаров и услуг получает деньги от государства, а не от продаж своих
+                    товаров на рынке
+                </option>
+                <option value="0">Индивидуальный предприниматель работает один и получает доход от продажи своих товаров
+                    и услуг на рынке
+                </option>
+            </options>
+        </item>
+        <item id="1021" group="boss-skills">
+            <name>Представьте себе, что вы участвуете в интересном для вас проекте.
+                Необходимо: найти источники информации, написать план действий,
+                распределить роли и ответственность в команде каждого участника,
+                контролировать работу, нести ответственность за результат работы команды.
+                Награда - благодарность клинета и преми. Что бы вы предпочли?
+            </name>
+            <options>
+                <option value="1">Написать план действий, распределить роли, контролировать
+                    выполнение, лично отвечать за результат работы всей команды
+                </option>
+                <option value="0">Хорошо выполнить опеределённый фрагмент работы:
+                    найти источники информации, написать текст, сделать презентацию и подобное.
+                </option>
+            </options>
+        </item>
+        <item id="913" group="com-interest">
+            <name>Хотите ли вы, чтобы каждый день на работе вы что-то делали с людьми непосредственно?
+                Например, лечили бы их, учили, организовывали и т.д.
+            </name>
+            <options>
+                <option value="1">Да, с удовольствием</option>
+                <option value="0">Нет, я бы не хотел напрямую иметь дела с людьми</option>
+            </options>
+        </item>
+        <item id="1011" group="boss-interest">
+            <name>Вы постоянно изобретаете способы как вам заработать денег?</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="1012" group="boss-interest">
+            <name>Вдохновляют ли вас чьи-то рассказы о том, как бизнесмены
+                зарабатывают деньги и как побеждают в конкурентной борьбе?
             </name>
             <options>
                 <option value="1">Да</option>
                 <option value="0">Нет</option>
             </options>
         </item>
-        <item id="4" group="natural-force">
-            <name>Химии вы посвящаете больше своего внимания, чем другим предметам в школе?</name>
-            <options>
-                <option value="1">Да</option>
-                <option value="0">Нет</option>
-            </options>
-        </item>
-        <item id="5" group="natural-force">
-            <name>В свободное время вы углублённо читаете о животных, растениях, вирусах и бактериях, устройстве
-                человека, его мозге и т.п.?
+        <item id="711" group="art-interest">
+            <name>Если бы вы ни в чём остро не нуждались, то подарочную карту
+                какого магазина хотели бы получить на день рождения?
             </name>
             <options>
-                <option value="1">Да</option>
-                <option value="0">Нет</option>
+                <option value="0">ювелирный! (меня давно волнует один чудный браслет)</option>
+                <option value="0">одёжный</option>
+                <option value="0">книжный</option>
+                <option value="0">магазин электроники</option>
+                <option value="1">«Всё для художников»</option>
+                <option value="1">«Всё для рукоделия»</option>
+                <option value="0">магазин инструментов «Всё для рукастых».</option>
             </options>
         </item>
-        <item id="6" group="natural-force">
-            <name>Читаете ли вы в свободное время про химические вещества и опыты над ними?
+        <item id="712" group="art-interest">
+            <name>В своих социальных сетях вы подписываетесь на разных людей.
+                Но интереснее всего вам читать:
             </name>
             <options>
-                <option value="1">Да</option>
-                <option value="0">Нет</option>
+                <option value="0">фитнес-инструкторов</option>
+                <option value="0">экспертов моды и стиля</option>
+                <option value="0">политиков</option>
+                <option value="1">актёров и режиссёров</option>
+                <option value="0">историков</option>
+                <option value="0">политологов</option>
+                <option value="0">специалистов в области естественных наук</option>
+                <option value="0">литературоведов</option>
+                <option value="1">писателей и поэтов</option>
+                <option value="1">художников</option>
+                <option value="0">своих друзей</option>
+                <option value="0">я ни на кого не подписываюсь</option>
             </options>
         </item>
-        <item id="10" group="natural-interest">
-            <name>Хотели ли бы ежедневно работать с каким-нибудь из этих объектов природы: человеческое тело, мозг, тело
-                животных, растения, земля, вода, космос?
+        <item id="920" group="com-skills">
+            <name>Насколько вам трудно позвонить по телефону незнакомому человеку и что-то выяснить?</name>
+            <options>
+                <option value="0">Трудно, и я стараюсь отложить этот разговор</option>
+                <option value="1">Совсем не трудно, мне это даже нравится</option>
+            </options>
+        </item>
+        <item id="720" group="art-skills">
+            <name>Если у вас есть творческие работы, то имели ли они успех?</name>
+            <options>
+                <option value="0">У меня нет творческих работ и никогда не было</option>
+                <option value="0">Мои работы высоко ценят только друзья и близкие</option>
+                <option value="1">Мои работы были неплохо оценены на выставке / фестивале / концерте / спектакле.
+                </option>
+                <option value="1">Да, выкладывал в интернет. Есть подписчики и лайки.</option>
+                <option value="0">Выкладывал в интернет, но откликов пока нет.</option>
+                <option value="1">Да, я уже немного заработал на своём творчестве.</option>
+            </options>
+        </item>
+        <item id="721" group="art-skills">
+            <name>Если в компании возникла идея что-нибудь нарисовать / спеть / сочинить / сплясать…</name>
+            <options>
+                <option value="1">Вы быстро включаетесь, и успех обеспечен</option>
+                <option value="0">В компании всегда есть люди, которые справляются лучше</option>
+                <option value="0">Получается не хуже, чем у других</option>
+            </options>
+        </item>
+        <item id="922" group="com-skills">
+            <name>Легко ли вы вливаетесь в новый коллектив?</name>
+            <options>
+                <option value="1">Да, это для меня не является стрессом</option>
+                <option value="0">Трудно</option>
+            </options>
+        </item>
+        <item id="921" group="com-skills">
+            <name>Быстро ли вы устаёте от общения с людьми?</name>
+            <options>
+                <option value="0">Да, даже если этот разговор дружеский и длится не более часа</option>
+                <option value="1">Нет, я готов общаться с людьми долго и не устаю от этого</option>
+            </options>
+        </item>
+        <item id="923" group="com-skills">
+            <name>Трудно ли вам попросить вернуть долг, указать знакомому человеку на его ошибку?</name>
+            <options>
+                <option value="0">Да, я долго готовлюсь к этому разговору, и всё равно мне неловко</option>
+                <option value="1">Я легко нахожу нужные слова, это для меня не проблема</option>
+            </options>
+        </item>
+        <item id="702" group="art-force">
+            <name>У вас нет необходимого инструмента, приспособления или книги, необходимой для творчества.
+                Вы нашли где это купить, но не близко к дому, придётся ехать два часа. Что скажете?
             </name>
             <options>
-                <option value="1">Да</option>
-                <option value="0">Нет</option>
+                <option value="1">Поеду немедленно! Пока никто не перехватил.</option>
+                <option value="0">Нет, это слишком неудобно, а мне спешить некуда. Вот
+                    было бы поближе - купил бы.
+                </option>
             </options>
         </item>
-        <item id="11" group="natural-interest">
-            <name>Было бы вам интересно ежедневно разрабатывать, анализировать химические вещества в лаборатории, на
-                заводе (например, кремы, лекарства, горючее и т.п.)?
-            </name>
+        <item id="1010" group="boss-interest">
+            <name>Какой сценарий вы бы предпочли для себя?</name>
+            <options>
+                <option value="0">Получить хорошую работу, стать специалистом, но не стремиться быть начальником
+                </option>
+                <option value="0">Получить хорошую работу, продвинуться по службе, стать
+                    большим боссом, прилично зарабатывать
+                </option>
+                <option value="1">Работать на себя, быть свободным от начальства,
+                    но работать больше других в надежде зарабатывать всё больше и больше
+                    в условиях конкуренции и сильных финансовых рисков
+                </option>
+            </options>
+        </item>
+        <item id="710" group="art-interest">
+            <name>Вы слушаете длинный скучный доклад, но уйти нельзя. Как себя развлечь?</name>
+            <options>
+                <option value="0">поиграть в смартфоне</option>
+                <option value="1">нарисовать что-нибудь, если есть чем рисовать</option>
+                <option value="0">попереписываться с друзьями</option>
+                <option value="1">сочинить стих</option>
+                <option value="1">сочинить мелодию или песню</option>
+                <option value="0">читать книгу украдкой</option>
+                <option value="0">спать</option>
+                <option value="0">конспектировать лекцию (вдруг там есть что-то ценное!)</option>
+            </options>
+        </item>
+        <item id="1002" group="boss-force">
+            <name>Придумали ли вы схему заработка, которую не видели другие люди?</name>
             <options>
                 <option value="1">Да</option>
                 <option value="0">Нет</option>
             </options>
         </item>
-        <item id="12" group="natural-interest">
-            <name>Нравится ли вам хотя бы один из этих предметов в школе: химия, биология?</name>
+        <item id="722" group="art-skills">
+            <name>Приходилось ли вам участвовать в творческих конкурсах?</name>
             <options>
-                <option value="1">Да</option>
-                <option value="0">Нет</option>
+                <option value="0">Нет, пока нечего предъявить</option>
+                <option value="0">Да, я участвовал, но не победил</option>
+                <option value="1">Да, мою работу заметили и похвалили</option>
             </options>
         </item>
-        <item id="13" group="natural-interest">
-            <name>Согласились ли бы вы учиться биологии или химии всерьез несколько лет в вузе?</name>
+        <item id="1022" group="boss-skills">
+            <name>Себестоимость товара это?</name>
             <options>
-                <option value="1">Да</option>
-                <option value="0">Нет</option>
-            </options>
-        </item>
-        <item id="20" group="natural-skills">
-            <name>Есть ли у вас успехи хотя бы в одном из этих предметов в школе: химия, биология?
-            </name>
-            <options>
-                <option value="1">Да</option>
-                <option value="0">Нет</option>
-            </options>
-        </item>
-        <item id="21" group="natural-skills">
-            <name>Зигота делится:</name>
-            <options>
-                <option value="1" correct="true">Митозом</option>
-                <option value="0">Мейозом</option>
-                <option value="0">Не знаю</option>
-            </options>
-        </item>
-        <item id="22" group="natural-skills">
-            <name>Как связаны гены и хромосомы?</name>
-            <options>
-                <option value="1" correct="true">Ген - это участок хромосомы</option>
-                <option value="0">Они связаны участком РНК</option>
-                <option value="0">Они вместе являются частью белка</option>
-                <option value="0">Ген состоит из РНК, а хромосомы из ДНК</option>
-                <option value="0">Не знаю</option>
-            </options>
-        </item>
-        <item id="23" group="natural-skills">
-            <name>Валентность это:</name>
-            <options>
-                <option value="0">количество электронов на верхнем электронном уровне</option>
-                <option value="1" correct="true">способность атомов вступать в соединение с другими атомами</option>
-                <option value="0">количество атомов в молекуле</option>
-                <option value="0">молекулярная масса</option>
-                <option value="0">Не знаю</option>
-            </options>
-        </item>
-        <item id="24" group="natural-skills">
-            <name>Формула какой кислоты перед вами?</name>
-            <img>
-                https://www.sigmaaldrich.com/content/dam/sigma-aldrich/structure6/163/mfcd00064589.eps/_jcr_content/renditions/mfcd00064589-medium.png
-            </img>
-            <options>
-                <option value="0">Соляная кислота</option>
-                <option value="0">Сероводородная</option>
-                <option value="1" correct="true">Серная</option>
-                <option value="0">Фосфорная</option>
-                <option value="0">Не знаю</option>
+                <option value="1">все расходы предприятия на его изготовление</option>
+                <option value="0">оптовая цена, по которой предприятие отдает товары посредникам или в магазин</option>
+                <option value="0">рекомендованная магазинам розничная цена на товар</option>
+                <option value="0">стоимость товара, которую производитель забирает себе после реализации товара</option>
             </options>
         </item>
     </items>
