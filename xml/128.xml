@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Когда началась Первая мировая война?
+            </name>
+            <options>
+                <option value="0">1905</option>
+                <option value="key">1914</option>
+                <option value="0">1917</option>
+                <option value="0">1941</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Какое событие считается поводом для развязывания Первой мировой войны?
+            </name>
+            <options>
+                <option value="0">Столкновение Пушкина с Дантесом</option>
+                <option value="0">Знаменитое выступление Ленина на броневике</option>
+                <option value="key">Смертельное покушение на наследника австро-венгерского престола Франца Фердинанда</option>
+                <option value="0">Распутин отговорил императора от вмешательства в Балканскую войну</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Принимали ли участие в Первой мировой войне Гитлер и Черчиль?
+            </name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Верно ли, что к окончанию войны Российская империя уже перестала существовать?
+            </name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Какие союзы воевали друг с другом?
+            </name>
+            <options>
+                <option value="0">НАТО с ОПЕК+</option>
+                <option value="0">Союз правых сил с ЛДПР</option>
+                <option value="key">Антанта с Тройственным союзом</option>
+                <option value="0">БРИКС с ООН</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Сколько человек погибло на поле боя?
+            </name>
+            <options>
+                <option value="key">Около 10 миллионов</option>
+                <option value="0">Около 40 миллионов</option>
+                <option value="0">Война ещё идёт и число погибших продолжает расти</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Какая пандемия стала причиной смерти для трети от всех жертв в Первой мировой войне?
+            </name>
+            <options>
+                <option value="0">Чума</option>
+                <option value="0">Оспа</option>
+                <option value="key">Испанка</option>
+                <option value="0">COVID-19</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Как назывался первый прототип танка в Первой мировой войне?
+            </name>
+            <options>
+                <option value="0">Крепыш Тони</option>
+                <option value="key">Малыш Вилли</option>
+                <option value="0">Дядюшка Сэмми</option>
+                <option value="0">Повелитель бури</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Кто руководил Россией во время выхода из Первой мировой войны, подписав "Брестский мир"?
+            </name>
+            <options>
+                <option value="0">Николай II</option>
+                <option value="0">Михаил Горбачев</option>
+                <option value="key">Владимир Ленин</option>
+                <option value="0">Иосиф Сталин</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>В каком году закончилась Первая мировая война?
+            </name>
+            <options>
+                <option value="0">1945</option>
+                <option value="0">1998</option>
+                <option value="key">1918</option>
+                <option value="0">1861</option>
+            </options>
+        </item>
+    </items>
+</quiz>

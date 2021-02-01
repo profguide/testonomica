@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>В каком году началась Вторая мировая война?
+                
+            </name>
+            <options>
+                <option value="0">1905</option>
+                <option value="0">1914</option>
+                <option value="key">1939</option>
+                <option value="0">1941</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Сколько стран участвовало в войне, если всего на тот момент существовало 73 страны?
+            </name>
+            <options>
+                <option value="0">7</option>
+                <option value="0">15</option>
+                <option value="key">62</option>
+                <option value="key">73</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Применялось ли ядерное оружие в ходе войны?
+            </name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Когда СССР и Германия подписали пакт о ненападении?
+            </name>
+            <options>
+                <option value="0">Они ничего не подписывали</option>
+                <option value="0">1 октября 1940 года</option>
+                <option value="key">23 августа 1939 года</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>С какого вооруженного конфликта война начинает считаться Второй мировой?
+            </name>
+            <options>
+                <option value="0">Англия начала бомбардировку Берлина 25 августа 1940 года</option>
+                <option value="0">Япония напала на гавань Перл-Харбор (США) 7 декабря 1941 года</option>
+                <option value="key">Германия и Словакия начали боевые действия против Польши 1 сентября 1939 года</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Когда Германия напала на СССР?
+            </name>
+            <options>
+                <option value="0">28 июля 1914 года</option>
+                <option value="key">22 июня 1941 года</option>
+                <option value="0">12 апреля 1961 года</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>На каких материках велись военные действия?
+            </name>
+            <options>
+                <option value="0">Евразия и Австралия</option>
+                <option value="key">Евразия и Африка</option>
+                <option value="0">Северная Америка и Евразия</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Какие три государства являлись "костяком" нацистского блока "оси"?
+            </name>
+            <options>
+                <option value="key">Германия, Япония, Италия</option>
+                <option value="0">Германия, Словакия, Австрия</option>
+                <option value="0">Германия, Италия, Польша</option>
+                <option value="0">США, Великобритания, Франция</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Какой союз стал основой для Организации объединённых наций (ООН)?
+            </name>
+            <options>
+                <option value="0">НАТО</option>
+                <option value="0">Антанта</option>
+                <option value="key">Антигитлеровская коалиция</option>
+                <option value="0">Тройственный союз</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Какие страны входили в состав "Большой четвёрки" Антигитлеровской коалиции?
+            </name>
+            <options>
+                <option value="0">СССР, Япония, Франция, США</option>
+                <option value="key">СССР, Великобритания, США, Китай</option>
+                <option value="0">США, Великобритания, Канада, Франция</option>
+                <option value="0">СССР, Китай, Бразилия, ЮАР</option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Какие страны поделили Польшу между собой в 1939 году?
+            </name>
+            <options>
+                <option value="0">Словакия и Чехия</option>
+                <option value="key">СССР и Германия</option>
+                <option value="0">Германия и Италия</option>
+                <option value="0">Япония и Китай</option>
+            </options>
+        </item>
+        <item id="12">
+            <name>Сколько длилось вторжение Германии в Данию?
+            </name>
+            <options>
+                <option value="key">Несколько часов</option>
+                <option value="0">2 дня</option>
+                <option value="0">3 месяца</option>
+                <option value="0">Дания смогла отбиться</option>
+            </options>
+        </item>
+        <item id="13">
+            <name>Кто победил в "Битве за Британию", которая длилась полгода и велась исключительно силами ВВС и противовоздушной обороны?
+            </name>
+            <options>
+                <option value="0">Германия</option>
+                <option value="key">Великобритания</option>
+                <option value="0">Япония</option>
+                <option value="0">Такой битвы не было</option>
+            </options>
+        </item>
+        <item id="14">
+            <name>Сколько дней длилась Блокада Ленинграда?
+            </name>
+            <options>
+                <option value="0">365 дней</option>
+                <option value="key">872 дня</option>
+                <option value="0">1233 дня</option>
+                <option value="0">Блокады Ленинграда не было. Это пропаганда Германии, призванная подорвать авторитет войск СССР.</option>
+            </options>
+        </item>
+                <item id="15">
+        <name>Как называлась единственная транспортная магистраль через Ладожское озеро, связывающая Ленинград со страной?
+        </name>
+        <options>
+            <option value="0">Путь из варяг в греки</option>
+            <option value="0">Шёлковый путь</option>
+            <option value="key">Дорога жизни</option>
+            <option value="0">Северный поток</option>
+        </options>
+    </item>
+        <item id="16">
+            <name>Какое событие заставило США вступить во Вторую мировую войну?
+            </name>
+            <options>
+                <option value="0">Нападение Германии и её союзников на СССР</option>
+                <option value="0">Вторжение Германии, Италии, Венгрии и Болгарии в Югославию</option>
+                <option value="key">Бомбардировка Японией Перл-Харбора</option>
+                <option value="0">США не вступала в войну, только помогала союзникам поставкой военной техники и продовольствия.</option>
+            </options>
+        </item>
+        <item id="17">
+            <name>Когда впервые военные действия начались на территории самой Германии?
+            </name>
+            <options>
+                <option value="0">16 апреля 1945 года при штурме Берлина</option>
+                <option value="key">30 мая 1942 года Великобритания начала бомбить город Кёльн</option>
+                <option value="0">5 апреля 1946 года Япония предала Германию и нанесла ядерный удар по Берлину</option>
+                <option value="0">На территории Германии никогда не велось боевых действий, поэтому страна так быстро восстановилась после войны</option>
+            </options>
+        </item>
+        <item id="18">
+        <name>Какое сражение в историографии считается самым крупным (величайшим) танковым сражением в истории, где участвовали около 2 млн человек, 6 тысяч танков, 4 тысячи самолётов; сражение, проложившее «путь к великим советским наступательным действиям 1944-45 годов»?
+        </name>
+        <options>
+            <option value="0">Бородинское сражение</option>
+            <option value="0">Сталинградская битва</option>
+            <option value="key">Курская битва</option>
+            <option value="0">Такого сражения не было</option>
+        </options>
+    </item>
+        <item id="19">
+            <name>6 июня 1944 года против Германии открывается второй фронт силами американских, британских и канадских войск. Где это было?
+            </name>
+            <options>
+                <option value="key">Побережье Нормандии (Северная Франция)</option>
+                <option value="0">Рим</option>
+                <option value="0">Побережье Ниццы (Южная Франция)</option>
+                <option value="0">Это всё выдумки США, чтобы присвоить победу себе</option>
+            </options>
+        </item>
+        <item id="20">
+            <name>Какая битва стала одной из самых кровавых в истории человечества и положила начало «коренному перелому» (перехвату советским командованием стратегической инициативы) в войне?
+            </name>
+            <options>
+                <option value="0">Курская битва</option>
+                <option value="0">Арденнское сражение</option>
+                <option value="key">Сталинградская битва</option>
+                <option value="0">Битва за Британию</option>
+            </options>
+        </item>
+        <item id="21">
+            <name>30 апреля 1945 года Германия лишается своего лидера. Как это произошло?
+            </name>
+            <options>
+                <option value="0">Гитлера арестовали, как военного преступника и передали СССР</option>
+                <option value="key">Гитлер совершил самоубийство</option>
+                <option value="0">При попытке бегства, поезд, в котором находился Гитлер, потерпел крушение и разбился. Погибли все пассажиры.</option>
+                <option value="0">Гитлер сбежал в Южную Америку и, по слухам, жив до сих пор</option>
+            </options>
+        </item>
+        <item id="22">
+            <name>Германия капитулировала, но Япония продолжала сражаться. Какое событие заставило Японию сдаться?
+            </name>
+            <options>
+                <option value="0">Посол СССР отравил японского премьер-министра</option>
+                <option value="0">Война во Вьетнаме заставила Японию переключиться на новый фронт</option>
+                <option value="key">ВВС США сбросили на Японию 2 ядерных бомбы, на города Хиросима и Нагасаки.</option>
+                <option value="0">Япония не сдавалась и до сих пор находится в состоянии войны с СССР и США.</option>
+            </options>
+        </item>
+        <item id="23">
+            <name>В каком году закончилась Вторая мировая война?
+            </name>
+            <options>
+                <option value="0">1946</option>
+                <option value="key">1945</option>
+                <option value="0">1954</option>
+                <option value="0">1991</option>
+            </options>
+        </item>
+    </items>
+</quiz>

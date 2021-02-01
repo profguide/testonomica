@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Как называется музыкальный интервал, в котором соотношение частот между звуками составляет один к двум (то есть частота высокого звука в два раза больше низкого)?
+                
+            </name>
+            <options>
+                <option value="0">Квинта</option>
+                <option value="0">Секста</option>
+                <option value="0">Септима</option>
+                <option value="key">Октава</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Какой знак повышает тон на полтона?
+            </name>
+            <options>
+                <option value="key">Диез</option>
+                <option value="0">Бемоль</option>
+                <option value="0">Бекар</option>
+                <option value="0">Бетховен</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Как называется одновременное сочетание трех или более звуков?
+            </name>
+            <options>
+                <option value="0">Квинта</option>
+                <option value="0">Бемоль</option>
+                <option value="key">Аккорд</option>
+                <option value="0">Аккордеон</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Какой знак отменяет бемоль и диез?
+            </name>
+            <options>
+                <option value="0">Конец зоны всех ограничений</option>
+                <option value="key">Бекар</option>
+                <option value="0">Дубль-диез</option>
+                <option value="0">Дубль-бемоль</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Какой темп в музыкальных произведениях самый быстрый?
+            </name>
+            <options>
+                <option value="0">presto</option>
+                <option value="key">prestissimo (possible)</option>
+                <option value="0">vivace</option>
+                <option value="0">allegro</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Сколько восьмых вмещает четвертная нота?
+            </name>
+            <options>
+                <option value="0">Одну</option>
+                <option value="key">Две</option>
+                <option value="0">Три</option>
+                <option value="0">Ни одной</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Как называется пятиступенная интервальная система, все звуки которой могут быть расположены по чистым квинтам и/или квартам? Этот звукоряд лежит в основе китайской, татарской, монгольской музыки, а также в основе музыки тюркских народов и народов Анд.
+            </name>
+            <options>
+                <option value="0">Диатоника</option>
+                <option value="0">Целотоновая гамма</option>
+                <option value="key">Пентатоника</option>
+                <option value="0">Хроматическая гамма</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Какой в музыке круг является самым известным?
+            </name>
+            <options>
+                <option value="key">Квинтовый</option>
+                <option value="0">Обертоновый</option>
+                <option value="0">Бенгальский</option>
+                <option value="0">Мажоно-саксонский</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>С какой тональности начинается квинтовый круг для мажорных тональностей?
+            </name>
+            <options>
+                <option value="key">До мажор</option>
+                <option value="0">Ре минор</option>
+                <option value="0">Ми мажор</option>
+                <option value="0">Фа мажор</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>С какой тональности начинается квинтовый круг для минорных тональностей?
+            </name>
+            <options>
+                <option value="0">До мажор</option>
+                <option value="0">Фа мажор</option>
+                <option value="key">Ля минор</option>
+                <option value="0">Ми минор</option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Сколько диезов имеет тональность "ре мажор"?
+            </name>
+            <options>
+                <option value="0">Один: ре диез</option>
+                <option value="0">Два: ре диез и соль диез</option>
+                <option value="key">Два: фа диез и до диез</option>
+                <option value="0">В тональности "ре мажор" диезов нет</option>
+            </options>
+        </item>
+        <item id="12">
+            <name>Кто самый известный создатель этюдов ля фортепиано?
+            </name>
+            <options>
+                <option value="0">Бах</option>
+                <option value="0">Моцарт</option>
+                <option value="key">Черни</option>
+                <option value="0">На фортепиано невозможно сыграть этюд</option>
+            </options>
+        </item>
+    </items>
+</quiz>

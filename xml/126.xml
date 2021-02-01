@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Кто изобрёл мясорубку?
+                
+            </name>
+            <options>
+                <option value="0">Сара Бернар</option>
+                <option value="key">Карл Дрез</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Кто изобрёл паровоз?
+            </name>
+            <options>
+                <option value="0">Черепанов</option>
+                <option value="key">Тревитик</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Кто изобрёл гильотину?
+            </name>
+            <options>
+                <option value="key">Гильотен</option>
+                <option value="0">Шарль Де Голль</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Кто изобрёл механический токарный станок?
+
+            </name>
+            <options>
+                <option value="0">Токарев</option>
+                <option value="key">Нартов</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Кто изобрёл телевизор?
+
+            </name>
+            <options>
+                <option value="key">Зворыкин</option>
+                <option value="0">Джонсон и Джонсон</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Кто изобрёл вертолёт?
+
+            </name>
+            <options>
+                <option value="0">Леонардо Да Винчи</option>
+                <option value="key">Сикорский</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Кто изобрёл колесо?
+
+            </name>
+            <options>
+                <option value="0">Гильгамеш</option>
+                <option value="key">Неизвестно кто</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Кто изобрёл пенициллин?
+
+            </name>
+            <options>
+                <option value="key">Флеминг</option>
+                <option value="0">Мечников</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Кто изобрёл вакцину от чумы?
+
+            </name>
+            <options>
+                <option value="key">Хавкин</option>
+                <option value="0">Боткин</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Кто изобрёл салат "Оливье"?
+
+            </name>
+            <options>
+                <option value="0">Оливия Хаксли</option>
+                <option value="key">Люсьен Оливье</option>
+            </options>
+        </item>
+    </items>
+</quiz>

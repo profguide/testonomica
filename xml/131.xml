@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Сколько строчек содержит нотный стан?</name>
+            <options>
+                <option value="0">Две</option>
+                <option value="0">Три</option>
+                <option value="key">Пять</option>
+                <option value="0">Семь</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Как называется нотный знак, требующий повышения звука на полутон?
+            </name>
+            <options>
+                <option value="key">Диез</option>
+                <option value="0">Бемоль</option>
+                <option value="0">Беркут</option>
+                <option value="0">Бетховен</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Что такое бемоль?
+            </name>
+            <options>
+                <option value="0">Знаменитый французский музыкальный критик</option>
+                <option value="key">Нотный знак, требующий понижения звука на полутон</option>
+                <option value="0">Итальянский танцор, известный периодическими драками с Моцартом</option>
+                <option value="0">Название французской песни времён Великой французской революции</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Что такое бекар?
+            </name>
+            <options>
+                <option value="0">Французский пекарь, известный своим пением во время готовки круассанов</option>
+                <option value="0">Французский марш</option>
+                <option value="key">Нотный знак, отменяющий действие других знаков</option>
+                <option value="0">Любимый музыкальный инструмент Бетховена</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Окраска звучания каких произведений субъективно воспринимается как «светлая» и «радостная»?
+            </name>
+            <options>
+                <option value="key">Мажорных</option>
+                <option value="0">Минорных</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Окраска звучания каких произведений субъективно воспринимается как «лирическая» и «грустная»?
+            </name>
+            <options>
+                <option value="0">Мажорных</option>
+                <option value="key">Минорных</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Как называется метрическая музыкальная единица — каждая из равных по длительности долей, на которые
+                делится музыкальное произведение по числу метрических ударений в нём?
+            </name>
+            <options>
+                <option value="0">Нота</option>
+                <option value="0">Скрипичный ключ</option>
+                <option value="key">Такт</option>
+                <option value="0">Миля</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Какой ключ кроме скрипичного вы знаете в музыке?
+            </name>
+            <options>
+                <option value="key">Басовый, Альтовый</option>
+                <option value="0">Золотой, Серебряный</option>
+                <option value="0">Ключ Синей бороды</option>
+                <option value="0">Красный ключ</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Как называется музыкальный термин, обозначающий часть, содержащую повторение музыкального материала
+                после его развития или изложения нового?
+            </name>
+            <options>
+                <option value="0">Реперкуссия</option>
+                <option value="key">Реприза</option>
+                <option value="0">Рефрен</option>
+                <option value="0">Рахманиновская гармония</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Что такое «целая», «половинная», «четвертная», «восьмая», «шестнадцатая»?
+            </name>
+            <options>
+                <option value="0">Размер такта</option>
+                <option value="0">Размер грифа гитары</option>
+                <option value="key">Размер длительности нот</option>
+                <option value="0">Размер стула для пианиста</option>
+            </options>
+        </item>
+    </items>
+</quiz>

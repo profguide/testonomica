@@ -43,7 +43,7 @@ class AnswersUtil
      * If key is not presented in $sums, it will be ignored
      * @return float|int|mixed
      */
-    public static function arraySum(array $sums, ...$onlyValues)
+    public static function arraySum(array $sums, ...$onlyValues): int
     {
         if (empty($onlyValues)) {
             return array_sum($sums);

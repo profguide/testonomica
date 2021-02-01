@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+
+                <option value="nol">Мое настроение сейчас не более подавленное (печальное), чем обычно.</option>
+                <option value="odin">Пожалуй, оно более подавленное (печальное), чем обычно.</option>
+                <option value="dva">Да, оно более подавленное (печальное), чем обычно.</option>
+                <option value="tri">Мое настроение намного более подавленное (печальное), чем обычно.</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я чувствую, что у меня нет тоскливого (траурного) настроения.</option>
+                <option value="odin">У меня иногда бывает такое настроение.</option>
+                <option value="dva">У меня часто бывает такое настроение.</option>
+                <option value="tri">Такое настроение бывает у меня постоянно.</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я не чувствую себя так, будто остался (осталась) без чего-то очень важного для меня.
+                </option>
+                <option value="odin">У меня иногда бывает такое чувство.</option>
+                <option value="dva">У меня часто бывает такое чувство.</option>
+                <option value="tri">Я постоянно чувствую себя так, будто остался (осталась) без чего-то очень важного для
+                    меня.
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">У меня не бывает чувства, будто моя жизнь зашла в тупик.</option>
+                <option value="odin">У меня иногда бывает такое чувство.</option>
+                <option value="dva">У меня часто бывает такое чувство.</option>
+                <option value="tri">Я постоянно чувствую себя так, будто моя жизнь зашла в тупик.</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">У меня не бывает чувства, будто я состарился (состарилась).</option>
+                <option value="odin">У меня иногда бывает такое чувство.</option>
+                <option value="dva">У меня часто бывает такое чувство.</option>
+                <option value="tri">Я постоянно чувствую, будто я состарился (состарилась).</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">У меня не бывает состояний, когда на душе тяжело.</option>
+                <option value="odin">У меня иногда бывает такое состояние.</option>
+                <option value="dva">У меня часто бывает такое состояние.</option>
+                <option value="tri">Я постоянно нахожусь в таком состоянии.</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я спокоен (спокойна) за свое будущее, как обычно.</option>
+                <option value="odin">Пожалуй, будущее беспокоит меня несколько больше, чем обычно.</option>
+                <option value="dva">Будущее беспокоит меня значительно больше, чем обычно.</option>
+                <option value="tri">Будущее беспокоит меня намного больше, чем обычно.</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">В своем прошлом я вижу плохого не больше, чем обычно.</option>
+                <option value="odin">В своем прошлом я вижу плохого несколько больше, чем обычно.</option>
+                <option value="dva">В своем прошлом я вижу плохого значительно больше, чем обычно.</option>
+                <option value="tri">В своем прошлом я вижу намного больше плохого, чем обычно.</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Надежд на лучшее у меня не меньше, чем обычно.</option>
+                <option value="odin">Таких надежд у меня несколько меньше, чем обычно.</option>
+                <option value="dva">Таких надежд у меня значительно меньше, чем обычно.</option>
+                <option value="tri">Надежд на лучшее у меня намного меньше, чем обычно.</option>
+            </options>
+        </item>
+        <item id="10">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я боязлив (боязлива) не более обычного.</option>
+                <option value="odin">Я боязлив (боязлива) несколько более обычного.</option>
+                <option value="dva">Я боязлив (боязлива) значительно более обычного.</option>
+                <option value="tri">Я боязлив (боязлива) намного более обычного.</option>
+            </options>
+        </item>
+        <item id="11">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Хорошее меня радует, как и прежде.</option>
+                <option value="odin">Я чувствую, что оно радует меня несколько меньше прежнего.</option>
+                <option value="dva">Оно радует меня значительно меньше прежнего.</option>
+                <option value="tri">Я чувствую, что оно радует меня намного меньше прежнего.</option>
+            </options>
+        </item>
+        <item id="12">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">У меня нет чувства, что моя жизнь бессмысленна.</option>
+                <option value="odin">У меня иногда бывает такое чувство.</option>
+                <option value="dva">У меня часто бывает такое чувство.</option>
+                <option value="tri">Я постоянно чувствую себя так, будто моя жизнь бессмысленна.</option>
+            </options>
+        </item>
+        <item id="13">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я обидчив (обидчива) не больше, чем обычно.</option>
+                <option value="odin">Пожалуй, я несколько более обидчив (обидчива), чем обычно.</option>
+                <option value="dva">Я обидчив (обидчива) значительно больше, чем обычно.</option>
+                <option value="tri">Я обидчив (обидчива) намного больше, чем обычно.</option>
+            </options>
+        </item>
+        <item id="14">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я получаю удовольствие от приятного, как и раньше.</option>
+                <option value="odin">Я получаю такого удовольствия несколько меньше, чем раньше.</option>
+                <option value="dva">Я получаю такого удовольствия значительно меньше, чем раньше.</option>
+                <option value="tri">Я не получаю теперь удовольствия от приятного.</option>
+            </options>
+        </item>
+        <item id="15">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Обычно я не чувствую вины, если нет на это причины.</option>
+                <option value="odin">Иногда я чувствую себя так, будто в чем-то виноват.</option>
+                <option value="dva">Я часто чувствую себя так, будто в чем-то виноват.</option>
+                <option value="tri">Я постоянно чувствую себя так, будто в чем-то виноват.</option>
+            </options>
+        </item>
+        <item id="16">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Если что-то у меня не так, я виню себя не больше обычного.</option>
+                <option value="odin">Я виню себя за это несколько больше обычного.</option>
+                <option value="dva">Я виню себя за это значительно больше обычного.</option>
+                <option value="tri">Если что-то у меня не так, я виню себя намного больше обычного.</option>
+            </options>
+        </item>
+        <item id="17">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Обычно у меня не бывает ненависти к себе.</option>
+                <option value="odin">Иногда бывает, что я ненавижу себя.</option>
+                <option value="dva">Часто бывает так, что я себя ненавижу.</option>
+                <option value="tri">Я постоянно чувствую, что ненавижу себя.</option>
+            </options>
+        </item>
+        <item id="18">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я не чувствую, что я раздражителен (раздражительна).</option>
+                <option value="odin">Я раздражителен (раздражительна) несколько больше обычного.</option>
+            </options>
+        </item>
+
+        <item id="19">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я виню себя за проступки других не больше обычного.</option>
+                <option value="odin">Я виню себя за них несколько больше обычного.</option>
+                <option value="dva">Я виню себя за них значительно больше обычного.</option>
+                <option value="tri">За проступки других я виню себя намного больше обычного.</option>
+            </options>
+        </item>
+        <item id="20">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Состояния, когда все кажется бессмысленным, у меня обычно не бывает.</option>
+                <option value="odin">Иногда у меня бывает такое состояние.</option>
+                <option value="dva">У меня часто бывает теперь такое состояние.</option>
+                <option value="tri">Это состояние у меня теперь не проходит.</option>
+            </options>
+        </item>
+        <item id="21">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Чувства, что я заслужил (заслужила) кару, у меня не бывает.</option>
+                <option value="odin">Теперь иногда бывает.</option>
+                <option value="dva">Оно часто бывает у меня.</option>
+                <option value="tri">Это чувство у меня теперь практически не проходит.</option>
+            </options>
+        </item>
+        <item id="22">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я вижу в себе не меньше хорошего, чем прежде.</option>
+                <option value="odin">Я вижу в себе несколько меньше хорошего, чем прежде.</option>
+                <option value="dva">Я вижу в себе значительно меньше хорошего, чем прежде.</option>
+                <option value="tri">Я вижу в себе намного меньше хорошего, чем прежде.</option>
+            </options>
+        </item>
+        <item id="23">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Обычно я думаю, что во мне плохого не больше, чем у других.</option>
+                <option value="odin">Иногда я думаю, что во мне плохого больше, чем у других.</option>
+                <option value="dva">Я часто так думаю.</option>
+                <option value="tri">Я постоянно думаю, что плохого во мне больше, чем у других.</option>
+            </options>
+        </item>
+        <item id="24">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Желания умереть у меня не бывает.</option>
+                <option value="odin">Это желание у меня иногда бывает.</option>
+                <option value="dva">Это желание у меня бывает теперь часто.</option>
+                <option value="tri">Это теперь постоянное мое желание.</option>
+            </options>
+        </item>
+        <item id="25">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я не плачу.</option>
+                <option value="odin">Я иногда плачу.</option>
+                <option value="dva">Я плачу часто.</option>
+                <option value="tri">Я хочу плакать, но слез у меня уже нет.</option>
+                <option value="dva">Я раздражителен (раздражительна) значительно больше обычного.</option>
+                <option value="tri">Я раздражителен (раздражительна) намного больше обычного.</option>
+            </options>
+        </item>
+        <item id="26">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">У меня не бывает чувства, будто я погряз (погрязла) в грехах.</option>
+                <option value="odin">У меня иногда теперь бывает это чувство.</option>
+                <option value="dva">У меня часто бывает теперь это чувство.</option>
+                <option value="tri">Это чувство у меня теперь не проходит.</option>
+            </options>
+        </item>
+        <item id="27">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">У меня не бывает состояний, когда я не чувствую своих эмоций.</option>
+                <option value="odin">Иногда у меня бывает такое состояние.</option>
+                <option value="dva">У меня часто бывает такое состояние.</option>
+                <option value="tri">Это состояние у меня теперь не проходит.</option>
+            </options>
+        </item>
+        <item id="28">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Моя умственная активность никак не изменилась.</option>
+                <option value="odin">Я чувствую теперь какую-то неясность в своих мыслях.</option>
+                <option value="dva">Я чувствую теперь, что сильно отупел (отупела) (в голове мало мыслей).</option>
+                <option value="tri">Я совсем ни о чем теперь не думаю (голова пустая).</option>
+            </options>
+        </item>
+        <item id="29">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я не потерял (не потеряла) интерес к другим людям.</option>
+                <option value="odin">Я чувствую, что прежний интерес к людям несколько уменьшился.</option>
+                <option value="dva">Я чувствую, что мой интерес к людям намного уменьшился.</option>
+                <option value="tri">У меня совсем пропал интерес к людям (я никого не хочу видеть).</option>
+            </options>
+        </item>
+        <item id="30">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я принимаю решения, как обычно.</option>
+                <option value="odin">Мне труднее принимать решения, чем обычно.</option>
+                <option value="dva">Мне намного труднее принимать решения, чем обычно.</option>
+                <option value="tri">Я уже не могу сам (сама) принять никаких решений.</option>
+            </options>
+        </item>
+        <item id="31">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я не менее привлекателен (привлекательна), чем обычно.</option>
+                <option value="odin">Пожалуй, я несколько менее привлекателен (привлекательна), чем обычно.</option>
+                <option value="dva">Я значительно менее привлекателен (привлекательна), чем обычно.</option>
+                <option value="tri">Я чувствую, что выгляжу просто безобразно.</option>
+            </options>
+        </item>
+        <item id="32">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я могу работать, как и обычно.</option>
+                <option value="odin">Мне несколько труднее работать, чем обычно.</option>
+                <option value="dva">Мне значительно труднее работать, чем обычно.</option>
+                <option value="tri">Я совсем не могу теперь работать (все валится из рук).</option>
+            </options>
+        </item>
+        <item id="33">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я сплю не хуже, чем обычно.</option>
+                <option value="odin">Я сплю несколько хуже, чем обычно.</option>
+                <option value="dva">Я сплю значительно хуже, чем обычно.</option>
+                <option value="tri">Теперь я почти совсем не сплю.</option>
+            </options>
+        </item>
+        <item id="34">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я устаю не больше, чем обычно.</option>
+                <option value="odin">Я устаю несколько больше, чем обычно.</option>
+                <option value="dva">Я устаю значительно больше, чем обычно.</option>
+                <option value="tri">У меня уже нет никаких сил что-то делать.</option>
+            </options>
+        </item>
+        <item id="35">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Мой аппетит не хуже обычного.</option>
+                <option value="odin">Мой аппетит несколько хуже обычного.</option>
+                <option value="dva">Мой аппетит значительно хуже обычного.</option>
+                <option value="tri">Аппетита у меня теперь совсем нет.</option>
+            </options>
+        </item>
+        <item id="36">
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Мой вес остается неизменным.</option>
+                <option value="odin">Я немного похудел (похудела) в последнее время.</option>
+                <option value="dva">Я заметно похудел (похудела) в последнее время.</option>
+                <option value="tri">В последнее время я очень похудел (похудела).</option>
+            </options>
+        </item>
+        <item id="37">
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я дорожу своим здоровьем, как и обычно.</option>
+                <option value="odin">Я дорожу своим здоровьем меньше, чем обычно.</option>
+                <option value="dva">Я дорожу своим здоровьем значительно меньше, чем обычно.</option>
+                <option value="tri">Я совсем не дорожу теперь своим здоровьем.</option>
+            </options>
+        </item>
+        <item id="38">
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я интересуюсь сексом, как и прежде.</option>
+                <option value="odin">Я несколько меньше интересуюсь сексом, чем прежде.</option>
+                <option value="dva">Я интересуюсь сексом значительно меньше, чем прежде.</option>
+                <option value="tri">Я полностью потерял (потеряла) интерес к сексу.</option>
+            </options>
+        </item>
+        <item id="39">
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я не чувствую, что мое "Я" как-то изменилось.</option>
+                <option value="odin">Теперь я чувствую, что мое "Я" несколько изменилось.</option>
+                <option value="dva">Теперь я чувствую, что мое "Я" значительно изменилось.</option>
+                <option value="tri">Мое "Я" так изменилось, что теперь я не узнаю сам (сама) себя.</option>
+            </options>
+        </item>
+        <item id="40">
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Я чувствую боль, как и обычно.</option>
+                <option value="odin">Я чувствую боль сильнее, чем обычно.</option>
+                <option value="dva">Я чувствую боль слабее, чем обычно.</option>
+                <option value="tri">Я почти не чувствую теперь боли.</option>
+            </options>
+        </item>
+        <item id="41">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Некоторые расстройства (сухость во рту, сердцебиение, запоры, удушье) у меня бывают не чаще, чем обычно.
+                </option>
+                <option value="odin">Эти расстройства бывают у меня несколько чаще обычного.</option>
+                <option value="dva">Некоторые из этих расстройств бывают у меня значительно чаще обычного.</option>
+                <option value="tri">Эти расстройства бывают у меня намного чаще обычного.</option>
+            </options>
+        </item>
+        <item id="42">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Утром мое настроение обычно не хуже, чем к ночи.</option>
+                <option value="odin">Утром оно у меня несколько хуже, чем к ночи.</option>
+                <option value="dva">Утром оно у меня значительно хуже, чем к ночи.</option>
+                <option value="tri">Утром мое настроение намного хуже, чем к ночи.</option>
+            </options>
+        </item>
+        <item id="43">
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">У меня не бывает спадов настроения весной (осенью).</option>
+                <option value="odin">Такое однажды со мной было.</option>
+                <option value="dva">Со мной такое было два или три раза.</option>
+                <option value="tri">Со мной было такое много раз.</option>
+            </options>
+        </item>
+        <item id="44">
+
+            <name>Выберите подходящий вариант ответа:</name>
+            <options>
+                <option value="nol">Плохое настроение у меня бывает, но это длится недолго.</option>
+                <option value="odin">Подавленное настроение у меня может длиться по неделе, до месяца.</option>
+                <option value="dva">Подавленное настроение у меня может длиться месяцами.</option>
+                <option value="tri">Подавленное настроение у меня может длиться до года и больше.</option>
+            </options>
+        </item>
+    </items>
+</quiz>

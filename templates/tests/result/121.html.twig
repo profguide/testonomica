@@ -1,0 +1,20 @@
+{% extends('tests/result.html.twig') %}
+
+{% block result %}
+    <div class="container">
+        {% if sum >= 1 and sum <= 9 %}Депрессия отсутствует либо незначительна{% endif %}
+        {% if sum >= 10 and sum <= 24 %}Депрессия минимальна{% endif %}
+        {% if sum >= 25 and sum <= 44 %}Лёгкая депрессия{% endif %}
+        {% if sum >= 45 and sum <= 67 %}Умеренная депрессия{% endif %}
+        {% if sum >= 68 and sum <= 87 %}Выраженная депрессия{% endif %}
+        {% if sum >= 88 and sum <= 132 %}Глубокая депрессия{% endif %}
+
+        <div class="progress mt-2">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale }}%;"
+                 aria-valuenow="{{ scale }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ sum }} из 132
+            </div>
+        </div>
+    </div>
+{% endblock %}

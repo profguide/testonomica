@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Склонны ли Вы искать пути к примирению после очередного служебного конфликта?
+            </name>
+            <options>
+                <option value="odin">Всегда.</option>
+                <option value="dva">Иногда.</option>
+                <option value="tri">Никогда.</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Как Вы ведете себя в критической ситуации?
+            </name>
+            <options>
+                <option value="odin">Внутренне кипите.</option>
+                <option value="dva">Сохраняете полное спокойствие.</option>
+                <option value="tri">Теряете самообладание.</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Каким считают Вас коллеги?
+            </name>
+            <options>
+                <option value="odin">Самоуверенным и завистливым.</option>
+                <option value="dva">Дружелюбным.</option>
+                <option value="tri">Спокойным и независтливым.</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Как Вы отреагируете, если Вам предложат ответственную должность?
+            </name>
+            <options>
+                <option value="odin">Примете ее с некоторыми опасениями.</option>
+                <option value="dva">Согласитесь без колебаний.</option>
+                <option value="tri">Откажетесь от нее ради собственного спокойствия.</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Как Вы будете себя вести, если кто-то из коллег без разрешения возьмет с Вашего стола бумагу?
+            </name>
+            <options>
+                <option value="odin">Выдадите ему "по первое число".</option>
+                <option value="dva">Заставите вернуть.</option>
+                <option value="tri">Спросите, не нужно ли ему еще что-нибудь.</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Какими словами Вы встретите мужа (жену), если он (она) вернулся с работы позже обычного?
+            </name>
+            <options>
+                <option value="odin">"Что это тебя так задержало?"</option>
+                <option value="dva">"Где ты торчишь допоздна?"</option>
+                <option value="tri">"Я уже начал(а) волноваться".</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Как Вы ведете себя за рулем автомобиля?
+            </name>
+            <options>
+                <option value="odin">Стараетесь ли обогнать машину, которая "показала вам хвост"?</option>
+                <option value="dva">Вам все равно, сколько машин Вас обошло.</option>
+                <option value="tri">Помчитесь с такой скоростью, чтобы никто на догнал Вас.</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Какими Вы считаете свои взгляды на жизнь?
+            </name>
+            <options>
+                <option value="odin">Сбалансированными.</option>
+                <option value="dva">Легкомысленными.</option>
+                <option value="tri">Крайне жесткими.</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Что Вы предпринимаете, если не все удается?
+            </name>
+            <options>
+                <option value="odin">Пытаетесь свалить вину на другого.</option>
+                <option value="dva">Смиряетесь.</option>
+                <option value="tri">Становитесь впредь осторожнее.</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Как Вы отреагируете на фельетон о случаях распущенности среди современной молодежи?
+            </name>
+            <options>
+                <option value="odin">"Пора бы уже запретить им такие развлечения".</option>
+                <option value="dva">"Надо создать им возможность организованно и культурно отдыхать".</option>
+                <option value="tri">"И чего мы столько с ними возимся?"</option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Что Вы ощущаете, если место, которое Вы хотели занять, досталось другому?
+            </name>
+            <options>
+                <option value="odin">"И зачем я только на это нервы тратил?"</option>
+                <option value="dva">"Видно, его физиономия шефу приятнее".</option>
+                <option value="tri">"Может быть, мне это удастся в другой раз".</option>
+            </options>
+        </item>
+        <item id="12">
+            <name>Как Вы смотрите страшный фильм?
+            </name>
+            <options>
+                <option value="odin">Боитесь.</option>
+                <option value="dva">Скучаете.</option>
+                <option value="tri">Получаете искреннее удовольствие.</option>
+            </options>
+        </item>
+        <item id="13">
+            <name>Если из-за дорожной пробки вы опаздываете на важное совещание?
+            </name>
+            <options>
+                <option value="odin">Будете нервничать во время заседания.</option>
+                <option value="dva">Попытаетесь вызвать снисходительность партнеров.</option>
+                <option value="tri">Огорчитесь.</option>
+            </options>
+        </item>
+        <item id="14">
+            <name>Как Вы относитесь к своим спортивным успехам?
+            </name>
+            <options>
+                <option value="odin">Обязательно стараетесь выиграть.</option>
+                <option value="dva">Цените удовольствие почувствовать себя вновь молодым.</option>
+                <option value="tri">Очень сердитесь, если не везет.</option>
+            </options>
+        </item>
+        <item id="15">
+            <name>Как Вы поступите, если Вас плохо обслужили в ресторане?
+            </name>
+            <options>
+                <option value="odin">Стерпите, избегая скандала.</option>
+                <option value="dva">Вызовите метрдотеля и сделаете ему замечание.</option>
+                <option value="tri">Отправитесь с жалобой к директору ресторана.</option>
+            </options>
+        </item>
+        <item id="16">
+            <name>Как Вы себя поведете, если Вашего ребенка обидели в школе?
+            </name>
+            <options>
+                <option value="odin">Поговорите с учителем.</option>
+                <option value="dva">Устроите скандал родителям "малолетнего преступника".</option>
+                <option value="tri">Посоветуете ребенку дать сдачи.</option>
+            </options>
+        </item>
+        <item id="17">
+            <name>Какой, по-вашему, Вы человек?
+            </name>
+            <options>
+                <option value="odin">Средний.</option>
+                <option value="dva">Самоуверенный.</option>
+                <option value="tri">Пробивной.</option>
+            </options>
+        </item>
+        <item id="18">
+            <name>Что Вы ответите подчиненному, с которым столкнулись в дверях учреждения, если он начал извиняться
+                перед вами?
+            </name>
+            <options>
+                <option value="odin">"Простите, это моя вина".</option>
+                <option value="dva">"Ничего, пустяки".</option>
+                <option value="tri">"А повнимательней Вы быть не можете?!"</option>
+            </options>
+        </item>
+        <item id="19">
+            <name>Как Вы отреагируете на статью в газете о случаях хулиганства среди молодежи?
+            </name>
+            <options>
+                <option value="odin">"Когда же, наконец, будут приняты конкретные меры?!"</option>
+                <option value="dva">"Надо бы ввести телесные наказания".</option>
+                <option value="tri">"Нельзя все валить на молодежь, виноваты и воспитатели!"</option>
+            </options>
+        </item>
+        <item id="20">
+            <name>Представьте, что Вам предстоит заново родиться, но уже животным. Какое животное Вы предпочтете?
+            </name>
+            <options>
+                <option value="odin">Тигра или леопарда.</option>
+                <option value="dva">Домашнюю кошку.</option>
+                <option value="tri">Медведь.</option>
+            </options>
+        </item>
+    </items>
+</quiz>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+
+            <name>Закончите фразу: "Коня на скаку остановит..."</name>
+            <options>
+                <option value="key">...в горящую избу войдёт</option>
+                <option value="0">...и хобот ему оторвёт</option>
+                <option value="0">...и может включить огнемёт</option>
+            </options>
+        </item>
+        <item id="2">
+
+            <name>Закончите фразу: "Мой первый друг, мой друг бесценный..."</name>
+            <options>
+                <option value="0">...и я не мог сдержать слезу</option>
+                <option value="0">...и я рюмашечку налил</option>
+                <option value="key">...и я судьбу благословил</option>
+            </options>
+        </item>
+        <item id="3">
+
+            <name>Закончите фразу: "И одно только слово твердит Айболит..."</name>
+            <options>
+                <option value="key">...Лимпопо, Лимпопо, Лимпопо</option>
+                <option value="0">...Гиппопо, Гиппопо, Гиппопо</option>
+                <option value="0">...Помогу, Помогу, Помогу</option>
+            </options>
+        </item>
+        <item id="4">
+
+            <name>Закончите фразу: "Если бьёт дрянной драчун слабого мальчишку я такого не хочу..."</name>
+            <options>
+                <option value="key">...даже вставить в книжку</option>
+                <option value="0">...потому что слишком</option>
+                <option value="0">...понимать мальчишку</option>
+            </options>
+        </item>
+        <item id="5">
+
+            <name>Закончите фразу: "Во что бы то ни стало, мне надо выходить, нельзя ли у трамвала..."</name>
+            <options>
+                <option value="0">...мне выйти покурить</option>
+                <option value="key">...вокзай остановить</option>
+                <option value="0">...газеточку купить</option>
+            </options>
+        </item>
+        <item id="6">
+
+            <name>Закончите фразу: "Светить всегда, светить везде..."</name>
+            <options>
+                <option value="0">...во все свои оконца</option>
+                <option value="0">...по всем домам и площадям</option>
+                <option value="key">...до дней последних донца</option>
+            </options>
+        </item>
+        <item id="7">
+
+            <name>Закончите фразу: "Муж и жена..."</name>
+            <options>
+                <option value="0">...два сапога пара</option>
+                <option value="key">...одна сатана</option>
+                <option value="0">...вечная война</option>
+            </options>
+        </item>
+        <item id="8">
+
+            <name>Закончите фразу: "Я вас любил: любовь ещё, быть может..."</name>
+            <options>
+                <option value="0">...по прежнему волнует и тревожит</option>
+                <option value="0">...свой камень на душу положит</option>
+                <option value="key">...в душе моей угасла не совсем</option>
+            </options>
+        </item>
+        <item id="9">
+
+            <name>Закончите фразу: "Ой, полна, полна моя коробушка..."</name>
+            <options>
+                <option value="0">...у Ивана Ильчина</option>
+                <option value="0">...жди меня, моя зазнобушка</option>
+                <option value="key">...есть и ситец, и парча</option>
+            </options>
+        </item>
+    </items>
+</quiz>

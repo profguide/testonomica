@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Борис Годунов это:
+                
+            </name>
+            <options>
+                <option value="key">Русский царь</option>
+                <option value="0">Родной брат Александра Пушкина</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Емельян Пугачёв это:
+            </name>
+            <options>
+                <option value="0">Крестьянский поэт</option>
+                <option value="key">Руководитель крестьянского восстания</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Иван Ползунов это:
+            </name>
+            <options>
+                <option value="key">Инженер-изобретатель</option>
+                <option value="0">Известный партизан</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Грегор Мендель это:
+
+            </name>
+            <options>
+                <option value="key">Генетик</option>
+                <option value="0">Математик</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Уинстон Черчилль это:
+
+            </name>
+            <options>
+                <option value="key">Премьер-министр Англии</option>
+                <option value="0">Архитектор, создавший Букингемский дворец</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Иван Петрович Павлов это:
+
+            </name>
+            <options>
+                <option value="key">Учёный-физиолог, автор теории условных и безусловных рефлексов</option>
+                <option value="0">Первый советский космонавт, вышедший в открытый космос</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Джордано Бруно это:
+
+            </name>
+            <options>
+                <option value="key">Учёный, жертва инквизиции</option>
+                <option value="0">Изобретатель колеса</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Братья Люмьер это:
+
+            </name>
+            <options>
+                <option value="0">Известные разбойники</option>
+                <option value="key">Изобретатели кинематографа</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Лев Троцкий это:
+
+            </name>
+            <options>
+                <option value="key">Основатель Красной Армии</option>
+                <option value="0">Поэт-революционер</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Бартоломео Растрелли это:
+
+            </name>
+            <options>
+                <option value="key">Архитектор, построивший Зимний дворец в Петербурге</option>
+                <option value="0">Итальянский фашист, известный массовыми расстрелами</option>
+            </options>
+        </item>
+    </items>
+</quiz>

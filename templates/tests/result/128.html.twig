@@ -1,0 +1,22 @@
+{% extends('tests/result.html.twig') %}
+
+{% block result %}
+    <div class="container">
+        {% if sum >= 7 and sum <= 10 %}
+            <p><b>У вас отличные знания о событиях тех лет!</b></p>
+        {% elseif sum >= 4 and sum <= 6 %}
+            <p><b>Вы неплохо знакомы с событиями тех лет!</b></p>
+        {% elseif sum >= 0 and sum <= 3 %}
+            <p><b>Увы, вы почти ничего не знаете о Первой мировой войне...</b></p>
+        {% endif %}
+
+        <p>Правильных ответов:</p>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale }}%;"
+                 aria-valuenow="{{ scale }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ sum }} из 10
+            </div>
+        </div>
+    </div>
+{% endblock %}
