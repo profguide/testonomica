@@ -34,9 +34,9 @@ class TestService
         return $this->repository->findAll();
     }
 
-    public function findAllActive()
+    public function findAllActiveList(): array
     {
-        return $this->repository->findAllActive();
+        return $this->repository->findAllActiveList();
     }
 
     public function findBySlug(string $slug): ?Test

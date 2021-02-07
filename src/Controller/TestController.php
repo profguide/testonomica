@@ -58,11 +58,11 @@ class TestController extends AbstractController
 
     /**
      * @Route("/", name="index")
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      */
-    public function index()
+    public function index(): Response
     {
-        $tests = $this->testService->findAllActive();
+        $tests = $this->testService->findAllActiveList();
         return $this->render('tests/index.html.twig', [
             'tests' => $tests,
         ]);
@@ -104,7 +104,7 @@ class TestController extends AbstractController
      * @param Request $request
      * @param string $categorySlug
      * @param string $slug
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      */
     public function view(Request $request, string $categorySlug, string $slug)
     {

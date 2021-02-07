@@ -15,6 +15,8 @@ interface TestRepositoryInterface
 
     function findAllActive(): array;
 
+    function findAllActiveList(): array;
+
     function findAllPerPage(int $page, int $limit): array;
 
     function findOneById(int $id): ?Test;

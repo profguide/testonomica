@@ -92,13 +92,19 @@ class Test
      * @ORM\Column(type="boolean")
      * @var boolean
      */
-    private $active;
+    private $active = true;
 
     /**
      * @ORM\Column(type="boolean", name="active_en")
      * @var boolean
      */
-    private $activeEn;
+    private $activeEn = false;
+
+    /**
+     * @ORM\Column(type="boolean", name="in_list")
+     * @var boolean
+     */
+    private bool $inList = true;
 
     /**
      * @ORM\Column(type="string", length=20, nullable=true)
@@ -373,5 +379,21 @@ class Test
             $this->services[] = $service;
         }
         return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isInList(): bool
+    {
+        return $this->inList;
+    }
+
+    /**
+     * @param bool $inList
+     */
+    public function setInList(bool $inList): void
+    {
+        $this->inList = $inList;
     }
 }

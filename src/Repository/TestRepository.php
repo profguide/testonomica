@@ -31,6 +31,11 @@ class TestRepository extends ServiceEntityRepository implements TestRepositoryIn
         return parent::findBy(['active' => 1]);
     }
 
+    function findAllActiveList(): array
+    {
+        return parent::findBy(['active' => 1, 'inList' => 1]);
+    }
+
     public function findAllPerPage(int $page, int $limit = 10): array
     {
         return parent::findBy([
