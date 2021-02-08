@@ -10,20 +10,22 @@ use App\Entity\Answer;
 use App\Test\AnswersHolder;
 use App\Test\Option;
 use App\Test\Question;
+use App\Test\QuestionsHolder;
 
 class AnswersUtil
 {
     /**
-     * Counts sum of answers with numeric and correct values
-     * @param array $questions
+     * Counts sum of answers values.
+     * Correct answer counts as 1, otherwise value as it is
+     * @param QuestionsHolder $questionsHolder
      * @param AnswersHolder $answersHolder
      * @return int
      */
-    public static function sum(array $questions, AnswersHolder $answersHolder): int
+    public static function sum(QuestionsHolder $questionsHolder, AnswersHolder $answersHolder): int
     {
         $sum = 0;
         /**@var Question $question */
-        foreach ($questions as $question) {
+        foreach ($questionsHolder->getAll() as $question) {
             // if the question assumes correct answer and the answer is correct, it will add "1"
             if ($question->hasCorrectValues()) {
                 if (self::isCorrect($question, $answersHolder)) {
@@ -34,6 +36,22 @@ class AnswersUtil
             }
         }
         return $sum;
+    }
+
+    /**
+     * Sums values in groups and returns map of sums by group names.
+     * @param QuestionsHolder $questionsHolder
+     * @param AnswersHolder $answersHolder e.g.
+     * @return array, e.g. ['bmw' => 5, 'opel' => 3];
+     */
+    public static function sumByGroups(QuestionsHolder $questionsHolder, AnswersHolder $answersHolder): array
+    {
+        $groups = $questionsHolder->byGroups();
+        $sums = [];
+        foreach ($groups as $name => $questions) {
+            $sums[$name] = AnswersUtil::sum(new QuestionsHolder($questions), $answersHolder);
+        }
+        return $sums;
     }
 
     /**
@@ -96,13 +114,15 @@ class AnswersUtil
      * Counts sum of repeated values
      * e.g. ['1' => 'yes', '2' => 'yes', 3 => 'no']
      * In this case 'yes' repeats 2 times, and 'no' - once.
+     * @param QuestionsHolder $questionsHolder
      * @param AnswersHolder $answersHolder
      * @return array ['yes' => 2, 'no' => 1]
      */
-    public static function sumValuesMap(AnswersHolder $answersHolder): array
+    public static function sumValuesMap(QuestionsHolder $questionsHolder, AnswersHolder $answersHolder): array
     {
         $map = [];
-        foreach ($answersHolder->getAll() as $answer) {
+        foreach ($questionsHolder->getAll() as $question) {
+            $answer = $answersHolder->get($question->getId());
             if (count($answer->getValue()) > 1) {
                 throw new \LogicException('This method does not involve range values.');
             }

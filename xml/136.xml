@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Верно ли, что Россия самая большая страна в мире?
+            </name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Сколько морей омывают Россию?
+            </name>
+            <options>
+                <option value="0">5</option>
+                <option value="0">8</option>
+                <option value="key">12</option>
+                <option value="0">16</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Чем известно озеро Байкал, кроме того, что в нём содержится 19% всё пресной воды нашей планеты?
+            </name>
+            <options>
+                <option value="0">Это самое длинное озеро в мире</option>
+                <option value="0">Это самое грязное озеро в мире</option>
+                <option value="0">Это самое тёплое озеро в мире</option>
+                <option value="key">Это самое глубокое озеро в мире</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Чем известны Уральские горы, кроме того, что они разделяют Европу и Азию?
+            </name>
+            <options>
+                <option value="key">Они самые древние</option>
+                <option value="0">Они самые длинные</option>
+                <option value="0">Они самые низкие</option>
+                <option value="0">Они самые высокие</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Какое расстояние между Россией и США на севере?
+            </name>
+            <options>
+                <option value="0">200 000 км</option>
+                <option value="key">4 км</option>
+                <option value="0">60 000 км</option>
+                <option value="0">20 000 км</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Сколько стран граничат с Россией?
+            </name>
+            <options>
+                <option value="0">6</option>
+                <option value="0">8</option>
+                <option value="0">16</option>
+                <option value="key">23</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Что является географическим центром России?
+            </name>
+            <options>
+                <option value="0">Москва</option>
+                <option value="key">Озеро Виви</option>
+                <option value="0">Город Дюртюли</option>
+                <option value="0">Томск</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Чем известно Большое Васюганское болото?
+            </name>
+            <options>
+                <option value="key">Самое большое болото в мире</option>
+                <option value="0">В нём утанул Сусанин</option>
+                <option value="0">Его приказал высечь плетьми Иван Грозный</option>
+                <option value="0">Было частью Таврического вояжа Екатерины II</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Какая форма государственного устройства России?
+            </name>
+            <options>
+                <option value="0">Унитарное государство</option>
+                <option value="key">Федерация</option>
+                <option value="0">Конфедерация</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Какой город является столицей России?
+            </name>
+            <options>
+                <option value="0">Санкт-Петербург</option>
+                <option value="key">Москва</option>
+                <option value="0">Екатеринбург</option>
+                <option value="0">Владивосток</option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Какая дата и какое событие считаются зарождением России?
+            </name>
+            <options>
+                <option value="key">Призванный князь Рюрик в 862 году создает государство</option>
+                <option value="0">Захват Киева князем Олегом в 882 году, положивший начало Киевской Руси</option>
+                <option value="0">Провозглашение царства в середине XVI века, когда первым царём стал Иван IV Грозный</option>
+                <option value="0">Преобразование царства в империю в XVIII веке под руководством Петра Великого</option>
+            </options>
+        </item>
+        <item id="12">
+            <name>Какой князь в 988 году после похода на византийский Херсонес и женитьбы на сестре византийских императоров Анне утвердил восточное христианство на Руси в качестве государственной религии?
+            </name>
+            <options>
+                <option value="0">Княгиня Ольга</option>
+                <option value="key">Владимир Великий</option>
+                <option value="0">Ярослав Мудрый</option>
+                <option value="0">Святополк Окаянный</option>
+            </options>
+        </item>
+        <item id="13">
+            <name>Как назывался первый документ, представлявший собой свод гражданского и уголовного права, созданный при Ярославе Мудром?
+            </name>
+            <options>
+                <option value="0">Уголовная реснота</option>
+                <option value="key">Русская правда</option>
+                <option value="0">Варягское житие</option>
+                <option value="0">Киевский уклад</option>
+            </options>
+        </item>
+        <item id="14">
+            <name>В период правления какого князя был построен московский белокаменный кремль, начата чеканка серебряной монеты, впервые стало использоваться огнестрельное оружие?
+            </name>
+            <options>
+                <option value="key">Дмитрий Донской</option>
+                <option value="0">Александр Невский</option>
+                <option value="0">Владимир Мономах</option>
+            </options>
+        </item>
+        <item id="15">
+            <name>В какой битве решающая победа русских войск стала важным шагом на пути к восстановлению единства Руси и будущему свержению золотоордынского ига?
+            </name>
+            <options>
+                <option value="0">Бородинское сражение</option>
+                <option value="0">Сталинградская битва</option>
+                <option value="key">Куликовская битва</option>
+                <option value="0">Курская битва</option>
+            </options>
+        </item>
+        <item id="16">
+            <name>Как назывались военные действия в 1480 году между ханом Большой Орды Ахматом и великим князем московским Иваном III, положившее конец монголо-татарскому игу на севере и северо-востоке Руси?
+            </name>
+            <options>
+                <option value="0">Куликовская битва</option>
+                <option value="key">Стояние на Угре</option>
+                <option value="0">Ледовое побоище</option>
+                <option value="0">Стояние на Волге</option>
+            </options>
+        </item>
+        <item id="17">
+            <name>Какой символ Великокняжеской печати сделал Иван III, женившись на наследнице византийских императоров Софье Палеолог?
+            </name>
+            <options>
+                <option value="0">Изображение Ивана IV</option>
+                <option value="0">Изображение Хана Батыя</option>
+                <option value="key">Изображение двуглавого орла</option>
+                <option value="0">Изображение серпа и молота</option>
+            </options>
+        </item>
+        <item id="18">
+            <name>Какой Великий князь стал первым российским царём, что прировняло его титул с титулом "император"?
+            </name>
+            <options>
+                <option value="key">Иван IV Грозный</option>
+                <option value="0">Пётр I Великий</option>
+                <option value="0">Михаил Романов</option>
+                <option value="0">Борис Годунов</option>
+            </options>
+        </item>
+        <item id="19">
+            <name>Какая первая русская книга была напечатана в 1564 году первыми книгопечатниками Иваном Фёдоровым и Петром Мстиславцем в Московском печатном дворе?
+            </name>
+            <options>
+                <option value="0">Слово о полку Игореве</option>
+                <option value="0">Библия</option>
+                <option value="key">Апостол</option>
+                <option value="0">Лицевой летописный свод</option>
+            </options>
+        </item>
+        <item id="20">
+            <name>Чей казачий отряд положил начало русскому освоению Сибири в 1581—1585 годах?
+            </name>
+            <options>
+                <option value="key">отряд Ермака Тимофеевича</option>
+                <option value="0">отряд Кондратия Булавина</option>
+                <option value="0">отряд Игната Некрасова</option>
+                <option value="0">отряд Степана Разина</option>
+            </options>
+        </item>
+        <item id="21">
+            <name>Какая знаменитая часть государственной политики Ивана Грозного вылилась в многолетний массовый террор, подорвала экономику, веру знати и народа во власть и в конечном счёте стала одной из причин Смутного времени?
+            </name>
+            <options>
+                <option value="0">Создание Земского собора</option>
+                <option value="key">Опричнина</option>
+                <option value="0">Ливонская война</option>
+                <option value="0">Война с Казанским ханством</option>
+            </options>
+        </item>
+        <item id="22">
+            <name>Кто возглавил второе народное ополчение сумевшее освободить в 1612 году Москву, захваченную поляками в период смутного времени? Именно этот день (4 ноября) ныне празднуется как День народного единства.
+            </name>
+            <options>
+                <option value="0">Михаил Романов</option>
+                <option value="key">Минин и Пожарский</option>
+                <option value="0">Ленин и Троцкий</option>
+                <option value="0">Земские бояре</option>
+            </options>
+        </item>
+        <item id="23">
+            <name>Как звали первого царя из династии Романовых?
+            </name>
+            <options>
+                <option value="key">Михаил Романов</option>
+                <option value="0">Алексей Романов</option>
+                <option value="0">Пётр Великий</option>
+                <option value="0">Николай II</option>
+            </options>
+        </item>
+        <item id="24">
+            <name>Кто возглавил крупнейшее в допетровскую эпоху казацко-крестьянское восстание 1670—1671 годов, охватившее всё Поволжье и юг?
+            </name>
+            <options>
+                <option value="0">Лжедмитрий II</option>
+                <option value="key">Степан Разин</option>
+                <option value="0">Богдан Хмельницкий</option>
+                <option value="0">княжна Софья Алексеевна</option>
+            </options>
+        </item>
+        <item id="25">
+            <name>Как называлось первое высшее учебное заведение в России?
+            </name>
+            <options>
+                <option value="0">МГУ им М. В. Ломоносова</option>
+                <option value="0">Высшая школа экономики</option>
+                <option value="key">Славяно-греко-латинская академия</option>
+                <option value="0">Санкт-Петербургский государсвтенный университет</option>
+            </options>
+        </item>
+        <item id="26">
+            <name>Как называлась война, в ходе которой была одержана победа в знаменитой Полтавской битве, и в результате которой Россия получила выход к Балтийскому морю и заложила Санкт-Петербург, ставший столицей страны?
+            </name>
+            <options>
+                <option value="0">Куликовская битва</option>
+                <option value="0">Сталинградская битва</option>
+                <option value="0">Ледовое побоище</option>
+                <option value="key">Великая Северная война</option>
+            </options>
+        </item>
+        <item id="27">
+            <name>При каком царе Россия стала именоваться империей?
+            </name>
+            <options>
+                <option value="0">При Иване Грозном</option>
+                <option value="key">При Петре Великом</option>
+                <option value="0">При Николае I</option>
+                <option value="0">При Александре II</option>
+            </options>
+        </item>
+        <item id="28">
+        <name>Под чьим руководством в 1773—1775 году произошло крупнейшее казацко-крестьянское восстание при Екатерине II Великой?
+        </name>
+        <options>
+            <option value="key">Емельян Пугачёв</option>
+            <option value="0">Степан Разин</option>
+            <option value="0">Ермак Тимофеевич</option>
+            <option value="0">Кондратий Булавин</option>
+        </options>
+    </item>
+        <item id="29">
+            <name>Как называлась война, крупнейшей битвой в которой было "Бородинское сражение"?
+            </name>
+            <options>
+                <option value="0">Великая отечественная война</option>
+                <option value="0">Первая мировая война</option>
+                <option value="key">Отечественная война 1812 года</option>
+                <option value="0">Вторая мировая война</option>
+            </options>
+        </item>
+        <item id="30">
+            <name>Как называется попытка государственного переворота, состоявшаяся в Санкт-Петербурге в 1825 году группой дворян-единомышленников?
+            </name>
+            <options>
+                <option value="0">Крестьянское восстание</option>
+                <option value="key">Восстание декабристов</option>
+                <option value="0">Первая русская революция</option>
+                <option value="0">Октябрьская революция</option>
+            </options>
+        </item>
+        <item id="31">
+        <name>Кто написал эти строки: "Белеет парус одинокой. В тумане моря голубом!.. Что ищет он в стране далекой? Что кинул он в краю родном?..."
+        </name>
+        <options>
+            <option value="0">А. С. Пушкин</option>
+            <option value="0">В. В. Маяковский</option>
+            <option value="key">М. Ю. Лермонтов</option>
+            <option value="0">В. А. Жуковский</option>
+        </options>
+    </item>
+        <item id="32">
+            <name>Кто написал эти строки: "Мой первый друг, мой друг бесценный! И я судьбу благословил, когда мой двор уединенный, печальным снегом занесенный, твой колокольчик огласил."
+            </name>
+            <options>
+                <option value="key">А. С. Пушкин</option>
+                <option value="0">И. И. Пущин</option>
+                <option value="0">М. Ю. Лермонтов</option>
+                <option value="0">В. А. Жуковский</option>
+            </options>
+        </item>
+        <item id="33">
+            <name>Какое событие вошло в историю в 1861 году при Александре II?
+            </name>
+            <options>
+                <option value="0">Введение сухого закона</option>
+                <option value="key">Отмена крепостного права</option>
+                <option value="0">Полёт Юрия Гагарина в космос</option>
+                <option value="0">Великий Голод 1932-1933 года</option>
+            </options>
+        </item>
+        <item id="34">
+            <name>Какое событие послужило толчком для начала Первой русской революции 1905-1907 годов?
+            </name>
+            <options>
+                <option value="0">Кровавый понедельник</option>
+                <option value="0">Красный вторник</option>
+                <option value="0">Красный четверг</option>
+                <option value="key">Кровавое воскресенье</option>
+            </options>
+        </item>
+        <item id="35">
+            <name>Как называлась война, в которую вступила Россия в 1914 году на стороне Антанты?
+            </name>
+            <options>
+                <option value="key">Первая мировая война</option>
+                <option value="0">Вторая мировая война</option>
+                <option value="0">Русско-Японская война</option>
+                <option value="0">Великая отечественная война</option>
+            </options>
+        </item>
+        <item id="36">
+            <name>Какое событие произошло в 1917 году, на которое повлияла война, голод и недовольство царским режимом?
+            </name>
+            <options>
+                <option value="0">Вторая мировая война</option>
+                <option value="0">Великая отечественная война</option>
+                <option value="key">Революция и гражданская война</option>
+                <option value="0">Первая русская революция</option>
+            </options>
+        </item>
+        <item id="37">
+            <name>Что произошло с императором России Николаем II в ходе революционных действий?
+            </name>
+            <options>
+                <option value="0">Он бежал в Финлядндию</option>
+                <option value="0">Он возглавил Белое движение и погиб в бою с Красной армией под Иркутском</option>
+                <option value="key">Он отрёкся от престола и был расстрелян вместе со всеми членами своей семьи</option>
+                <option value="0">Он с семьёй бежал в Англию и стал английским лордом</option>
+            </options>
+        </item>
+        <item id="38">
+            <name>Кто возглавил СССР после распада Российской империи?
+            </name>
+            <options>
+                <option value="0">Сталин</option>
+                <option value="key">Ленин</option>
+                <option value="0">Троцкий</option>
+                <option value="0">Керенский</option>
+            </options>
+        </item>
+        <item id="39">
+            <name>Какое событие произошло в июне 1941 года?
+            </name>
+            <options>
+                <option value="0">Ленин объявил о введении новой экономической политики</option>
+                <option value="0">Началась вторая мировая война</option>
+                <option value="key">Началась Великая отечественная война</option>
+                <option value="0">Большевики расстреляли Колчака</option>
+            </options>
+        </item>
+        <item id="40">
+            <name>Какой военачальник, возглавил советскую армию в Великой отечественной войне?
+            </name>
+            <options>
+                <option value="0">Колчак</option>
+                <option value="0">Будёный</option>
+                <option value="key">Жуков</option>
+                <option value="0">Чапаев</option>
+            </options>
+        </item>
+        <item id="41">
+            <name>Как называлось геополитическое, военное, экономическое и идеологического противостояния в период с 1946 года до конца 1980-х между двумя блоками государств, центром одного из которых был СССР, а другого — США?
+            </name>
+            <options>
+                <option value="0">Северная война</option>
+                <option value="key">Холодная война</option>
+                <option value="0">Война в Афганистане</option>
+                <option value="0">Въетнамская война</option>
+            </options>
+        </item>
+        <item id="42">
+            <name>Кто возглавил СССР после загадочной и внезапной смерти И. Сталина?
+            </name>
+            <options>
+                <option value="key">Хрущёв</option>
+                <option value="0">Брежнев</option>
+                <option value="0">Берия</option>
+                <option value="0">Ленин</option>
+            </options>
+        </item>
+        <item id="43">
+            <name>Как неофициаьно назывался период правления Никиты Хрущёва?
+            </name>
+            <options>
+                <option value="0">Кукурузный</option>
+                <option value="0">Кузькина мать</option>
+                <option value="key">Оттепель</option>
+                <option value="0">Опять метель</option>
+            </options>
+        </item>
+        <item id="44">
+            <name>Какой важное событие для всей планеты произошло 12 апреля 1961 года?
+            </name>
+            <options>
+                <option value="0">Испытание ядерной бомбы</option>
+                <option value="0">Изобретение автомата Калашникова</option>
+                <option value="key">Полёт Гагарина в космос</option>
+                <option value="0">Конец Второй мировой войны</option>
+            </options>
+        </item>
+        <item id="45">
+            <name>Чем ознаменовалось правление М. Горбачева?
+            </name>
+            <options>
+                <option value="0">Развязыванием войны с Грузией</option>
+                <option value="key">Перестройкой</option>
+                <option value="0">Полётом Гагарина в космос</option>
+                <option value="0">Кризисом 1998 года</option>
+            </options>
+        </item>
+        <item id="46">
+            <name>Кто стал первым президентом Российской Федерации после развала СССР?
+            </name>
+            <options>
+                <option value="key">Борис Ельцин</option>
+                <option value="0">Владимир Путин</option>
+                <option value="0">Геннадий Зюганов</option>
+                <option value="0">Владимир Жириновский</option>
+            </options>
+        </item>
+        <item id="47">
+            <name>В каком году президентом России впервые стал Владимир Путин?
+            </name>
+            <options>
+                <option value="key">в 2000</option>
+                <option value="0">в 2008</option>
+                <option value="0">в 2012</option>
+                <option value="0">в 2018</option>
+            </options>
+        </item>
+</items>
+</quiz>

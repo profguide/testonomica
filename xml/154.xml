@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Иногда я сомневаюсь, действительно ли моим знакомым интересно то, что я говорю.</name>
+            <options>
+                <option value="vremennoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>С детства я окружен заботой и лаской.</name>
+            <options>
+                <option value="postoyannoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Я тяжело переживаю свое одиночество.</name>
+            <options>
+                <option value="emocionalnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Я стараюсь избегать оставаться в одиночестве.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="povedencheskoe">Нет</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>К сожалению, меня не понимают в кругу моих знакомых.</name>
+            <options>
+                <option value="kognitivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Бывает, я чувствую, что я один на всей земле.</name>
+            <options>
+                <option value="vremennoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>В детстве я обычно играл один.</name>
+            <options>
+                <option value="postoyannoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Одиночество для меня безрадостно и неприятно.</name>
+            <options>
+                <option value="emocionalnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>У меня есть компания, в которой я могу развлечься и отдохнуть.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="povedencheskoe">Нет</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Одинокому человеку не на что надеяться в нашем обществе.</name>
+            <options>
+                <option value="kognitivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Мне иногда хочется, чтобы рядом был человек, на которого можно опереться.</name>
+            <options>
+                <option value="vremennoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="12">
+            <name>Никому в действительности нет до меня дела.</name>
+            <options>
+                <option value="postoyannoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="13">
+            <name>Одиночество, как правило, доставляет мне радость, а не огорчение.</name>
+            <options>
+                <option value="emocionalnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="14">
+            <name>Если я захочу, то легко попадаю в любую компанию.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="povedencheskoe">Нет</option>
+            </options>
+        </item>
+        <item id="15">
+            <name>Я точно знаю, что в трудную минуту окружающие поддержат меня.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="kognitivnoe">Нет</option>
+            </options>
+        </item>
+        <item id="16">
+            <name>Иногда я чувствую себя изолированным от других.</name>
+            <options>
+                <option value="vremennoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="17">
+            <name>Мои близкие тонко чувствуют мое состояние и настроение.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="postoyannoe">Нет</option>
+            </options>
+        </item>
+        <item id="18">
+            <name>Мне одиночество больше напоминает серое пасмурное утро, чем солнечное ясное утро.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="emocionalnoe">Нет</option>
+            </options>
+        </item>
+        <item id="19">
+            <name>Если есть возможность, то я предпочитаю все делать сам.</name>
+            <options>
+                <option value="povedencheskoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="20">
+            <name>Я чувствую, что я полезен и необходим окружающим.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="kognitivnoe">Нет</option>
+            </options>
+        </item>
+        <item id="21">
+            <name>Бывает, мне хочется побыть одному.</name>
+            <options>
+                <option value="vremennoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="22">
+            <name>Люди вокруг меня, но не со мной.</name>
+            <options>
+                <option value="postoyannoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="23">
+            <name>Находясь в одиночестве, я чувствую себя хорошо.</name>
+            <options>
+                <option value="emocionalnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="24">
+            <name>Мне проще прочесть о том, что меня интересует в книге, чем узнать об этом у друзей.</name>
+            <options>
+                <option value="povedencheskoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="25">
+            <name>Вся моя жизнь бесполезна.</name>
+            <options>
+                <option value="kognitivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="26">
+            <name>Случается, что я не разделяю взглядов окружающих.</name>
+            <options>
+                <option value="vremennoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="27">
+            <name>Часто я чувствую себя покинутым.</name>
+            <options>
+                <option value="postoyannoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="28">
+            <name>Мне скучно и неинтересно среди сверстников.</name>
+            <options>
+                <option value="emocionalnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="29">
+            <name>Я не люблю откровенничать даже с очень близкими людьми.</name>
+            <options>
+                <option value="povedencheskoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="30">
+            <name>Мне не хватает поддержки людей, которые бы меня понимали.</name>
+            <options>
+                <option value="kognitivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="31">
+            <name>Временами у меня возникают проблемы в общении с окружающими.</name>
+            <options>
+                <option value="vremennoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="32">
+            <name>К сожалению, я часто не вписываюсь в компанию.</name>
+            <options>
+                <option value="postoyannoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="33">
+            <name>Когда я испытываю чувство одиночества, мне нелегко его преодолеть.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="emocionalnoe">Нет</option>
+            </options>
+        </item>
+        <item id="34">
+            <name>Общению с людьми я предпочитаю уединение.</name>
+            <options>
+                <option value="povedencheskoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="35">
+            <name>У меня нет друзей, с которыми бы меня связывали общие интересы и увлечения.</name>
+            <options>
+                <option value="kognitivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="36">
+            <name>Порой меня выбивает из колеи то, что я не имею возможности реализовать свои планы и замыслы.</name>
+            <options>
+                <option value="vremennoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="37">
+            <name>Мне всегда не хватало по-настоящему хорошего друга.</name>
+            <options>
+                <option value="postoyannoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="38">
+            <name>Я чувствую себя несчастным, будучи отверженным другими.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="emocionalnoe">Нет</option>
+            </options>
+        </item>
+        <item id="39">
+            <name>Мне всегда хотелось вести дневник.</name>
+            <options>
+                <option value="povedencheskoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="40">
+            <name>У меня много единомышленников.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="kognitivnoe">Нет</option>
+            </options>
+        </item>
+        <item id="41">
+            <name>Обстоятельства могут сложиться так, что я окажусь одинок.</name>
+            <options>
+                <option value="vremennoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="42">
+            <name>Родители одобряют меня в моем выборе друзей.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="postoyannoe">Нет</option>
+            </options>
+        </item>
+        <item id="43">
+            <name>Для меня невыносимо быть в одиночестве.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="emocionalnoe">Нет</option>
+            </options>
+        </item>
+        <item id="44">
+            <name>Лучший отдых для меня — чтение книги.</name>
+            <options>
+                <option value="povedencheskoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="45">
+            <name>Думаю, что окружающие не готовы понять и принять мои высказывания.</name>
+            <options>
+                <option value="kognitivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="46">
+            <name>Не в каждой группе я чувствую себя своим и желанным.</name>
+            <options>
+                <option value="vremennoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="47">
+            <name>Я постоянно ощущаю себя одиноким.</name>
+            <options>
+                <option value="postoyannoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="48">
+            <name>Мне не нравится заниматься каким-либо делом в одиночку.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="emocionalnoe">Нет</option>
+            </options>
+        </item>
+        <item id="49">
+            <name>Я бы вполне мог жить один, вдали от людей.</name>
+            <options>
+                <option value="povedencheskoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="50">
+            <name>Мне кажется, что окружающие сами часто не знают и не понимают, чего они хотят от меня.</name>
+            <options>
+                <option value="kognitivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+    </items>
+</quiz>

@@ -14,7 +14,7 @@ class Test119Calculator extends AbstractCalculator
 {
     public function calculate(): array
     {
-        $sums = AnswersUtil::sumValuesMap($this->answersHolder);
+        $sums = AnswersUtil::sumValuesMap($this->questionsHolder, $this->answersHolder);
         $chasto = AnswersUtil::arraySum($sums, 'chasto') * 3;
         $inogda = AnswersUtil::arraySum($sums, 'inogda') * 2;
         $redko = AnswersUtil::arraySum($sums, 'redko');

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>В различных частях своего тела я часто чувствую жжение, покалывание, ощущение мурашек, онемение.
+            </name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Я редко задыхаюсь. И у меня не бывает сильных сердцебиений.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Раз в неделю или чаще я бываю сильно возбужденным и взволнованным.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Голова у меня болит часто.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Два-три раза по ночам меня мучают кошмары.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>В последнее время я себя чувствую хуже, чем когда-либо.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Почти каждый день случается что-нибудь, что пугает меня.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>У меня бывали периоды, когда я из-за волнения терял сон.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Обычно работа стоит мне большого напряжения.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Иногда я бываю так возбужден, что это мешает мне заснуть.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Большую часть времени я испытываю неудовлетворенность жизнью.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="12">
+            <name>Меня постоянно что-нибудь тревожит.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="13">
+            <name>Я стараюсь реже встречаться со своими знакомыми и друзьями.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="14">
+            <name>Жизнь для меня почти всегда связана с напряжением.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="15">
+            <name>Мне трудно сосредоточиться на какой-либо задаче или работе.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="16">
+            <name>Я очень устаю за день.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="17">
+            <name>Я верю в будущее.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="18">
+            <name>Я часто предаюсь грустным размышлениям.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="19">
+            <name>Временами мне кажется, что моя голова работает медленнее, чем обычно.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="20">
+            <name>Самая трудная борьба для меня — это борьба с самим собой.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="21">
+            <name>Я почти всегда о чем-нибудь или о ком-нибудь тревожусь.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="22">
+            <name>У меня мало уверенности в себе.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="23">
+            <name>Я часто чувствую неуверенность в себе.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="24">
+            <name>Несколько раз в неделю меня беспокоят неприятные ощущения в верхней части живота (под ложечкой).
+            </name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="25">
+            <name>Иногда у меня бывает такое чувство, что передо мной выросло столько трудностей, что одолеть их просто
+                невозможно.
+            </name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="26">
+            <name>Раз в неделю или чаще я без видимой причины внезапно ощущаю жар во всем теле.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="27">
+            <name>Временами я изматываю себя тем, что слишком много на себя беру.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="28">
+            <name>Я очень внимательно отношусь к тому, как я одеваюсь.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="29">
+            <name>Мое зрение ухудшилось в последнее время.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="30">
+            <name>В отношениях между людьми чаще всего торжествует несправедливость.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="31">
+            <name>У меня бывают периоды такого сильного беспокойства, что я даже не могу усидеть на месте.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="32">
+            <name>Я с удовольствием танцую, когда есть возможность.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="33">
+            <name>По возможности я стараюсь избегать большого скопления людей.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="34">
+            <name>Мой желудок сильно беспокоит меня.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="35">
+            <name>Должен признаться, что временами я волнуюсь из-за пустяков.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="36">
+            <name>Часто сам огорчаюсь, что я такой раздражительный и ворчливый.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="37">
+            <name>Несколько раз в неделю у меня бывает такое чувство, что должно случиться что-то страшное.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="38">
+            <name>Мне кажется, что близкие меня плохо понимают.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="39">
+            <name>У меня часто бывают боли в сердце или в груди.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="40">
+            <name>В гостях я обычно сижу где-нибудь в стороне или разговариваю с кем-нибудь одним.</name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+    </items>
+</quiz>

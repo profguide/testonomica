@@ -9,26 +9,26 @@ namespace App\Test;
 
 class QuestionsHolder
 {
-    private $questions;
+    private array $questions;
 
-    private $byGroups;
+    private array $byGroups = [];
 
     public function __construct(array $questions)
     {
         $this->questions = $questions;
     }
 
-    public function byGroups()
+    public function byGroups(): array
     {
-        if ($this->byGroups != null) {
+        if (!empty($this->byGroups)) {
             return $this->byGroups;
         }
-        $questions = [];
+        $groups = [];
         /**@var Question $question */
         foreach ($this->questions as $question) {
-            $questions[$question->getGroup()][] = $question;
+            $groups[$question->getGroup()][] = $question;
         }
-        $this->byGroups = $questions;
+        $this->byGroups = $groups;
         return $this->byGroups;
     }
 
@@ -51,5 +51,13 @@ class QuestionsHolder
     public function remove(string $id): void
     {
         unset($this->questions[$id]);
+    }
+
+    /**
+     * @return Question[]
+     */
+    public function getAll(): array
+    {
+        return $this->questions;
     }
 }

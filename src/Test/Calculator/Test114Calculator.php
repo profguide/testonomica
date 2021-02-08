@@ -16,7 +16,7 @@ class Test114Calculator extends AbstractCalculator
 
     public function calculate(): array
     {
-        $sums = AnswersUtil::sumValuesMap($this->answersHolder);
+        $sums = AnswersUtil::sumValuesMap($this->questionsHolder, $this->answersHolder);
         unset($sums['0']);
         return [
             'sum' => $sum = array_sum($sums),

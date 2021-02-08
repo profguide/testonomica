@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Какой военачальник назвал завоёванный город в честь своего коня?
+                
+            </name>
+            <options>
+                <option value="0">Георгий Жуков</option>
+                <option value="0">Наполеон</option>
+                <option value="0">Юлий Цезарь</option>
+                <option value="key">Александр Македонский</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>При взятии египетского города Халеб этот военачальник обещал не пролить ни капли мусульманской крови. И обещание "сдержал" — все христиане были перерезаны, а мусульмане погребены заживо. Кем был этот "Милосердный палач"?
+            </name>
+            <options>
+                <option value="0">Чингисхан</option>
+                <option value="0">Атилла</option>
+                <option value="key">Тамерлан</option>
+                <option value="0">Мустафа Кемаль Ататюрк</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Как звали создателя самой крупной континентальной империи в истории?
+            </name>
+            <options>
+                <option value="0">Иван Грозный</option>
+                <option value="0">Джорж Вашингтон</option>
+                <option value="0">Наполеон</option>
+                <option value="key">Чингисхан</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Этот военачальник пересек Альпы с армией в 50 тысяч пехотинцев, 9 тысяч кавалеристов и с 37 слонами. Во время перехода он потерял почти половину своей армии.
+            </name>
+            <options>
+                <option value="0">Александр Суворов</option>
+                <option value="0">Гай Юлий Цезарь</option>
+                <option value="key">Ганнибал Барка</option>
+                <option value="0">Саладин (Салах ад-Дин)</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>12 апреля 1242 года русские войска под предводительством какого военачальника разбили немецких рыцарей на Чудском озере? Эта битва вошла в историю под названием "Ледовое побоище".
+            </name>
+            <options>
+                <option value="key">Александр Невский</option>
+                <option value="0">Александр Суворов</option>
+                <option value="0">Иван Грозный</option>
+                <option value="0">Владимир Ленин</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>С нашествия какого военачальника историки официально отсчитывают время Великого переселения народов? Папа римский Лев I встал перед ним на колени. «Приветствую тебя, Бич Божий», — сказал папа ему.
+            </name>
+            <options>
+                <option value="0">Гай Юлий Цезарь</option>
+                <option value="key">Атилла</option>
+                <option value="0">Тамерлан</option>
+                <option value="0">Чингисхан</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Единственный в мире полководец, не проигравший ни одной битвы
+            </name>
+            <options>
+                <option value="0">Тамерлан</option>
+                <option value="0">Георгий Жуков</option>
+                <option value="key">Александр Суворов</option>
+                <option value="0">Леонид I</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Какой военачальник снёс нос Сфинксу пушечным выстрелом?
+            </name>
+            <options>
+                <option value="key">Наполеон</option>
+                <option value="0">Александр Македонский</option>
+                <option value="0">Адольф Гитлер</option>
+                <option value="0">Дмитрий Донской</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>8 сентября 1380 года под чьим командованием состоялась великая победа в Куликовской битве, ставшая важным шагом на пути к восстановлению единства Руси и будущему свержению золотоордынского ига?
+            </name>
+            <options>
+                <option value="key">Дмитрий Донской</option>
+                <option value="0">Александр Первый</option>
+                <option value="0">Александр Суворов</option>
+                <option value="0">Иван Грозный</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Этот военачальник был "бастардом" французского герцога. Но это не помешало ему завоевать Англию в 1066 году и навсегда изменить историю этой страны.
+            </name>
+            <options>
+                <option value="0">Жан Кавалье</option>
+                <option value="key">Вильгельм Завоеватель</option>
+                <option value="0">Жильбер Лафайет</option>
+                <option value="0">Наполеон</option>
+            </options>
+        </item>
+    </items>
+</quiz>

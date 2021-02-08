@@ -1,0 +1,114 @@
+{% extends('tests/result.html.twig') %}
+
+{% block result %}
+    <div class="container">
+        {% if vremennoe >= 7 %}
+            <p><b>Высокий уровень временного одиночества.</b></p>
+            {% elseif vremennoe >= 4 and vremennoe <= 6 %}
+            <p><b>Средний (адаптивный) уровень временного одиночества.</b></p>
+            {% elseif vremennoe >= 0 and vremennoe <= 3 %}
+            <p><b>Низкий уровень временного одиночества.</b></p>
+        {% endif %}
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale.vremennoe }}%;"
+                 aria-valuenow="{{ scale.vremennoe }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ vremennoe }} {% trans %}out of{% endtrans %} 10
+            </div>
+        </div>
+
+        <p class="mt-2">Временное одиночество — наиболее распространенная форма такого состояния, относящаяся к кратковременным
+            приступам одиночества. Реже наступает в результате значительных стрессовых событий в жизни, таких как
+            смерть близкого человека или разрыв каких-либо отношений (при этом одинокий индивид после короткого периода
+            дистресса обычно смиряется со своей потерей и преодолевает одиночество).</p>
+
+        <br/>
+
+        {% if postoyannoe >= 7 %}
+            <p><b>Высокий уровень постоянного одиночества.</b></p>
+            {% elseif postoyannoe >= 4 and postoyannoe <= 6 %}
+            <p><b>Средний (адаптивный) уровень постоянного одиночества.</b></p>
+            {% elseif postoyannoe >= 0 and postoyannoe <= 3 %}
+            <p><b>Низкий уровень постоянного одиночества.</b></p>
+        {% endif %}
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale.postoyannoe }}%;"
+                 aria-valuenow="{{ scale.postoyannoe }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ postoyannoe }} {% trans %}out of{% endtrans %} 10
+            </div>
+        </div>
+
+        <p class="mt-2">Постоянное одиночество развивается, когда в течение длительного времени индивид не может установить
+            удовлетворяющих психосоциальных связей.</p>
+
+        <br/>
+
+        {% if emocionalnoe >= 7 %}
+            <p><b>Высокий уровень эмоционального одиночества.</b></p>
+            {% elseif emocionalnoe >= 4 and emocionalnoe <= 6 %}
+            <p><b>Средний (адаптивный) уровень эмоционального одиночества.</b></p>
+            {% elseif emocionalnoe >= 0 and emocionalnoe <= 3 %}
+            <p><b>Низкий уровень эмоционального одиночества.</b></p>
+        {% endif %}
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale.emocionalnoe }}%;"
+                 aria-valuenow="{{ scale.emocionalnoe }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ emocionalnoe }} {% trans %}out of{% endtrans %} 10
+            </div>
+        </div>
+
+        <p class="mt-2">Эмоциональное одиночество представляется результатом отсутствия тесной привязанности с каким-либо лицом
+            или разрыва подобных эмоциональных связей, если таковые уже были (положительные или отрицательные эмоции, связанные
+            с переживанием одиночества; принятие или неприемлемость одиночества для индивида). Такое одиночество может возникать
+            при эмоциональной холодности родителей и окружающих взрослых, отвержения со стороны сверстников.</p>
+
+        <br/>
+
+        {% if povedencheskoe >= 7 %}
+            <p><b>Высокий уровень поведенческого одиночества.</b></p>
+            {% elseif povedencheskoe >= 4 and povedencheskoe <= 6 %}
+            <p><b>Средний (адаптивный) уровень поведенческого одиночества.</b></p>
+            {% elseif povedencheskoe >= 0 and povedencheskoe <= 3 %}
+            <p><b>Низкий уровень поведенческого одиночества.</b></p>
+        {% endif %}
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale.povedencheskoe }}%;"
+                 aria-valuenow="{{ scale.povedencheskoe }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ povedencheskoe }} {% trans %}out of{% endtrans %} 10
+            </div>
+        </div>
+
+        <p class="mt-2">Поведенческое одиночество проявляется в конфликте, потере связи с окружающими, отсутствии доступного
+            круга социального общения (отсутствие значимых дружеских связей или чувства общности, невключенность в референтную
+            для индивида группу). Такое одиночество может выражаться как активно (стремление, избегание), так и пассивно.</p>
+
+        <br/>
+
+        {% if kognitivnoe >= 7 %}
+            <p><b>Высокий уровень когнитивного одиночества.</b></p>
+            {% elseif kognitivnoe >= 4 and kognitivnoe <= 6 %}
+            <p><b>Средний (адаптивный) уровень когнитивного одиночества.</b></p>
+            {% elseif kognitivnoe >= 0 and kognitivnoe <= 3 %}
+            <p><b>Низкий уровень когнитивного одиночества.</b></p>
+        {% endif %}
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale.kognitivnoe }}%;"
+                 aria-valuenow="{{ scale.kognitivnoe }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ kognitivnoe }} {% trans %}out of{% endtrans %} 10
+            </div>
+        </div>
+
+        <p class="mt-2">Когнитивное одиночество — состояние, испытываемое человеком в результате осознания им ситуации
+            собственной депривации (внутреннее ощущение одиночества, опустошенности). Оно может быть следствием резкой смены
+            приоритетных установок во взаимоотношениях с окружающими, несовпадения интересов, взглядов.</p>
+    </div>
+{% endblock %}

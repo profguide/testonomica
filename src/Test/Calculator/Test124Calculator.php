@@ -14,7 +14,7 @@ class Test124Calculator extends AbstractCalculator
 {
     public function calculate(): array
     {
-        $sums = AnswersUtil::sumValuesMap($this->answersHolder);
+        $sums = AnswersUtil::sumValuesMap($this->questionsHolder, $this->answersHolder);
         return [
             'sum' => $sum = AnswersUtil::arraySum($sums, 'key'),
             'scale' => round($sum * 100 / 9)

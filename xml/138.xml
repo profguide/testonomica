@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Какая глубина Мариинской впадины?
+            </name>
+            <options>
+                <option value="0">3 525 метров</option>
+                <option value="0">7 968 метров</option>
+                <option value="key">10 994 метра</option>
+                <option value="0">До глубины так и не удалось достать</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Как называется самая глубокая точка Марианской впадины?
+            </name>
+            <options>
+                <option value="0">Пропасть Жака-Ива Кусто</option>
+                <option value="key">Бездна Челленджера</option>
+                <option value="0">Жерло Стивенсона</option>
+                <option value="0">Омут Берринга</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Что обнаружили исследователи американской океанографической экспедиции из университета Нью-Гэмпшира (США) на поверхности впадины?
+            </name>
+            <options>
+                <option value="0">Озёра</option>
+                <option value="0">Реки</option>
+                <option value="key">Горы</option>
+                <option value="0">Поля</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Как зовут первого в мире человека, погрузившегося на самое дно впадины в одиночку?
+            </name>
+            <options>
+                <option value="0">Жак-Ив Кусто</option>
+                <option value="0">Жак Огюст Пикар</option>
+                <option value="key">Джеймс Кэмерон</option>
+                <option value="0">Стивен Кинг</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Во сколько раз давление воды на глубине впадины больше, чем атмосферное давление на уровне моря?
+            </name>
+            <options>
+                <option value="0">В 12 раз</option>
+                <option value="0">В 507 раз</option>
+                <option value="0">В 733 раза</option>
+                <option value="key">В 1072 раза</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Есть ли жизнь на дне Марианской впадины?
+            </name>
+            <options>
+                <option value="key">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+</items>
+</quiz>

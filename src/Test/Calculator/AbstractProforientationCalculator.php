@@ -87,7 +87,7 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
     {
         $questions = $questionsHolder->group($groupName);
         $count = count($questions);
-        $rightSum = AnswersUtil::sum($questions, $answersHolder);
+        $rightSum = AnswersUtil::sum(new QuestionsHolder($questions), $answersHolder);
         $this->applyExtraAnswers($groupName, $answersHolder, $rightSum, $count);
         return (round($rightSum / $count * 100));
     }

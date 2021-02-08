@@ -7,6 +7,7 @@
 namespace App\Test\Calculator;
 
 use App\Test\AbstractCalculator;
+use App\Test\QuestionsHolder;
 use App\Util\AnswersUtil;
 
 class PersonIntelCalculator extends AbstractCalculator
@@ -43,7 +44,7 @@ class PersonIntelCalculator extends AbstractCalculator
         $groups = $this->questionsHolder->byGroups();
         $sums = [];
         foreach ($groups as $k => $group) {
-            $sums[$k] = AnswersUtil::sum($group, $this->answersHolder);
+            $sums[$k] = AnswersUtil::sum(new QuestionsHolder($group), $this->answersHolder);
         }
         $result = [
             'creator' => round($sums['creator'] * 100 / 36),

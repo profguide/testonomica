@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1" showAnswer="true" enabledBack="false">
+            <name>Кто в Калифорнии имеет право прохода первым при переходе любой улицы, включая подъездные дорожки к дому?
+            </name>
+            <options>
+                <option value="0">Инвалид</option>
+                <option value="0">Индеец</option>
+                <option value="key" correct="true">Павлин</option>
+                <option value="0">Тот, кто справа</option>
+            </options>
+        </item>
+        <item id="2" showAnswer="true" enabledBack="false">
+            <name>Когда в Калифорнии запрещено Собакам гоняться за белками?
+            </name>
+            <options>
+                <option value="0">Ночью</option>
+                <option value="key" correct="true">Летом</option>
+                <option value="0">После ужина</option>
+                <option value="0">В дождливую погоду</option>
+            </options>
+        </item>
+        <item id="3" showAnswer="true" enabledBack="false">
+            <name>Когда запрещено носить пуленепробиваемый жилет в штате Нью-Джерси?
+            </name>
+            <options>
+                <option value="0">Зимой</option>
+                <option value="0">Когда надета куртка</option>
+                <option value="key" correct="true">Во время совершения убийства</option>
+                <option value="0">Когда на улице температура воздуха превышает 40 градусов по шкале Цельсия</option>
+            </options>
+        </item>
+        <item id="4" showAnswer="true" enabledBack="false">
+            <name>Что запрещено делать мужчинам Нью-Джерси в рыболовный сезон?
+            </name>
+            <options>
+                <option value="0">Пить виски</option>
+                <option value="0">Ругаться с жёнами</option>
+                <option value="key" correct="true">Вязать</option>
+                <option value="0">Играть на флейте</option>
+            </options>
+        </item>
+        <item id="5" showAnswer="true" enabledBack="false">
+            <name>В штате Нью-Джерси запрещено хмуриться, если вы смотрите на:
+            </name>
+            <options>
+                <option value="0">Своего супруга</option>
+                <option value="0">На свою собаку</option>
+                <option value="0">На губернатора штата</option>
+                <option value="key" correct="true">На полицейского</option>
+            </options>
+        </item>
+        <item id="6" showAnswer="true" enabledBack="false">
+            <name>Для чего все коты Нью-Джерси обязаны носить три колокольчика?
+            </name>
+            <options>
+                <option value="0">Чтобы не пугать белок ночью</option>
+                <option value="key" correct="true">Чтобы предупредить птичек о своем местонахождении</option>
+                <option value="0">Чтобы оповещать соседей о своём визите</option>
+                <option value="0">Колокольчики заставляют кошек меньше мяукать</option>
+            </options>
+        </item>
+        <item id="7" showAnswer="true" enabledBack="false">
+            <name>Кому запрещено давать пиво или другие опьяняющие напитки в штате Миссисипи?
+            </name>
+            <options>
+                <option value="0">Овцам</option>
+                <option value="key" correct="true">Слонам</option>
+                <option value="0">Страусам</option>
+                <option value="0">Лошадям</option>
+            </options>
+        </item>
+        <item id="8" showAnswer="true" enabledBack="false">
+            <name>Что запрещается продавать в штате Небраска?
+            </name>
+            <options>
+                <option value="0">Луковые очистки</option>
+                <option value="0">Компост из кактусов</option>
+                <option value="0">Прогноз погоды</option>
+                <option value="key" correct="true">Дырку от пончика</option>
+            </options>
+        </item>
+        <item id="9" showAnswer="true" enabledBack="false">
+            <name>Что запрещено законом в штате Луизиана?
+            </name>
+            <options>
+                <option value="key" correct="true">Привязывать аллигатора к пожарному гидранту</option>
+                <option value="0">Выгуливать слона после 3-х часов дня</option>
+                <option value="0">Садиться верхом на страуса без специального разрешения</option>
+                <option value="0">Переходить дорогу, если у вас больше двух собак</option>
+            </options>
+        </item>
+        <item id="10" showAnswer="true" enabledBack="false">
+            <name>Какие звуки запрещено издавать в общественных местах в Луизиане?
+            </name>
+            <options>
+                <option value="0">Чавкающие</option>
+                <option value="0">Клацающие</option>
+                <option value="0">Рыгающие</option>
+                <option value="key" correct="true">Булькающие</option>
+            </options>
+        </item>
+        <item id="11" showAnswer="true" enabledBack="false">
+            <name>Какими существами нельзя кидаться в людей в штате Огайо?
+            </name>
+            <options>
+                <option value="0">Беременными кошками</option>
+                <option value="0">Муравьями, если в руке есть и часть муравейника</option>
+                <option value="key" correct="true">Змеями</option>
+                <option value="0">Живыми дождевыми червями</option>
+            </options>
+        </item>
+        <item id="12" showAnswer="true" enabledBack="false">
+            <name>Каким домашним питомцам запрещено входить в парикмахерские в штате Арканзас?
+            </name>
+            <options>
+                <option value="0">Кошкам</option>
+                <option value="0">Собакам</option>
+                <option value="key" correct="true">Фламинго</option>
+                <option value="0">Тиграм</option>
+            </options>
+        </item>
+        <item id="13" showAnswer="true" enabledBack="false">
+            <name>Куда все мужчины штата Массачусетс должны брать с собой винтовку?
+            </name>
+            <options>
+                <option value="key" correct="true">В церковь по воскресеньям</option>
+                <option value="0">На загородную охоту</option>
+                <option value="0">В дорогу, превышающую 10 км от дома</option>
+                <option value="0">В цирк</option>
+            </options>
+        </item>
+        <item id="14" showAnswer="true" enabledBack="false">
+            <name>На чём нельзя кататься по шоссе в штате Невада?
+            </name>
+            <options>
+                <option value="key" correct="true">На верблюде</option>
+                <option value="0">На горных лыжах</option>
+                <option value="0">На бревне, привязанному к автомобилю</option>
+                <option value="0">На пятках</option>
+            </options>
+        </item>
+</items>
+</quiz>

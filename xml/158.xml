@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Временами не могу справиться с желанием навредить кому-либо.</name>
+            <options>
+                <option value="fiz">Да</option>
+                <option value="fiz">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Иногда могу посплетничать о людях, которых не люблю.</name>
+            <options>
+                <option value="kosv">Да</option>
+                <option value="kosv">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Легко раздражаюсь, но легко и успокаиваюсь.</name>
+            <options>
+                <option value="razdraj">Да</option>
+                <option value="razdraj">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Если меня не попросить по-хорошему, просьбу не выполню.</name>
+            <options>
+                <option value="negativ">Да</option>
+                <option value="negativ">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Не всегда получаю то, что мне положено.</name>
+            <options>
+                <option value="obida">Да</option>
+                <option value="obida">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Знаю, что люди говорят обо мне за моей спиной.</name>
+            <options>
+                <option value="podozr">Да</option>
+                <option value="podozr">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Если не одобряю поступки других людей, даю им это почувствовать.</name>
+            <options>
+                <option value="verb">Да</option>
+                <option value="verb">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Если случается обмануть кого-либо, испытываю угрызения совести.</name>
+            <options>
+                <option value="vina">Да</option>
+                <option value="vina">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Мне кажется, что я не способен ударить человека.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Пожалуй, да</option>
+                <option value="fiz">Пожалуй, нет</option>
+                <option value="fiz">Нет</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Никогда не раздражаюсь настолько, чтобы разбрасывать вещи.</name>
+            <options>
+                <option value="kosv">Да</option>
+                <option value="kosv">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Всегда снисходителен к чужим недостаткам.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Пожалуй, да</option>
+                <option value="razdraj">Пожалуй, нет</option>
+                <option value="razdraj">Нет</option>
+            </options>
+        </item>
+        <item id="12">
+            <name>Когда установленное правило не нравится мне, хочется нарушить его.</name>
+            <options>
+                <option value="negativ">Да</option>
+                <option value="negativ">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="13">
+            <name>Другие почти всегда умеют использовать благоприятные обстоятельства.</name>
+            <options>
+                <option value="obida">Да</option>
+                <option value="obida">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="14">
+            <name>Меня настораживают люди, которые относятся ко мне более дружелюбно, чем я этого ожидаю.</name>
+            <options>
+                <option value="podozr">Да</option>
+                <option value="podozr">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="15">
+            <name>Часто бываю не согласен с людьми.</name>
+            <options>
+                <option value="verb">Да</option>
+                <option value="verb">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="16">
+            <name>Иногда на ум приходят мысли, которых я стыжусь.</name>
+            <options>
+                <option value="vina">Да</option>
+                <option value="vina">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="17">
+            <name>Если кто-нибудь ударит меня, я не отвечу ему тем же.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Пожалуй, да</option>
+                <option value="fiz">Пожалуй, нет</option>
+                <option value="fiz">Нет</option>
+            </options>
+        </item>
+        <item id="18">
+            <name>В раздражении хлопаю дверьми.</name>
+            <options>
+                <option value="kosv">Да</option>
+                <option value="kosv">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="19">
+            <name>Я более раздражителен, чем кажется со стороны.</name>
+            <options>
+                <option value="razdraj">Да</option>
+                <option value="razdraj">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="20">
+            <name>Если кто-то корчит из себя начальника, я поступаю ему наперекор.</name>
+            <options>
+                <option value="negativ">Да</option>
+                <option value="negativ">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="21">
+            <name>Меня немного огорчает моя судьба.</name>
+            <options>
+                <option value="obida">Да</option>
+                <option value="obida">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="22">
+            <name>Думаю, что многие люди не любят меня.</name>
+            <options>
+                <option value="podozr">Да</option>
+                <option value="podozr">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="23">
+            <name>Не могу удержаться от спора, если люди не согласны со мной.</name>
+            <options>
+                <option value="verb">Да</option>
+                <option value="verb">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="24">
+            <name>Увиливающие от работы должны испытывать чувство вины.</name>
+            <options>
+                <option value="vina">Да</option>
+                <option value="vina">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="25">
+            <name>Кто оскорбляет меня или мою семью, напрашивается на драку.</name>
+            <options>
+                <option value="fiz">Да</option>
+                <option value="fiz">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="26">
+            <name>Я не способен на грубые шутки.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Пожалуй, да</option>
+                <option value="kosv">Пожалуй, нет</option>
+                <option value="kosv">Нет</option>
+            </options>
+        </item>
+        <item id="27">
+            <name>Меня охватывает ярость, когда надо мной насмехаются.</name>
+            <options>
+                <option value="razdraj">Да</option>
+                <option value="razdraj">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="28">
+            <name>Когда люди строят из себя начальников, я делаю все чтобы они не зазнавались.</name>
+            <options>
+                <option value="negativ">Да</option>
+                <option value="negativ">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="29">
+            <name>Почти каждую неделю вижу кого-нибудь из тех, кто мне не нравится.</name>
+            <options>
+                <option value="obida">Да</option>
+                <option value="obida">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="30">
+            <name>Довольно многие завидуют мне.</name>
+            <options>
+                <option value="podozr">Да</option>
+                <option value="podozr">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="31">
+            <name>Требую, чтобы люди уважали мои права.</name>
+            <options>
+                <option value="verb">Да</option>
+                <option value="verb">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="32">
+            <name>Меня огорчает, что я мало делаю для своих родителей.</name>
+            <options>
+                <option value="vina">Да</option>
+                <option value="vina">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="33">
+            <name>Люди, которые постоянно изводят вас, стоят того, чтобы их щелкнули по носу.</name>
+            <options>
+                <option value="fiz">Да</option>
+                <option value="fiz">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="34">
+            <name>От злости иногда бываю мрачным.</name>
+            <options>
+                <option value="kosv">Да</option>
+                <option value="kosv">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="35">
+            <name>Если ко мне относятся хуже, чем я того заслуживаю, я не огорчаюсь.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Пожалуй, да</option>
+                <option value="razdraj">Пожалуй, нет</option>
+                <option value="razdraj">Нет</option>
+            </options>
+        </item>
+        <item id="36">
+            <name>Если кто-то пытается вывести меня из себя, я не обращаю на него внимания.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Пожалуй, да</option>
+                <option value="negativ">Пожалуй, нет</option>
+                <option value="negativ">Нет</option>
+            </options>
+        </item>
+        <item id="37">
+            <name>Хотя я и не показываю этого, иногда меня гложет зависть.</name>
+            <options>
+                <option value="obida">Да</option>
+                <option value="obida">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="38">
+            <name>Иногда мне кажется, что надо мной смеются.</name>
+            <options>
+                <option value="podozr">Да</option>
+                <option value="podozr">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="39">
+            <name>Даже если злюсь, не прибегаю к сильным выражениям.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Пожалуй, да</option>
+                <option value="verb">Пожалуй, нет</option>
+                <option value="verb">Нет</option>
+            </options>
+        </item>
+        <item id="40">
+            <name>Хочется, чтобы мои грехи были прощены.</name>
+            <options>
+                <option value="vina">Да</option>
+                <option value="vina">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="41">
+            <name>Редко даю сдачи, даже если кто-нибудь ударит меня.</name>
+            <options>
+                <option value="fiz">Да</option>
+                <option value="fiz">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="42">
+            <name>Обижаюсь, когда иногда получается не по-моему.</name>
+            <options>
+                <option value="kosv">Да</option>
+                <option value="kosv">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="43">
+            <name>Иногда люди раздражают меня своим присутствием.</name>
+            <options>
+                <option value="razdraj">Да</option>
+                <option value="razdraj">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="44">
+            <name>Нет людей, которых бы я по-настоящему ненавидел.</name>
+            <options>
+                <option value="obida">Да</option>
+                <option value="obida">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="45">
+            <name>Мой принцип: «Никогда не доверять чужакам».</name>
+            <options>
+                <option value="podozr">Да</option>
+                <option value="podozr">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="46">
+            <name>Если кто-то раздражает меня, готов сказать ему все, что о нем думаю.</name>
+            <options>
+                <option value="verb">Да</option>
+                <option value="verb">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="47">
+            <name>Делаю много такого, о чем впоследствии сожалею.</name>
+            <options>
+                <option value="vina">Да</option>
+                <option value="vina">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="48">
+            <name>Если разозлюсь, могу ударить кого-нибудь.</name>
+            <options>
+                <option value="fiz">Да</option>
+                <option value="fiz">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="49">
+            <name>С десяти лет у меня не было вспышек гнева.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Пожалуй, да</option>
+                <option value="kosv">Пожалуй, нет</option>
+                <option value="kosv">Нет</option>
+            </options>
+        </item>
+        <item id="50">
+            <name>Часто чувствую себя, как пороховая бочка, готовая взорваться.</name>
+            <options>
+                <option value="razdraj">Да</option>
+                <option value="razdraj">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="51">
+            <name>Если бы знали, что я чувствую, меня бы считали человеком, с которым нелегко ладить.</name>
+            <options>
+                <option value="obida">Да</option>
+                <option value="obida">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="52">
+            <name>Всегда думаю о том, какие тайные причины заставляют людей делать что-нибудь приятное для меня.</name>
+            <options>
+                <option value="podozr">Да</option>
+                <option value="podozr">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="53">
+            <name>Когда кричат на меня, кричу в ответ.</name>
+            <options>
+                <option value="verb">Да</option>
+                <option value="verb">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="54">
+            <name>Неудачи огорчают меня.</name>
+            <options>
+                <option value="vina">Да</option>
+                <option value="vina">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="55">
+            <name>Дерусь не реже и не чаще других.</name>
+            <options>
+                <option value="fiz">Да</option>
+                <option value="fiz">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="56">
+            <name>Могу вспомнить случаи, когда был настолько зол, что хватал первую попавшуюся под руку вещь и ломал
+                ее.
+            </name>
+            <options>
+                <option value="kosv">Да</option>
+                <option value="kosv">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="57">
+            <name>Иногда чувствую, что готов первым начать драку.</name>
+            <options>
+                <option value="razdraj">Да</option>
+                <option value="razdraj">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="58">
+            <name>Иногда чувствую, что жизнь со мной поступает несправедливо.</name>
+            <options>
+                <option value="obida">Да</option>
+                <option value="obida">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="59">
+            <name>Раньше думал, что большинство людей говорит правду, но теперь этому не верю.</name>
+            <options>
+                <option value="podozr">Да</option>
+                <option value="podozr">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="60">
+            <name>Ругаюсь только от злости.</name>
+            <options>
+                <option value="verb">Да</option>
+                <option value="verb">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="61">
+            <name>Когда поступаю неправильно, меня мучает совесть.</name>
+            <options>
+                <option value="vina">Да</option>
+                <option value="vina">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="62">
+            <name>Если для защиты своих прав нужно применить физическую силу, я применяю ее.</name>
+            <options>
+                <option value="fiz">Да</option>
+                <option value="fiz">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="63">
+            <name>Иногда выражаю свой гнев тем, что стучу по столу.</name>
+            <options>
+                <option value="kosv">Да</option>
+                <option value="kosv">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="64">
+            <name>Бываю грубоват по отношению к людям, которые мне не нравятся.</name>
+            <options>
+                <option value="razdraj">Да</option>
+                <option value="razdraj">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="65">
+            <name>У меня нет врагов, которые хотели бы мне навредить.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Пожалуй, да</option>
+                <option value="podozr">Пожалуй, нет</option>
+                <option value="podozr">Нет</option>
+            </options>
+        </item>
+        <item id="66">
+            <name>Не умею поставить человека на место, даже если он этого заслуживает.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Пожалуй, да</option>
+                <option value="verb">Пожалуй, нет</option>
+                <option value="verb">Нет</option>
+            </options>
+        </item>
+        <item id="67">
+            <name>Часто думаю, что живу неправильно.</name>
+            <options>
+                <option value="vina">Да</option>
+                <option value="vina">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="68">
+            <name>Знаю людей, которые способны довести меня до драки.</name>
+            <options>
+                <option value="fiz">Да</option>
+                <option value="fiz">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="69">
+            <name>Не огорчаюсь из-за мелочей.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Пожалуй, да</option>
+                <option value="razdraj">Пожалуй, нет</option>
+                <option value="razdraj">Нет</option>
+            </options>
+        </item>
+        <item id="70">
+            <name>Мне редко приходит в голову мысль о том, что люди пытаются разозлить или оскорбить меня.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Пожалуй, да</option>
+                <option value="podozr">Пожалуй, нет</option>
+                <option value="podozr">Нет</option>
+            </options>
+        </item>
+        <item id="71">
+            <name>Часто просто угрожаю людям, не собираясь приводить угрозы в исполнение.</name>
+            <options>
+                <option value="verb">Да</option>
+                <option value="verb">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="72">
+            <name>В последнее время я стал занудой.</name>
+            <options>
+                <option value="razdraj">Да</option>
+                <option value="razdraj">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="73">
+            <name>В споре часто повышаю голос.</name>
+            <options>
+                <option value="verb">Да</option>
+                <option value="verb">Пожалуй, да</option>
+                <option value="0">Пожалуй, нет</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="74">
+            <name>Стараюсь скрывать плохое отношение к людям.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Пожалуй, да</option>
+                <option value="verb">Пожалуй, нет</option>
+                <option value="verb">Нет</option>
+            </options>
+        </item>
+        <item id="75">
+            <name>Лучше соглашусь с чем-либо, чем стану спорить.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Пожалуй, да</option>
+                <option value="verb">Пожалуй, нет</option>
+                <option value="verb">Нет</option>
+            </options>
+        </item>
+    </items>
+</quiz>
+
+

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Название страны происходит от названия германского племени франков, а что означало само слово "франк"?
+            </name>
+            <options>
+                <option value="0">Трезвый</option>
+                <option value="key">Свободный</option>
+                <option value="0">Храбрый</option>
+                <option value="0">Мудрый</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Ежегодно Францию посещают десятки миллионов туристов и она стабильно занимает место в пятёрке лидеров. Какое же место занимает Франция?
+            </name>
+            <options>
+                <option value="key">Первое</option>
+                <option value="0">Второе</option>
+                <option value="0">Третье</option>
+                <option value="0">Четвёртое</option>
+                <option value="0">Пятое</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Какая страна в Евросоюзе самая крупная?
+            </name>
+            <options>
+                <option value="0">Испания</option>
+                <option value="0">Германия</option>
+                <option value="key">Франция</option>
+                <option value="0">Россия</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Какую геометрическую фигуру напоминает Франция формой своей площади?
+            </name>
+            <options>
+                <option value="0">Квадрат</option>
+                <option value="0">Пятиугольник</option>
+                <option value="key">Шестиугольник</option>
+                <option value="0">Цилиндр</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>В эпоху Великой революции (1789-1799) у Франции появился девиз. Что в нём говорится?
+            </name>
+            <options>
+                <option value="0">Бог и моё право</option>
+                <option value="key">Свобода, равенство, братство</option>
+                <option value="0">Честь, Родина и народ</option>
+                <option value="0">Честь, Братство, Справедливость</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Какая национальная эмблема была во Франции во время Французской революции XVIII века, когда изображение этой эмблемы появилось на новой двадцатифранковой монете и с тех пор она появлялась на марках, медалях, плакатах и даже стала эмблемой Национального олимпийского комитета Франции?
+            </name>
+            <options>
+                <option value="key">Петух</option>
+                <option value="0">Кот</option>
+                <option value="0">Осёл</option>
+                <option value="0">Собака</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Известно, что Франция является одним из крупнейших производителей вина в мире. А какой ещё факт, связанный с вином вам известен?
+            </name>
+            <options>
+                <option value="0">Французы не пьют собственное вино</option>
+                <option value="0">В Англии запретили продажу французского вина</option>
+                <option value="key">Французы являются лидерами по потреблению вина на душу населения</option>
+                <option value="0">Король Франции Карл VI Безумный топтал виноград для своего вина лично и только в носках</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Какой вид хлеба является любимым у французов?
+            </name>
+            <options>
+                <option value="0">Батон</option>
+                <option value="key">Багет</option>
+                <option value="0">Чиабатта</option>
+                <option value="0">Тортилья</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Что представляет из себя флаг Франции?
+            </name>
+            <options>
+                <option value="key">Триколор: синий, белый, красный</option>
+                <option value="0">Триколор: Белый, синий, желтый</option>
+                <option value="0">Трёххвостое красное полотнище с изображением шести сине-красно-жёлтых роз</option>
+                <option value="0">Белый прямой крест на синем или красном поле</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Где был написан гимн Франции "Марсельеза"?
+            </name>
+            <options>
+                <option value="0">В Марселе</option>
+                <option value="0">В Париже</option>
+                <option value="key">В Страсбурге</option>
+                <option value="0">В Лондоне</option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Во Франции больше всего лауреатов Нобелевской премии по какой науке?
+            </name>
+            <options>
+                <option value="0">Химия</option>
+                <option value="0">Математика</option>
+                <option value="key">Литература</option>
+                <option value="0">Виноделие</option>
+            </options>
+        </item>
+        <item id="12">
+            <name>Французская армия единственная в мире, где остались:
+            </name>
+            <options>
+                <option value="key">Почтовые голуби</option>
+                <option value="0">Конные войска</option>
+                <option value="0">Танки времён Первой мировой войны</option>
+                <option value="0">Разрешены бранные ругательства между офицерами</option>
+            </options>
+        </item>
+        <item id="13">
+            <name>Франция - первая страна, где появилась:
+            </name>
+            <options>
+                <option value="0">Пятикомнатная квартира</option>
+                <option value="key">Система общественного транспорта</option>
+                <option value="0">Железная дорога</option>
+                <option value="0">Головная боль от винного похмелья</option>
+            </options>
+        </item>
+        <item id="14">
+            <name>Во Франции существует шесть коммун, где нет ни одного жителя, но есть:
+            </name>
+            <options>
+                <option value="0">Функционирующий общественный транспорт</option>
+                <option value="0">Стоматологии</option>
+                <option value="key">Мэры</option>
+                <option value="0">Свежие багеты</option>
+            </options>
+        </item>
+        <item id="15">
+            <name>Что включено в список нематериального культурного наследия ЮНЕСКО во Франции:
+            </name>
+            <options>
+                <option value="key">Праздничная кухня</option>
+                <option value="0">Праздничные танцы</option>
+                <option value="0">Праздничные соревнования по выпивке вина</option>
+                <option value="0">Праздничный 2-х километровый спринт вокруг Эйфелевой башни</option>
+            </options>
+        </item>
+        <item id="16">
+            <name>Что запрещал носить женщинам закон, который отменили только в 2012 году?
+            </name>
+            <options>
+                <option value="0">Паранжу</option>
+                <option value="key">Брюки</option>
+                <option value="0">Мужские пиджаки</option>
+                <option value="0">Шлемы французского женского батальона</option>
+            </options>
+        </item>
+        <item id="17">
+            <name>Чьим именем запрещено называть свинью?
+            </name>
+            <options>
+                <option value="0">Генрихом V</option>
+                <option value="key">Наполеоном</option>
+                <option value="0">Людовиком XVIII</option>
+                <option value="0">Макроном</option>
+            </options>
+        </item>
+        <item id="18">
+            <name>Как называется старейший парижский мост?
+            </name>
+            <options>
+                <option value="key">Pont Neuf (в переводе — Новый мост)</option>
+                <option value="0">Pont du Gard (в переводе — Мост через Гар)</option>
+                <option value="0">Pont de Normandie (в переводе — Мост Нормандии)</option>
+                <option value="0">Pont de Dino (в переводе — Мост динозавров)</option>
+            </options>
+        </item>
+        <item id="19">
+            <name>Какая достопримечательность является самой посещаемой в Париже?
+            </name>
+            <options>
+                <option value="key">Парижский Диснейленд</option>
+                <option value="0">Парижский МакДоналдс</option>
+                <option value="0">Лувр</option>
+                <option value="0">Эйфелева башня</option>
+            </options>
+        </item>
+    <item id="20">
+    <name>В честь кого получил свое название никотин?
+    </name>
+    <options>
+        <option value="0">В честь французского актёра Николя Сильбера</option>
+        <option value="key">В честь французского посла Жана Нико</option>
+        <option value="0">В честь тайного ученика Иисуса Христа Никодима "побеждающего народ"</option>
+        <option value="0">В честь сигарет "Мальборо"</option>
+    </options>
+</item>
+        <item id="21">
+            <name>В каком французском городе находится парфюмерная столица мира?
+            </name>
+            <options>
+                <option value="key">Грасс</option>
+                <option value="0">Париж</option>
+                <option value="0">Канны</option>
+                <option value="0">Тулуза</option>
+            </options>
+        </item>
+</items>
+</quiz>

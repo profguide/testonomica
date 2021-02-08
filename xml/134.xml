@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Великобритания находится на:
+            </name>
+            <options>
+                <option value="0">Полуострове</option>
+                <option value="key">Острове</option>
+                <option value="0">Материке</option>
+                <option value="0">Своём континенте</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Какая форма правления в Великобритании?
+            </name>
+            <options>
+                <option value="0">Абсолютная монархия</option>
+                <option value="0">Парламентская республика</option>
+                <option value="key">Парламентская монархия</option>
+                <option value="0">Президентская республика</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Лондон - это первый город в мире, в котором появился:
+            </name>
+            <options>
+                <option value="0">Французский багет</option>
+                <option value="key">Метрополитен</option>
+                <option value="0">Канализация</option>
+                <option value="0">Квадрокоптер</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Какая музыкальная группа была выходцем из Великобритании?
+            </name>
+            <options>
+                <option value="0">Metallica</option>
+                <option value="0">30 seconds to mars</option>
+                <option value="key">The Beatles</option>
+                <option value="0">Песняры</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Какие страны включает в себя Великобритания?
+            </name>
+            <options>
+                <option value="0">Англию, Уэльс, Шотландию, Голландию</option>
+                <option value="key">Англию, Уэльс, Шотландию, Северную Ирландию</option>
+                <option value="0">Англию, Уэльс, Францию, Северную Ирландию</option>
+                <option value="0">Англию, Францию, Шотландию, Гринландию</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>На каком языке, кроме английского, говорят в Уэльсе?
+            </name>
+            <options>
+                <option value="0">Шотландский гэльский</option>
+                <option value="key">Валлийский</option>
+                <option value="0">Англо-шотландский</option>
+                <option value="0">Ирландский</option>
+                <option value="0">Ольстерско-шотландский</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Как называется комплекс каменных конструкций на равнине Солсбери, построенный около 3000 г. до н.э.?
+            </name>
+            <options>
+                <option value="key">Стоунхендж</option>
+                <option value="0">Пирамида Кукулькана</option>
+                <option value="0">Карнакские камни</option>
+                <option value="0">Обсерватория Набты</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Какие две династии сражались за трон в войне Алой и Белой розы, которая длилась 30 лет?
+            </name>
+            <options>
+                <option value="0">Плантагенеты и Ланкастеры</option>
+                <option value="key">Ланкастеры и Йорки</option>
+                <option value="0">Тюдоры и Плантагенеты</option>
+                <option value="0">Тюдоры и Борджиа</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Какой монарх объединил Англию и Шотландию, вечно воюющих друг с другом?
+            </name>
+            <options>
+                <option value="key">Яков I</option>
+                <option value="0">Елизавета I</option>
+                <option value="0">Иоанн Безземельный</option>
+                <option value="0">Генрих VI</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Какой монарх стал первым именовать себя королем Англии?
+            </name>
+            <options>
+                <option value="0">Эдвиг Красивый</option>
+                <option value="0">Вильгельм Завоеватель</option>
+                <option value="key">Альфред Великий</option>
+                <option value="0">Вильгельм II Рыжий</option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Вождем какого племени являлся легендарный король Артур?
+            </name>
+            <options>
+                <option value="0">Саксы</option>
+                <option value="key">Бритты</option>
+                <option value="0">Норманны</option>
+            </options>
+        </item>
+        <item id="12">
+            <name>При каком короле произошла Английская Реформация и отречение Англии от католической церкви?
+            </name>
+            <options>
+                <option value="0">Генрих VII</option>
+                <option value="key">Генрих VIII</option>
+                <option value="0">Ричард III</option>
+            </options>
+        </item>
+        <item id="13">
+            <name>Откуда произошла династия Плантагенетов?
+            </name>
+            <options>
+                <option value="0">Германия</option>
+                <option value="0">Италия</option>
+                <option value="key">Франция</option>
+                <option value="0">Испания</option>
+            </options>
+        </item>
+        <item id="14">
+            <name>Какая из стран Великобритании самая густонаселённая?
+            </name>
+            <options>
+                <option value="key">Англия</option>
+                <option value="0">Уэльс</option>
+                <option value="0">Шотландия</option>
+                <option value="0">Северная Ирландия</option>
+            </options>
+        </item>
+        <item id="15">
+            <name>Какой из нижеперечисленных учёных был англичанином?
+            </name>
+            <options>
+                <option value="0">Карл Саган</option>
+                <option value="key">Чарльз Дарвин</option>
+                <option value="0">Никола Тесла</option>
+                <option value="0">Томас Эдисон</option>
+            </options>
+        </item>
+        <item id="16">
+            <name>Почему королеву Марию Тюдор прозвали Кровавой Мэри?
+            </name>
+            <options>
+                <option value="key">Она пыталась провести Контрреформацию и сожгла около 300 человек.</option>
+                <option value="0">Она лично казнила заключенных</option>
+                <option value="0">У неё были проблемы со свёртываемостью крови и из носа часто шла кровь</option>
+                <option value="0">Она пила алкоголь только с томатным соком</option>
+            </options>
+        </item>
+        <item id="17">
+            <name>Какой британский монарх первым получил титул императора Индии?
+            </name>
+            <options>
+                <option value="0">Эдуард VIII</option>
+                <option value="0">Оливер Кромвель</option>
+                <option value="key">Виктория</option>
+                <option value="0">Эдуард I Длинноногий</option>
+            </options>
+        </item>
+        <item id="18">
+            <name>Как звали "бастарда" французского герцога, завоевавшего Англию в 1066 году и навсегда изменившего историю этой страны?
+            </name>
+            <options>
+                <option value="0">Генрих I</option>
+                <option value="key">Вильгельм Завоеватель</option>
+                <option value="0">Иоанн Безземельный</option>
+                <option value="0">Кнуд Великий</option>
+            </options>
+        </item>
+        <item id="19">
+            <name>К какой династии принадлежит ныне правящая королева Елизавета II?
+            </name>
+            <options>
+                <option value="key">Виндзорская</option>
+                <option value="0">Саксен-Кобург-Готская</option>
+                <option value="0">Ганноверская</option>
+                <option value="0">Рюриковичи</option>
+            </options>
+        </item>
+    <item id="20">
+    <name>С кем воевала Англия во время Столетней войны?
+    </name>
+    <options>
+        <option value="0">Шотландия</option>
+        <option value="0">Ирландия</option>
+        <option value="key">Франция</option>
+        <option value="0">Испания</option>
+    </options>
+</item>
+        <item id="21">
+            <name>Кто был первым Лордом-протектором Англии?
+            </name>
+            <options>
+                <option value="0">Ричард Кромвель</option>
+                <option value="key">Оливер Кромвель</option>
+                <option value="0">Томас Кромвель</option>
+                <option value="0">Иван Грозный</option>
+            </options>
+        </item>
+</items>
+</quiz>

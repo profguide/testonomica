@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1" group="a">
+            <name>Я чувствую подавленность
+            </name>
+            <options>
+                <option value="1">никогда или изредка</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="2" group="b">
+            <name>Утром я чувствую себя лучше всего
+            </name>
+            <options>
+                <option value="4">никогда или изредка</option>
+                <option value="3">иногда</option>
+                <option value="2">часто</option>
+                <option value="1">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="3" group="a">
+            <name>У меня бывают периоды плача или близости к слезам
+            </name>
+            <options>
+                <option value="1">никогда или изредка</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="4" group="a">
+            <name>У меня плохой ночной сон
+            </name>
+            <options>
+                <option value="1">никогда или изредка</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="5" group="b">
+            <name>Аппетит у меня не хуже обычного
+            </name>
+            <options>
+                <option value="4">никогда или изредка</option>
+                <option value="3">иногда</option>
+                <option value="2">часто</option>
+                <option value="1">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="6" group="b">
+            <name>Мне приятно смотреть на привлекательных женщин, разговаривать с ними, находиться рядом
+            </name>
+            <options>
+                <option value="4">никогда или изредка</option>
+                <option value="3">иногда</option>
+                <option value="2">часто</option>
+                <option value="1">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="7" group="a">
+            <name>Я замечаю, что теряю вес
+            </name>
+            <options>
+                <option value="1">никогда или изредка</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="8" group="a">
+            <name>Меня беспокоят запоры
+            </name>
+            <options>
+                <option value="1">никогда или изредка</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="9" group="a">
+            <name>Сердце бьется быстрее, чем обычно
+            </name>
+            <options>
+                <option value="1">никогда или изредка</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="10" group="a">
+            <name>Я устаю без всяких причин
+            </name>
+            <options>
+                <option value="1">никогда или изредка</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="11" group="b">
+            <name>Я мыслю также ясно как всегда
+            </name>
+            <options>
+                <option value="4">никогда или изредка</option>
+                <option value="3">иногда</option>
+                <option value="2">часто</option>
+                <option value="1">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="12" group="b">
+            <name>Мне легко делать то, что я умею
+            </name>
+            <options>
+                <option value="4">никогда или изредка</option>
+                <option value="3">иногда</option>
+                <option value="2">часто</option>
+                <option value="1">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="13" group="a">
+            <name>Чувствую беспокойство и не могу усидеть на месте
+            </name>
+            <options>
+                <option value="1">никогда или изредка</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="14" group="b">
+            <name>У меня есть надежды на будущее
+            </name>
+            <options>
+                <option value="4">никогда или изредка</option>
+                <option value="3">иногда</option>
+                <option value="2">часто</option>
+                <option value="1">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="15" group="a">
+            <name>Я более раздражителен, чем обычно
+            </name>
+            <options>
+                <option value="1">никогда или изредка</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="16" group="b">
+            <name>Мне легко принимать решения
+            </name>
+            <options>
+                <option value="4">никогда или изредка</option>
+                <option value="3">иногда</option>
+                <option value="2">часто</option>
+                <option value="1">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="17" group="b">
+            <name>Я чувствую, что полезен и необходим
+            </name>
+            <options>
+                <option value="4">никогда или изредка</option>
+                <option value="3">иногда</option>
+                <option value="2">часто</option>
+                <option value="1">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="18" group="b">
+            <name>Я живу достаточно полной жизнью
+            </name>
+            <options>
+                <option value="4">никогда или изредка</option>
+                <option value="3">иногда</option>
+                <option value="2">часто</option>
+                <option value="1">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="19" group="a">
+            <name>Я чувствую, что другим людям станет лучше, если я умру
+            </name>
+            <options>
+                <option value="1">никогда или изредка</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда или постоянно</option>
+            </options>
+        </item>
+        <item id="20" group="b">
+            <name>Меня до сих пор радует то, что радовало всегда
+            </name>
+            <options>
+                <option value="4">никогда или изредка</option>
+                <option value="3">иногда</option>
+                <option value="2">часто</option>
+                <option value="1">почти всегда или постоянно</option>
+            </options>
+        </item>
+    </items>
+</quiz>

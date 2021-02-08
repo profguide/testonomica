@@ -14,7 +14,7 @@ class Test121Calculator extends AbstractCalculator
 {
     public function calculate(): array
     {
-        $sums = AnswersUtil::sumValuesMap($this->answersHolder);
+        $sums = AnswersUtil::sumValuesMap($this->questionsHolder, $this->answersHolder);
         $one = AnswersUtil::arraySum($sums, 'odin') * 2;
         $two = AnswersUtil::arraySum($sums, 'dva') * 3;
         $three = AnswersUtil::arraySum($sums, 'tri') * 4;

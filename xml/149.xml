@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1" group="t">
+            <name>Не чувствую в себе уверенности
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="2" group="t">
+            <name>Часто из-за пустяков краснею
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="3" group="t">
+            <name>Мой сон беспокоен
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="4" group="t">
+            <name>Легко впадаю в уныние
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="5" group="t">
+            <name>Беспокоюсь о только воображаемых еще неприятностях
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="6" group="t">
+            <name>Меня пугают трудности
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="7" group="t">
+            <name>Люблю копаться в сво­их недостатках
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="8" group="t">
+            <name>Меня легко убедить
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="9" group="t">
+            <name>Я мнительный
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="10" group="t">
+            <name>С трудом переношу время ожидания
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="11" group="f">
+            <name>Нередко мне кажутся безвыходными положения, из которых можно найти выход
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="12" group="f">
+            <name>Неприятности меня сильно расстраивают, я падаю духом
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="13" group="f">
+            <name>При больших неприятностях я склонен без достаточных оснований винить себя
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="14" group="f">
+            <name>Несчастья и неудачи ничему меня не учат
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="15" group="f">
+            <name>Я часто отказываюсь от борьбы, считая ее бесплодной
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="16" group="f">
+            <name>Я нередко чувствую себя беззащитным
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="17" group="f">
+            <name>Иногда у меня бывает состояние отчаяния
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="18" group="f">
+            <name>Чувствую растерянность перед трудностями
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="19" group="f">
+            <name>В трудные минуты жизни иногда веду себя по-детски, хочу чтобы меня пожалели
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="20" group="f">
+            <name>Считаю недостатки своего характера неисправимыми
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="21" group="a">
+            <name>Оставляю за собой последнее слово
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="22" group="a">
+            <name>Нередко в разговоре перебиваю собеседника
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="23" group="a">
+            <name>Меня легко рассердить
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="24" group="a">
+            <name>Люблю делать замечания другим
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="25" group="a">
+            <name>Хочу быть авторитетом для окружающих
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="26" group="a">
+            <name>Не довольствуюсь малым, хочу наибольшего
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="27" group="a">
+            <name>Когда разгневаюсь, плохо себя сдерживаю
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="28" group="a">
+            <name>Предпочитаю лучше руководить, чем подчинять
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="29" group="a">
+            <name>У меня резкая, грубоватая жестикуляция
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="30" group="a">
+            <name>Я мстителен
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="31" group="r">
+            <name>Мне трудно менять привычки
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="32" group="r">
+            <name>Нелегко переключаю внимание
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="33" group="r">
+            <name>Очень настороженно отношусь ко всему новому
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="34" group="r">
+            <name>Меня трудно переубедить
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="35" group="r">
+            <name>Нередко у меня не выходят из головы мысли, от которых следовало бы освободиться
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="36" group="r">
+            <name>Нелегко сближаюсь с людьми
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="37" group="r">
+            <name>Меня расстраивают даже незначительные нарушения плана
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="38" group="r">
+            <name>Нередко я проявляю упрямство
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="39" group="r">
+            <name>Неохотно иду на риск
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+                
+            </options>
+        </item>
+        <item id="40" group="r">
+            <name>Резко переживаю отклонения от принятого мною режима
+            </name>
+            <options>
+                <option value="0">почти никогда</option>
+                <option value="1">иногда</option>
+                <option value="2">часто</option>
+            </options>
+        </item>
+    </items>
+</quiz>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Удовлетворены ли вы своим образованием?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Удовлетворены ли вы взаимоотношениями с коллегами по работе (учебе)?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Удовлетворены ли вы взаимоотношениями с администрацией на работе?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Удовлетворены ли вы взаимоотношениями с субъектами своей профессиональной деятельности (пациенты,
+                клиенты, учащиеся и т.п.)?
+            </name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Удовлетворены ли вы содержанием своей работы в целом?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Удовлетворены ли вы условиями профессиональной деятельности (учебы)?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Удовлетворены ли вы своим положением в обществе?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Удовлетворены ли вы материальным положением?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Удовлетворены ли вы жилищно-бытовыми условиями?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Удовлетворены ли вы отношениями с супругом (супругой)?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Удовлетворены ли вы отношениями с детьми?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="12">
+            <name>Удовлетворены ли вы отношениями с родителями?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="13">
+            <name>Удовлетворены ли вы обстановкой в обществе (государстве)?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="14">
+            <name>Удовлетворены ли вы отношениями с друзьями, ближайшими знакомыми?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="15">
+            <name>Удовлетворены ли вы сферой услуг и бытового обслуживания?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="16">
+            <name>Удовлетворены ли вы сферой медицинского обслуживания?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="17">
+            <name>Удовлетворены ли вы проведением досуга?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="18">
+            <name>Удовлетворены ли вы возможностью проводить отпуск?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="19">
+            <name>Удовлетворены ли вы возможностью выбора места работы?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+        <item id="20">
+            <name>Удовлетворены ли вы своим образом жизни в целом?</name>
+            <options>
+                <option value="0">Полностью удовлетворён</option>
+                <option value="1">Скорее удовлетворён</option>
+                <option value="2">Затрудняюсь ответить</option>
+                <option value="3">Скорее не удовлетворён</option>
+                <option value="4">Полностью не удовлетворён</option>
+            </options>
+        </item>
+    </items>
+</quiz>

@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Я считаю, что в моей жизни неприятных событий происходит больше, чем у других.</name>
+            <options>
+                <option value="zavisimoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Если я попадаю в неприятное положение, то мне лучше всего не сопротивляться и держать язык за
+                зубами.
+            </name>
+            <options>
+                <option value="zavisimoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Я охотно записался бы добровольцем для участия в каких-либо боевых действиях.</name>
+            <options>
+                <option value="samopovrejdenie">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Я ценю в людях осторожность и осмотрительность.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="samopovrejdenie">Нет</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Даже если бы за опасную работу хорошо заплатили, я не взялся бы за ее выполнение.</name>
+            <options>
+                <option value="jz">Да</option>
+                <option value="samopovrejdenie">Нет</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Если меня обидели, то я обязательно должен отплатить за это.</name>
+            <options>
+                <option value="agressivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Если бы другие люди не мешали мне, я добился бы гораздо большего.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>У меня никогда не было неприятностей из-за моего поведения, связанного с половой жизнью.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="nr">Нет</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Временами мне хочется ломать вещи, бить посуду.</name>
+            <options>
+                <option value="an">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>У меня бывали такие периоды, тянувшиеся дни, недели или даже месяцы, когда я не мог ни за что взяться,
+                так как не мог включиться в работу.
+            </name>
+            <options>
+                <option value="nekritichnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="11">
+            <name>Я не всегда говорю правду.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="jg">Нет</option>
+            </options>
+        </item>
+        <item id="12">
+            <name>В более раннем возрасте меня выгоняли из школы за плохое поведение.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="13">
+            <name>Иногда я перехожу улицу там, где мне удобно, а не там, где положено.</name>
+            <options>
+                <option value="samopovrejdenie">Да</option>
+                <option value="jg">Нет</option>
+            </options>
+        </item>
+        <item id="14">
+            <name>Временами я так настаиваю на своем, что окружающие теряют терпение.</name>
+            <options>
+                <option value="agressivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="15">
+            <name>Другие мне кажутся счастливее меня.</name>
+            <options>
+                <option value="nekritichnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="16">
+            <name>Думаю, что многие люди преувеличивают свои несчастья, чтобы добиться сочувствия и помощи.</name>
+            <options>
+                <option value="zn">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="17">
+            <name>Думаю, мне понравилась бы работа, связанная с защитой слабых и обездоленных.</name>
+            <options>
+                <option value="gipersocialnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="18">
+            <name>Меня трудно переубедить.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="zavisimoe">Нет</option>
+            </options>
+        </item>
+        <item id="19">
+            <name>Мне приходится так много заботиться о близких людях, что на заботу о себе времени зачастую не
+                хватает.
+            </name>
+            <options>
+                <option value="gr">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="20">
+            <name>Я навряд ли добьюсь в своей жизни чего-то действительно стоящего.</name>
+            <options>
+                <option value="zavisimoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="21">
+            <name>Мне регулярно делают больно окружающие меня люди.</name>
+            <options>
+                <option value="zavisimoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="22">
+            <name>Я не сержусь, когда надо мной посмеиваются.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="zavisimoe">Нет</option>
+            </options>
+        </item>
+        <item id="23">
+            <name>Я считаю, что большинство людей способно солгать, если это в их интересах.</name>
+            <options>
+                <option value="samopovrejdenie">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="24">
+            <name>Я редко совершаю поступки, о которых потом сожалею (больше и чаще, чем другие).</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="samopovrejdenie">Нет</option>
+            </options>
+        </item>
+        <item id="25">
+            <name>Я очень редко ссорюсь с членами моей семьи.</name>
+            <options>
+                <option value="jelatelnost">Да</option>
+                <option value="ar">Нет</option>
+            </options>
+        </item>
+        <item id="26">
+            <name>Я не могу отбросить некоторые условности даже ради получения удовольствия.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="as">Нет</option>
+            </options>
+        </item>
+        <item id="27">
+            <name>Большую часть времени у меня такое чувство, как будто я сделал что-то плохое или злое.</name>
+            <options>
+                <option value="sr">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="28">
+            <name>Большую часть времени я чувствую себя счастливым.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="sr">Нет</option>
+            </options>
+        </item>
+        <item id="29">
+            <name>Некоторые люди так любят командовать, что мне хочется все сделать наоборот, даже если я знаю, что они
+                правы.
+            </name>
+            <options>
+                <option value="agressivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="30">
+            <name>Если кто-то нарушает правила, я возмущаюсь.</name>
+            <options>
+                <option value="gipersocialnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="31">
+            <name>Я никогда не шел на опасное дело ради сильных впечатлений.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="sn">Нет</option>
+            </options>
+        </item>
+        <item id="32">
+            <name>Я получаю больше удовольствия от игры или скачек, если не держу пари.</name>
+            <options>
+                <option value="sn">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="33">
+            <name>В школе меня никогда не вызывали к директору за озорство.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="asnr">Нет</option>
+            </options>
+        </item>
+        <item id="34">
+            <name>Мои манеры за столом в гостях лучше, чем у себя дома.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="jag">Нет</option>
+            </options>
+        </item>
+        <item id="35">
+            <name>Я считаю, что большинство людей ради выгоды скорее поступят нечестно, чем упустят случай.</name>
+            <options>
+                <option value="samopovrejdenie">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="36">
+            <name>Мое поведение в значительной мере определяется правилами и привычками окружающих меня людей.</name>
+            <options>
+                <option value="zavisimoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="37">
+            <name>Я предпочитаю решение конфликтов без применения силы.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="agressivnoe">Нет</option>
+            </options>
+        </item>
+        <item id="38">
+            <name>Я бываю возмущен и раздражен, когда приходится признать, что меня умело провели.</name>
+            <options>
+                <option value="nr">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="39">
+            <name>Мне безразлично, что обо мне говорят другие.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="jg">Нет</option>
+            </options>
+        </item>
+        <item id="40">
+            <name>Если бы в наше время проводились бои гладиаторов, то я бы непременно в них поучаствовал.</name>
+            <options>
+                <option value="sn">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="41">
+            <name>Я умею отказывать людям, которые просят меня об одолжении.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="zavisimoe">Нет</option>
+            </options>
+        </item>
+        <item id="42">
+            <name>Мне трудно поддерживать разговор с людьми, с которыми я только что познакомился.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="nekritichnoe">Нет</option>
+            </options>
+        </item>
+        <item id="43">
+            <name>Я не могу прекратить ситуацию, даже если чувствую себя неловко и напряженно.</name>
+            <options>
+                <option value="zr">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="44">
+            <name>Терпеть боль всем назло бывает даже приятно.</name>
+            <options>
+                <option value="zr">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="45">
+            <name>Человек должен иметь право выпить столько, сколько захочет.</name>
+            <options>
+                <option value="an">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="46">
+            <name>Если я в детстве нехорошо вел себя, то меня наказывали.</name>
+            <options>
+                <option value="zr">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="47">
+            <name>Я мог бы выполнять работу, связанную с уходом за больными или умирающими.</name>
+            <options>
+                <option value="gipersocialnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="48">
+            <name>Я всегда сразу замечаю, если ситуация становится опасной.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="nekritichnoe">Нет</option>
+            </options>
+        </item>
+        <item id="49">
+            <name>Я наметил себе жизненную программу, основанную на чувстве долга и ответственности, и стараюсь ее
+                выполнять.
+            </name>
+            <options>
+                <option value="gipersocialnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="50">
+            <name>Иногда я не уступаю людям не потому, что дело действительно важное, а просто из принципа.</name>
+            <options>
+                <option value="agressivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="51">
+            <name>Верно утверждение, что если детей не бить, то толку из них не получится.</name>
+            <options>
+                <option value="ar">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="52">
+            <name>Мои родители никогда не наказывали меня физически.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="realizovannoe">Нет</option>
+            </options>
+        </item>
+        <item id="53">
+            <name>Если при покупке автомобиля мне придется выбирать между скоростью и безопасностью, то я выберу
+                безопасность.
+            </name>
+            <options>
+                <option value="0">Да</option>
+                <option value="samopovrejdenie">Нет</option>
+            </options>
+        </item>
+        <item id="54">
+            <name>Меня чаще, чем других, обзывали в школе.</name>
+            <options>
+                <option value="zr">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="55">
+            <name>Люди справедливо возмущаются, когда узнают, что преступник остался безнаказанным.</name>
+            <options>
+                <option value="gipersocialnoe">Да</option>
+                <option value="agressivnoe">Нет</option>
+            </options>
+        </item>
+        <item id="56">
+            <name>Когда я попадаю в неприятную ситуацию, то надеюсь только на свои силы.</name>
+            <options>
+                <option value="nekritichnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="57">
+            <name>Я уверен, что того, кто совершает злые поступки, в будущем ожидает кара.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="agressivnoe">Нет</option>
+            </options>
+        </item>
+        <item id="58">
+            <name>Я могу дружелюбно относиться к людям, поступки которых я не одобряю.</name>
+            <options>
+                <option value="jg">Да</option>
+                <option value="agressivnoe">Нет</option>
+            </options>
+        </item>
+        <item id="59">
+            <name>Я готов простить грубость моему партнеру, если у меня есть надежда, что это не повторится.</name>
+            <options>
+                <option value="zr">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="60">
+            <name>Безопаснее никому не доверять.</name>
+            <options>
+                <option value="agressivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="61">
+            <name>Бывает, что я провожу вечер в компании малознакомых мне людей.</name>
+            <options>
+                <option value="nekritichnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="62">
+            <name>Я регулярно попадаю в неприятные ситуации.</name>
+            <options>
+                <option value="sr">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="63">
+            <name>Иногда у меня такое настроение, что я готов первым начать драку.</name>
+            <options>
+                <option value="agressivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="64">
+            <name>Я иногда нарушаю закон или установленные правила.</name>
+            <options>
+                <option value="gipersocialnoe">Да</option>
+                <option value="jelatelnost">Нет</option>
+            </options>
+        </item>
+        <item id="65">
+            <name>Я не рискнул бы прыгать с парашютом.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="sn">Нет</option>
+            </options>
+        </item>
+        <item id="66">
+            <name>Большинству людей не нравится поступаться своими интересами ради других.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="gipersocialnoe">Нет</option>
+            </options>
+        </item>
+        <item id="67">
+            <name>Я легко теряю терпение.</name>
+            <options>
+                <option value="agressivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="68">
+            <name>Только неожиданные обстоятельства и чувство опасности позволяют мне по-настоящему проявить себя.
+            </name>
+            <options>
+                <option value="samopovrejdenie">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="69">
+            <name>Меня очень трудно разозлить.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="agressivnoe">Нет</option>
+            </options>
+        </item>
+        <item id="70">
+            <name>Люди часто разочаровывают меня.</name>
+            <options>
+                <option value="nekritichnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="71">
+            <name>У меня бывает такое чувство, что трудностей слишком много и нет смысла пытаться их преодолеть.</name>
+            <options>
+                <option value="zavisimoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="72">
+            <name>Меня трудно рассердить.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="agressivnoe">Нет</option>
+            </options>
+        </item>
+        <item id="73">
+            <name>Вполне можно обойти закон, если вы этим его по существу не преступаете.</name>
+            <options>
+                <option value="agressivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="74">
+            <name>Я пью алкогольные напитки умеренно (или совсем не пью).</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="asnr">Нет</option>
+            </options>
+        </item>
+        <item id="75">
+            <name>Я часто встречал людей, завидовавших моим идеям только потому, что они пришли в голову не им первым.
+            </name>
+            <options>
+                <option value="zavisimoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="76">
+            <name>Даже если я злюсь, то стараюсь не прибегать к ругательствам.</name>
+            <options>
+                <option value="sr">Да</option>
+                <option value="jelatelnost">Нет</option>
+            </options>
+        </item>
+        <item id="77">
+            <name>Мне больше нравится работать с руководителем, дающим строгие четкие указания, чем с руководителем,
+                предоставляющим большую свободу.
+            </name>
+            <options>
+                <option value="zavisimoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="78">
+            <name>Если кто-то затевает интересное, пусть и опасное дело, я его поддержу.</name>
+            <options>
+                <option value="samopovrejdenie">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="79">
+            <name>Я редко даю сдачу, когда меня бьют.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="agressivnoe">Нет</option>
+            </options>
+        </item>
+        <item id="80">
+            <name>Если по отношению ко мне кто-то поступает несправедливо, то я желаю ему настоящего наказания.</name>
+            <options>
+                <option value="agressivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="81">
+            <name>Я верю, что за зло можно отплатить добром, и действую в соответствии с этим.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="agressivnoe">Нет</option>
+            </options>
+        </item>
+        <item id="82">
+            <name>Каждый ребенок знает, что добро должно быть с кулаками.</name>
+            <options>
+                <option value="agressivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="83">
+            <name>Я предпочитаю не общаться со сверстниками, так как они обижают меня.</name>
+            <options>
+                <option value="zr">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="84">
+            <name>Я никогда не вступаю в уличный конфликт, чтобы заступиться за того, кого обижают.</name>
+            <options>
+                <option value="0">Да</option>
+                <option value="gipersocialnoe">Нет</option>
+            </options>
+        </item>
+        <item id="85">
+            <name>Вредное воздействие алкоголя и табака на человека сильно преувеличивают.</name>
+            <options>
+                <option value="nekritichnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="86">
+            <name>Собака, которая не слушается, заслуживает, чтобы ее ударили.</name>
+            <options>
+                <option value="agressivnoe">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+    </items>
+</quiz>
+
+

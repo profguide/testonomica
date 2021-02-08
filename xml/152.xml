@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1" group="tich">
+            <name>Мне часто бывает трудно разобраться, какое чувство я испытываю</name>
+            <options>
+                <option value="1">Совершенно не согласен</option>
+                <option value="2">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="4">Скорее согласен</option>
+                <option value="5">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="2" group="toch">
+            <name>Мне трудно подбирать верные слова для своих чувств</name>
+            <options>
+                <option value="1">Совершенно не согласен</option>
+                <option value="2">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="4">Скорее согласен</option>
+                <option value="5">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="3" group="tich">
+            <name>У меня бывают такие ощущения в теле, в которых не могут разобраться даже врачи</name>
+            <options>
+                <option value="1">Совершенно не согласен</option>
+                <option value="2">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="4">Скорее согласен</option>
+                <option value="5">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="4" group="toch">
+            <name>Я легко могу описать свои чувства</name>
+            <options>
+                <option value="5">Совершенно не согласен</option>
+                <option value="4">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="2">Скорее согласен</option>
+                <option value="1">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="5" group="vom">
+            <name>Я предпочитаю анализировать проблемы, а не просто о них рассказывать</name>
+            <options>
+                <option value="5">Совершенно не согласен</option>
+                <option value="4">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="2">Скорее согласен</option>
+                <option value="1">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="6" group="tich">
+            <name>Когда я расстроен, я не знаю – то ли мне грустно, то ли я испуган, то ли злюсь</name>
+            <options>
+                <option value="1">Совершенно не согласен</option>
+                <option value="2">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="4">Скорее согласен</option>
+                <option value="5">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="7" group="tich">
+            <name>Ощущения в моем теле часто вызывают у меня недоумение</name>
+            <options>
+                <option value="1">Совершенно не согласен</option>
+                <option value="2">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="4">Скорее согласен</option>
+                <option value="5">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="8" group="vom">
+            <name>Скорее, я предпочту, чтобы все шло своим чередом, чем буду разбираться, почему вышло именно так</name>
+            <options>
+                <option value="1">Совершенно не согласен</option>
+                <option value="2">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="4">Скорее согласен</option>
+                <option value="5">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="9" group="tich">
+            <name>У меня бывают чувства, которые я не могу точно назвать</name>
+            <options>
+                <option value="1">Совершенно не согласен</option>
+                <option value="2">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="4">Скорее согласен</option>
+                <option value="5">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="10" group="vom">
+            <name>Очень важно отдавать себе отчет в своих эмоциях</name>
+            <options>
+                <option value="5">Совершенно не согласен</option>
+                <option value="4">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="2">Скорее согласен</option>
+                <option value="1">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="11" group="toch">
+            <name>Мне трудно описывать, какие чувства я испытываю к другим людям
+            </name>
+            <options>
+                <option value="1">Совершенно не согласен</option>
+                <option value="2">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="4">Скорее согласен</option>
+                <option value="5">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="12" group="toch">
+            <name>Люди советуют мне больше говорить о своих чувствах</name>
+            <options>
+                <option value="1">Совершенно не согласен</option>
+                <option value="2">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="4">Скорее согласен</option>
+                <option value="5">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="13" group="tich">
+            <name>Я не знаю, что творится внутри меня</name>
+            <options>
+                <option value="1">Совершенно не согласен</option>
+                <option value="2">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="4">Скорее согласен</option>
+                <option value="5">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="14" group="tich">
+            <name>Часто я не знаю, почему я злюсь</name>
+            <options>
+                <option value="1">Совершенно не согласен</option>
+                <option value="2">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="4">Скорее согласен</option>
+                <option value="5">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="15" group="vom">
+            <name>Я предпочитаю разговаривать с людьми об их повседневных делах, а не об их чувствах</name>
+            <options>
+                <option value="1">Совершенно не согласен</option>
+                <option value="2">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="4">Скорее согласен</option>
+                <option value="5">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="16" group="vom">
+            <name>Я предпочитаю смотреть легкие, развлекательные программы, а не психологические драмы</name>
+            <options>
+                <option value="1">Совершенно не согласен</option>
+                <option value="2">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="4">Скорее согласен</option>
+                <option value="5">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="17" group="toch">
+            <name>Мне трудно раскрывать свои самые сокровенные чувства, даже близким друзьям</name>
+            <options>
+                <option value="1">Совершенно не согласен</option>
+                <option value="2">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="4">Скорее согласен</option>
+                <option value="5">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="18" group="vom">
+            <name>Я могу чувствовать близость к другому человеку, даже когда мы молчим</name>
+            <options>
+                <option value="5">Совершенно не согласен</option>
+                <option value="4">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="2">Скорее согласен</option>
+                <option value="1">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="19" group="vom">
+            <name>При решении личных проблем я считаю полезным разобраться в своих чувствах</name>
+            <options>
+                <option value="5">Совершенно не согласен</option>
+                <option value="4">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="2">Скорее согласен</option>
+                <option value="1">Совершенно согласен</option>
+            </options>
+        </item>
+        <item id="20" group="vom">
+            <name>Поиск скрытого смысла в фильмах или пьесах мешает получать удовольствие от них</name>
+            <options>
+                <option value="1">Совершенно не согласен</option>
+                <option value="2">Скорее не согласен</option>
+                <option value="3">Ни то, ни другое</option>
+                <option value="4">Скорее согласен</option>
+                <option value="5">Совершенно согласен</option>
+            </options>
+        </item>
+    </items>
+</quiz>

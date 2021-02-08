@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1" group="b">
+            <name>Я спокоен
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="2" group="b">
+            <name>Мне ничто не угрожает
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="3" group="a">
+            <name>Я нахожусь в напряжении
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="4" group="a">
+            <name>Я испытываю сожаление
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="5" group="b">
+            <name>Я чувствую себя свободно
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="6" group="a">
+            <name>Я расстроен
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="7" group="a">
+            <name>Меня волнуют возможные неудачи
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="8" group="b">
+            <name>Я чувствую себя отдохнувшим
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="9" group="a">
+            <name>Я встревожен
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="10" group="b">
+            <name>Я испытываю чувство внутреннего удовлетворения
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="11" group="b">
+            <name>Я уверен в себе
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="12" group="a">
+            <name>Я нервничаю
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="13" group="a">
+            <name>Я не нахожу себе места
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="14" group="a">
+            <name>Я взвинчен
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="15" group="b">
+            <name>Я не чувствую скованности, напряженности
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="16" group="b">
+            <name>Я доволен
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="17" group="a">
+            <name>Я озабочен
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="18" group="a">
+            <name>Я слишком возбужден и мне не по себе
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="19" group="b">
+            <name>Мне радостно
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="20" group="b">
+            <name>Мне приятно
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="21" group="d">
+            <name>Я испытываю удовольствие
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="22" group="c">
+            <name>Я очень быстро устаю
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="23" group="c">
+            <name>Я легко могу заплакать
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="24" group="c">
+            <name>Я хотел бы быть таким же счастливым как другие
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="25" group="c">
+            <name>Нередко я проигрываю из-за того, что недостаточно быстро принимаю решения
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="26" group="d">
+            <name>Обычно я чувствую себя бодрым
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="27" group="d">
+            <name>Я спокоен, хладнокровен и собран
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="28" group="c">
+            <name>Ожидаемые трудности обычно очень тревожат меня
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="29" group="c">
+            <name>Я слишком переживаю из-за пустяков
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="30" group="d">
+            <name>Я вполне счастлив
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="31" group="c">
+            <name>Я принимаю все слишком близко к сердцу
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="32" group="c">
+            <name>Мне не хватает уверенности в себе
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="33" group="d">
+            <name>Обычно я чувствую себя в безопасности
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="34" group="c">
+            <name>Я стараюсь избегать критических ситуаций и трудностей
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="35" group="c">
+            <name>У меня бывает хандра
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="36" group="d">
+            <name>Я удовлетворен
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="37" group="c">
+            <name>Всякие пустяки отвлекают и волнуют меня
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="38" group="c">
+            <name>Я так сильно переживаю свои разочарования, что потом долго не могу о них забыть
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="39" group="d">
+            <name>Я уравновешенный человек
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+        <item id="40" group="c">
+            <name>Меня охватывает сильное беспокойство, когда я думаю о своих делах и заботах
+            </name>
+            <options>
+                <option value="1">почти никогда</option>
+                <option value="2">иногда</option>
+                <option value="3">часто</option>
+                <option value="4">почти всегда</option>
+            </options>
+        </item>
+    </items>
+</quiz>

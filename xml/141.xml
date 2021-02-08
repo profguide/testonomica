@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1" showAnswer="true" enabledBack="false">
+            <name>
+                <ru>В какой стране нельзя появляться на улице в розовых шортах по воскресеньям?</ru>
+                <en>In which country is it impossible to appear on the street in pink shorts on Sundays?</en>
+            </name>
+            <options>
+                <option value="0"><ru>В России</ru><en>In Russia</en></option>
+                <option value="key" correct="true"><ru>В Австралии</ru><en>In Australia</en></option>
+                <option value="0"><ru>В США</ru><en>In USA</en></option>
+                <option value="0"><ru>В Великобритании</ru><en>In Great Britain</en></option>
+            </options>
+        </item>
+        <item id="2" showAnswer="true" enabledBack="false">
+            <name>В какой стране нельзя кормить чаек?</name>
+            <right>Если вы покормите чаек в прибрежном графстве Саффолк, вам наверняка придется выложить из кармана около €3 000.</right>
+            <wrong>Нет, в Великобритании! Если вы покормите чаек в прибрежном графстве Саффолк, вам наверняка придется выложить из кармана около €3 000</wrong>
+            <options>
+                <option value="0">В Греции</option>
+                <option value="0">В Нидерландах</option>
+                <option value="0">В Испании</option>
+                <option value="key" correct="true">В Великобритании</option>
+            </options>
+        </item>
+        <item id="3" showAnswer="true" enabledBack="false">
+            <name>В какой стране запрещено играть в снежки?</name>
+            <right>В бельгийской Фландрии. Ввести запрет на метание снежных комков было решено после того, как власти сравнили эту забаву с киданием камнями. По мнению чиновников, подобные игры могут угрожать здоровью детей и взрослых. За нарушение правила о снежках придется платить 100 евро.</right>
+            <wrong>Нет, в бельгийской Фландрии. Ввести запрет на метание снежных комков было решено после того, как власти сравнили эту забаву с киданием камнями. По мнению чиновников, подобные игры могут угрожать здоровью детей и взрослых. За нарушение правила о снежках придется платить 100 евро.</wrong>
+            <options>
+                <option value="0">В Египте</option>
+                <option value="0">В Германии</option>
+                <option value="key" correct="true">В Бельгии</option>
+                <option value="0">В Канаде</option>
+            </options>
+        </item>
+        <item id="4" showAnswer="true" enabledBack="false">
+            <name>В какой стране запрещается лепить снеговиков выше 75 сантиметров?</name>
+            <right>Да-да, именно в канадском городе Сурис запрещается лепить снеговиков выше 75 сантиметров.</right>
+            <wrong>Нет, именно в канадском городе Сурис запрещается лепить снеговиков выше 75 сантиметров.</wrong>
+            <options>
+                <option value="0">В России</option>
+                <option value="key" correct="true">В Канаде</option>
+                <option value="0">В Великобритании</option>
+                <option value="0">В Гринландии</option>
+            </options>
+        </item>
+        <item id="5" showAnswer="true" enabledBack="false">
+            <name>В какой стране, если попытаетесь смять банку пива между обнаженных грудей, заплатите штраф $1000?</name>
+            <right>А точнее в Западной Австралии</right>
+            <wrong>Нет, в Австралии. А точнее в Западной Австралии.</wrong>
+            <options>
+                <option value="key" correct="true">В Австралии</option>
+                <option value="0">В Северной Ирландии</option>
+                <option value="0">В США</option>
+                <option value="0">В России</option>
+            </options>
+        </item>
+        <item id="6" showAnswer="true" enabledBack="false">
+            <name>В какой стране нельзя свистеть, а также кричать и издавать любые громкие звуки круглые сутки в любое время года?</name>
+            <right>В городе Петролии люди настолько любят тишину, что издали закон, запрещающий кричать, выть и издавать любые громкие звуки вне зависимости от времени суток.</right>
+            <wrong>Нет, в Канаде, в городе Петролии люди настолько любят тишину, что издали закон, запрещающий кричать, выть и издавать любые громкие звуки вне зависимости от времени суток.</wrong>
+            <options>
+                <option value="0">В Великобритании</option>
+                <option value="0">В Норвегии</option>
+                <option value="0">В Швеции</option>
+                <option value="key" correct="true">В Канаде</option>
+            </options>
+        </item>
+        <item id="7" showAnswer="true" enabledBack="false">
+            <name>В какой стране, если вы припарковались на авто и не глушите мотор дольше трех минут, вы рискуете
+                заплатить штраф в размере £120?</name>
+            <options>
+                <option value="0">В Колумбии</option>
+                <option value="key" correct="true">В Великобритании</option>
+                <option value="0">В Египте</option>
+                <option value="0">В Канаде</option>
+            </options>
+        </item>
+        <item id="8" showAnswer="true" enabledBack="false">
+            <name>В какой стране ввели запрет на кормление голубей?</name>
+            <right>В Венеции и Флоренции нельзя кормить голубей из-за того, что те потом гадят на памятники и разносят болезни.</right>
+            <wrong>Нет, это в Италии. В Венеции и Флоренции нельзя кормить голубей из-за того, что те потом гадят на памятники и разносят болезни.</wrong>
+            <options>
+                <option value="0">В Германии</option>
+                <option value="key" correct="true">В Италии</option>
+                <option value="0">В Испании</option>
+                <option value="0">В Бразилии</option>
+            </options>
+        </item>
+        <item id="9" showAnswer="true" enabledBack="false">
+            <name>В какой стране нельзя останавливаться на автобане, даже если это аварийная ситуация?</name>
+            <options>
+                <option value="key" correct="true">В Германии</option>
+                <option value="0">В Великобритании</option>
+                <option value="0">В Финляндии</option>
+                <option value="0">В Литве</option>
+            </options>
+        </item>
+        <item id="10" showAnswer="true" enabledBack="false">
+            <name>В какой стране запрещается смывать воду в туалете после 10 вечера?</name>
+            <right>Из-за закона о тишине.</right>
+            <wrong>Нет, в Швейцарии из-за закона о тишине.</wrong>
+            <options>
+                <option value="0">В Швеции</option>
+                <option value="key" correct="true">В Швейцарии</option>
+                <option value="0">В Нидерландах</option>
+                <option value="0">В Австрии</option>
+            </options>
+        </item>
+        <item id="11" showAnswer="true" enabledBack="false">
+            <name>В какой стране вы заплатите $500, если не смоете за собой воду в общественном туалете?</name>
+            <options>
+                <option value="0">В Колумбии</option>
+                <option value="0">В Сирии</option>
+                <option value="key" correct="true">В Сингапуре</option>
+                <option value="0">В Австралии</option>
+            </options>
+        </item>
+        <item id="12" showAnswer="true" enabledBack="false">
+            <name>В какой стране нельзя бить крыс бейсбольной битой?</name>
+            <right>А точнее в штате Иллинойс.</right>
+            <wrong>Нет, в США! А точнее в штате Иллинойс.</wrong>
+            <options>
+                <option value="key" correct="true">В США</option>
+                <option value="0">В Канаде</option>
+                <option value="0">В Великобритании</option>
+                <option value="0">В Швейцарии</option>
+            </options>
+        </item>
+        <item id="13" showAnswer="true" enabledBack="false">
+            <name>В какой стране нельза прогуливаться по Альпам ногишом?</name>
+            <options>
+                <option value="0">В Швеции</option>
+                <option value="0">В Нидерландах</option>
+                <option value="key" correct="true">В Швейцарии</option>
+                <option value="0">В Австрии</option>
+            </options>
+        </item>
+        <item id="14" showAnswer="true" enabledBack="false">
+            <name>На территории архипелага какой страны запрещено умирать?</name>
+            <right>Если кого-нибудь сразила тяжкая болезнь или произошёл несчастный случай с потенциально летальным исходом, пациента должны немедленно переправить по воздуху или по морю в другую часть Норвегии, где он и умирает. Но даже если смерть происходит в городе, хоронят покойника всё равно на «Большой земле». Эти вынужденные меры вызваны тем, что в условиях вечной мерзлоты тела после погребения совершенно не разлагаются и привлекают к себе внимание таких хищников, как белые медведи.</right>
+            <wrong>Нет, в Норвегии! Если кого-нибудь сразила тяжкая болезнь или произошёл несчастный случай с потенциально летальным исходом, пациента должны немедленно переправить по воздуху или по морю в другую часть Норвегии, где он и умирает. Но даже если смерть происходит в городе, хоронят покойника всё равно на «Большой земле». Эти вынужденные меры вызваны тем, что в условиях вечной мерзлоты тела после погребения совершенно не разлагаются и привлекают к себе внимание таких хищников, как белые медведи.</wrong>
+            <options>
+                <option value="0">В США</option>
+                <option value="0">В Бразилии</option>
+                <option value="key" correct="true">В Норвегии</option>
+                <option value="0">В Нидерландах</option>
+            </options>
+        </item>
+        <item id="15" showAnswer="true" enabledBack="false">
+            <name>В какой стране прохожим разрешается разбить окно в чужой машине, чтобы спасти собаку?</name>
+            <right>А точнее в штате Колорадо.</right>
+            <wrong>Нет, в США. А точнее в штате Колорадо.</wrong>
+            <options>
+                <option value="0">В Великобритании</option>
+                <option value="0">В Канаде</option>
+                <option value="key" correct="true">В США</option>
+                <option value="0">В Венесуэле</option>
+            </options>
+        </item>
+        <item id="16" showAnswer="true" enabledBack="false">
+            <name>В какую страну нельзя ввозить и жевать жевательные резинки?
+            </name>
+            <options>
+                <option value="0">В США</option>
+                <option value="key" correct="true">В Сингапур</option>
+                <option value="0">В Японию</option>
+                <option value="0">В Северную Корею</option>
+            </options>
+        </item>
+    </items>
+</quiz>

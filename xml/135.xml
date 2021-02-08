@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item showAnswer="true" enabledBack="false" id="1">
+            <name>
+                <ru>Германия находится на:</ru>
+                <en>Germany is located on:</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Полуострове</ru>
+                    <en>A Peninsula</en>
+                </option>
+                <option value="0">
+                    <ru>Острове</ru>
+                    <en>An Island</en>
+                </option>
+                <option value="key" correct="true">
+                    <ru>Материке</ru>
+                    <en>Mainland</en>
+                </option>
+                <option value="0">
+                    <ru>Своём континенте</ru>
+                    <en>Its own continent</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="2">
+            <name>
+                <ru>Какими морями омывается Германия?
+                </ru>
+                <en>What are the seas bordering Germany?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Каспийским и Чёрным</ru>
+                    <en>The Caspian Sea and the Black Sea</en>
+                </option>
+                <option value="0">
+                    <ru>Жёлтым и Северным</ru>
+                    <en>The Yellow Sea and the North Sea</en>
+                </option>
+                <option value="key" correct="true">
+                    <ru>Балтийским и Северным</ru>
+                    <en>The Baltic Sea and the North Sea</en>
+                </option>
+                <option value="0">
+                    <ru>Вокруг Германии нет морей</ru>
+                    <en>There are no seas around Germany</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="3">
+            <name>
+                <ru>Самая узкая улочка во всем мире расположена в немецком городе Ройтлинген. Какая её ширина?
+                </ru>
+                <en>The world's narrowest street is found in the city of  Reutlingen, Germany. What is its width?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>3 метра</ru>
+                    <en>3 meters</en>
+                </option>
+                <option value="0">
+                    <ru>2 метра</ru>
+                    <en>2 meters</en>
+                </option>
+                <option value="0">
+                    <ru>1 метр</ru>
+                    <en>1 meter</en>
+                </option>
+                <option value="key" correct="true">
+                    <ru>31 сантиметр</ru>
+                    <en>31 centimeters</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="4">
+            <name>
+                <ru>Какое наказание следует за попытку побега из германской тюрьмы?
+                </ru>
+                <en>What is the punishment for attempting to escape from a German prison?</en>
+            </name>
+            <options>
+                <option value="key" correct="true">
+                    <ru>Никакое</ru>
+                    <en>None</en>
+                </option>
+                <option value="0">
+                    <ru>Казнь</ru>
+                    <en>Death penalty</en>
+                </option>
+                <option value="0">
+                    <ru>Пожизненное заключение</ru>
+                    <en>Life imprisonment</en>
+                </option>
+                <option value="0">
+                    <ru>Распятие</ru>
+                    <en>Crucifixion</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="5">
+            <name>
+                <ru>В Германии официально запрещено удалять:
+                </ru>
+                <en>In Germany, it is officially prohibited to remove:</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Зубы</ru>
+                    <en>Teeth</en>
+                </option>
+                <option value="0">
+                    <ru>Волосы</ru>
+                    <en>Hair</en>
+                </option>
+                <option value="key" correct="true">
+                    <ru>Когти кошкам</ru>
+                    <en>Cat's claws</en>
+                </option>
+                <option value="0">
+                    <ru>Аппендикс</ru>
+                    <en>Appendicitis</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="6">
+            <name>
+                <ru>Какая дата в Германии называется "Судьбоносным днём"?
+                </ru>
+                <en>What date in Germany is called "A Fateful day"?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>1 января</ru>
+                    <en>January 1</en>
+                </option>
+                <option value="key" correct="true">
+                    <ru>9 ноября</ru>
+                    <en>November 9</en>
+                </option>
+                <option value="0">
+                    <ru>8 марта</ru>
+                    <en>March 8</en>
+                </option>
+                <option value="0">
+                    <ru>31 декабря</ru>
+                    <en>December 31</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="7">
+            <name>
+                <ru>В городе Альфельде есть необычный музей:
+                </ru>
+                <en>There is an unusual museum in the city of Alfelde. The museum of</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Кашля</ru>
+                    <en>Coughing</en>
+                </option>
+                <option value="key" correct="true">
+                    <ru>Храпа</ru>
+                    <en>Snoring</en>
+                </option>
+                <option value="0">
+                    <ru>Походки</ru>
+                    <en>Walking</en>
+                </option>
+                <option value="0">
+                    <ru>Рукопожатия</ru>
+                    <en>Handshake</en>
+                </option>
+                <option value="0">
+                    <ru>Флирта</ru>
+                    <en>Flirtation</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="8">
+            <name>
+                <ru>В каком городе расположен самый большой европейский железнодорожный вокзал?
+                </ru>
+                <en>In which city is the largest European railway station located?</en>
+            </name>
+            <options>
+                <option value="key" correct="true">
+                    <ru>Берлин</ru>
+                    <en>Berlin</en>
+                </option>
+                <option value="0">
+                    <ru>Мюнхен</ru>
+                    <en>Munich</en>
+                </option>
+                <option value="0">
+                    <ru>Гамбург</ru>
+                    <en>Hamburg</en>
+                </option>
+                <option value="0">
+                    <ru>Кёльн</ru>
+                    <en>Cologne</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="9">
+            <name>
+                <ru>Какие две компании были основаны братьями Дасслер, которые родились в Германии?
+                </ru>
+                <en>Which two companies were founded by the Dassler brothers, who were born in Germany?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Mercedes и BMW</ru>
+                    <en>Mercedes and BMW</en>
+                </option>
+                <option value="key" correct="true">
+                    <ru>Adidas и Puma</ru>
+                    <en>Adidas and Puma</en>
+                </option>
+                <option value="0">
+                    <ru>Apple и Microsoft</ru>
+                    <en>Apple and Microsoft</en>
+                </option>
+                <option value="0">
+                    <ru>Ford и Ferrari</ru>
+                    <en>Ford and Ferrari</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="10">
+            <name>
+                <ru>Что будет, если у вас закончится топливо на немецком автобане?
+                </ru>
+                <en>What happens if you run out of gas on the German autobahn?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Вас бесплатно эвакуируют</ru>
+                    <en>You will be evacuated free of charge</en>
+                </option>
+                <option value="0">
+                    <ru>Вам пришлют дозаправщика</ru>
+                    <en>They'll send you a refueller</en>
+                </option>
+                <option value="key" correct="true">
+                    <ru>Вас оштрафуют и, может быть, лишат прав на полгода</ru>
+                    <en>You will be fined and your driving license might be suspended for six months</en>
+                </option>
+                <option value="0">
+                    <ru>Ничего не будет</ru>
+                    <en>Nothing happens</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="11">
+            <name>
+                <ru>Как называется самое большое народное гуляние в мире, которое проходит в Мюнхене каждый год во
+                    второй половине сентября?
+                </ru>
+                <en>What is the name of the largest folk festival in the world, which takes place in Munich every year in the second half of September?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Берлинале</ru>
+                    <en>Berlinale</en>
+                </option>
+                <option value="key" correct="true">
+                    <ru>Октоберфест</ru>
+                    <en>Oktoberfest</en>
+                </option>
+                <option value="0">
+                    <ru>День единства Германии</ru>
+                    <en>The German Unity Day</en>
+                </option>
+                <option value="0">
+                    <ru>Хэллоуин</ru>
+                    <en>Halloween</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="12">
+            <name>
+                <ru>В период первой мировой войны на западном фронте немецкие и французские солдаты вдруг вышли из
+                    окопов и начали обмениваться продуктами, обниматься и петь песни. Как называлось это событие?
+                </ru>
+                <en>During the First World War, on the Western front, German and French soldiers suddenly came out of the trenches and began exchanging food, hugging and singing songs. What was the name of this event?
+                </en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Новогоднее чудо</ru>
+                    <en>New Year Miracles</en>
+                </option>
+                <option value="key" correct="true">
+                    <ru>Рождественское перемирие</ru>
+                    <en>The Christmas Truce</en>
+                </option>
+                <option value="0">
+                    <ru>Пасхальный союз</ru>
+                    <en>Easter Union</en>
+                </option>
+                <option value="0">
+                    <ru>Прощёное воскресенье</ru>
+                    <en>Shrove Sunday</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="13">
+            <name>
+                <ru>В какой союз входила Германия в ходе Первой мировой войны?
+                </ru>
+                <en>Which alliance did Germany belong to during the First World War?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Антанта</ru>
+                    <en>The Entente</en>
+                </option>
+                <option value="key" correct="true">
+                    <ru>Тройственный союз</ru>
+                    <en>Triple Alliance</en>
+                </option>
+                <option value="0">
+                    <ru>НАТО</ru>
+                    <en>NATO</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="14">
+            <name>
+                <ru>Ноябрьская революция 1918 года привела к:
+                </ru>
+                <en>The November revolution of 1918 led to:</en>
+            </name>
+            <options>
+                <option value="key" correct="true">
+                    <ru>Распаду Германской империи и установлению парламентской демократии</ru>
+                    <en>The collapse of the German Empire and the establishment of parliamentary democracy</en>
+                </option>
+                <option value="0">
+                    <ru>Распаду Германской империи и установлению нацистского режима</ru>
+                    <en>The collapse of the German Empire and the establishment of the Nazi regime</en>
+                </option>
+                <option value="0">
+                    <ru>Распаду Германской империи и установлению социалистического режима</ru>
+                    <en>The collapse of the German Empire and the establishment of a socialist regime</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="15">
+            <name>
+                <ru>По итогам Первой мировой войны Германия и её союзники были признаны виновными в развязывании войны и
+                    обязались платить репарации. В каком году Германия выплатила последнюю часть своего долга?
+                </ru>
+                <en>At the end of World War I, Germany and its allies were found guilty of the unleashing of war and pledged to pay reparations. What year did Germany pay the last part of its debt?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>1925</ru>
+                    <en>1925</en>
+                </option>
+                <option value="0">
+                    <ru>1939</ru>
+                    <en>1939</en>
+                </option>
+                <option value="0">
+                    <ru>1989</ru>
+                    <en>1989</en>
+                </option>
+                <option value="key" correct="true">
+                    <ru>2010</ru>
+                    <en>2010</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="16">
+            <name>
+                <ru>В каком году Адольф Гитлер стал рейхсканцлером Германии?
+                </ru>
+                <en>What year did Adolf Hitler become Reich Chancellor of Germany?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>1919</ru>
+                    <en>1919</en>
+                </option>
+                <option value="key" correct="true">
+                    <ru>1933</ru>
+                    <en>1933</en>
+                </option>
+                <option value="0">
+                    <ru>1937</ru>
+                    <en>1937</en>
+                </option>
+                <option value="0">
+                    <ru>1939</ru>
+                    <en>1939</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="17">
+            <name>
+                <ru>Как назывался режим, существовавший в Германии при нацистах?
+                </ru>
+                <en>What was the name of the regime that existed in Germany under the Nazis?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Веймарская республика</ru>
+                    <en>The Weimar Republic</en>
+                </option>
+                <option value="0">
+                    <ru>Гитлеровская Германия</ru>
+                    <en>Nazi Germany</en>
+                </option>
+                <option value="key" correct="true">
+                    <ru>Третий рейх</ru>
+                    <en>Third Reich</en>
+                </option>
+                <option value="0">
+                    <ru>13-й легион</ru>
+                    <en>13th Legion</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="18">
+            <name>
+                <ru>С какого события началась Вторая мировая война 1 сентября 1939 года?
+                </ru>
+                <en>What event started the Second World War on September 1, 1939?</en>
+            </name>
+            <options>
+                <option value="key" correct="true">
+                    <ru>Немецкие войска вторглись в Польшу</ru>
+                    <en>German troops invaded Poland</en>
+                </option>
+                <option value="0">
+                    <ru>Итальянские войска вторглись в Великобританию</ru>
+                    <en>Italian troops invaded Great Britain</en>
+                </option>
+                <option value="0">
+                    <ru>СССР вторглись во Францию</ru>
+                    <en>The USSR invaded France</en>
+                </option>
+                <option value="0">
+                    <ru>Франция начала бомбить Японию</ru>
+                    <en>France started bombing Japan</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="19">
+            <name>
+                <ru>С 1945 года Берлин был поделён между странами антигитлеровской коалиции на четыре оккупационные
+                    зоны. Как называлась восточная часть, занятая советскими войсками?
+                </ru>
+                <en>Since 1945, Berlin had been divided between the countries of the anti-Hitler coalition into four occupation zones. What was the name of the Eastern part occupied by Soviet troops?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Федеративная Республика Германии (ФРГ)</ru>
+                    <en>German Federal Republic (FRG)</en>
+                </option>
+                <option value="key" correct="true">
+                    <ru>Германская Демократическая Республика (ГДР)</ru>
+                    <en>German Democratic Republic (GDR)</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="20">
+            <name>
+                <ru>Как называлось событие 9 ноября 1989 года, когда сотни тысяч восточных немцев прорвались на
+                    территорию западного Берлина, где их восторженно встретили тысячи людей?
+                </ru>
+                <en>What was the name of the event on November 9, 1989, when hundreds of thousands of East Germans broke into the territory of West Berlin, where they were enthusiastically welcomed by thousands of people?</en>
+            </name>
+            <options>
+                <option value="key" correct="true">
+                    <ru>Падение "Берлинской стены"</ru>
+                    <en>The fall of the Berlin Wall</en>
+                </option>
+                <option value="0">
+                    <ru>Рождественское перемирие</ru>
+                    <en>The Christmas truce</en>
+                </option>
+                <option value="0">
+                    <ru>Октоберфест</ru>
+                    <en>The Oktoberfest</en>
+                </option>
+            </options>
+        </item>
+        <item showAnswer="true" enabledBack="false" id="21">
+            <name>
+                <ru>Как называли "Берлинскую стену" в ГДР?
+                </ru>
+                <en>What was the name of the Berlin Wall in the GDR?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Великая Берлинская Стена</ru>
+                    <en>The Great Berlin Wall</en>
+                </option>
+                <option value="0">
+                    <ru>Советский блокпост</ru>
+                    <en>The Soviet checkpoint</en>
+                </option>
+                <option value="key" correct="true">
+                    <ru>Антифашистский оборонительный вал</ru>
+                    <en>Anti-fascist Protection Rampart</en>
+                </option>
+                <option value="0">
+                    <ru>Великий антифашистский уравнитель</ru>
+                    <en>The Great Anti-fascist Equalizer</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>

@@ -88,7 +88,7 @@ class CalculatorService
     private function calculatorName(Result $result): string
     {
         $test = $result->getTest();
-        $name = $test->getCalculatorName() ?? $test->getId();
+        $name = $test->getCalculatorName() ?? 'Test' . $test->getId();
         return self::CALCULATORS_NAMESPACE . ucfirst($name) . 'Calculator';
     }
 

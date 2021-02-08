@@ -1,0 +1,29 @@
+{% extends('tests/result.html.twig') %}
+
+{% block result %}
+    <div class="container">
+        {% if sum >= 8 and sum <= 11 %}
+            <p><b>У вас отличные знания о грибах!</b></p>
+        {% elseif sum >= 5 and sum <= 7 %}
+            <p><b>У вас средние знания о грибах</b></p>
+        {% elseif sum >= 0 and sum <= 4 %}
+            <p><b>Ваши знания о грибах ниже среднего. Тем не менее, вам удалось верно ответить на некоторые вопросы!</b>
+            </p>
+        {% endif %}
+
+        <p>{% trans %}Correct answers{% endtrans %}:</p>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale }}%;"
+                 aria-valuenow="{{ scale }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ sum }} {% trans %}out of{% endtrans %} 11
+            </div>
+        </div>
+
+        <br/>
+
+        {% if sum >= 11 %}
+            {% include "/tests/_medal.html.twig" with {'name': 'Mushroom connoisseur'|trans} %}
+        {% endif %}
+    </div>
+{% endblock %}

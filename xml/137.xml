@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>Какое ещё название Эвереста вы знаете?
+            </name>
+            <options>
+                <option value="0">Уральские горы</option>
+                <option value="key">Джомолунгма</option>
+                <option value="0">Пик Коммунизма</option>
+                <option value="0">Арарат</option>
+            </options>
+        </item>
+        <item id="2">
+            <name>Какая высота Эвереста?
+            </name>
+            <options>
+                <option value="key">8848 метров</option>
+                <option value="0">457 метров</option>
+                <option value="0">3 киллометра</option>
+                <option value="0">6758 метров</option>
+            </options>
+        </item>
+        <item id="3">
+            <name>Какую форму имеет Эверест?
+            </name>
+            <options>
+                <option value="0">Циллиндрическая</option>
+                <option value="key">Трёхгранная пирамида</option>
+                <option value="0">Четырёхгранная пирамида</option>
+                <option value="0">Кубическая</option>
+            </options>
+        </item>
+        <item id="4">
+            <name>Какая средняя дневная температура на Эвересте в июле?
+            </name>
+            <options>
+                <option value="key">минус 19 °С</option>
+                <option value="0">минус 5 °С</option>
+                <option value="0">плюс 5 °С</option>
+                <option value="0">плюс 19 °С</option>
+            </options>
+        </item>
+        <item id="5">
+            <name>Сколько занимает времени альпинистский подъём на вершину этой горы?
+            </name>
+            <options>
+                <option value="0">Неделю</option>
+                <option value="0">Месяц</option>
+                <option value="key">Два месяца</option>
+                <option value="0">Полгода</option>
+            </options>
+        </item>
+        <item id="6">
+            <name>Какой ветер мешает восхождению альпинистов зимой и летом?
+            </name>
+            <options>
+                <option value="key">Муссон</option>
+                <option value="0">Пассат</option>
+                <option value="0">Бриз</option>
+                <option value="0">Баргузин</option>
+            </options>
+        </item>
+        <item id="7">
+            <name>Как прозвали самый сложный участок восхождения на Эверест — последние 300 метров?
+            </name>
+            <options>
+                <option value="0">Спринтерская прямая</option>
+                <option value="0">Чемпионский отрезок</option>
+                <option value="key">Самая длинная миля на Земле</option>
+                <option value="0">Кривая высь</option>
+            </options>
+        </item>
+        <item id="8">
+            <name>Что делают с умирающими или уже погибшими альпинистами?
+            </name>
+            <options>
+                <option value="0">Помогают или хоронят в местных посёлках</option>
+                <option value="0">Пытаются спасти и, если не получается, хоронят прямо на месте гибели</option>
+                <option value="key">Ничего не делают</option>
+                <option value="0">Сталкивают вниз</option>
+            </options>
+        </item>
+        <item id="9">
+            <name>Как называется болезнь, которая возникнет, если попытаться покорить вершину без кислородного оборудования?
+            </name>
+            <options>
+                <option value="0">Кессонная болезнь</option>
+                <option value="key">Высотная болезнь или горная болезнь</option>
+                <option value="0">Астма</option>
+                <option value="0">Аллергия</option>
+            </options>
+        </item>
+        <item id="10">
+            <name>Для чего альпинисты проводят до месяца в базовых лагерях на высоте около 5000 км перед тем, как идти выше?
+            </name>
+            <options>
+                <option value="0">Проходят инструктаж</option>
+                <option value="0">Проходят курс физической подготовки</option>
+                <option value="key">Акклиматизируются</option>
+                <option value="0">Отъедаются, так как при восхождении теряется до 15 кг веса</option>
+            </options>
+        </item>
+</items>
+</quiz>

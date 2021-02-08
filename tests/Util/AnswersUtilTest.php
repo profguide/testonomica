@@ -12,6 +12,7 @@ use App\Test\AnswersHolder;
 use App\Test\Field;
 use App\Test\Option;
 use App\Test\Question;
+use App\Test\QuestionsHolder;
 use App\Util\AnswersUtil;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
@@ -42,7 +43,7 @@ class AnswersUtilTest extends KernelTestCase
             3 => 0, // wrong + 0
             4 => 2 // value + 2
         ]);
-        $this->assertEquals(4, AnswersUtil::sum($questions, new AnswersHolder($answers)));
+        $this->assertEquals(4, AnswersUtil::sum(new QuestionsHolder($questions), new AnswersHolder($answers)));
     }
 
     /**
@@ -59,11 +60,11 @@ class AnswersUtilTest extends KernelTestCase
         $question->addField(new Field('string', null, '20'));
         $questions = [$question];
 
-        $this->assertEquals(0, AnswersUtil::sum($questions, new AnswersHolder(self::buildAnswers([
+        $this->assertEquals(0, AnswersUtil::sum(new QuestionsHolder($questions), new AnswersHolder(self::buildAnswers([
             1 => 16
         ]))));
 
-        $this->assertEquals(1, AnswersUtil::sum($questions, new AnswersHolder(self::buildAnswers([
+        $this->assertEquals(1, AnswersUtil::sum(new QuestionsHolder($questions), new AnswersHolder(self::buildAnswers([
             1 => [16, 20]
         ]))));
     }

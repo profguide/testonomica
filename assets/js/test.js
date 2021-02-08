@@ -175,7 +175,7 @@ $(function () {
                 const _input = $(o).children("input");
                 if (_input[0] === input) {
                     $(o).addClass("test__option_chosen");
-                    if ($(input).data("is-correct") === true) {
+                    if ($(input).data("is-correct") === 1) {
                         $(o).addClass("test__option_correct");
                         if (question.textOnRight != null) {
                             $(o).find(".test__option-reveal").html(question.textOnRight).show();
