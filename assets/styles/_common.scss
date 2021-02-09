@@ -1,0 +1,11 @@
+.material-icons {
+  font-size: inherit; // parent's size
+  position: relative;
+  top: 2px; // probable standard value
+}
+
+.header {
+  width: 100%;
+  z-index: 100;
+  margin-bottom: 2rem;
+}

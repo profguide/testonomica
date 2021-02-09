@@ -1,6 +1,6 @@
-@import "~bootstrap";
+@import "bootstrap/bootstrap";
 //@import "bootstrap/node_modules/bootstrap/scss/mixins";
-//@import "bootstrap/cosmo/_variables";
+//@import "bootstrap/cosmo/_variables.scss";
 
 // >> from template
 #test__ajax-screen {
@@ -78,6 +78,11 @@
     //  height: 100%;
     //}
 
+    &-content {
+      //padding: 15px;
+      //border: 1px solid $gray-300;
+    }
+
     &_rating {
       .test__options_holder .test__option label {
         //padding-left: 0;
@@ -93,11 +98,28 @@
   }
 
   &__preview-screen-h1 {
-    text-align: center;
+    //text-align: center;
+  }
+
+  &__preview-screen-duration {
+    font-weight: bold;
+    margin: 1rem 0;
+  }
+
+  &__preview-screen-buttons {
+    margin-top: 2rem;
+    @media (max-width: map-get($grid-breakpoints, 'md')) {
+      .btn {
+        width: 100%;
+        &:not(:first-child) {
+          margin-top: 10px;
+        }
+      }
+    }
   }
 
   &__description {
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
 
   &__preview-screen-icon-wrapper {
@@ -110,19 +132,19 @@
   }
 
   &__question-content {
-    display: flex;
-    flex-flow: column;
-    min-height: 100vh;
-    justify-content: center;
-    padding: 70px 0 50px;
+    //display: flex;
+    //flex-flow: column;
+    //min-height: 100vh;
+    //justify-content: center;
+    //padding: 70px 0 50px;
     //height: 100%;
     //justify-content: space-between;
   }
 
   &__top {
-    position: absolute;
+    //position: absolute;
     top: 0;
-    padding-top: 15px;
+    //padding-top: 15px;
     height: 60px;
     width: 100%;
     //display: flex;
@@ -131,15 +153,30 @@
   }
 
   &__top-inner {
+    opacity: 0.8;
+    margin-top: 2rem;
+    //max-width: 400px;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
   }
 
   &__progress-counter {
-    font-size: 25px;
+    font-size: 18px;
+    margin-right: 25px;
     //position: absolute;
     //top: 15px;
     //left: 30px;
+  }
+
+  &__progress_line {
+    //border-radius: 0;
+    //position: fixed;
+    //bottom: 0;
+    width: 100%;
+    height: 15px;
+    //background: rgba(0, 0, 0, 0.125);
   }
 
   &__exit-btn {
@@ -155,8 +192,8 @@
   }
 
   &__name {
-    font-size: 140%;
-    padding: 2rem 0;
+    font-size: 120%;
+    padding-bottom: 1rem;
   }
 
   &__text {
@@ -169,7 +206,7 @@
   }
 
   &__option {
-    padding: 10px 15px;
+    padding: 10px;
     margin: 0 -15px;
     cursor: pointer;
     border-left: 4px solid transparent;
@@ -181,12 +218,20 @@
     }
 
     label {
-      padding: 4px 8px;
+      //padding: 4px 8px;
+      //cursor: pointer;
+      //background: #f8f9fa;
+      //border-radius: 4px;
+      //box-shadow: inset 0 -1px #d6d9dc;
+      //font-size: 90%;
+
+      padding: 6px 15px;
       cursor: pointer;
-      background: #f8f9fa;
-      border-radius: 4px;
-      box-shadow: inset 0 -1px #d6d9dc;
-      font-size: 90%;
+      //border-radius: 75px;
+      border-radius: 3px;
+      font-size: 80%;
+      border: 1px solid #8080801a;
+      background: #fdfdfd;
     }
 
     &_chosen {
@@ -252,11 +297,20 @@
 
   &__btn-row {
     margin-top: 15px;
+    button {
+      border: 1px solid #f8f8f8;
+      border-radius: 75px;
+      background: #fff;
+      span {
+        font-size: 25px;
+        color: #697177;
+      }
+    }
   }
 
   &__btn-direct {
-    width: 100px;
-    height: 50px;
+    width: 60px;
+    height: 41px;
     display: none;
 
     &_forced {
@@ -266,14 +320,6 @@
     span {
       font-size: 34px;
     }
-  }
-
-  &__progress_line {
-    border-radius: 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.125);
   }
 
   //#ff9800
