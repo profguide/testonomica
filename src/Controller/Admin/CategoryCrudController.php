@@ -7,7 +7,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\Field;
-use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class CategoryCrudController extends AbstractCrudController
@@ -28,7 +28,7 @@ class CategoryCrudController extends AbstractCrudController
             Field::new('name', 'Название'),
             Field::new('nameEn', 'Название (en)'),
             Field::new('slug'),
-            ImageField::new('picFile', 'Изображение')
+            TextField::new('picFile', 'Изображение')
                 ->setFormType(VichImageType::class)->hideOnIndex(),
             BooleanField::new('active', 'Активность'),
         ];

@@ -396,4 +396,9 @@ class Test
     {
         $this->inList = $inList;
     }
+
+    public function __toString(): string
+    {
+        return $this->name;
+    }
 }
