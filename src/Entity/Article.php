@@ -60,12 +60,12 @@ class Article
     /**
      * @ORM\Column(type="text", nullable=true, length=500)
      */
-    private string $annotation;
+    private ?string $annotation = null;
 
     /**
      * @ORM\Column(type="text", length=500, nullable=true, name="annotation_en")
      */
-    private string $annotation_en;
+    private ?string $annotation_en = null;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -397,7 +397,7 @@ class Article
     /**
      * @return string
      */
-    public function getAnnotation(): string
+    public function getAnnotation(): ?string
     {
         return $this->annotation;
     }
@@ -413,7 +413,7 @@ class Article
     /**
      * @return string
      */
-    public function getAnnotationEn(): string
+    public function getAnnotationEn(): ?string
     {
         return $this->annotation_en;
     }

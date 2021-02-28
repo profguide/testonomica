@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ article.metaTitle }}{% endblock %}
+{% block description %}{{ article.metaDescription }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <h1>{{ article.name }}</h1>
+                <div class="mb-4">
+                    <a href="{{ path('tests.view', {categorySlug: article.test.catalog.slug, slug: article.test.slug}) }}"
+                       class="btn btn-outline-primary">Пройти тест</a>
+                </div>
+                <div>
+                    {{ article.content|raw }}
+                </div>
+                <div class="mt-4">
+                    <a href="{{ path('tests.view', {categorySlug: article.test.catalog.slug, slug: article.test.slug}) }}"
+                       class="btn btn-outline-primary">Пройти тест</a>
+                </div>
+            </div>
+            <div class="col">
+                <h6>Категории</h6>
+                {% include "/articles/_catalogs.html.twig" with {'catalogs': catalogs} %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

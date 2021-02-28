@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta content="true" name="HandheldFriendly"/>
     <meta content="width" name="MobileOptimized"/>
-    {# <meta name="description" content=""> #}
+    {% if block("description") is not empty %}
+    <meta name="description" content="{% block description %}{% endblock %}">
+    {% endif %}
     <title>{% block title %}{% endblock %}</title>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W8CLW33');</script>
@@ -29,22 +31,12 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-                    {# <li class="nav-item"> #}
-                    {# <a class="nav-link active" aria-current="page" href="#">Тесты</a> #}
-                    {# </li> #}
-                    {# <li class="nav-item dropdown"> #}
-                    {# <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown"> #}
-                    {# Dropdown #}
-                    {# </a> #}
-                    {# <ul class="dropdown-menu"> #}
-                    {# <li><a class="dropdown-item" href="#">action 1</a></li> #}
-                    {# <li><a class="dropdown-item" href="#">action 2</a></li> #}
-                    {# <li> #}
-                    {# <hr class="dropdown-divider"> #}
-                    {# </li> #}
-                    {# <li><a class="dropdown-item" href="#">action 3</a></li> #}
-                    {# </ul> #}
-                    {# </li> #}
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/tests/">Тесты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/articles/">Статьи</a>
+                    </li>
                 </ul>
 {#                <form class="d-flex">#}
 {#                    <input class="form-control mr-2" type="search" placeholder="Тесты, типы">#}

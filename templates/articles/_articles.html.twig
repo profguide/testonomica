@@ -1,0 +1,23 @@
+<div class="card-deck">
+    {% for article in articles %}
+        {% set link = path('articles.view', {catalogSlug: article.catalog.slug, slug: article.slug}) %}
+        <div class="card">
+            <a href="{{ link }}">
+                <img class="card-img" src="{{ asset(thumbnails(article.img)) }}" alt="{{ article.name|e }}"/>
+            </a>
+            <div class="card-body">
+                <a href="{{ link }}" class="card-title text-dark"><h4>{{ article.name|e }}</h4></a>
+                <div>
+                    <span class="text-muted mr-2">
+                        <span class="material-icons">date_range</span>
+                        <time>{{ article.createdAt|date("d.m.Y H:i") }}</time>
+                    </span>
+                    <a href="{{ path('articles.catalog', {slug: article.catalog.slug}) }}"
+                       class="text-muted">{{ article.catalog.name }}</a>
+                </div>
+                <p class="card-text">{{ article.annotation|raw }}</p>
+                <a href="{{ link }}" class="btn-link">Читать далее<span class="material-icons">navigate_next</span></a>
+            </div>
+        </div>
+    {% endfor %}
+</div>

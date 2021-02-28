@@ -11,6 +11,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\Field;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class ArticleCrudController extends AbstractCrudController
@@ -32,6 +33,7 @@ class ArticleCrudController extends AbstractCrudController
             Field::new('nameEn', 'Название (en)'),
             Field::new('slug'),
             AssociationField::new('catalog'),
+//            TextField::new('content', 'Контент')->setFormType(CKEditorType::class)->hideOnIndex(),
             TextEditorField::new('content', 'Контент')->hideOnIndex(),
             TextEditorField::new('contentEn', 'Контент (en)')->hideOnIndex(),
             Field::new('subtitle', 'Подзаголовок')->hideOnIndex(),

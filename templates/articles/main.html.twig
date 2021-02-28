@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Блог{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <h1>Блог</h1>
+                {% include "/articles/_articles.html.twig" with {'articles': articles} %}
+            </div>
+            <div class="col">
+                <h6>Категории</h6>
+                {% include "/articles/_catalogs.html.twig" with {'catalogs': catalogs} %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
