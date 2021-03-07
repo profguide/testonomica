@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <quiz version="2.0.1">
     <items>
+        <item id="10001" group="ss">
+            <name>Я не любилю игры, где велика роль случайности</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10002" group="ss">
+            <name>Перед важным разговором я тщательно обдумываю стратегию своего поведения</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
         <item id="900" group="com-force">
-            <name>Когда возникают конфликтные ситуации, берёте ли вы
-                на себя труд примирить конфликтующие стороны?
+            <name>Я сам берусь за примирение конфликтов и делаю это эффективно,
+                даже если они не касаются меня лично и даже если меня об этом не просят
             </name>
             <options>
-                <option value="1">Да, я это делаю эффективно</option>
-                <option value="0">Нет, пусть разбираются сами</option>
-                <option value="0">Ко мне и не обращались за такой помощью</option>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
             </options>
         </item>
         <item id="910" group="com-interest">
-            <name>Нравится ли вам, общаясь с кем-то, подмечать интонации и язык тела, чтобы составить картину о
-                собеседнике?
+            <name>Мне нравится, общаясь с кем-то, подмечать интонации и язык тела, чтобы составить картину о
+                собеседнике
             </name>
             <options>
                 <option value="1">Да</option>
@@ -21,15 +34,29 @@
             </options>
         </item>
         <item id="1001" group="boss-force">
-            <name>Читаете ли вы статьи, книги, сайты о маркетинге и продажах?</name>
+            <name>Я читаю статьи, книги, сайты о маркетинге и продажах</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10003" group="ss">
+            <name>Мне нравится работа, требующая быстрых нестандартных решений</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10004" group="ss">
+            <name>Я стараюсь осваивать только те навыки, без которых нельзя обойтись</name>
             <options>
                 <option value="1">Да</option>
                 <option value="0">Нет</option>
             </options>
         </item>
         <item id="911" group="com-interest">
-            <name>Если вас взволновало какое-то событие, фильм, книга, то вы обычно делитесь с кем-либо своими
-                чувствами и мыслями?
+            <name>Обычно я делюсь с кем-либо своими чувствами и мыслями,
+                если меня взволновало какое-то событие, фильм, книга
             </name>
             <options>
                 <option value="1">Да</option>
@@ -37,65 +64,79 @@
             </options>
         </item>
         <item id="700" group="art-force">
-            <name>Через неделю у важного для вас человека день рождения.
-                Хочется преподнести своё собственное произведение (песню,
-                поделку, картину, стихи и пр.). Ваши действия?
+            <name>Через неделю у важного для меня человека день рождения.
+                Нужно преподнести своё собственное произведение (песню,
+                поделку, картину, стихи и пр.). Я скорее:
             </name>
             <options>
-                <option value="1">Заранее продумываю идеи, выразительные детали и дорабатываю
-                    до совершенства.
-                </option>
-                <option value="1">Всё придумаю и сделаю накануне.</option>
-                <option value="1">Вечеринка вечером? Вот утром что-нибудь и придумаю.</option>
-                <option value="1">Экспромт, только экспромт! На него спишу все несовершенства.</option>
-                <option value="0">Сам ничего не умею. Лучше куплю подарок в магазине.</option>
+                <option value="1">Заранее продумаю идею в деталях и сделаю идеально</option>
+                <option value="1">Сделаю на скорую руку, спишу несовершенства на экспромт</option>
+                <option value="0">Сам ничего не умею. Куплю подарок в магазине</option>
+            </options>
+        </item>
+        <item id="10005" group="ss">
+            <name>Я предпочитаю ездить на отдых в хорошо знакомые места</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10006" group="ss">
+            <name>Я стараюсь прочесть книги, которые у всех на слуху</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
             </options>
         </item>
         <item id="701" group="art-force">
-            <name>Случалось ли вам пожертвовать компьютерной игрой,
-                встречей с друзьями ради того, чтобы поработать над
-                своим творческим продуктом (песня, фильм, рисунок и т.п.)?
+            <name>Я предпочту пожертвовать компьютерной игрой,
+                встречей с друзьями ради того, чтобы поработать над своим творческим продуктом
             </name>
             <options>
-                <option value="1">Бывало, и не раз. За работой время летит незаметно.</option>
-                <option value="0">Однажды было</option>
-                <option value="0">Что-то не припомню такого</option>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
             </options>
         </item>
         <item id="901" group="com-force">
-            <name>Трудно ли вам выступать перед аудиторией?</name>
+            <name>Мне не трудно выступать перед аудиторией и я не волнуюсь</name>
             <options>
-                <option value="1">Нет, мне это совсем не трудно</option>
-                <option value="0">Трудно, я очень волнуюсь и предпочитаю не выступать</option>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10007" group="ss">
+            <name>Я никогда не упущу шанс, который предоставляет мне судьба</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
             </options>
         </item>
         <item id="1000" group="boss-force">
-            <name>Пытались ли вы когда-нибудь заработать деньги по своей инициативе, не нанимаясь на работу?
-                Пример: инвестировали, перепродали, оказали кому-то услугу и т.п.
+            <name>Не нанимаясь на работу, я успешно заработал деньги (оказал услугу, перепродал)
+                по собственной инициативе и мне это понравилось
             </name>
             <options>
-                <option value="1">Да, у меня это хорошо получается</option>
-                <option value="0">Да, я пробовал, но мне не понравилось</option>
+                <option value="1">Да</option>
                 <option value="0">Нет</option>
             </options>
         </item>
         <item id="902" group="com-force">
-            <name>Когда сотрудник просит вас объяснить непонятное по какому-то рабочему моменту:</name>
+            <name>Когда коллега/товарищ просит меня объяснить непонятное по какому-то делу:</name>
             <options>
-                <option value="1">Вы с удовольствем берётесь объяснить и объясняете понятно</option>
-                <option value="0">Вы объясняете, но от вашего объяснения не становится понятно</option>
-                <option value="0">Вы отказываетесь, пусть объясняет кто-то другой</option>
+                <option value="1">Я с удовольствем берусь объяснить и объясняю понятно</option>
+                <option value="0">Я объясняю, но от моего объяснения не становится понятно</option>
+                <option value="0">Я отказываюсь объяснять, пусть это сделает кто-то другой</option>
             </options>
         </item>
         <item id="912" group="com-interest">
-            <name>Вас несправедливо обошли с премией. Как вы поступите?</name>
+            <name>Когда мою работу недооценили или несправедливо занизили отметку:</name>
             <options>
                 <option value="0">Я промолчу</option>
-                <option value="1">Я подойду к начальнику и постараюсь прояснить ситуацию</option>
+                <option value="1">Я подойду к начальнику/учителю и постараюсь прояснить ситуацию</option>
             </options>
         </item>
         <item id="1020" group="boss-skills">
-            <name>Какая из этих моделей по сути не является предпринимательством:</name>
+            <name>Какая из этих моделей по сути НЕ является предпринимательством:</name>
             <options>
                 <option value="0">Компания получает доходы от свободных продаж своих товаров на рынке с риском провала
                 </option>
@@ -107,12 +148,33 @@
                 </option>
             </options>
         </item>
+        <item id="10008" group="ss">
+            <name>Прыгнуть в омут с головой, чем топтаться на берегу - это про меня</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10009" group="ss">
+            <name>Неожиданно возникающие трудности только подзадоривают меня</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10010" group="ss">
+            <name>Я могу существенно изменить свои планы, выслушав мнение других людей</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
         <item id="1021" group="boss-skills">
-            <name>Представьте себе, что вы участвуете в интересном для вас проекте.
-                Необходимо: найти источники информации, написать план действий,
+            <name>Если бы я участвовал в интересном для меня проекте, где
+                необходимо: найти источники информации, написать план действий,
                 распределить роли и ответственность в команде каждого участника,
-                контролировать работу, нести ответственность за результат работы команды.
-                Награда - благодарность клинета и преми. Что бы вы предпочли?
+                контролировать работу, нести ответственность за результат работы команды-
+                Я бы предпочел:
             </name>
             <options>
                 <option value="1">Написать план действий, распределить роли, контролировать
@@ -124,124 +186,153 @@
             </options>
         </item>
         <item id="913" group="com-interest">
-            <name>Хотите ли вы, чтобы каждый день на работе вы что-то делали с людьми непосредственно?
-                Например, лечили бы их, учили, организовывали и т.д.
+            <name>Я бы хотел каждый день на работе что-то делать с людьми непосредственно.
+                Например, лечить, учить, организовывать и т.д.
             </name>
             <options>
-                <option value="1">Да, с удовольствием</option>
+                <option value="1">Да</option>
                 <option value="0">Нет, я бы не хотел напрямую иметь дела с людьми</option>
             </options>
         </item>
         <item id="1011" group="boss-interest">
-            <name>Вы постоянно изобретаете способы как вам заработать денег?</name>
+            <name>Я постоянно изобретаю способы как мне заработать денег.</name>
             <options>
                 <option value="1">Да</option>
                 <option value="0">Нет</option>
             </options>
         </item>
         <item id="1012" group="boss-interest">
-            <name>Вдохновляют ли вас чьи-то рассказы о том, как бизнесмены
-                зарабатывают деньги и как побеждают в конкурентной борьбе?
+            <name>Меня очень вдохновляют рассказы о том, как бизнесмены
+                зарабатывают деньги и как побеждают в конкурентной борьбе.
             </name>
             <options>
                 <option value="1">Да</option>
                 <option value="0">Нет</option>
             </options>
         </item>
+        <item id="10011" group="ss">
+            <name>Я сразу понимаю, кто в новом коллективе неформальный лидер</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10012" group="ss">
+            <name>Я буду делать дело до тех пор, пока не сочту результат полностью удовлетворительным</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10013" group="ss">
+            <name>У меня есть ясное представление о том, что будет со мной через пять лет</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
         <item id="711" group="art-interest">
-            <name>Если бы вы ни в чём остро не нуждались, то подарочную карту
-                какого магазина хотели бы получить на день рождения?
+            <name>Я получаю удовольствие от рисования, сочинения музыки, придумывания одежды, придумывания историй и
+                т.д.
             </name>
             <options>
-                <option value="0">ювелирный! (меня давно волнует один чудный браслет)</option>
-                <option value="0">одёжный</option>
-                <option value="0">книжный</option>
-                <option value="0">магазин электроники</option>
-                <option value="1">«Всё для художников»</option>
-                <option value="1">«Всё для рукоделия»</option>
-                <option value="0">магазин инструментов «Всё для рукастых».</option>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
             </options>
         </item>
         <item id="712" group="art-interest">
-            <name>В своих социальных сетях вы подписываетесь на разных людей.
-                Но интереснее всего вам читать:
+            <name>Если бы за всё платили одинаково, то я бы выбрал
+                каждый день с утра до вечера
             </name>
             <options>
-                <option value="0">фитнес-инструкторов</option>
-                <option value="0">экспертов моды и стиля</option>
-                <option value="0">политиков</option>
-                <option value="1">актёров и режиссёров</option>
-                <option value="0">историков</option>
-                <option value="0">политологов</option>
-                <option value="0">специалистов в области естественных наук</option>
-                <option value="0">литературоведов</option>
-                <option value="1">писателей и поэтов</option>
-                <option value="1">художников</option>
-                <option value="0">своих друзей</option>
-                <option value="0">я ни на кого не подписываюсь</option>
+                <option value="1">придумывать одежду, образы</option>
+                <option value="1">рисовать</option>
+                <option value="1">делать компьютерный дизайн предметов, интерьеров, игр, рекламы, сайтов и т.п.</option>
+                <option value="1">фотографировать и снимать видео</option>
+                <option value="1">придумывать сценарии, стихи, рассказы</option>
+                <option value="1">играть на музыкальных инструментах или петь</option>
+                <option value="0">ничего из этого я бы не стал делать</option>
             </options>
         </item>
         <item id="920" group="com-skills">
-            <name>Насколько вам трудно позвонить по телефону незнакомому человеку и что-то выяснить?</name>
+            <name>Позвонить по телефону незнакомому человеку и что-то выяснить</name>
             <options>
-                <option value="0">Трудно, и я стараюсь отложить этот разговор</option>
-                <option value="1">Совсем не трудно, мне это даже нравится</option>
+                <option value="0">Мне трудно, и я стараюсь отложить этот разговор</option>
+                <option value="1">Мне совсем не трудно, мне это даже нравится</option>
             </options>
         </item>
         <item id="720" group="art-skills">
-            <name>Если у вас есть творческие работы, то имели ли они успех?</name>
+            <name>Я легко импровизирую (в музыке, в рисовании, в актёрстве, в сочинении стихов и т.д.)</name>
             <options>
-                <option value="0">У меня нет творческих работ и никогда не было</option>
-                <option value="0">Мои работы высоко ценят только друзья и близкие</option>
-                <option value="1">Мои работы были неплохо оценены на выставке / фестивале / концерте / спектакле.
-                </option>
-                <option value="1">Да, выкладывал в интернет. Есть подписчики и лайки.</option>
-                <option value="0">Выкладывал в интернет, но откликов пока нет.</option>
-                <option value="1">Да, я уже немного заработал на своём творчестве.</option>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
             </options>
         </item>
         <item id="721" group="art-skills">
-            <name>Если в компании возникла идея что-нибудь нарисовать / спеть / сочинить / сплясать…</name>
+            <name>Меня хвалили за мои произведения (рисунок, фотографию, песню, стихотворение, рассказ и т.д.)</name>
             <options>
-                <option value="1">Вы быстро включаетесь, и успех обеспечен</option>
-                <option value="0">В компании всегда есть люди, которые справляются лучше</option>
-                <option value="0">Получается не хуже, чем у других</option>
+                <option value="1">Часто</option>
+                <option value="0">Редко</option>
+                <option value="0">Никогда</option>
+            </options>
+        </item>
+        <item id="10014" group="ss">
+            <name>Мне трудно говорить людям «нет»</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10015" group="ss">
+            <name>Я совершаю некоторые поступки только для того, чтобы избежать негативной оценки со стороны других
+                людей
+            </name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10016" group="ss">
+            <name>В некоторых случаях я просто чувствую, что пахнет опасностью.</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
             </options>
         </item>
         <item id="922" group="com-skills">
-            <name>Легко ли вы вливаетесь в новый коллектив?</name>
+            <name>Я легко вливаюсь в новый коллектив</name>
             <options>
-                <option value="1">Да, это для меня не является стрессом</option>
-                <option value="0">Трудно</option>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
             </options>
         </item>
         <item id="921" group="com-skills">
-            <name>Быстро ли вы устаёте от общения с людьми?</name>
+            <name>Я быстро устаю от общения с людьми, даже если разговор дружеский и длится не более часа</name>
             <options>
-                <option value="0">Да, даже если этот разговор дружеский и длится не более часа</option>
-                <option value="1">Нет, я готов общаться с людьми долго и не устаю от этого</option>
+                <option value="0">Да</option>
+                <option value="1">Нет</option>
             </options>
         </item>
         <item id="923" group="com-skills">
-            <name>Трудно ли вам попросить вернуть долг, указать знакомому человеку на его ошибку?</name>
+            <name>Я легко нахожу нужные слова и без проблем могу попросить вернуть долг или
+                указываю человеку на его ошибку.
+            </name>
             <options>
-                <option value="0">Да, я долго готовлюсь к этому разговору, и всё равно мне неловко</option>
-                <option value="1">Я легко нахожу нужные слова, это для меня не проблема</option>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
             </options>
         </item>
         <item id="702" group="art-force">
-            <name>У вас нет необходимого инструмента, приспособления или книги, необходимой для творчества.
-                Вы нашли где это купить, но не близко к дому, придётся ехать два часа. Что скажете?
+            <name>В моей жизни были случаи, когда я старался довести до совершенства своё произведение,
+                зная наверняка, что никто не заметит мелких огрехов.
             </name>
             <options>
-                <option value="1">Поеду немедленно! Пока никто не перехватил.</option>
-                <option value="0">Нет, это слишком неудобно, а мне спешить некуда. Вот
-                    было бы поближе - купил бы.
-                </option>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
             </options>
         </item>
         <item id="1010" group="boss-interest">
-            <name>Какой сценарий вы бы предпочли для себя?</name>
+            <name>Я бы предпочел для себя такой сценарий работы:</name>
             <options>
                 <option value="0">Получить хорошую работу, стать специалистом, но не стремиться быть начальником
                 </option>
@@ -255,40 +346,94 @@
             </options>
         </item>
         <item id="710" group="art-interest">
-            <name>Вы слушаете длинный скучный доклад, но уйти нельзя. Как себя развлечь?</name>
+            <name>Если бы в компании возникла идея поставить спектакль, то я бы выбрал для себя:</name>
             <options>
-                <option value="0">поиграть в смартфоне</option>
-                <option value="1">нарисовать что-нибудь, если есть чем рисовать</option>
-                <option value="0">попереписываться с друзьями</option>
-                <option value="1">сочинить стих</option>
-                <option value="1">сочинить мелодию или песню</option>
-                <option value="0">читать книгу украдкой</option>
-                <option value="0">спать</option>
-                <option value="0">конспектировать лекцию (вдруг там есть что-то ценное!)</option>
+                <option value="1">создать декорацию</option>
+                <option value="1">создать компьютерные видеоэффекты</option>
+                <option value="1">сочинить музыку</option>
+                <option value="1">придумать танец</option>
+                <option value="1">сшить костюм</option>
+                <option value="1">сыграть роль</option>
+                <option value="1">придумать идею спектакля</option>
+                <option value="0">ничего не стал бы делать, мне это не интересно</option>
             </options>
         </item>
         <item id="1002" group="boss-force">
-            <name>Придумали ли вы схему заработка, которую не видели другие люди?</name>
+            <name>Я придумал схему заработка, которую не видели другие люди</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10017" group="ss">
+            <name>Я стараюсь всегда анализировать причины своих ошибочных действий</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10018" group="ss">
+            <name>Я всегда болею за проигрывающего</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10019" group="ss">
+            <name>Ни разу в жизни мне не довелось сказать неправду</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10020" group="ss">
+            <name>Накануне важного события мне трудно уснуть</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10021" group="ss">
+            <name>Я никогда не стану довольствоваться работой, которая мне не по душе</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="1022" group="boss-skills">
+            <name>Вы владелец завода лампочек. Вы тратите на производство одной лампочки 40 рублей.
+                Вы продаёте лампочки магазинам. Такие лампочки магазины продают покупателям не дороже 180 рублей.
+                По какой цене вы хотели бы продать лампочку магазину?
+            </name>
+            <options>
+                <option value="0">300 рублей</option>
+                <option value="0">180 рублей</option>
+                <option value="0">40 рублей</option>
+                <option value="0">20 рублей</option>
+                <option value="1">120 рублей</option>
+            </options>
+        </item>
+        <item id="10022" group="ss">
+            <name>В споре для меня важнее заставить собеседника согласиться со мной</name>
+            <options>
+                <option value="1">Да</option>
+                <option value="0">Нет</option>
+            </options>
+        </item>
+        <item id="10023" group="ss">
+            <name>Я умею найти выход из любой затруднительной ситуации</name>
             <options>
                 <option value="1">Да</option>
                 <option value="0">Нет</option>
             </options>
         </item>
         <item id="722" group="art-skills">
-            <name>Приходилось ли вам участвовать в творческих конкурсах?</name>
+            <name>Я легко придумываю (орнаменты и узоры, логотипы, идеи для костюма, истории, мелодии,
+                идеи интерьера и т.д).
+            </name>
             <options>
-                <option value="0">Нет, пока нечего предъявить</option>
-                <option value="0">Да, я участвовал, но не победил</option>
-                <option value="1">Да, мою работу заметили и похвалили</option>
-            </options>
-        </item>
-        <item id="1022" group="boss-skills">
-            <name>Себестоимость товара это?</name>
-            <options>
-                <option value="1">все расходы предприятия на его изготовление</option>
-                <option value="0">оптовая цена, по которой предприятие отдает товары посредникам или в магазин</option>
-                <option value="0">рекомендованная магазинам розничная цена на товар</option>
-                <option value="0">стоимость товара, которую производитель забирает себе после реализации товара</option>
+                <option value="1">Да</option>
+                <option value="0">Нет, мне такие вещи трудно придумывать</option>
             </options>
         </item>
     </items>
