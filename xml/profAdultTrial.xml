@@ -2,7 +2,7 @@
 <quiz version="2.0.1">
     <items>
         <item id="10001" group="ss">
-            <name>Я не любилю игры, где велика роль случайности</name>
+            <name>Я не люблю игры, где велика роль случайности</name>
             <options>
                 <option value="1">Да</option>
                 <option value="0">Нет</option>
