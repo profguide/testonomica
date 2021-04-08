@@ -827,16 +827,16 @@ class DevelopController extends AbstractController
     /**
      * @Route("/xml/")
      */
-    public function xml()
+        public function xml()
     {
         $questions = '';
-        $crawler = CrawlerUtil::load($this->kernel->getProjectDir() . "/xml/proforientationAdult.xml");
+        $crawler = CrawlerUtil::load($this->kernel->getProjectDir() . "/xml/proforientationTeen.xml");
         $items = $crawler->children('item');
         foreach ($items as $itemElement) {
             $itemCrawler = new Crawler($itemElement);
             $questions
                 .= '<div style="margin-bottom: 10px">'
-                . '<span style="color: #888">' . $itemCrawler->attr('group') . '</span><br> '
+//                . '<span style="color: #888">' . $itemCrawler->attr('group') . '</span><br> '
                 . $itemCrawler->children('name')->text()
                 . '</div>';
         }
