@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -39,6 +40,11 @@ class Test
      * @ORM\ManyToMany(targetEntity="App\Entity\Service", mappedBy="tests")
      */
     private $services;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Question", mappedBy="test", cascade={"all"}, orphanRemoval=true)
+     */
+    private $questions;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -128,6 +134,7 @@ class Test
 
     public function __construct()
     {
+        $this->questions = new ArrayCollection();
         $this->services = new ArrayCollection();
     }
 
@@ -395,6 +402,32 @@ class Test
     public function setInList(bool $inList): void
     {
         $this->inList = $inList;
+    }
+
+    public function setQuestions(Collection $questions): void
+    {
+        $this->questions = $questions;
+    }
+
+
+    /**
+     * @return array[Question]
+     */
+    public function getQuestions()
+    {
+        return $this->questions;
+    }
+
+    public function addQuestion(Question $question)
+    {
+        $question->setTest($this);
+        $this->questions->add($question);
+        return $this;
+    }
+
+    public function removeQuestion(Question $question)
+    {
+        $this->questions->removeElement($question);
     }
 
     public function __toString(): string

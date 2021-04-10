@@ -2,15 +2,24 @@
 
 namespace App\Controller\Admin;
 
+use App\Admin\Type\QuestionType;
 use App\Entity\Test;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\Field;
+use EasyCorp\Bundle\EasyAdminBundle\Field\FormField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
+/**
+ * Class TestCrudController
+ * @package App\Controller\Admin
+ * @IsGranted("ROLE_ADMIN")
+ */
 class TestCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
@@ -40,6 +49,16 @@ class TestCrudController extends AbstractCrudController
             BooleanField::new('inList', 'В списках'),
             Field::new('xmlFilename', 'Xml name')->onlyOnForms(),
             Field::new('calculatorName', 'Calculator prefix name')->onlyOnForms(),
+            FormField::addPanel('Вопросы'),
+            CollectionField::new('questions', 'Вопросы')
+                ->allowAdd(true)
+                ->allowDelete(true)
+                ->setEntryIsComplex(true)
+                ->setEntryType(QuestionType::class)
+                ->setFormTypeOptions([
+                    'by_reference' => false,
+                    'label' => false
+                ])
         ];
     }
 }

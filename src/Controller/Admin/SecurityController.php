@@ -15,7 +15,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends AbstractController
 {
     /**
-     * @Route("/login/", name="login")
+     * @Route("/admin/login/", name="admin.login")
      * @param AuthenticationUtils $authenticationUtils
      * @return Response
      */
