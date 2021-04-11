@@ -2,8 +2,9 @@
 
 namespace App\Controller\Admin;
 
-use App\Admin\Type\QuestionType;
 use App\Entity\Test;
+use App\Form\QuestionType;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
@@ -13,6 +14,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\Field;
 use EasyCorp\Bundle\EasyAdminBundle\Field\FormField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 /**
@@ -29,13 +31,25 @@ class TestCrudController extends AbstractCrudController
 
     public function configureCrud(Crud $crud): Crud
     {
-        return $crud->setPageTitle('index', 'Тесты');
+        return $crud->setPageTitle('index', 'Тесты')
+            ->setFormThemes([
+                'admin/form.html.twig',
+                '@EasyAdmin/crud/form_theme.html.twig'
+            ]);
+    }
+
+    public function configureAssets(Assets $assets): Assets
+    {
+        return $assets
+//            ->addCssFile('admin')
+            ->addWebpackEncoreEntry('admin');
     }
 
     public function configureFields(string $pageName): iterable
     {
         return [
-            Field::new('name', 'Название'),
+            FormField::addPanel(null, 'fa fa-sliders-h'),
+            TextField::new('name', 'Название'),
             Field::new('nameEn', 'Название (en)'),
             Field::new('slug'),
             AssociationField::new('catalog'),
@@ -49,7 +63,8 @@ class TestCrudController extends AbstractCrudController
             BooleanField::new('inList', 'В списках'),
             Field::new('xmlFilename', 'Xml name')->onlyOnForms(),
             Field::new('calculatorName', 'Calculator prefix name')->onlyOnForms(),
-            FormField::addPanel('Вопросы'),
+            FormField::addPanel('Вопросы', 'fa fa-question-circle')
+                ->addCssClass('test-questions-form'), // @see admin.css
             CollectionField::new('questions', 'Вопросы')
                 ->allowAdd(true)
                 ->allowDelete(true)
@@ -57,7 +72,11 @@ class TestCrudController extends AbstractCrudController
                 ->setEntryType(QuestionType::class)
                 ->setFormTypeOptions([
                     'by_reference' => false,
-                    'label' => false
+                    'label' => false,
+                    'prototype' => true,
+                    'entry_options' => [
+                        'label' => false,
+                    ],
                 ])
         ];
     }

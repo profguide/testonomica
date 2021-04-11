@@ -23,12 +23,6 @@ class Test
      */
     private $id;
 
-//    /**
-//     * @ORM\Column(type="integer", name="catalog_id")
-//     * @var int
-//     */
-//    private $catalogId;
-
     /**
      * @var Category
      * @ORM\ManyToOne(targetEntity="Category", inversedBy="tests")
@@ -409,9 +403,8 @@ class Test
         $this->questions = $questions;
     }
 
-
     /**
-     * @return array[Question]
+     * @return Collection<Question>
      */
     public function getQuestions()
     {

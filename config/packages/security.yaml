@@ -1,4 +1,5 @@
 security:
+  enable_authenticator_manager: true
   encoders:
     App\Entity\User:
       algorithm: auto
@@ -14,22 +15,15 @@ security:
     dev:
       pattern: ^/(_(profiler|wdt)|css|images|js)/
       security: false
-    # stateless interface to prevent creating auth tokens, what otherwise symfony do
-    cli:
-      pattern: ^/tests/cli
-      stateless: true
-      security: false
     main:
-      anonymous: false
+      # anonymous: true
       lazy: true
       provider: app_user_provider
-      guard:
-        authenticators:
-          - App\Security\UserAuthenticator
+      custom_authenticator: App\Security\UserAuthenticator
       logout:
         path: app_logout
-        # where to redirect after logout
-        # target: app_any_route
+      # where to redirect after logout
+      # target: app_any_route
 
       # activate different ways to authenticate
       # https://symfony.com/doc/current/security.html#firewalls-authentication
@@ -40,6 +34,7 @@ security:
   # Easy way to control access for large sections of your site
   # Note: Only the *first* access control that matches will be used
   access_control:
-    #         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+    - { path: ^/login, roles: PUBLIC_ACCESS }
+    # - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
     - { path: ^/admin, roles: ROLE_ADMIN }
     # - { path: ^/profile, roles: ROLE_USER }

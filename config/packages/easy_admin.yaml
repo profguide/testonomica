@@ -1,0 +1,9 @@
+#easy_admin:
+#  entities:
+#    Test:
+#      class: App\Entity\Test
+#      label: Post
+#      form:
+#        fields:
+#          - property: items
+#            type: collection

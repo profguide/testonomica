@@ -10,6 +10,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\OptionRepository"))
  * @ORM\Table(indexes={@ORM\Index(columns={"question"})})
+ * @ORM\HasLifecycleCallbacks
  * @author: adavydov
  * @since: 09.04.2021
  */
@@ -24,7 +25,7 @@ class QuestionItem
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Question", inversedBy="options")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Question", inversedBy="items")
      * @ORM\JoinColumn(name="question")
      */
     private Question $question;
@@ -48,7 +49,7 @@ class QuestionItem
     private $text;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      * @var string
      */
     private $textEn;
@@ -212,6 +213,14 @@ class QuestionItem
         $this->imgFile = $imgFile;
     }
 
+    /**
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function updatedTimestamps(): void
+    {
+        $this->setUpdatedAt(new \DateTime('now'));
+    }
 
 //    public static function initDefault(): Test
 //    {

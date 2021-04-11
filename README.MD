@@ -14,9 +14,13 @@
 ## Создание файлов миграции из моделей
     php bin/console doctrine:migrations:diff
     
-## Применение миграций для окружений
+## Применение миграции
     php bin/console doctrine:migrations:migrate
     APP_ENV=test php bin/console doctrine:migrations:migrate
+
+## Откат миграций
+    php bin/console doctrine:migrations:migrate prev
+    APP_ENV=test php bin/console doctrine:migrations:migrate prev
     
 # TODO
 - Версионирование теста. 

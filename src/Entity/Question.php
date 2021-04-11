@@ -38,7 +38,7 @@ class Question
     private Test $test;
 
     /**
-     * @ORM\OneToMany(targetEntity="QuestionItem", mappedBy="question", cascade={"all"}, orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="App\Entity\QuestionItem", mappedBy="question", cascade={"all"}, orphanRemoval=true)
      */
     private $items;
 
@@ -46,7 +46,7 @@ class Question
      * @ORM\Column(type="string")
      * @var string
      */
-    private $type;
+    private string $type = self::TYPE_OPTION;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -180,7 +180,7 @@ class Question
         return $this->type;
     }
 
-    public function setType($type)
+    public function setType(string $type)
     {
         if (!in_array($type, [self::TYPE_CHECKBOX, self::TYPE_OPTION, self::TYPE_RATING, self::TYPE_TEXT])) {
             throw new \InvalidArgumentException("Invalid type");
@@ -466,7 +466,7 @@ class Question
 
 
     /**
-     * @return Collection[QuestionItem]
+     * @return Collection<QuestionItem>
      */
     public function getItems()
     {
@@ -480,8 +480,8 @@ class Question
         return $this;
     }
 
-    public function removeItem(Question $question)
+    public function removeItem(QuestionItem $item)
     {
-        $this->items->removeElement($question);
+        $this->items->removeElement($item);
     }
 }
