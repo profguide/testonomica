@@ -77,14 +77,15 @@ class AnswersUtil
 
     /**
      * Counts percentage of repeated values and builds map
+     * @param QuestionsHolder $questionsHolder
      * @param AnswersHolder $answersHolder ['1' => 'yes', '2' => 'yes', 3 => 'no']
      * @param int $max - what is 100% value
      * @return array e.g. ['yes' => 100, 'no' => 50]
      */
-    public static function percentage(AnswersHolder $answersHolder, int $max): array
+    public static function percentage(QuestionsHolder $questionsHolder, AnswersHolder $answersHolder, int $max): array
     {
         // 1. sum values at first
-        $valuesSums = AnswersUtil::sumValuesMap($answersHolder);
+        $valuesSums = AnswersUtil::sumValuesMap($questionsHolder, $answersHolder);
         // 2. count percentages
         return AnswersUtil::percentageOfSet($valuesSums, $max);
     }
@@ -92,14 +93,15 @@ class AnswersUtil
     /**
      * Counts percentage of repeated values and returns double map with percentage and sum of repeated values
      * e.g. ['1' => 'yes', '2' => 'yes', 3 => 'no']
+     * @param QuestionsHolder $questionsHolder
      * @param AnswersHolder $answersHolder
      * @param int $max - what is 100% value
      * @return array e.g. ['yes' => ['value' => 2, 'percentage' => 100], 'no' => ['value' => 1, 'percentage' => 50]]
      */
-    public static function percentageWithValues(AnswersHolder $answersHolder, int $max): array
+    public static function percentageWithValues(QuestionsHolder $questionsHolder, AnswersHolder $answersHolder, int $max): array
     {
         $newMap = [];
-        $valuesSums = AnswersUtil::sumValuesMap($answersHolder);
+        $valuesSums = AnswersUtil::sumValuesMap($questionsHolder, $answersHolder);
         $percentageMap = AnswersUtil::percentageOfSet($valuesSums, $max);
         foreach ($valuesSums as $name => $value) {
             $newMap[$name] = [
@@ -114,7 +116,7 @@ class AnswersUtil
      * Counts sum of repeated values
      * e.g. ['1' => 'yes', '2' => 'yes', 3 => 'no']
      * In this case 'yes' repeats 2 times, and 'no' - once.
-     * @param QuestionsHolder $questionsHolder
+     * @param QuestionsHolder $questionsHolder need for precise count, as some questions can be passed
      * @param AnswersHolder $answersHolder
      * @return array ['yes' => 2, 'no' => 1]
      */

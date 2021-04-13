@@ -1,44 +1,35 @@
 <?php
 
-namespace App\Test;
+namespace App\Repository;
 
 use App\Entity\Test;
-use DOMElement;
+use App\Test\Question;
+use App\Test\QuestionXmlMapper;
+use App\Test\TestItemNotFoundException;
 use Symfony\Component\DomCrawler\Crawler;
-use Symfony\Component\HttpKernel\KernelInterface;
 
-/**
- * @author: adavydov
- * @since: 23.10.2020
- * Такие планы по кешированию, если окажется, что медленно работает
- * 1 вынести логику работы с XML в отдельный класс SourceXmlRepository
- * 2 добавить SourceCacheRepositoryInterface <- SourceRedisRepository
- * 3 здесь сделать работу с обоими репозиториями, используя такие методы:
- * $this->xmlRepository->load($test)
- * $this->redisRepository->isTestPersist($test)
- * $this->redisRepository->saveAll(Question[])
- */
-class SourceRepository implements SourceRepositoryInterface
+class DBSourceRepository implements SourceRepositoryInterface
 {
-    private $kernel;
+    private QuestionRepository $questionRepository;
 
-    // for request cache
-    private static $xml = [];
+    private QuestionItemRepository $optionRepository;
 
-    public function __construct(KernelInterface $kernel)
+    public function __construct(QuestionRepository $questionRepository, QuestionItemRepository $optionRepository)
     {
-        $this->kernel = $kernel;
+        $this->questionRepository = $questionRepository;
+        $this->optionRepository = $optionRepository;
     }
 
-    public function getQuestion(Test $test, $itemId)
+    public function getQuestion(Test $test, $id): ?Question
     {
-        $items = $this->getItems($test);
-        $position = $this->getItemPosition($items, $itemId);
-        /**@var DOMElement $item */
-        if (($item = $items->getNode($position))) {
-            return QuestionXmlMapper::map($item);
-        }
-        return null;
+        return $this->questionRepository->findOneBy($id);
+//        $items = $this->getItems($test);
+//        $position = $this->getItemPosition($items, $itemId);
+//        /**@var DOMElement $item */
+//        if (($item = $items->getNode($position))) {
+//            return QuestionXmlMapper::map($item);
+//        }
+//        return null;
     }
 
     public function getNextQuestion(Test $test, $itemId): ?Question

@@ -27,20 +27,15 @@ use Symfony\Component\Serializer\SerializerInterface;
  */
 class TestController extends AbstractController
 {
-    /**@var TestService */
-    private $testService;
+    private TestService $testService;
 
-    /**@var CategoryService */
-    private $categoryService;
+    private CategoryService $categoryService;
 
-    /**@var ResultService */
-    private $resultService;
+    private ResultService $resultService;
 
-    /**@var AnswerService */
-    private $answerService;
+    private AnswerService $answerService;
 
-    /**@var CalculatorService */
-    private $calculatorService;
+    private CalculatorService $calculatorService;
 
     public function __construct(
         TestService $testService,

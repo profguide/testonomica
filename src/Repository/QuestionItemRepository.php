@@ -9,7 +9,7 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;
 
-class OptionRepository extends ServiceEntityRepository
+class QuestionItemRepository extends ServiceEntityRepository
 {
     private EntityManagerInterface $em;
 

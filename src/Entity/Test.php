@@ -107,16 +107,21 @@ class Test
     private bool $inList = true;
 
     /**
-     * @ORM\Column(type="string", length=20, nullable=true)
-     * @var string|null
+     * @ORM\Column(type="boolean")
      */
-    private $xmlFilename;
+    private bool $isXmlSource = false;
 
     /**
      * @ORM\Column(type="string", length=20, nullable=true)
      * @var string|null
      */
-    private $calculatorName;
+    private ?string $xmlFilename = null;
+
+    /**
+     * @ORM\Column(type="string", length=20, nullable=true)
+     * @var string|null
+     */
+    private ?string $calculatorName = null;
 
     public static function initDefault(): Test
     {
@@ -396,6 +401,16 @@ class Test
     public function setInList(bool $inList): void
     {
         $this->inList = $inList;
+    }
+
+    public function isXmlSource(): bool
+    {
+        return $this->isXmlSource;
+    }
+
+    public function setIsXmlSource(bool $isXmlSource): void
+    {
+        $this->isXmlSource = $isXmlSource;
     }
 
     public function setQuestions(Collection $questions): void

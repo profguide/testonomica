@@ -14,6 +14,6 @@ class Test102Calculator extends AbstractCalculator
 {
     function calculate(): array
     {
-        return AnswersUtil::percentageWithValues($this->answersHolder, 8);
+        return AnswersUtil::percentageWithValues($this->questionsHolder, $this->answersHolder, 8);
     }
 }

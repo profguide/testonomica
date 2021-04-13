@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\OptionRepository"))
+ * @ORM\Entity(repositoryClass="App\Repository\QuestionItemRepository"))
  * @ORM\Table(indexes={@ORM\Index(columns={"question"})})
  * @ORM\HasLifecycleCallbacks
  * @author: adavydov
@@ -68,6 +68,18 @@ class QuestionItem
      * @Vich\UploadableField(mapping="thumbnails", fileNameProperty="img")
      */
     private ?File $imgFile = null;
+
+    public static function createMinimal(
+        string $value,
+        string $text,
+        bool $isCorrect = false): QuestionItem
+    {
+        $entity = new QuestionItem();
+        $entity->value = $value;
+        $entity->text = $text;
+        $entity->correct = $isCorrect;
+        return $entity;
+    }
 
     /**
      * @return int

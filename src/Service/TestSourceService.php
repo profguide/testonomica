@@ -4,8 +4,8 @@ namespace App\Service;
 
 
 use App\Entity\Test;
+use App\Repository\SourceRepositoryInterface;
 use App\Test\Question;
-use App\Test\SourceRepositoryInterface;
 
 /**
  * @author: adavydov
@@ -13,8 +13,7 @@ use App\Test\SourceRepositoryInterface;
  */
 class TestSourceService
 {
-    /**@var SourceRepositoryInterface */
-    private $repository;
+    private SourceRepositoryInterface $repository;
 
     public function __construct(SourceRepositoryInterface $sourceParser)
     {

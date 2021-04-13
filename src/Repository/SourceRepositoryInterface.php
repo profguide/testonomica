@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Test;
+namespace App\Repository;
 
 use App\Entity\Test;
+use App\Test\Question;
 
 /**
  * @author: adavydov

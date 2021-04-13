@@ -61,6 +61,7 @@ class TestCrudController extends AbstractCrudController
             BooleanField::new('active', 'Активность'),
             BooleanField::new('activeEn', 'Активность (en)'),
             BooleanField::new('inList', 'В списках'),
+            BooleanField::new('isXmlSource', 'XML источник'),
             Field::new('xmlFilename', 'Xml name')->onlyOnForms(),
             Field::new('calculatorName', 'Calculator prefix name')->onlyOnForms(),
             FormField::addPanel('Вопросы', 'fa fa-question-circle')

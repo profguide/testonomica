@@ -74,10 +74,15 @@ class AnswersUtilTest extends KernelTestCase
      */
     public function testSumValuesMap()
     {
+        $questions = self::buildQuestions([
+            1 => ['yes'],
+            2 => ['yes'],
+            3 => ['no'],
+        ]);
         $this->assertEquals([
             'yes' => 2,
             'no' => 1
-        ], AnswersUtil::sumValuesMap(new AnswersHolder(self::buildAnswers([
+        ], AnswersUtil::sumValuesMap(new QuestionsHolder($questions), new AnswersHolder(self::buildAnswers([
             1 => 'yes',
             2 => 'yes',
             3 => 'no',
@@ -89,10 +94,15 @@ class AnswersUtilTest extends KernelTestCase
      */
     public function testPercentage()
     {
+        $questions = self::buildQuestions([
+            1 => ['yes'],
+            2 => ['yes'],
+            3 => ['no']
+        ]);
         $this->assertEquals([
             'yes' => 100,
             'no' => 50
-        ], AnswersUtil::percentage(new AnswersHolder(self::buildAnswers([
+        ], AnswersUtil::percentage(new QuestionsHolder($questions), new AnswersHolder(self::buildAnswers([
             1 => 'yes',
             2 => 'yes',
             3 => 'no',
@@ -127,7 +137,13 @@ class AnswersUtilTest extends KernelTestCase
                 'value' => 1,
                 'percentage' => 50
             ]
-        ], AnswersUtil::percentageWithValues(new AnswersHolder(self::buildAnswers([
+        ], AnswersUtil::percentageWithValues(new QuestionsHolder(self::buildQuestions([
+            // no matter what values are here, but their count and ids must be the same
+            1 => ['yes'],
+            2 => ['yes'],
+            3 => ['no']
+        ])
+        ), new AnswersHolder(self::buildAnswers([
             1 => 'yes',
             2 => 'yes',
             3 => 'no',

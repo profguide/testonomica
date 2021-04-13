@@ -19,10 +19,9 @@ use Symfony\Component\Routing\Annotation\Route;
  * @author: adavydov
  * @since: 23.10.2020
  */
-class TestApiStatefulController extends TestApiAbstract
+class TestApiStatefulControllerController extends TestApiAbstractController
 {
-    /**@var AnswerService */
-    private $answerService;
+    private AnswerService $answerService;
 
     public function __construct(
         TestService $testService,

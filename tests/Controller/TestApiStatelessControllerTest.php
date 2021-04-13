@@ -60,7 +60,7 @@ class TestApiStatelessControllerTest extends WebTestCase
         $this->resultService = self::$container->get(ResultService::class);
         $this->serializer = self::$container->get(AnswersSerializer::class);
         $this->test = $this->testRepository->findOneBySlug(TestFixture::TEST_1_SLUG);
-        $this->complexTest = $this->testRepository->findOneBySlug(TestFixture::TEST_5_SLUG);
+        $this->complexTest = $this->testRepository->findOneBySlug(TestFixture::TEST_6_SLUG);
     }
 
     /**
