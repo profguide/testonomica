@@ -56,7 +56,7 @@ class SmartSourceRepository implements SourceRepositoryInterface
         return $this->getRepository($test)->getTotalCount($test);
     }
 
-    function getQuestionNumber(Test $test, Question $question)
+    function getQuestionNumber(Test $test,  $question)
     {
         return $this->getRepository($test)->getQuestionNumber($test, $question);
     }

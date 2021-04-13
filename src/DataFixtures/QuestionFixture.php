@@ -11,9 +11,6 @@ use Doctrine\Persistence\ObjectManager;
 
 class QuestionFixture extends Fixture implements DependentFixtureInterface
 {
-    const QUESTION_1 = 'question_1';
-    const QUESTION_2 = 'question_2';
-
     public function load(ObjectManager $manager)
     {
         /**@var Test $test */
@@ -25,7 +22,6 @@ class QuestionFixture extends Fixture implements DependentFixtureInterface
         $question->addItem(QuestionItem::createMinimal(0, "Земля", false));
         $question->addItem(QuestionItem::createMinimal(1, "Марс", true));
         $manager->persist($question);
-        $this->addReference(self::QUESTION_1, $question);
 
         $question = new Question();
         $question->setTest($test);
@@ -33,12 +29,18 @@ class QuestionFixture extends Fixture implements DependentFixtureInterface
         $question->addItem(QuestionItem::createMinimal(1, "Солнце", true));
         $question->addItem(QuestionItem::createMinimal(0, "Луна", false));
         $manager->persist($question);
-        $this->addReference(self::QUESTION_2, $question);
+
+        $question = new Question();
+        $question->setTest($test);
+        $question->setName("Сколько планет в солнечной системе?");
+        $question->addItem(QuestionItem::createMinimal(1, "8", true));
+        $question->addItem(QuestionItem::createMinimal(0, "9", false));
+        $manager->persist($question);
 
         $manager->flush();
     }
 
-    public function getDependencies()
+    public function getDependencies(): array
     {
         return [
             TestFixture::class

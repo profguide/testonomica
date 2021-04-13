@@ -2,8 +2,8 @@
     symfony server:start
 
 # Тест
-    php ./bin/phpunit
-Перед этим нужно применить миграции и фикустуры (см. ниж)
+    make tests
+    Скрипт очищает базу, выполняет миграции, создаёт фикстуры
 
 ## Применение фикстур
     symfony console doctrine:fixtures:load

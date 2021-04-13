@@ -70,7 +70,7 @@ class XmlSourceRepository implements SourceRepositoryInterface
         return QuestionXmlMapper::map($lastNode);
     }
 
-    public function getQuestionNumber(Test $test, Question $question)
+    public function getQuestionNumber(Test $test, $question)
     {
         return $this->getItemPosition($this->getItems($test), $question->getId()) + 1;
     }

@@ -23,7 +23,7 @@ interface SourceRepositoryInterface
 
     function getTotalCount(Test $test);
 
-    function getQuestionNumber(Test $test, Question $question);
+    function getQuestionNumber(Test $test, $question);
 
-    function getLastQuestion(Test $test): Question;
+    function getLastQuestion(Test $test);
 }
