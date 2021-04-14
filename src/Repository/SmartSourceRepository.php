@@ -2,8 +2,8 @@
 
 namespace App\Repository;
 
+use App\Entity\Question;
 use App\Entity\Test;
-use App\Test\Question;
 use App\Test\TestSourceRepositoryFactory;
 
 /**
@@ -26,24 +26,29 @@ class SmartSourceRepository implements SourceRepositoryInterface
         $this->repositoryFactory = $repositoryFactory;
     }
 
-    function getQuestion(Test $test, $id)
+    function getQuestion(Test $test, $id): Question
     {
         return $this->getRepository($test)->getQuestion($test, $id);
     }
 
-    function getNextQuestion(Test $test, $itemId)
+    function getNextQuestion(Test $test, $id): ?Question
     {
-        return $this->getRepository($test)->getNextQuestion($test, $itemId);
+        return $this->getRepository($test)->getNextQuestion($test, $id);
     }
 
-    function getPrevQuestion(Test $test, $itemId)
+    function getPrevQuestion(Test $test, $id): ?Question
     {
-        return $this->getRepository($test)->getPrevQuestion($test, $itemId);
+        return $this->getRepository($test)->getPrevQuestion($test, $id);
     }
 
-    function getFirstQuestion(Test $test)
+    function getFirstQuestion(Test $test): Question
     {
         return $this->getRepository($test)->getFirstQuestion($test);
+    }
+
+    function getLastQuestion(Test $test): Question
+    {
+        return $this->getRepository($test)->getLastQuestion($test);
     }
 
     function getAllQuestions(Test $test): array
@@ -51,19 +56,14 @@ class SmartSourceRepository implements SourceRepositoryInterface
         return $this->getRepository($test)->getAllQuestions($test);
     }
 
-    function getTotalCount(Test $test)
+    function getTotalCount(Test $test): int
     {
         return $this->getRepository($test)->getTotalCount($test);
     }
 
-    function getQuestionNumber(Test $test,  $question)
+    function getQuestionNumber(Test $test, $id): int
     {
-        return $this->getRepository($test)->getQuestionNumber($test, $question);
-    }
-
-    function getLastQuestion(Test $test): Question
-    {
-        return $this->getRepository($test)->getLastQuestion($test);
+        return $this->getRepository($test)->getQuestionNumber($test, $id);
     }
 
     private function getRepository(Test $test): SourceRepositoryInterface

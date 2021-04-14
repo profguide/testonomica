@@ -6,9 +6,10 @@ use App\DataFixtures\TestFixture;
 use App\Entity\Test;
 use App\Repository\DBSourceRepository;
 use App\Repository\TestRepository;
+use App\Repository\XmlSourceRepository;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
-class DBSourceRepositoryTest extends KernelTestCase
+class XmlSourceRepositoryTest extends KernelTestCase
 {
     /**@var DBSourceRepository */
     private $dbSourceRepository;
@@ -20,8 +21,8 @@ class DBSourceRepositoryTest extends KernelTestCase
     {
         self::bootKernel();
         $testRepository = self::$container->get(TestRepository::class);
-        $this->test = $testRepository->findOneBySlug(TestFixture::TEST_2_SLUG);
-        $this->dbSourceRepository = self::$container->get(DBSourceRepository::class);
+        $this->test = $testRepository->findOneBySlug(TestFixture::TEST_1_SLUG);
+        $this->dbSourceRepository = self::$container->get(XmlSourceRepository::class);
     }
 
     public function testFindQuestion()
@@ -55,23 +56,23 @@ class DBSourceRepositoryTest extends KernelTestCase
     {
         $question = $this->dbSourceRepository->getLastQuestion($this->test);
         $this->assertNotNull($question);
-        $this->assertEquals(3, $question->getId());
+        $this->assertEquals(12, $question->getId());
     }
 
     public function testQuestionNumber()
     {
         $this->assertEquals(1, $this->dbSourceRepository->getQuestionNumber($this->test, 1));
-        $this->assertEquals(3, $this->dbSourceRepository->getQuestionNumber($this->test, 3));
+        $this->assertEquals(12, $this->dbSourceRepository->getQuestionNumber($this->test, 12));
     }
 
     public function testAllQuestions()
     {
         $questions = $this->dbSourceRepository->getAllQuestions($this->test);
-        $this->assertCount(3, $questions);
+        $this->assertCount(12, $questions);
     }
 
     public function testTotalCount()
     {
-        $this->assertEquals(3, $this->dbSourceRepository->getTotalCount($this->test));
+        $this->assertEquals(12, $this->dbSourceRepository->getTotalCount($this->test));
     }
 }

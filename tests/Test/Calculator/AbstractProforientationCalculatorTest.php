@@ -12,7 +12,6 @@ use App\Test\AnswersHolder;
 use App\Test\Calculator\AbstractProforientationCalculator;
 use App\Test\CrawlerUtil;
 use App\Test\Proforientation\Profession;
-use App\Test\Question;
 use App\Test\QuestionsHolder;
 use App\Test\QuestionXmlMapper;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
@@ -23,7 +22,7 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
     protected $calculatorName;
 
     /**
-     * Натуральный тест - как его бы видет тестируемый - передача ответов
+     * Натуральный тест - как его бы видит тестируемый - передача ответов
      * Задействованы все механизмы
      */
     public function testCalculateTypesGroups()

@@ -13,14 +13,14 @@
         /*}*/
     </style>
     <script>
-        window.question = new window.TestContext({{ count }}, {{ progress }}, {{ question.showAnswer ? 'true' : 'false' }}, {{ question.right ? ("'#{question.right}'"|raw) : 'null' }}, {{ question.wrong ? ("'#{question.wrong}'"|raw) : 'null' }});
+        window.question = new window.TestContext({{ count }}, {{ progress }}, {{ question.showAnswer ? 'true' : 'false' }}, {{ question.correct ? ("'#{question.correct}'"|raw) : 'null' }}, {{ question.wrong ? ("'#{question.wrong}'"|raw) : 'null' }});
     </script>
     <form method="post" class="test__question-form">
         <input type="hidden" name="test" value="{{ test.id }}"/>
         <input type="hidden" class="question" name="question" value="{{ question.id }}"/>
         <input type="hidden" name="timer" value="">
         <article class="test__question-content">
-            <div class="test__quiz test__quiz_{{ question.method|lower }}">
+            <div class="test__quiz test__quiz_{{ question.type|lower }}">
                 <div class="container">
                     <div class="test__quiz-content">
                         {% if question.img %}
@@ -32,8 +32,8 @@
                             <div class="test__text">{{ question.text|raw }}</div>
                         {% endif %}
                         <div class="test__options_holder">
-                            {% if question.method == 'OPTION' %}
-                                {% for option in question.options %}
+                            {% if question.type == 'option' %}
+                                {% for option in question.items %}
                                     <div class="test__option">
                                         <input type="radio"
                                                name="answer"
@@ -45,19 +45,19 @@
                                         <div class="test__option-reveal"></div>
                                     </div>
                                 {% endfor %}
-                            {% elseif question.method == 'TEXT' %}
-                                {% for option in question.fields %}
+                            {% elseif question.type == 'text' %}
+                                {% for option in question.items %}
                                     <div class="test__option">
                                         <input type="text"
                                                name="answer"
                                                id="answer-{{ loop.index }}"
                                                data-method="TEXT"
-                                               placeholder="{% if option.placeholder %}{{ option.placeholder }}{% endif %}"
+                                               placeholder="{% if option.text %}{{ option.text }}{% endif %}"
                                                class="form-control">
                                     </div>
                                 {% endfor %}
-                            {% elseif question.method == 'CHECKBOX' %}
-                                {% for option in question.options %}
+                            {% elseif question.type == 'checkbox' %}
+                                {% for option in question.items %}
                                     <div class="test__option">
                                         <input type="checkbox"
                                                name="answer"
@@ -69,8 +69,8 @@
                                         <label for="answer-{{ loop.index }}">{{ option.text|raw }}</label>
                                     </div>
                                 {% endfor %}
-                            {% elseif question.method == 'RATING' %}
-                                {% for option in question.options %}
+                            {% elseif question.type == 'rating' %}
+                                {% for option in question.items %}
                                     <div class="test__option">
                                         <input type="radio"
                                                name="answer"
@@ -86,7 +86,7 @@
                         <div class="test__btn-row" id="test-question-btn-row">
                             <button class="test__btn-direct btn btn-light {% if question.enabledBack and progress > 1 %}test__btn-direct_forced{% endif %}"
                                     id="test-question-back-btn"><span class="material-icons">arrow_back</span></button>
-                            <button class="test__btn-direct btn btn-light {% if question.enabledForward or question.method == 'TEXT' %}test__btn-direct_forced{% endif %}"
+                            <button class="test__btn-direct btn btn-light {% if question.enabledForward or question.type == 'text' %}test__btn-direct_forced{% endif %}"
                                     id="test-question-next-btn"><span class="material-icons">arrow_forward</span></button>
                         </div>
                     </div>

@@ -8,17 +8,21 @@ namespace App\Tests\Util;
 
 
 use App\Entity\Answer;
+use App\Entity\Question;
+use App\Entity\QuestionItem;
 use App\Test\AnswersHolder;
-use App\Test\Field;
-use App\Test\Option;
-use App\Test\Question;
 use App\Test\QuestionsHolder;
 use App\Util\AnswersUtil;
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+
+//use App\Test\Field;
+//use App\Test\Option;
+//use App\Test\Question;
 
 class AnswersUtilTest extends KernelTestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         self::bootKernel();
     }
@@ -26,7 +30,7 @@ class AnswersUtilTest extends KernelTestCase
     /**
      * Сумма значений с методом OPTION.
      * При этом OPTION может иметь "правильные ответы", а может не иметь.
-     * Если вопрос предполагает "правильный ответ", и ответ правильный, то это должно прибавить единицу.
+     * Если вопрос предполагает "правильный ответ", и ответ действительно правильный, то это должно прибавить единицу.
      * А если вопрос не предполагает "правильного ответа", то прибавляется значение ответа.
      */
     public function testSumOptions()
@@ -55,9 +59,9 @@ class AnswersUtilTest extends KernelTestCase
     {
         $question = new Question();
         $question->setId(1);
-        $question->setMethod(Question::METHOD_TEXT);
-        $question->addField(new Field('string', null, '16'));
-        $question->addField(new Field('string', null, '20'));
+        $question->setType(Question::TYPE_TEXT);
+        $question->addItem(QuestionItem::createMinimal('16', 'Введите число'));
+        $question->addItem(QuestionItem::createMinimal('20', 'Введите число'));
         $questions = [$question];
 
         $this->assertEquals(0, AnswersUtil::sum(new QuestionsHolder($questions), new AnswersHolder(self::buildAnswers([
@@ -183,16 +187,16 @@ class AnswersUtilTest extends KernelTestCase
     {
         $q = new Question();
         $q->setId($id);
-        $q->setMethod(Question::METHOD_OPTION);
+        $q->setType(Question::TYPE_OPTION);
         $o = [];
         foreach ($options as $k => $v) {
             if ($v === 'correct') {
-                $o[] = new Option($k, true, null);
+                $o[] = QuestionItem::createMinimal($k, "Вариант", true);
             } else {
-                $o[] = new Option($v, false, null);
+                $o[] = QuestionItem::createMinimal($v, "Вариант", false);
             }
         }
-        $q->setOptions($o);
+        $q->setItems(new ArrayCollection($o));
         return $q;
     }
 

@@ -2,8 +2,8 @@
 
 namespace App\Repository;
 
+use App\Entity\Question;
 use App\Entity\Test;
-use App\Test\Question;
 
 /**
  * @author: adavydov
@@ -11,19 +11,19 @@ use App\Test\Question;
  */
 interface SourceRepositoryInterface
 {
-    function getQuestion(Test $test, $id);
+    function getQuestion(Test $test, $id): Question;
 
-    function getNextQuestion(Test $test, $itemId);
+    function getNextQuestion(Test $test, $id): ?Question;
 
-    function getPrevQuestion(Test $test, $itemId);
+    function getPrevQuestion(Test $test, $id): ?Question;
 
-    function getFirstQuestion(Test $test);
+    function getFirstQuestion(Test $test): Question;
+
+    function getLastQuestion(Test $test): Question;
 
     function getAllQuestions(Test $test): array;
 
-    function getTotalCount(Test $test);
+    function getTotalCount(Test $test): int;
 
-    function getQuestionNumber(Test $test, $question);
-
-    function getLastQuestion(Test $test);
+    function getQuestionNumber(Test $test, $id): int;
 }

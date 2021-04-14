@@ -83,7 +83,7 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
      * @param QuestionsHolder $questionsHolder
      * @return float
      */
-    private function calculateTypeGroup(string $groupName, AnswersHolder $answersHolder, QuestionsHolder $questionsHolder)
+    private function calculateTypeGroup(string $groupName, AnswersHolder $answersHolder, QuestionsHolder $questionsHolder): float
     {
         $questions = $questionsHolder->group($groupName);
         $count = count($questions);
@@ -276,7 +276,7 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
     // а когда надо парсить его и доставать нужные части. Вот для описания пригодилось бы. А парсить надо через хелпер
     // ProforientationProfessionMapper::mapDescription($this->crawler);
     // и вообще можно kind сделать объектом ProfessionDescriptionKind
-    private function parseProfessionDescription(Crawler $crawler)
+    private function parseProfessionDescription(Crawler $crawler): array
     {
         $description = [];
         $nodeDescription = $crawler->filterXPath('descendant-or-self::description');

@@ -74,7 +74,7 @@ abstract class TestApiAbstractController extends AbstractController
             throw new BadRequestHttpException("Unknown operation");
         }
         $count = $this->sourceService->getTotalCount($test);
-        $progress = $this->sourceService->getQuestionNumber($test, $question);
+        $progress = $this->sourceService->getQuestionNumber($test, $question->getId());
         return $this->render('tests/question.html.twig', [
             'operation' => $operationName,
             'test' => $test,

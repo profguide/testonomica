@@ -6,6 +6,7 @@
 
 namespace App\Test;
 
+use App\Entity\Question;
 
 class QuestionsHolder
 {
@@ -26,7 +27,7 @@ class QuestionsHolder
         $groups = [];
         /**@var Question $question */
         foreach ($this->questions as $question) {
-            $groups[$question->getGroup()][] = $question;
+            $groups[$question->getVariety()][] = $question;
         }
         $this->byGroups = $groups;
         return $this->byGroups;

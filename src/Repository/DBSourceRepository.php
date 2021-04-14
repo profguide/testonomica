@@ -14,7 +14,7 @@ class DBSourceRepository implements SourceRepositoryInterface
         $this->questionRepository = $questionRepository;
     }
 
-    public function getQuestion(Test $test, $id): ?Question
+    public function getQuestion(Test $test, $id): Question
     {
         return $this->questionRepository->findOneById($id);
     }
@@ -39,9 +39,9 @@ class DBSourceRepository implements SourceRepositoryInterface
         return $this->questionRepository->findLastByTestId($test->getId());
     }
 
-    public function getQuestionNumber(Test $test, $question): int
+    public function getQuestionNumber(Test $test, $id): int
     {
-        return $this->questionRepository->getPosition($question, $test->getId());
+        return $this->questionRepository->getPosition($id, $test->getId());
     }
 
     public function getAllQuestions(Test $test): array

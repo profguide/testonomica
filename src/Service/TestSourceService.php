@@ -2,10 +2,9 @@
 
 namespace App\Service;
 
-
+use App\Entity\Question;
 use App\Entity\Test;
 use App\Repository\SourceRepositoryInterface;
-use App\Test\Question;
 
 /**
  * @author: adavydov
@@ -45,13 +44,13 @@ class TestSourceService
         return $this->repository->getLastQuestion($test);
     }
 
-    public function getTotalCount(Test $test)
+    public function getTotalCount(Test $test): int
     {
         return $this->repository->getTotalCount($test);
     }
 
-    public function getQuestionNumber(Test $test, Question $question)
+    public function getQuestionNumber(Test $test, $id): int
     {
-        return $this->repository->getQuestionNumber($test, $question);
+        return $this->repository->getQuestionNumber($test, $id);
     }
 }

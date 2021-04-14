@@ -9,7 +9,7 @@ namespace App\Util;
 use App\Entity\Answer;
 use App\Test\AnswersHolder;
 use App\Test\Option;
-use App\Test\Question;
+use App\Entity\Question;
 use App\Test\QuestionsHolder;
 
 class AnswersUtil
@@ -24,7 +24,6 @@ class AnswersUtil
     public static function sum(QuestionsHolder $questionsHolder, AnswersHolder $answersHolder): int
     {
         $sum = 0;
-        /**@var Question $question */
         foreach ($questionsHolder->getAll() as $question) {
             // if the question assumes correct answer and the answer is correct, it will add "1"
             if ($question->hasCorrectValues()) {

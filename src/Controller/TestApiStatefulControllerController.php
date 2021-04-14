@@ -3,12 +3,12 @@
 namespace App\Controller;
 
 use App\Entity\Answer;
+use App\Entity\Question;
 use App\Entity\Test;
 use App\Service\AnswerService;
 use App\Service\ResultService;
 use App\Service\TestService;
 use App\Service\TestSourceService;
-use App\Test\Question;
 use App\Test\TestStatus;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

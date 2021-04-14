@@ -40,7 +40,7 @@ class Question
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\QuestionItem", mappedBy="question", cascade={"all"}, orphanRemoval=true)
      */
-    private $items;
+    private Collection $items;
 
     /**
      * @ORM\Column(type="string")
@@ -223,7 +223,7 @@ class Question
     /**
      * @return string
      */
-    public function getText(): string
+    public function getText(): ?string
     {
         return $this->text;
     }
@@ -239,7 +239,7 @@ class Question
     /**
      * @return string
      */
-    public function getTextEn(): string
+    public function getTextEn(): ?string
     {
         return $this->textEn;
     }
@@ -335,7 +335,7 @@ class Question
     /**
      * @return string
      */
-    public function getWrong(): string
+    public function getWrong(): ?string
     {
         return $this->wrong;
     }
@@ -351,7 +351,7 @@ class Question
     /**
      * @return string
      */
-    public function getWrongEn(): string
+    public function getWrongEn(): ?string
     {
         return $this->wrongEn;
     }
@@ -364,7 +364,7 @@ class Question
         $this->wrongEn = $wrongEn;
     }
 
-    public function getCorrect(): string
+    public function getCorrect(): ?string
     {
         return $this->correct;
     }
@@ -374,7 +374,7 @@ class Question
         $this->correct = $correct;
     }
 
-    public function getCorrectEn(): string
+    public function getCorrectEn(): ?string
     {
         return $this->correctEn;
     }
@@ -483,5 +483,40 @@ class Question
     public function removeItem(QuestionItem $item)
     {
         $this->items->removeElement($item);
+    }
+
+    public function hasCorrectValues(): bool
+    {
+        if ($this->type == self::TYPE_TEXT) {
+            return true;
+        } elseif ($this->type == self::TYPE_OPTION || $this->type == self::TYPE_CHECKBOX) {
+            // todo think of how to determine if question has correct values so as not to overload DB
+            //  may be add field: hasCorrectValue? and make it auto counting on the saving stage?
+            /**@var QuestionItem $item */
+            foreach ($this->getItems() as $item) {
+                if ($item->isCorrect()) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public function getCorrectValues(): array
+    {
+        $values = [];
+        /**@var QuestionItem $item */
+        foreach ($this->getItems() as $item) {
+            if ($this->type == self::TYPE_TEXT) {
+                $values[] = $item->getValue();
+            } elseif ($this->type == self::TYPE_OPTION || $this->type == self::TYPE_CHECKBOX) {
+                if ($item->isCorrect()) {
+                    $values[] = $item->getValue();
+                }
+            } else {
+                throw new \RuntimeException('Not supported for other types.');
+            }
+        }
+        return $values;
     }
 }

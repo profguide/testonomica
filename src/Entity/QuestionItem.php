@@ -42,6 +42,10 @@ class QuestionItem
      */
     private $correct;
 
+    // todo correctValue
+    // todo getCorrect(): string
+    // todo setCorrect(string $value): void
+
     /**
      * @ORM\Column(type="text")
      * @var string
