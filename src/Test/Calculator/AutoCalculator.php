@@ -11,6 +11,17 @@ class AutoCalculator extends AbstractCalculator
     {
         /*
          * todo Конструктор результатов для чайников
+         * Структура:
+         *  Analysis
+         *  - test
+         *  - title
+         *  - scaleVariableName
+         *  - scalePercentVariableName
+         *  - scaleVariableMax
+         *  - AnalysisBlock:
+         *      - conditions:
+         *          - AnalysisCondition
+         *      - text
          *
          * Нажать кнопку "Добавить вариант результата".
          *  Создастся блок с элементами:

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Result;
 use App\Entity\Test;
+use App\Service\AnalysisService;
 use App\Service\AnswerService;
 use App\Service\CalculatorService;
 use App\Service\CategoryService;
@@ -37,18 +38,22 @@ class TestController extends AbstractController
 
     private CalculatorService $calculatorService;
 
+    private AnalysisService $analysisService;
+
     public function __construct(
         TestService $testService,
         CategoryService $categoryService,
         AnswerService $answerService,
         ResultService $resultService,
-        CalculatorService $calculatorService)
+        CalculatorService $calculatorService,
+        AnalysisService $resultBlockService)
     {
         $this->testService = $testService;
         $this->categoryService = $categoryService;
         $this->answerService = $answerService;
         $this->resultService = $resultService;
         $this->calculatorService = $calculatorService;
+        $this->analysisService = $resultBlockService;
     }
 
     /**
@@ -175,9 +180,12 @@ class TestController extends AbstractController
             'status' => TestStatus::finished()
         ], $this->calculatorService->calculate($result));
 
+        $resultBlocksOutput = $this->analysisService->render($test, $data);
+
         // templated from the field
         if ($test->getResultView() != null) {
             $template = "{% extends('tests/result.html.twig') %}{% block result %}<div class=\"container\">"
+                . $resultBlocksOutput
                 . $test->getResultView()
                 . "</div>{% endblock %}";
             $template = $this->get('twig')->createTemplate($template);
