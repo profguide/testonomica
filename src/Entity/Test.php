@@ -15,6 +15,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Test
 {
+    const CALCULATOR_AUTO = 'auto';
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -119,9 +121,19 @@ class Test
 
     /**
      * @ORM\Column(type="string", length=20, nullable=true)
-     * @var string|null
+     */
+    private ?string $calculator = self::CALCULATOR_AUTO;
+
+    /**
+     * Custom calculator name
+     * @ORM\Column(type="string", length=20, nullable=true)
      */
     private ?string $calculatorName = null;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private ?string $resultView = null;
 
     public static function initDefault(): Test
     {
@@ -316,7 +328,7 @@ class Test
     public function setActive(int $active): void
     {
         if (!in_array($active, [0, 1])) {
-            throw new \LogicException("Поле active может быть только в значении 0 и 1");
+            throw new \InvalidArgumentException("Поле active может быть только в значении 0 и 1");
         }
         $this->active = $active;
     }
@@ -353,17 +365,24 @@ class Test
         $this->xmlFilename = $xmlFilename;
     }
 
-    /**
-     * @return null|string
-     */
+    public function getCalculator(): ?string
+    {
+        return $this->calculator;
+    }
+
+    public function setCalculator(?string $calculator): void
+    {
+        if (!in_array($calculator, [self::CALCULATOR_AUTO])) {
+            throw new \InvalidArgumentException("Invalid calculator");
+        }
+        $this->calculator = $calculator;
+    }
+
     public function getCalculatorName(): ?string
     {
         return $this->calculatorName;
     }
 
-    /**
-     * @param null|string $calculatorName
-     */
     public function setCalculatorName(?string $calculatorName): void
     {
         $this->calculatorName = $calculatorName;
@@ -411,6 +430,16 @@ class Test
     public function setIsXmlSource(bool $isXmlSource): void
     {
         $this->isXmlSource = $isXmlSource;
+    }
+
+    public function getResultView(): ?string
+    {
+        return $this->resultView;
+    }
+
+    public function setResultView(?string $resultView): void
+    {
+        $this->resultView = $resultView;
     }
 
     public function setQuestions(Collection $questions): void

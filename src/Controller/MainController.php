@@ -15,11 +15,6 @@ class MainController extends AbstractController
      */
     public function index(UserPasswordEncoderInterface $passwordEncoder): Response
     {
-//        dd($passwordEncoder->encodePassword(new User(), 'ctQu7wYu'));
-//        $resultTemplate = 'Hello {{ name }}';
-//        $template = $this->get('twig')->createTemplate($resultTemplate);
-//        $calculatorResult = ['name' => 'Малышок'];
-//        return new Response($template->render($calculatorResult));
         return $this->render('main/index.html.twig', []);
     }
 }

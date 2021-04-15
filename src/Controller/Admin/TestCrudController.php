@@ -9,10 +9,13 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\CodeEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\Field;
 use EasyCorp\Bundle\EasyAdminBundle\Field\FormField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
@@ -55,15 +58,27 @@ class TestCrudController extends AbstractCrudController
             AssociationField::new('catalog'),
             IntegerField::new('duration', 'Продолжительность в минутах')->hideOnIndex(),
             TextEditorField::new('annotation', 'Вступление')->hideOnIndex(),
-            TextEditorField::new('annotationEn', 'Вступление (en)')->hideOnIndex(),
+//            TextEditorField::new('annotationEn', 'Вступление (en)')->hideOnIndex(),
             TextEditorField::new('description', 'Описание на странице')->hideOnIndex(),
-            TextEditorField::new('descriptionEn', 'Описание на странице (en)')->hideOnIndex(),
+//            TextEditorField::new('descriptionEn', 'Описание на странице (en)')->hideOnIndex(),
             BooleanField::new('active', 'Активность'),
-            BooleanField::new('activeEn', 'Активность (en)'),
+//            BooleanField::new('activeEn', 'Активность (en)'),
             BooleanField::new('inList', 'В списках'),
             BooleanField::new('isXmlSource', 'XML источник'),
-            Field::new('xmlFilename', 'Xml name')->onlyOnForms(),
-            Field::new('calculatorName', 'Calculator prefix name')->onlyOnForms(),
+            Field::new('xmlFilename', 'XML файл')->onlyOnForms(),
+            ChoiceField::new('calculator', 'Калькулятор')->setChoices([
+                'Автоматический' => Test::CALCULATOR_AUTO,
+            ])->onlyOnForms(),
+            Field::new('calculatorName', 'Альтернативный калькулятор (префикс)')->onlyOnForms(),
+
+            FormField::addPanel('HTML результата', 'fa fa-code'),
+            CodeEditorField::new('resultView')
+//                ->setLanguage('twig')
+                ->setLabel(false)
+                ->addCssClass('full-width')
+                ->setFormTypeOptions([
+                    'label' => false,
+                ]),
             FormField::addPanel('Вопросы', 'fa fa-question-circle')
                 ->addCssClass('test-questions-form'), // @see admin.css
             CollectionField::new('questions', 'Вопросы')

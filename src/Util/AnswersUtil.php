@@ -7,9 +7,8 @@
 namespace App\Util;
 
 use App\Entity\Answer;
-use App\Test\AnswersHolder;
-use App\Test\Option;
 use App\Entity\Question;
+use App\Test\AnswersHolder;
 use App\Test\QuestionsHolder;
 
 class AnswersUtil
@@ -17,6 +16,7 @@ class AnswersUtil
     /**
      * Counts sum of answers values.
      * Correct answer counts as 1, otherwise value as it is
+     *
      * @param QuestionsHolder $questionsHolder
      * @param AnswersHolder $answersHolder
      * @return int
@@ -33,6 +33,21 @@ class AnswersUtil
             } else {
                 $sum += $answersHolder->getValuesSum($question->getId());
             }
+        }
+        return $sum;
+    }
+
+    /**
+     * Counts the sum of all possible values.
+     *
+     * @param QuestionsHolder $questionsHolder
+     * @return int
+     */
+    public static function max(QuestionsHolder $questionsHolder): int
+    {
+        $sum = 0;
+        foreach ($questionsHolder->getAll() as $question) {
+            $sum += $question->maxValue();
         }
         return $sum;
     }
@@ -166,6 +181,7 @@ class AnswersUtil
 
     /**
      * Checks if all answer's values match question's expected ones
+     *
      * @param Question $question
      * @param AnswersHolder $answersHolder
      * @return bool

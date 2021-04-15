@@ -519,4 +519,31 @@ class Question
         }
         return $values;
     }
+
+    /**
+     * Counts maximum value of items.
+     * If there is at least one "correct", their count will be returned.
+     *
+     * @return int
+     */
+    public function maxValue(): int
+    {
+        $valuesSum = 0;
+        $correctSum = 0;
+        if ($this->type !== self::TYPE_TEXT) {
+            /**@var QuestionItem $item */
+            foreach ($this->getItems() as $item) {
+                $correctSum += $item->isCorrect() ? 1 : 0;
+                $value = (int)$item->getValue();
+                if ($valuesSum < $value) {
+                    $valuesSum = $value;
+                }
+            }
+        }
+        if ($correctSum > 0) {
+            return $correctSum;
+        } else {
+            return $valuesSum;
+        }
+    }
 }

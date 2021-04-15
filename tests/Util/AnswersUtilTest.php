@@ -37,13 +37,13 @@ class AnswersUtilTest extends KernelTestCase
     {
         $questions = self::buildQuestions([
             1 => [0 => 'correct', 1, 2], // with correct
-            2 => [0, 1 => 'correct', 2], // with correct
+            2 => [0, 1 => 'correct', 2 => 'correct'], // with 2 correct
             3 => [0, 1, 2 => 'correct'], // with correct
             4 => [0, 1, 2] // with value
         ]);
         $answers = self::buildAnswers([
-            1 => 0, // right + 1
-            2 => 1, // right + 1
+            1 => 0, // 1 option correct
+            2 => [1, 2], // 2 options correct
             3 => 0, // wrong + 0
             4 => 2 // value + 2
         ]);

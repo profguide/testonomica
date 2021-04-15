@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20210412110413 extends AbstractMigration
+final class Version20210414144634 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -34,7 +34,7 @@ final class Version20210412110413 extends AbstractMigration
         $this->addSql('DROP INDEX IDX_9D7026AAA53A8AA8D93D649 ON provider_payment');
         $this->addSql('CREATE INDEX IDX_9D7026AAA53A8AA8D93D649 ON provider_payment (provider_id, user)');
         $this->addSql('DROP INDEX IDX_D87F7E0C989D9B62 ON test');
-        $this->addSql('ALTER TABLE test ADD is_xml_source TINYINT(1) NOT NULL');
+        $this->addSql('ALTER TABLE test ADD is_xml_source TINYINT(1) NOT NULL, ADD calculator VARCHAR(20) DEFAULT NULL, ADD result_view LONGTEXT DEFAULT NULL');
         $this->addSql('CREATE INDEX IDX_D87F7E0C989D9B62 ON test (slug)');
     }
 
@@ -54,7 +54,7 @@ final class Version20210412110413 extends AbstractMigration
         $this->addSql('DROP INDEX IDX_9D7026AAA53A8AA8D93D649 ON provider_payment');
         $this->addSql('CREATE INDEX IDX_9D7026AAA53A8AA8D93D649 ON provider_payment (provider_id, user(191))');
         $this->addSql('DROP INDEX IDX_D87F7E0C989D9B62 ON test');
-        $this->addSql('ALTER TABLE test DROP is_xml_source');
+        $this->addSql('ALTER TABLE test DROP is_xml_source, DROP calculator, DROP result_view');
         $this->addSql('CREATE INDEX IDX_D87F7E0C989D9B62 ON test (slug(191))');
     }
 }

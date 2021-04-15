@@ -33,52 +33,52 @@
                         {% endif %}
                         <div class="test__options_holder">
                             {% if question.type == 'option' %}
-                                {% for option in question.items %}
+                                {% for item in question.items %}
                                     <div class="test__option">
                                         <input type="radio"
                                                name="answer"
-                                               value="{{ option.value }}"
+                                               value="{{ item.value }}"
                                                id="answer-{{ loop.index }}"
                                                class="radio"
-                                               data-is-correct="{{ option.correct }}">
-                                        <label for="answer-{{ loop.index }}">{{ option.text|raw }}</label>
+                                               data-is-correct="{{ item.correct }}">
+                                        <label for="answer-{{ loop.index }}">{{ item.text|raw }}</label>
                                         <div class="test__option-reveal"></div>
                                     </div>
                                 {% endfor %}
                             {% elseif question.type == 'text' %}
-                                {% for option in question.items %}
+                                {% for item in question.items %}
                                     <div class="test__option">
                                         <input type="text"
                                                name="answer"
                                                id="answer-{{ loop.index }}"
                                                data-method="TEXT"
-                                               placeholder="{% if option.text %}{{ option.text }}{% endif %}"
+                                               placeholder="{% if item.text %}{{ item.text }}{% endif %}"
                                                class="form-control">
                                     </div>
                                 {% endfor %}
                             {% elseif question.type == 'checkbox' %}
-                                {% for option in question.items %}
+                                {% for item in question.items %}
                                     <div class="test__option">
                                         <input type="checkbox"
                                                name="answer"
-                                               value="{{ option.value }}"
+                                               value="{{ item.value }}"
                                                id="answer-{{ loop.index }}"
                                                data-method="CHECKBOX"
                                                data-limit="{{ question.count }}"
                                                class="checkbox">
-                                        <label for="answer-{{ loop.index }}">{{ option.text|raw }}</label>
+                                        <label for="answer-{{ loop.index }}">{{ item.text|raw }}</label>
                                     </div>
                                 {% endfor %}
                             {% elseif question.type == 'rating' %}
-                                {% for option in question.items %}
+                                {% for item in question.items %}
                                     <div class="test__option">
                                         <input type="radio"
                                                name="answer"
-                                               value="{{ option.value }}"
+                                               value="{{ item.value }}"
                                                id="answer-{{ loop.index }}"
                                                data-method="RATING"
                                                class="radio">
-                                        <label for="answer-{{ loop.index }}">{{ option.text|raw }}</label>
+                                        <label for="answer-{{ loop.index }}">{{ item.text|raw }}</label>
                                     </div>
                                 {% endfor %}
                             {% endif %}

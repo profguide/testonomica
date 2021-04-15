@@ -167,14 +167,24 @@ class TestController extends AbstractController
         return $result;
     }
 
-    private function renderResult(Test $test, Result $result)
+    private function renderResult(Test $test, Result $result): Response
     {
-        $resultData = $this->calculatorService->calculate($result);
-        return $this->render('tests/result/' . ResultUtil::resolveViewName($test) . '.html.twig',
-            array_merge([
-                'test' => $test,
-                'uuid' => $result->getUuid(),
-                'status' => TestStatus::finished()
-            ], $resultData));
+        $data = array_merge([
+            'test' => $test,
+            'uuid' => $result->getUuid(),
+            'status' => TestStatus::finished()
+        ], $this->calculatorService->calculate($result));
+
+        // templated from the field
+        if ($test->getResultView() != null) {
+            $template = "{% extends('tests/result.html.twig') %}{% block result %}<div class=\"container\">"
+                . $test->getResultView()
+                . "</div>{% endblock %}";
+            $template = $this->get('twig')->createTemplate($template);
+            return new Response($template->render($data));
+        } else {
+            // templated by filename
+            return $this->render('tests/result/' . ResultUtil::resolveViewName($test) . '.html.twig', $data);
+        }
     }
 }

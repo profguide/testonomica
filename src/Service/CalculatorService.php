@@ -84,7 +84,13 @@ class CalculatorService
     private function calculatorName(Result $result): string
     {
         $test = $result->getTest();
-        $name = $test->getCalculatorName() ?? 'Test' . $test->getId();
+        // todo determine if it is auto
+        // Можно так
+        // Выбор калькулятора из списка, где Auto стоит первым.
+        // Если не устраивает, то вписываем своё: Test131Calculator, ProforientationTeenCalculator
+        // То есть имеем два поля: calculator (на выбор) и customCalculator (альтернативный)
+        $name = $test->getCalculatorName() ?? 'Auto';
+//        $name = $test->getCalculatorName() ?? 'Test' . $test->getId();
         return self::CALCULATORS_NAMESPACE . ucfirst($name) . 'Calculator';
     }
 
