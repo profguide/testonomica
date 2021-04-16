@@ -20,7 +20,7 @@ class AnalysisCondition
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AnalysisBlock")
+     * @ORM\ManyToOne(targetEntity="AnalysisBlock", inversedBy="conditions")
      */
     private AnalysisBlock $block;
 

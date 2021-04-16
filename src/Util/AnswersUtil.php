@@ -8,6 +8,7 @@ namespace App\Util;
 
 use App\Entity\Answer;
 use App\Entity\Question;
+use App\Entity\QuestionItem;
 use App\Test\AnswersHolder;
 use App\Test\QuestionsHolder;
 
@@ -209,8 +210,8 @@ class AnswersUtil
     public static function ratingToTextArray(Question $question, Answer $answer): array
     {
         $valuesSrc = [];
-        /**@var Option $option */
-        foreach ($question->getOptions() as $option) {
+        /**@var QuestionItem $option */
+        foreach ($question->getItems() as $option) {
             $valuesSrc[$option->getValue()] = $option->getText();
         }
         $texts = [];

@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,9 +21,14 @@ class AnalysisBlock
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Analysis")
+     * @ORM\ManyToOne(targetEntity="Analysis", inversedBy="blocks")
      */
     private Analysis $analysis;
+
+    /**
+     * @ORM\OneToMany(targetEntity="AnalysisCondition", mappedBy="block", cascade={"all"}, orphanRemoval=true)
+     */
+    private $conditions;
 
     /**
      * @ORM\Column(type="text")
@@ -35,11 +39,6 @@ class AnalysisBlock
      * @ORM\Column(type="text")
      */
     private string $textEn = "";
-
-    /**
-     * @ORM\OneToMany(targetEntity="AnalysisCondition", mappedBy="block", cascade={"all"}, orphanRemoval=true)
-     */
-    private Collection $conditions;
 
     public function __construct()
     {
@@ -94,5 +93,17 @@ class AnalysisBlock
     public function setConditions($conditions): void
     {
         $this->conditions = $conditions;
+    }
+
+    public function AddCondition(AnalysisCondition $condition): AnalysisBlock
+    {
+        $condition->setBlock($this);
+        $this->conditions->add($condition);
+        return $this;
+    }
+
+    public function removeCondition(AnalysisCondition $condition)
+    {
+        $this->conditions->removeElement($condition);
     }
 }

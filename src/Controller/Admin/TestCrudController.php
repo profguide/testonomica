@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Test;
+use App\Form\AnalysisType;
 use App\Form\QuestionType;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
@@ -15,7 +16,6 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\Field;
 use EasyCorp\Bundle\EasyAdminBundle\Field\FormField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
@@ -71,14 +71,30 @@ class TestCrudController extends AbstractCrudController
             ])->onlyOnForms(),
             Field::new('calculatorName', 'Альтернативный калькулятор (префикс)')->onlyOnForms(),
 
-            FormField::addPanel('HTML результата', 'fa fa-code'),
+            // Анализ результатов
+            FormField::addPanel('Результат', 'fa fa-code'),
+            CollectionField::new('analyses', 'Конструктор ответов')
+                ->allowAdd(true)
+                ->allowDelete(true)
+                ->setEntryIsComplex(true)
+                ->setEntryType(AnalysisType::class)
+                ->setFormTypeOptions([
+                    'by_reference' => false,
+                    'label' => false,
+                    'prototype' => true,
+                    'prototype_name' => '__analysis__',
+                    'entry_options' => [
+                        'label' => false,
+                    ],
+                ]),
             CodeEditorField::new('resultView')
-//                ->setLanguage('twig')
                 ->setLabel(false)
                 ->addCssClass('full-width')
                 ->setFormTypeOptions([
                     'label' => false,
                 ]),
+
+            // Вопросы
             FormField::addPanel('Вопросы', 'fa fa-question-circle')
                 ->addCssClass('test-questions-form'), // @see admin.css
             CollectionField::new('questions', 'Вопросы')

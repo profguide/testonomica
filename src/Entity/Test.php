@@ -43,6 +43,11 @@ class Test
     private $questions;
 
     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Analysis", mappedBy="test", cascade={"all"}, orphanRemoval=true)
+     */
+    private $analyses;
+
+    /**
      * @ORM\Column(type="string", length=255)
      * @var string
      */
@@ -135,6 +140,13 @@ class Test
      */
     private ?string $resultView = null;
 
+    public function __construct()
+    {
+        $this->questions = new ArrayCollection();
+        $this->services = new ArrayCollection();
+        $this->analyses = new ArrayCollection();
+    }
+
     public static function initDefault(): Test
     {
         $test = new Test();
@@ -143,15 +155,6 @@ class Test
         return $test;
     }
 
-    public function __construct()
-    {
-        $this->questions = new ArrayCollection();
-        $this->services = new ArrayCollection();
-    }
-
-    /**
-     * @return mixed
-     */
     public function getId()
     {
         return $this->id;
@@ -178,153 +181,96 @@ class Test
         return $this->catalog;
     }
 
-    /**
-     * @param Category $catalog
-     */
     public function setCatalog(Category $catalog): void
     {
         $this->catalog = $catalog;
     }
 
-    /**
-     * @return string
-     */
     public function getSlug(): string
     {
         return $this->slug;
     }
 
-    /**
-     * @param string $slug
-     */
     public function setSlug(string $slug): void
     {
         $this->slug = $slug;
     }
 
-    /**
-     * @return string
-     */
     public function getName(): string
     {
         return $this->name;
     }
 
-    /**
-     * @param string $name
-     */
     public function setName(string $name): void
     {
         $this->name = $name;
     }
 
-    /**
-     * @return mixed
-     */
     public function getNameEn()
     {
         return $this->nameEn;
     }
 
-    /**
-     * @param mixed $nameEn
-     */
     public function setNameEn($nameEn): void
     {
         $this->nameEn = $nameEn;
     }
 
-    /**
-     * @return mixed
-     */
     public function getDescription(): ?string
     {
         return $this->description;
     }
 
-    /**
-     * @param mixed $description
-     */
     public function setDescription($description): void
     {
         $this->description = $description;
     }
 
-    /**
-     * @return mixed
-     */
     public function getDescriptionEn(): ?string
     {
         return $this->descriptionEn;
     }
 
-    /**
-     * @param mixed $descriptionEn
-     */
     public function setDescriptionEn($descriptionEn): void
     {
         $this->descriptionEn = $descriptionEn;
     }
 
-    /**
-     * @return mixed
-     */
     public function getAnnotation(): ?string
     {
         return $this->annotation;
     }
 
-    /**
-     * @param mixed $annotation
-     */
     public function setAnnotation($annotation): void
     {
         $this->annotation = $annotation;
     }
 
-    /**
-     * @return mixed
-     */
     public function getAnnotationEn(): ?string
     {
         return $this->annotationEn;
     }
 
-    /**
-     * @param mixed $annotationEn
-     */
     public function setAnnotationEn($annotationEn): void
     {
         $this->annotationEn = $annotationEn;
     }
 
-    /**
-     * @return int
-     */
     public function getDuration(): int
     {
         return $this->duration;
     }
 
-    /**
-     * @param int $duration
-     */
     public function setDuration(int $duration): void
     {
         $this->duration = $duration;
     }
 
-    /**
-     * @return bool
-     */
     public function isActive(): bool
     {
         return $this->active == 1;
     }
 
-    /**
-     * @param int $active
-     */
     public function setActive(int $active): void
     {
         if (!in_array($active, [0, 1])) {
@@ -333,33 +279,21 @@ class Test
         $this->active = $active;
     }
 
-    /**
-     * @return bool
-     */
     public function isActiveEn(): bool
     {
         return $this->activeEn == 1;
     }
 
-    /**
-     * @param int $activeEn
-     */
     public function setActiveEn(int $activeEn): void
     {
         $this->activeEn = $activeEn;
     }
 
-    /**
-     * @return mixed
-     */
     public function getXmlFilename(): ?string
     {
         return $this->xmlFilename;
     }
 
-    /**
-     * @param mixed $xmlFilename
-     */
     public function setXmlFilename($xmlFilename): void
     {
         $this->xmlFilename = $xmlFilename;
@@ -406,17 +340,62 @@ class Test
         return $this;
     }
 
+    public function setQuestions(Collection $questions): void
+    {
+        $this->questions = $questions;
+    }
+
     /**
-     * @return bool
+     * @return Collection<Question>
      */
+    public function getQuestions()
+    {
+        return $this->questions;
+    }
+
+    public function addQuestion(Question $question): Test
+    {
+        $question->setTest($this);
+        $this->questions->add($question);
+        return $this;
+    }
+
+    public function removeQuestion(Question $question)
+    {
+        $this->questions->removeElement($question);
+    }
+
+
+    public function setAnalyses(Collection $analyses): void
+    {
+        $this->analyses = $analyses;
+    }
+
+    /**
+     * @return Collection<Question>
+     */
+    public function getAnalyses()
+    {
+        return $this->analyses;
+    }
+
+    public function addAnalysis(Analysis $analysis): Test
+    {
+        $analysis->setTest($this);
+        $this->analyses->add($analysis);
+        return $this;
+    }
+
+    public function removeAnalysis(Analysis $analysis)
+    {
+        $this->analyses->removeElement($analysis);
+    }
+
     public function isInList(): bool
     {
         return $this->inList;
     }
 
-    /**
-     * @param bool $inList
-     */
     public function setInList(bool $inList): void
     {
         $this->inList = $inList;
@@ -440,31 +419,6 @@ class Test
     public function setResultView(?string $resultView): void
     {
         $this->resultView = $resultView;
-    }
-
-    public function setQuestions(Collection $questions): void
-    {
-        $this->questions = $questions;
-    }
-
-    /**
-     * @return Collection<Question>
-     */
-    public function getQuestions()
-    {
-        return $this->questions;
-    }
-
-    public function addQuestion(Question $question)
-    {
-        $question->setTest($this);
-        $this->questions->add($question);
-        return $this;
-    }
-
-    public function removeQuestion(Question $question)
-    {
-        $this->questions->removeElement($question);
     }
 
     public function __toString(): string

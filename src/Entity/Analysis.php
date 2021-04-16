@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,9 +21,14 @@ class Analysis
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Test")
+     * @ORM\ManyToOne(targetEntity="Test", inversedBy="analyses")
      */
     private Test $test;
+
+    /**
+     * @ORM\OneToMany(targetEntity="AnalysisBlock", mappedBy="analysis", cascade={"all"}, orphanRemoval=true)
+     */
+    private $blocks;
 
     /**
      * @ORM\Column(type="string", nullable=true)
@@ -49,11 +53,6 @@ class Analysis
      * @ORM\Column(type="integer", nullable=true)
      */
     private ?int $progressVariableMax = null;
-
-    /**
-     * @ORM\OneToMany(targetEntity="AnalysisBlock", mappedBy="analysis", cascade={"all"}, orphanRemoval=true)
-     */
-    private Collection $blocks;
 
     public function __construct()
     {
@@ -128,5 +127,17 @@ class Analysis
     public function setBlocks($blocks): void
     {
         $this->blocks = $blocks;
+    }
+
+    public function AddBlock(AnalysisBlock $block): Analysis
+    {
+        $block->setAnalysis($this);
+        $this->blocks->add($block);
+        return $this;
+    }
+
+    public function removeBlock(AnalysisBlock $block)
+    {
+        $this->blocks->removeElement($block);
     }
 }
