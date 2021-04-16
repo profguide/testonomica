@@ -19,7 +19,7 @@ class ServiceFixture extends Fixture implements DependentFixtureInterface
     public function load(ObjectManager $manager)
     {
         /**@var Test $test */
-        $test = $this->getReference(TestFixture::TEST_2);
+        $test = $this->getReference(TestFixture::TEST_3);
         $service = new Service("Пакет услуг 1", 99, 'service_1', 'Только тест');
         $service->addTest($test);
         $manager->persist($service);

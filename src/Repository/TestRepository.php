@@ -85,4 +85,11 @@ class TestRepository extends ServiceEntityRepository implements TestRepositoryIn
         $this->em->flush();
         return $test;
     }
+
+    public function getWithSearchQueryBuilder(?string $getQueryString)
+    {
+        $dql = "SELECT t FROM App:Test t";
+        return $this->em->createQuery($dql);
+//        return $this->em->createQueryBuilder()->getQuery();
+    }
 }

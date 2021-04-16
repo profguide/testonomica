@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Тесты{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Тесты</h1>
+
+        <div class="count">
+            {{ paginator.getTotalItemCount }}
+        </div>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>{{ knp_pagination_sortable(paginator, 'Id', 't.id') }}</th>
+                <th>Название</th>
+                <th>Edit</th>
+            </tr>
+            {% for test in paginator %}
+                <tr>
+                    <td>{{ test.id }}</td>
+                    <td>{{ test.name }}</td>
+                    <td>Ссылка</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <div class="navigation">
+            {{ knp_pagination_render(paginator) }}
+        </div>
+    </div>
+{% endblock %}

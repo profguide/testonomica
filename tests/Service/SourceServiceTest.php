@@ -6,12 +6,11 @@
 
 namespace App\Tests\Service;
 
-
 use App\DataFixtures\TestFixture;
 use App\Entity\Test;
 use App\Repository\TestRepositoryInterface;
 use App\Service\TestSourceService;
-use App\Test\Question;
+use App\Test\TestItemNotFoundException;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class SourceServiceTest extends KernelTestCase
@@ -73,43 +72,41 @@ class SourceServiceTest extends KernelTestCase
     public function testGetNextQuestionFromNonExisted()
     {
         $nonExistedQuestionId = -1;
-        $this->expectException(\App\Test\TestItemNotFoundException::class);
+        $this->expectException(TestItemNotFoundException::class);
         $this->service->getPrevQuestion($this->test, $nonExistedQuestionId);
     }
 
     /**
-     * Back
-     * Expect previous question
+     * Предыдуший вопрос от второго
+     * Ожидание:
+     * - вопрос должен быть найден
      */
     public function testGetPrevQuestion()
     {
-        $currentQuestionId = 2;
-        $firstQuestionId = 1;
-        $question = $this->service->getPrevQuestion($this->test, $currentQuestionId);
-        $this->assertEquals($question->getId(), $firstQuestionId);
+        $question = $this->service->getPrevQuestion($this->test, 2);
+        $this->assertEquals(1, $question->getId());
     }
 
     /**
-     * Back
-     * First question id is passed
-     * Expects null
+     * Предыдуший вопрос от первого
+     * Ожидание:
+     * - вопрос НЕ должен быть найден
      */
     public function testGetPrevQuestionFromFirst()
     {
-        $firstQuestionId = 1;
-        $question = $this->service->getPrevQuestion($this->test, $firstQuestionId);
+        $question = $this->service->getPrevQuestion($this->test, 1);
         $this->assertNull($question);
     }
 
     /**
-     * Back
-     * Non-existed question id passed
-     * Expects Exception
+     * Предыдуший вопрос от несуществующего
+     * Ожидание:
+     *  - исключение \App\Test\TestItemNotFoundException
      */
     public function testGetPrevQuestionFromNonExisted()
     {
         $nonQuestionIdExisted = -1;
-        $this->expectException(\App\Test\TestItemNotFoundException::class);
+        $this->expectException(TestItemNotFoundException::class);
         $this->service->getPrevQuestion($this->test, $nonQuestionIdExisted);
     }
 
@@ -119,9 +116,8 @@ class SourceServiceTest extends KernelTestCase
      */
     public function testGetFirstQuestion()
     {
-        $firstQuestionId = 1;
         $question = $this->service->getFirstQuestion($this->test);
-        $this->assertEquals($question->getId(), $firstQuestionId);
+        $this->assertEquals(1, $question->getId());
     }
 
     /*
@@ -130,9 +126,8 @@ class SourceServiceTest extends KernelTestCase
      */
     public function testGetLastQuestion()
     {
-        $lastQuestionId = 12;
         $question = $this->service->getLastQuestion($this->test);
-        $this->assertEquals($lastQuestionId, $question->getId());
+        $this->assertEquals(12, $question->getId());
     }
 
     /*
@@ -141,8 +136,7 @@ class SourceServiceTest extends KernelTestCase
      */
     public function testGetTotalCount()
     {
-        $count = 12;
-        $this->assertEquals($count, $this->service->getTotalCount($this->test));
+        $this->assertEquals(12, $this->service->getTotalCount($this->test));
     }
 
     /*
@@ -151,9 +145,6 @@ class SourceServiceTest extends KernelTestCase
      */
     public function testGetQuestionNumber()
     {
-        $expectNumber = 5;
-        $question = new Question();
-        $question->setId(5);
-        $this->assertEquals($expectNumber, $this->service->getQuestionNumber($this->test, $question));
+        $this->assertEquals(5, $this->service->getQuestionNumber($this->test, 5));
     }
 }

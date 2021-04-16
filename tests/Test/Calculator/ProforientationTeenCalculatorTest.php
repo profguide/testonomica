@@ -10,7 +10,7 @@ class ProforientationTeenCalculatorTest extends AbstractProforientationCalculato
 {
     protected $calculatorName = 'App\Test\Calculator\ProforientationTeenCalculator';
 
-    public function setUp()
+    public function setUp(): void
     {
         self::bootKernel();
     }

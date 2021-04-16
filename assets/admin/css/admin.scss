@@ -1,0 +1,9 @@
+.test-questions-form {
+  .form-widget {
+    flex: 0 0 100%; //question
+    width: 100%; //items
+    &-compound {
+      width: 100%;
+    }
+  }
+}

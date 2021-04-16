@@ -14,7 +14,7 @@ class Test109Calculator extends AbstractCalculator
 {
     function calculate(): array
     {
-        $map = AnswersUtil::percentageWithValues($this->answersHolder, 6);
+        $map = AnswersUtil::percentageWithValues($this->questionsHolder, $this->answersHolder, 6);
         unset($map['0']);
         $sum = AnswersUtil::sumValuesInDoubleMap($map);
         return array_merge($map, [

@@ -2,10 +2,9 @@
 
 namespace App\Service;
 
-
+use App\Entity\Question;
 use App\Entity\Test;
-use App\Test\Question;
-use App\Test\SourceRepositoryInterface;
+use App\Repository\SourceRepositoryInterface;
 
 /**
  * @author: adavydov
@@ -13,8 +12,7 @@ use App\Test\SourceRepositoryInterface;
  */
 class TestSourceService
 {
-    /**@var SourceRepositoryInterface */
-    private $repository;
+    private SourceRepositoryInterface $repository;
 
     public function __construct(SourceRepositoryInterface $sourceParser)
     {
@@ -46,13 +44,13 @@ class TestSourceService
         return $this->repository->getLastQuestion($test);
     }
 
-    public function getTotalCount(Test $test)
+    public function getTotalCount(Test $test): int
     {
         return $this->repository->getTotalCount($test);
     }
 
-    public function getQuestionNumber(Test $test, Question $question)
+    public function getQuestionNumber(Test $test, $id): int
     {
-        return $this->repository->getQuestionNumber($test, $question);
+        return $this->repository->getQuestionNumber($test, $id);
     }
 }

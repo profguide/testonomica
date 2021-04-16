@@ -41,6 +41,9 @@
     "doctrine/dbal": {
         "version": "2.11.2"
     },
+    "doctrine/deprecations": {
+        "version": "v0.5.3"
+    },
     "doctrine/doctrine-bundle": {
         "version": "2.0",
         "recipe": {
@@ -122,6 +125,12 @@
     },
     "jms/metadata": {
         "version": "2.3.0"
+    },
+    "knplabs/knp-components": {
+        "version": "v3.0.2"
+    },
+    "knplabs/knp-paginator-bundle": {
+        "version": "v5.4.2"
     },
     "laminas/laminas-code": {
         "version": "3.4.1"

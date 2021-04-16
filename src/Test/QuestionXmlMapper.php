@@ -2,7 +2,8 @@
 
 namespace App\Test;
 
-
+use App\Entity\Question;
+use App\Entity\QuestionItem;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**
@@ -18,8 +19,12 @@ class QuestionXmlMapper
 
         // item attributes
         $question->setId($crawler->attr('id'));
-        $question->setMethod($crawler->attr('method'));
-        $question->setGroup($crawler->attr('group'));
+        if (($type = $crawler->attr('method')) != null) {
+            $question->setType(mb_strtolower($crawler->attr('method')));
+        }
+        if (($variety = $crawler->attr('group')) != null) {
+            $question->setVariety($variety);
+        }
         $question->setCount($crawler->attr('count'));
         if (($showAnswer = $crawler->attr('showAnswer')) != null) {
             $question->setShowAnswer($showAnswer === "true");
@@ -39,7 +44,7 @@ class QuestionXmlMapper
             $question->setImg($img->text());
         }
         if (($right = $crawler->filterXPath('descendant-or-self::right'))->count() > 0) {
-            $question->setRight($right->text());
+            $question->setCorrect($right->text());
         }
         if (($wrong = $crawler->filterXPath('descendant-or-self::wrong'))->count() > 0) {
             $question->setWrong($wrong->text());
@@ -48,22 +53,20 @@ class QuestionXmlMapper
         if (($options = $crawler->filterXPath('descendant-or-self::options'))->count() > 0) {
             /**@var \DOMElement $option */
             foreach ($options->children() as $option) {
-                $question->addOption(
-                    new Option(
+                $question->addItem(
+                    QuestionItem::createMinimal(
                         $option->getAttribute('value'),
-                        $option->getAttribute('correct') === "true",
-                        $option->textContent));
+                        $option->textContent,
+                        $option->getAttribute('correct') === "true"));
             }
         }
-
         if (($fields = $crawler->filterXPath('descendant-or-self::fields'))->count() > 0) {
             /**@var \DOMElement $field */
             foreach ($fields->children() as $field) {
-                $question->addField(
-                    new Field(
-                        $field->getAttribute('type'),
-                        $field->getAttribute('placeholder'),
-                        $field->getAttribute('correct')));
+                $question->addItem(
+                    QuestionItem::createMinimal(
+                        $field->getAttribute('correct'),
+                        $field->getAttribute('placeholder')));
             }
         }
         return $question;

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Result;
 use App\Entity\Test;
+use App\Service\AnalysisService;
 use App\Service\AnswerService;
 use App\Service\CalculatorService;
 use App\Service\CategoryService;
@@ -27,33 +28,32 @@ use Symfony\Component\Serializer\SerializerInterface;
  */
 class TestController extends AbstractController
 {
-    /**@var TestService */
-    private $testService;
+    private TestService $testService;
 
-    /**@var CategoryService */
-    private $categoryService;
+    private CategoryService $categoryService;
 
-    /**@var ResultService */
-    private $resultService;
+    private ResultService $resultService;
 
-    /**@var AnswerService */
-    private $answerService;
+    private AnswerService $answerService;
 
-    /**@var CalculatorService */
-    private $calculatorService;
+    private CalculatorService $calculatorService;
+
+    private AnalysisService $analysisService;
 
     public function __construct(
         TestService $testService,
         CategoryService $categoryService,
         AnswerService $answerService,
         ResultService $resultService,
-        CalculatorService $calculatorService)
+        CalculatorService $calculatorService,
+        AnalysisService $resultBlockService)
     {
         $this->testService = $testService;
         $this->categoryService = $categoryService;
         $this->answerService = $answerService;
         $this->resultService = $resultService;
         $this->calculatorService = $calculatorService;
+        $this->analysisService = $resultBlockService;
     }
 
     /**
@@ -172,14 +172,27 @@ class TestController extends AbstractController
         return $result;
     }
 
-    private function renderResult(Test $test, Result $result)
+    private function renderResult(Test $test, Result $result): Response
     {
-        $resultData = $this->calculatorService->calculate($result);
-        return $this->render('tests/result/' . ResultUtil::resolveViewName($test) . '.html.twig',
-            array_merge([
-                'test' => $test,
-                'uuid' => $result->getUuid(),
-                'status' => TestStatus::finished()
-            ], $resultData));
+        $data = array_merge([
+            'test' => $test,
+            'uuid' => $result->getUuid(),
+            'status' => TestStatus::finished()
+        ], $this->calculatorService->calculate($result));
+
+        $resultBlocksOutput = $this->analysisService->render($test, $data);
+
+        // templated from the field
+        if ($test->getResultView() != null) {
+            $template = "{% extends('tests/result.html.twig') %}{% block result %}<div class=\"container\">"
+                . $resultBlocksOutput
+                . $test->getResultView()
+                . "</div>{% endblock %}";
+            $template = $this->get('twig')->createTemplate($template);
+            return new Response($template->render($data));
+        } else {
+            // templated by filename
+            return $this->render('tests/result/' . ResultUtil::resolveViewName($test) . '.html.twig', $data);
+        }
     }
 }

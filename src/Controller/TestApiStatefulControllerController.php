@@ -3,12 +3,12 @@
 namespace App\Controller;
 
 use App\Entity\Answer;
+use App\Entity\Question;
 use App\Entity\Test;
 use App\Service\AnswerService;
 use App\Service\ResultService;
 use App\Service\TestService;
 use App\Service\TestSourceService;
-use App\Test\Question;
 use App\Test\TestStatus;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -19,10 +19,9 @@ use Symfony\Component\Routing\Annotation\Route;
  * @author: adavydov
  * @since: 23.10.2020
  */
-class TestApiStatefulController extends TestApiAbstract
+class TestApiStatefulControllerController extends TestApiAbstractController
 {
-    /**@var AnswerService */
-    private $answerService;
+    private AnswerService $answerService;
 
     public function __construct(
         TestService $testService,

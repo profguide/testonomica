@@ -9,6 +9,7 @@ namespace App\Service;
 
 use App\Entity\Result;
 use App\Entity\Test;
+use App\Repository\SourceRepositoryInterface;
 use App\Repository\TestRepositoryInterface;
 use App\Test\AbstractCalculator;
 use App\Test\AbstractComplexCalculator;
@@ -17,22 +18,17 @@ use App\Test\AnswersSerializer;
 use App\Test\CalculatorInterface;
 use App\Test\QuestionsHolder;
 use App\Test\ResultUtil;
-use App\Test\SourceRepositoryInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
 
 class CalculatorService
 {
-    /**@var AnswersSerializer */
-    private $serializer;
+    private AnswersSerializer $serializer;
 
-    /**@var SourceRepositoryInterface */
-    private $sourceRepository;
+    private SourceRepositoryInterface $sourceRepository;
 
-    /**@var TestRepositoryInterface */
-    private $testRepository;
+    private TestRepositoryInterface $testRepository;
 
-    /**@var KernelInterface */
-    private $kernel;
+    private KernelInterface $kernel;
 
     const CALCULATORS_NAMESPACE = '\App\Test\Calculator\\';
 
@@ -88,7 +84,13 @@ class CalculatorService
     private function calculatorName(Result $result): string
     {
         $test = $result->getTest();
-        $name = $test->getCalculatorName() ?? 'Test' . $test->getId();
+        // todo determine if it is auto
+        // Можно так
+        // Выбор калькулятора из списка, где Auto стоит первым.
+        // Если не устраивает, то вписываем своё: Test131Calculator, ProforientationTeenCalculator
+        // То есть имеем два поля: calculator (на выбор) и customCalculator (альтернативный)
+        $name = $test->getCalculatorName() ?? 'Auto';
+//        $name = $test->getCalculatorName() ?? 'Test' . $test->getId();
         return self::CALCULATORS_NAMESPACE . ucfirst($name) . 'Calculator';
     }
 

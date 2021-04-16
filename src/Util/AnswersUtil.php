@@ -7,9 +7,9 @@
 namespace App\Util;
 
 use App\Entity\Answer;
+use App\Entity\Question;
+use App\Entity\QuestionItem;
 use App\Test\AnswersHolder;
-use App\Test\Option;
-use App\Test\Question;
 use App\Test\QuestionsHolder;
 
 class AnswersUtil
@@ -17,6 +17,7 @@ class AnswersUtil
     /**
      * Counts sum of answers values.
      * Correct answer counts as 1, otherwise value as it is
+     *
      * @param QuestionsHolder $questionsHolder
      * @param AnswersHolder $answersHolder
      * @return int
@@ -24,7 +25,6 @@ class AnswersUtil
     public static function sum(QuestionsHolder $questionsHolder, AnswersHolder $answersHolder): int
     {
         $sum = 0;
-        /**@var Question $question */
         foreach ($questionsHolder->getAll() as $question) {
             // if the question assumes correct answer and the answer is correct, it will add "1"
             if ($question->hasCorrectValues()) {
@@ -34,6 +34,21 @@ class AnswersUtil
             } else {
                 $sum += $answersHolder->getValuesSum($question->getId());
             }
+        }
+        return $sum;
+    }
+
+    /**
+     * Counts the sum of all possible values.
+     *
+     * @param QuestionsHolder $questionsHolder
+     * @return int
+     */
+    public static function max(QuestionsHolder $questionsHolder): int
+    {
+        $sum = 0;
+        foreach ($questionsHolder->getAll() as $question) {
+            $sum += $question->maxValue();
         }
         return $sum;
     }
@@ -77,14 +92,15 @@ class AnswersUtil
 
     /**
      * Counts percentage of repeated values and builds map
+     * @param QuestionsHolder $questionsHolder
      * @param AnswersHolder $answersHolder ['1' => 'yes', '2' => 'yes', 3 => 'no']
      * @param int $max - what is 100% value
      * @return array e.g. ['yes' => 100, 'no' => 50]
      */
-    public static function percentage(AnswersHolder $answersHolder, int $max): array
+    public static function percentage(QuestionsHolder $questionsHolder, AnswersHolder $answersHolder, int $max): array
     {
         // 1. sum values at first
-        $valuesSums = AnswersUtil::sumValuesMap($answersHolder);
+        $valuesSums = AnswersUtil::sumValuesMap($questionsHolder, $answersHolder);
         // 2. count percentages
         return AnswersUtil::percentageOfSet($valuesSums, $max);
     }
@@ -92,14 +108,15 @@ class AnswersUtil
     /**
      * Counts percentage of repeated values and returns double map with percentage and sum of repeated values
      * e.g. ['1' => 'yes', '2' => 'yes', 3 => 'no']
+     * @param QuestionsHolder $questionsHolder
      * @param AnswersHolder $answersHolder
      * @param int $max - what is 100% value
      * @return array e.g. ['yes' => ['value' => 2, 'percentage' => 100], 'no' => ['value' => 1, 'percentage' => 50]]
      */
-    public static function percentageWithValues(AnswersHolder $answersHolder, int $max): array
+    public static function percentageWithValues(QuestionsHolder $questionsHolder, AnswersHolder $answersHolder, int $max): array
     {
         $newMap = [];
-        $valuesSums = AnswersUtil::sumValuesMap($answersHolder);
+        $valuesSums = AnswersUtil::sumValuesMap($questionsHolder, $answersHolder);
         $percentageMap = AnswersUtil::percentageOfSet($valuesSums, $max);
         foreach ($valuesSums as $name => $value) {
             $newMap[$name] = [
@@ -114,7 +131,7 @@ class AnswersUtil
      * Counts sum of repeated values
      * e.g. ['1' => 'yes', '2' => 'yes', 3 => 'no']
      * In this case 'yes' repeats 2 times, and 'no' - once.
-     * @param QuestionsHolder $questionsHolder
+     * @param QuestionsHolder $questionsHolder need for precise count, as some questions can be passed
      * @param AnswersHolder $answersHolder
      * @return array ['yes' => 2, 'no' => 1]
      */
@@ -165,6 +182,7 @@ class AnswersUtil
 
     /**
      * Checks if all answer's values match question's expected ones
+     *
      * @param Question $question
      * @param AnswersHolder $answersHolder
      * @return bool
@@ -192,8 +210,8 @@ class AnswersUtil
     public static function ratingToTextArray(Question $question, Answer $answer): array
     {
         $valuesSrc = [];
-        /**@var Option $option */
-        foreach ($question->getOptions() as $option) {
+        /**@var QuestionItem $option */
+        foreach ($question->getItems() as $option) {
             $valuesSrc[$option->getValue()] = $option->getText();
         }
         $texts = [];

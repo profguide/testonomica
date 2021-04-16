@@ -2,13 +2,11 @@
     symfony server:start
 
 # Тест
-    php ./bin/phpunit
-Перед этим нужно применить миграции и фикустуры (см. ниж)
+    make tests
+    Скрипт очищает базу, выполняет миграции, создаёт фикстуры
 
-## Применение фикстур 
-### Для .env.local:
+## Применение фикстур
     symfony console doctrine:fixtures:load
-### Для .env.test.local:
     APP_ENV=test symfony console doctrine:fixtures:load 
 
 #Миграция
@@ -16,11 +14,13 @@
 ## Создание файлов миграции из моделей
     php bin/console doctrine:migrations:diff
     
-## Применение миграций для окружений
-### Для .env.local:
+## Применение миграции
     php bin/console doctrine:migrations:migrate
-### Для .env.test.local:
     APP_ENV=test php bin/console doctrine:migrations:migrate
+
+## Откат миграций
+    php bin/console doctrine:migrations:migrate prev
+    APP_ENV=test php bin/console doctrine:migrations:migrate prev
     
 # TODO
 - Версионирование теста. 
@@ -28,3 +28,7 @@
 Возможно, нужно указывать в результате версию пройденного теста, а в калькуляторе 
 делать как минимум проверку и юзер-френдли исключения а-ля "Конфликт версий", 
 или даже указывать диапазон допустимых версий или даже написать полифил.
+  
+# PHPSTORM
+Xdebug 3 в консоли работает только с портом 9003.
+Поэтому в PhpStorm нужно поменять порядок портов с 9000,9003 на 9003,9000

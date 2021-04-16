@@ -18,7 +18,7 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
-abstract class TestApiAbstract extends AbstractController
+abstract class TestApiAbstractController extends AbstractController
 {
     const OPERATION_START = 'start';
 
@@ -30,16 +30,16 @@ abstract class TestApiAbstract extends AbstractController
 
     const OPERATION_RESTORE = 'restore';
 
-    /**@var TestService */
-    protected $testService;
+    protected TestService $testService;
 
-    /**@var ResultService */
-    protected $resultService;
+    protected ResultService $resultService;
 
-    /**@var TestSourceService */
-    protected $sourceService;
+    protected TestSourceService $sourceService;
 
-    public function __construct(TestService $testService, TestSourceService $sourceService, ResultService $resultService)
+    public function __construct(
+        TestService $testService,
+        TestSourceService $sourceService,
+        ResultService $resultService)
     {
         $this->testService = $testService;
         $this->sourceService = $sourceService;
@@ -51,7 +51,7 @@ abstract class TestApiAbstract extends AbstractController
      * @param Request $request
      * @return Response
      */
-    public function api(Request $request)
+    public function api(Request $request): Response
     {
         $test = $this->loadTestByRequest($request);
         $operationName = $this->operationByRequest($request);
@@ -74,7 +74,7 @@ abstract class TestApiAbstract extends AbstractController
             throw new BadRequestHttpException("Unknown operation");
         }
         $count = $this->sourceService->getTotalCount($test);
-        $progress = $this->sourceService->getQuestionNumber($test, $question);
+        $progress = $this->sourceService->getQuestionNumber($test, $question->getId());
         return $this->render('tests/question.html.twig', [
             'operation' => $operationName,
             'test' => $test,
