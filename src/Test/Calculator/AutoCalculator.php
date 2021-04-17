@@ -56,17 +56,24 @@ class AutoCalculator extends AbstractCalculator
          *
          *
          */
-        $max = AnswersUtil::max($this->questionsHolder);
 
+        // Максимальная сумма числовых значений. В расчет идут и корректные.
+        $maxIntegerValues = AnswersUtil::max($this->questionsHolder);
         $sum = AnswersUtil::sum($this->questionsHolder, $this->answersHolder);
-        $scale = $sum * 100 / $max;
+        $scale = $maxIntegerValues > 0 ? $sum * 100 / $maxIntegerValues : 0;
+        $integerValuesPercentageWithValues = AnswersUtil::percentageWithValues(
+            $this->questionsHolder, $this->answersHolder, $maxIntegerValues);
 
-        $percentageWithValues = AnswersUtil::percentageWithValues($this->questionsHolder, $this->answersHolder, $max);
+        // Максимальное кол-во повторяющихся значений для тестов со строковыми значениями, как Климов
+        $maxRepeatedValues = AnswersUtil::maxRepeated($this->questionsHolder);
+        $repeatedValuesPercentageWithValues = AnswersUtil::percentageWithValues(
+            $this->questionsHolder, $this->answersHolder, $maxRepeatedValues);
 
         return [
             'SUM' => $sum,
             'SCALE' => $scale,
-            'VALUES' => $percentageWithValues
+            'VALUES' => $integerValuesPercentageWithValues,
+            'REPEATS' => $repeatedValuesPercentageWithValues,
         ];
     }
 }

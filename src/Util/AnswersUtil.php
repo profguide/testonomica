@@ -39,7 +39,7 @@ class AnswersUtil
     }
 
     /**
-     * Counts the sum of all possible values.
+     * Counts the maximum sum possible sum of values (only for integer values).
      *
      * @param QuestionsHolder $questionsHolder
      * @return int
@@ -51,6 +51,28 @@ class AnswersUtil
             $sum += $question->maxValue();
         }
         return $sum;
+    }
+
+    /**
+     * Counts the maximum sum of repeated value.
+     * todo phpunit
+     *
+     * @param QuestionsHolder $questionsHolder
+     * @return int
+     */
+    public static function maxRepeated(QuestionsHolder $questionsHolder): int
+    {
+        $values = [];
+        foreach ($questionsHolder->getAll() as $question) {
+            /**@var QuestionItem $item */
+            foreach ($question->getItems() as $item) {
+                if (!isset($values[$item->getValue()])) {
+                    $values[$item->getValue()] = 0;
+                }
+                $values[$item->getValue()]++;
+            }
+        }
+        return max($values);
     }
 
     /**
@@ -139,8 +161,14 @@ class AnswersUtil
     {
         $map = [];
         foreach ($questionsHolder->getAll() as $question) {
+            /**@var QuestionItem $item мапа обязана собрать абсолютно все варианты, даже если они не попали в ответ (бывает) */
+            foreach ($question->getItems() as $item) {
+                if (!isset($map[$item->getValue()])) {
+                    $map[$item->getValue()] = 0;
+                }
+            }
             $answer = $answersHolder->get($question->getId());
-            if (count($answer->getValue()) > 1) {
+            if (count($answer->getValue()) > 1) { // по-моему устарело, щас все ответы на основе массива. надо проверить
                 throw new \LogicException('This method does not involve range values.');
             }
             $value = $answer->getValue()[0];
@@ -162,7 +190,7 @@ class AnswersUtil
     {
         $newMap = [];
         foreach ($map as $name => $value) {
-            $newMap[$name] = round($value * 100 / $max);
+            $newMap[$name] = $max > 0 ? round($value * 100 / $max) : 0;
         }
         return $newMap;
     }
