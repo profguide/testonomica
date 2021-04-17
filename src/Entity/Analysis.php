@@ -36,6 +36,11 @@ class Analysis
     private ?string $title = null;
 
     /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private ?string $text = null;
+
+    /**
      * @ORM\Column(type="string", nullable=true)
      */
     private ?string $progressPercentVariableName = null;
@@ -87,6 +92,16 @@ class Analysis
     public function setTitle(?string $title): void
     {
         $this->title = $title;
+    }
+
+    public function getText(): ?string
+    {
+        return $this->text;
+    }
+
+    public function setText(?string $text): void
+    {
+        $this->text = $text;
     }
 
     public function getProgressPercentVariableName(): ?string

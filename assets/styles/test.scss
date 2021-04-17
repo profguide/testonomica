@@ -87,6 +87,7 @@
       .test__options_holder .test__option label {
         //padding-left: 0;
       }
+
       .test__options_holder .test__option input {
         display: none;
       }
@@ -111,6 +112,7 @@
     @media (max-width: map-get($grid-breakpoints, 'md')) {
       .btn {
         width: 100%;
+
         &:not(:first-child) {
           margin-top: 10px;
         }
@@ -297,10 +299,12 @@
 
   &__btn-row {
     margin-top: 15px;
+
     button {
       border: 1px solid #f8f8f8;
       border-radius: 75px;
       background: #fff;
+
       span {
         font-size: 25px;
         color: #697177;
@@ -332,5 +336,21 @@
   //}
   img[src$='.svg'] {
     filter: invert(1);
+  }
+}
+
+.result-block-row {
+  margin-bottom: 1rem;
+
+  .progress {
+    margin-bottom: .5rem;
+  }
+
+  &__text {
+    margin-top: .5rem;
+  }
+
+  &__variant {
+    margin-top: .5rem;
   }
 }

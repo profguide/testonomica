@@ -8,7 +8,7 @@ use App\Entity\Test;
 use App\Repository\AnalysisRepository;
 use Doctrine\Common\Collections\Collection;
 
-class AnalysisService
+class AnalysisRenderer
 {
     private AnalysisRepository $analysisRepository;
 
@@ -35,6 +35,9 @@ class AnalysisService
         }
         $output .= $this->renderScale($analysis, $resultData);
         $output .= $this->renderVariant($analysis, $resultData);
+        if ($analysis->getText()) {
+            $output .= '<div class="result-block-row__text">' . $analysis->getText() . '</div>';
+        }
         if (strlen($output) > 0) {
             return '<div class="result-block-row">' . $output . '</div>';
         }
@@ -46,11 +49,11 @@ class AnalysisService
         if (!$analysis->getProgressPercentVariableName()) {
             return null;
         }
-        if (!isset($resultData[$analysis->getProgressPercentVariableName()])) {
-            throw new \RuntimeException('Result data does not have ' . $analysis->getProgressPercentVariableName());
+        $percentage = self::namedVariableValue($resultData, $analysis->getProgressPercentVariableName());
+        if ($percentage == null) {
+            throw new \RuntimeException('Result data does not have ' . $analysis->getProgressPercentVariableName() . '.');
         }
-        $percentage = $resultData[$analysis->getProgressPercentVariableName()];
-        $value = $resultData[$analysis->getProgressVariableName()] ?? null;
+        $value = self::namedVariableValue($resultData, $analysis->getProgressVariableName());
         if ($value) {
             $maxValue = $analysis->getProgressVariableMax();
             $text = $value . ' из ' . $maxValue;
@@ -71,7 +74,7 @@ class AnalysisService
     {
         foreach ($analysis->getBlocks() as $block) {
             if ($this->conditionsPass($block->getConditions(), $resultData)) {
-                return $block->getText();
+                return '<div class="result-block-row__variant">' . $block->getText() . '</div>';
             }
         }
         return null;
@@ -115,5 +118,26 @@ class AnalysisService
             default:
                 throw new \InvalidArgumentException("Unsupported comparison operation $comparison");
         }
+    }
+
+    /**
+     * Returns nested a nested value of named variable
+     * E.g. REPEATS.Racionalniy.percentage
+     *
+     * @param array $resultData
+     * @param string $varName
+     * @return string|null
+     */
+    private static function namedVariableValue(array $resultData, string $varName): ?string
+    {
+        $varLevels = explode('.', $varName);
+        $value = $resultData;
+        foreach ($varLevels as $varLevel) {
+            if (!isset($value[$varLevel])) {
+                return null;
+            }
+            $value = $value[$varLevel];
+        }
+        return $value;
     }
 }

@@ -54,13 +54,25 @@ class AnswersUtil
     }
 
     /**
-     * Counts the maximum sum of repeated value.
+     * Counts the maximum sum of repeated values.
      * todo phpunit
      *
      * @param QuestionsHolder $questionsHolder
      * @return int
      */
     public static function maxRepeated(QuestionsHolder $questionsHolder): int
+    {
+        return max(AnswersUtil::maxRepeatedValues($questionsHolder)) ?? 0;
+    }
+
+    /**
+     * Counts all maximum sums of every repeated value.
+     * todo phpunit
+     *
+     * @param QuestionsHolder $questionsHolder
+     * @return array
+     */
+    private static function maxRepeatedValues(QuestionsHolder $questionsHolder): array
     {
         $values = [];
         foreach ($questionsHolder->getAll() as $question) {
@@ -72,7 +84,7 @@ class AnswersUtil
                 $values[$item->getValue()]++;
             }
         }
-        return max($values);
+        return $values;
     }
 
     /**
@@ -130,6 +142,7 @@ class AnswersUtil
     /**
      * Counts percentage of repeated values and returns double map with percentage and sum of repeated values
      * e.g. ['1' => 'yes', '2' => 'yes', 3 => 'no']
+     *
      * @param QuestionsHolder $questionsHolder
      * @param AnswersHolder $answersHolder
      * @param int $max - what is 100% value
@@ -139,11 +152,15 @@ class AnswersUtil
     {
         $newMap = [];
         $valuesSums = AnswersUtil::sumValuesMap($questionsHolder, $answersHolder);
-        $percentageMap = AnswersUtil::percentageOfSet($valuesSums, $max);
+        // процент значения от максимального для всех значений
+        $totalPercentageMap = AnswersUtil::percentageOfSet($valuesSums, $max);
+        // процент значения от максимально возможного для этого значения
+        $valuesPercentage = AnswersUtil::valuesPercentageOfSet($valuesSums, $questionsHolder);
         foreach ($valuesSums as $name => $value) {
             $newMap[$name] = [
                 'value' => $value,
-                'percentage' => $percentageMap[$name]
+                'percentage' => $totalPercentageMap[$name],
+                'percentage_value' => $valuesPercentage[$name]
             ];
         }
         return $newMap;
@@ -182,6 +199,7 @@ class AnswersUtil
 
     /**
      * Counts percentage for array
+     *
      * @param array $map e.g. ['yes' => 2, 'no' => 1]
      * @param int $max - what is 100% value
      * @return array ['yes' => 100, 'no' => 50]
@@ -248,10 +266,26 @@ class AnswersUtil
         }
         return $texts;
     }
+//
+//    private static function percentageByName(QuestionsHolder $questionsHolder, string $name)
+//    {
+////        foreach ($questionsHolder->getAll())
+//    }
 
     /**
-     * Считает сумму максимальных вариантов ответов для указанных вопросов
-     * Могло бы пригодиться, чтобы уменьшить человеческий фактор, когда считают вручную
+     * Counts percentage for every value individually
+     *
+     * @param array $map
+     * @param QuestionsHolder $questionsHolder
+     * @return array
      */
-    // public static function questionMaximumValuesSum(array $questions)
+    private static function valuesPercentageOfSet(array $map, QuestionsHolder $questionsHolder): array
+    {
+        $percentages = [];
+        $maximums = AnswersUtil::maxRepeatedValues($questionsHolder);
+        foreach ($maximums as $name => $max) {
+            $percentages[$name] = $max > 0 ? round($map[$name] * 100 / $max) : 0;
+        }
+        return $percentages;
+    }
 }

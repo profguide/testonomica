@@ -4,13 +4,12 @@ namespace App\Controller;
 
 use App\Entity\Result;
 use App\Entity\Test;
-use App\Service\AnalysisService;
 use App\Service\AnswerService;
 use App\Service\CalculatorService;
 use App\Service\CategoryService;
 use App\Service\ResultService;
 use App\Service\TestService;
-use App\Test\ResultUtil;
+use App\Test\ResultRenderer;
 use App\Test\TestStatus;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -38,7 +37,8 @@ class TestController extends AbstractController
 
     private CalculatorService $calculatorService;
 
-    private AnalysisService $analysisService;
+    private ResultRenderer $resultRenderer;
+
 
     public function __construct(
         TestService $testService,
@@ -46,14 +46,15 @@ class TestController extends AbstractController
         AnswerService $answerService,
         ResultService $resultService,
         CalculatorService $calculatorService,
-        AnalysisService $resultBlockService)
+        ResultRenderer $resultRenderer
+    )
     {
         $this->testService = $testService;
         $this->categoryService = $categoryService;
         $this->answerService = $answerService;
         $this->resultService = $resultService;
         $this->calculatorService = $calculatorService;
-        $this->analysisService = $resultBlockService;
+        $this->resultRenderer = $resultRenderer;
     }
 
     /**
@@ -85,6 +86,7 @@ class TestController extends AbstractController
      * Логичнее разместить в TestApiStatelessController, но там нужна скорость,
      * а калькулятор - это дполнительные ветви зависимостей. Нужно провести исследование.
      * Есть еще вариант сделать отдельный контроллер для этого TestApiStatelessResultController
+     *
      * @Route("/result-raw/{uuid}/", name="result_raw")
      * @param string $uuid
      * @param SerializerInterface $serializer
@@ -179,20 +181,6 @@ class TestController extends AbstractController
             'uuid' => $result->getUuid(),
             'status' => TestStatus::finished()
         ], $this->calculatorService->calculate($result));
-
-        $resultBlocksOutput = $this->analysisService->render($test, $data);
-
-        // templated from the field
-        if ($test->getResultView() != null) {
-            $template = "{% extends('tests/result.html.twig') %}{% block result %}<div class=\"container\">"
-                . $resultBlocksOutput
-                . $test->getResultView()
-                . "</div>{% endblock %}";
-            $template = $this->get('twig')->createTemplate($template);
-            return new Response($template->render($data));
-        } else {
-            // templated by filename
-            return $this->render('tests/result/' . ResultUtil::resolveViewName($test) . '.html.twig', $data);
-        }
+        return $this->resultRenderer->render($test, $data);
     }
 }

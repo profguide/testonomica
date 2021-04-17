@@ -1,43 +1,46 @@
 {% extends '@EasyAdmin/crud/form_theme.html.twig' %}
 
-{#{% block questions_collection_entry_widget %}#}
-{#    {% set is_complex = form_parent(form).vars.ea_crud_form.ea_field.customOptions.get('entryIsComplex') ?? false %}#}
+{# {% block questions_collection_entry_widget %} #}
+{# {% set is_complex = form_parent(form).vars.ea_crud_form.ea_field.customOptions.get('entryIsComplex') ?? false %} #}
 
-{#    <div class="field-collection-item {{ is_complex ? 'field-collection-item-complex' }}">#}
-{#         {{ form_widget(form) }} #}
-{#        {% if form.children|length > 0 %}#}
-{#            {% for question in form.children %}#}
-{#                <div class="row">#}
-{#                    <div class="col">#}
-{#                        {{ form(question.name) }}#}
-{#                    </div>#}
-{#                </div>#}
-{#            {% endfor %}#}
-{#        {% endif %}#}
+{# <div class="field-collection-item {{ is_complex ? 'field-collection-item-complex' }}"> #}
+{# {{ form_widget(form) }} #}
+{# {% if form.children|length > 0 %} #}
+{# {% for question in form.children %} #}
+{# <div class="row"> #}
+{# <div class="col"> #}
+{# {{ form(question.name) }} #}
+{# </div> #}
+{# </div> #}
+{# {% endfor %} #}
+{# {% endif %} #}
 
-{#        {% if form_parent(form).vars.allow_delete|default(false) %}#}
-{#            <button type="button" class="btn btn-link field-collection-delete-button"#}
-{#                    title="{{ 'action.remove_item'|trans({}, 'EasyAdminBundle') }}"#}
-{#                    onclick="this.closest('.form-group').remove(); return false;">#}
-{#                <i class="fas fa-times"></i>#}
-{#            </button>#}
-{#        {% endif %}#}
-{#    </div>#}
-{#{% endblock questions_collection_entry_widget %}#}
+{# {% if form_parent(form).vars.allow_delete|default(false) %} #}
+{# <button type="button" class="btn btn-link field-collection-delete-button" #}
+{# title="{{ 'action.remove_item'|trans({}, 'EasyAdminBundle') }}" #}
+{# onclick="this.closest('.form-group').remove(); return false;"> #}
+{# <i class="fas fa-times"></i> #}
+{# </button> #}
+{# {% endif %} #}
+{# </div> #}
+{# {% endblock questions_collection_entry_widget %} #}
 
-{% block questions_collection_widget %}
+{% block my_collection_widget %}
     {{ block('form_widget') }}
 
     {% if allow_add|default(false) %}
         <button type="button" class="btn btn-link field-collection-add-button">
-            <i class="fa fa-plus pr-1"></i>
-            Добавить вопрос
-{#             {{ 'action.add_new_item'|trans({}, 'EasyAdminBundle') }}#}
+            <i class="fa fa-plus pr-1"></i> {{ colbtn }}
         </button>
     {% endif %}
-{% endblock questions_collection_widget %}
+{% endblock my_collection_widget %}
 
 {% block _Test_questions_widget %}
-    {{ block('questions_collection_widget') }}
-{#    {{ block('collection_widget') }}#}
+    {% set colbtn = 'Добавить вопрос' %}
+    {{ block('my_collection_widget') }}
+{% endblock %}
+
+{% block _Test_analyses_widget %}
+    {% set colbtn = 'Добавить значение' %}
+    {{ block('my_collection_widget') }}
 {% endblock %}

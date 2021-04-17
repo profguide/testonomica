@@ -135,11 +135,13 @@ class AnswersUtilTest extends KernelTestCase
         $this->assertEquals([
             'yes' => [
                 'value' => 2,
-                'percentage' => 100
+                'percentage' => 100,
+                'percentage_value' => 100
             ],
             'no' => [
                 'value' => 1,
-                'percentage' => 50
+                'percentage' => 50,
+                'percentage_value' => 100
             ]
         ], AnswersUtil::percentageWithValues(new QuestionsHolder(self::buildQuestions([
             // no matter what values are here, but their count and ids must be the same

@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Analysis;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -16,16 +17,14 @@ class AnalysisType extends AbstractType
         $builder
             ->add('title', TextType::class, [
                 'label' => 'Заголовок (необязательно)',
-                'required' => true
+            ])->add('text', TextareaType::class, [
+                'label' => 'Описание (необязательно)',
             ])->add('progressPercentVariableName', TextType::class, [
-                'label' => 'Заполнение прогрессбара',
-                'required' => true
+                'label' => 'Процентная переменная прогресбара',
             ])->add('progressVariableName', TextType::class, [
-                'label' => 'Чистое значение',
-                'required' => true
+                'label' => 'Переменная значения прогрессбара',
             ])->add('progressVariableMax', TextType::class, [
-                'label' => 'Максимальное значение',
-                'required' => true
+                'label' => 'Максимальное значение прогрессбара',
             ])
             ->add('blocks', CollectionType::class, [
                 'entry_type' => AnalysisBlockType::class,
