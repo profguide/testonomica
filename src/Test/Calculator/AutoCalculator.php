@@ -69,11 +69,15 @@ class AutoCalculator extends AbstractCalculator
         $repeatedValuesPercentageWithValues = AnswersUtil::percentageWithValues(
             $this->questionsHolder, $this->answersHolder, $maxRepeatedValues);
 
+        // общая сумма повторяющихся значений, используется в Тест на эмпатические способности
+        $repeatedValuesSum = AnswersUtil::sumValuesInDoubleMap($repeatedValuesPercentageWithValues);
+
         return [
             'SUM' => $sum,
             'SCALE' => $scale,
             'VALUES' => $integerValuesPercentageWithValues,
             'REPEATS' => $repeatedValuesPercentageWithValues,
+            'REPEATS_SUM' => $repeatedValuesSum,
         ];
     }
 }
