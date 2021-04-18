@@ -88,6 +88,24 @@ class AnswersUtil
     }
 
     /**
+     * Removes negative values from the set
+     * todo: phpunit
+     *
+     * @param array $map , e.g.: ['-1' => ..., '1' => ..., 'some_string' => ...]
+     * @return array, in this case: ['1' => ..., 'some_string' => ...]
+     */
+    public static function removeNegativeKeys(array $map): array
+    {
+        $newMap = [];
+        foreach ($map as $value => $data) {
+            if ((int)$value >= 0) {
+                $newMap[$value] = $data;
+            }
+        }
+        return $newMap;
+    }
+
+    /**
      * Sums values in groups and returns map of sums by group names.
      * @param QuestionsHolder $questionsHolder
      * @param AnswersHolder $answersHolder e.g.
@@ -146,7 +164,7 @@ class AnswersUtil
      * @param QuestionsHolder $questionsHolder
      * @param AnswersHolder $answersHolder
      * @param int $max - what is 100% value
-     * @return array e.g. ['yes' => ['value' => 2, 'percentage' => 100], 'no' => ['value' => 1, 'percentage' => 50]]
+     * @return array e.g. ['yes' => ['sum' => 2, 'percentage' => 100], 'no' => ['sum' => 1, 'percentage' => 50]]
      */
     public static function percentageWithValues(QuestionsHolder $questionsHolder, AnswersHolder $answersHolder, int $max): array
     {
@@ -156,9 +174,9 @@ class AnswersUtil
         $totalPercentageMap = AnswersUtil::percentageOfSet($valuesSums, $max);
         // процент значения от максимально возможного для этого значения
         $valuesPercentage = AnswersUtil::valuesPercentageOfSet($valuesSums, $questionsHolder);
-        foreach ($valuesSums as $name => $value) {
+        foreach ($valuesSums as $name => $sum) {
             $newMap[$name] = [
-                'value' => $value,
+                'sum' => $sum,
                 'percentage' => $totalPercentageMap[$name],
                 'percentage_value' => $valuesPercentage[$name]
             ];
@@ -214,14 +232,14 @@ class AnswersUtil
     }
 
     /**
-     * @param array $map ['yes' => ['value' => 2, 'percentage' => 100], 'no' => ['value' => 1, 'percentage' => 50]
+     * @param array $map ['yes' => ['sum' => 2, ...], 'no' => ['sum' => 1, ...]
      * @return int e.g. 3 as a sum of 2 and 1 in the case above
      */
     public static function sumValuesInDoubleMap(array $map): int
     {
         $sum = 0;
         foreach ($map as $name => $sumMap) {
-            $sum += $sumMap['value'];
+            $sum += $sumMap['sum'];
         }
         return $sum;
     }

@@ -134,12 +134,12 @@ class AnswersUtilTest extends KernelTestCase
     {
         $this->assertEquals([
             'yes' => [
-                'value' => 2,
+                'sum' => 2,
                 'percentage' => 100,
                 'percentage_value' => 100
             ],
             'no' => [
-                'value' => 1,
+                'sum' => 1,
                 'percentage' => 50,
                 'percentage_value' => 100
             ]

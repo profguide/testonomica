@@ -57,27 +57,41 @@ class AutoCalculator extends AbstractCalculator
          *
          */
 
-        // Максимальная сумма числовых значений. В расчет идут и корректные.
-        $maxIntegerValues = AnswersUtil::max($this->questionsHolder);
+        // Общее кол-во вопросов
+        $questionsCount = count($this->questionsHolder->getAll());
+
+        // Максимальная сумма числовых значений, которую можно набрать в тесте
+        $maxSum = AnswersUtil::max($this->questionsHolder);
+
+        // Набранная сумма числовых значений (correct считается как 1)
         $sum = AnswersUtil::sum($this->questionsHolder, $this->answersHolder);
-        $scale = $maxIntegerValues > 0 ? $sum * 100 / $maxIntegerValues : 0;
+
+        // Процент набранных числовых значений от максимальной суммы, которую можно набрать в тесте
+        $percentage = $maxSum > 0 ? $sum * 100 / $maxSum : 0;
+
+        // Мапа вида ['no' => ['sum' => 2, 'percentage' => 50], 'yes' => ['sum' => 1, 'percentage' => 25], ...]
+        // Процент для каждого значения считается от максимальной суммы, которую можно набрать
         $integerValuesPercentageWithValues = AnswersUtil::percentageWithValues(
-            $this->questionsHolder, $this->answersHolder, $maxIntegerValues);
+            $this->questionsHolder, $this->answersHolder, $maxSum);
 
-        // Максимальное кол-во повторяющихся значений для тестов со строковыми значениями, как Климов
-        $maxRepeatedValues = AnswersUtil::maxRepeated($this->questionsHolder);
-        $repeatedValuesPercentageWithValues = AnswersUtil::percentageWithValues(
-            $this->questionsHolder, $this->answersHolder, $maxRepeatedValues);
+        // Мапа вида ['no' => ['sum' => 2, 'percentage' => 50], 'yes' => ['sum' => 1, 'percentage' => 25], ...]
+        // Процент для каждого значения считается от общего кол-ва вопросов
+        $stringValuesPercentageWithValues = AnswersUtil::percentageWithValues(
+            $this->questionsHolder, $this->answersHolder, $questionsCount);
 
-        // общая сумма повторяющихся значений, используется в Тест на эмпатические способности
-        $repeatedValuesSum = AnswersUtil::sumValuesInDoubleMap($repeatedValuesPercentageWithValues);
+        // Та же мапа, но без отрицательных значений
+        $repeatedNonNegativeValuesPercentageWithValues = AnswersUtil::removeNegativeKeys($stringValuesPercentageWithValues);
+
+        // общая сумма неотрицательных(!) значений, используется в Тест на эмпатические способности
+        // подходит для тестов, где есть "неправильные" или "ложные" значения, как в тесте на эмпатические способности
+        $nonNegativeValuesSum = AnswersUtil::sumValuesInDoubleMap($repeatedNonNegativeValuesPercentageWithValues);
 
         return [
             'SUM' => $sum,
-            'SCALE' => $scale,
+            'SCALE' => $percentage,
             'VALUES' => $integerValuesPercentageWithValues,
-            'REPEATS' => $repeatedValuesPercentageWithValues,
-            'REPEATS_SUM' => $repeatedValuesSum,
+            'REPEATS' => $stringValuesPercentageWithValues,
+            'NON_NEGATIVE_ANSWER_VALUES_SUM' => $nonNegativeValuesSum,
         ];
     }
 }

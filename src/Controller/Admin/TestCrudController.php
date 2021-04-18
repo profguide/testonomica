@@ -78,7 +78,7 @@ class TestCrudController extends AbstractCrudController
                 ->allowDelete(true)
                 ->setEntryIsComplex(true)
                 ->setEntryType(AnalysisType::class)
-                ->addCssClass('full-width')
+                ->addCssClass('full-width my-full-width')
                 ->setFormTypeOptions([
                     'by_reference' => false,
                     'label' => false,
@@ -97,7 +97,7 @@ class TestCrudController extends AbstractCrudController
 
             // Вопросы
             FormField::addPanel('Вопросы', 'fa fa-question-circle')
-                ->addCssClass('test-questions-form'), // @see admin.css
+                ->addCssClass('my-full-width'), // @see admin.css
             CollectionField::new('questions', 'Вопросы')
                 ->allowAdd(true)
                 ->allowDelete(true)

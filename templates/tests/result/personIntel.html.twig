@@ -239,11 +239,9 @@
             </div>
 
             <div>
-                <ol>
-                    {% for value in system_values %}
-                        <li style="opacity: 0.{{ 100 - loop.index * 3 }};">{{ value }}</li>
-                    {% endfor %}
-                </ol>
+                {% for value in system_values %}
+                    {{ value.description }}
+                {% endfor %}
             </div>
         </div>
     </section>
