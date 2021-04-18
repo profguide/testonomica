@@ -1,17 +1,5 @@
 #!/bin/bash
-if [[ "assets" == $1 ]]; then
-  if [ -d "public/build_tmp" ]; then
-    rm -r public/build_tmp
-  fi
-  mkdir public/build_tmp
-  cp public/build/* public/build_tmp
-  echo "Copy tmp assets to remote server..."
-  scp -r public/build_tmp $2:/home/wolfandman/www/testonomica_php/public/
-  echo "Replace assets..."
-  ssh $2 /home/wolfandman/www/testonomica_php/replace_assets
-  rm -r public/build_tmp
-  echo "Done"
-elif [[ "cc" == $1 ]]; then
+if [[ "cache" == $1 ]]; then
   echo "Clear cache"
   php bin/console cache:clear
 fi

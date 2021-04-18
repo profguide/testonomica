@@ -27,4 +27,5 @@ yarn-error.log
 ### my
 /public/images/thumbnails/
 /tests/cover/
+deploy
 replace_assets
