@@ -78,6 +78,7 @@ class TestCrudController extends AbstractCrudController
                 ->allowDelete(true)
                 ->setEntryIsComplex(true)
                 ->setEntryType(AnalysisType::class)
+                ->addCssClass('full-width')
                 ->setFormTypeOptions([
                     'by_reference' => false,
                     'label' => false,

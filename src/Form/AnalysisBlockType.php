@@ -22,10 +22,12 @@ class AnalysisBlockType extends AbstractType
                 'entry_options' => [
                     'label' => false,
                     'row_attr' => [
-                        'class' => 'card mb-3'
+                        'class' => 'mb-3 border',
+                        'style' => 'padding: 15px'
                     ],
                     'attr' => [
-                        'class' => 'card-body'
+                        'class' => 'form-row',
+                        'style' => 'margin: 0;'
                     ]
                 ],
                 'prototype' => true,

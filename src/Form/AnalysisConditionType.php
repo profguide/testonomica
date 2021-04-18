@@ -18,6 +18,9 @@ class AnalysisConditionType extends AbstractType
         $builder
             ->add('variableName', TextType::class, [
                 'label' => 'Переменная',
+                'row_attr' => [
+                    'class' => 'col-4',
+                ]
             ])->add('comparison', ChoiceType::class, [
                 'label' => 'Сравнение',
                 'choices' => [
@@ -26,9 +29,15 @@ class AnalysisConditionType extends AbstractType
                     'меньше' => '<',
                     'больше или равно' => '>=',
                     'меньше или равно' => '<='
+                ],
+                'row_attr' => [
+                    'class' => 'col-4',
                 ]
             ])->add('referentValue', TextType::class, [
                 'label' => 'Значение',
+                'row_attr' => [
+                    'class' => 'col-4',
+                ]
             ]);
     }
 
