@@ -94,10 +94,10 @@ class AnalysisRenderer
     {
         $variableName = $condition->getVariableName();
         // нет переменной - не удовлетворяет
-        if (!isset($resultData[$variableName])) {
+        $resultValue = self::namedVariableValue($resultData, $variableName);
+        if (!$resultValue) {
             return false;
         }
-        $resultValue = $resultData[$variableName];
         $referentValue = $condition->getReferentValue();
         return $this->compare((int)$resultValue, $referentValue, $condition->getComparison());
     }
