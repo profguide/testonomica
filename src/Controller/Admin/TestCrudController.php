@@ -97,7 +97,7 @@ class TestCrudController extends AbstractCrudController
 
             // Вопросы
             FormField::addPanel('Вопросы', 'fa fa-question-circle')
-                ->addCssClass('my-full-width'), // @see admin.css
+                ->addCssClass('my-full-width questions-panel'), // @see admin.css
             CollectionField::new('questions', 'Вопросы')
                 ->allowAdd(true)
                 ->allowDelete(true)
@@ -108,7 +108,10 @@ class TestCrudController extends AbstractCrudController
                     'label' => false,
                     'prototype' => true,
                     'entry_options' => [
-                        'label' => false,
+//                        'label' => 'asd',
+                        'row_attr' => [
+                            'class' => 'mb-3'
+                        ]
                     ],
                 ])
         ];
