@@ -23,7 +23,7 @@ class AnalysisBlockType extends AbstractType
                     'label' => false,
                     'row_attr' => [
                         'class' => 'mb-3 border',
-                        'style' => 'padding: 15px'
+                        'style' => 'padding: 0 15px'
                     ],
                     'attr' => [
                         'class' => 'form-row',

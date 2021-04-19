@@ -1,22 +1,23 @@
 import $ from 'jquery';
 
+// Переменные калькулятора
 $(() => {
-    // Collect default values
+    // Default
     const VARIABLES = {
         'SUM': 'Набранная сумма всех числовых значений',
         'SCALE': 'Процент всех числовых значений от максимума',
         'NON_NEGATIVE_ANSWER_VALUES_SUM': 'Сумма всех неотрицательных значений (числа, строки)',
     };
 
-    // Add variables from questions
+    // Analysis questions and pushing variables
     const grabQuestionsVars = () => {
         $("input[name*='[main][value]']").each(function () {
             const value = $(this).val();
-            const text = $(this).parent().closest(".form-widget-compound").find("input[name*='[main][text]']").val();
-            const textQuoted = "«" + text + "»"
-            VARIABLES["REPEATS." + value + ".sum"] = "Ответ " + textQuoted + ": кол-во ответов";
-            VARIABLES["REPEATS." + value + ".percentage"] = "Ответ " + textQuoted + ": процент кол-ва от общего числа ответов";
-            VARIABLES["REPEATS." + value + ".percentage_value"] = "Ответ " + textQuoted + ": процент кол-ва от максимума ответа " + textQuoted;
+            // const text = $(this).parent().closest(".form-widget-compound").find("input[name*='[main][text]']").val();
+            const quotedValue = "«" + value + "»"
+            VARIABLES["REPEATS." + value + ".sum"] = "Ответ " + quotedValue + ": кол-во ответов";
+            VARIABLES["REPEATS." + value + ".percentage"] = "Ответ " + quotedValue + ": процент кол-ва от общего числа ответов";
+            VARIABLES["REPEATS." + value + ".percentage_value"] = "Ответ " + quotedValue + ": процент кол-ва от максимума ответа " + quotedValue;
         });
     }
     grabQuestionsVars();
@@ -27,7 +28,7 @@ $(() => {
         $(VARIABLES_SELECT_NODE).append($("<option>").attr('value', value).text(name));
     });
 
-    //
+    // replaces input element with a new select element
     const replaceInputWithSelect = (input) => {
         const parent = $(input).parent();
         // склонируем select
@@ -45,10 +46,49 @@ $(() => {
         // добавим селект
         $(parent).append(select);
     }
-    // 4. call this function on load
-    // 5. call this function on add elements
 
+    // onload find all inputs with variables and replace them with a select
     $("input[name*='[variableName]']").each(function () {
         replaceInputWithSelect(this);
+    });
+});
+
+// показ/скрытие блока с правильными и неправильными ответами по включенной галочке
+$(() => {
+    const PARENT_WIDGET = ".question-widget";
+    const CHECKBOX = '.question-checkbox-show-answer';
+    const BLOCK = '.question-show-answer-block';
+    const toggle = function (input) {
+        if ($(input).is(':checked')) {
+            $(input).closest(PARENT_WIDGET).find(BLOCK).show();
+        } else {
+            $(input).closest(PARENT_WIDGET).find(BLOCK).hide();
+        }
+    }
+    $(CHECKBOX).on('click', function () {
+        toggle(this);
+    });
+    $(CHECKBOX).each(function () {
+        toggle(this);
+    });
+});
+
+// .option-field
+// элементы формы скрыты если в них нет значений
+// они показываются при нажатии на заголовок
+$(() => {
+    $('.optional-field > label, .optional-field > legend').on('click', function () {
+        $(this).parent().find('.form-widget:first').toggle();
+    });
+    $(".optional-field > .form-widget").each(function () {
+        let empty = true;
+        $(this).find('.form-control').each((i, o) => {
+            if ($(o).val().length > 0) {
+                empty = false;
+            }
+        });
+        if (empty) {
+            $(this).hide();
+        }
     });
 });

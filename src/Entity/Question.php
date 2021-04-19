@@ -56,28 +56,24 @@ class Question
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @var string
      */
-    private $nameEn;
+    private ?string $nameEn = null;
 
     /**
      * @ORM\Column(type="text", nullable=true)
-     * @var string
      */
-    private $text;
+    private ?string $text = null;
 
     /**
      * @ORM\Column(type="text", nullable=true)
-     * @var string
      */
-    private $textEn;
+    private ?string $textEn = null;
 
     /**
      * Ex-group
      * @ORM\Column(type="string", nullable=true)
-     * @var string
      */
-    private $variety;
+    private ?string $variety = null;
 
     /**
      * @ORM\Column(type="datetime", name="updated_at")
@@ -220,50 +216,32 @@ class Question
         $this->nameEn = $nameEn;
     }
 
-    /**
-     * @return string
-     */
     public function getText(): ?string
     {
         return $this->text;
     }
 
-    /**
-     * @param string $text
-     */
-    public function setText(string $text): void
+    public function setText(?string $text): void
     {
         $this->text = $text;
     }
 
-    /**
-     * @return string
-     */
     public function getTextEn(): ?string
     {
         return $this->textEn;
     }
 
-    /**
-     * @param string $textEn
-     */
-    public function setTextEn(string $textEn): void
+    public function setTextEn(?string $textEn): void
     {
         $this->textEn = $textEn;
     }
 
-    /**
-     * @return string
-     */
     public function getVariety(): string
     {
         return $this->variety;
     }
 
-    /**
-     * @param string $variety
-     */
-    public function setVariety(string $variety): void
+    public function setVariety(?string $variety): void
     {
         $this->variety = $variety;
     }

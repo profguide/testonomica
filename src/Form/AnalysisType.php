@@ -19,12 +19,12 @@ class AnalysisType extends AbstractType
             ->add('title', TextType::class, [
                 'label' => 'Заголовок (необязательно)',
                 'row_attr' => [
-                    'class' => 'col-12',
+                    'class' => 'col-12 optional-field',
                 ]
             ])->add('text', TextareaType::class, [
                 'label' => 'Описание (необязательно)',
                 'row_attr' => [
-                    'class' => 'col-12',
+                    'class' => 'col-12 optional-field',
                 ]
             ])
             ->add(
@@ -36,6 +36,7 @@ class AnalysisType extends AbstractType
                         'style' => 'margin: 0;'
                     ],
                     'row_attr' => [
+                        'class' => 'optional-field',
                         'style' => 'margin:0;padding:0'
                     ]
                 ])
@@ -65,7 +66,8 @@ class AnalysisType extends AbstractType
                         'class' => 'card mb-3'
                     ],
                     'attr' => [
-                        'class' => 'card-body'
+                        'class' => 'card-body',
+                        'style' => 'padding: 0 15px'
                     ]
                 ],
                 'prototype' => true,

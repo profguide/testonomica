@@ -47,10 +47,14 @@ class QuestionItemType extends AbstractType
                             'style' => 'padding-bottom: 0'
                         ]
                     ])
-            )
-            ->add('correct', CheckboxType::class, [
-                'label' => 'Является правильным ответом',
-            ]);
+                    ->add('correct', CheckboxType::class, [
+                        'label' => 'Является правильным ответом',
+                        'row_attr' => [
+                            'class' => 'col-4',
+                            'style' => 'padding-bottom: 0'
+                        ]
+                    ])
+            );
     }
 
     public function configureOptions(OptionsResolver $resolver)

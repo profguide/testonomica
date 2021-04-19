@@ -58,32 +58,43 @@ class QuestionType extends AbstractType
             ->add('text', TextareaType::class, [
                 'label' => 'Дополнительный текст (необязательно)',
                 'row_attr' => [
-                    'class' => 'full-width'
+                    'class' => 'optional-field full-width'
                 ]
             ])
 //            ->add('text_en', TextareaType::class, [
 //                'label' => 'Дополнительный текст (EN)',
 //            ])
-            ->add('enabled_back', CheckboxType::class, [
-                'label' => 'Кнопка назад доступна',
-            ])
-            ->add('enabled_forward', CheckboxType::class, [
-                'label' => 'Кнопка пропустить доступна',
-            ])
+            ->add(
+                $builder->create('buttons', FormType::class, [
+                    'inherit_data' => true,
+                    'label' => false,
+                    'attr' => [
+                        'class' => 'form-row'
+                    ]])
+                    ->add('enabled_back', CheckboxType::class, [
+                        'label' => 'Кнопка назад доступна',
+                    ])
+                    ->add('enabled_forward', CheckboxType::class, [
+                        'label' => 'Кнопка пропустить доступна',
+                    ])->add('show_answer', CheckboxType::class, [
+                        'label' => 'Моментальный показ правильного ответа',
+                        'attr' => [
+                            'class' => 'question-checkbox-show-answer' // js see admin.js
+                        ]
+                    ])
+            )
             ->add(
                 $builder->create('correct_block', FormType::class, [
                     'inherit_data' => true,
                     'label' => false,
                     'row_attr' => [
-                        'class' => 'border p-3'
-                    ]
-                ])->add('show_answer', CheckboxType::class, [
-                    'label' => 'Моментальный показ правильного ответа',
-                ])->add('correct', TextType::class, [
-                    'label' => 'Правильный ответ (если включен показ)',
-                ])->add('wrong', TextType::class, [
-                    'label' => 'Неправильный ответ (если включен показ)',
-                ])
+                        'class' => 'border p-3 question-show-answer-block' // js see admin.js
+                    ]])
+                    ->add('correct', TextType::class, [
+                        'label' => 'Правильный ответ (если включен показ)',
+                    ])->add('wrong', TextType::class, [
+                        'label' => 'Неправильный ответ (если включен показ)',
+                    ])
 //                ->add('correct_en', TextType::class, [
 //                    'label' => 'Правильный ответ (EN) (если включен показ)',
 //                ])
@@ -99,7 +110,8 @@ class QuestionType extends AbstractType
                         'class' => 'card mb-3'
                     ],
                     'attr' => [
-                        'class' => 'card-body'
+                        'class' => 'card-body',
+                        'style' => 'padding: 0 20px'
                     ]
                 ],
                 'prototype' => true,
@@ -115,6 +127,9 @@ class QuestionType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Question::class,
+            'row_attr' => [
+                'class' => 'question-widget'
+            ]
 //            'prototype' => true,
         ]);
     }
