@@ -17,19 +17,19 @@ class FunctionsExtension extends AbstractExtension
     {
         return [
             new TwigFunction('progress', [$this, 'progress']),
-            new TwigFunction('progress_percentage', [$this, 'progressPercentage']),
+            new TwigFunction('progress_value_percentage', [$this, 'progressValuePercentage']),
             new TwigFunction('thumbnails', [$this, 'thumbnails']),
         ];
     }
 
-    public function progressPercentage(array $data, $label = null): Markup
+    public function progressValuePercentage(array $data, $label = null): Markup
     {
         $string = '<div class="progress">
             <div class="progress-bar" role="progressbar" 
-                 style="width: ' . $data['percentage'] . '%;"
-                 aria-valuenow="' . $data['percentage'] . '" 
+                 style="width: ' . $data['percentage_value'] . '%;"
+                 aria-valuenow="' . $data['percentage_value'] . '" 
                  aria-valuemin="0"
-                 aria-valuemax="100">' . $data['percentage'] . '% 
+                 aria-valuemax="100">' . $data['percentage_value'] . '% 
             </div>
         </div>';
         if ($label) {
