@@ -38,6 +38,9 @@
 {% block _Test_questions_widget %}
     {% set colbtn = 'Добавить вопрос' %}
     {{ block('my_collection_widget') }}
+    <button type="button" class="btn btn-link field-collection-copy-button">
+        <i class="fa fa-copy pr-1"></i> Копировать
+    </button>
 {% endblock %}
 
 {% block _Test_analyses_widget %}

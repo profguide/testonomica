@@ -65,7 +65,7 @@ $(() => {
             $(input).closest(PARENT_WIDGET).find(BLOCK).hide();
         }
     }
-    $(CHECKBOX).on('click', function () {
+    $('body').on('click', CHECKBOX, function () {
         toggle(this);
     });
     $(CHECKBOX).each(function () {
@@ -77,7 +77,7 @@ $(() => {
 // элементы формы скрыты если в них нет значений
 // они показываются при нажатии на заголовок
 $(() => {
-    $('.optional-field > label, .optional-field > legend').on('click', function () {
+    $('body').on('click', '.optional-field > label, .optional-field > legend', function () {
         $(this).parent().find('.form-widget:first').toggle();
     });
     $(".optional-field > .form-widget").each(function () {
