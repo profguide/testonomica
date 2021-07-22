@@ -726,7 +726,7 @@
             </options>
         </item>
         <item id="308" group="empathy">
-            <name>Вы расстраиваитесь, если видете плачущего человека</name>
+            <name>Вы расстраиваетесь, если видите плачущего человека</name>
             <options>
                 <option value="1">Да</option>
                 <option value="0">Нет</option>
