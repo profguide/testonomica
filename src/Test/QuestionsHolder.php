@@ -33,6 +33,18 @@ class QuestionsHolder
         return $this->byGroups;
     }
 
+    public function byGroupsMask(string $mask = "/(\w+)[-]\d+/"): array
+    {
+        $groups = [];
+        /**@var Question $question */
+        foreach ($this->questions as $question) {
+            preg_match($mask, $question->getVariety(), $matches);
+            $maskGroupName = $matches[1];
+            $groups[$maskGroupName][] = $question;
+        }
+        return $groups;
+    }
+
     public function group(string $name)
     {
         $groups = $this->byGroups();

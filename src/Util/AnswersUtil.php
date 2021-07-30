@@ -121,6 +121,20 @@ class AnswersUtil
         return $sums;
     }
 
+    public static function questionsByGroupMask()
+    {
+
+    }
+
+    public static function sumByGroupsMask(QuestionsHolder $questionsHolder, AnswersHolder $answersHolder, string $mask = "/(\w+)[-]\d+/"): array
+    {
+        $sums = [];
+        foreach ($questionsHolder->byGroupsMask($mask) as $name => $questions) {
+            $sums[$name] = AnswersUtil::sum(new QuestionsHolder($questions), $answersHolder);
+        }
+        return $sums;
+    }
+
     /**
      * Counts sum of array values
      * @param array $sums ['bmw' => 2, 'mercedes' => 2, 'ford' => 1]. Sum is 5
