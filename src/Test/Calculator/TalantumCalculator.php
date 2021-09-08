@@ -7,6 +7,7 @@ namespace App\Test\Calculator;
 use App\Test\AbstractCalculator;
 use App\Test\QuestionsHolder;
 use App\Util\AnswersUtil;
+use Symfony\Component\DomCrawler\Crawler;
 
 class TalantumCalculator extends AbstractCalculator
 {
@@ -47,6 +48,8 @@ class TalantumCalculator extends AbstractCalculator
         'search-2' => 'Поисковая активность на работе и в учебе',
     ];
 
+    private static $resultXml;
+
     function calculate(): array
     {
         $skills = [];
@@ -68,17 +71,47 @@ class TalantumCalculator extends AbstractCalculator
             $groupQuestionHolder = new QuestionsHolder($group);
             $sum = AnswersUtil::sum($groupQuestionHolder, $this->answersHolder);
             $max = AnswersUtil::max($groupQuestionHolder);
+            $percentage = round($sum * 100 / $max);
             $skillName = strstr($name, '-', true);
             $skills[$skillName]['groups'][$name] = [
                 'name' => self::SKILL_GROUP_NAMES[$name],
                 'sum' => $sum,
                 'max' => $max,
-                'percentage' => round($sum * 100 / $max)
+                'percentage' => $percentage,
+                'text' => $this->textGroup($skillName, $name, $percentage),
             ];
         }
 
         return [
             'skills' => $skills,
         ];
+    }
+
+    private function textGroup(string $skillId, string $groupId, float $percentage): string
+    {
+        $name = (function () use ($percentage) {
+            if ($percentage < 34) {
+                return 'minus';
+            } elseif ($percentage < 67) {
+                return 'normal';
+            } else {
+                return 'plus';
+            }
+        })();
+        $skill = $this->getXml()->children($skillId);
+        $groups = $skill->children('groups');
+        $group = $groups->children($groupId);
+        $text = $group->children($name);
+        return $text->text();
+    }
+
+    private function getXml(): Crawler
+    {
+        if (empty(self::$resultXml)) {
+            $filename = $this->kernel->getProjectDir() . "/xml/result/talantum.xml";
+            $fileContent = file_get_contents($filename);
+            self::$resultXml = new Crawler($fileContent);
+        }
+        return self::$resultXml;
     }
 }
