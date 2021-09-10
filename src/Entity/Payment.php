@@ -52,7 +52,7 @@ class Payment
     /**
      * @ORM\Column(type="boolean", nullable=false, options={"default" = 0})
      */
-    private bool $testMode;
+    private bool $testMode = false;
 
     /**
      * @ORM\Column(type="datetime", name="created_at", nullable=false)
