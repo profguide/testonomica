@@ -9,16 +9,20 @@ namespace App\Controller;
 
 use App\Entity\Provider;
 use App\Entity\Service;
+use App\Payment\TokenableInterface;
 use App\Repository\ProviderRepository;
 use App\Repository\ServiceRepository;
 use App\Service\ProviderPaymentService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpKernel\Exception\PreconditionFailedHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
+ * Генерирует токен для доступа к услуге или токен на оплату услуги
+ * Запрос должен идти скрытно.
+ *
  * https://testonomica.com/partner/api/token/
  * @Route("/partner/api", name="partner.api.")
  */
@@ -27,14 +31,11 @@ class PartnerApiController extends AbstractController
     // todo убрать, когда тестометрика начнет слать по новому
     const SERVICE_SLUG_DEFAULT = 'service_1';
 
-    /**@var ProviderPaymentService */
-    private $paymentService;
+    private ProviderPaymentService $paymentService;
 
-    /**@var ProviderRepository */
-    private $providerRepository;
+    private ProviderRepository $providers;
 
-    /**@var ServiceRepository */
-    private $serviceRepository;
+    private ServiceRepository $services;
 
     public function __construct(
         ProviderPaymentService $providerPaymentService,
@@ -42,53 +43,70 @@ class PartnerApiController extends AbstractController
         ServiceRepository $serviceRepository)
     {
         $this->paymentService = $providerPaymentService;
-        $this->providerRepository = $providerRepository;
-        $this->serviceRepository = $serviceRepository;
+        $this->providers = $providerRepository;
+        $this->services = $serviceRepository;
     }
 
     /**
      * Возвращает токен оплаты или токен доступа.
      * @Route("/token/", name="get_token")
      * @param Request $request
-     * @example /token/?token=12313&user=1&service=proforientation
      * @return JsonResponse
+     * @example /token/?token=12313&user=1&service=proforientation
      */
-    public function getToken(Request $request)
+    public function getToken(Request $request): JsonResponse
     {
         $providerToken = $request->get('token');
+        self::guardProviderToken($providerToken);
         $providerUser = $request->get('user');
+        self::guardProviderUser($providerUser);
         $serviceSlug = $request->get('service', self::SERVICE_SLUG_DEFAULT);
-        $provider = $this->loadProviderByToken($providerToken);
-        $service = $this->loadServiceBySlug($serviceSlug);
-        if ($this->isFreeAccessAllowed($provider)) {
-            $tokenableObject = $this->paymentService->createAccessToken($service);
-        } else {
-            $tokenableObject = $this->paymentService->getToken($service, $provider, $providerUser);
-        }
+        $provider = $this->providers->getByToken($providerToken);
+        $service = $this->services->getOneBySlug($serviceSlug);
         return $this->json([
-            'token' => $tokenableObject->getToken(),
+            'token' => $this->generateSecretToken($service, $provider, $providerUser)->getToken()
         ]);
     }
 
-    private function loadProviderByToken(string $id): Provider
+    /**
+     * Генерирует секретный токен (токен доступа к услуге или токен оплаты) в зависимости от факта наличия оплаты.
+     * @param Service $service
+     * @param Provider $provider
+     * @param $providerUser
+     * @return TokenableInterface
+     */
+    private function generateSecretToken(Service $service, Provider $provider, $providerUser): TokenableInterface
     {
-        if (($provider = $this->providerRepository->findByToken($id)) != null) {
-            return $provider;
+        if ($this->isFreeAccessAllowed($provider)) {
+            // immediately give the free access to the user
+            return $this->paymentService->generateAccessToken($service);
+        } else {
+            return $this->paymentService->generateToken($service, $provider, $providerUser);
         }
-        throw new NotFoundHttpException();
     }
 
-    private function loadServiceBySlug(string $slug): Service
-    {
-        if (($service = $this->serviceRepository->findOneBySlug($slug)) == null) {
-            throw new NotFoundHttpException();
-        }
-        return $service;
-    }
-
-    // однажды проверка станет сложнее, возможно будут тонкие правила, такие как доступ к некоторым услугам Service
-    private function isFreeAccessAllowed(Provider $provider)
+    /**
+     * Провайдер с бесплатным уровнем доступа (профгид)
+     * однажды проверка станет сложнее, возможно будут тонкие правила, такие как доступ к некоторым услугам Service
+     * @param Provider $provider
+     * @return bool
+     */
+    private function isFreeAccessAllowed(Provider $provider): bool
     {
         return $provider->getSlug() == 'profguide';
+    }
+
+    private static function guardProviderToken(?string $token)
+    {
+        if (empty($token)) {
+            throw new PreconditionFailedHttpException("Token must be specified.");
+        }
+    }
+
+    private static function guardProviderUser(?string $id)
+    {
+        if (empty($id)) {
+            throw new PreconditionFailedHttpException("User must be specified.");
+        }
     }
 }

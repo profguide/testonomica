@@ -29,10 +29,13 @@ class ProviderRepository extends ServiceEntityRepository
         return $provider;
     }
 
-    public function findByToken(string $token)
+    public function getByToken(string $token): Provider
     {
         /**@var Provider $provider */
         $provider = $this->findOneBy(['token' => $token]);
-        return $provider;
+        if ($provider) {
+            return $provider;
+        }
+        throw new \DomainException("Provider not found (token: \"$token\").");
     }
 }

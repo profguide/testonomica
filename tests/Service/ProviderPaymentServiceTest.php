@@ -45,7 +45,7 @@ class ProviderPaymentServiceTest extends KernelTestCase
     public function testFirstTime()
     {
         $service = $this->loadService();
-        $tokenable = $this->service->getToken($service, $this->provider, 'some_user');
+        $tokenable = $this->service->generateToken($service, $this->provider, 'some_user');
         $this->assertEquals(ProviderPayment::class, get_class($tokenable));
     }
 
@@ -56,8 +56,8 @@ class ProviderPaymentServiceTest extends KernelTestCase
     public function testRepeatedNotPayed()
     {
         $service = $this->loadService();
-        $tokenable1 = $this->service->getToken($service, $this->provider, 'some_user');
-        $tokenable2 = $this->service->getToken($service, $this->provider, 'some_user');
+        $tokenable1 = $this->service->generateToken($service, $this->provider, 'some_user');
+        $tokenable2 = $this->service->generateToken($service, $this->provider, 'some_user');
         $this->assertEquals($tokenable1, $tokenable2);
     }
 
@@ -68,15 +68,15 @@ class ProviderPaymentServiceTest extends KernelTestCase
     public function testPayed()
     {
         $service = $this->loadService();
-        $tokenable1 = $this->service->getToken($service, $this->provider, 'payed_user');
+        $tokenable1 = $this->service->generateToken($service, $this->provider, 'payed_user');
         $this->assertEquals(Access::class, get_class($tokenable1));
-        $tokenable2 = $this->service->getToken($service, $this->provider, 'payed_user');
+        $tokenable2 = $this->service->generateToken($service, $this->provider, 'payed_user');
         $this->assertEquals(Access::class, get_class($tokenable2));
         $this->assertFalse($tokenable1 === $tokenable2);
     }
 
     private function loadService(): Service
     {
-        return $this->serviceRepository->findOneBySlug('service_1');
+        return $this->serviceRepository->getOneBySlug('service_1');
     }
 }

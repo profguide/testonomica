@@ -17,8 +17,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class PartnerApiControllerTest extends WebTestCase
 {
-    /**@var KernelBrowser */
-    private $client;
+    private KernelBrowser $client;
 
     /**@var ProviderPaymentRepository */
     private $providerPaymentRepository;
@@ -64,7 +63,9 @@ class PartnerApiControllerTest extends WebTestCase
     /**
      * Получение токена
      * Оплаченный юзер
-     * Ожидание: создан токен доступа. При повторном обращении токены разные
+     * Ожидание:
+     * - создан токен доступа
+     * - при повторном обращении токены разные
      */
     public function testGetTokenOnPayed()
     {
@@ -107,7 +108,7 @@ class PartnerApiControllerTest extends WebTestCase
 
     // Helpers bellow
 
-    private function requestToken(array $requestParams)
+    private function requestToken(array $requestParams): string
     {
         $this->client->request('POST', "/partner/api/token/", $requestParams);
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());

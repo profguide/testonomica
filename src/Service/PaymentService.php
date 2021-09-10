@@ -6,7 +6,6 @@
 
 namespace App\Service;
 
-
 use App\Entity\Payment;
 use App\Entity\Service;
 use App\Repository\PaymentRepository;
@@ -15,8 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class PaymentService
 {
-    /**@var PaymentRepository */
-    private $repository;
+    private PaymentRepository $repository;
 
     /**
      * PaymentService constructor.

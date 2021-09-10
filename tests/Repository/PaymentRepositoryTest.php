@@ -80,6 +80,6 @@ class PaymentRepositoryTest extends KernelTestCase
 
     private function loadService(): Service
     {
-        return $this->serviceRepository->findOneBySlug('service_1');
+        return $this->serviceRepository->getOneBySlug('service_1');
     }
 }

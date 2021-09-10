@@ -7,12 +7,13 @@
 namespace App\Controller;
 
 
+use App\Entity\Access;
+use App\Entity\ProviderPayment;
 use App\Payment\Robokassa;
 use App\Service\AccessService;
 use App\Service\PaymentService;
 use App\Service\ProviderPaymentService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
@@ -20,25 +21,22 @@ use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
+ * Перенаправляет на оплату или на услугу, если она уже была оплачена.
+ *
  * https://api.testonomica.com/access/provide --> https://testonomica.com/partner/provide/
  * @Route("/partner", name="partner.")
  */
 class PartnerProvideController extends AbstractController
 {
-    /**@var PaymentService */
-    private $paymentService;
+    private PaymentService $paymentService;
 
-    /**@var ProviderPaymentService */
-    private $providerPaymentService;
+    private ProviderPaymentService $providerPaymentService;
 
-    /**@var AccessService */
-    private $accessService;
+    private AccessService $accessService;
 
-    /**@var Robokassa */
-    private $robokassa;
+    private Robokassa $robokassa;
 
-    /**@var KernelInterface */
-    private $kernel;
+    private KernelInterface $kernel;
 
     public function __construct(
         PaymentService $paymentService,
@@ -60,35 +58,46 @@ class PartnerProvideController extends AbstractController
      * @param Request $request
      * @return RedirectResponse
      */
-    public function provide(Request $request)
+    public function provide(Request $request): RedirectResponse
     {
         $token = $request->get('token');
-        // payment
         if (($providerPayment = $this->providerPaymentService->findOneByToken($token)) != null) {
-            $payment = $providerPayment->getPayment();
-            if (!$payment->isExecuted()) {
-                $response = new RedirectResponse($this->robokassa->createUrl($payment, $this->kernel->isDebug()));
-                $this->paymentService->saveToCookie($payment, $response);
-                return $response;
-            } else {
-                // после оплаты токеном воспользоваться нельзя (защита от поисковиков)
-                throw new AccessDeniedHttpException('The token has already been used.');
-            }
+            return $this->goToPayment($providerPayment, $this->isTestMode($request));
+        } elseif (($access = $this->accessService->findOneByToken($token)) != null) {
+            return $this->goToService($access, $token, $request);
         }
-        // access
-        if (($providerAccess = $this->accessService->findOneByToken($token)) != null) {
-            $cookie = $request->cookies->get('access');
-            if ($cookie == $token || !$providerAccess->isUsed()) {
-                $response = new RedirectResponse($this->generateUrl('tests.view', [
-                    'categorySlug' => 'psychology',
-                    'slug' => 'test_2'
-                ]));
-                $this->accessService->saveToCookie($providerAccess, $response);
-                return $response;
-            } else {
-                throw new AccessDeniedHttpException('The token has already been used.');
-            }
+        throw new AccessDeniedHttpException('Unknown token.');
+    }
+
+    private function goToPayment(ProviderPayment $providerPayment, bool $isTestMode): RedirectResponse
+    {
+        $payment = $providerPayment->getPayment();
+        if ($payment->isExecuted()) {
+            // после оплаты токеном воспользоваться нельзя
+            throw new AccessDeniedHttpException('The token has already been used.');
         }
-        throw new AccessDeniedHttpException('Token not found.');
+        $response = new RedirectResponse($this->robokassa->createUrl($payment, $isTestMode));
+        $this->paymentService->saveToCookie($payment, $response);
+        return $response;
+    }
+
+    private function goToService(Access $access, string $token, Request $request): RedirectResponse
+    {
+        $cookieToken = $request->cookies->get('access');
+        if ($cookieToken == $token || !$access->isUsed()) {
+            // todo get test from service_test table
+            $response = new RedirectResponse($this->generateUrl('tests.view', [
+                'categorySlug' => 'business',
+                'slug' => 'proforientation-v2'
+            ]));
+            $this->accessService->setCookie($access, $response);
+            return $response;
+        }
+        throw new AccessDeniedHttpException('The token has already been used.');
+    }
+
+    private function isTestMode(Request $request): bool
+    {
+        return $request->get('isTest') == 1 || $this->kernel->isDebug();
     }
 }

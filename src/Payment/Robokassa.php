@@ -16,7 +16,7 @@ class Robokassa
     const PASS_1_DEV = 'wWeZ6xi54bZIW3wVYM5Y';
     const PASS_2_DEV = 'lChzkIy69g022uKItDwu';
 
-    public function createUrl(Payment $payment, bool $isTest)
+    public function createUrl(Payment $payment, bool $isTest): string
     {
         $id = $payment->getId();
         $sum = floatval($payment->getSum());
@@ -30,26 +30,25 @@ class Robokassa
         if ($isTest) {
             $params['IsTest'] = 1;
         }
-        $url = 'https://auth.robokassa.ru/Merchant/Index.aspx?' . http_build_query($params);
-        return $url;
+        return 'https://auth.robokassa.ru/Merchant/Index.aspx?' . http_build_query($params);
     }
 
-    private static function getPass1()
+    private static function getPass1(): string
     {
         return self::PASS_1_PROD;
     }
 
-    private static function getPass2()
+    private static function getPass2(): string
     {
         return self::PASS_2_PROD;
     }
 
-    public static function getCrc2(int $id, int $sum)
+    public static function getCrc2(int $id, int $sum): string
     {
         return md5("$sum:$id:" . self::getPass2());
     }
 
-    public function assertCode(int $id, int $sum, string $crc)
+    public function guardCode(int $id, int $sum, string $crc)
     {
         if (static::getCrc2($id, $sum) !== mb_strtolower($crc)) {
             throw new \RuntimeException("Hash not match to expected");

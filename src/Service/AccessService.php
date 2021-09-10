@@ -4,19 +4,20 @@
  * @since: 13.11.2020
  */
 
-namespace App\Service;
+declare(strict_types=1);
 
+namespace App\Service;
 
 use App\Entity\Access;
 use App\Entity\Service;
 use App\Repository\AccessRepository;
 use Symfony\Component\HttpFoundation\Cookie;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class AccessService
 {
-    /**@var AccessRepository */
-    private $repository;
+    private AccessRepository $repository;
 
     /**
      * AccessService constructor.
@@ -32,7 +33,7 @@ class AccessService
         return $this->save(Access::init($service));
     }
 
-    public function save(Access $providerAccess)
+    public function save(Access $providerAccess): Access
     {
         return $this->repository->save($providerAccess);
     }
@@ -42,8 +43,14 @@ class AccessService
         return $this->repository->findOneByToken($token);
     }
 
-    public function saveToCookie(Access $access, Response $response)
+    // может вынести работу с куками в UserAccessService?
+    public function setCookie(Access $access, Response $response)
     {
-        $response->headers->setCookie(Cookie::create('access', $access->getId(), 60 * 60 * 24 * 365));
+        $response->headers->setCookie(Cookie::create('access', $access->getToken())); // forever
+    }
+
+    public function getCookie(Request $request): ?string
+    {
+        return $request->cookies->get('access');
     }
 }

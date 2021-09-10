@@ -22,10 +22,13 @@ class ServiceRepository extends ServiceEntityRepository
         parent::__construct($registry, Service::class);
     }
 
-    public function findOneBySlug(string $slug): Service
+    public function getOneBySlug(string $slug): Service
     {
         /**@var Service $service */
         $service = $this->findOneBy(['slug' => $slug]);
-        return $service;
+        if ($service) {
+            return $service;
+        }
+        throw new \DomainException("Service not found (slug: \"$slug\").");
     }
 }

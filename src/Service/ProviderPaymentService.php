@@ -7,8 +7,8 @@
 namespace App\Service;
 
 
-use App\Entity\Provider;
 use App\Entity\Access;
+use App\Entity\Provider;
 use App\Entity\ProviderPayment;
 use App\Entity\Service;
 use App\Payment\TokenableInterface;
@@ -16,14 +16,11 @@ use App\Repository\ProviderPaymentRepository;
 
 class ProviderPaymentService
 {
-    /**@var PaymentService */
-    private $paymentService;
+    private PaymentService $paymentService;
 
-    /**@var AccessService */
-    private $accessService;
+    private AccessService $accessService;
 
-    /**@var ProviderPaymentRepository */
-    private $providerPaymentRepository;
+    private ProviderPaymentRepository $providerPaymentRepository;
 
     /**
      * @param PaymentService $paymentService
@@ -46,21 +43,30 @@ class ProviderPaymentService
     }
 
     /**
+     * Генерирует токен пользователя на оплату или на доступ к услуге.
+     * Определяется фактом наличия оплаты услуги для указанного пользователя из системы поставщика.
      * @param Service $service
      * @param Provider $provider
      * @param string $user
      * @return TokenableInterface
      */
-    public function getToken(Service $service, Provider $provider, string $user): TokenableInterface
+    public function generateToken(Service $service, Provider $provider, string $user): TokenableInterface
     {
-        if ($this->isPayed($provider, $user)) {
-            return $this->createAccessToken($service);
+        if ($this->isPayed($provider, $user, $service)) {
+            return $this->generateAccessToken($service);
         } else {
-            return $this->getPaymentToken($service, $provider, $user);
+            return $this->generatePaymentToken($service, $provider, $user);
         }
     }
 
-    private function isPayed(Provider $provider, string $user)
+    /**
+     * Была ли куплена услуга пользователем из системы поставщика (пока любая услуга для простоты).
+     * @param Provider $provider
+     * @param string $user
+     * @param Service $service
+     * @return bool
+     */
+    private function isPayed(Provider $provider, string $user, Service $service): bool
     {
         if (($providerPayment = $this->findOneByProviderAndUser($provider, $user)) == null) {
             return false;
@@ -74,7 +80,7 @@ class ProviderPaymentService
      * @param string $user
      * @return ProviderPayment
      */
-    private function getPaymentToken(Service $service, Provider $provider, string $user): ProviderPayment
+    private function generatePaymentToken(Service $service, Provider $provider, string $user): ProviderPayment
     {
         if (($providerPayment = $this->findOneByProviderAndUser($provider, $user)) != null) {
             return $providerPayment;
@@ -86,7 +92,7 @@ class ProviderPaymentService
      * @param Service $service
      * @return Access
      */
-    public function createAccessToken(Service $service): Access
+    public function generateAccessToken(Service $service): Access
     {
         return $this->accessService->create($service);
     }

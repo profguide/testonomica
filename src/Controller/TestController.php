@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Result;
 use App\Entity\Test;
+use App\Service\AccessService;
 use App\Service\AnswerService;
 use App\Service\CalculatorService;
 use App\Service\CategoryService;
@@ -39,6 +40,8 @@ class TestController extends AbstractController
 
     private ResultRenderer $resultRenderer;
 
+    private AccessService $accessService;
+
 
     public function __construct(
         TestService $testService,
@@ -46,7 +49,8 @@ class TestController extends AbstractController
         AnswerService $answerService,
         ResultService $resultService,
         CalculatorService $calculatorService,
-        ResultRenderer $resultRenderer
+        ResultRenderer $resultRenderer,
+        AccessService $accessService
     )
     {
         $this->testService = $testService;
@@ -55,6 +59,7 @@ class TestController extends AbstractController
         $this->resultService = $resultService;
         $this->calculatorService = $calculatorService;
         $this->resultRenderer = $resultRenderer;
+        $this->accessService = $accessService;
     }
 
     /**
@@ -75,7 +80,7 @@ class TestController extends AbstractController
      * @param string $uuid
      * @return Response
      */
-    public function result(string $uuid)
+    public function result(string $uuid): Response
     {
         $result = $this->loadResultByUuid($uuid);
         return $this->renderResult($result->getTest(), $result);
@@ -108,7 +113,7 @@ class TestController extends AbstractController
      * @param string $slug
      * @return Response
      */
-    public function view(Request $request, string $categorySlug, string $slug)
+    public function view(Request $request, string $categorySlug, string $slug): Response
     {
         $test = $this->loadBySlug($slug);
         if (($result = $this->resultService->getSessionResult($test)) != null) {
@@ -151,22 +156,28 @@ class TestController extends AbstractController
 
     private function assertAccess(Test $test, Request $request)
     {
-        if ($this->getParameter('kernel.environment') === 'dev') {
-            return;
-        }
+//        if ($this->getParameter('kernel.environment') === 'dev') {
+//            return;
+//        }
         // Определим является ли тест платным
         // Надо создать Service (пакет), ServiceTests (тесты в пакете) и Access (доступ к пакету (добавить поле service_id))
-        if ($test->getSlug() !== 'test_2') {
+        if ($test->getSlug() !== 'proforientation-v2') {
             return;
         }
         // Из куки получать Access, находить Service по access.getService() и смотреть service.hasTest($test)
-        if (!empty($request->cookies->get('access'))) {
-            return;
+        $token = $this->accessService->getCookie($request);
+        if ($token) {
+            $access = $this->accessService->findOneByToken($token);
+            if ($access) {
+                $access->setUsed();
+                $this->accessService->save($access);
+                return;
+            }
         }
         throw new AccessDeniedHttpException();
     }
 
-    private function loadResultByUuid(string $uuid)
+    private function loadResultByUuid(string $uuid): Result
     {
         if (($result = $this->resultService->findByUuid($uuid)) == null) {
             throw new NotFoundHttpException();

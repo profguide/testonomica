@@ -89,6 +89,6 @@ class RobokassaControllerTest extends WebTestCase
 
     private function loadService(): Service
     {
-        return $this->serviceRepository->findOneBySlug('service_1');
+        return $this->serviceRepository->getOneBySlug('service_1');
     }
 }

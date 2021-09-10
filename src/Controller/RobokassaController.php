@@ -26,17 +26,13 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class RobokassaController extends AbstractController
 {
-    /**@var PaymentService */
-    private $paymentService;
+    private PaymentService $paymentService;
 
-    /**@var AccessService */
-    private $accessService;
+    private AccessService $accessService;
 
-    /**@var ServiceRepository */
-    private $serviceRepository;
+    private ServiceRepository $serviceRepository;
 
-    /**@var Robokassa */
-    private $robokassa;
+    private Robokassa $robokassa;
 
     /**
      * @param PaymentService $paymentService
@@ -62,7 +58,7 @@ class RobokassaController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    public function done(Request $request)
+    public function done(Request $request): Response
     {
         $id = $request->get('inv_id');
         $price = $request->get('OutSum');
@@ -70,7 +66,7 @@ class RobokassaController extends AbstractController
         if (($payment = $this->paymentService->findOneById($id)) == null) {
             throw new BadRequestHttpException("Payment {$id} not found.");
         }
-        $this->robokassa->assertCode($id, $price, $crc);
+        $this->robokassa->guardCode($id, $price, $crc);
         if (!$payment->isExecuted()) {
             $payment->addStatusExecuted();
         }
@@ -83,7 +79,7 @@ class RobokassaController extends AbstractController
      * @param Request $request
      * @return RedirectResponse
      */
-    public function success(Request $request)
+    public function success(Request $request): RedirectResponse
     {
         if (($paymentId = $request->cookies->get('payment')) == null) {
             throw new ServiceUnavailableHttpException(null, 'Платёж не обнаружен. Вернитесь на сайт партнёра.');
@@ -98,7 +94,7 @@ class RobokassaController extends AbstractController
             'categorySlug' => 'psychology',
             'slug' => 'test_2'
         ]));
-        $this->accessService->saveToCookie($this->accessService->create($payment->getService()), $response);
+        $this->accessService->setCookie($this->accessService->create($payment->getService()), $response);
         return $response;
     }
 
@@ -108,7 +104,7 @@ class RobokassaController extends AbstractController
      * и хранить в куке с именем provider.backUrl
      * @Route("/fail/")
      */
-    public function fail()
+    public function fail(): Response
     {
         return new Response('Оплата не прошла. Вернитесь на сайт партнёра.');
     }
