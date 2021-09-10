@@ -1,5 +1,5 @@
 #!/bin/bash
 if [[ "cache" == $1 ]]; then
-  echo "Clear cache"
-  php bin/console cache:clear
+  echo "Clear all cache"
+  php bin/console cache:pool:clear cache.global_clearer
 fi

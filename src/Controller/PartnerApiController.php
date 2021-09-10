@@ -4,8 +4,9 @@
  * @since: 09.11.2020
  */
 
-namespace App\Controller;
+declare(strict_types=1);
 
+namespace App\Controller;
 
 use App\Entity\Provider;
 use App\Entity\Service;
@@ -17,7 +18,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\PreconditionFailedHttpException;
-use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -38,18 +38,14 @@ class PartnerApiController extends AbstractController
 
     private ServiceRepository $services;
 
-    private KernelInterface $kernel;
-
     public function __construct(
         ProviderPaymentService $providerPaymentService,
         ProviderRepository $providerRepository,
-        ServiceRepository $serviceRepository,
-        KernelInterface $kernel)
+        ServiceRepository $serviceRepository)
     {
         $this->paymentService = $providerPaymentService;
         $this->providers = $providerRepository;
         $this->services = $serviceRepository;
-        $this->kernel = $kernel;
     }
 
     /**
@@ -65,12 +61,12 @@ class PartnerApiController extends AbstractController
         self::guardProviderToken($providerToken);
         $providerUser = $request->get('user');
         self::guardProviderUser($providerUser);
+        $testMode = self::isTestMode($request);
         $serviceSlug = $request->get('service', self::SERVICE_SLUG_DEFAULT);
         $provider = $this->providers->getByToken($providerToken);
         $service = $this->services->getOneBySlug($serviceSlug);
-        $isTestMode = $this->isTestMode($request);
         return $this->json([
-            'token' => $this->generateSecretToken($service, $provider, $providerUser, $isTestMode)->getToken()
+            'token' => $this->generateSecretToken($service, $provider, $providerUser, $testMode)->getToken()
         ]);
     }
 
@@ -117,8 +113,8 @@ class PartnerApiController extends AbstractController
         }
     }
 
-    private function isTestMode(Request $request): bool
+    private static function isTestMode(Request $request): bool
     {
-        return $request->get('isTest', false) == 1 || $this->kernel->isDebug();;
+        return $request->get('isTest', false) == 1;
     }
 }
