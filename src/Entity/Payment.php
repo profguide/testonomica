@@ -50,6 +50,11 @@ class Payment
     private $sum;
 
     /**
+     * @ORM\Column(type="boolean", nullable=false, options={"default" = 0})
+     */
+    private bool $testMode;
+
+    /**
      * @ORM\Column(type="datetime", name="created_at", nullable=false)
      */
     private $createdAt;
@@ -59,11 +64,12 @@ class Payment
         $this->statuses = new ArrayCollection();
     }
 
-    public static function init(Service $service, int $sum)
+    public static function init(Service $service, int $sum, bool $testMode = false): Payment
     {
         $payment = new self();
         $payment->service = $service;
         $payment->sum = $sum;
+        $payment->testMode = $testMode;
         return $payment;
     }
 
@@ -138,6 +144,11 @@ class Payment
     {
         $criteria = Criteria::create()->where(PaymentStatus::criteriaExecuted());
         return $this->statuses->matching($criteria)->count() > 0;
+    }
+
+    public function isTestMode(): bool
+    {
+        return $this->testMode;
     }
 
     public function addStatusPending(): void

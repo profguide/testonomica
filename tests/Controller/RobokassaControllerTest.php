@@ -39,14 +39,17 @@ class RobokassaControllerTest extends WebTestCase
      */
     public function testDone()
     {
-        $paymentExecuted = $this->createExecutedPayment();
+        $executedPayment = $this->createExecutedPayment();
         $this->client->request('POST', '/robokassa/done/', [
-            'inv_id' => $paymentExecuted->getId(),
-            'OutSum' => $paymentExecuted->getSum(),
-            'SignatureValue' => Robokassa::getCrc2($paymentExecuted->getId(), $paymentExecuted->getSum())
+            'inv_id' => $executedPayment->getId(),
+            'OutSum' => $executedPayment->getSum(),
+            'SignatureValue' => Robokassa::crc2(
+                $executedPayment->getId(),
+                $executedPayment->getSum(),
+                $executedPayment->isTestMode())
         ]);
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
-        $this->assertEquals("OK{$paymentExecuted->getId()}", $this->client->getResponse()->getContent());
+        $this->assertEquals("OK{$executedPayment->getId()}", $this->client->getResponse()->getContent());
     }
 
     /**
@@ -54,11 +57,11 @@ class RobokassaControllerTest extends WebTestCase
      */
     public function testSuccess()
     {
-        $paymentExecuted = $this->createExecutedPayment();
-        $this->client->getCookieJar()->set(new Cookie('payment', $paymentExecuted->getId()));
+        $executedPayment = $this->createExecutedPayment();
+        $this->client->getCookieJar()->set(new Cookie('payment', $executedPayment->getId()));
         $this->client->request('POST', '/robokassa/success/');
         $this->assertEquals(302, $this->client->getResponse()->getStatusCode());
-        $this->assertEquals('/tests/psychology/test_2/', $this->client->getResponse()->headers->get('location'));
+        $this->assertEquals('/tests/business/proforientation-v2/', $this->client->getResponse()->headers->get('location'));
         $this->assertCookie('access');
     }
 

@@ -7,7 +7,6 @@
 namespace App\Controller;
 
 
-use App\Entity\Service;
 use App\Payment\Robokassa;
 use App\Repository\ServiceRepository;
 use App\Service\AccessService;
@@ -66,7 +65,7 @@ class RobokassaController extends AbstractController
         if (($payment = $this->paymentService->findOneById($id)) == null) {
             throw new BadRequestHttpException("Payment {$id} not found.");
         }
-        $this->robokassa->guardCode($id, $price, $crc);
+        $this->robokassa->guardCode($payment, $id, $price, $crc);
         if (!$payment->isExecuted()) {
             $payment->addStatusExecuted();
         }
@@ -90,9 +89,10 @@ class RobokassaController extends AbstractController
         if (!$payment->isExecuted()) {
             throw new NotFoundHttpException('Нет информации о платеже. Это может быть вызвано задержками обмена с платёжной системой. Обновить страницу через минуту.');
         }
+        // todo route get from somewhere
         $response = new RedirectResponse($this->generateUrl('tests.view', [
-            'categorySlug' => 'psychology',
-            'slug' => 'test_2'
+            'categorySlug' => 'business',
+            'slug' => 'proforientation-v2'
         ]));
         $this->accessService->setCookie($this->accessService->create($payment->getService()), $response);
         return $response;

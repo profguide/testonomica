@@ -128,7 +128,7 @@ class ProviderPayment implements TokenableInterface
         $this->user = $user;
     }
 
-    public static function init(Payment $payment, Provider $provider, string $user)
+    public static function init(Payment $payment, Provider $provider, string $user): ProviderPayment
     {
         $providerPayment = new self();
         $providerPayment->payment = $payment;

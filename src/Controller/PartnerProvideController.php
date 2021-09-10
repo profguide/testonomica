@@ -17,7 +17,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
-use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -36,20 +35,16 @@ class PartnerProvideController extends AbstractController
 
     private Robokassa $robokassa;
 
-    private KernelInterface $kernel;
-
     public function __construct(
         PaymentService $paymentService,
         ProviderPaymentService $providerPaymentService,
         AccessService $accessService,
-        Robokassa $robokassa,
-        KernelInterface $kernel)
+        Robokassa $robokassa)
     {
         $this->paymentService = $paymentService;
         $this->providerPaymentService = $providerPaymentService;
         $this->accessService = $accessService;
         $this->robokassa = $robokassa;
-        $this->kernel = $kernel;
     }
 
     /**
@@ -62,21 +57,21 @@ class PartnerProvideController extends AbstractController
     {
         $token = $request->get('token');
         if (($providerPayment = $this->providerPaymentService->findOneByToken($token)) != null) {
-            return $this->goToPayment($providerPayment, $this->isTestMode($request));
+            return $this->goToPayment($providerPayment);
         } elseif (($access = $this->accessService->findOneByToken($token)) != null) {
             return $this->goToService($access, $token, $request);
         }
         throw new AccessDeniedHttpException('Unknown token.');
     }
 
-    private function goToPayment(ProviderPayment $providerPayment, bool $isTestMode): RedirectResponse
+    private function goToPayment(ProviderPayment $providerPayment): RedirectResponse
     {
         $payment = $providerPayment->getPayment();
         if ($payment->isExecuted()) {
             // после оплаты токеном воспользоваться нельзя
             throw new AccessDeniedHttpException('The token has already been used.');
         }
-        $response = new RedirectResponse($this->robokassa->createUrl($payment, $isTestMode));
+        $response = new RedirectResponse($this->robokassa->createUrl($payment));
         $this->paymentService->saveToCookie($payment, $response);
         return $response;
     }
@@ -94,10 +89,5 @@ class PartnerProvideController extends AbstractController
             return $response;
         }
         throw new AccessDeniedHttpException('The token has already been used.');
-    }
-
-    private function isTestMode(Request $request): bool
-    {
-        return $request->get('isTest') == 1 || $this->kernel->isDebug();
     }
 }

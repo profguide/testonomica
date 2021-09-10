@@ -17,6 +17,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\PreconditionFailedHttpException;
+use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -37,14 +38,18 @@ class PartnerApiController extends AbstractController
 
     private ServiceRepository $services;
 
+    private KernelInterface $kernel;
+
     public function __construct(
         ProviderPaymentService $providerPaymentService,
         ProviderRepository $providerRepository,
-        ServiceRepository $serviceRepository)
+        ServiceRepository $serviceRepository,
+        KernelInterface $kernel)
     {
         $this->paymentService = $providerPaymentService;
         $this->providers = $providerRepository;
         $this->services = $serviceRepository;
+        $this->kernel = $kernel;
     }
 
     /**
@@ -63,8 +68,9 @@ class PartnerApiController extends AbstractController
         $serviceSlug = $request->get('service', self::SERVICE_SLUG_DEFAULT);
         $provider = $this->providers->getByToken($providerToken);
         $service = $this->services->getOneBySlug($serviceSlug);
+        $isTestMode = $this->isTestMode($request);
         return $this->json([
-            'token' => $this->generateSecretToken($service, $provider, $providerUser)->getToken()
+            'token' => $this->generateSecretToken($service, $provider, $providerUser, $isTestMode)->getToken()
         ]);
     }
 
@@ -73,15 +79,16 @@ class PartnerApiController extends AbstractController
      * @param Service $service
      * @param Provider $provider
      * @param $providerUser
+     * @param bool $testMode
      * @return TokenableInterface
      */
-    private function generateSecretToken(Service $service, Provider $provider, $providerUser): TokenableInterface
+    private function generateSecretToken(Service $service, Provider $provider, $providerUser, bool $testMode): TokenableInterface
     {
         if ($this->isFreeAccessAllowed($provider)) {
             // immediately give the free access to the user
             return $this->paymentService->generateAccessToken($service);
         } else {
-            return $this->paymentService->generateToken($service, $provider, $providerUser);
+            return $this->paymentService->generateToken($service, $provider, $providerUser, $testMode);
         }
     }
 
@@ -108,5 +115,10 @@ class PartnerApiController extends AbstractController
         if (empty($id)) {
             throw new PreconditionFailedHttpException("User must be specified.");
         }
+    }
+
+    private function isTestMode(Request $request): bool
+    {
+        return $request->get('isTest', false) == 1 || $this->kernel->isDebug();;
     }
 }

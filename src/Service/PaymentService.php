@@ -32,9 +32,9 @@ class PaymentService
         return $payment;
     }
 
-    public function create(Service $service, int $price): Payment
+    public function create(Service $service, int $price, bool $testMode): Payment
     {
-        return $this->repository->save(Payment::init($service, $price));
+        return $this->repository->save(Payment::init($service, $price, $testMode));
     }
 
     public function save($payment): Payment
