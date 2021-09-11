@@ -4,8 +4,9 @@
  * @since: 16.11.2020
  */
 
-namespace App\Controller;
+declare(strict_types=1);
 
+namespace App\Controller;
 
 use App\Payment\Robokassa;
 use App\Repository\ServiceRepository;
@@ -15,7 +16,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -50,7 +50,6 @@ class RobokassaController extends AbstractController
         $this->robokassa = $robokassa;
     }
 
-
     /**
      * @Route("/done/")
      * @param Request $request
@@ -61,9 +60,7 @@ class RobokassaController extends AbstractController
         $id = $request->get('inv_id');
         $price = $request->get('OutSum');
         $crc = $request->get('SignatureValue');
-        if (($payment = $this->paymentService->findOneById($id)) == null) {
-            throw new BadRequestHttpException("Payment {$id} not found.");
-        }
+        $payment = $this->paymentService->getOneById($id);
         $this->robokassa->guardCode($payment, $id, $price, $crc);
         if (!$payment->isExecuted()) {
             $payment->addStatusExecuted();
@@ -79,12 +76,7 @@ class RobokassaController extends AbstractController
      */
     public function success(Request $request): RedirectResponse
     {
-        if (($paymentId = $this->paymentService->getCookie($request)) == null) {
-            throw new \LogicException('Платёж не обнаружен. Вернитесь на сайт партнёра.');
-        }
-        if (($payment = $this->paymentService->findOneById($paymentId)) == null) {
-            throw new NotFoundHttpException('Платёж не обнаружен.');
-        }
+        $payment = $this->paymentService->getOneById($request->get('InvId'));
         if (!$payment->isExecuted()) {
             throw new NotFoundHttpException('Нет информации о поступившем платеже. Это может быть вызвано задержками обмена с платёжной системой. Пожалуйста, обновить страницу через 1 минуту.');
         }
@@ -93,7 +85,8 @@ class RobokassaController extends AbstractController
             'categorySlug' => 'business',
             'slug' => 'proforientation-v2'
         ]));
-        $this->accessService->setCookie($this->accessService->create($payment->getService()), $response);
+        $access = $this->accessService->create($payment->getService());
+        $this->accessService->setCookie($access, $response);
         return $response;
     }
 

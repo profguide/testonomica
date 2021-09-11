@@ -26,11 +26,14 @@ class PaymentService
         $this->repository = $repository;
     }
 
-    public function findOneById($id): Payment
+    public function getOneById($id): Payment
     {
         /**@var Payment $payment */
         $payment = $this->repository->find($id);
-        return $payment;
+        if ($payment) {
+            return $payment;
+        }
+        throw new \DomainException("Payment id#$id not found.");
     }
 
     public function create(Service $service, int $price, bool $testMode): Payment
@@ -45,9 +48,11 @@ class PaymentService
 
     public function setCookie(Payment $payment, Response $response)
     {
+        // без sameSite=none прочитать куку после редиректа с робокассы будет нельзя. это делают браузеры
+        // из соображений безопасности (они не отправляют куки и в Request их нет).
         $cookie = Cookie::create('payment', $payment->getId(), time() + 60 * 60 * 24 * 365)
-            ->withHttpOnly(false);
-//            ->withSameSite(null);
+            ->withHttpOnly(false)
+            ->withSameSite(Cookie::SAMESITE_NONE);
         $response->headers->setCookie($cookie);
     }
 

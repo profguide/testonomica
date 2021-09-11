@@ -71,10 +71,7 @@ class PartnerProvideController extends AbstractController
             // после оплаты токеном воспользоваться нельзя
             throw new AccessDeniedHttpException('The token has already been used.');
         }
-        $response = new RedirectResponse($this->robokassa->createUrl($payment));
-        $this->paymentService->setCookie($payment, $response);
-        $response->send();
-        return $response;
+        return new RedirectResponse($this->robokassa->createUrl($payment));
     }
 
     private function goToService(Access $access, string $token, Request $request): RedirectResponse
