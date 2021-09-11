@@ -1,5 +1,7 @@
 #!/bin/bash
 if [[ "cache" == $1 ]]; then
-  echo "Clear all cache"
-  php bin/console cache:pool:clear cache.global_clearer
+  echo "php bin/console cache:clear"
+  php bin/console cache:clear
+  echo "sudo chown -R www-data:www-data var"
+  sudo chown -R www-data:www-data var
 fi

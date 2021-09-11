@@ -42,8 +42,8 @@ class PaymentService
         return $this->repository->save($payment);
     }
 
-    public function saveToCookie(Payment $payment, Response $response)
+    public function setCookie(Payment $payment, Response $response)
     {
-        $response->headers->setCookie(Cookie::create('payment', $payment->getId(), 60 * 60 * 24 * 365));
+        $response->headers->setCookie(Cookie::create('payment', $payment->getId()));
     }
 }

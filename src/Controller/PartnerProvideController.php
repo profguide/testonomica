@@ -72,7 +72,7 @@ class PartnerProvideController extends AbstractController
             throw new AccessDeniedHttpException('The token has already been used.');
         }
         $response = new RedirectResponse($this->robokassa->createUrl($payment));
-        $this->paymentService->saveToCookie($payment, $response);
+        $this->paymentService->setCookie($payment, $response);
         return $response;
     }
 
