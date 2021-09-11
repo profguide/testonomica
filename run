@@ -1,6 +1,6 @@
 #!/bin/bash
 if [[ "cache" == $1 ]]; then
-  echo "sudo chown -R wolfandman:wolfandman var"
+  sudo chown -R wolfandman:wolfandman var
   echo "php bin/console cache:clear"
   php bin/console cache:clear
   echo "sudo chown -R www-data:www-data var"
