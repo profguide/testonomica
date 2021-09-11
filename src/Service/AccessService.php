@@ -46,7 +46,7 @@ class AccessService
     // может вынести работу с куками в UserAccessService?
     public function setCookie(Access $access, Response $response)
     {
-        $response->headers->setCookie(Cookie::create('access', $access->getToken())); // forever
+        $response->headers->setCookie(Cookie::create('access', $access->getToken()));
     }
 
     public function getCookie(Request $request): ?string

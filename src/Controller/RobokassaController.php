@@ -80,14 +80,14 @@ class RobokassaController extends AbstractController
      */
     public function success(Request $request): RedirectResponse
     {
-        if (($paymentId = $request->cookies->get('payment')) == null) {
-            throw new ServiceUnavailableHttpException(null, 'Платёж не обнаружен. Вернитесь на сайт партнёра.');
+        if (($paymentId = $this->paymentService->getCookie($request)) == null) {
+            throw new \LogicException(null, 'Платёж не обнаружен. Вернитесь на сайт партнёра.');
         }
         if (($payment = $this->paymentService->findOneById($paymentId)) == null) {
             throw new NotFoundHttpException('Платёж не обнаружен.');
         }
         if (!$payment->isExecuted()) {
-            throw new NotFoundHttpException('Нет информации о платеже. Это может быть вызвано задержками обмена с платёжной системой. Обновить страницу через минуту.');
+            throw new NotFoundHttpException('Нет информации о поступившем платеже. Это может быть вызвано задержками обмена с платёжной системой. Пожалуйста, обновить страницу через 1 минуту.');
         }
         // todo route get from somewhere
         $response = new RedirectResponse($this->generateUrl('tests.view', [

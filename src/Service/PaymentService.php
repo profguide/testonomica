@@ -10,6 +10,7 @@ use App\Entity\Payment;
 use App\Entity\Service;
 use App\Repository\PaymentRepository;
 use Symfony\Component\HttpFoundation\Cookie;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class PaymentService
@@ -45,5 +46,10 @@ class PaymentService
     public function setCookie(Payment $payment, Response $response)
     {
         $response->headers->setCookie(Cookie::create('payment', $payment->getId()));
+    }
+
+    public function getCookie(Request $request)
+    {
+        return $request->cookies->get('payment');
     }
 }
