@@ -49,7 +49,6 @@ class PartnerProvideControllerTest extends WebTestCase
     {
         $payment = $this->paymentByToken(ProviderPaymentFixture::UNPAYED_TOKEN);
         $this->assertProvideIsRedirectingByToken(ProviderPaymentFixture::UNPAYED_TOKEN);
-        $this->assertCookie('payment', $payment->getId());
         $this->assertStringStartsWith('https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=testonomica',
             $this->client->getResponse()->headers->get('location'));
     }

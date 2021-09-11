@@ -14,7 +14,6 @@ use App\Repository\ServiceRepository;
 use App\Service\PaymentService;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Symfony\Component\BrowserKit\Cookie;
 
 class RobokassaControllerTest extends WebTestCase
 {
@@ -58,8 +57,8 @@ class RobokassaControllerTest extends WebTestCase
     public function testSuccess()
     {
         $executedPayment = $this->createExecutedPayment();
-        $this->client->getCookieJar()->set(new Cookie('payment', $executedPayment->getId()));
-        $this->client->request('POST', '/robokassa/success/');
+        $this->client->request('POST', '/robokassa/success/', ['InvId' => $executedPayment->getId()]);
+        // $this->client->getCookieJar()->set(new Cookie('payment', $executedPayment->getId()));
         $this->assertEquals(302, $this->client->getResponse()->getStatusCode());
         $this->assertEquals('/tests/business/proforientation-v2/', $this->client->getResponse()->headers->get('location'));
         $this->assertCookie('access');
