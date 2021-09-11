@@ -17,6 +17,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+use Symfony\Component\HttpKernel\Exception\PreconditionFailedHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -56,6 +57,7 @@ class PartnerProvideController extends AbstractController
     public function provide(Request $request): RedirectResponse
     {
         $token = $request->get('token');
+        self::guardToken($token);
         if (($providerPayment = $this->providerPaymentService->findOneByToken($token)) != null) {
             return $this->goToPayment($providerPayment);
         } elseif (($access = $this->accessService->findOneByToken($token)) != null) {
@@ -88,5 +90,12 @@ class PartnerProvideController extends AbstractController
             return $response;
         }
         throw new AccessDeniedHttpException('The token has already been used.');
+    }
+
+    private static function guardToken($token)
+    {
+        if (empty($token)) {
+            throw new PreconditionFailedHttpException("Token must be specified.");
+        }
     }
 }

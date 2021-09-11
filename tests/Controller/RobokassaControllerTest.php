@@ -7,6 +7,7 @@
 namespace App\Tests\Controller;
 
 
+use App\DataFixtures\ServiceFixture;
 use App\Entity\Payment;
 use App\Entity\Service;
 use App\Payment\Robokassa;
@@ -91,6 +92,6 @@ class RobokassaControllerTest extends WebTestCase
 
     private function loadService(): Service
     {
-        return $this->serviceRepository->getOneBySlug('service_1');
+        return $this->serviceRepository->getOneBySlug(ServiceFixture::SERVICE_1);
     }
 }

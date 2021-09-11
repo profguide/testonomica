@@ -14,13 +14,13 @@ use Doctrine\Persistence\ObjectManager;
 
 class ServiceFixture extends Fixture implements DependentFixtureInterface
 {
-    public const SERVICE_1 = 'service_1';
+    public const SERVICE_1 = 'proftest';
 
     public function load(ObjectManager $manager)
     {
         /**@var Test $test */
         $test = $this->getReference(TestFixture::TEST_3);
-        $service = new Service("Пакет услуг 1", 99, 'service_1', 'Только тест');
+        $service = new Service("Тест на профориентацию", 99, self::SERVICE_1, 'Тест на профориентацию');
         $service->addTest($test);
         $manager->persist($service);
         $manager->flush();

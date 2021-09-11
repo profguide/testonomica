@@ -8,6 +8,7 @@ namespace App\Tests\Service;
 
 
 use App\DataFixtures\ProviderFixture;
+use App\DataFixtures\ServiceFixture;
 use App\Entity\Payment;
 use App\Entity\PaymentStatus;
 use App\Entity\Provider;
@@ -80,6 +81,6 @@ class PaymentRepositoryTest extends KernelTestCase
 
     private function loadService(): Service
     {
-        return $this->serviceRepository->getOneBySlug('service_1');
+        return $this->serviceRepository->getOneBySlug(ServiceFixture::SERVICE_1);
     }
 }

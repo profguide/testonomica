@@ -29,9 +29,6 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class PartnerApiController extends AbstractController
 {
-    // todo убрать, когда тестометрика начнет слать по новому
-    const SERVICE_SLUG_DEFAULT = 'service_1';
-
     private ProviderPaymentService $paymentService;
 
     private ProviderRepository $providers;
@@ -59,12 +56,16 @@ class PartnerApiController extends AbstractController
     {
         $providerToken = $request->get('token');
         self::guardProviderToken($providerToken);
+        $provider = $this->providers->getByToken($providerToken);
+
         $providerUser = $request->get('user');
         self::guardProviderUser($providerUser);
-        $testMode = self::isTestMode($request);
-        $serviceSlug = $request->get('service', self::SERVICE_SLUG_DEFAULT);
-        $provider = $this->providers->getByToken($providerToken);
+
+        $serviceSlug = $request->get('service');
+        self::guardService($serviceSlug);
         $service = $this->services->getOneBySlug($serviceSlug);
+
+        $testMode = self::isTestMode($request);
         return $this->json([
             'token' => $this->generateSecretToken($service, $provider, $providerUser, $testMode)->getToken()
         ]);
@@ -110,6 +111,13 @@ class PartnerApiController extends AbstractController
     {
         if (empty($id)) {
             throw new PreconditionFailedHttpException("User must be specified.");
+        }
+    }
+
+    private static function guardService(?string $serviceSlug)
+    {
+        if (empty($serviceSlug)) {
+            throw new PreconditionFailedHttpException("Service must be specified.");
         }
     }
 

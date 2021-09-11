@@ -9,6 +9,7 @@ namespace App\Tests\Controller;
 
 use App\DataFixtures\ProviderFixture;
 use App\DataFixtures\ProviderPaymentFixture;
+use App\DataFixtures\ServiceFixture;
 use App\Repository\AccessRepository;
 use App\Repository\ProviderPaymentRepository;
 use App\Repository\ProviderRepository;
@@ -50,6 +51,7 @@ class PartnerApiControllerTest extends WebTestCase
         $requestParams = [
             'token' => $provider->getToken(),
             'user' => ProviderPaymentFixture::UNPAYED_USER,
+            'service' => ServiceFixture::SERVICE_1,
         ];
         // делаем два запроса, чтобы получить два токена
         $token1 = $this->requestToken($requestParams);
@@ -73,6 +75,7 @@ class PartnerApiControllerTest extends WebTestCase
         $requestParams = [
             'token' => $provider->getToken(),
             'user' => ProviderPaymentFixture::PAYED_USER,
+            'service' => ServiceFixture::SERVICE_1,
         ];
         // делаем два запроса, чтобы получить два токена
         $token1 = $this->requestToken($requestParams);
@@ -95,6 +98,7 @@ class PartnerApiControllerTest extends WebTestCase
         $requestParams = [
             'token' => $provider->getToken(),
             'user' => 'new-user',
+            'service' => ServiceFixture::SERVICE_1,
         ];
         // делаем два запроса, чтобы получить два токена
         $token1 = $this->requestToken($requestParams);
