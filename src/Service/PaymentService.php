@@ -45,7 +45,7 @@ class PaymentService
 
     public function setCookie(Payment $payment, Response $response)
     {
-        $response->headers->setCookie(Cookie::create('payment', $payment->getId()));
+        $response->headers->setCookie(Cookie::create('payment', $payment->getId(), time() + 60 * 60 * 24 * 365));
     }
 
     public function getCookie(Request $request)
