@@ -4,7 +4,7 @@
  * @since: 16.11.2020
  */
 
-declare(strict_types=1);
+//declare(strict_types=1);
 
 namespace App\Payment;
 
