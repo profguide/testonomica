@@ -81,7 +81,7 @@ class RobokassaController extends AbstractController
     public function success(Request $request): RedirectResponse
     {
         if (($paymentId = $this->paymentService->getCookie($request)) == null) {
-            throw new \LogicException(null, 'Платёж не обнаружен. Вернитесь на сайт партнёра.');
+            throw new \LogicException('Платёж не обнаружен. Вернитесь на сайт партнёра.');
         }
         if (($payment = $this->paymentService->findOneById($paymentId)) == null) {
             throw new NotFoundHttpException('Платёж не обнаружен.');
