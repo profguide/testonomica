@@ -32,7 +32,7 @@ class MigrateOldPaymentsCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         // array('id' => '1','provider_user_id' => '1','provider_user_email' => 'asd@asd.ru','token' => '7aeb1d17f4f74b71bb85ec2b0f233696','created_at' => '2020-07-23 20:36:58.875789','payed_at' => '2020-07-23 20:36:58.875505','sum' => '500.00','provider_id' => '1','quiz_id' => '4','is_applied' => '0','is_test' => '0'),
-        $data = include('../../api_providerpayment.php');
+        $data = include('/home/wolfandman/www/testonomica_php/api_providerpayment.php');
         foreach ($data as $row) {
             if (empty($row['payed_at'])) {
                 continue;
