@@ -18,9 +18,14 @@ class MigrateOldPaymentsCommand extends Command
 
     private EntityManagerInterface $em;
 
-    public function __construct(EntityManagerInterface $em)
+    public function configure()
     {
-        parent::__construct(self::$defaultName);
+        $this->setName(self::$defaultName);
+    }
+
+    public function __construct(EntityManagerInterface $em, string $name = null)
+    {
+        parent::__construct($name);
         $this->em = $em;
     }
 
