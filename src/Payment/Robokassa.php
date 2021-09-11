@@ -14,8 +14,8 @@ class Robokassa
 {
     const LOGIN = 'testonomica';
 
-    const PASS_1_PROD = 't0sWsj0BU5Fy1D2tChRG'; // for payment
-    const PASS_2_PROD = 'e4dfrT90T4pwzYHgopS4'; // for checking the pay
+    const PASS_1_PROD = 'CR33GHiwwaD5MD22xpag'; // for payment
+    const PASS_2_PROD = 'uVtNe469XGI6yB6IKIKs'; // for checking the pay
     const PASS_1_DEV = 'wWeZ6xi54bZIW3wVYM5Y';  // for payment
     const PASS_2_DEV = 'lChzkIy69g022uKItDwu'; // for checking the pay
 
