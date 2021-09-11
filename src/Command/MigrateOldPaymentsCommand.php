@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Command\Console;
+namespace App\Command;
 
 use App\Entity\PaymentStatus;
 use Doctrine\ORM\EntityManagerInterface;
