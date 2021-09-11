@@ -73,6 +73,7 @@ class PartnerProvideController extends AbstractController
         }
         $response = new RedirectResponse($this->robokassa->createUrl($payment));
         $this->paymentService->setCookie($payment, $response);
+        $response->send();
         return $response;
     }
 
@@ -86,6 +87,7 @@ class PartnerProvideController extends AbstractController
                 'slug' => 'proforientation-v2'
             ]));
             $this->accessService->setCookie($access, $response);
+            $response->send();
             return $response;
         }
         throw new AccessDeniedHttpException('The token has already been used.');

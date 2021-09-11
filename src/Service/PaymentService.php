@@ -46,8 +46,8 @@ class PaymentService
     public function setCookie(Payment $payment, Response $response)
     {
         $cookie = Cookie::create('payment', $payment->getId(), time() + 60 * 60 * 24 * 365)
-            ->withHttpOnly(false)
-            ->withSameSite(null);
+            ->withHttpOnly(false);
+//            ->withSameSite(null);
         $response->headers->setCookie($cookie);
     }
 
