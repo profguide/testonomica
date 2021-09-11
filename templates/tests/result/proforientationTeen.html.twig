@@ -40,36 +40,24 @@
         }
 
         .type__level-high {
-            /*font-weight: bold;*/
-            text-decoration: underline;
+            font-weight: 600;
         }
 
         .type__level-middle {
         }
 
         .type__level-low {
+            font-weight: 200;
         }
 
         .type__description {
         }
     </style>
     <div class="container">
-        <h1>Результат теста</h1>
+        <h1>Результат тестирования</h1>
         <div>
-            <p>Перед вами список современных профессий, которые больше всего соответствуют вашим интересам и
-                способностям. Каждая профессия описана.</p>
-            <p>Вы узнаете также:</p>
-            <ol>
-                <li>Какие экзамены нужно сдать в ЕГЭ - чтобы поступить в высшее учебное
-                    заведение по этой специальности.
-                </li>
-                <li>В какие профессии можно войти через колледж и как поступить
-                    в колледж по выбранной вами профессии.
-                </li>
-                <li>Вы получите список ваших способностей и интересов по самым
-                    основным профессиональным направлениям.
-                </li>
-            </ol>
+            <p>Полученные результаты основаны на принципах, которые разрабатывались в Профгиде в течение 15 лет
+                практикующими специалистами по выбору профессии. В исследовании принимали участие 10 000 человек.</p>
         </div>
         <h3>Профессии</h3>
         <ol>
@@ -83,7 +71,7 @@
                             <div>{{ profession.name }}</div>
                         {% elseif profession.description|length > 1 %}
                             <div><b>{{ profession.name }}</b></div>
-                            {#<div>Называется так-то, есть несколько разновидностей, краткий очерк и ниже примеры:</div>#}
+                            {# <div>Называется так-то, есть несколько разновидностей, краткий очерк и ниже примеры:</div> #}
                         {% endif %}
                         {% for kind in profession.description %}
                             <div>
@@ -121,11 +109,11 @@
                         <b>{{ data.name }}</b>
                         <span class="type__level">
                             {% if data.level.absolute == 2 %}
-                                <span class="type__level-high">(высокий показатель)</span>{% endif %}
+                                <span class="type__level-high">(высокое значение)</span>{% endif %}
                             {% if data.level.absolute == 1 %}
-                                <span class="type__level-middle">(средний показатель)</span>{% endif %}
+                                <span class="type__level-middle">(среднее значение)</span>{% endif %}
                             {% if data.level.absolute == 0 %}
-                                <span class="type__level-low">(низкий показатель)</span>{% endif %}
+                                <span class="type__level-low">(низкое значение)</span>{% endif %}
                         </span>
                     </div>
                     <p class="type__description">{{ data.text }}</p>
@@ -155,6 +143,13 @@
             {% endfor %}
         </div>
     </div>
+
+    <div class="container">
+        <h2>Вторая часть теста</h2>
+        <p class="text-center"><a href="/tests/business/personality-intelligence/" class="btn btn-primary">Личность и
+                структура интеллекта</a></p>
+    </div>
+
     {% if debug == 1 %}
         <section class="bg-light mb-2 mt-2 pt-4 pb-4">
             <div class="container">
@@ -222,6 +217,6 @@
         </section>
     {% endif %}
 {% endblock result %}
-{#{% block javascripts %}#}
-    {#{{ parent() }}#}
-{#{% endblock %}#}
+{# {% block javascripts %} #}
+    {# {{ parent() }} #}
+{# {% endblock %}  #}
