@@ -59,6 +59,13 @@ class Robokassa
         return md5("$sum:$id:" . self::pass2($testMode));
     }
 
+    /**
+     * Типы параметров важны, потому что хэш отличается!
+     * @param Payment $payment
+     * @param $id - нет типа потому что я не знаю какой он (надо проверить)
+     * @param $sum - нет типа потому что я не знаю какой он (надо проверить)
+     * @param string $crc
+     */
     public function guardCode(Payment $payment, $id, $sum, string $crc)
     {
         $genCrc = static::crc2($id, $sum, $payment->isTestMode());
