@@ -9,6 +9,7 @@
 namespace App\Payment;
 
 use App\Entity\Payment;
+use Psr\Log\LoggerInterface;
 
 class Robokassa
 {
@@ -18,6 +19,13 @@ class Robokassa
     const PASS_2_PROD = 'uVtNe469XGI6yB6IKIKs'; // for checking the pay
     const PASS_1_DEV = 'wWeZ6xi54bZIW3wVYM5Y';  // for payment
     const PASS_2_DEV = 'lChzkIy69g022uKItDwu'; // for checking the pay
+
+    private LoggerInterface $logger;
+
+    public function __construct(LoggerInterface $logger)
+    {
+        $this->logger = $logger;
+    }
 
     public function createUrl(Payment $payment): string
     {
@@ -53,7 +61,10 @@ class Robokassa
 
     public function guardCode(Payment $payment, $id, $sum, string $crc)
     {
-        if (static::crc2($id, $sum, $payment->isTestMode()) !== mb_strtolower($crc)) {
+        $genCrc = static::crc2($id, $sum, $payment->isTestMode());
+        $this->logger->info("crc come: $crc");
+        $this->logger->info("Check crc: $genCrc");
+        if ($genCrc !== mb_strtolower($crc)) {
             throw new \RuntimeException("Hash not match to expected.");
         }
     }
