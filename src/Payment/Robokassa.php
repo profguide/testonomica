@@ -53,7 +53,7 @@ class Robokassa
 
     public function guardCode(Payment $payment, int $id, int $sum, string $crc)
     {
-        if (static::crc2($id, $sum, $payment->isTestMode()) !== mb_strtolower($crc)) {
+        if (mb_strtolower(static::crc2($id, $sum, $payment->isTestMode())) !== mb_strtolower($crc)) {
             throw new \RuntimeException("Hash not match to expected.");
         }
     }
