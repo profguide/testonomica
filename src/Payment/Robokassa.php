@@ -54,12 +54,12 @@ class Robokassa
         return $testMode ? self::PASS_2_DEV : self::PASS_2_PROD;
     }
 
-    public static function crc2($id, $sum, bool $testMode): string
+    public static function crc2(int $id, float $sum, bool $testMode): string
     {
         return md5("$sum:$id:" . self::pass2($testMode));
     }
 
-    public function guardCode(Payment $payment, $id, $sum, string $crc)
+    public function guardCode(Payment $payment, int $id, float $sum, string $crc)
     {
         $genCrc = static::crc2($id, $sum, $payment->isTestMode());
         $this->logger->info("id: $id");

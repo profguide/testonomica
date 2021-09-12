@@ -61,7 +61,7 @@ class RobokassaController extends AbstractController
         $price = $request->get('OutSum');
         $crc = $request->get('SignatureValue');
         $payment = $this->paymentService->getOneById($id);
-        $this->robokassa->guardCode($payment, $id, $price, $crc);
+        $this->robokassa->guardCode($payment, (int)$id, (float)$price, $crc);
         if (!$payment->isExecuted()) {
             $payment->addStatusExecuted();
         }
