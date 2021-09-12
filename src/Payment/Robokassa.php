@@ -62,6 +62,8 @@ class Robokassa
     public function guardCode(Payment $payment, $id, $sum, string $crc)
     {
         $genCrc = static::crc2($id, $sum, $payment->isTestMode());
+        $this->logger->info("id: $id");
+        $this->logger->info("sum: $sum");
         $this->logger->info("crc come: $crc");
         $this->logger->info("Check crc: $genCrc");
         if ($genCrc !== mb_strtolower($crc)) {

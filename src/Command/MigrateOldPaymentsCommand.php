@@ -31,52 +31,9 @@ class MigrateOldPaymentsCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        // array('id' => '1','provider_user_id' => '1','provider_user_email' => 'asd@asd.ru','token' => '7aeb1d17f4f74b71bb85ec2b0f233696','created_at' => '2020-07-23 20:36:58.875789','payed_at' => '2020-07-23 20:36:58.875505','sum' => '500.00','provider_id' => '1','quiz_id' => '4','is_applied' => '0','is_test' => '0'),
-        $data = include('/home/wolfandman/www/testonomica_php/api_providerpayment.php');
-        foreach ($data as $row) {
-            if (empty($row['payed_at'])) {
-                continue;
-            }
-            $dateTime = \DateTime::createFromFormat('Y-m-d H:i:s.u', $row['created_at'])->format('Y-m-d H:i:s');
-            // payment - id
-            $this->em->getConnection()->insert('payment', [
-                'id' => $row['id'],
-                'service_id' => 1,
-                'sum' => (int)$row['sum'],
-                'created_at' => $dateTime
-            ]);
-            $this->em->getConnection()->insert('provider_payment', [
-                'payment_id' => $row['id'],
-                'provider_id' => $row['provider_id'],
-                'token' => Uuid::v4(),
-                'user' => $row['provider_user_id'],
-            ]);
-            $this->em->getConnection()->insert('payment_status', [
-                'payment_id' => $row['id'],
-                'status' => PaymentStatus::STATUS_EXECUTED,
-                'created_at' => $dateTime,
-            ]);
-            echo "save\n";
-        }
-//        $query = $this->em->createNativeQuery('insert into payment (id, service_id, sum, created_at)
-//            values (1, 1, 500, 2020-12-12)');
-//        $query->execute();
-
-
-        // this method must return an integer number with the "exit status code"
-        // of the command. You can also use these constants to make code more readable
-
-        // return this if there was no problem running the command
-        // (it's equivalent to returning int(0))
+        echo 'came: 257C1E4F9D6942D666D512F701F609DA' . PHP_EOL;
+        echo 'gen: '. md5('1:11383:uVtNe469XGI6yB6IKIKs') . PHP_EOL;
         return Command::SUCCESS;
-
-        // or return this if some error happened during the execution
-        // (it's equivalent to returning int(1))
-        // return Command::FAILURE;
-
-        // or return this to indicate incorrect command usage; e.g. invalid options
-        // or missing arguments (it's equivalent to returning int(2))
-        // return Command::INVALID
     }
 
 }
