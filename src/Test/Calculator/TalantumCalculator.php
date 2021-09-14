@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Test\Calculator;
 
+use App\Entity\Answer;
+use App\Entity\Question;
 use App\Test\AbstractCalculator;
 use App\Test\QuestionsHolder;
 use App\Util\AnswersUtil;
@@ -48,7 +50,9 @@ class TalantumCalculator extends AbstractCalculator
         'search-2' => 'Поисковая активность на работе и в учебе',
     ];
 
-    private static $resultXml;
+    private static $answersGroupBasedXml;
+
+    private static $answersQuestionBasedXml;
 
     function calculate(): array
     {
@@ -66,6 +70,15 @@ class TalantumCalculator extends AbstractCalculator
                 ],
             ];
         }
+        $questionBasedGroupText = [];
+        foreach ($this->questionsHolder->getAll() as $question) {
+            $groupName = $question->getVariety();
+            if (!isset($questionBasedGroupText[$groupName])) {
+                $questionBasedGroupText[$groupName] = [];
+            }
+            $questionBasedGroupText[$groupName][$question->getId()] =
+                $this->textQuestionBased($question, $this->answersHolder->get((string)$question->getId()));
+        }
 
         foreach ($this->questionsHolder->byGroups() as $name => $group) {
             $groupQuestionHolder = new QuestionsHolder($group);
@@ -78,7 +91,10 @@ class TalantumCalculator extends AbstractCalculator
                 'sum' => $sum,
                 'max' => $max,
                 'percentage' => $percentage,
-                'text' => $this->textGroup($skillName, $name, $percentage),
+                'text' => [
+                    'group_based' => $this->textGroupBased($skillName, $name, $percentage),
+                    'question_based' => $questionBasedGroupText[$name],
+                ],
             ];
         }
 
@@ -87,7 +103,7 @@ class TalantumCalculator extends AbstractCalculator
         ];
     }
 
-    private function textGroup(string $skillId, string $groupId, float $percentage): string
+    private function textGroupBased(string $skillId, string $groupId, float $percentage): string
     {
         $name = (function () use ($percentage) {
             if ($percentage < 34) {
@@ -98,20 +114,48 @@ class TalantumCalculator extends AbstractCalculator
                 return 'plus';
             }
         })();
-        $skill = $this->getXml()->children($skillId);
+        $skill = $this->getGroupAnswersXml()->children($skillId);
         $groups = $skill->children('groups');
         $group = $groups->children($groupId);
         $text = $group->children($name);
         return $text->text();
     }
 
-    private function getXml(): Crawler
+    private function getGroupAnswersXml(): Crawler
     {
-        if (empty(self::$resultXml)) {
-            $filename = $this->kernel->getProjectDir() . "/xml/result/talantum.xml";
+        if (empty(self::$answersGroupBasedXml)) {
+            $filename = $this->kernel->getProjectDir() . "/xml/talantum/answers_group_based.xml";
             $fileContent = file_get_contents($filename);
-            self::$resultXml = new Crawler($fileContent);
+            self::$answersGroupBasedXml = new Crawler($fileContent);
         }
-        return self::$resultXml;
+        return self::$answersGroupBasedXml;
+    }
+
+    // ----
+
+    private function textQuestionBased(Question $question, Answer $answer): string
+    {
+        $name = (function () use ($answer) {
+            if ($answer->getValue()[0] == -1) {
+                return 'minus';
+            } elseif ($answer->getValue()[0] == 0) {
+                return 'normal';
+            } else {
+                return 'plus';
+            }
+        })();
+
+        $skill = $this->getQuestionAnswersXml()->children("id-{$question->getId()}");
+        return $skill->children($name)->text();
+    }
+
+    private function getQuestionAnswersXml(): Crawler
+    {
+        if (empty(self::$answersQuestionBasedXml)) {
+            $filename = $this->kernel->getProjectDir() . "/xml/talantum/answers_question_based.xml";
+            $fileContent = file_get_contents($filename);
+            self::$answersQuestionBasedXml = new Crawler($fileContent);
+        }
+        return self::$answersQuestionBasedXml;
     }
 }
