@@ -2,43 +2,54 @@
 
 {% block result %}
     {% set debug = app.request.get('debug') == 1 ? 1 : 0 %}
+
     <div style="margin-top: -30px;">
         {% for skill in skills %}
-            <div class="p-5 {{ loop.index % 2 == 0 ? 'bg-light' : '' }}">
-                <div class="container">
-                    <h5>{{ skill.name }}</h5>
-                    <div class="progress" style="height: 20px;">
-                        <div class="progress-bar" role="progressbar" style="width: {{ skill.total.percentage }}%;"
-                             aria-valuenow="{{ skill.total.percentage }}"
-                             aria-valuemin="0" aria-valuemax="100">{{ skill.total.percentage }}%
-                        </div>
-                    </div>
+        <div class="p-5 {{ loop.index % 2 == 0 ? 'bg-light' : '' }}">
+            <div class="container">
+                <h5>{{ skill.name }}: {{ skill.value }}/{{ skill.max }} ({{ skill.percentage }}%)</h5>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
-                    <div class="mt-4">
-                        {% for group in skill.groups %}
-                            <div class="mt-2" style="margin-bottom: 30px">
-                                <h6 style="opacity: 0.5">(Рубрика "{{ group.name }}")</h6>
-                                <div class="progress" style="opacity: 0.5">
-                                    <div class="progress-bar bg-dark" role="progressbar" style="width: {{ group.percentage }}%"
-                                         aria-valuenow="{{ group.percentage }}"
-                                         aria-valuemin="0" aria-valuemax="100">
-                                        {{ group.percentage }}% ({{ group.sum }}/{{ group.max }})
-                                    </div>
-                                </div>
-                                <div class="mt-3 mb-4">
-                                    <h6>Групповой текст</h6>
-                                    {{ group.text.group_based }}
-                                </div>
-                                <div>
-                                    <h6>Повопросный текст</h6>
-                                    {% for text in group.text.question_based %}
-                                        <div class="alert alert-success mb-2">{{ text }}</div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        {% endfor %}
-                        <hr>
-                    </div>
+{#    <div style="margin-top: -30px;">#}
+{#        {% for skill in skills %}#}
+{#            <div class="p-5 {{ loop.index % 2 == 0 ? 'bg-light' : '' }}">#}
+{#                <div class="container">#}
+{#                    <h5>{{ skill.name }}</h5>#}
+{#                    <div class="progress" style="height: 20px;">#}
+{#                        <div class="progress-bar" role="progressbar" style="width: {{ skill.total.percentage }}%;"#}
+{#                             aria-valuenow="{{ skill.total.percentage }}"#}
+{#                             aria-valuemin="0" aria-valuemax="100">{{ skill.total.percentage }}%#}
+{#                        </div>#}
+{#                    </div>#}
+
+{#                    <div class="mt-4">#}
+{#                        {% for group in skill.groups %}#}
+{#                            <div class="mt-2" style="margin-bottom: 30px">#}
+{#                                <h6 style="opacity: 0.5">(Рубрика "{{ group.name }}")</h6>#}
+{#                                <div class="progress" style="opacity: 0.5">#}
+{#                                    <div class="progress-bar bg-dark" role="progressbar" style="width: {{ group.percentage }}%"#}
+{#                                         aria-valuenow="{{ group.percentage }}"#}
+{#                                         aria-valuemin="0" aria-valuemax="100">#}
+{#                                        {{ group.percentage }}% ({{ group.sum }}/{{ group.max }})#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="mt-3 mb-4">#}
+{#                                    <h6>Групповой текст</h6>#}
+{#                                    {{ group.text.group_based }}#}
+{#                                </div>#}
+{#                                <div>#}
+{#                                    <h6>Повопросный текст</h6>#}
+{#                                    {% for text in group.text.question_based %}#}
+{#                                        <div class="alert alert-success mb-2">{{ text }}</div>#}
+{#                                    {% endfor %}#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        {% endfor %}#}
+{#                        <hr>#}
+{#                    </div>#}
 
 {#                    <div class="mt-3">#}
 {#                        <h5>Выводы</h5>#}
@@ -49,8 +60,8 @@
 {#                        <h5>Советы</h5>#}
 {#                        <p>...</p>#}
 {#                    </div>#}
-                </div>
-            </div>
-        {% endfor %}
+{#                </div>#}
+{#            </div>#}
+{#        {% endfor %}#}
     </div>
 {% endblock result %}

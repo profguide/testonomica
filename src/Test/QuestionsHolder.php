@@ -51,7 +51,7 @@ class QuestionsHolder
         return $groups[$name];
     }
 
-    public function get(string $id)
+    public function get(string $id): Question
     {
         return $this->questions[$id];
     }
