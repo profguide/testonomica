@@ -67,7 +67,7 @@ class TalantumCalculator extends AbstractCalculator
     ];
 
     private const MIN = 1;
-    private const NORM = 2;
+    private const NORM = 0;
     private const MAX = 3;
 
     private static $answersGroupBasedXml;

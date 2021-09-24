@@ -2,8 +2,9 @@
 if [[ "cache" == $1 ]]; then
   sudo chown -R wolfandman:wolfandman var
   echo "php bin/console cache:clear"
-#  php bin/console cache:clear
+  #  php bin/console cache:clear
   rm var/cache/ -r
   echo "sudo chown -R www-data:www-data var"
   sudo chown -R www-data:www-data var
+  echo "done"
 fi
