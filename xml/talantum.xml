@@ -3,138 +3,257 @@
     Скилы имеют подгруппы, что отражено в поле group, например, creative-1.
     Для каждого скила зарезервированно по 50 id
     Для каждой подгруппы зарезервированно по 5 id
+
+    3 математика
+    3 русский/литра
+    3 биология
+    3 физика
+    3 химия
+    3 общество
+    3 английский
+    3 география
+    2 физра
+
+
 -->
 <quiz version="1.0">
     <items>
+        <item id="1" group="math-bio">
+            <name>Что больше нравится?</name>
+            <options>
+                <option value="0">изучать треугольники, биссектрисы, углы</option>
+                <option value="2">ничего</option>
+                <option value="4">изучать хромосомы, вирусы, белки</option>
+            </options>
+        </item>
+        <item id="2" group="rus-him">
+            <name>Что больше нравится?</name>
+            <options>
+                <option value="0">запоминать спряжения, фонетику русского языка</option>
+                <option value="2">ничего</option>
+                <option value="4">изучать валентность, квартовый скачок</option>
+            </options>
+        </item>
+        <item id="3" group="fiz-rus">
+            <name>Что больше нравится?</name>
+            <options>
+                <option value="0">изучать и расчитыать ватт, вольт</option>
+                <option value="2">ничего</option>
+                <option value="4">изучать знаки припенания, спряжения</option>
+            </options>
+        </item>
+        <item id="4" group="him-bio">
+            <name>Что больше нравится?</name>
+            <options>
+                <option value="0">изучать кристалические решетки веществ, свободные радикалы</option>
+                <option value="2">ничего</option>
+                <option value="4">изучать теорию эволюции, классификацию животных</option>
+            </options>
+        </item>
+        <item id="5" group="ang-fiz">
+            <name>Что больше нравится?</name>
+            <options>
+                <option value="0">запоминать слова, узучать иностранную культуру</option>
+                <option value="2">ничего</option>
+                <option value="4">расчитывать траекторию падения ядра</option>
+            </options>
+        </item>
+        <item id="6" group="obz-fizra">
+            <name>Что больше нравится?</name>
+            <options>
+                <option value="0">изучать политологию, социологию</option>
+                <option value="2">ничего</option>
+                <option value="4">бегать на время, подтягиваться</option>
+            </options>
+        </item>
+        <item id="7" group="geo-bio">
+            <name>Что больше нравится?</name>
+            <options>
+                <option value="0">искать координаты, запоминать названия морей</option>
+                <option value="2">ничего</option>
+                <option value="4">изучать строение тела и состав крови</option>
+            </options>
+        </item>
+        <item id="8" group="ang-fiz">
+            <name>Что больше нравится?</name>
+            <options>
+                <option value="0">учить фразовые глаголы и идиомы иностранного языка</option>
+                <option value="2">ничего</option>
+                <option value="4">расчитывать энергию потенциала предмета</option>
+            </options>
+        </item>
+        <item id="9" group="him-geo">
+            <name>Что больше нравится?</name>
+            <options>
+                <option value="0">изучать структуру молекулы: протоны, нейтроны, электроны</option>
+                <option value="2">ничего</option>
+                <option value="4">изучать этнос Земли, узнавать где находятся природные ресурсы</option>
+            </options>
+        </item>
+        <item id="10" group="math-rus">
+            <name>Что больше нравится?</name>
+            <options>
+                <option value="0">высчитывать квадратные уравнения</option>
+                <option value="2">ничего</option>
+                <option value="4">изучать суфиксы, местоимения</option>
+            </options>
+        </item>
+        <item id="11" group="obz-ang">
+            <name>Что больше нравится?</name>
+            <options>
+                <option value="0">изучать экономику, знакомиться с религиями мира</option>
+                <option value="2">ничего</option>
+                <option value="4">слушать и переводить иностранный язык</option>
+            </options>
+        </item>
+        <item id="12" group="geo-fizra">
+            <name>Что больше нравится?</name>
+            <options>
+                <option value="0">изучать строение и историю Земли</option>
+                <option value="2">ничего</option>
+                <option value="4">разминаться, плавать, играть в волейбол</option>
+            </options>
+        </item>
+        <item id="13" group="obz-math">
+            <name>Что больше нравится?</name>
+            <options>
+                <option value="0">изучать право, философию</option>
+                <option value="2">ничего</option>
+                <option value="4">изучать дифференциалы, находить общий знаменатель</option>
+            </options>
+        </item>
 
-        <item id="1" group="creative-flex">
-            <name>Какое утверждение больше подходит вам?</name>
-            <options>
-                <option value="0">Мне нравится находить новое, неожиданное применение старым вещам</option>
-                <option value="1">1</option>
-                <option value="2">0</option>
-                <option value="3">1</option>
-                <option value="4">Если обучение новому является условием выживания, я буду изучать это</option>
-            </options>
-        </item>
-        <item id="10" group="flex-feedback">
-            <name>Какое утверждение больше подходит вам?</name>
-            <options>
-                <option value="0">При необходимости я легко переключаюсь с одной задачи на другую</option>
-                <option value="1">1</option>
-                <option value="2">0</option>
-                <option value="3">1</option>
-                <option value="4">Я спокойно, но без радости принимаю критические замечания в свой адрес</option>
-            </options>
-        </item>
-        <item id="20" group="creative-feedback">
-            <name>Какое утверждение больше подходит вам?</name>
-            <options>
-                <option value="0">У меня всегда минимум несколько идей, как достичь той или иной цели</option>
-                <option value="1">1</option>
-                <option value="2">0</option>
-                <option value="3">1</option>
-                <option value="4">Мне хотелось бы точно знать, что обо мне думают другие люди</option>
-            </options>
-        </item>
-        <item id="30" group="flex-wide">
-            <name>Какое утверждение больше подходит вам?</name>
-            <options>
-                <option value="0">Я первый вижу новые тренды и быстро перестраиваюсь</option>
-                <option value="1">1</option>
-                <option value="2">0</option>
-                <option value="3">1</option>
-                <option value="4">Радикально поменять профессию – совершенно в порядке вещей</option>
-            </options>
-        </item>
-        <item id="40" group="creative-solve">
-            <name>Какое утверждение больше подходит вам?</name>
-            <options>
-                <option value="0">Мне нравится оптимизировать алгоритмы действий</option>
-                <option value="1">1</option>
-                <option value="2">0</option>
-                <option value="3">1</option>
-                <option value="4">Я полагаюсь на разные мнения при поиске путей решения проблемы</option>
-            </options>
-        </item>
-        <item id="50" group="flex-feedback">
-            <name>Какое утверждение больше подходит вам?</name>
-            <options>
-                <option value="0">Я умею разговаривать по-разному с самыми разными людьми</option>
-                <option value="1">1</option>
-                <option value="2">0</option>
-                <option value="3">1</option>
-                <option value="4">Наиболее ценным в совместной работе является возможность проанализировать вместе с
-                    другими свои действия
-                </option>
-            </options>
-        </item>
-        <item id="60" group="search-solve">
-            <name>Какое утверждение больше подходит вам?</name>
-            <options>
-                <option value="0">Я всегда стремлюсь быть в курсе новостей в моей профессии</option>
-                <option value="1">1</option>
-                <option value="2">0</option>
-                <option value="3">1</option>
-                <option value="4">Я всегда решаю задачи в порядке их важности</option>
-            </options>
-        </item>
-        <item id="70" group="creative-feedback">
-            <name>Какое утверждение больше подходит вам?</name>
-            <options>
-                <option value="0">Мне нравится осваивать что-то новое, будь то новое умение или новое</option>
-                <option value="1">1</option>
-                <option value="2">0</option>
-                <option value="3">1</option>
-                <option value="4">Я признателен людям, которые делают мне замечания</option>
-            </options>
-        </item>
-        <item id="80" group="search-wide">
-            <name>Какое утверждение больше подходит вам?</name>
-            <options>
-                <option value="0">Оказавшись в новом месте, я стараюсь подмечать все вокруг</option>
-                <option value="1">1</option>
-                <option value="2">0</option>
-                <option value="3">1</option>
-                <option value="4">Никто не имеет права запрещать людям исповедовать религию по собственному выбору
-                </option>
-            </options>
-        </item>
-        <item id="90" group="search-solve">
-            <name>Какое утверждение больше подходит вам?</name>
-            <options>
-                <option value="0">Слушая болтовню коллег на работе или разговор людей в транспорте, я непроизвольно
-                    запоминаю все, что может оказаться полезным
-                </option>
-                <option value="1">1</option>
-                <option value="2">0</option>
-                <option value="3">1</option>
-                <option value="4">Я никогда не накапливаю проблемы и всегда успеваю их вовремя решать</option>
-            </options>
-        </item>
-        <item id="100" group="wide-search">
-            <name>Какое утверждение больше подходит вам?</name>
-            <options>
-                <option value="0">Абстрактная живопись, понимаю я ее или нет, вполне может существовать</option>
-                <option value="1">1</option>
-                <option value="2">0</option>
-                <option value="3">1</option>
-                <option value="4">Когда происходит что-то неожиданное - я немедленно начинаю исследовать ситуацию
-                </option>
-            </options>
-        </item>
-        <item id="110" group="solve-wide">
-            <name>Какое утверждение больше подходит вам?</name>
-            <options>
-                <option value="0">Я обдумываю важную проблему всегда последовательно, шаг за шагом, не перескакивая с
-                    одной мысли на другую
-                </option>
-                <option value="1">1</option>
-                <option value="2">0</option>
-                <option value="3">1</option>
-                <option value="4">Мужчина и женщина в современной с семье могут распределять роли как захотят</option>
-            </options>
-        </item>
+
+        <!--        <item id="1" group="creative-flex">-->
+        <!--            <name>Какое утверждение больше подходит вам?</name>-->
+        <!--            <options>-->
+        <!--                <option value="0">Мне нравится находить новое, неожиданное применение старым вещам</option>-->
+        <!--                <option value="1">1</option>-->
+        <!--                <option value="2">0</option>-->
+        <!--                <option value="3">1</option>-->
+        <!--                <option value="4">Мне нравится постигать новые вещи</option>-->
+        <!--&lt;!&ndash;                Если обучение новому является условием выживания, я буду изучать это&ndash;&gt;-->
+        <!--            </options>-->
+        <!--        </item>-->
+        <!--        <item id="10" group="flex-feedback">-->
+        <!--            <name>Какое утверждение больше подходит вам?</name>-->
+        <!--            <options>-->
+        <!--                <option value="0">Я умею легко переключааться с одной задачи на другую</option>-->
+        <!--                <option value="1">1</option>-->
+        <!--                <option value="2">0</option>-->
+        <!--                <option value="3">1</option>-->
+        <!--                <option value="4">Я умею спокойно принимать критические замечания</option>-->
+        <!--            </options>-->
+        <!--        </item>-->
+        <!--        <item id="20" group="creative-feedback">-->
+        <!--            <name>Какое утверждение больше подходит вам?</name>-->
+        <!--            <options>-->
+        <!--                <option value="0">У меня всегда минимум несколько идей, как достичь той или иной цели</option>-->
+        <!--                <option value="1">1</option>-->
+        <!--                <option value="2">0</option>-->
+        <!--                <option value="3">1</option>-->
+        <!--                <option value="4">Мне интересно знать, что другие думают обо мне</option>-->
+        <!--&lt;!&ndash;                Мне хотелось бы точно знать, что обо мне думают другие люди&ndash;&gt;-->
+        <!--            </options>-->
+        <!--        </item>-->
+        <!--        <item id="30" group="flex-wide">-->
+        <!--            <name>Какое утверждение больше подходит вам?</name>-->
+        <!--            <options>-->
+        <!--                <option value="0">Я первый вижу новые тренды и быстро перестраиваюсь</option>-->
+        <!--                <option value="1">1</option>-->
+        <!--                <option value="2">0</option>-->
+        <!--                <option value="3">1</option>-->
+        <!--                <option value="4">Я считаю, что радикальная смена профессии - норма</option>-->
+        <!--            </options>-->
+        <!--        </item>-->
+        <!--        <item id="40" group="creative-solve">-->
+        <!--            <name>Какое утверждение больше подходит вам?</name>-->
+        <!--            <options>-->
+        <!--                <option value="0">Мне нравится оптимизировать алгоритмы действий</option>-->
+        <!--                <option value="1">1</option>-->
+        <!--                <option value="2">0</option>-->
+        <!--                <option value="3">1</option>-->
+        <!--                <option value="4">Я полагаюсь на разные мнения при поиске путей решения проблемы</option>-->
+        <!--            </options>-->
+        <!--        </item>-->
+        <!--        <item id="50" group="flex-feedback">-->
+        <!--            <name>Какое утверждение больше подходит вам?</name>-->
+        <!--            <options>-->
+        <!--                <option value="0">Я умею разговаривать по-разному с самыми разными людьми</option>-->
+        <!--                <option value="1">1</option>-->
+        <!--                <option value="2">0</option>-->
+        <!--                <option value="3">1</option>-->
+        <!--                <option value="4">Наиболее ценным в совместной работе является возможность проанализировать вместе с-->
+        <!--                    другими свои действия-->
+        <!--                </option>-->
+        <!--            </options>-->
+        <!--        </item>-->
+        <!--        <item id="60" group="search-solve">-->
+        <!--            <name>Какое утверждение больше подходит вам?</name>-->
+        <!--            <options>-->
+        <!--                <option value="0">Я всегда стремлюсь быть в курсе новостей в моей профессии</option>-->
+        <!--                <option value="1">1</option>-->
+        <!--                <option value="2">0</option>-->
+        <!--                <option value="3">1</option>-->
+        <!--                <option value="4">Я всегда решаю задачи в порядке их важности</option>-->
+        <!--            </options>-->
+        <!--        </item>-->
+        <!--        <item id="70" group="creative-feedback">-->
+        <!--            <name>Какое утверждение больше подходит вам?</name>-->
+        <!--            <options>-->
+        <!--                <option value="0">Мне нравится осваивать что-то новое, будь то новое умение или новое</option>-->
+        <!--                <option value="1">1</option>-->
+        <!--                <option value="2">0</option>-->
+        <!--                <option value="3">1</option>-->
+        <!--                <option value="4">Я признателен людям, которые делают мне замечания</option>-->
+        <!--            </options>-->
+        <!--        </item>-->
+        <!--        <item id="80" group="search-wide">-->
+        <!--            <name>Какое утверждение больше подходит вам?</name>-->
+        <!--            <options>-->
+        <!--                <option value="0">Оказавшись в новом месте, я стараюсь подмечать все вокруг</option>-->
+        <!--                <option value="1">1</option>-->
+        <!--                <option value="2">0</option>-->
+        <!--                <option value="3">1</option>-->
+        <!--                <option value="4">Никто не имеет права запрещать людям исповедовать религию по собственному выбору-->
+        <!--                </option>-->
+        <!--            </options>-->
+        <!--        </item>-->
+        <!--        <item id="90" group="search-solve">-->
+        <!--            <name>Какое утверждение больше подходит вам?</name>-->
+        <!--            <options>-->
+        <!--                <option value="0">Слушая болтовню коллег на работе или разговор людей в транспорте, я непроизвольно-->
+        <!--                    запоминаю все, что может оказаться полезным-->
+        <!--                </option>-->
+        <!--                <option value="1">1</option>-->
+        <!--                <option value="2">0</option>-->
+        <!--                <option value="3">1</option>-->
+        <!--                <option value="4">Я никогда не накапливаю проблемы и всегда успеваю их вовремя решать</option>-->
+        <!--            </options>-->
+        <!--        </item>-->
+        <!--        <item id="100" group="wide-search">-->
+        <!--            <name>Какое утверждение больше подходит вам?</name>-->
+        <!--            <options>-->
+        <!--                <option value="0">Абстрактная живопись, понимаю я ее или нет, вполне может существовать</option>-->
+        <!--                <option value="1">1</option>-->
+        <!--                <option value="2">0</option>-->
+        <!--                <option value="3">1</option>-->
+        <!--                <option value="4">Когда происходит что-то неожиданное - я немедленно начинаю исследовать ситуацию-->
+        <!--                </option>-->
+        <!--            </options>-->
+        <!--        </item>-->
+        <!--        <item id="110" group="solve-wide">-->
+        <!--            <name>Какое утверждение больше подходит вам?</name>-->
+        <!--            <options>-->
+        <!--                <option value="0">Я обдумываю важную проблему всегда последовательно, шаг за шагом, не перескакивая с-->
+        <!--                    одной мысли на другую-->
+        <!--                </option>-->
+        <!--                <option value="1">1</option>-->
+        <!--                <option value="2">0</option>-->
+        <!--                <option value="3">1</option>-->
+        <!--                <option value="4">Мужчина и женщина в современной с семье могут распределять роли как захотят</option>-->
+        <!--            </options>-->
+        <!--        </item>-->
 
 
         <!--        &lt;!&ndash;-->
