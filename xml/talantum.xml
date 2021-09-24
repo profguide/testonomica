@@ -31,7 +31,7 @@
             <options>
                 <option value="0">запоминать спряжения, фонетику русского языка</option>
                 <option value="2">ничего</option>
-                <option value="4">изучать валентность, квартовый скачок</option>
+                <option value="4">изучать валентность, квантовый скачок</option>
             </options>
         </item>
         <item id="3" group="fiz-rus">

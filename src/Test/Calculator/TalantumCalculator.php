@@ -118,8 +118,8 @@ class TalantumCalculator extends AbstractCalculator
                     $groupsSums[$leftSkillName] += self::NORM;
                     break;
                 case 2:
-                    $groupsSums[$leftSkillName] += self::MAX;
-                    $groupsSums[$rightSkillName] += self::MAX;
+                    $groupsSums[$leftSkillName] += self::NORM;
+                    $groupsSums[$rightSkillName] += self::NORM;
                     break;
                 case 3:
                     $groupsSums[$rightSkillName] += self::NORM;
