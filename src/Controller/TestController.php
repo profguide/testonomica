@@ -192,6 +192,11 @@ class TestController extends AbstractController
             'uuid' => $result->getUuid(),
             'status' => TestStatus::finished()
         ], $this->calculatorService->calculate($result));
-        return $this->resultRenderer->render($test, $data);
+        return $this->render('tests/result.html.twig', [
+            'test' => $test,
+            'status' => TestStatus::finished(),
+            'uuid' => $result->getUuid(),
+            'result' => $this->resultRenderer->render($test, $data)->getContent()
+        ]);
     }
 }

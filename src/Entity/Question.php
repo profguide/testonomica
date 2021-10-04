@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Serializer\Annotation\Ignore;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
@@ -34,6 +35,7 @@ class Question
     /**
      * @ORM\ManyToOne(targetEntity="Test", inversedBy="questions")
      * @ORM\JoinColumn(name="test")
+     * @Ignore
      */
     private Test $test;
 
@@ -56,6 +58,7 @@ class Question
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Ignore
      */
     private ?string $nameEn = null;
 
@@ -66,17 +69,20 @@ class Question
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Ignore
      */
     private ?string $textEn = null;
 
     /**
      * Ex-group
      * @ORM\Column(type="string", nullable=true)
+     * @Ignore
      */
     private ?string $variety = null;
 
     /**
      * @ORM\Column(type="datetime", name="updated_at")
+     * @Ignore
      */
     private \DateTime $updatedAt;
 
@@ -87,6 +93,7 @@ class Question
 
     /**
      * @Vich\UploadableField(mapping="thumbnails", fileNameProperty="img")
+     * @Ignore
      */
     private ?File $imgFile = null;
 
@@ -101,6 +108,7 @@ class Question
     /**
      * @ORM\Column(type="text", nullable=true)
      * @var string
+     * @Ignore
      */
     private $wrongEn;
 
@@ -113,6 +121,7 @@ class Question
     /**
      * @ORM\Column(type="text", nullable=true)
      * @var string
+     * @Ignore
      */
     private $correctEn;
 
@@ -200,10 +209,7 @@ class Question
         $this->name = $name;
     }
 
-    /**
-     * @return string
-     */
-    public function getNameEn(): string
+    public function getNameEn(): ?string
     {
         return $this->nameEn;
     }
@@ -419,19 +425,6 @@ class Question
         $this->setUpdatedAt(new \DateTime('now'));
     }
 
-//    public static function initDefault(): Test
-//    {
-//        $test = new Test();
-//        $test->setActive(0);
-//        $test->setActiveEn(0);
-//        return $test;
-//    }
-//
-//    public function __construct()
-//    {
-//        $this->services = new ArrayCollection();
-//    }
-
     public function __construct()
     {
         $this->items = new ArrayCollection();
@@ -441,7 +434,6 @@ class Question
     {
         $this->items = $items;
     }
-
 
     /**
      * @return Collection<QuestionItem>
@@ -480,6 +472,9 @@ class Question
         return false;
     }
 
+    /**
+     * @Ignore
+     */
     public function getCorrectValues(): array
     {
         $values = [];
@@ -492,7 +487,7 @@ class Question
                     $values[] = $item->getValue();
                 }
             } else {
-                throw new \RuntimeException('Not supported for other types.');
+                throw new \RuntimeException("This type does not support correct values type: \"{$this->type}\".");
             }
         }
         return $values;

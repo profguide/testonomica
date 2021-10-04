@@ -3,13 +3,18 @@
 {% block title %}{{ test.name }}{% endblock %}
 
 {% block resultBody %}
-    {% block result %}{% endblock result %}
+    {% block result %}
+        <div class="container">
+            <h1>Результат</h1>
+            {{ result|raw }}
+        </div>
+    {% endblock result %}
     <div class="test__result_actions">
         <div class="container">
             <div class="mb-4">
                 <div style="font-weight: bold">Постоянная ссылка на результат</div>
-                <div><a href="{{ path('tests.result', {'uuid': uuid}) }}" target="_blank">
-                        Постоянная ссылка на результат</a></div>
+                <div><a href="{{ path('tests.result', {'uuid': uuid}) }}" target="_blank">Постоянная ссылка на
+                        результат</a></div>
             </div>
             <div class="card-group">
                 <div class="card">

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example api</title>
+    <link rel="stylesheet" href="http://127.0.0.1:8000/build/app.css">
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('site-api') }}
+    {% endblock %}
+</head>
+<body>
+<h1>Example API</h1>
+
+<style>
+    body {
+        background: #f9f9f9;
+    }
+
+    #testonomica_app {
+        /*padding: 15px;*/
+        /*margin: auto;*/
+        /*background: #fff;*/
+        /*min-height: 400px;*/
+        max-width: 1100px;
+    }
+</style>
+
+<div id="testonomica_app" data-test="102" data-token="SOME_PUBLIC_TOKEN" data-host="http://127.0.0.1:8000">
+    <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Загрузка</span>
+    </div>
+</div>
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('site-api') }}
+{% endblock %}
+</body>
+</html>

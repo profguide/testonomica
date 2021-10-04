@@ -211,7 +211,8 @@ $(function () {
         this.next = function (data, success, fail) {
             $.ajax(NEXT_URL, {
                 'data': data,
-                'method': 'POST'
+                'method': 'POST',
+                'Content-Type': 'text/html',
             }).done(function (data, status, xhr) {
                 success(data, xhr);
             }).fail(function (jqXHR) {

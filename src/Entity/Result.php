@@ -130,7 +130,7 @@ class Result
         $this->createdAt = new \DateTime();
     }
 
-    public static function create(Test $test, string $uuid, string $data)
+    public static function create(Test $test, string $uuid, string $data): Result
     {
         $result = new self();
         $result->setTest($test);

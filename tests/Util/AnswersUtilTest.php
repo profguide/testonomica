@@ -177,7 +177,7 @@ class AnswersUtilTest extends KernelTestCase
     private static function createAnswer($id, $value): Answer
     {
         $value = is_array($value) ? $value : [$value];
-        return Answer::create($id, $value);
+        return new Answer($id, $value);
     }
 
     /**

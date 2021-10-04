@@ -4,6 +4,7 @@ namespace App\Test;
 
 use App\Entity\Question;
 use App\Entity\QuestionItem;
+use DOMElement;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**
@@ -12,7 +13,7 @@ use Symfony\Component\DomCrawler\Crawler;
  */
 class QuestionXmlMapper
 {
-    public static function map(\DOMElement $node): Question
+    public static function map(DOMElement $node): Question
     {
         $crawler = new Crawler($node);
         $question = new Question();
@@ -51,17 +52,18 @@ class QuestionXmlMapper
         }
 
         if (($options = $crawler->filterXPath('descendant-or-self::options'))->count() > 0) {
-            /**@var \DOMElement $option */
+            /**@var DOMElement $option */
             foreach ($options->children() as $option) {
                 $question->addItem(
                     QuestionItem::createMinimal(
                         $option->getAttribute('value'),
                         $option->textContent,
+                        $option->getAttribute('img'),
                         $option->getAttribute('correct') === "true"));
             }
         }
         if (($fields = $crawler->filterXPath('descendant-or-self::fields'))->count() > 0) {
-            /**@var \DOMElement $field */
+            /**@var DOMElement $field */
             foreach ($fields->children() as $field) {
                 $question->addItem(
                     QuestionItem::createMinimal(

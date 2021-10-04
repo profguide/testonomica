@@ -18,14 +18,11 @@ class ResultService
 {
     private const SESSION_RESULT_NAME = 'results';
 
-    /**@var ResultRepository */
-    private $repository;
+    private ResultRepository $repository;
 
-    /**@var SessionInterface */
-    private $session;
+    private SessionInterface $session;
 
-    /**@var AnswersSerializer */
-    private $serializer;
+    private AnswersSerializer $serializer;
 
     public function __construct(
         SessionInterface $session,

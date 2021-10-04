@@ -24,10 +24,10 @@ security:
         path: app_logout
       # where to redirect after logout
       # target: app_any_route
-#    api:
-#      pattern: /tests/cli
-#      stateless: true
-#      security: false
+    api:
+      pattern: /tests/api
+      stateless: true
+      security: false
 
       # activate different ways to authenticate
       # https://symfony.com/doc/current/security.html#firewalls-authentication

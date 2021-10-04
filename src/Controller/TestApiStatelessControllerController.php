@@ -24,13 +24,11 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\SerializerInterface;
 
 /**
+ * TODO delete and use TestRestController instead
  * Stateless API прохождения теста, промежуточные данные хранятся у клиента (браузер, сервисы).
  * Для сохранения @see TestApiStatelessControllerController::saveResults()
- * todo написать какое-то правило, чтобы сделать роут доступным только для профгида.
- * возможно, передача спецтокена во враппер метода api(Request $request)
- *
  * # stateless=true. With security: enable_authenticator_manager=true it doesn't work, so I removed it temporarily
- * @Route("/tests/cli", name="test_cli.")
+ * @Route("/tests/cli", name="test_cli.", stateless=true)
  * @package App\Controller
  * @author: adavydov
  * @since: 23.10.2020

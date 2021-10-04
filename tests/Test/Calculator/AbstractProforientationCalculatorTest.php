@@ -124,9 +124,9 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
     {
         /**@var AbstractProforientationCalculator $calculator */
         $calculator = new $this->calculatorName(new AnswersHolder([
-            720 => Answer::create(720, [1]),
-            721 => Answer::create(721, [1]),
-            722 => Answer::create(722, [1]),
+            720 => new Answer(720, [1]),
+            721 => new Answer(721, [1]),
+            722 => new Answer(722, [1]),
             // << absent 723 answer obliged Calculator to ignore 723 question
         ]), $this->questionsHolder(), self::$kernel);
         $this->assertEquals(100, $calculator->calculate()['types_group_percent']['art'][2]);
@@ -199,7 +199,7 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
     {
         $answers = [];
         foreach ($array as $id => $value) {
-            $answers[$id] = Answer::create($id, $value);
+            $answers[$id] = new Answer($id, $value);
         }
         return new AnswersHolder($answers);
     }

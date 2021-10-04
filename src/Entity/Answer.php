@@ -12,15 +12,10 @@ class Answer
 
     public array $value;
 
-    private function __construct(string $id, array $value)
+    public function __construct(string $id, array $value)
     {
         $this->questionId = $id;
         $this->value = $value;
-    }
-
-    public static function create(string $id, array $value): Answer
-    {
-        return new static($id, $value);
     }
 
     public function getQuestionId(): string

@@ -12,6 +12,7 @@ use App\Entity\Test;
 use App\Test\AnswersSerializer;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
+// todo удалить после переезда хранилища во фронт
 class AnswerRepository
 {
     private const SESS_NAME = 'test';

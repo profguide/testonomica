@@ -9,6 +9,7 @@ namespace App\Test;
 
 use App\Entity\Answer;
 
+// todo удалить после переезда хранилища во фронтенд
 class AnswersSerializer
 {
     /**
@@ -30,7 +31,7 @@ class AnswersSerializer
         $jsonData = json_decode($json, true);
         $answers = [];
         foreach ($jsonData as $id => $values) {
-            $answers[$id] = Answer::create($id, $values);
+            $answers[$id] = new Answer($id, $values);
         }
         return $answers;
         //return $this->serializer->deserialize($json, 'App\Entity\Answer[]', 'json', [AbstractNormalizer::ATTRIBUTES => ['value']]);

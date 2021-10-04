@@ -30,6 +30,12 @@ class TalantumCalculator extends AbstractCalculator
         'ang' => 'Иностранный язык',
         'geo' => 'География',
         'fizra' => 'Физкултура',
+
+        'movie' => 'Кино',
+        'travel' => 'Путешествие',
+        'music' => 'Музыка',
+        'children' => 'Дети',
+        'friends' => 'Друзья',
 //        'creative' => 'Креативность',
 //        'flex' => 'Гибкость',
 //        'time' => 'Обращение со временем',

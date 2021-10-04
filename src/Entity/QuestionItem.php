@@ -4,7 +4,9 @@ declare(strict_types=1);
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Exception;
 use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Serializer\Annotation\Ignore;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
@@ -14,7 +16,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  * @author: adavydov
  * @since: 09.04.2021
  */
-class QuestionItem
+class QuestionItem implements \Serializable
 {
     /**
      * @ORM\Id()
@@ -27,6 +29,7 @@ class QuestionItem
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Question", inversedBy="items")
      * @ORM\JoinColumn(name="question")
+     * @Ignore
      */
     private Question $question;
 
@@ -39,6 +42,7 @@ class QuestionItem
     /**
      * @ORM\Column(type="boolean")
      * @var boolean
+     * @Ignore
      */
     private $correct;
 
@@ -55,11 +59,13 @@ class QuestionItem
     /**
      * @ORM\Column(type="text", nullable=true)
      * @var string
+     * @Ignore
      */
     private $textEn;
 
     /**
      * @ORM\Column(type="datetime", name="updated_at")
+     * @Ignore
      */
     private \DateTime $updatedAt;
 
@@ -70,25 +76,28 @@ class QuestionItem
 
     /**
      * @Vich\UploadableField(mapping="thumbnails", fileNameProperty="img")
+     * @Ignore
      */
     private ?File $imgFile = null;
 
     public static function createMinimal(
         string $value,
         string $text,
+        string $img = null,
         bool $isCorrect = false): QuestionItem
     {
         $entity = new QuestionItem();
         $entity->value = $value;
         $entity->text = $text;
+        $entity->img = $img;
         $entity->correct = $isCorrect;
         return $entity;
     }
 
     /**
-     * @return int
+     * @return ?int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -166,9 +175,9 @@ class QuestionItem
     }
 
     /**
-     * @return string
+     * @return ?string
      */
-    public function getTextEn(): string
+    public function getTextEn(): ?string
     {
         return $this->textEn;
     }
@@ -250,4 +259,13 @@ class QuestionItem
 //    {
 //        $this->services = new ArrayCollection();
 //    }
+    public function serialize()
+    {
+        // TODO: Implement serialize() method.
+    }
+
+    public function unserialize($serialized)
+    {
+        // TODO: Implement unserialize() method.
+    }
 }

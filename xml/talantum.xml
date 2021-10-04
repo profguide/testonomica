@@ -4,124 +4,174 @@
     Для каждого скила зарезервированно по 50 id
     Для каждой подгруппы зарезервированно по 5 id
 
-    3 математика
-    3 русский/литра
-    3 биология
-    3 физика
-    3 химия
-    3 общество
-    3 английский
-    3 география
-    2 физра
+    2 кино
+    2 музыка
+    2 общение
+    2 путешествия
+    2 дети
+
 
 
 -->
 <quiz version="1.0">
     <items>
-        <item id="1" group="math-bio">
+        <item id="1" group="movie-travel">
             <name>Что больше нравится?</name>
             <options>
-                <option value="0">изучать треугольники, биссектрисы, углы</option>
+                <option value="0">наблюдать</option>
                 <option value="2">ничего</option>
-                <option value="4">изучать хромосомы, вирусы, белки</option>
+                <option value="4">переживать</option>
             </options>
         </item>
-        <item id="2" group="rus-him">
+        <item id="2" group="music-children">
             <name>Что больше нравится?</name>
             <options>
-                <option value="0">запоминать спряжения, фонетику русского языка</option>
+                <option value="0">слушать музыку</option>
                 <option value="2">ничего</option>
-                <option value="4">изучать валентность, квантовый скачок</option>
+                <option value="4">петь песни детям</option>
             </options>
         </item>
-        <item id="3" group="fiz-rus">
+        <item id="3" group="music-friends">
             <name>Что больше нравится?</name>
             <options>
-                <option value="0">изучать и расчитыать ватт, вольт</option>
+                <option value="0">слушать музыку на прогулке</option>
                 <option value="2">ничего</option>
-                <option value="4">изучать знаки припенания, спряжения</option>
+                <option value="4">ходить на концерт с друзьями</option>
             </options>
         </item>
-        <item id="4" group="him-bio">
+        <item id="4" group="travel-children">
             <name>Что больше нравится?</name>
             <options>
-                <option value="0">изучать кристалические решетки веществ, свободные радикалы</option>
+                <option value="0">завтрак в гостинице</option>
                 <option value="2">ничего</option>
-                <option value="4">изучать теорию эволюции, классификацию животных</option>
+                <option value="4">батут с дочкой</option>
             </options>
         </item>
-        <item id="5" group="ang-fiz">
+        <item id="5" group="movie-friends">
             <name>Что больше нравится?</name>
             <options>
-                <option value="0">запоминать слова, узучать иностранную культуру</option>
+                <option value="0">смотреть на других</option>
                 <option value="2">ничего</option>
-                <option value="4">расчитывать траекторию падения ядра</option>
+                <option value="4">быть с другими</option>
             </options>
         </item>
-        <item id="6" group="obz-fizra">
-            <name>Что больше нравится?</name>
-            <options>
-                <option value="0">изучать политологию, социологию</option>
-                <option value="2">ничего</option>
-                <option value="4">бегать на время, подтягиваться</option>
-            </options>
-        </item>
-        <item id="7" group="geo-bio">
-            <name>Что больше нравится?</name>
-            <options>
-                <option value="0">искать координаты, запоминать названия морей</option>
-                <option value="2">ничего</option>
-                <option value="4">изучать строение тела и состав крови</option>
-            </options>
-        </item>
-        <item id="8" group="ang-fiz">
-            <name>Что больше нравится?</name>
-            <options>
-                <option value="0">учить фразовые глаголы и идиомы иностранного языка</option>
-                <option value="2">ничего</option>
-                <option value="4">расчитывать энергию потенциала предмета</option>
-            </options>
-        </item>
-        <item id="9" group="him-geo">
-            <name>Что больше нравится?</name>
-            <options>
-                <option value="0">изучать структуру молекулы: протоны, нейтроны, электроны</option>
-                <option value="2">ничего</option>
-                <option value="4">изучать этнос Земли, узнавать где находятся природные ресурсы</option>
-            </options>
-        </item>
-        <item id="10" group="math-rus">
-            <name>Что больше нравится?</name>
-            <options>
-                <option value="0">высчитывать квадратные уравнения</option>
-                <option value="2">ничего</option>
-                <option value="4">изучать суфиксы, местоимения</option>
-            </options>
-        </item>
-        <item id="11" group="obz-ang">
-            <name>Что больше нравится?</name>
-            <options>
-                <option value="0">изучать экономику, знакомиться с религиями мира</option>
-                <option value="2">ничего</option>
-                <option value="4">слушать и переводить иностранный язык</option>
-            </options>
-        </item>
-        <item id="12" group="geo-fizra">
-            <name>Что больше нравится?</name>
-            <options>
-                <option value="0">изучать строение и историю Земли</option>
-                <option value="2">ничего</option>
-                <option value="4">разминаться, плавать, играть в волейбол</option>
-            </options>
-        </item>
-        <item id="13" group="obz-math">
-            <name>Что больше нравится?</name>
-            <options>
-                <option value="0">изучать право, философию</option>
-                <option value="2">ничего</option>
-                <option value="4">изучать дифференциалы, находить общий знаменатель</option>
-            </options>
-        </item>
+
+
+<!--                <item id="1" group="math-bio">-->
+<!--                    <name>Что больше нравится?</name>-->
+<!--                    <options>-->
+<!--                        <option value="0">изучать треугольники, биссектрисы, углы</option>-->
+<!--                        <option value="2">ничего</option>-->
+<!--                        <option value="4">изучать хромосомы, вирусы, белки</option>-->
+<!--                    </options>-->
+<!--                </item>-->
+<!--                <item id="2" group="rus-him">-->
+<!--                    <name>Что больше нравится?</name>-->
+<!--                    <options>-->
+<!--                        <option value="0">запоминать спряжения, фонетику русского языка</option>-->
+<!--                        <option value="2">ничего</option>-->
+<!--                        <option value="4">изучать валентность, квантовый скачок</option>-->
+<!--                    </options>-->
+<!--                </item>-->
+<!--                <item id="3" group="fiz-rus">-->
+<!--                    <name>Что больше нравится?</name>-->
+<!--                    <options>-->
+<!--                        <option value="0">изучать и расчитыать ватт, вольт</option>-->
+<!--                        <option value="2">ничего</option>-->
+<!--                        <option value="4">изучать знаки припенания, спряжения</option>-->
+<!--                    </options>-->
+<!--                </item>-->
+<!--                <item id="4" group="him-bio">-->
+<!--                    <name>Что больше нравится?</name>-->
+<!--                    <options>-->
+<!--                        <option value="0">изучать кристалические решетки веществ, свободные радикалы</option>-->
+<!--                        <option value="2">ничего</option>-->
+<!--                        <option value="4">изучать теорию эволюции, классификацию животных</option>-->
+<!--                    </options>-->
+<!--                </item>-->
+<!--                <item id="5" group="ang-fiz">-->
+<!--                    <name>Что больше нравится?</name>-->
+<!--                    <options>-->
+<!--                        <option value="0">запоминать слова, узучать иностранную культуру</option>-->
+<!--                        <option value="2">ничего</option>-->
+<!--                        <option value="4">расчитывать траекторию падения ядра</option>-->
+<!--                    </options>-->
+<!--                </item>-->
+<!--                <item id="6" group="obz-fizra">-->
+<!--                    <name>Что больше нравится?</name>-->
+<!--                    <options>-->
+<!--                        <option value="0">изучать политологию, социологию</option>-->
+<!--                        <option value="2">ничего</option>-->
+<!--                        <option value="4">бегать на время, подтягиваться</option>-->
+<!--                    </options>-->
+<!--                </item>-->
+<!--                <item id="7" group="geo-bio">-->
+<!--                    <name>Что больше нравится?</name>-->
+<!--                    <options>-->
+<!--                        <option value="0">искать координаты, запоминать названия морей</option>-->
+<!--                        <option value="2">ничего</option>-->
+<!--                        <option value="4">изучать строение тела и состав крови</option>-->
+<!--                    </options>-->
+<!--                </item>-->
+<!--                <item id="8" group="ang-fiz">-->
+<!--                    <name>Что больше нравится?</name>-->
+<!--                    <options>-->
+<!--                        <option value="0">учить фразовые глаголы и идиомы иностранного языка</option>-->
+<!--                        <option value="2">ничего</option>-->
+<!--                        <option value="4">расчитывать энергию потенциала предмета</option>-->
+<!--                    </options>-->
+<!--                </item>-->
+<!--                <item id="9" group="him-geo">-->
+<!--                    <name>Что больше нравится?</name>-->
+<!--                    <options>-->
+<!--                        <option value="0">изучать структуру молекулы: протоны, нейтроны, электроны</option>-->
+<!--                        <option value="2">ничего</option>-->
+<!--                        <option value="4">изучать этнос Земли, узнавать где находятся природные ресурсы</option>-->
+<!--                    </options>-->
+<!--                </item>-->
+<!--                <item id="10" group="math-rus">-->
+<!--                    <name>Что больше нравится?</name>-->
+<!--                    <options>-->
+<!--                        <option value="0">высчитывать квадратные уравнения</option>-->
+<!--                        <option value="2">ничего</option>-->
+<!--                        <option value="4">изучать суфиксы, местоимения</option>-->
+<!--                    </options>-->
+<!--                </item>-->
+<!--                <item id="11" group="obz-ang">-->
+<!--                    <name>Что больше нравится?</name>-->
+<!--                    <options>-->
+<!--                        <option value="0">изучать экономику, знакомиться с религиями мира</option>-->
+<!--                        <option value="2">ничего</option>-->
+<!--                        <option value="4">слушать и переводить иностранный язык</option>-->
+<!--                    </options>-->
+<!--                </item>-->
+<!--                <item id="12" group="geo-fizra">-->
+<!--                    <name>Что больше нравится?</name>-->
+<!--                    <options>-->
+<!--                        <option value="0">изучать строение и историю Земли</option>-->
+<!--                        <option value="2">ничего</option>-->
+<!--                        <option value="4">разминаться, плавать, играть в волейбол</option>-->
+<!--                    </options>-->
+<!--                </item>-->
+<!--                <item id="13" group="obz-math">-->
+<!--                    <name>Что больше нравится?</name>-->
+<!--                    <options>-->
+<!--                        <option value="0">изучать право, философию</option>-->
+<!--                        <option value="2">ничего</option>-->
+<!--                        <option value="4">изучать дифференциалы, находить общий знаменатель</option>-->
+<!--                    </options>-->
+<!--                </item>-->
+
+
+
+
+
+
+
+
+
+
+
 
 
         <!--        <item id="1" group="creative-flex">-->

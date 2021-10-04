@@ -82,7 +82,7 @@ class TestControllerTest extends WebTestCase
 
     public function testViewStatusProcess()
     {
-        $this->answerService->save($this->test, Answer::create(1, ['some-value']));
+        $this->answerService->save($this->test, new Answer(1, ['some-value']));
         $categorySlug = $this->test->getCatalog()->getSlug();
         $testSlug = $this->test->getSlug();
         $this->client->request('POST', "/tests/$categorySlug/$testSlug/");
@@ -119,7 +119,7 @@ class TestControllerTest extends WebTestCase
 
     private function initResult()
     {
-        $answer = Answer::create("1", ["my-answer"]);
+        $answer = new Answer("1", ["my-answer"]);
         $serialized = $this->serializer->serialize([$answer]);
         return Result::create(
             $this->test,

@@ -152,7 +152,7 @@ class TestApiStatefulControllerTest extends WebTestCase
         $testId = $this->test->getId();
         $lastQuestionId = 2;
         $nextQuestionId = 3;
-        $this->answerRepository->save($this->test, Answer::create($lastQuestionId, ['some-value']));
+        $this->answerRepository->save($this->test, new Answer($lastQuestionId, ['some-value']));
         $this->client->request('POST', '/tests/api/', ['test' => $testId, 'restore' => 1]);
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
         // следующий вопрос

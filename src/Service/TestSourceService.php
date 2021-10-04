@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use App\Entity\Answer;
 use App\Entity\Question;
 use App\Entity\Test;
 use App\Repository\SourceRepositoryInterface;
@@ -52,5 +53,18 @@ class TestSourceService
     public function getQuestionNumber(Test $test, $id): int
     {
         return $this->repository->getQuestionNumber($test, $id);
+    }
+
+    /***
+     * @param Test $test
+     * @param Answer[] $answers
+     */
+    public function validateRawAnswers(Test $test, array $answers)
+    {
+        if ($this->getTotalCount($test) != count($answers)) {
+            throw new \LogicException('Not matching answers count.');
+        }
+        // validate ids
+        // validate values?
     }
 }

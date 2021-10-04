@@ -25,7 +25,7 @@ class ResultRenderer
     /**
      * @param Test $test
      * @param array $data
-     * @return string
+     * @return Response
      * @throws LoaderError
      * @throws RuntimeError
      * @throws SyntaxError
@@ -35,16 +35,16 @@ class ResultRenderer
         // templated from the db
         $resultBlocksOutput = $this->analysisRenderer->render($test, $data);
         if (!empty($resultBlocksOutput) || $test->getResultView() != null) {
-            $template = "{% extends('tests/result.html.twig') %}{% block result %}<div class=\"container\">"
-                . $resultBlocksOutput
-                . $test->getResultView()
-                . "</div>{% endblock %}";
+//            $template = "{% extends('tests/result.html.twig') %}{% block result %}<div class=\"container\">"
+//                . $resultBlocksOutput
+//                . $test->getResultView()
+//                . "</div>{% endblock %}";
+            $template = $resultBlocksOutput . $test->getResultView();
             $template = $this->twig->createTemplate($template);
             return new Response($template->render($data));
         } else {
             // templated by filename
-            return new Response($this->twig->render(
-                'tests/result/' . ResultUtil::resolveViewName($test) . '.html.twig', $data));
+            return new Response($this->twig->render('tests/result/' . ResultUtil::resolveViewName($test) . '.html.twig', $data));
         }
     }
 }

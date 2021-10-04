@@ -14,6 +14,8 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
+ * TODO delete and use TestRestController instead
+ *
  * @Route("/tests/api", name="tests_api")
  * @package App\Controller
  * @author: adavydov
@@ -35,7 +37,7 @@ class TestApiStatefulControllerController extends TestApiAbstractController
 
     protected function saveAnswer(Test $test, $questionId, array $value): void
     {
-        $this->answerService->save($test, Answer::create($questionId, $value));
+        $this->answerService->save($test, new Answer($questionId, $value));
     }
 
     public function end(Test $test)

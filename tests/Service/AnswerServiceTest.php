@@ -37,7 +37,7 @@ class AnswerServiceTest extends KernelTestCase
 
     public function testSave()
     {
-        $answer = Answer::create(99, ['my-value']);
+        $answer = new Answer(99, ['my-value']);
         $this->answerService->save($this->test, $answer);
         $this->assertEquals(1, $this->answerService->count($this->test));
         // repeated answer must rewrite value
@@ -47,7 +47,7 @@ class AnswerServiceTest extends KernelTestCase
 
     public function testClear()
     {
-        $answer = Answer::create(99, ['my-value']);
+        $answer = new Answer(99, ['my-value']);
         $this->answerService->save($this->test, $answer);
         $this->assertEquals(1, $this->answerService->count($this->test));
         $this->answerService->clear($this->test);
@@ -56,7 +56,7 @@ class AnswerServiceTest extends KernelTestCase
 
     public function testGetAll()
     {
-        $answer = Answer::create(99, ['my-value']);
+        $answer = new Answer(99, ['my-value']);
         // save
         $this->answerService->save($this->test, $answer);
         // get
@@ -68,7 +68,7 @@ class AnswerServiceTest extends KernelTestCase
     public function testHasAnswers()
     {
         $this->assertFalse($this->answerService->hasAnswers($this->test));
-        $this->answerService->save($this->test, Answer::create(99, ['my-value']));
+        $this->answerService->save($this->test, new Answer(99, ['my-value']));
         $this->assertTrue($this->answerService->hasAnswers($this->test));
     }
 }
