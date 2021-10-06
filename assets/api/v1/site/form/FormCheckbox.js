@@ -40,12 +40,12 @@ export default class FormCheckbox extends Component {
                         option.img
                             ? <img src={option.img}
                                    style={{maxHeight: 100 + 'px'}}
-                                   onClick={() => this.props.questionAnsweredHandler(option.value)}
+                                   onClick={() => this.props.selectionHandler(option.value)}
                                    className={'tnc-q-form__option-img ' + + (this.state.values.includes(option.value) ? 'tnc-q-form__option-img_selected' : '')}
                                    alt={'Изображение'}/>
                             : <button
                                 disabled={this.props.isLoading}
-                                onClick={() => this.props.questionAnsweredHandler(option.value)}
+                                onClick={() => this.props.selectionHandler(option.value)}
                                 className={'tnc-btn tnc-q-form__option-btn ' + (this.state.values.includes(option.value) ? 'tnc-q-form__option-btn_selected' : '')}>
                                 {option.text}</button>
                     }

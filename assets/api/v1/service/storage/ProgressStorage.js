@@ -7,7 +7,8 @@ export default class ProgressStorage {
         if (!localStorage.getItem(this.storageName)) {
             this._initLocalStorage();
         }
-        console.log('Storage', localStorage.getItem(this.storageName))
+        // this.clear();
+        // console.log('Storage', localStorage.getItem(this.storageName))
     }
 
     resultKey() {
@@ -22,7 +23,7 @@ export default class ProgressStorage {
         const answers = this._getStorageData().answers;
         answers[answer.questionId] = answer.value;
         this._updateField('answers', answers);
-        console.log('Storage: answer added', answers);
+        // console.log('Storage: answer added', answers);
     }
 
     getAnswers() {

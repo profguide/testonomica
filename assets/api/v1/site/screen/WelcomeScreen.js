@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {STATUS_IN_PROGRESS} from "../../const";
 
-export default class Welcome extends Component {
+export default class WelcomeScreen extends Component {
     constructor(props) {
         super(props);
     }
@@ -37,6 +37,7 @@ export default class Welcome extends Component {
         return (
             <div className={'tnc-welcome'}>
                 <h1 className={'tnc-welcome__title'}>{this.props.test.name}</h1>
+                <div className={'tnc-welcome__time'}>{this.props.test.duration} минут</div>
                 <div className={'tnc-welcome__description'} dangerouslySetInnerHTML={{__html: this.props.test.description}}/>
                 {buttons}
             </div>

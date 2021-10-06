@@ -43,7 +43,7 @@ export default class FormText extends Component {
                     isLoading={this.props.isLoading}
                     enabledBack={this.props.enabledBack}
                     enabledForward={true}
-                    goForwardHandler={() => this.props.questionAnsweredHandler(this.state.values)}
+                    goForwardHandler={() => this.props.selectionHandler(this.state.values)}
                     goBackHandler={this.props.goBackHandler}/>
             </div>
         )

@@ -15,12 +15,12 @@ export default class FormOption extends Component {
                             option.img
                                 ? <img src={option.img}
                                        style={{maxHeight: 100 + 'px'}}
-                                       onClick={!this.props.isLoading ? () => this.props.questionAnsweredHandler(option.value) : null}
+                                       onClick={!this.props.isLoading ? () => this.props.selectionHandler(option.value) : null}
                                        className={'tnc-q-form__option-img'}
                                        alt={'Изображение'}/>
                                 : <button
                                     disabled={this.props.isLoading}
-                                    onClick={() => this.props.questionAnsweredHandler(option.value)}
+                                    onClick={() => this.props.selectionHandler(option.value)}
                                     className={'tnc-btn tnc-q-form__option-btn'}>{option.text}</button>
                         }
 

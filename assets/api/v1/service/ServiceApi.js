@@ -1,7 +1,7 @@
-import axios from "axios";
 import {HOST} from "../const";
+import axios from "axios";
 import ProgressStorage from "./storage/ProgressStorage";
-import QuestionResponseHydrator from "../site/app/QuestionResponseHydrator";
+import QuestionResponseHydrator from "./types/QuestionResponseHydrator";
 import Answer from "./types/Answer";
 
 /**
@@ -29,6 +29,7 @@ export default class ServiceApi {
             this.test = {
                 name: response.data.name,
                 description: response.data.description,
+                duration: response.data.duration,
                 length: response.data.length,
             }
             return this.test;
@@ -44,6 +45,7 @@ export default class ServiceApi {
     }
 
     saveResult() {
+        console.log('Saving...');
         return axios.post(this.buildUrl('/save/' + this.testId + '/'), {
             progress: this.storage.getAnswers(),
         }).then(response => {

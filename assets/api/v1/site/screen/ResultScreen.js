@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-export default class Result extends Component {
+export default class ResultScreen extends Component {
     constructor(props) {
         super(props);
         this.api = props.api;

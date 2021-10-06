@@ -5,16 +5,12 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Entity\Answer;
-use App\Entity\Question;
 use App\Entity\Test;
 use App\Repository\TestRepository;
 use App\Service\CalculatorService;
 use App\Service\ResultService;
 use App\Service\TestSourceService;
 use App\Test\ResultRenderer;
-use App\Test\ResultUtil;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -22,25 +18,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("/tests/api/v1")
- * , format="json"
- * , stateless=true
- * Этот контроллер должен стать единственным API.
- * Вся инфраструктура, связанная с хранением прогресса на бэкенде должна быть удалена.
- * Можно пойти еще дальше: тест полностью загружается при старте. Никакого next и prev на сервере нет.
- *
- * todo get id instead of value.
- *  Чтобы не прописывать id в каждый вариант ответа можно давать id по правилу questionId-optionIndex, если id нет.
- *
- * - next(currentId, value) - value for validation: {status: progress/finished, question: Question()}
- * - back(currentId): {status: progress, question: Question()}
- * - info(): {name, description, length}
- * - result(progress): {uuid, result}
- *
- * All requests must be marked with the header X-ACCESS-TOKEN and be intercepted somewhere else,
- * Response must include header X-ACCESS-TOKEN with the new one (should be generated and added somewhere else)
- *
  */
-class TestRestController extends AbstractController
+class TestResultRestController extends RestController
 {
     private TestRepository $tests;
 
@@ -64,64 +43,6 @@ class TestRestController extends AbstractController
         $this->resultService = $resultService;
         $this->calculatorService = $calculatorService;
         $this->resultRenderer = $resultRenderer;
-    }
-
-    /**
-     * @Route("/info/{testId<\d+>}/")
-     * @param int $testId
-     * @return Response
-     */
-    public function info(int $testId): Response
-    {
-        $test = $this->getTest($testId);
-        $length = $this->questions->getTotalCount($test);
-        return $this->json([
-            'name' => $test->getName(),
-            'description' => $test->getDescription(),
-            'length' => $length
-        ]);
-//        // cache publicly for 3600 seconds
-//        $response->setPublic();
-//        $response->setMaxAge(3600);
-//        $response->headers->addCacheControlDirective('must-revalidate', true);
-    }
-
-    /**
-     * @Route("/first/{testId<\d+>}/")
-     * @param int $testId
-     * @return Response
-     */
-    public function first(int $testId): Response
-    {
-        $test = $this->getTest($testId);
-        return $this->json($this->questionResponseData($test, $this->questions->getFirstQuestion($test)));
-    }
-
-    /**
-     * @Route("/next/{testId<\d+>}/")
-     * @param int $testId
-     * @param Request $request
-     * @return Response
-     */
-    public function next(int $testId, Request $request): Response
-    {
-        $test = $this->getTest($testId);
-        $questionId = $this->getRequestParameter($request, 'q');
-//        $value = $this->getRequestParameter($request, 'v', false); // взято чтобы провалидировать, так что желательно сделать.
-        return $this->json($this->questionResponseData($test, $this->questions->getNextQuestion($test, $questionId)));
-    }
-
-    /**
-     * @Route("/prev/{testId<\d+>}/")
-     * @param int $testId
-     * @param Request $request
-     * @return Response
-     */
-    public function prev(int $testId, Request $request): Response
-    {
-        $test = $this->getTest($testId);
-        $questionId = $this->getRequestParameter($request, 'q');
-        return $this->json($this->questionResponseData($test, $this->questions->getPrevQuestion($test, $questionId)));
     }
 
     /**
@@ -177,17 +98,6 @@ class TestRestController extends AbstractController
         return $this->resultRenderer->render($test, $data);
     }
 
-    private function questionResponseData(Test $test, Question $question): array
-    {
-        $number = $this->questions->getQuestionNumber($test, $question->getId());
-        $length = $count = $this->questions->getTotalCount($test);
-        return [
-            'question' => $question,
-            'number' => $number,
-            'length' => $length,
-        ];
-    }
-
     private function getRequestParameter(Request $request, string $name, bool $isRequired = true)
     {
         $value = $request->get($name);
@@ -213,13 +123,6 @@ class TestRestController extends AbstractController
             throw new NotFoundHttpException();
         }
         return $test;
-    }
-
-    protected function json($data, int $status = 200, array $headers = [], array $context = []): JsonResponse
-    {
-        $response = parent::json($data, $status, $headers, $context);
-        $response->setEncodingOptions(JSON_UNESCAPED_UNICODE);
-        return $response;
     }
 
     private static function createAnswer(int $qId, $values): Answer
