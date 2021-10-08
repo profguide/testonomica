@@ -107,21 +107,20 @@ class TestController extends AbstractController
     }
 
     /**
-     * @Route("/{categorySlug}/{slug}/", name="view")
+     * @Route("/view/{slug}/", name="view")
+     * todo if test not free show payment widget or redirect to payment or redirect to presentation page
      * @param Request $request
-     * @param string $categorySlug
      * @param string $slug
      * @return Response
      */
-    public function view(Request $request, string $categorySlug, string $slug): Response
+    public function view(Request $request, string $slug): Response
     {
         $test = $this->loadBySlug($slug);
         if (($result = $this->resultService->getSessionResult($test)) != null) {
             return $this->renderResult($test, $result);
         }
-        $this->assertUrl($test, $categorySlug);
         $this->assertActive($test);
-        $this->assertAccess($test, $request);
+        $this->assertAccess($test, $request); // todo remove, as payment on the API side.
         $status = $this->answerService->hasAnswers($test)
             ? TestStatus::progress()
             : TestStatus::none();
@@ -135,16 +134,9 @@ class TestController extends AbstractController
     private function loadBySlug(string $slug): Test
     {
         if (($test = $this->testService->findBySlug($slug)) == null) {
-            throw new NotFoundHttpException();
+            self::createNotFoundException();
         }
         return $test;
-    }
-
-    private static function assertUrl(Test $test, string $categorySlug)
-    {
-        if ($test->getCatalog()->getSlug() !== $categorySlug) {
-            throw new NotFoundHttpException();
-        }
     }
 
     private static function assertActive(Test $test)

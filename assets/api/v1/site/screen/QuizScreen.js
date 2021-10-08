@@ -25,6 +25,8 @@ export default class QuizScreen extends Component {
 
         this.api = props.api;
 
+        // console.log('Test', this.api);
+
         this.selectionHandler = this.selectionHandler.bind(this);
         this.goForwardHandler = this.goForwardHandler.bind(this);
         this.goBackHandler = this.goBackHandler.bind(this);
@@ -90,6 +92,9 @@ export default class QuizScreen extends Component {
     }
 
     render() {
+        if (this.state.error) {
+            return this.state.error;
+        }
         if (this.state.question === null) {
             return <Loading/>;
         }

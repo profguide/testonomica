@@ -5,7 +5,7 @@
 {% block body %}
     <div class="container">
         <h1>Тесты онлайн</h1>
-        {#<div class="row">#}
+        {# <div class="row"> #}
         <table class="table table-striped">
             <thead>
             <tr>
@@ -14,16 +14,15 @@
             </thead>
             <tbody>
             {% for test in tests %}
-                {#<article class="col-lg-3 col-12 test-in-list">#}
+                {# <article class="col-lg-3 col-12 test-in-list"> #}
                 <tr>
                     <td>
-                        <a href="{{ path('tests.view', {categorySlug: test.catalog.slug, slug: test.slug}) }}">
-                            {{ test.name|e }}</a>
+                        <a href="{{ path('tests.view', {slug: test.slug}) }}">{{ test.name|e }}</a>
                     </td>
                 </tr>
-                {#</article>#}
+                {# </article> #}
             {% endfor %}
-            {#</div>#}
+            {# </div> #}
             </tbody>
         </table>
     </div>

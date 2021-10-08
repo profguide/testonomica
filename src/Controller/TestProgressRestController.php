@@ -17,12 +17,9 @@ use Symfony\Component\Routing\Annotation\Route;
  * @Route("/tests/api/v1", format="json")
  * todo удалить остальные контроллеры и инфраструктуру связанную с хранением прогресса на сервере.
  * todo кешировать вопросы с помощью Redis
- * Можно пойти еще дальше: тест полностью загружается при старте. Никакого next и prev на сервере нет.
- *
- * All requests must be marked with the header X-ACCESS-TOKEN and be intercepted somewhere else,
- * Response must include header X-ACCESS-TOKEN with the new one (should be generated and added somewhere else)
+ * Можно пойти еще дальше: тест полностью загружается при старте: никакого next и prev на сервере нет.
  */
-class TestProgressRestController extends RestController
+class TestProgressRestController extends RestController implements TokenAuthenticatedController
 {
     private TestRepository $tests;
 

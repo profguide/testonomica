@@ -30,7 +30,8 @@ export default class ResultScreen extends Component {
         const url = 'https://testonomica.com/tests/result/' + this.api.resultKey() + '/';
         return (
             <div className={'tnc-result'}>
-                <h1 className={'tnc-result__title'}>Результат</h1>
+                <h1 className={'tnc-result__title'}>{this.props.test.name}</h1>
+                <h2 className={'tnc-result__subtitle'}>Ваши результаты:</h2>
                 <article className={'tnc-result__text'} dangerouslySetInnerHTML={{__html: this.state.result}}/>
                 <p><span style={{fontWeight: 'bold'}}>Постоянная ссылка на результат:</span><br/>
                     <a href={url}>{url}</a></p>

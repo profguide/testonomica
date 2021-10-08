@@ -14,6 +14,7 @@ export default class ServiceApi {
         }
         this.testId = config['testId'];
         this.host = config['host'] ?? HOST;
+        this.token = config['token'];
         this.storage = new ProgressStorage(config.testId);
         this.test = null; // loaded brief about test
         this.question = null; // loaded question (current question)
@@ -25,7 +26,9 @@ export default class ServiceApi {
             method: 'get',
             url: this.buildUrl('/info/' + this.testId + '/'),
             responseType: 'json',
+            headers: {'token': this.token}
         }).then(response => {
+            this.token = response.headers['x-token'];
             this.test = {
                 name: response.data.name,
                 description: response.data.description,
@@ -48,7 +51,10 @@ export default class ServiceApi {
         console.log('Saving...');
         return axios.post(this.buildUrl('/save/' + this.testId + '/'), {
             progress: this.storage.getAnswers(),
+        }, {
+            headers: {'token': this.token}
         }).then(response => {
+            this.token = response.headers['x-token'];
             const key = response.data.key;
             this.storage.setFinished(key);
             return key;
@@ -56,7 +62,12 @@ export default class ServiceApi {
     }
 
     result() {
-        return axios.get(this.buildUrl('/result/?key=' + this.storage.resultKey()));
+        return axios.get(this.buildUrl('/result/' + this.testId + '/?key=' + this.storage.resultKey()), {
+            headers: {'token': this.token}
+        }).then(response => {
+            this.token = response.headers['x-token'];
+            return response;
+        });
     }
 
     resultKey() {
@@ -78,7 +89,9 @@ export default class ServiceApi {
             method: 'get',
             url: this.buildUrl('/first/' + this.testId + '/'),
             responseType: 'json',
+            headers: {'token': this.token}
         }).then(response => {
+            this.token = response.headers['x-token'];
             this.question = (new QuestionResponseHydrator()).hydrate(response);
             return this.question;
         })
@@ -96,7 +109,9 @@ export default class ServiceApi {
             method: 'get',
             url: this.buildUrl('/next/' + this.testId + '/?q=' + id),
             responseType: 'json',
+            headers: {'token': this.token}
         }).then(response => {
+            this.token = response.headers['x-token'];
             this.question = (new QuestionResponseHydrator()).hydrate(response);
             return this.question;
         });
@@ -107,7 +122,9 @@ export default class ServiceApi {
             method: 'get',
             url: this.buildUrl('/prev/' + this.testId + '/?q=' + this.question.id),
             responseType: 'json',
+            headers: {'token': this.token}
         }).then(response => {
+            this.token = response.headers['x-token'];
             this.question = (new QuestionResponseHydrator()).hydrate(response);
             return this.question;
         });

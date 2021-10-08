@@ -43,6 +43,12 @@ class AccessService
         return $this->repository->findOneByToken($token);
     }
 
+    public function utilize(Access $access)
+    {
+        $access->setUsed();
+        $this->repository->save($access);
+    }
+
     // может вынести работу с куками в UserAccessService?
     public function setCookie(Access $access, Response $response)
     {

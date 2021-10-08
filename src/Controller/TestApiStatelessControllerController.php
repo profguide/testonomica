@@ -28,7 +28,8 @@ use Symfony\Component\Serializer\SerializerInterface;
  * Stateless API прохождения теста, промежуточные данные хранятся у клиента (браузер, сервисы).
  * Для сохранения @see TestApiStatelessControllerController::saveResults()
  * # stateless=true. With security: enable_authenticator_manager=true it doesn't work, so I removed it temporarily
- * @Route("/tests/cli", name="test_cli.", stateless=true)
+ * @Route("/tests/cli", name="test_cli.")
+ * , stateless=true
  * @package App\Controller
  * @author: adavydov
  * @since: 23.10.2020

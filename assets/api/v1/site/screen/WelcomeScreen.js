@@ -37,7 +37,7 @@ export default class WelcomeScreen extends Component {
         return (
             <div className={'tnc-welcome'}>
                 <h1 className={'tnc-welcome__title'}>{this.props.test.name}</h1>
-                <div className={'tnc-welcome__time'}>{this.props.test.duration} минут</div>
+                <div className={'tnc-welcome__duration'}>{this.props.test.duration} минут</div>
                 <div className={'tnc-welcome__description'} dangerouslySetInnerHTML={{__html: this.props.test.description}}/>
                 {buttons}
             </div>

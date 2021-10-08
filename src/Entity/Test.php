@@ -6,6 +6,7 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\PersistentCollection;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\TestRepository"))
@@ -338,6 +339,14 @@ class Test
             $this->services[] = $service;
         }
         return $this;
+    }
+
+    /**
+     * @return ArrayCollection|PersistentCollection
+     */
+    public function getServices()
+    {
+        return $this->services;
     }
 
     public function setQuestions(Collection $questions): void

@@ -22,6 +22,16 @@ class ServiceRepository extends ServiceEntityRepository
         parent::__construct($registry, Service::class);
     }
 
+    public function getById(int $id): Service
+    {
+        /**@var Service $service */
+        $service = $this->findOneBy(['id' => $id]);
+        if ($service) {
+            return $service;
+        }
+        throw new \DomainException("Service not found (id: \"$id\").");
+    }
+
     public function getOneBySlug(string $slug): Service
     {
         /**@var Service $service */

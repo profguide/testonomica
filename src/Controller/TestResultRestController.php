@@ -15,11 +15,14 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
 /**
  * @Route("/tests/api/v1")
  */
-class TestResultRestController extends RestController
+class TestResultRestController extends RestController implements TokenAuthenticatedController
 {
     private TestRepository $tests;
 
@@ -47,7 +50,6 @@ class TestResultRestController extends RestController
 
     /**
      * @Route("/save/{testId<\d+>}/")
-     * todo think of moving it to a separate controller as only this rare action consumes creating a heavy ResultService.
      * @param int $testId
      * @param Request $request
      * @return Response
@@ -67,33 +69,18 @@ class TestResultRestController extends RestController
     }
 
     /**
-     * @Route("/result/")
-     * todo think of moving it to a separate controller as only this rare action consumes creating a heavy ResultService.
+     * @Route("/result/{testId<\d+>}/")
      * @param Request $request
      * @return Response
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
      */
     public function result(Request $request): Response
     {
         $key = $this->getRequestParameter($request, 'key');
         $result = $this->resultService->findByUuid($key);
         $data = $this->calculatorService->calculate($result);
-        // todo как вернуть результат?
-        //  можно html, но бутстраповские стили... а если всё в iframe? тогда можно бутстрап, но не будут работать стили внешние
-        //  можно html с минимальным набором бутстрепа - отступы. То есть на тестономике, допустим, бутстреп подхватится, а для внешней интеграции нет - можно переопределить кастомно.
-        //  можно в json, но тогда react должен уметь обрабатывать каждый результат по своему, что не годится.
-        //  можно html, но чисто результат - без внешних тегов, чтобы сразу шел <p> и заканчивался </p>. - это лучший вариант.
-        //      допустим, последний вариант. тогда нужно превратить все эти 102.html.twig в пассивов, чтобы они загружались, а не их.
-        //      кстати, они могли бы внутри себя определять дополнительные стили, что хорошо может пригодиться для теста на профориентацию.
-        //
-        //  а что если скилбокс скажет, что хочет получать разбитый json? нет проблем - мы можем сделать какой-то резолвер.
-        //  на основании теста и компании мы можем возвращать что они сами пожелают.
-        //  а можно сделать экшн настраиваемым, чтобы можно было передать тип контента.
-        //  Однако, это может быть не так просто. Потому что обычный тест содержит массу всякого - ul, table, ссылки, картинки.
-        //  Можно некоторые тесты делать такими, мы ведь сделали профориентационный тест таким. Ну вот.
-
-        // можно рассмотреть два вида интеграции
-        //  - iframe - полностью наши стили, то есть фактически сайт в сайте только без меню и подвала.
-        //  - div - вариант для тестономики, профгида, и всех тех, кто хочет полностью управлять стилями.
         $test = $result->getTest();
         return $this->resultRenderer->render($test, $data);
     }

@@ -8,7 +8,6 @@ export default class Loading extends Component {
                 <div className={'tnc-q-loading__form'}>
                     <div className={'tnc-q-loading__form-q tnc-q-loading__form-q_1 tnc-stage'}/>
                     <div className={'tnc-q-loading__form-q tnc-q-loading__form-q_2 tnc-stage'}/>
-                    <div></div>
                 </div>
                 <div className={'tnc-q-loading__progress-bar tnc-stage'}/>
             </article>

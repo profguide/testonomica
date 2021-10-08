@@ -1,7 +1,11 @@
+// High-level API main file: welcome screen, quiz screen, result screen, managing acts user does.
+
 import ReactDOM from "react-dom";
 import React from 'react';
 import App from "./api/v1/site/App";
 import {HOST} from "./api/v1/const";
+import ServiceApi from "./api/v1/service/ServiceApi";
+import TncEventDispatcher from "./api/common/TncEventDispatcher";
 import './api/v1/style.scss'
 
 const INIT_AUTO = 'auto';
@@ -16,31 +20,14 @@ const host = tag.getAttribute('data-host') ?? HOST;
 const token = tag.getAttribute('data-token') ?? null;
 const init = tag.getAttribute('data-init') ?? null;
 
-class TncEventDispatcher {
-    constructor() {
-        this.listeners = {};
-    }
-
-    addEventListener(name, callback) {
-        this.listeners[name] = callback
-    }
-
-    dispatchEvent(e) {
-        console.log(this.listeners);
-        console.log(this.listeners[e.type]);
-        if (this.listeners[e.type]) {
-            this.listeners[e.type](e.detail);
-        }
-    }
-}
-
 class Testonomica {
     constructor() {
         this.dispatcher = new TncEventDispatcher();
     }
 
     createApp() {
-        ReactDOM.render(<App testId={testId} host={host} token={token} dispatcher={this.dispatcher}/>, tag);
+        const api = new ServiceApi({testId, host, token});
+        ReactDOM.render(<App api={api} dispatcher={this.dispatcher}/>, tag);
     }
 
     addEventListener(name, callback) {
@@ -48,12 +35,19 @@ class Testonomica {
     }
 }
 
-const testonomica = new Testonomica();
+window.testonomica = new Testonomica();
 if (!init || init === INIT_AUTO) {
-    testonomica.createApp();
+    window.testonomica.createApp();
 }
 
-window.testonomica = testonomica;
+// Iframe mode: notify parent about resize
+// const resize_ob = new ResizeObserver(function (entries) {
+//     let rect = entries[0].contentRect;
+//     let height = rect.height;
+//     console.log(height);
+//     window.parent.postMessage({frameHeight: height}, host);
+// });
+// resize_ob.observe(tag);
 // how to use:
 // var api = window.testonomica;
 // api.addEventListener('finish', (data) => {alert(data.key)})

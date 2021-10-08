@@ -16,7 +16,7 @@ $border-radius-sm: 3px;
 @import "~bootstrap/scss/tables";
 @import "~bootstrap/scss/forms";
 @import "~bootstrap/scss/buttons";
-@import "~bootstrap/scss/transitions";
+//@import "~bootstrap/scss/transitions";
 @import "~bootstrap/scss/dropdown";
 @import "~bootstrap/scss/button-group";
 @import "~bootstrap/scss/input-group";
@@ -24,10 +24,10 @@ $border-radius-sm: 3px;
 @import "~bootstrap/scss/nav";
 @import "~bootstrap/scss/navbar";
 @import "~bootstrap/scss/card";
-@import "~bootstrap/scss/breadcrumb";
+//@import "~bootstrap/scss/breadcrumb";
 @import "~bootstrap/scss/pagination";
-@import "~bootstrap/scss/badge";
-@import "~bootstrap/scss/jumbotron";
+//@import "~bootstrap/scss/badge";
+//@import "~bootstrap/scss/jumbotron";
 @import "~bootstrap/scss/alert";
 @import "~bootstrap/scss/progress";
 @import "~bootstrap/scss/media";
@@ -35,9 +35,9 @@ $border-radius-sm: 3px;
 @import "~bootstrap/scss/close";
 @import "~bootstrap/scss/toasts";
 @import "~bootstrap/scss/modal";
-@import "~bootstrap/scss/tooltip";
-@import "~bootstrap/scss/popover";
-@import "~bootstrap/scss/carousel";
+//@import "~bootstrap/scss/tooltip";
+//@import "~bootstrap/scss/popover";
+//@import "~bootstrap/scss/carousel";
 @import "~bootstrap/scss/spinners";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/print";
@@ -54,4 +54,23 @@ $border-radius-sm: 3px;
 
 .btn-info {
   color: #fff;
+}
+
+h1 {
+  font-size: $font-size-base * 2;
+  font-weight: 500;
+  color: inherit;
+}
+
+h2 {
+  font-size: $font-size-base * 1.6;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: $font-size-base * 1.4;
+}
+
+h4 {
+  font-size: $font-size-base * 1.2;
 }
