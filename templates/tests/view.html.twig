@@ -22,11 +22,11 @@
     {% block javascripts %}
         {{ parent() }}
         {{ encore_entry_script_tags('site-api') }}
-        <script>
-            // removes preload screen on App load.
-            window.testonomica.addEventListener('loaded', function () {
-                document.getElementById('app-preload-screen').remove();
-            });
-        </script>
     {% endblock %}
+    <script>
+        // removes preload screen on App load.
+        window.testonomica.addEventListener('loaded', function () {
+            document.getElementById('app-preload-screen').remove();
+        });
+    </script>
 {% endblock %}
