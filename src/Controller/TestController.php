@@ -124,10 +124,13 @@ class TestController extends AbstractController
         $status = $this->answerService->hasAnswers($test)
             ? TestStatus::progress()
             : TestStatus::none();
+        // for development would be http://127.0.0.1:8080
+        $host = $request->getScheme() . '://' . $request->getHttpHost();
         return $this->render('tests/view.html.twig', [
             'test' => $test,
             'category' => $test->getCatalog(),
             'status' => $status,
+            'host' => $host
         ]);
     }
 

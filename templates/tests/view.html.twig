@@ -17,7 +17,7 @@
          data-test="{{ test.id }}"
          data-token="SOME_PUBLIC_TOKEN"
          data-init="auto"
-         data-host="http://127.0.0.1:8000">
+         data-host="{{ host }}">
     </div>
     {% block javascripts %}
         {{ parent() }}
