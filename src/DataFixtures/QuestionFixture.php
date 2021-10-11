@@ -19,22 +19,22 @@ class QuestionFixture extends Fixture implements DependentFixtureInterface
         $question = new Question();
         $question->setTest($test);
         $question->setName("Какая планета находится дальше от Солнца?");
-        $question->addItem(QuestionItem::createMinimal(0, "Земля", false));
-        $question->addItem(QuestionItem::createMinimal(1, "Марс", true));
+        $question->addItem(QuestionItem::createMinimal(0, "Земля", null, false));
+        $question->addItem(QuestionItem::createMinimal(1, "Марс", null, true));
         $manager->persist($question);
 
         $question = new Question();
         $question->setTest($test);
         $question->setName("Какой объект больше?");
-        $question->addItem(QuestionItem::createMinimal(1, "Солнце", true));
-        $question->addItem(QuestionItem::createMinimal(0, "Луна", false));
+        $question->addItem(QuestionItem::createMinimal(1, "Солнце", null, true));
+        $question->addItem(QuestionItem::createMinimal(0, "Луна", null, false));
         $manager->persist($question);
 
         $question = new Question();
         $question->setTest($test);
         $question->setName("Сколько планет в солнечной системе?");
-        $question->addItem(QuestionItem::createMinimal(1, "8", true));
-        $question->addItem(QuestionItem::createMinimal(0, "9", false));
+        $question->addItem(QuestionItem::createMinimal(1, "8", null, true));
+        $question->addItem(QuestionItem::createMinimal(0, "9", null, false));
         $manager->persist($question);
 
         $manager->flush();

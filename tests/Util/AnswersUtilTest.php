@@ -28,7 +28,7 @@ class AnswersUtilTest extends KernelTestCase
     }
 
     /**
-     * Сумма значений с методом OPTION.
+     * Сумма значений с методом OPTION (radio).
      * При этом OPTION может иметь "правильные ответы", а может не иметь.
      * Если вопрос предполагает "правильный ответ", и ответ действительно правильный, то это должно прибавить единицу.
      * А если вопрос не предполагает "правильного ответа", то прибавляется значение ответа.
@@ -36,10 +36,10 @@ class AnswersUtilTest extends KernelTestCase
     public function testSumOptions()
     {
         $questions = self::buildQuestions([
-            1 => [0 => 'correct', 1, 2], // with correct
-            2 => [0, 1 => 'correct', 2 => 'correct'], // with 2 correct
-            3 => [0, 1, 2 => 'correct'], // with correct
-            4 => [0, 1, 2] // with value
+            1 => [0 => 'correct', 1, 2], // +1
+            2 => [0, 1 => 'correct', 2 => 'correct'], // +2
+            3 => [0, 1, 2 => 'correct'], // +1
+            4 => [0, 1, 2] // depends on choice: +0 or +1 or +2
         ]);
         $answers = self::buildAnswers([
             1 => 0, // 1 option correct
@@ -193,9 +193,9 @@ class AnswersUtilTest extends KernelTestCase
         $o = [];
         foreach ($options as $k => $v) {
             if ($v === 'correct') {
-                $o[] = QuestionItem::createMinimal($k, "Вариант", true);
+                $o[] = QuestionItem::createMinimal($k, "Вариант", null, true);
             } else {
-                $o[] = QuestionItem::createMinimal($v, "Вариант", false);
+                $o[] = QuestionItem::createMinimal($v, "Вариант", null, false);
             }
         }
         $q->setItems(new ArrayCollection($o));

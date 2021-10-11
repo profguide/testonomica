@@ -62,7 +62,7 @@ class PartnerProvideControllerTest extends WebTestCase
     {
         $this->assertProvideIsRedirectingByToken(AccessFixture::TOKEN);
         $this->assertCookie('access', $this->accessRepository->findOneByToken(AccessFixture::TOKEN)->getToken());
-        $this->assertEquals('/tests/business/proforientation-v2/', $this->client->getResponse()->headers->get('location'));
+        $this->assertEquals('/tests/view/proforientation-v2/', $this->client->getResponse()->headers->get('location'));
     }
 
     /***
@@ -75,7 +75,7 @@ class PartnerProvideControllerTest extends WebTestCase
         $this->makeAccessUsed();
         $this->setAccessCookie(AccessFixture::TOKEN);
         $this->assertProvideIsRedirectingByToken(AccessFixture::TOKEN);
-        $this->assertEquals('/tests/business/proforientation-v2/', $this->client->getResponse()->headers->get('location'));
+        $this->assertEquals('/tests/view/proforientation-v2/', $this->client->getResponse()->headers->get('location'));
     }
 
     /**

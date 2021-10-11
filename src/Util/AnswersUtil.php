@@ -16,7 +16,7 @@ class AnswersUtil
 {
     /**
      * Counts sum of answers values.
-     * Correct answer counts as 1, otherwise value as it is
+     * 'Correct' answer means +1, otherwise value considers as it is
      *
      * @param QuestionsHolder $questionsHolder
      * @param AnswersHolder $answersHolder

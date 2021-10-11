@@ -30,8 +30,8 @@ class RobokassaControllerTest extends WebTestCase
     protected function setUp()
     {
         $this->client = static::createClient();
-        $this->paymentService = self::$container->get(PaymentService::class);
-        $this->serviceRepository = self::$container->get(ServiceRepository::class);
+        $this->paymentService = self::getContainer()->get(PaymentService::class);
+        $this->serviceRepository = self::getContainer()->get(ServiceRepository::class);
     }
 
     /**
@@ -61,7 +61,7 @@ class RobokassaControllerTest extends WebTestCase
         $this->client->request('POST', '/robokassa/success/', ['InvId' => $executedPayment->getId()]);
         // $this->client->getCookieJar()->set(new Cookie('payment', $executedPayment->getId()));
         $this->assertEquals(302, $this->client->getResponse()->getStatusCode());
-        $this->assertEquals('/tests/business/proforientation-v2/', $this->client->getResponse()->headers->get('location'));
+        $this->assertEquals('/tests/view/proforientation-v2/', $this->client->getResponse()->headers->get('location'));
         $this->assertCookie('access');
     }
 

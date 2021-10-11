@@ -82,7 +82,6 @@ class PartnerProvideController extends AbstractController
         if ($cookieToken == $token || !$access->isUsed()) {
             // todo get test from service_test table
             $response = new RedirectResponse($this->generateUrl('tests.view', [
-                'categorySlug' => 'business',
                 'slug' => 'proforientation-v2'
             ]));
             $this->accessService->setCookie($access, $response);

@@ -82,7 +82,6 @@ class RobokassaController extends AbstractController
         }
         // todo route get from somewhere
         $response = new RedirectResponse($this->generateUrl('tests.view', [
-            'categorySlug' => 'business',
             'slug' => 'proforientation-v2'
         ]));
         $access = $this->accessService->create($payment->getService());

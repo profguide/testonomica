@@ -54,11 +54,11 @@ class TestApiStatelessControllerTest extends WebTestCase
     protected function setUp()
     {
         $this->client = static::createClient();
-        $this->testRepository = self::$container->get(TestRepositoryInterface::class);
-        $this->answerRepository = self::$container->get(AnswerRepository::class);
-        $this->resultRepository = self::$container->get(ResultRepository::class);
-        $this->resultService = self::$container->get(ResultService::class);
-        $this->serializer = self::$container->get(AnswersSerializer::class);
+        $this->testRepository = self::getContainer()->get(TestRepositoryInterface::class);
+        $this->answerRepository = self::getContainer()->get(AnswerRepository::class);
+        $this->resultRepository = self::getContainer()->get(ResultRepository::class);
+        $this->resultService = self::getContainer()->get(ResultService::class);
+        $this->serializer = self::getContainer()->get(AnswersSerializer::class);
         $this->test = $this->testRepository->findOneBySlug(TestFixture::TEST_1_SLUG);
         $this->complexTest = $this->testRepository->findOneBySlug(TestFixture::TEST_6_SLUG);
     }
