@@ -22,7 +22,7 @@ export default class FormRating extends Component {
         this.setState({values, options});
 
         if (options.length === 0) {
-            this.props.questionAnsweredHandler(values)
+            this.props.selectionHandler(values)
         }
     }
 
