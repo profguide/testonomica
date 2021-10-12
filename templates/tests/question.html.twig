@@ -25,7 +25,8 @@
                     <div class="test__quiz-content">
                         {% if question.img %}
                             <div class="test__img-wrapper">
-                                <img class="test__img" src="{{ question.img }}" alt="{{ question.name }}"/></div>
+                                <img class="test__img" src="{{ question.img }}" alt="{{ question.name }}"/>
+                            </div>
                         {% endif %}
                         <div class="test__name">{{ question.name }}</div>
                         {% if question.text %}
@@ -41,7 +42,13 @@
                                                id="answer-{{ loop.index }}"
                                                class="radio"
                                                data-is-correct="{{ item.correct }}">
-                                        <label for="answer-{{ loop.index }}">{{ item.text|raw }}</label>
+                                        <label for="answer-{{ loop.index }}">
+                                            {% if item.img %}
+                                                <img src="{{ item.img }}" class="test__option-img" alt="Вариант"/>
+                                            {% else %}
+                                                {{ item.text|raw }}
+                                            {% endif %}
+                                        </label>
                                         <div class="test__option-reveal"></div>
                                     </div>
                                 {% endfor %}
@@ -66,7 +73,13 @@
                                                data-method="CHECKBOX"
                                                data-limit="{{ question.count }}"
                                                class="checkbox">
-                                        <label for="answer-{{ loop.index }}">{{ item.text|raw }}</label>
+                                        <label for="answer-{{ loop.index }}">
+                                            {% if item.img %}
+                                                <img src="{{ item.img }}" class="test__option-img" alt="Вариант"/>
+                                            {% else %}
+                                                {{ item.text|raw }}
+                                            {% endif %}
+                                        </label>
                                     </div>
                                 {% endfor %}
                             {% elseif question.type == 'rating' %}
@@ -78,7 +91,13 @@
                                                id="answer-{{ loop.index }}"
                                                data-method="RATING"
                                                class="radio">
-                                        <label for="answer-{{ loop.index }}">{{ item.text|raw }}</label>
+                                        <label for="answer-{{ loop.index }}">
+                                            {% if item.img %}
+                                                <img src="{{ item.img }}" class="test__option-img" alt="Вариант"/>
+                                            {% else %}
+                                                {{ item.text|raw }}
+                                            {% endif %}
+                                        </label>
                                     </div>
                                 {% endfor %}
                             {% endif %}

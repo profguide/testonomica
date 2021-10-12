@@ -25,7 +25,6 @@ Encore
      */
     .addEntry('app', './assets/app.js')
     .addEntry('site-api', './assets/site-api.js')
-    .addEntry('widget-v1', './assets/widget/v1/index.js')
     .addEntry('admin', './assets/admin.js')
     //.addEntry('page2', './assets/page2.js')
 
