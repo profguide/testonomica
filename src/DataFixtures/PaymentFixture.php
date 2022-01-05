@@ -16,27 +16,26 @@ use Doctrine\Persistence\ObjectManager;
 
 class PaymentFixture extends Fixture implements DependentFixtureInterface
 {
-    const NOT_PAYED = 'not_payed';
-    const PAYED = 'payed';
+    const PENDING = 'pending';
+    const PAID = 'paid';
 
     public function load(ObjectManager $manager)
     {
         /**@var Service $service */
         $service = $this->getReference(ServiceFixture::SERVICE_1);
 
-        $paymentNotPayed = Payment::init($service, 349);
-        $paymentNotPayed->addStatus(new PaymentStatus(PaymentStatus::STATUS_PENDING));
-        $manager->persist($paymentNotPayed);
+        $pending = Payment::init($service, 349);
+        $pending->addStatus(new PaymentStatus(PaymentStatus::STATUS_PENDING));
+        $manager->persist($pending);
 
-        $paymentPayed = Payment::init($service, 349);
-        $paymentPayed->addStatus(new PaymentStatus(PaymentStatus::STATUS_PENDING));
-        $paymentPayed->addStatus(new PaymentStatus(PaymentStatus::STATUS_EXECUTED));
-        $manager->persist($paymentPayed);
+        $paid = Payment::init($service, 349);
+        $paid->addStatus(new PaymentStatus(PaymentStatus::STATUS_EXECUTED));
+        $manager->persist($paid);
 
         $manager->flush();
 
-        $this->addReference(self::NOT_PAYED, $paymentNotPayed);
-        $this->addReference(self::PAYED, $paymentPayed);
+        $this->addReference(self::PENDING, $pending);
+        $this->addReference(self::PAID, $paid);
     }
 
     public function getDependencies()

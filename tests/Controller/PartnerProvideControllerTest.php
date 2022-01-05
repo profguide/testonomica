@@ -47,8 +47,8 @@ class PartnerProvideControllerTest extends WebTestCase
      */
     public function testProvideUnPayedToken()
     {
-        $payment = $this->paymentByToken(ProviderPaymentFixture::UNPAYED_TOKEN);
-        $this->assertProvideIsRedirectingByToken(ProviderPaymentFixture::UNPAYED_TOKEN);
+        $payment = $this->paymentByToken(ProviderPaymentFixture::PENDING_TOKEN);
+        $this->assertProvideIsRedirectingByToken(ProviderPaymentFixture::PENDING_TOKEN);
         $this->assertStringStartsWith('https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=testonomica',
             $this->client->getResponse()->headers->get('location'));
     }
@@ -106,7 +106,7 @@ class PartnerProvideControllerTest extends WebTestCase
      */
     public function testProvideForbiddenPayedToken()
     {
-        $this->assertProvideIsDeniedByToken(ProviderPaymentFixture::PAYED_TOKEN);
+        $this->assertProvideIsDeniedByToken(ProviderPaymentFixture::PAID_TOKEN);
     }
 
 

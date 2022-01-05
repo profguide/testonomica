@@ -12,7 +12,7 @@ use App\Entity\ProviderPayment;
 use App\Payment\Robokassa;
 use App\Service\AccessService;
 use App\Service\PaymentService;
-use App\Service\ProviderPaymentService;
+use App\Service\ProviderUserPaymentService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -30,7 +30,7 @@ class PartnerProvideController extends AbstractController
 {
     private PaymentService $paymentService;
 
-    private ProviderPaymentService $providerPaymentService;
+    private ProviderUserPaymentService $providerUserPaymentService;
 
     private AccessService $accessService;
 
@@ -38,12 +38,12 @@ class PartnerProvideController extends AbstractController
 
     public function __construct(
         PaymentService $paymentService,
-        ProviderPaymentService $providerPaymentService,
+        ProviderUserPaymentService $providerUserPaymentService,
         AccessService $accessService,
         Robokassa $robokassa)
     {
         $this->paymentService = $paymentService;
-        $this->providerPaymentService = $providerPaymentService;
+        $this->providerUserPaymentService = $providerUserPaymentService;
         $this->accessService = $accessService;
         $this->robokassa = $robokassa;
     }
@@ -58,7 +58,7 @@ class PartnerProvideController extends AbstractController
     {
         $token = $request->get('token');
         self::guardToken($token);
-        if (($providerPayment = $this->providerPaymentService->findOneByToken($token)) != null) {
+        if (($providerPayment = $this->providerUserPaymentService->findOneByToken($token)) != null) {
             return $this->goToPayment($providerPayment);
         } elseif (($access = $this->accessService->findOneByToken($token)) != null) {
             return $this->goToService($access, $token, $request);

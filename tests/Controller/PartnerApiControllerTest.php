@@ -50,7 +50,7 @@ class PartnerApiControllerTest extends WebTestCase
         $provider = $this->providerRepository->findBySlug(ProviderFixture::TESTOMETRIKA);
         $requestParams = [
             'token' => $provider->getToken(),
-            'user' => ProviderPaymentFixture::UNPAYED_USER,
+            'user' => ProviderPaymentFixture::PENDING_USER,
             'service' => ServiceFixture::SERVICE_1,
         ];
         // делаем два запроса, чтобы получить два токена
@@ -74,7 +74,7 @@ class PartnerApiControllerTest extends WebTestCase
         $provider = $this->providerRepository->findBySlug(ProviderFixture::TESTOMETRIKA);
         $requestParams = [
             'token' => $provider->getToken(),
-            'user' => ProviderPaymentFixture::PAYED_USER,
+            'user' => ProviderPaymentFixture::PAID_USER,
             'service' => ServiceFixture::SERVICE_1,
         ];
         // делаем два запроса, чтобы получить два токена

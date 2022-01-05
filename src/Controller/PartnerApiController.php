@@ -8,12 +8,9 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use App\Entity\Provider;
-use App\Entity\Service;
-use App\Payment\TokenableInterface;
 use App\Repository\ProviderRepository;
 use App\Repository\ServiceRepository;
-use App\Service\ProviderPaymentService;
+use App\Service\PublicTokenService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -29,24 +26,26 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class PartnerApiController extends AbstractController
 {
-    private ProviderPaymentService $paymentService;
+    private PublicTokenService $publicTokenService;
 
     private ProviderRepository $providers;
 
     private ServiceRepository $services;
 
     public function __construct(
-        ProviderPaymentService $providerPaymentService,
+        PublicTokenService $providerPaymentService,
         ProviderRepository $providerRepository,
         ServiceRepository $serviceRepository)
     {
-        $this->paymentService = $providerPaymentService;
+        $this->publicTokenService = $providerPaymentService;
         $this->providers = $providerRepository;
         $this->services = $serviceRepository;
     }
 
     /**
-     * Возвращает токен оплаты или токен доступа.
+     * Получение публичного токена.
+     * Это будет либо токен оплаты, либо токен доступа.
+     *
      * @Route("/token/", name="get_token")
      * @param Request $request
      * @return JsonResponse
@@ -66,38 +65,12 @@ class PartnerApiController extends AbstractController
         $service = $this->services->getOneBySlug($serviceSlug);
 
         $testMode = self::isTestMode($request);
+
+        $token = $this->publicTokenService->token($service, $provider, $providerUser, $testMode)->getToken();
+
         return $this->json([
-            'token' => $this->generateSecretToken($service, $provider, $providerUser, $testMode)->getToken()
+            'token' => $token
         ]);
-    }
-
-    /**
-     * Генерирует секретный токен (токен доступа к услуге или токен оплаты) в зависимости от факта наличия оплаты.
-     * @param Service $service
-     * @param Provider $provider
-     * @param $providerUser
-     * @param bool $testMode
-     * @return TokenableInterface
-     */
-    private function generateSecretToken(Service $service, Provider $provider, $providerUser, bool $testMode): TokenableInterface
-    {
-        if ($this->isFreeAccessAllowed($provider)) {
-            // immediately give the free access to the user
-            return $this->paymentService->generateAccessToken($service);
-        } else {
-            return $this->paymentService->generateToken($service, $provider, $providerUser, $testMode);
-        }
-    }
-
-    /**
-     * Провайдер с бесплатным уровнем доступа (профгид)
-     * однажды проверка станет сложнее, возможно будут тонкие правила, такие как доступ к некоторым услугам Service
-     * @param Provider $provider
-     * @return bool
-     */
-    private function isFreeAccessAllowed(Provider $provider): bool
-    {
-        return $provider->getSlug() == 'profguide';
     }
 
     private static function guardProviderToken(?string $token)

@@ -15,45 +15,47 @@ use Doctrine\Persistence\ObjectManager;
 
 class ProviderPaymentFixture extends Fixture implements DependentFixtureInterface
 {
-    const PAYED_USER = 'payed_user';
-    const UNPAYED_USER = 'not_payed_user';
+    const PAID_USER = 'paid';
+    const PENDING_USER = 'pending';
 
-    const PAYED_TOKEN = '5dc83aee-46d1-4f79-b6b2-a3e2a118c81e';
-    const UNPAYED_TOKEN = '6e40be13-0dc9-4f57-adad-222b22b73549';
+    const PAID_TOKEN = '5dc83aee-46d1-4f79-b6b2-a3e2a118c81e';
+    const PENDING_TOKEN = '6e40be13-0dc9-4f57-adad-222b22b73549';
 
     public function load(ObjectManager $manager)
     {
         /**@var Provider $provider */
         $provider = $this->getReference(ProviderFixture::TESTOMETRIKA);
 
-        $this->createPayed($manager, $provider);
-        $this->createUnpayed($manager, $provider);
+        $this->createPaid($manager, $provider);
+        $this->createUnpaid($manager, $provider);
 
         $manager->flush();
     }
 
-    private function createPayed(ObjectManager $manager, Provider $provider)
+    private function createPaid(ObjectManager $manager, Provider $provider)
     {
-        /**@var Payment $paymentPayed */
-        $paymentPayed = $this->getReference(PaymentFixture::PAYED);
-        $providerPaymentPayed = new ProviderPayment();
-        $providerPaymentPayed->setPayment($paymentPayed);
-        $providerPaymentPayed->setProvider($provider);
-        $providerPaymentPayed->setUser(self::PAYED_USER);
-        $providerPaymentPayed->setToken(self::PAYED_TOKEN);
-        $manager->persist($providerPaymentPayed);
+        /**@var Payment $executedPayment */
+        $executedPayment = $this->getReference(PaymentFixture::PAID);
+
+        $paid = new ProviderPayment();
+        $paid->setPayment($executedPayment);
+        $paid->setProvider($provider);
+        $paid->setUser(self::PAID_USER);
+        $paid->setToken(self::PAID_TOKEN);
+        $manager->persist($paid);
     }
 
-    private function createUnpayed(ObjectManager $manager, Provider $provider)
+    private function createUnpaid(ObjectManager $manager, Provider $provider)
     {
-        /**@var Payment $paymentNotPayed */
-        $paymentNotPayed = $this->getReference(PaymentFixture::NOT_PAYED);
-        $providerPaymentNotPayed = new ProviderPayment();
-        $providerPaymentNotPayed->setPayment($paymentNotPayed);
-        $providerPaymentNotPayed->setProvider($provider);
-        $providerPaymentNotPayed->setUser(self::UNPAYED_USER);
-        $providerPaymentNotPayed->setToken(self::UNPAYED_TOKEN);
-        $manager->persist($providerPaymentNotPayed);
+        /**@var Payment $pendingPayment */
+        $pendingPayment = $this->getReference(PaymentFixture::PENDING);
+
+        $pending = new ProviderPayment();
+        $pending->setPayment($pendingPayment);
+        $pending->setProvider($provider);
+        $pending->setUser(self::PENDING_USER);
+        $pending->setToken(self::PENDING_TOKEN);
+        $manager->persist($pending);
     }
 
     public function getDependencies()
