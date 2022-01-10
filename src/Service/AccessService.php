@@ -49,7 +49,7 @@ class AccessService
         $this->repository->save($access);
     }
 
-    // может вынести работу с куками в UserAccessService?
+    // todo AccessCookie::setCookie($access, $response);
     public function setCookie(Access $access, Response $response)
     {
         $cookie = Cookie::create('access', $access->getToken(), time() + 60 * 60 * 24 * 365);

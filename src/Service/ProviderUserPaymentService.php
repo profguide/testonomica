@@ -28,11 +28,10 @@ class ProviderUserPaymentService
 
     public function hasExecutedPayment(Provider $provider, string $user): bool
     {
-        // Для профгида все сервисы всегда бесплатные.
+        // Для профгида все сервисы бесплатные
         if ($provider->getSlug() == 'profguide') {
             return true;
         }
-
         $providerPayment = $this->findOneByProviderAndUser($provider, $user);
         if ($providerPayment) {
             return $providerPayment->getPayment()->isExecuted();

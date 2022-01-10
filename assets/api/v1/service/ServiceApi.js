@@ -137,4 +137,8 @@ export default class ServiceApi {
     buildUrl(path) {
         return this.host + '/tests/api/v1' + path;
     }
+
+    getToken(){
+        return this.token;
+    }
 }

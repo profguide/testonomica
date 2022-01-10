@@ -66,10 +66,10 @@ class PartnerApiController extends AbstractController
 
         $testMode = self::isTestMode($request);
 
-        $token = $this->publicTokenService->token($service, $provider, $providerUser, $testMode)->getToken();
+        $tokenObject = $this->publicTokenService->token($service, $provider, $providerUser, $testMode);
 
         return $this->json([
-            'token' => $token
+            'token' => $tokenObject->getToken()
         ]);
     }
 

@@ -3,10 +3,12 @@ import {QUIZ_TASK_RESTORE, QUIZ_TASK_START, STATUS_FINISHED, STATUS_IN_PROGRESS}
 import ResultScreen from "./screen/ResultScreen";
 import WelcomeScreen from "./screen/WelcomeScreen";
 import QuizScreen from "./screen/QuizScreen";
+import PaymentScreen from "./screen/PaymentScreen";
 
 const SCREEN_WELCOME = 'welcome';
 const SCREEN_QUIZ = 'quiz';
 const SCREEN_RESULT = 'result';
+const SCREEN_PAYMENT = 'payment';
 
 export const TNC_EVENT_LOADED = 'loaded';
 export const TNC_EVENT_RESIZE = 'resize';
@@ -42,9 +44,20 @@ export default (props) => {
 
     const wrapRequest = (promise, callback) => {
         promise.then(callback).catch(error => {
-            changeState({...state, isLoading: false, error: 'Произошла ошибка во время загрузки теста.'});
-            console.error(error);
+            if (error.response.status === 402) {
+                console.info('Payment required');
+                // error.response.headers['x-token']
+                onPaymentRequired();
+                // trigger(new CustomEvent(TNC_EVENT_LOADED));
+            } else {
+                changeState({...state, isLoading: false, error: 'Произошла ошибка во время загрузки теста.'});
+                console.error(error);
+            }
         });
+    }
+
+    const onPaymentRequired = () => {
+        changeState({...state, screen: SCREEN_PAYMENT, isLoading: false})
     }
 
     const whenClickRestore = () => {
@@ -90,6 +103,11 @@ export default (props) => {
     if (state.error) {
         return state.error;
     }
+
+    if (state.screen === SCREEN_PAYMENT) {
+        return <PaymentScreen api={api}/>;
+    }
+
     if (!state.test) {
         return null;
     }
@@ -98,168 +116,21 @@ export default (props) => {
         <div id={'tnc'} className={'tnc'} ref={setRef}>
             <div className={'container'}>
                 {state.screen === SCREEN_RESULT ?
-                    <ResultScreen api={api} test={state.test} restartClickHandler={whenClickStart}/>
-                    : null
+                    <ResultScreen api={api} test={state.test} restartClickHandler={whenClickStart}/> : null
                 }
                 {state.screen === SCREEN_WELCOME ?
                     <WelcomeScreen test={state.test}
                                    status={api.status()}
                                    startClickHandler={whenClickStart}
-                                   restoreClickHandler={whenClickRestore}/>
-                    : null
+                                   restoreClickHandler={whenClickRestore}/> : null
                 }
                 {state.screen === SCREEN_QUIZ ?
                     <QuizScreen testId={api.testId}
                                 api={api}
                                 questionsOverHandler={whenQuestionsOver}
-                                task={state.quizTask}/>
-                    : null
+                                task={state.quizTask}/> : null
                 }
             </div>
         </div>
     )
 }
-
-// class App extends Component {
-//     constructor(props) {
-//         super(props);
-//
-//         // todo props.dispatcher;
-//         this.dispatcher = props.dispatcher;
-//
-//         this.api = new ServiceApi({
-//             testId: props.testId,
-//             host: props.host,
-//             token: props.token
-//         });
-//
-//         this.state = {
-//             isLoading: null, // for disabling buttons, showing loader
-//             error: null,
-//             test: null,
-//             screen: SCREEN_WELCOME,
-//             quiz_task: QUIZ_TASK_START
-//         };
-//
-//         this.startClickHandler = this.startClickHandler.bind(this);
-//         this.restoreClickHandler = this.restoreClickHandler.bind(this);
-//         this.questionsOverHandler = this.questionsOverHandler.bind(this);
-//     }
-//
-//     resizeIframe() {
-//         window.parent.postMessage({frameHeight: 900}, this.props.host);
-//     }
-//
-//     componentDidMount() {
-//         this.loadTest();
-//     }
-//
-//     trigger(e) {
-//         if (this.dispatcher) {
-//             this.dispatcher.dispatchEvent(e);
-//         }
-//     }
-//
-//     status() {
-//         return this.api.status();
-//     }
-//
-//     loadTest() {
-//         this.setState({...this.state, isLoading: true});
-//         this.wrapResponse(this.api.description(), (test) => {
-//             // if test was over, but result was not save for some reason
-//             if (this.api.progressFull() && this.api.status() === STATUS_IN_PROGRESS) {
-//                 this.wrapResponse(this.api.saveResult(), (key) => {
-//                     this.trigger(new CustomEvent(TNC_EVENT_FINISH, {detail: {key}}));
-//                     // show result
-//                     this.trigger(new CustomEvent(TNC_EVENT_LOADED));
-//                     this.setState({...this.state, isLoading: false, test, screen: SCREEN_RESULT})
-//                 })
-//             } else if (this.status() === STATUS_FINISHED) {
-//                 // show result
-//                 this.trigger(new CustomEvent(TNC_EVENT_LOADED));
-//                 this.setState({...this.state, isLoading: false, test, screen: SCREEN_RESULT});
-//             } else {
-//                 // show quiz
-//                 this.trigger(new CustomEvent(TNC_EVENT_LOADED));
-//                 this.setState({...this.state, isLoading: false, test});
-//             }
-//         })
-//     }
-//
-//     restoreClickHandler() {
-//         this.setState({...this.state, screen: SCREEN_QUIZ, quiz_task: QUIZ_TASK_RESTORE})
-//     }
-//
-//     startClickHandler() {
-//         this.setState({...this.state, screen: SCREEN_QUIZ, quiz_task: QUIZ_TASK_START})
-//     }
-//
-//     /**
-//      * Question over: save result
-//      */
-//     questionsOverHandler() {
-//         this.setState({...this.state, isLoading: true})
-//         this.wrapResponse(this.api.saveResult(), (key) => {
-//             this.trigger(new CustomEvent(TNC_EVENT_FINISH, {detail: {key}}));
-//             this.setState({...this.state, isLoading: false, screen: SCREEN_RESULT})
-//         });
-//     }
-//
-//     wrapResponse(promise, callback) {
-//         promise.then(callback).catch(error => {
-//             console.error(error);
-//             this.setState({...this.state, isLoading: false, error: 'Произошла ошибка во время загрузки.'});
-//         });
-//     }
-//
-//     render() {
-//         if (!this.state.test) {
-//             return null;
-//         }
-//
-//         return (
-//             <div id={'tnc'} className={'tnc'}>
-//                 <div className={'container'}>
-//
-//                     {this.state.screen === SCREEN_RESULT ?
-//                         <ResultScreen api={this.api} restartClickHandler={this.startClickHandler}/>
-//                         : null
-//                     }
-//                     {this.state.screen === SCREEN_WELCOME ?
-//                         <WelcomeScreen test={this.state.test}
-//                                        status={this.status()}
-//                                        startClickHandler={this.startClickHandler}
-//                                        restoreClickHandler={this.restoreClickHandler}/>
-//                         : null
-//                     }
-//                     {this.state.screen === SCREEN_QUIZ ?
-//                         <QuizScreen testId={this.props.testId}
-//                                     api={this.api}
-//                                     questionsOverHandler={this.questionsOverHandler}
-//                                     task={this.state.quiz_task}/>
-//                         : null
-//                     }
-//
-//                     {/*<CSSTransition in={this.state.screen === SCREEN_WELCOME} timeout={500} classNames="my-node" unmountOnExit>*/}
-//                     {/*    <WelcomeScreen test={this.state.test}*/}
-//                     {/*                   status={this.status()}*/}
-//                     {/*                   startClickHandler={this.startClickHandler}*/}
-//                     {/*                   restoreClickHandler={this.restoreClickHandler}/>*/}
-//                     {/*</CSSTransition>*/}
-//
-//                     {/*<CSSTransition in={this.state.screen === SCREEN_RESULT} timeout={500} classNames="my-node" unmountOnExit>*/}
-//                     {/*    <ResultScreen api={this.api} restartClickHandler={this.startClickHandler}/>*/}
-//                     {/*</CSSTransition>*/}
-//
-//                     {/*<CSSTransition in={this.state.screen === SCREEN_QUIZ} timeout={500} classNames="my-node" unmountOnExit>*/}
-//                     {/*    <QuizScreen testId={this.props.testId}*/}
-//                     {/*                api={this.api}*/}
-//                     {/*                questionsOverHandler={this.questionsOverHandler}*/}
-//                     {/*                task={this.state.quiz_task}/>*/}
-//                     {/*</CSSTransition>*/}
-//                 </div>
-//             </div>
-//         );
-//     }
-// }

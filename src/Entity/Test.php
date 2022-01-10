@@ -434,4 +434,10 @@ class Test
     {
         return $this->name;
     }
+
+    public function isFree(): bool
+    {
+        $testServices = $this->getServices();
+        return $testServices->count() === 0;
+    }
 }

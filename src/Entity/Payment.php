@@ -6,6 +6,7 @@
 
 namespace App\Entity;
 
+use App\Payment\PaymentBackRoute;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\Criteria;
@@ -48,6 +49,16 @@ class Payment
      * @ORM\Column(type="integer", nullable=false)
      */
     private $sum;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     * This field might be used in case when there is no other way
+     * how to set and then restore a route after returning from a payment service.
+     * Af course it is always bad idea to store rotes in orders.
+     * But Robokassa did not left other options: either storing crc or back route.
+     * Crc - is a particular part of robokassa. It's yet better to store back routes.
+     */
+    private ?string $backRoute = null;
 
     /**
      * @ORM\Column(type="boolean", nullable=false, options={"default" = 0})
@@ -98,6 +109,14 @@ class Payment
     }
 
     /**
+     * @param mixed $sum
+     */
+    public function setSum($sum): void
+    {
+        $this->sum = $sum;
+    }
+
+    /**
      * @return mixed
      */
     public function getCreatedAt()
@@ -105,23 +124,14 @@ class Payment
         return $this->createdAt;
     }
 
-    /**
-     * @param PaymentStatus $status
-     */
-    public function addStatus(PaymentStatus $status): void
+    public function getBackRoute(): PaymentBackRoute
     {
-        if (!$this->statuses->contains($status)) {
-            $this->statuses[] = $status;
-            $status->setPayment($this);
-        }
+        return new PaymentBackRoute($this->backRoute);
     }
 
-    /**
-     * @param mixed $sum
-     */
-    public function setSum($sum): void
+    public function setBackRoute(PaymentBackRoute $backRoute)
     {
-        $this->sum = $sum;
+        $this->backRoute = $backRoute->getValue();
     }
 
     /**
@@ -154,6 +164,17 @@ class Payment
     public function addStatusPending(): void
     {
         $this->addStatus(new PaymentStatus(PaymentStatus::STATUS_PENDING));
+    }
+
+    /**
+     * @param PaymentStatus $status
+     */
+    public function addStatus(PaymentStatus $status): void
+    {
+        if (!$this->statuses->contains($status)) {
+            $this->statuses[] = $status;
+            $status->setPayment($this);
+        }
     }
 
     public function addStatusExecuted(): void

@@ -62,13 +62,21 @@ class Service
         $this->tests = new ArrayCollection();
     }
 
-    public function addTest(Test $test)
+    public function addTest(Test $test): self
     {
         if (!$this->tests->contains($test)) {
             $this->tests[] = $test;
             $test->addService($this);
         }
         return $this;
+    }
+
+    /**
+     * @return Test[]|ArrayCollection
+     */
+    public function tests()
+    {
+        return $this->tests;
     }
 
     /**

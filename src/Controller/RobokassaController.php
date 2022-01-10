@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Payment\PaymentBackRoute;
 use App\Payment\Robokassa;
 use App\Repository\ServiceRepository;
 use App\Service\AccessService;
@@ -16,11 +17,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/robokassa")
+ * @Route("/robokassa", name="robokassa.")
  */
 class RobokassaController extends AbstractController
 {
@@ -51,6 +53,24 @@ class RobokassaController extends AbstractController
     }
 
     /**
+     * @Route ("/go/{paymentId}/", name="go")
+     * @param Request $request
+     * @param string $paymentId
+     * @return Response
+     */
+    public function go(Request $request, string $paymentId): Response
+    {
+        $payment = $this->paymentService->getOneById($paymentId);
+        if ($payment->isExecuted()) {
+            throw new AccessDeniedHttpException('The token has already been used.');
+        }
+        $backRoute = new PaymentBackRoute($request->get('backRoute'));
+        $payment->setBackRoute($backRoute);
+        $this->paymentService->save($payment);
+        return new RedirectResponse($this->robokassa->createUrl($payment));
+    }
+
+    /**
      * @Route("/done/")
      * @param Request $request
      * @return Response
@@ -61,7 +81,7 @@ class RobokassaController extends AbstractController
         $price = $request->get('OutSum');
         $crc = $request->get('SignatureValue');
         $payment = $this->paymentService->getOneById($id);
-        $this->robokassa->guardCode($payment, $id, $price, $crc);
+        $this->robokassa->validateCrc($payment, $id, $price, $crc);
         if (!$payment->isExecuted()) {
             $payment->addStatusExecuted();
         }
@@ -80,11 +100,27 @@ class RobokassaController extends AbstractController
         if (!$payment->isExecuted()) {
             throw new NotFoundHttpException('Нет информации о поступившем платеже. Это может быть вызвано задержками обмена с платёжной системой. Пожалуйста, обновить страницу через 1 минуту.');
         }
-        // todo route get from somewhere
-        $response = new RedirectResponse($this->generateUrl('tests.view', [
-            'slug' => 'proforientation-v2'
-        ]));
+
+        // give disposable access
         $access = $this->accessService->create($payment->getService());
+
+        // redirect to the test
+        $tests = $payment->getService()->tests();
+        $firstTest = $tests[0];
+
+        $backRoute = $payment->getBackRoute()->getValue();
+
+        if ($backRoute === PaymentBackRoute::TEST_WIDGET) {
+            return new RedirectResponse($this->generateUrl('test.widget', [
+                'id' => $firstTest->getId(),
+                'token' => $access->getToken()
+            ]));
+        }
+
+        // default route
+        $response = new RedirectResponse($this->generateUrl('tests.view', [
+            'slug' => $firstTest->getSlug()
+        ]));
         $this->accessService->setCookie($access, $response);
         return $response;
     }

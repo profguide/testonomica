@@ -31,6 +31,20 @@ class PublicTokenService
         $this->accessService = $accessService;
     }
 
+    public function find(string $token): ?TokenableInterface
+    {
+        $access = $this->accessService->findOneByToken($token);
+        if ($access) {
+            return $access;
+        }
+        $payment = $this->providerUserPaymentService->findOneByToken($token);
+        if ($payment) {
+            return $payment;
+        }
+
+        return null;
+    }
+
     /**
      * Публичный токен
      * В зависимости от того, оплатил ли пользователь:

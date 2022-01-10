@@ -22,7 +22,7 @@ use Twig\Error\SyntaxError;
 /**
  * @Route("/tests/api/v1")
  */
-class TestResultRestController extends RestController implements TokenAuthenticatedController
+class TestResultRestController extends RestController implements AccessTokenAuthenticatedController
 {
     private TestRepository $tests;
 

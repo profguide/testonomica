@@ -104,8 +104,8 @@ class PartnerApiControllerTest extends WebTestCase
         $token1 = $this->requestToken($requestParams);
         $token2 = $this->requestToken($requestParams);
         // токены должны быть разными
-        $this->assertFalse($token1 == $token2);
-        // токены должены быть персистентны и быть типа ProviderAccess
+        $this->assertTrue($token1 !== $token2, 'Tokens must be different every time');
+        // токены должены быть типа ProviderAccess
         $this->assertNotNull($this->accessRepository->findOneByToken($token1));
         $this->assertNotNull($this->accessRepository->findOneByToken($token2));
     }
