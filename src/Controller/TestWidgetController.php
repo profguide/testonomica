@@ -4,16 +4,12 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use App\Entity\ProviderPayment;
 use App\Entity\Test;
-use App\Payment\PaymentBackRoute;
 use App\Repository\TestRepository;
 use App\Service\PublicTokenService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -82,25 +78,25 @@ class TestWidgetController extends AbstractController implements HostAuthenticat
     {
         $test = $this->getTest($id);
 
-        if (!$test->isFree()) {
-            $token = $request->get('token');
-            if (!$token) {
-                throw new AccessDeniedHttpException('Token is required.');
-            }
-            $tokenObject = $this->publicTokenService->find($token);
-            if (!$tokenObject) {
-                throw new AccessDeniedHttpException('Token not found.');
-            }
-            if ($tokenObject instanceof ProviderPayment) {
-                $payment = $tokenObject->getPayment();
-                if ($payment->isExecuted() === false) {
-                    return $this->redirectToRoute('robokassa.go', [
-                        'paymentId' => $payment->getId(),
-                        'backRoute' => PaymentBackRoute::TEST_WIDGET
-                    ]);
-                }
-            }
-        }
+//        if (!$test->isFree()) {
+//            $token = $request->get('token');
+//            if (!$token) {
+//                throw new AccessDeniedHttpException('Token is required.');
+//            }
+//            $tokenObject = $this->publicTokenService->find($token);
+//            if (!$tokenObject) {
+//                throw new AccessDeniedHttpException('Token not found.');
+//            }
+//            if ($tokenObject instanceof ProviderPayment) {
+//                $payment = $tokenObject->getPayment();
+//                if ($payment->isExecuted() === false) {
+//                    return $this->redirectToRoute('robokassa.go', [
+//                        'paymentId' => $payment->getId(),
+//                        'backRoute' => PaymentBackRoute::TEST_WIDGET
+//                    ]);
+//                }
+//            }
+//        }
 
         $token = $request->get('token');
         // for development would be http://127.0.0.1:8080

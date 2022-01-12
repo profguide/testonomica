@@ -57,7 +57,33 @@ class HttpRequiringAccessTokenSubscriber implements EventSubscriberInterface
         }
 
         if ($controller instanceof AccessTokenAuthenticatedController) {
-            $this->handleTokenizedController($event->getRequest());
+            $request = $event->getRequest();
+
+            $test = $this->getTest($request);
+            if ($test->isFree()) {
+                return;
+            }
+
+            $token = $this->accessService->findOneByToken($this->getToken($request));
+            if (!$token) {
+                throw new AccessDeniedHttpException('Token not found.');
+            }
+
+            $access = $token;
+            if ($access->isUsed()) {
+                throw new AccessDeniedHttpException('Expired token.');
+            }
+
+//            // check access related to test's service
+//            $testServices = $test->getServices();
+//            if (!$testServices->contains($access->getService())) {
+//                throw new AccessDeniedHttpException('Token is wrong.');
+//            }
+
+            // make access used
+            $this->accessService->utilize($access);
+
+            $request->attributes->set('access_token', $access->getToken());
         }
     }
 
@@ -68,40 +94,8 @@ class HttpRequiringAccessTokenSubscriber implements EventSubscriberInterface
             $service = $this->services->getById(1);
             $access = $this->accessService->create($service);
             $event->getResponse()->headers->set('X-TOKEN', $access->getToken());
+            $this->accessService->setCookie($access, $event->getResponse());
         }
-    }
-
-    /**
-     * Validates and utilizes token
-     * @param Request $request
-     */
-    private function handleTokenizedController(Request $request)
-    {
-        $test = $this->getTest($request);
-        if ($test->isFree()) {
-            return;
-        }
-
-        $token = $this->accessService->findOneByToken($this->getToken($request));
-        if (!$token) {
-            throw new AccessDeniedHttpException('Token not found.');
-        }
-
-        $access = $token;
-        if ($access->isUsed()) {
-            throw new AccessDeniedHttpException('Expired token.');
-        }
-
-//            // check access related to test's service
-//            $testServices = $test->getServices();
-//            if (!$testServices->contains($access->getService())) {
-//                throw new AccessDeniedHttpException('Token is wrong.');
-//            }
-
-        // make access used
-        $this->accessService->utilize($access);
-
-        $request->attributes->set('access_token', $access->getToken());
     }
 
     private function getTest(Request $request): Test
@@ -119,7 +113,10 @@ class HttpRequiringAccessTokenSubscriber implements EventSubscriberInterface
     {
         $token = $request->headers->get('token');
         if (!$token) {
-            throw new InvalidArgumentException('No "token" specified.');
+            $token = $this->accessService->getCookie($request);
+            if (!$token) {
+                throw new InvalidArgumentException('No token.');
+            }
         }
         return $token;
     }

@@ -6,11 +6,8 @@ namespace App\Controller;
 
 use App\Entity\Question;
 use App\Entity\Test;
-use App\Repository\TestRepository;
-use App\Service\TestSourceService;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -19,36 +16,8 @@ use Symfony\Component\Routing\Annotation\Route;
  * todo кешировать вопросы с помощью Redis
  * Можно пойти еще дальше: тест полностью загружается при старте: никакого next и prev на сервере нет.
  */
-class TestProgressRestController extends RestController
-//    implements AccessTokenAuthenticatedController
+class TestProgressRestController extends TestRestController implements AccessTokenAuthenticatedController
 {
-    private TestRepository $tests;
-
-    private TestSourceService $questions;
-
-    public function __construct(TestRepository $tests, TestSourceService $questions)
-    {
-        $this->tests = $tests;
-        $this->questions = $questions;
-    }
-
-    /**
-     * @Route("/info/{testId<\d+>}/")
-     * @param int $testId
-     * @return Response
-     */
-    public function info(int $testId): Response
-    {
-        $test = $this->getTest($testId);
-        $length = $this->questions->getTotalCount($test);
-        return $this->json([
-            'name' => $test->getName(),
-            'description' => $test->getDescription(),
-            'duration' => $test->getDuration(),
-            'length' => $length
-        ]);
-    }
-
     /**
      * @Route("/first/{testId<\d+>}/")
      * @param int $testId
@@ -105,14 +74,5 @@ class TestProgressRestController extends RestController
             throw new \InvalidArgumentException("Parameter $name is required.");
         }
         return $value;
-    }
-
-    private function getTest(int $id): Test
-    {
-        $test = $this->tests->findOneById($id);
-        if (!$test) {
-            throw new NotFoundHttpException();
-        }
-        return $test;
     }
 }

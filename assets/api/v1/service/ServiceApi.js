@@ -3,9 +3,15 @@ import axios from "axios";
 import ProgressStorage from "./storage/ProgressStorage";
 import QuestionResponseHydrator from "./types/QuestionResponseHydrator";
 import Answer from "./types/Answer";
+import Order from "./types/Order";
 
 /**
  * Low-level API: requests, storing data
+ *
+ * todo split:
+ *  accessApi - payment, check access etc.
+ *  testApi - progress, result etc.
+ *  token state вынести в синглтон. или лучше Redux
  */
 export default class ServiceApi {
     constructor(config = {}) {
@@ -20,26 +26,64 @@ export default class ServiceApi {
         this.question = null; // loaded question (current question)
     }
 
+    hasAccess() {
+        return axios({
+            method: 'get',
+            url: this.host + '/access/has/?token=' + this.token,
+            responseType: 'json',
+        }).then(response => {
+            return response.data.status;
+        });
+    }
+
+    // issues access token for the first time after payment.
+    grand() {
+        return axios({
+            method: 'get',
+            url: this.host + '/access/grand/?token=' + this.token,
+            responseType: 'json',
+        }).then(response => {
+            this.token = response.data.token;
+            return true;
+        });
+    }
+
+    getOrder() {
+        return axios({
+            method: 'get',
+            url: this.host + '/access/order/?token=' + this.token,
+            responseType: 'json',
+        }).then(response => {
+            const data = response.data.order;
+            return new Order(
+                data.id,
+                data.description,
+                data.price,
+                data.count,
+                data.sum
+            );
+        });
+    }
+
+    // brief for welcome page
     description() {
-        // information is always free
         return axios({
             method: 'get',
             url: this.buildUrl('/info/' + this.testId + '/'),
             responseType: 'json',
-            headers: {'token': this.token}
         }).then(response => {
-            this.token = response.headers['x-token'];
             this.test = {
                 name: response.data.name,
                 description: response.data.description,
                 duration: response.data.duration,
                 length: response.data.length,
+                paid: response.data.paid
             }
             return this.test;
         })
     }
 
-    status() {
+    progressStatus() {
         return this.storage.getStatus();
     }
 
@@ -138,7 +182,7 @@ export default class ServiceApi {
         return this.host + '/tests/api/v1' + path;
     }
 
-    getToken(){
+    getToken() {
         return this.token;
     }
 }

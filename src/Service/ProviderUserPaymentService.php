@@ -40,6 +40,11 @@ class ProviderUserPaymentService
         return false;
     }
 
+    public function save(ProviderPayment $providerPayment)
+    {
+        $this->providerPaymentRepository->save($providerPayment);
+    }
+
     public function create(Provider $provider, string $user, Service $service, bool $testMode): ProviderPayment
     {
         $providerPayment = $this->findOneByProviderAndUser($provider, $user);

@@ -66,6 +66,24 @@ class PublicTokenService
         }
     }
 
+    /**
+     * Создаёт токен доступа, пометив платёжный токен как использованный.
+     * @param ProviderPayment $providerPayment
+     * @return Access|null
+     */
+    public function createFirstAccessAfterPayment(ProviderPayment $providerPayment): ?Access
+    {
+        $providerPayment->setGrantedAccess();
+        $this->providerUserPaymentService->save($providerPayment);
+        return $this->accessService->create($providerPayment->getPayment()->getService());
+//        $this->flusher->flush();
+    }
+
+    private function isPaid(Provider $provider, string $user, Service $service): bool
+    {
+        return $this->providerUserPaymentService->hasExecutedPayment($provider, $user);
+    }
+
     private function accessToken(Service $service): Access
     {
         return $this->accessService->create($service);
@@ -74,10 +92,5 @@ class PublicTokenService
     private function paymentToken(Service $service, Provider $provider, string $user, bool $testMode): ProviderPayment
     {
         return $this->providerUserPaymentService->create($provider, $user, $service, $testMode);
-    }
-
-    private function isPaid(Provider $provider, string $user, Service $service): bool
-    {
-        return $this->providerUserPaymentService->hasExecutedPayment($provider, $user);
     }
 }

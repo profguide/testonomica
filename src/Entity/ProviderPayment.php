@@ -57,75 +57,68 @@ class ProviderPayment implements TokenableInterface
     private $user;
 
     /**
-     * @return int
+     * Indicates whether the first access was granted after payment.
+     * @ORM\Column(type="boolean", nullable=false)
+     * @var boolean
      */
+    private bool $grantedAccess = false;
+
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @return Payment
-     */
     public function getPayment(): Payment
     {
         return $this->payment;
     }
 
-    /**
-     * @param Payment $payment
-     */
     public function setPayment(Payment $payment): void
     {
         $this->payment = $payment;
     }
 
-    /**
-     * @return string
-     */
     public function getToken(): string
     {
         return $this->token;
     }
 
-    /**
-     * @param string $token
-     */
     public function setToken(string $token): void
     {
         $this->token = $token;
     }
 
-    /**
-     * @return Provider
-     */
     public function getProvider(): Provider
     {
         return $this->provider;
     }
 
-    /**
-     * @param Provider $provider
-     */
     public function setProvider(Provider $provider): void
     {
         $this->provider = $provider;
     }
 
-    /**
-     * @return string
-     */
     public function getUser(): string
     {
         return $this->user;
     }
 
-    /**
-     * @param string $user
-     */
-    public function setUser(string $user): void
+    public function setUser(string $userId): void
     {
-        $this->user = $user;
+        $this->user = $userId;
+    }
+
+    public function isGrantedAccess(): bool
+    {
+        return $this->grantedAccess;
+    }
+
+    public function setGrantedAccess(): void
+    {
+        if ($this->grantedAccess) {
+            throw new \DomainException('Access has been already granted.');
+        }
+        $this->grantedAccess = true;
     }
 
     public static function init(Payment $payment, Provider $provider, string $user): ProviderPayment
