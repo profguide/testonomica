@@ -41,8 +41,9 @@ export default class ServiceApi {
     grand() {
         return axios({
             method: 'get',
-            url: this.host + '/access/grand/?token=' + this.token,
+            url: this.host + '/access/grand/',
             responseType: 'json',
+            headers: {'token': this.token}
         }).then(response => {
             this.token = response.data.token;
             return true;
@@ -52,8 +53,9 @@ export default class ServiceApi {
     getOrder() {
         return axios({
             method: 'get',
-            url: this.host + '/access/order/?token=' + this.token,
+            url: this.host + '/access/order/',
             responseType: 'json',
+            headers: {'token': this.token}
         }).then(response => {
             const data = response.data.order;
             return new Order(

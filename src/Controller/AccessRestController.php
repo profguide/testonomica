@@ -118,13 +118,16 @@ class AccessRestController extends RestController
         return $this->json(['token' => $access->getToken()]);
     }
 
-    private function getTokenRequest(Request $request)
+    private function getTokenRequest(Request $request): string
     {
-        $token = $request->get('token');
+        $token = $request->headers->get('token');
         if (!$token) {
-            throw new \RuntimeException('No token specified.');
+            $token = $this->accessService->getCookie($request);
+            if ($token) {
+                return $token;
+            }
         }
-        return $token;
+        throw new \RuntimeException('No token specified.');
     }
 
     private function getProviderPayment(string $token): ProviderPayment
