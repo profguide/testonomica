@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("cloudpayments", name="cloudpayments.")
+ * @Route("/cloudpayments", name="cloudpayments.")
  */
 class CloudpaymentsController extends AbstractController
 {
@@ -24,7 +24,7 @@ class CloudpaymentsController extends AbstractController
     }
 
     /**
-     * @Route ("pay", name="pay")
+     * @Route ("/pay/", name="pay")
      * @param Request $request
      * @return Response
      */
@@ -36,7 +36,7 @@ class CloudpaymentsController extends AbstractController
     }
 
     /**
-     * @Route ("fail", name="fail")
+     * @Route ("/fail/", name="fail")
      * @param Request $request
      * @return Response
      */
