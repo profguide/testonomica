@@ -121,11 +121,12 @@ class AccessRestController extends RestController
     private function getTokenRequest(Request $request): string
     {
         $token = $request->headers->get('token');
-        if (empty($token)) {
-            $token = $this->accessService->getCookie($request);
-            if ($token) {
-                return $token;
-            }
+        if (!empty($token)) {
+            return $token;
+        }
+        $token = $this->accessService->getCookie($request);
+        if ($token) {
+            return $token;
         }
         throw new AccessDeniedHttpException('No token specified.');
     }
