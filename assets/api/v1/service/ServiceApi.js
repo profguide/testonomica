@@ -27,36 +27,37 @@ export default class ServiceApi {
     }
 
     hasAccess() {
-        return axios({
+        const data = {
             method: 'get',
             url: this.host + '/access/has/',
             responseType: 'json',
-            headers: {'token': this.token}
-        }).then(response => {
+        }
+        if (this.token) {
+            data['headers'] = {'token': this.token};
+        }
+        return axios(data).then(response => {
             return response.data.status;
         });
     }
 
-    // issues access token for the first time after payment.
+    // issues an access token for the first time after payment.
     grand() {
-        return axios({
+        return axios(this.tokenizedRequest({
             method: 'get',
             url: this.host + '/access/grand/',
             responseType: 'json',
-            headers: {'token': this.token}
-        }).then(response => {
+        })).then(response => {
             this.token = response.data.token;
             return true;
         });
     }
 
     getOrder() {
-        return axios({
+        return axios(this.tokenizedRequest({
             method: 'get',
             url: this.host + '/access/order/',
             responseType: 'json',
-            headers: {'token': this.token}
-        }).then(response => {
+        })).then(response => {
             const data = response.data.order;
             return new Order(
                 data.id,
@@ -132,12 +133,11 @@ export default class ServiceApi {
      * С другой стороны next может делать то же самое.
      */
     first() {
-        return axios({
+        return axios(this.tokenizedRequest({
             method: 'get',
             url: this.buildUrl('/first/' + this.testId + '/'),
             responseType: 'json',
-            headers: {'token': this.token}
-        }).then(response => {
+        })).then(response => {
             this.token = response.headers['x-token'];
             this.question = (new QuestionResponseHydrator()).hydrate(response);
             return this.question;
@@ -152,12 +152,11 @@ export default class ServiceApi {
             const answer = this.storage.getLastAnswer();
             id = answer.questionId;
         }
-        return axios({
+        return axios(this.tokenizedRequest({
             method: 'get',
             url: this.buildUrl('/next/' + this.testId + '/?q=' + id),
             responseType: 'json',
-            headers: {'token': this.token}
-        }).then(response => {
+        })).then(response => {
             this.token = response.headers['x-token'];
             this.question = (new QuestionResponseHydrator()).hydrate(response);
             return this.question;
@@ -165,12 +164,11 @@ export default class ServiceApi {
     }
 
     prev() {
-        return axios({
+        return axios(this.tokenizedRequest({
             method: 'get',
             url: this.buildUrl('/prev/' + this.testId + '/?q=' + this.question.id),
             responseType: 'json',
-            headers: {'token': this.token}
-        }).then(response => {
+        })).then(response => {
             this.token = response.headers['x-token'];
             this.question = (new QuestionResponseHydrator()).hydrate(response);
             return this.question;
@@ -187,5 +185,12 @@ export default class ServiceApi {
 
     getToken() {
         return this.token;
+    }
+
+    tokenizedRequest(data) {
+        if (this.token) {
+            data['headers'] = {'token': this.token};
+        }
+        return data;
     }
 }

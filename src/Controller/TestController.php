@@ -120,7 +120,7 @@ class TestController extends AbstractController
             return $this->renderResult($test, $result);
         }
         $this->assertActive($test);
-        $this->assertAccess($test, $request); // todo remove, as payment on the API side.
+//        $this->assertAccess($test, $request); // todo remove, as payment on the API side.
         $status = $this->answerService->hasAnswers($test)
             ? TestStatus::progress()
             : TestStatus::none();
