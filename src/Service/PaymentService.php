@@ -47,6 +47,18 @@ class PaymentService
         return $this->repository->save($payment);
     }
 
+    public function execute(Payment $payment)
+    {
+        $payment->addStatusExecuted();
+        $this->repository->save($payment);
+    }
+
+    public function fail(Payment $payment)
+    {
+        $payment->addStatusFailed();
+        $this->repository->save($payment);
+    }
+
     // todo не думаю, что кука должна быть установлена здесь. Для этого должен быть сервис кук.
     public function setCookie(Payment $payment, Response $response)
     {
