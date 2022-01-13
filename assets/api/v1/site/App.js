@@ -35,9 +35,10 @@ export default (props) => {
         promise.then(callback).catch(error => {
             let reason = 'Произошла ошибка во время загрузки.';
             if (error.response.status === 403) {
-                reason = 'Произошла ошибка во время загрузки: нет прав.';
+                reason = 'Отказано в доступе.';
             }
             changeState({...state, isLoading: false, error: reason});
+            console.error(error.response.data.detail);
             console.error(error);
         });
     }

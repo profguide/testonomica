@@ -66,7 +66,7 @@ class HttpRequiringAccessTokenSubscriber implements EventSubscriberInterface
 
             $token = $this->accessService->findOneByToken($this->getToken($request));
             if (!$token) {
-                throw new AccessDeniedHttpException('Token not found.');
+                throw new AccessDeniedHttpException('Token access not found.');
             }
 
             $access = $token;

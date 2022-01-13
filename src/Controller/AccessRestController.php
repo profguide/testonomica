@@ -43,9 +43,12 @@ class AccessRestController extends RestController
      */
     public function hasAccess(Request $request): Response
     {
-        $token = $request->get('token');
+        $token = $request->headers->get('token');
         if (!$token) {
-            return $this->json(['status' => false]);
+            $token = $this->accessService->getCookie($request);
+            if (!$token) {
+                return $this->json(['status' => false]);
+            }
         }
 
         $tokenObject = $this->publicTokenService->find($token);

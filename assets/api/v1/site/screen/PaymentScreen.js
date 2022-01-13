@@ -76,7 +76,11 @@ export default class PaymentScreen extends React.Component {
     wrapRequest(promise, callback) {
         promise.then(callback).catch(error => {
             let reason = 'Произошла ошибка во время загрузки.';
+            if (error.response.status === 403) {
+                reason = 'Отказано в доступе.';
+            }
             this.setState({...this.state, isLoading: false, error: reason});
+            console.error(error.response.data.detail);
             console.error(error);
         });
     }

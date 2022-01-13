@@ -29,8 +29,9 @@ export default class ServiceApi {
     hasAccess() {
         return axios({
             method: 'get',
-            url: this.host + '/access/has/?token=' + this.token,
+            url: this.host + '/access/has/',
             responseType: 'json',
+            headers: {'token': this.token}
         }).then(response => {
             return response.data.status;
         });

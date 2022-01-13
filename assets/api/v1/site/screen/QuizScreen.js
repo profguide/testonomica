@@ -86,8 +86,13 @@ export default class QuizScreen extends Component {
 
     wrapResponse(promise, callback) {
         promise.then(callback).catch(error => {
+            let reason = 'Произошла ошибка во время загрузки.';
+            if (error.response.status === 403) {
+                reason = 'Отказано в доступе.';
+            }
+            this.setState({...this.state, isLoading: false, error: reason});
+            console.error(error.response.data.detail);
             console.error(error);
-            this.setState({...this.state, isLoading: false, error: 'Произошла ошибка во время загрузки.'});
         });
     }
 
