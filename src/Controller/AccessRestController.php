@@ -121,13 +121,13 @@ class AccessRestController extends RestController
     private function getTokenRequest(Request $request): string
     {
         $token = $request->headers->get('token');
-        if (!$token) {
+        if (empty($token)) {
             $token = $this->accessService->getCookie($request);
             if ($token) {
                 return $token;
             }
         }
-        throw new \RuntimeException('No token specified.');
+        throw new AccessDeniedHttpException('No token specified.');
     }
 
     private function getProviderPayment(string $token): ProviderPayment
