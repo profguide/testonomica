@@ -8,13 +8,16 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ApiExampleController extends AbstractController
+/**
+ * @Route("/doc", name="doc.")
+ */
+class DocController extends AbstractController
 {
     /**
-     * @Route("example/api", name="example_api")
+     * @Route("/", name="doc.index")
      */
     public function actionIndex(): Response
     {
-        return $this->render('example/api.html.twig');
+        return $this->render('doc/index.html.twig');
     }
 }
