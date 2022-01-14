@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
  * todo кешировать вопросы с помощью Redis
  * Можно пойти еще дальше: тест полностью загружается при старте: никакого next и prev на сервере нет.
  */
-class TestProgressRestController extends TestRestController implements AccessTokenAuthenticatedController
+class TestProgressRestController extends AbstractTestRestController implements AccessTokenAuthenticatedController
 {
     /**
      * @Route("/first/{testId<\d+>}/")

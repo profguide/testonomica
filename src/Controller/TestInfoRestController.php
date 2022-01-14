@@ -7,11 +7,10 @@ namespace App\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-
 /**
  * @Route("/tests/api/v1", format="json")
  */
-class TestInfoRestController extends TestRestController
+class TestInfoRestController extends AbstractTestRestController
 {
     /**
      * @Route("/info/{testId<\d+>}/")

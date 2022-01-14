@@ -44,7 +44,7 @@ class TestService
         return $this->repository->findOneBySlug($slug);
     }
 
-    public function findById($id)
+    public function findById($id): ?Test
     {
         return $this->repository->findOneById($id);
     }

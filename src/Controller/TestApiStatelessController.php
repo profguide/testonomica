@@ -24,9 +24,10 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\SerializerInterface;
 
 /**
- * TODO delete and use TestRestController instead
+ * TODO удалить, когда на профгиде поменяю API и начну юзать TestRestProgressApi без проверки прав
+ *
  * Stateless API прохождения теста, промежуточные данные хранятся у клиента (браузер, сервисы).
- * Для сохранения @see TestApiStatelessControllerController::saveResults()
+ * Для сохранения @see TestApiStatelessController::saveResults()
  * # stateless=true. With security: enable_authenticator_manager=true it doesn't work, so I removed it temporarily
  * @Route("/tests/cli", name="test_cli.")
  * , stateless=true
@@ -34,7 +35,7 @@ use Symfony\Component\Serializer\SerializerInterface;
  * @author: adavydov
  * @since: 23.10.2020
  */
-class TestApiStatelessControllerController extends TestApiAbstractController
+class TestApiStatelessController extends TestApiAbstractController
 {
     const HEADER_STATUS = 'Test-Status';
 

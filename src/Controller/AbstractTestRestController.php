@@ -8,7 +8,7 @@ use App\Entity\Test;
 use App\Repository\TestRepository;
 use App\Service\TestSourceService;
 
-abstract class TestRestController extends RestController
+abstract class AbstractTestRestController extends AbstractRestController
 {
     protected TestRepository $tests;
 

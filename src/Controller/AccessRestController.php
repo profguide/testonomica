@@ -17,7 +17,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/access", name="access.")
  */
-class AccessRestController extends RestController
+class AccessRestController extends AbstractRestController
 {
     private PublicTokenService $publicTokenService;
 

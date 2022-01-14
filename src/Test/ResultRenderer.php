@@ -23,6 +23,7 @@ class ResultRenderer
     }
 
     /**
+     * Рендерит HTML результата
      * @param Test $test
      * @param array $data
      * @return Response

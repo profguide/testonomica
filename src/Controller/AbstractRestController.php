@@ -7,7 +7,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-abstract class RestController extends AbstractController
+abstract class AbstractRestController extends AbstractController
 {
     protected function json($data, int $status = 200, array $headers = [], array $context = []): JsonResponse
     {

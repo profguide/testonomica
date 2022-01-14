@@ -18,6 +18,9 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * TODO удалить, когда на профгиде поменяю API
+ */
 abstract class TestApiAbstractController extends AbstractController
 {
     const OPERATION_START = 'start';
