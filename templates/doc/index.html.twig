@@ -18,10 +18,10 @@
 
         <hr>
 
-        <h2>Виды интеграции с платежом.</h2>
+        <h2>Виды интеграции с платежом</h2>
         <ul>
-            <li>Интеграция через виджет на сайте</li>
             <li>Интеграция с переходом на Тестономику</li>
+            <li>Интеграция через виджет на сайте</li>
         </ul>
 
         <p>Оба подхода предполагают изначально получение вами {SECRETE_TOKEN}, {TEST_ID} и {SERVICE_NAME} и последующее получение {PUBLIC_TOKEN} с этими параметрами.</p>
@@ -50,6 +50,16 @@
             В данном примере {PUBLIC_TOKEN} - это <b>cf738dd7-a138-4fa6-b3fd-52eef8ae2a92</b>.
         </p>
 
+        <h3>Интеграция с переходом на Тестономику</h3>
+        <p><a href="https://www.profguide.io/test/testonomica-direct/">Демо</a>. Данный способ отображает тест не на вашем сайте, а на Тестономике.</p>
+        <p>Всё что нужно сделать - это направить пользователя по следующему URL с помощью редиректа или по кнопке на сайте:</p>
+        <code>
+            https://testonomica.com/partner/provide/?token={PUBLIC_TOKEN}
+        </code>
+        <br/>
+
+        <hr>
+
         <h3>Интеграция через виджет на сайте</h3>
         <p><a href="https://www.profguide.io/test/testonomica-widget/">Демо</a>. Данный способ позволяет загрузить тест на вашем сайте в Iframe.</p>
         <p>Необходимо установить HTML-код в месте предполагаемого отображения теста и подставить полученные ранее параметры.</p>
@@ -57,15 +67,6 @@
             <span>&lt;script src="https://cdn.jsdelivr.net/gh/davidtema/testonomica_widget@1.0.0/index.min.js"&gt;&lt;/script&gt;<br/>&lt;</span><span>div </span><span>id</span><span>="testonomica_app" </span><span>data-test</span><span>="{TEST_ID}" </span><span>data-token</span><span>="{PUBLIC_TOKEN}"</span><span>&gt;&lt;/</span><span>div</span><span>&gt;</span>
         </code>
         <br/>
-
-        <hr>
-
-        <h3>Интеграция с переходом на Тестономику</h3>
-        <p><a href="https://www.profguide.io/test/testonomica-direct/">Демо</a>. Данный способ отображает тест не на вашем сайте, а на Тестономике.</p>
-        <p>Всё что нужно сделать - это направить пользователя по следующему URL с помощью редиректа или по кнопке на сайте:</p>
-        <code>
-            https://testonomica.com/partner/provide/?token={PUBLIC_TOKEN}
-        </code>
 
         <hr>
         Напишите нам на <a href="mailto:info@profguide.ru">info@profguide.ru</a> если у вас остались вопросы или требуется помощь.
