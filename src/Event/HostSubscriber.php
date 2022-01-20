@@ -28,7 +28,11 @@ class HostSubscriber implements EventSubscriberInterface
                 return;
             }
             $host = $event->getRequest()->server->get('HTTP_REFERER');
-            if (!in_array($host, ['http://pg/', 'https://www.profguide.io/'])) {
+            if (!in_array($host, [
+                'http://pg/',
+                'https://www.profguide.io/',
+                'https://chooseyourcareer.ru/'
+            ])) {
                 throw new AccessDeniedHttpException('Unknown host.');
             }
         }
