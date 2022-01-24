@@ -9,5 +9,6 @@ export const QUESTION_TYPE_OPTION = 'option';
 export const QUESTION_TYPE_CHECKBOX = "checkbox";
 export const QUESTION_TYPE_TEXT = "text";
 export const QUESTION_TYPE_RATING = 'rating';
+export const QUESTION_TYPE_GRADIENT = 'gradient';
 
 export const HOST = 'https://testonomica.com';

@@ -28,7 +28,7 @@ class Question
     // список ответов, которые нужно прокликать в порядке от самого важного до наименнее важного, или наоборот.
     const TYPE_RATING = 'rating';
     // диапазон значений (Гэлап, СС) - есть диапазов ответов, -2 -1 0 +1 +2, но в ответах нет неправильных значений.
-    const TYPE_CONTRAST = 'contrast';
+    const TYPE_GRADIENT = 'gradient';
 
     /**
      * @ORM\Id()
@@ -112,9 +112,14 @@ class Question
     /**
      * @ORM\Column(type="integer", options={"default": 0})
      * Диапазон сгенерированных ответов.
-     * Может быть сспользовано в вопросах типа contrast.
+     * Может быть сспользовано в вопросах типа gradient.
      */
     private $range;
+
+//    /**
+//     * @ORM\Column(type="integer", options={"default": 0})
+//     */
+//    private int $timer = 0;
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -204,8 +209,8 @@ class Question
 
     public function setType(string $type)
     {
-        if (!in_array($type, [self::TYPE_CHECKBOX, self::TYPE_OPTION, self::TYPE_RATING, self::TYPE_TEXT])) {
-            throw new \InvalidArgumentException("Invalid type");
+        if (!in_array($type, [self::TYPE_CHECKBOX, self::TYPE_OPTION, self::TYPE_RATING, self::TYPE_TEXT, self::TYPE_GRADIENT])) {
+            throw new \InvalidArgumentException("Invalid type name: {$type}.");
         }
         $this->type = $type;
     }

@@ -59,7 +59,7 @@ class TestProgressRestController extends AbstractTestRestController implements A
     private function questionResponseData(Test $test, Question $question): array
     {
         $number = $this->questions->getQuestionNumber($test, $question->getId());
-        $length = $count = $this->questions->getTotalCount($test);
+        $length = $this->questions->getTotalCount($test);
         return [
             'question' => $question,
             'number' => $number,
