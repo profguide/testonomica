@@ -22,10 +22,10 @@
         <caution>
             <text>Предусмотрительность</text>
         </caution>
-
         <stress>
             <text>Стрессоустойчивость</text>
         </stress>
+        <!--...-->
     </skills>
 
     <clusters>
@@ -41,11 +41,34 @@
                 <caution/>
             </skills>
         </int>
+
         <bio>
             <text>Биология</text>
             <skills>
                 <stress/>
+                <!--...-->
             </skills>
         </bio>
+
+        <will>
+            <text>Характер, воля</text>
+            <skills>
+                <!--...-->
+            </skills>
+        </will>
+
+        <people>
+            <text>Я и люди</text>
+            <skills>
+                <!--...-->
+            </skills>
+        </people>
+
+        <influence>
+            <text>Я влияю</text>
+            <skills>
+                <!--...-->
+            </skills>
+        </influence>
     </clusters>
 </config>
