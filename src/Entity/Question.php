@@ -19,10 +19,16 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  */
 class Question
 {
+    // классический вопрос - один возможный вариант радиокнопка
     const TYPE_OPTION = 'option';
+    // несколько доступных вариантов
     const TYPE_CHECKBOX = "checkbox";
+    // вопрос с ответом в виде текста, который нужно ввести
     const TYPE_TEXT = "text";
+    // список ответов, которые нужно прокликать в порядке от самого важного до наименнее важного, или наоборот.
     const TYPE_RATING = 'rating';
+    // диапазон значений (Гэлап, СС) - есть диапазов ответов, -2 -1 0 +1 +2, но в ответах нет неправильных значений.
+    const TYPE_CONTRAST = 'contrast';
 
     /**
      * @ORM\Id()
@@ -97,7 +103,18 @@ class Question
      */
     private ?File $imgFile = null;
 
+    /**
+     * Нужное/максимальное количество ответов, которые можно выбрать.
+     * Используется в вопросах типа checkbox, rating.
+     */
     private $count;
+
+    /**
+     * @ORM\Column(type="integer", options={"default": 0})
+     * Диапазон сгенерированных ответов.
+     * Может быть сспользовано в вопросах типа contrast.
+     */
+    private $range;
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -252,97 +269,71 @@ class Question
         $this->variety = $variety;
     }
 
-    /**
-     * @return \DateTime
-     */
     public function getUpdatedAt(): \DateTime
     {
         return $this->updatedAt;
     }
 
-    /**
-     * @param \DateTime $updatedAt
-     */
     public function setUpdatedAt(\DateTime $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
     }
 
-    /**
-     * @return null
-     */
     public function getImg()
     {
         return $this->img;
     }
 
-    /**
-     * @param null $img
-     */
     public function setImg($img): void
     {
         $this->img = $img;
     }
 
-    /**
-     * @return File|null
-     */
     public function getImgFile(): ?File
     {
         return $this->imgFile;
     }
 
-    /**
-     * @param File|null $imgFile
-     */
     public function setImgFile(?File $imgFile): void
     {
         $this->imgFile = $imgFile;
     }
 
-    /**
-     * @return mixed
-     */
     public function getCount()
     {
         return $this->count;
     }
 
-    /**
-     * @param mixed $count
-     */
     public function setCount($count): void
     {
         $this->count = $count;
     }
 
-    /**
-     * @return string
-     */
+    public function getRange()
+    {
+        return $this->range;
+    }
+
+    public function setRange($range): void
+    {
+        $this->range = $range;
+    }
+
     public function getWrong(): ?string
     {
         return $this->wrong;
     }
 
-    /**
-     * @param string $wrong
-     */
     public function setWrong(string $wrong): void
     {
         $this->wrong = $wrong;
     }
 
-    /**
-     * @return string
-     */
     public function getWrongEn(): ?string
     {
         return $this->wrongEn;
     }
 
-    /**
-     * @param string $wrongEn
-     */
     public function setWrongEn(string $wrongEn): void
     {
         $this->wrongEn = $wrongEn;
@@ -368,49 +359,31 @@ class Question
         $this->correctEn = $correctEn;
     }
 
-    /**
-     * @return bool
-     */
     public function isEnabledBack(): bool
     {
         return $this->enabledBack;
     }
 
-    /**
-     * @param bool $enabledBack
-     */
     public function setEnabledBack(bool $enabledBack): void
     {
         $this->enabledBack = $enabledBack;
     }
 
-    /**
-     * @return bool
-     */
     public function isEnabledForward(): bool
     {
         return $this->enabledForward;
     }
 
-    /**
-     * @param bool $enabledForward
-     */
     public function setEnabledForward(bool $enabledForward): void
     {
         $this->enabledForward = $enabledForward;
     }
 
-    /**
-     * @return bool
-     */
     public function isShowAnswer(): bool
     {
         return $this->showAnswer;
     }
 
-    /**
-     * @param bool $showAnswer
-     */
     public function setShowAnswer(bool $showAnswer): void
     {
         $this->showAnswer = $showAnswer;

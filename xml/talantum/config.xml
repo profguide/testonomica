@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <skills>
+        <creative>
+            <text>Креативность</text>
+        </creative>
+        <analyst>
+            <text>Аналитик</text>
+        </analyst>
+        <optimizer>
+            <text>Оптимизатор</text>
+        </optimizer>
+        <flex>
+            <text>Гибкость</text>
+        </flex>
+        <broad>
+            <text>Широта взглядов</text>
+        </broad>
+        <curiosity>
+            <text>Любопытство</text>
+        </curiosity>
+        <caution>
+            <text>Предусмотрительность</text>
+        </caution>
+
+        <stress>
+            <text>Стрессоустойчивость</text>
+        </stress>
+    </skills>
+
+    <clusters>
+        <int>
+            <text>Интеллект</text>
+            <skills>
+                <creative/>
+                <analyst/>
+                <optimizer/>
+                <flex/>
+                <broad/>
+                <curiosity/>
+                <caution/>
+            </skills>
+        </int>
+        <bio>
+            <text>Биология</text>
+            <skills>
+                <stress/>
+            </skills>
+        </bio>
+    </clusters>
+</config>

@@ -3,15 +3,23 @@
 {% block result %}
     {% set debug = app.request.get('debug') == 1 ? 1 : 0 %}
 
-    <div style="margin-top: -30px;">
+    <div class="mt-1">
         {% for skill in skills %}
-        <div class="p-5 {{ loop.index % 2 == 0 ? 'bg-light' : '' }}">
-            <div class="container">
-                <h5>{{ skill.name }}: {{ skill.value }}/{{ skill.max }} ({{ skill.percentage }}%)</h5>
+            <div>
+                {{ skill.name }} - {{ skill.percentage }}%
             </div>
-        </div>
         {% endfor %}
     </div>
+
+{#    <div style="margin-top: -30px;">#}
+{#        {% for skill in skills %}#}
+{#        <div class="p-5 {{ loop.index % 2 == 0 ? 'bg-light' : '' }}">#}
+{#            <div class="container">#}
+{#                <h5>{{ skill.name }}: {{ skill.value }}/{{ skill.max }} ({{ skill.percentage }}%)</h5>#}
+{#            </div>#}
+{#        </div>#}
+{#        {% endfor %}#}
+{#    </div>#}
 
 {#    <div style="margin-top: -30px;">#}
 {#        {% for skill in skills %}#}

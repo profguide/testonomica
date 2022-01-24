@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
 <quiz version="1.0">
-    <config>
-<!--        <timer></timer>-->
-    </config>
+<!--    <config>-->
+<!--        <timer question="20"/>-->
+<!--    </config>-->
     <items>
-        <item id="1" group="group-1" timer="20">
-<!--            <name></name>-->
+        <item id="1" group="creative-analyst" timer="20" type="contrast">
+            <name/>
             <options>
-                <option value="car">Машинки</option>
-                <option value="animal">Животные</option>
+                <option value="1">Я думаю о том, что у меня хорошо получается.</option>
+                <option value="2"/>
+                <option value="3"/>
+                <option value="4"/>
+                <option value="5">Я думаю о том, что необходимо улучшить.</option>
+            </options>
+        </item>
+        <item id="2" group="creative-analyst" timer="20" type="contrast">
+            <name/>
+            <options>
+                <option value="1">Мною движет моё представление о гуманности.</option>
+                <option value="2"/>
+                <option value="3"/>
+                <option value="4"/>
+                <option value="5">Мною движет честолюбие.</option>
             </options>
         </item>
     </items>

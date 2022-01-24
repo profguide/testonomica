@@ -36,8 +36,13 @@ class QuestionXmlMapper
         if (($enabledForward = $crawler->attr('enabledForward')) != null) {
             $question->setEnabledForward($enabledForward === "true");
         }
+
         // item children
-        $question->setName($crawler->filterXPath('descendant-or-self::name')->text());
+        $nameNode = $crawler->filterXPath('descendant-or-self::name');
+        if ($nameNode->count() == 0) {
+            throw new \DomainException('Question has to have node "name".');
+        }
+        $question->setName($nameNode->text());
         if (($text = $crawler->filterXPath('descendant-or-self::text'))->count() > 0) {
             $question->setText($text->text());
         }
