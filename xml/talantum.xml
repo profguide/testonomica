@@ -5,24 +5,24 @@
 <!--        <timer question="20"/>-->
 <!--    </config>-->
     <items>
-        <item id="1" group="creative-analyst" timer="20" type="contrast">
+        <item id="1" group="optimizer-creative" timer="20" type="contrast">
             <name/>
             <options>
-                <option value="1">Я думаю о том, что у меня хорошо получается.</option>
+                <option value="1">Я всегда выполняю работу быстро и с минимальными затратами сил</option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">Я думаю о том, что необходимо улучшить.</option>
+                <option value="5">У меня получается привнести в рабочий процесс что-то совсем новое</option>
             </options>
         </item>
-        <item id="2" group="creative-analyst" timer="20" type="contrast">
+        <item id="2" group="optimizer-analyst" timer="20" type="contrast">
             <name/>
             <options>
-                <option value="1">Мною движет моё представление о гуманности.</option>
+                <option value="1">У меня получается изменить ситуацию к лучшему</option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">Мною движет честолюбие.</option>
+                <option value="5">У меня получается понимать причину неблагополучия</option>
             </options>
         </item>
     </items>
