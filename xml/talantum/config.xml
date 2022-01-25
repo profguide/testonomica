@@ -28,7 +28,87 @@
         <stress>
             <text>Стрессоустойчивость</text>
         </stress>
-        <!--...-->
+        <decisive>
+            <text>Решительность, смелость</text>
+        </decisive>
+        <search>
+            <text>Поисковая активность</text>
+        </search>
+        <initiative>
+            <text>Инициативность</text>
+        </initiative>
+        <suspense>
+            <text>Принятие неопределенности</text>
+        </suspense>
+        <intuit>
+            <text>Интуиция</text>
+        </intuit>
+        <courage>
+            <text>Мужество</text>
+        </courage>
+        <responsible>
+            <text>Ответственность</text>
+        </responsible>
+        <punctual>
+            <text>Пунктуальность</text>
+        </punctual>
+        <executive>
+            <text>Исполнитель</text>
+        </executive>
+        <purpose>
+            <text>Целеустремленность</text>
+        </purpose>
+        <growth>
+            <text>Установка на рост</text>
+        </growth>
+        <reflection>
+            <text>Рефлексия</text>
+        </reflection>
+        <schoolboy>
+            <text>Ученик знайка</text>
+        </schoolboy>
+        <collectivist>
+            <text>Коллективист</text>
+        </collectivist>
+        <adaptation>
+            <text>Адаптация</text>
+        </adaptation>
+        <dialogue>
+            <text>Диалогичность</text>
+        </dialogue>
+        <feeling>
+            <text>Эмоциональный интеллект</text>
+        </feeling>
+        <social>
+            <text>Социальный интеллект</text>
+        </social>
+        <assertive>
+            <text>Ассертивность</text>
+        </assertive>
+        <nonconformism>
+            <text>Нонконформизм</text>
+        </nonconformism>
+        <demonstrative>
+            <text>Демонстративный</text>
+        </demonstrative>
+        <competing>
+            <text>Соревнующийся</text>
+        </competing>
+        <encourager>
+            <text>Вдохновитель</text>
+        </encourager>
+        <manager>
+            <text>Распорядитель</text>
+        </manager>
+        <mentor>
+            <text>Наставничество</text>
+        </mentor>
+        <opener>
+            <text>Открывает глаза дороги</text>
+        </opener>
+        <harmonizer>
+            <text>Гармонизатор</text>
+        </harmonizer>
     </skills>
 
     <clusters>
@@ -42,7 +122,6 @@
                 <broad/>
                 <curiosity/>
                 <caution/>
-                <stress/>
             </skills>
         </int>
 
@@ -50,105 +129,51 @@
             <text>Биология</text>
             <skills>
                 <stress/>
-                <decisive>
-                    <text>Решительность, смелость</text>
-                </decisive>
-                <search>
-                    <text>Поисковая активность</text>
-                </search>
-                <initiative>
-                    <text>Инициативность</text>
-                </initiative>
-                <suspense>
-                    <text>Принятие неопределенности</text>
-                </suspense>
-                <intuit>
-                    <text>Интуиция</text>
-                </intuit>
-                <courage>
-                    <text>Мужество</text>
-                </courage>
+                <decisive/>
+                <search/>
+                <initiative/>
+                <suspense/>
+                <intuit/>
+                <courage/>
             </skills>
         </bio>
 
         <will>
             <text>Характер, воля</text>
             <skills>
-                <responsible>
-                    <text>Ответственность</text>
-                </responsible>
-                <punctual>
-                    <text>Пунктуальность</text>
-                </punctual>
-                <executive>
-                    <text>Исполнитель</text>
-                </executive>
-                <purpose>
-                    <text>Целеустремленность</text>
-                </purpose>
-                <growth>
-                    <text>Установка на рост</text>
-                </growth>
-                <reflection>
-                    <text>Рефлексия</text>
-                </reflection>
-                <schoolboy>
-                    <text>Ученик знайка</text>
-                </schoolboy>
+                <responsible/>
+                <punctual/>
+                <executive/>
+                <purpose/>
+                <growth/>
+                <reflection/>
+                <schoolboy/>
             </skills>
         </will>
 
         <people>
             <text>Я и люди</text>
             <skills>
-                <collectivist>
-                    <text>Коллективист</text>
-                </collectivist>
-                <adaptation>
-                    <text>Адаптация</text>
-                </adaptation>
-                <dialogue>
-                    <text>Диалогичность</text>
-                </dialogue>
-                <feeling>
-                    <text>Эмоциональный интеллект</text>
-                </feeling>
-                <social>
-                    <text>Социальный интеллект</text>
-                </social>
-                <assertive>
-                    <text>Ассертивность</text>
-                </assertive>
-                <nonconformism>
-                    <text>Нонконформизм</text>
-                </nonconformism>
+                <collectivist/>
+                <adaptation/>
+                <dialogue/>
+                <feeling/>
+                <social/>
+                <assertive/>
+                <nonconformism/>
             </skills>
         </people>
 
         <influence>
             <text>Я влияю</text>
             <skills>
-                <demonstrative>
-                    <text>Демонстративный</text>
-                </demonstrative>
-                <competing>
-                    <text>Соревнующийся</text>
-                </competing>
-                <encourager>
-                    <text>Вдохновитель</text>
-                </encourager>
-                <manager>
-                    <text>Распорядитель</text>
-                </manager>
-                <mentor>
-                    <text>Наставничество</text>
-                </mentor>
-                <opener>
-                    <text>Открывает глаза дороги</text>
-                </opener>
-                <harmonizer>
-                    <text>Гармонизатор</text>
-                </harmonizer>
+                <demonstrative/>
+                <competing/>
+                <encourager/>
+                <manager/>
+                <mentor/>
+                <opener/>
+                <harmonizer/>
             </skills>
         </influence>
     </clusters>
