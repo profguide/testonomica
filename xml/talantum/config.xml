@@ -46,9 +46,7 @@
         <bio>
             <text>Биология</text>
             <skills>
-                <stress>
-                    <text>Стрессоустойчивость</text>
-                </stress>
+                <stress/>
                 <decisive>
                     <text>Решительность, смелость</text>
                 </decisive>
