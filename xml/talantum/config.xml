@@ -3,6 +3,9 @@
     <skills>
         <creative>
             <text>Креативность</text>
+            <report>
+                Описание вставлять тут
+            </report>
         </creative>
         <analyst>
             <text>Аналитик</text>
