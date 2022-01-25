@@ -23,6 +23,7 @@ export default class QuestionResponseHydrator {
             enabledBack: response.data.question.enabledBack,
             enabledForward: response.data.question.enabledForward,
             count: parseInt(response.data.question.count),
+            timer: parseInt(response.data.question.timer),
             number: response.data.number,
             length: response.data.length,
             type,

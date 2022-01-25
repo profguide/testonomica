@@ -14,8 +14,8 @@ import FormRating from "../form/FormRating";
 import FormGradient from "../form/FormGradient";
 import ProgressBar from "../form/ProgressBar";
 import Loading from "../form/Loading";
+import TimerWrapper from "../form/TimerWrapper";
 
-// todo Timer
 export default class QuizScreen extends Component {
     constructor(props) {
         super(props);
@@ -23,7 +23,7 @@ export default class QuizScreen extends Component {
         this.state = {
             isLoading: true,
             error: null,
-            question: null,
+            question: null
         }
 
         this.api = props.api;
@@ -35,8 +35,6 @@ export default class QuizScreen extends Component {
         formTypeMap[QUESTION_TYPE_RATING] = FormRating;
         formTypeMap[QUESTION_TYPE_GRADIENT] = FormGradient;
         this.formTypeMap = formTypeMap;
-
-        // console.log('Test', this.api);
 
         this.selectionHandler = this.selectionHandler.bind(this);
         this.goForwardHandler = this.goForwardHandler.bind(this);
@@ -53,13 +51,7 @@ export default class QuizScreen extends Component {
 
     // The user made his choice
     selectionHandler(value) {
-        // save the answer
-        this.api.addAnswer(value);
-        if (!this.api.progressFull()) {
-            this.next();
-        } else {
-            this.props.questionsOverHandler();
-        }
+        this.saveAndForward(value);
     }
 
     start() {
@@ -80,13 +72,22 @@ export default class QuizScreen extends Component {
 
     // Forward button clicked: save answer and load the next question
     goForwardHandler() {
-        this.api.addAnswer(null);
-        this.next();
+        this.saveAndForward(null);
     }
 
     // Back button clicked: load the previous question
     goBackHandler() {
         this.prev();
+    }
+
+    saveAndForward(value) {
+        // save the answer
+        this.api.addAnswer(value);
+        if (!this.api.progressFull()) {
+            this.next();
+        } else {
+            this.props.questionsOverHandler();
+        }
     }
 
     wrapQuestionResponse(promise) {
@@ -115,7 +116,6 @@ export default class QuizScreen extends Component {
             return <Loading/>;
         }
         const question = this.state.question;
-        console.log(question)
         const options = question.options;
         const type = question.type.get();
         const enabledForward = question.enabledForward && question.number < question.length;
@@ -125,22 +125,26 @@ export default class QuizScreen extends Component {
 
         return (
             <article className={'tnc-q tnc-q__' + this.props.testId + '-' + question.id}>
-                {question.img
-                    ? <img className={'tnc-q__img'} src={question.img} alt={'Задание'}/>
-                    : null}
-                <h2 className={'tnc-q__name'}>{question.name}</h2>
-                {question.text
-                    ? <div className={'tnc-q__text'} dangerouslySetInnerHTML={{__html: question.text}}/>
-                    : null}
-                <Form key={question.id}
-                      options={options}
-                      isLoading={this.state.isLoading}
-                      enabledBack={enabledBack}
-                      enabledForward={enabledForward}
-                      selectionHandler={this.selectionHandler}
-                      goForwardHandler={this.goForwardHandler}
-                      goBackHandler={this.goBackHandler}/>
-                <ProgressBar length={question.length} number={question.number}/>
+                <TimerWrapper timer={question.timer} goForwardHandler={this.goForwardHandler} key={question.id}>
+                    {question.img
+                        ? <img className={'tnc-q__img'} src={question.img} alt={'Задание'}/>
+                        : null}
+                    <h2 className={'tnc-q__name'}>{question.name}</h2>
+                    {question.text
+                        ? <div className={'tnc-q__text'} dangerouslySetInnerHTML={{__html: question.text}}/>
+                        : null}
+
+                    <Form key={question.id}
+                          options={options}
+                          isLoading={this.state.isLoading}
+                          enabledBack={enabledBack}
+                          enabledForward={enabledForward}
+                          selectionHandler={this.selectionHandler}
+                          goForwardHandler={this.goForwardHandler}
+                          goBackHandler={this.goBackHandler}/>
+
+                    <ProgressBar length={question.length} number={question.number}/>
+                </TimerWrapper>
             </article>
         );
     }

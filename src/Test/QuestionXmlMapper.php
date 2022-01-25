@@ -20,19 +20,29 @@ class QuestionXmlMapper
 
         // item attributes
         $question->setId($crawler->attr('id'));
+
         if (($type = $crawler->attr('method')) != null) {
             $question->setType(mb_strtolower($crawler->attr('method')));
         }
+
         if (($variety = $crawler->attr('group')) != null) {
             $question->setVariety($variety);
         }
+
         $question->setCount($crawler->attr('count'));
+
+        if (($timer = $crawler->attr('timer')) != null) {
+            $question->setTimer($timer);
+        }
+
         if (($showAnswer = $crawler->attr('showAnswer')) != null) {
             $question->setShowAnswer($showAnswer === "true");
         }
+
         if (($enabledBack = $crawler->attr('enabledBack')) != null) {
             $question->setEnabledBack($enabledBack === "true");
         }
+
         if (($enabledForward = $crawler->attr('enabledForward')) != null) {
             $question->setEnabledForward($enabledForward === "true");
         }
@@ -43,15 +53,19 @@ class QuestionXmlMapper
             throw new \DomainException('Question has to have node "name".');
         }
         $question->setName($nameNode->text());
+
         if (($text = $crawler->filterXPath('descendant-or-self::text'))->count() > 0) {
             $question->setText($text->text());
         }
+
         if (($img = $crawler->filterXPath('descendant-or-self::img'))->count() > 0) {
             $question->setImg($img->text());
         }
+
         if (($right = $crawler->filterXPath('descendant-or-self::right'))->count() > 0) {
             $question->setCorrect($right->text());
         }
+
         if (($wrong = $crawler->filterXPath('descendant-or-self::wrong'))->count() > 0) {
             $question->setWrong($wrong->text());
         }

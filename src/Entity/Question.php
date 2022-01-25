@@ -116,10 +116,10 @@ class Question
      */
     private $range;
 
-//    /**
-//     * @ORM\Column(type="integer", options={"default": 0})
-//     */
-//    private int $timer = 0;
+    /**
+     * @ORM\Column(type="integer", options={"default": 0})
+     */
+    private int $timer = 0;
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -322,6 +322,16 @@ class Question
     public function setRange($range): void
     {
         $this->range = $range;
+    }
+
+    public function getTimer(): int
+    {
+        return $this->timer;
+    }
+
+    public function setTimer(int $timer): void
+    {
+        $this->timer = $timer;
     }
 
     public function getWrong(): ?string
