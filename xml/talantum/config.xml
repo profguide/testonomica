@@ -32,30 +32,15 @@
         <int>
             <text>Интеллект</text>
             <skills>
-            <creative>
-                <text>Креативность</text>
-            </creative>
-            <analyst>
-                <text>Аналитик</text>
-            </analyst>
-            <optimizer>
-                <text>Оптимизатор</text>
-            </optimizer>
-            <flex>
-                <text>Гибкость</text>
-            </flex>
-            <broad>
-                <text>Широта взглядов</text>
-            </broad>
-            <curiosity>
-                <text>Любопытство</text>
-            </curiosity>
-            <caution>
-                <text>Предусмотрительность</text>
-            </caution>
-            <stress>
-                <text>Стрессоустойчивость</text>
-            </stress>
+                <creative/>
+                <analyst/>
+                <optimizer/>
+                <flex/>
+                <broad/>
+                <curiosity/>
+                <caution/>
+                <stress/>
+            </skills>
         </int>
 
         <bio>
