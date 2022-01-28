@@ -110,9 +110,11 @@ export default class ServiceApi {
     }
 
     result() {
-        return axios.get(this.buildUrl('/result/' + this.testId + '/?key=' + this.storage.resultKey()), {
-            headers: {'token': this.token}
-        }).then(response => {
+        console.log(this.token)
+        return axios(this.tokenizedRequest({
+            method: 'get',
+            url: this.buildUrl(`/result/${this.testId}/?key=${this.storage.resultKey()}`)
+        })).then(response => {
             this.token = response.headers['x-token'];
             return response;
         });

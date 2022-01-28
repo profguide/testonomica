@@ -64,12 +64,10 @@ class HttpRequiringAccessTokenSubscriber implements EventSubscriberInterface
                 return;
             }
 
-            $token = $this->accessService->findOneByToken($this->getToken($request));
-            if (!$token) {
+            $access = $this->accessService->findOneByToken($this->getToken($request));
+            if (!$access) {
                 throw new AccessDeniedHttpException('Token access not found.');
             }
-
-            $access = $token;
             if ($access->isUsed()) {
                 throw new AccessDeniedHttpException('Expired token.');
             }
