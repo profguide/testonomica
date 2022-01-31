@@ -9,7 +9,7 @@
     <title>Widget</title>
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
-        {{ encore_entry_link_tags('site-api') }}
+        {{ encore_entry_link_tags('test') }}
     {% endblock %}
 </head>
 <body>
@@ -20,7 +20,7 @@
      data-host="{{ host }}">
 </div>
 {% block javascripts %}
-    {{ encore_entry_script_tags('site-api') }}
+    {{ encore_entry_script_tags('test') }}
     <script>
         // notify parent window about height change.
         testonomica.addEventListener('resize', function (e) {

@@ -5,7 +5,7 @@
 {% block body %}
     {% block stylesheets %}
         {{ parent() }}
-        {{ encore_entry_link_tags('site-api') }}
+        {{ encore_entry_link_tags('test') }}
     {% endblock %}
     <section class="tnc-welcome container" id="app-preload-screen">
         <h1 class="tnc-welcome__title">{{ test.name }}</h1>
@@ -21,7 +21,7 @@
     </div>
     {% block javascripts %}
         {{ parent() }}
-        {{ encore_entry_script_tags('site-api') }}
+        {{ encore_entry_script_tags('test') }}
     {% endblock %}
     <script>
         // removes preload screen on App load.

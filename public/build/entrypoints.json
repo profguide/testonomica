@@ -11,14 +11,14 @@
         "/build/app.9ba2c335.css"
       ]
     },
-    "site-api": {
+    "test": {
       "js": [
         "/build/runtime.d94b3b43.js",
         "/build/1.005d7bc1.js",
-        "/build/site-api.ab91f652.js"
+        "/build/test.d3f4bb4a.js"
       ],
       "css": [
-        "/build/site-api.75c27957.css"
+        "/build/test.75c27957.css"
       ]
     },
     "admin": {
