@@ -5,8 +5,9 @@
 
     <div class="mt-1">
         {% for skill in skills %}
-            <div>
-                {{ skill.name }} - {{ skill.percentage }}%
+            <div class="mb-4">
+                <h4>{{ skill.name }} ({{ skill.percentage }}%, {{ skill.value }} / {{ skill.max }})</h4>
+                <div>{{ skill.text | default("") }}</div>
             </div>
         {% endfor %}
     </div>

@@ -17,7 +17,7 @@ class TalantumCalculator extends AbstractCalculator
     {
         $skills = $this->getSkills();
 
-        // сумма баллов скила и максимально возможное значение
+        // инициализируем пустую мапу: сумма баллов скила и максимально возможное значение
         $sums = array_map(function () {
             return [
                 'value' => 0,
@@ -25,6 +25,7 @@ class TalantumCalculator extends AbstractCalculator
             ];
         }, $skills);
 
+        // высчитываем набранную сумму баллов каждого скила и их максимально возможное значения
         foreach ($this->answersHolder->getAll() as $answer) {
             $val = $answer->getValue()[0];
 
@@ -33,10 +34,11 @@ class TalantumCalculator extends AbstractCalculator
             $variety = $question->getVariety();
             $skillIds = explode("-", $variety);
 
-            // значения лежат в диапазоне от 1 до 5.
-            // 1 и 2 - первый скил
-            // 3 - оба скила или ни один скил (смотря как интерпретировать)
-            // 4 и 5 - второй скил
+            // Определяем какой скил был выбран и его силу.
+            // 1 2 3 4 5 - варианты ответов, где
+            // 1 и 2 указывают на первый скил (1 - очень, 2 - не очень)
+            // 4 и 5 указывают на второй скил (4 - не очень, 5 - очень)
+            // 3 - оба скила (или ни один, смотря как интерпретировать)
             switch ($val) {
                 case 1:
                     $sums[$skillIds[0]]['value'] += self::MAX;
@@ -56,11 +58,12 @@ class TalantumCalculator extends AbstractCalculator
                     break;
             }
 
-            // инкремент максимального значения для обоих скилов
+            // Прибавляем максимум к максимальному значению скилов
             $sums[$skillIds[0]]['max'] += self::MAX;
             $sums[$skillIds[1]]['max'] += self::MAX;
         }
 
+        // высчитываем проценты и подготавливаем к выводу
         $result = [];
         foreach ($sums as $id => $conf) {
             $value = $conf['value'];
@@ -74,16 +77,48 @@ class TalantumCalculator extends AbstractCalculator
 
             $result[$id] = [
                 'name' => $skills[$id]['name'],
-                'value' => $conf['value'],
+                'value' => $conf['value'], // debug
+                'max' => $max, // debug
                 'percentage' => round($value * 100 / $max)
             ];
         }
 
-        //        arsort($groupsSums);
+        // сортируем результ и таким образом формируем топ
+        $this->sortResult($result);
+
+        // добавляем текст заключения для скилов, оказавшихся в топ-10
+        $this->addTopText($result, 10, $skills);
 
         return [
             'skills' => $result
         ];
+    }
+
+    private function sortResult(array &$result)
+    {
+        uasort($result, function (array $a, array $b) {
+            if ($a['percentage'] == $b['percentage']) {
+                return 0;
+            }
+            return $a['percentage'] < $b['percentage'] ? 1 : -1;
+        });
+    }
+
+    /**
+     * @param Crawler[] $skills
+     * @param array $result
+     * @param int $max
+     */
+    private function addTopText(array &$result, int $max, array $skills)
+    {
+        $i = 1;
+        foreach ($result as $k => $row) {
+            $result[$k]['text'] = $skills[$k]['report'];
+            $i++;
+            if ($i > $max) {
+                break;
+            }
+        }
     }
 
     private static Crawler $configXmlCrawler;
@@ -99,7 +134,8 @@ class TalantumCalculator extends AbstractCalculator
         $skills = $config->children('skills')->children();
         $skills->each(function (Crawler $skill) use (&$map) {
             $map[$skill->nodeName()] = [
-                'name' => $skill->children('text')->text()
+                'name' => $skill->children('text')->text(),
+                'report' => $skill->children('report')->text()
             ];
         });
 

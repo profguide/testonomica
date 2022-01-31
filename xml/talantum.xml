@@ -105,16 +105,16 @@
                 <option value="5">Я люблю смотреть как люди делают что-то новое</option>
             </options>
         </item>
-        <item id="10" group="creative-caution" timer="20" method="gradient">
-            <name/>
-            <options>
-                <option value="1">Я люблю привносить свои идеи в любой процесс</option>
-                <option value="2"/>
-                <option value="3"/>
-                <option value="4"/>
-                <option value="5">Я забочусь о том, чтобы новое не испортило старое</option>
-            </options>
-        </item>
+<!--        <item id="10" group="creative-caution" timer="20" method="gradient">-->
+<!--            <name/>-->
+<!--            <options>-->
+<!--                <option value="1">Я люблю привносить свои идеи в любой процесс</option>-->
+<!--                <option value="2"/>-->
+<!--                <option value="3"/>-->
+<!--                <option value="4"/>-->
+<!--                <option value="5">Я забочусь о том, чтобы новое не испортило старое</option>-->
+<!--            </options>-->
+<!--        </item>-->
         <item id="11" group="analyst-flex" timer="20" method="gradient">
             <name/>
             <options>
