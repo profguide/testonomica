@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
 <quiz version="1.0">
-<!--    <config>-->
-<!--        <timer question="20"/>-->
-<!--    </config>-->
+    <!--    <config>-->
+    <!--        <timer question="20"/>-->
+    <!--    </config>-->
     <items>
         <item id="1" group="optimizer-creative" timer="20" method="gradient">
             <name/>
@@ -58,11 +58,13 @@
         <item id="6" group="optimizer-caution" timer="20" method="gradient">
             <name/>
             <options>
-                <option value="1">Когда я организовываю рабочий процесс, я сосредоточен на экономии денег и времени</option>
+                <option value="1">Когда я организовываю рабочий процесс, я сосредоточен на экономии денег и времени
+                </option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">Организовывая рабочий процесс я сосредоточен на возможных негативных последствиях</option>
+                <option value="5">Организовывая рабочий процесс я сосредоточен на возможных негативных последствиях
+                </option>
             </options>
         </item>
         <item id="7" group="creative-analyst" timer="20" method="gradient">
@@ -105,17 +107,17 @@
                 <option value="5">Я люблю смотреть как люди делают что-то новое</option>
             </options>
         </item>
-<!--        <item id="10" group="creative-caution" timer="20" method="gradient">-->
-<!--            <name/>-->
-<!--            <options>-->
-<!--                <option value="1">Я люблю привносить свои идеи в любой процесс</option>-->
-<!--                <option value="2"/>-->
-<!--                <option value="3"/>-->
-<!--                <option value="4"/>-->
-<!--                <option value="5">Я забочусь о том, чтобы новое не испортило старое</option>-->
-<!--            </options>-->
-<!--        </item>-->
-        <item id="11" group="analyst-flex" timer="20" method="gradient">
+        <item id="11" group="creative-caution" timer="20" method="gradient">
+            <name/>
+            <options>
+                <option value="1">Я люблю привносить свои идеи в любой процесс</option>
+                <option value="2"/>
+                <option value="3"/>
+                <option value="4"/>
+                <option value="5">Я забочусь о том, чтобы новое не испортило старое</option>
+            </options>
+        </item>
+        <item id="12" group="analyst-flex" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я анализирую всё, что мне попадается под руку</option>
@@ -125,7 +127,7 @@
                 <option value="5">Я легко переключаюсь с одной задачи на другую</option>
             </options>
         </item>
-        <item id="12" group="analyst-broad" timer="20" method="gradient">
+        <item id="13" group="analyst-broad" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Мне нравится определять причины вещей и исследовать их</option>
@@ -135,7 +137,7 @@
                 <option value="5">Мне нравится выслушивать другие мнения, чтобы обогатить моё представление</option>
             </options>
         </item>
-        <item id="13" group="analyst-curiosity" timer="20" method="gradient">
+        <item id="14" group="analyst-curiosity" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я люблю собирать факты и делать собственные выводы из них</option>
@@ -145,7 +147,7 @@
                 <option value="5">Я люблю узнавать новые факты и подробности из разных сфер</option>
             </options>
         </item>
-        <item id="14" group="analyst-caution" timer="20" method="gradient">
+        <item id="15" group="analyst-caution" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Мне нравится выявлять сильные и слабые стороны объекта, дела</option>
@@ -155,7 +157,7 @@
                 <option value="5">Я хорошо предвижу возможные негативные последствия дела</option>
             </options>
         </item>
-        <item id="15" group="flex-broad" timer="20" method="gradient">
+        <item id="16" group="flex-broad" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я меняю своё устоявшееся мнение под влиянием новых знаний</option>
@@ -165,7 +167,7 @@
                 <option value="5">Я верю, что все точки зрения имеют право на существование</option>
             </options>
         </item>
-        <item id="16" group="flex-curiosity" timer="20" method="gradient">
+        <item id="17" group="flex-curiosity" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я люблю посмотреть на вещи с разных сторон</option>
@@ -175,7 +177,7 @@
                 <option value="5">Я люблю узнавать много нового о разных вещах</option>
             </options>
         </item>
-        <item id="17" group="flex-caution" timer="20" method="gradient">
+        <item id="18" group="flex-caution" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я легко переключаюсь на другое в случае неудачи</option>
@@ -185,7 +187,7 @@
                 <option value="5">Я всё взвешиваю прежде чем начать дело</option>
             </options>
         </item>
-        <item id="18" group="broad-curiosity" timer="20" method="gradient">
+        <item id="19" group="broad-curiosity" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я понимаю людей, которые придерживаются другой точки зрения</option>
@@ -195,7 +197,7 @@
                 <option value="5">Я стараюсь знать как можно больше о разных теориях и взглядах</option>
             </options>
         </item>
-        <item id="19" group="broad-caution" timer="20" method="gradient">
+        <item id="20" group="broad-caution" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Принимая решения, я рассматриваю множество факторов</option>
@@ -205,7 +207,7 @@
                 <option value="5">Я способен разглядеть потенциал в новых идеях</option>
             </options>
         </item>
-        <item id="20" group="curiosity-caution" timer="20" method="gradient">
+        <item id="21" group="curiosity-caution" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Мне интересно многое и я с удовольствием это узнаю</option>
@@ -215,7 +217,7 @@
                 <option value="5">Я чувствую, что знания являются составной частью успеха</option>
             </options>
         </item>
-        <item id="21" group="stress-decisive" timer="20" method="gradient">
+        <item id="22" group="stress-decisive" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я всегда принимаю правильное решение в нервной для меня обстановке</option>
@@ -225,7 +227,7 @@
                 <option value="5">Я никогда не откладываю принятие важных решений в долгий ящик</option>
             </options>
         </item>
-        <item id="22" group="stress-search" timer="20" method="gradient">
+        <item id="23" group="stress-search" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">При возникновении неожиданных неприятностей я сохраняю хладнокровие</option>
@@ -235,7 +237,7 @@
                 <option value="5">Я всегда активно ищу решение, когда возникают неожиданные неприятности</option>
             </options>
         </item>
-        <item id="23" group="stress-initiative" timer="20" method="gradient">
+        <item id="24" group="stress-initiative" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я продуктивен даже в экстренных ситуациях</option>
@@ -245,7 +247,7 @@
                 <option value="5">Я часто выступаю с дельными предложениями</option>
             </options>
         </item>
-        <item id="24" group="stress-suspense" timer="20" method="gradient">
+        <item id="25" group="stress-suspense" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">В ситуации, когда срочно надо найти решение, я действую быстро и собранно</option>
@@ -255,7 +257,7 @@
                 <option value="5">Я могу ввязаться в дело, которое не имеет гарантированного успеха</option>
             </options>
         </item>
-        <item id="25" group="stress-intuit" timer="20" method="gradient">
+        <item id="26" group="stress-intuit" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Никакое давление не способно сбить меня с намеченного пути</option>
@@ -265,7 +267,7 @@
                 <option value="5">Чувство "как мне лучше поступить" никогда не обманывает меня</option>
             </options>
         </item>
-        <item id="26" group="decisive-search" timer="20" method="gradient">
+        <item id="27" group="decisive-search" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я не боюсь принимать важные решения</option>
@@ -274,17 +276,18 @@
                 <option value="4"/>
                 <option value="5">Я не успокоюсь пока не найду решение</option>
             </options>
-        </item><item id="27" group="decisive-initiative" timer="20" method="gradient">
-        <name/>
-        <options>
-            <option value="1">В экстренной ситуации я принимаю решения быстро</option>
-            <option value="2"/>
-            <option value="3"/>
-            <option value="4"/>
-            <option value="5">Я беру дело в свои руки если вижу, что дело не продвигается</option>
-        </options>
-    </item>
-        <item id="28" group="decisive-suspense" timer="20" method="gradient">
+        </item>
+        <item id="28" group="decisive-initiative" timer="20" method="gradient">
+            <name/>
+            <options>
+                <option value="1">В экстренной ситуации я принимаю решения быстро</option>
+                <option value="2"/>
+                <option value="3"/>
+                <option value="4"/>
+                <option value="5">Я беру дело в свои руки если вижу, что дело не продвигается</option>
+            </options>
+        </item>
+        <item id="29" group="decisive-suspense" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я не теряюсь в сложной для меня ситуации и действую решительно</option>
@@ -294,7 +297,7 @@
                 <option value="5">Мне интересно действовать в ситуациях с заранее неизвестным результатом</option>
             </options>
         </item>
-        <item id="29" group="decisive-intuit" timer="20" method="gradient">
+        <item id="30" group="decisive-intuit" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я смело шагаю навстречу трудностям</option>
@@ -304,7 +307,7 @@
                 <option value="5">Я всегда чувствую, как поступить в запутанной ситуации</option>
             </options>
         </item>
-        <item id="30" group="search-initiative" timer="20" method="gradient">
+        <item id="31" group="search-initiative" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я исследую весь комплекс обстоятельств, чтобы решить проблему</option>
@@ -314,7 +317,7 @@
                 <option value="5">Я люблю выдвинуть идею и организовать людей на её реализацию</option>
             </options>
         </item>
-        <item id="31" group="search-suspense" timer="20" method="gradient">
+        <item id="32" group="search-suspense" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я активно рассматриваю все способы решения проблемы</option>
@@ -324,7 +327,7 @@
                 <option value="5">Я иду в неизвестность потому что я верю, что со всем справлюсь</option>
             </options>
         </item>
-        <item id="32" group="search-intuit" timer="20" method="gradient">
+        <item id="33" group="search-intuit" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я ищу решение</option>
@@ -334,7 +337,7 @@
                 <option value="5">Я чувствую решение</option>
             </options>
         </item>
-        <item id="33" group="initiative-suspense" timer="20" method="gradient">
+        <item id="34" group="initiative-suspense" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Ради благородной цели я способен придумать план и возглавить группу людей</option>
@@ -344,7 +347,7 @@
                 <option value="5">Ради благородной цели я готов решать задачи с многими неизвестными</option>
             </options>
         </item>
-        <item id="34" group="initiative-intuit" timer="20" method="gradient">
+        <item id="35" group="initiative-intuit" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я готов взяться за решение проблемы по своей инициативе</option>
@@ -354,7 +357,7 @@
                 <option value="5">Я хорошо чувствую, кто может решить вопрос, а кто не может</option>
             </options>
         </item>
-        <item id="35" group="suspense-intuit" timer="20" method="gradient">
+        <item id="36" group="suspense-intuit" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я не боюсь взяться за решение вопроса, который до конца не понимаю</option>
@@ -364,7 +367,7 @@
                 <option value="5">Некоторые мои предчувствия очень сильно мне помогли</option>
             </options>
         </item>
-        <item id="36" group="responsible-punctual" timer="20" method="gradient">
+        <item id="37" group="responsible-punctual" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Для меня важно выполнить работу хорошо</option>
@@ -374,7 +377,7 @@
                 <option value="5">Для меня важно выполнить работу во время</option>
             </options>
         </item>
-        <item id="37" group="responsible-executive" timer="20" method="gradient">
+        <item id="38" group="responsible-executive" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я стремлюсь чтобы дело было сделано хорошо и в срок</option>
@@ -384,7 +387,7 @@
                 <option value="5">Мне нравится выполнять поставленные передо мной задачи</option>
             </options>
         </item>
-        <item id="38" group="responsible-purpose" timer="20" method="gradient">
+        <item id="39" group="responsible-purpose" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я всегда выполняю договорённости</option>
@@ -394,7 +397,7 @@
                 <option value="5">Я подчиняю свою жизнь важной для меня цели</option>
             </options>
         </item>
-        <item id="39" group="responsible-growth" timer="20" method="gradient">
+        <item id="40" group="responsible-growth" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Даже трудное и непонятное задание я выполню потому что должен</option>
@@ -404,7 +407,7 @@
                 <option value="5">Я специально берусь за трудные задания потому что это помогает мне расти</option>
             </options>
         </item>
-        <item id="40" group="responsible-reflection" timer="20" method="gradient">
+        <item id="41" group="responsible-reflection" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Если есть незавершенное дело, то я всеми силами стараюсь его закончить</option>
@@ -414,7 +417,7 @@
                 <option value="5">Выполняя задачу я проверяю её качество на каждом этапе</option>
             </options>
         </item>
-        <item id="41" group="responsible-schoolboy" timer="20" method="gradient">
+        <item id="42" group="responsible-schoolboy" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Всё что я делаю, я делаю основательно</option>
@@ -424,7 +427,7 @@
                 <option value="5">Мне нравится учиться и узнавать новое</option>
             </options>
         </item>
-        <item id="42" group="punctual-executive" timer="20" method="gradient">
+        <item id="43" group="punctual-executive" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Если я опаздываю на встречу, я сильно нервничаю</option>
@@ -434,7 +437,7 @@
                 <option value="5">Я очень стараюсь сдать работу хорошо, какая бы она ни была</option>
             </options>
         </item>
-        <item id="43" group="punctual-purpose" timer="20" method="gradient">
+        <item id="44" group="punctual-purpose" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я заканчиваю работу в срок, потому что не отвлекаюсь</option>
@@ -444,7 +447,7 @@
                 <option value="5">Если у меня есть важное задание, я отложу менее важные дела и развлечения</option>
             </options>
         </item>
-        <item id="44" group="punctual-growth" timer="20" method="gradient">
+        <item id="45" group="punctual-growth" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я многое успеваю, так как я внутренне дисциплинирован</option>
@@ -454,17 +457,19 @@
                 <option value="5">Я планирую многого достигнуть в жизни и многое делаю для этого</option>
             </options>
         </item>
-        <item id="45" group="punctual-reflection" timer="20" method="gradient">
+        <item id="46" group="punctual-reflection" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я всё успеваю, так как хорошо планирую дела</option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">Когда я выполняю запланированное, я критически оглядываюсь на проделанное и вношу корректировки</option>
+                <option value="5">Когда я выполняю запланированное, я критически оглядываюсь на проделанное и вношу
+                    корректировки
+                </option>
             </options>
         </item>
-        <item id="46" group="punctual-schoolboy" timer="20" method="gradient">
+        <item id="47" group="punctual-schoolboy" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Моя сила в том, что я всё делаю вовремя</option>
@@ -474,17 +479,17 @@
                 <option value="5">Моя сила в том, что многое знаю и стремлюсь знать ещё больше</option>
             </options>
         </item>
-        <item id="47" group="executive-purpose" timer="20" method="gradient">
-        <name/>
-        <options>
-            <option value="1">Если передо мной поставили разумную цель, я выполню её несмотря на трудности</option>
-            <option value="2"/>
-            <option value="3"/>
-            <option value="4"/>
-            <option value="5">Если я ставлю себе цель, то я всеми силами иду к ней</option>
-        </options>
-    </item>
-        <item id="48" group="executive-growth" timer="20" method="gradient">
+        <item id="48" group="executive-purpose" timer="20" method="gradient">
+            <name/>
+            <options>
+                <option value="1">Если передо мной поставили разумную цель, я выполню её несмотря на трудности</option>
+                <option value="2"/>
+                <option value="3"/>
+                <option value="4"/>
+                <option value="5">Если я ставлю себе цель, то я всеми силами иду к ней</option>
+            </options>
+        </item>
+        <item id="49" group="executive-growth" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Для меня самое главное делать работу добросовестно</option>
@@ -494,7 +499,7 @@
                 <option value="5">Для меня самое главное, чтобы моя работа привела к профессиональному росту</option>
             </options>
         </item>
-        <item id="49" group="executive-reflection" timer="20" method="gradient">
+        <item id="50" group="executive-reflection" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Если необходимо доделать работу, я трачу своё личное время</option>
@@ -504,7 +509,7 @@
                 <option value="5">Когда я делаю что-либо, я смотрю на себя со стороны</option>
             </options>
         </item>
-        <item id="50" group="executive-schoolboy" timer="20" method="gradient">
+        <item id="51" group="executive-schoolboy" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я люблю выполнять свой участок работы и не выходить за его пределы</option>
@@ -514,7 +519,7 @@
                 <option value="5">Я люблю учиться больше, чем работать</option>
             </options>
         </item>
-        <item id="51" group="purpose-growth" timer="20" method="gradient">
+        <item id="52" group="purpose-growth" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я упорно двигаюсь к своей цели, если она достижима</option>
@@ -524,7 +529,7 @@
                 <option value="5">Я ставлю себе всё более и более сложные задачи</option>
             </options>
         </item>
-        <item id="52" group="purpose-reflection" timer="20" method="gradient">
+        <item id="53" group="purpose-reflection" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Когда я принял решение идти к цели, я уже не колеблюсь</option>
@@ -534,17 +539,19 @@
                 <option value="5">Что бы я ни делал я отдаю себе отчёт в своих чувствах и мыслях</option>
             </options>
         </item>
-        <item id="53" group="purpose-schoolboy" timer="20" method="gradient">
+        <item id="54" group="purpose-schoolboy" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я сознательно ставлю перед собой цели учиться</option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">Я сам не знаю как так получается, но я всё время учусь и являюсь знатоком определённых вещей</option>
+                <option value="5">Я сам не знаю как так получается, но я всё время учусь и являюсь знатоком определённых
+                    вещей
+                </option>
             </options>
         </item>
-        <item id="54" group="growth-reflection" timer="20" method="gradient">
+        <item id="55" group="growth-reflection" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я точно знаю, что я добьюсь успеха в жизни</option>
@@ -554,7 +561,7 @@
                 <option value="5">Я хорошо знаю, что именно внутри меня мешает мне расти</option>
             </options>
         </item>
-        <item id="55" group="growth-schoolboy" timer="20" method="gradient">
+        <item id="56" group="growth-schoolboy" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я намерен сделать карьеру</option>
@@ -564,17 +571,18 @@
                 <option value="5">Я люблю процесс обучения (я учусь)</option>
             </options>
         </item>
-        <item id="56" group="reflection-schoolboy" timer="20" method="gradient">
+        <item id="57" group="reflection-schoolboy" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я постоянно занимаюсь самоанализом</option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">Я стремлюсь к тому, чтобы у меня было как можно больше дипломов и сертификатов</option>
+                <option value="5">Я стремлюсь к тому, чтобы у меня было как можно больше дипломов и сертификатов
+                </option>
             </options>
         </item>
-        <item id="57" group="collectivist-adaptation" timer="20" method="gradient">
+        <item id="58" group="collectivist-adaptation" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я люблю быть частью команды</option>
@@ -584,7 +592,7 @@
                 <option value="5">Я не навязываю никому своих взглядов</option>
             </options>
         </item>
-        <item id="58" group="collectivist-dialogue" timer="20" method="gradient">
+        <item id="59" group="collectivist-dialogue" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Ради коллективных целей я готов к тому, что меня критикуют</option>
@@ -594,7 +602,7 @@
                 <option value="5">Я рад любой критике, потому что она меня развивает</option>
             </options>
         </item>
-        <item id="59" group="collectivist-feeling" timer="20" method="gradient">
+        <item id="60" group="collectivist-feeling" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я считаю, что нужно уметь доверять</option>
@@ -604,7 +612,7 @@
                 <option value="5">Я умею ободрить другого человека</option>
             </options>
         </item>
-        <item id="60" group="collectivist-social" timer="20" method="gradient">
+        <item id="61" group="collectivist-social" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Меня не расстраивают успехи товарищей</option>
@@ -614,7 +622,7 @@
                 <option value="5">Я знаю, что главный фактор успеха - это труд и мотивация</option>
             </options>
         </item>
-        <item id="61" group="collectivist-assertive" timer="20" method="gradient">
+        <item id="62" group="collectivist-assertive" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Ради хороших отношений в коллективе я готов уступить</option>
@@ -624,17 +632,19 @@
                 <option value="5">Я умею отстаивать себя, не причиняя другим вреда</option>
             </options>
         </item>
-        <item id="62" group="collectivist-nonconformism" timer="20" method="gradient">
+        <item id="63" group="collectivist-nonconformism" timer="20" method="gradient">
             <name/>
             <options>
-                <option value="1">Я бы хотел работать в группе, где люди вместе стремятся к общему результату и горячо верят в него</option>
+                <option value="1">Я бы хотел работать в группе, где люди вместе стремятся к общему результату и горячо
+                    верят в него
+                </option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
                 <option value="5">Я не стремлюсь слиться с коллективом в едином порыве</option>
             </options>
         </item>
-        <item id="63" group="adaptation-dialogue" timer="20" method="gradient">
+        <item id="64" group="adaptation-dialogue" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я никогда сходу не критикую принятые здесь правила</option>
@@ -644,7 +654,7 @@
                 <option value="5">Я хорошо чувствую реакцию окружающих на меня и на моё поведение</option>
             </options>
         </item>
-        <item id="64" group="adaptation-feeling" timer="20" method="gradient">
+        <item id="65" group="adaptation-feeling" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я быстро нахожу общий язык с новыми участниками коллектива</option>
@@ -654,17 +664,19 @@
                 <option value="5">Я хорошо вижу, что чувствуют люди, даже не знакомые мне</option>
             </options>
         </item>
-        <item id="65" group="adaptation-social" timer="20" method="gradient">
+        <item id="66" group="adaptation-social" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">В новой среде я спешу узнать местные правила, чтобы следовать им</option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">Я понимаю, что мои добрые действия могут противоречить интересам людей, которым я делаю добро</option>
+                <option value="5">Я понимаю, что мои добрые действия могут противоречить интересам людей, которым я
+                    делаю добро
+                </option>
             </options>
         </item>
-        <item id="66" group="adaptation-assertive" timer="20" method="gradient">
+        <item id="67" group="adaptation-assertive" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Ради мира и согласия я часто уступаю</option>
@@ -674,17 +686,17 @@
                 <option value="5">Я без конфликтов отстаиваю свой интерес</option>
             </options>
         </item>
-        <item id="67" group="adaptation-nonconformism" timer="20" method="gradient">
-        <name/>
-        <options>
-            <option value="1">Я не хочу сильно выделяться в коллективе</option>
-            <option value="2"/>
-            <option value="3"/>
-            <option value="4"/>
-            <option value="5">Мне неприятно делать так, как делают все</option>
-        </options>
-    </item>
-        <item id="68" group="dialogue-feeling" timer="20" method="gradient">
+        <item id="68" group="adaptation-nonconformism" timer="20" method="gradient">
+            <name/>
+            <options>
+                <option value="1">Я не хочу сильно выделяться в коллективе</option>
+                <option value="2"/>
+                <option value="3"/>
+                <option value="4"/>
+                <option value="5">Мне неприятно делать так, как делают все</option>
+            </options>
+        </item>
+        <item id="69" group="dialogue-feeling" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">В конфликте я внимательно выслушиваю мнение противоположной стороны</option>
@@ -694,7 +706,7 @@
                 <option value="5">В конфликте я испытываю не только гнев, но и сострадание</option>
             </options>
         </item>
-        <item id="69" group="dialogue-social" timer="20" method="gradient">
+        <item id="70" group="dialogue-social" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">В деловом разговоре я открыто сообщаю о своём мнении и сомнении</option>
@@ -704,7 +716,7 @@
                 <option value="5">В конфликтной ситуации я учитываю интересы всех сторон</option>
             </options>
         </item>
-        <item id="70" group="dialogue-assertive" timer="20" method="gradient">
+        <item id="71" group="dialogue-assertive" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я люблю участвовать в споре, чтобы увидеть ситуацию под другим углом</option>
@@ -714,7 +726,7 @@
                 <option value="5">Добиваясь своего, я никогда не ухудшаю ситуацию в целом</option>
             </options>
         </item>
-        <item id="71" group="dialogue-nonconformism" timer="20" method="gradient">
+        <item id="72" group="dialogue-nonconformism" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я люблю дискутировать с людьми: в спорах рождаются новые идеи</option>
@@ -724,17 +736,18 @@
                 <option value="5">Большинство не может задавить меня своим мнением</option>
             </options>
         </item>
-        <item id="72" group="feeling-social" timer="20" method="gradient">
+        <item id="73" group="feeling-social" timer="20" method="gradient">
             <name/>
             <options>
-                <option value="1">Я знаю на каких чувствах надо сыграть, чтобы добиться от человека нужного результата</option>
+                <option value="1">Я знаю на каких чувствах надо сыграть, чтобы добиться от человека нужного результата
+                </option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
                 <option value="5">Я могу предвидеть последствия действий, совершенных в отношении других людей</option>
             </options>
         </item>
-        <item id="73" group="feeling-assertive" timer="20" method="gradient">
+        <item id="74" group="feeling-assertive" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я хорошо чувствую психологическую уязвимость моего собеседника</option>
@@ -744,7 +757,7 @@
                 <option value="5">Я могу так победить в конфликте, что никто не будет в проигрыше</option>
             </options>
         </item>
-        <item id="74" group="feeling-nonconformism" timer="20" method="gradient">
+        <item id="75" group="feeling-nonconformism" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я хорошо понимаю чувства людей, которые объединены энтузиазмом</option>
@@ -754,7 +767,7 @@
                 <option value="5">Я критически отношусь к новым идеям, находящим энтузиазм у большинства людей</option>
             </options>
         </item>
-        <item id="75" group="social-assertive" timer="20" method="gradient">
+        <item id="76" group="social-assertive" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я умею мотивировать людей к лучшей работе или учёбе</option>
@@ -764,7 +777,7 @@
                 <option value="5">У меня получается выстраивать равноправные отношения</option>
             </options>
         </item>
-        <item id="76" group="social-nonconformism" timer="20" method="gradient">
+        <item id="77" group="social-nonconformism" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я сразу вижу, что мной хотят проманипулировать</option>
@@ -774,7 +787,7 @@
                 <option value="5">Я активно сопротивляюсь попыткам мною проманипулировать либо ухожу</option>
             </options>
         </item>
-        <item id="77" group="assertive-nonconformism" timer="20" method="gradient">
+        <item id="78" group="assertive-nonconformism" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я стремлюсь достигнуть компромисса, чтобы я и другие были довольны</option>
@@ -784,7 +797,7 @@
                 <option value="5">Я доверяю больше своему впечатлению, чем мнению большинства</option>
             </options>
         </item>
-        <item id="78" group="demonstrative-competing" timer="20" method="gradient">
+        <item id="79" group="demonstrative-competing" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я страдаю, если меня не замечают</option>
@@ -794,7 +807,7 @@
                 <option value="5">Я страдаю, если меня обгоняют</option>
             </options>
         </item>
-        <item id="79" group="demonstrative-encourager" timer="20" method="gradient">
+        <item id="80" group="demonstrative-encourager" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я не упускаю возможности быть на виду</option>
@@ -804,7 +817,7 @@
                 <option value="5">Я всегда найду слова поддержки тем, кому это нужно</option>
             </options>
         </item>
-        <item id="80" group="demonstrative-manager" timer="20" method="gradient">
+        <item id="81" group="demonstrative-manager" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я люблю выделяться на фоне других</option>
@@ -814,7 +827,7 @@
                 <option value="5">Я забочусь о том, чтобы в коллективе таланты других были использованы</option>
             </options>
         </item>
-        <item id="81" group="demonstrative-mentor" timer="20" method="gradient">
+        <item id="82" group="demonstrative-mentor" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я чувствую себя значимым человеком, когда я выступаю</option>
@@ -824,7 +837,7 @@
                 <option value="5">Я чувствую себя значимым, когда я обучаю</option>
             </options>
         </item>
-        <item id="82" group="demonstrative-opener" timer="20" method="gradient">
+        <item id="83" group="demonstrative-opener" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я хочу быть публичным человеком</option>
@@ -834,7 +847,7 @@
                 <option value="5">Я хочу показывать людям пути их развития</option>
             </options>
         </item>
-        <item id="83" group="demonstrative-harmonizer" timer="20" method="gradient">
+        <item id="84" group="demonstrative-harmonizer" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я всегда стремлюсь играть в группе яркую роль</option>
@@ -844,7 +857,7 @@
                 <option value="5">Я стремлюсь к тому, чтобы отношения в группе были доброжелательными</option>
             </options>
         </item>
-        <item id="84" group="competing-encourager" timer="20" method="gradient">
+        <item id="85" group="competing-encourager" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я всегда стремлюсь сделать работу лучше и быстрее других</option>
@@ -854,7 +867,7 @@
                 <option value="5">Я люблю вдохновлять других на успехи</option>
             </options>
         </item>
-        <item id="85" group="competing-manager" timer="20" method="gradient">
+        <item id="86" group="competing-manager" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Конкуренция меня побуждает к активным действиям</option>
@@ -864,7 +877,7 @@
                 <option value="5">Я умею создать в коллективе соревновательный дух</option>
             </options>
         </item>
-        <item id="86" group="competing-mentor" timer="20" method="gradient">
+        <item id="87" group="competing-mentor" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я опасаюсь делиться опытом</option>
@@ -874,17 +887,17 @@
                 <option value="5">Я люблю делиться опытом</option>
             </options>
         </item>
-        <item id="87" group="competing-opener" timer="20" method="gradient">
-        <name/>
-        <options>
-            <option value="1">Я стремлюсь раньше всех найти новые возможности</option>
-            <option value="2"/>
-            <option value="3"/>
-            <option value="4"/>
-            <option value="5">Я люблю показывать людям новые возможности</option>
-        </options>
-    </item>
-        <item id="88" group="competing-harmonizer" timer="20" method="gradient">
+        <item id="88" group="competing-opener" timer="20" method="gradient">
+            <name/>
+            <options>
+                <option value="1">Я стремлюсь раньше всех найти новые возможности</option>
+                <option value="2"/>
+                <option value="3"/>
+                <option value="4"/>
+                <option value="5">Я люблю показывать людям новые возможности</option>
+            </options>
+        </item>
+        <item id="89" group="competing-harmonizer" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я стремлюсь быть более успешным, чем мои коллеги и знакомые</option>
@@ -894,7 +907,7 @@
                 <option value="5">Я стремлюсь создавать в коллективе доброжелательные отношения</option>
             </options>
         </item>
-        <item id="89" group="encourager-manager" timer="20" method="gradient">
+        <item id="90" group="encourager-manager" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я поднимаю людям моральный дух, когда это нужно</option>
@@ -904,7 +917,7 @@
                 <option value="5">Я чувствую потенциал людей и умею его использовать для дела</option>
             </options>
         </item>
-        <item id="90" group="encourager-mentor" timer="20" method="gradient">
+        <item id="91" group="encourager-mentor" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я создаю в коллективе атмосферу лёгкости и оптимизма</option>
@@ -914,17 +927,18 @@
                 <option value="5">Я стараюсь помогать новичкам влиться в рабочий процесс</option>
             </options>
         </item>
-        <item id="91" group="encourager-opener" timer="20" method="gradient">
+        <item id="92" group="encourager-opener" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я умею открыть глаза человеку на его потенциал</option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">Я вижу возможности, которые таит в себе завтрашний день, и рассказываю об этом людям</option>
+                <option value="5">Я вижу возможности, которые таит в себе завтрашний день, и рассказываю об этом людям
+                </option>
             </options>
         </item>
-        <item id="92" group="encourager-harmonizer" timer="20" method="gradient">
+        <item id="93" group="encourager-harmonizer" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я противлюсь застою в коллективе и привношу новые идеи</option>
@@ -934,7 +948,7 @@
                 <option value="5">В коллективе я дипломат и миротворец</option>
             </options>
         </item>
-        <item id="93" group="manager-mentor" timer="20" method="gradient">
+        <item id="94" group="manager-mentor" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я понимаю кому какие задачи было бы интересно решать</option>
@@ -944,7 +958,7 @@
                 <option value="5">Я люблю объяснять интересно и на примерах</option>
             </options>
         </item>
-        <item id="94" group="manager-opener" timer="20" method="gradient">
+        <item id="95" group="manager-opener" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я вижу скрытые возможности людей</option>
@@ -954,7 +968,7 @@
                 <option value="5">Я вижу намечающиеся тренды, которые не видят другие</option>
             </options>
         </item>
-        <item id="95" group="manager-harmonizer" timer="20" method="gradient">
+        <item id="96" group="manager-harmonizer" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я экономно распоряжаюсь всеми ресурсами, которые мне даны</option>
@@ -964,7 +978,7 @@
                 <option value="5">Я всегда выстраиваю хорошие бесконфликтные отношения</option>
             </options>
         </item>
-        <item id="96" group="mentor-opener" timer="20" method="gradient">
+        <item id="97" group="mentor-opener" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я наслаждаюсь, когда наставляю человека на путь истинный</option>
@@ -974,7 +988,7 @@
                 <option value="5">Я ищу новые пути развития для себя и других</option>
             </options>
         </item>
-        <item id="97" group="mentor-harmonizer" timer="20" method="gradient">
+        <item id="98" group="mentor-harmonizer" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я люблю подвести человека к правильному решению, а не решить за него</option>
@@ -984,14 +998,15 @@
                 <option value="5">Я вижу нарождающийся конфликт и стараюсь примирить стороны</option>
             </options>
         </item>
-        <item id="98" group="opener-harmonizer" timer="20" method="gradient">
+        <item id="99" group="opener-harmonizer" timer="20" method="gradient">
             <name/>
             <options>
                 <option value="1">Я часто размышляю о будущем человечества и нахожу там много возможностей</option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">Я много сил прикладываю к созданию дружеской атмосферы среди коллег и знакомых</option>
+                <option value="5">Я много сил прикладываю к созданию дружеской атмосферы среди коллег и знакомых
+                </option>
             </options>
         </item>
     </items>
