@@ -62,7 +62,7 @@
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">Организовывая рабочий процесс я сосредоточен на возможных негативных последствиях
+                <option value="5">Организовывая рабочий процесс, я сосредоточен на возможных негативных последствиях
                 </option>
             </options>
         </item>
@@ -159,7 +159,7 @@
         <item id="16" group="flex-broad" timer="20" method="gradient">
             <name/>
             <options>
-                <option value="1">Я меняю своё устоявшееся мнение под влиянием новых знаний</option>
+                <option value="1">Я могу поменять моё устоявшееся мнение под влиянием новых знаний</option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
@@ -209,11 +209,11 @@
         <item id="21" group="curiosity-caution" timer="20" method="gradient">
             <name/>
             <options>
-                <option value="1">Мне интересно многое и я с удовольствием это узнаю</option>
+                <option value="1">Мне интересно многое, и я с удовольствием это узнаю</option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">Я чувствую, что знания являются составной частью успеха</option>
+                <option value="5">Я верю, что знания являются составной частью успеха</option>
             </options>
         </item>
         <item id="22" group="stress-decisive" timer="20" method="gradient">
@@ -373,13 +373,13 @@
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">Для меня важно выполнить работу во время</option>
+                <option value="5">Для меня важно выполнить работу вовремя</option>
             </options>
         </item>
         <item id="38" group="responsible-executive" timer="20" method="gradient">
             <name/>
             <options>
-                <option value="1">Я стремлюсь чтобы дело было сделано хорошо и в срок</option>
+                <option value="1">Я стремлюсь, чтобы дело было сделано хорошо и в срок</option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
@@ -399,11 +399,11 @@
         <item id="40" group="responsible-growth" timer="20" method="gradient">
             <name/>
             <options>
-                <option value="1">Даже трудное и непонятное задание я выполню потому что должен</option>
+                <option value="1">Даже трудное и непонятное задание я выполню, потому что должен</option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">Я специально берусь за трудные задания потому что это помогает мне расти</option>
+                <option value="5">Я специально берусь за трудные задания, потому что это помогает мне расти</option>
             </options>
         </item>
         <item id="41" group="responsible-reflection" timer="20" method="gradient">
@@ -413,7 +413,7 @@
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">Выполняя задачу я проверяю её качество на каждом этапе</option>
+                <option value="5">Выполняя задачу, я проверяю её качество на каждом этапе</option>
             </options>
         </item>
         <item id="42" group="responsible-schoolboy" timer="20" method="gradient">
@@ -433,7 +433,7 @@
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">Я очень стараюсь сдать работу хорошо, какая бы она ни была</option>
+                <option value="5">Я очень стараюсь сделать работу хорошо, какая бы она ни была</option>
             </options>
         </item>
         <item id="44" group="punctual-purpose" timer="20" method="gradient">
@@ -535,7 +535,7 @@
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">Что бы я ни делал я отдаю себе отчёт в своих чувствах и мыслях</option>
+                <option value="5">Что бы я ни делал, я отдаю себе отчёт в своих чувствах и мыслях</option>
             </options>
         </item>
         <item id="54" group="purpose-schoolboy" timer="20" method="gradient">
