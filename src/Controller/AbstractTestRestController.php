@@ -24,7 +24,7 @@ abstract class AbstractTestRestController extends AbstractRestController
     {
         $test = $this->tests->findOneById($id);
         if (!$test) {
-            self::createNotFoundException();
+            throw self::createNotFoundException();
         }
         return $test;
     }

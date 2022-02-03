@@ -14,8 +14,8 @@
     "test": {
       "js": [
         "/build/runtime.d94b3b43.js",
-        "/build/1.005d7bc1.js",
-        "/build/test.d3f4bb4a.js"
+        "/build/1.342ba93d.js",
+        "/build/test.9a792277.js"
       ],
       "css": [
         "/build/test.75c27957.css"

@@ -588,7 +588,7 @@
 
     </skills>
 
-    <clusters>
+    <clustersЛ>
         <int>
             <text>Интеллект</text>
             <skills>
@@ -653,5 +653,5 @@
                 <harmonizer/>
             </skills>
         </influence>
-    </clusters>
+    </clustersЛ>
 </config>

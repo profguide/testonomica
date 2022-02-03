@@ -17,6 +17,7 @@
      data-test="{{ testId }}"
      data-token="{{ token }}"
      data-init="auto"
+     data-show-result-after-load="{{ showResultAfterLoad }}"
      data-host="{{ host }}">
 </div>
 {% block javascripts %}
@@ -26,7 +27,7 @@
         testonomica.addEventListener('resize', function (e) {
             let rect = e[0].contentRect;
             let height = rect.height;
-            window.parent.postMessage({frameHeight: height}, '*');
+            window.parent.postMessage({name: 'frameHeight', frameHeight: height}, '*');
         });
     </script>
     <script src="https://widget.cloudpayments.ru/bundles/cloudpayments"></script>

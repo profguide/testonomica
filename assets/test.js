@@ -1,4 +1,6 @@
-import Testonomica from 'testonomica_api/src/Testonomica';
+import Testonomica from 'testonomica_api/src/index';
+import Config from 'testonomica_api/src/config';
+import {EVENT_FINISH} from 'testonomica_api/src/events';
 import 'testonomica_api/src/style.scss';
 
 const INIT_AUTO = 'auto';
@@ -13,7 +15,20 @@ const host = tag.getAttribute('data-host') ?? 'https://testonomica.com';
 const token = tag.getAttribute('data-token') ?? null;
 const init = tag.getAttribute('data-init') ?? null;
 
+// настройки теста
+const config = new Config({
+    showResultAfterLoad: tag.getAttribute('data-show-result-after-load') ?? true
+});
+
 window.testonomica = new Testonomica(testId, host, token);
+
+// получен результат в ходе прохождения теста
+window.testonomica.addEventListener(EVENT_FINISH, function (e) {
+    parent.postMessage({name: EVENT_FINISH, key: e.key}, '*');
+});
+
+parent.postMessage({name: 'status', status: window.testonomica.status(testId)});
+
 if (!init || init === INIT_AUTO) {
-    window.testonomica.createApp(tag);
+    window.testonomica.createApp(tag, config);
 }

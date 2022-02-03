@@ -18,11 +18,11 @@ use Symfony\Component\HttpKernel\Exception\PreconditionFailedHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Генерирует токен для доступа к услуге или токен на оплату услуги
- * Запрос должен идти скрытно.
- *
- * https://testonomica.com/partner/api/token/
  * @Route("/partner/api", name="partner.api.")
+ * https://testonomica.com/partner/api/token/
+ *
+ * Генерирует токен для доступа к услуге или токен на оплату услуги
+ * Запрос должен идти скрытно
  */
 class PartnerApiController extends AbstractController
 {
