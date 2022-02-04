@@ -27,7 +27,7 @@ window.testonomica.addEventListener(EVENT_FINISH, function (e) {
     parent.postMessage({name: EVENT_FINISH, key: e.key}, '*');
 });
 
-parent.postMessage({name: 'status', status: window.testonomica.status(testId)});
+parent.postMessage({name: 'load'}, '*');
 
 if (!init || init === INIT_AUTO) {
     window.testonomica.createApp(tag, config);
