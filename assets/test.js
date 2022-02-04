@@ -27,7 +27,7 @@ window.testonomica.addEventListener(EVENT_FINISH, function (e) {
     parent.postMessage({name: EVENT_FINISH, key: e.key}, '*');
 });
 window.testonomica.addEventListener(EVENT_LOADED, function (e) {
-    parent.postMessage({name: 'load'}, '*'); // todo EVENT_LOADED instead load at 1.0.5
+    parent.postMessage({name: EVENT_LOADED}, '*');
 });
 
 if (!init || init === INIT_AUTO) {
