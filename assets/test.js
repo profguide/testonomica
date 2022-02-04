@@ -1,6 +1,6 @@
 import Testonomica from 'testonomica_api/src/index';
 import Config from 'testonomica_api/src/config';
-import {EVENT_FINISH} from 'testonomica_api/src/events';
+import {EVENT_FINISH, EVENT_LOADED} from 'testonomica_api/src/events';
 import 'testonomica_api/src/style.scss';
 
 const INIT_AUTO = 'auto';
@@ -26,8 +26,9 @@ window.testonomica = new Testonomica(testId, host, token);
 window.testonomica.addEventListener(EVENT_FINISH, function (e) {
     parent.postMessage({name: EVENT_FINISH, key: e.key}, '*');
 });
-
-parent.postMessage({name: 'load'}, '*');
+window.testonomica.addEventListener(EVENT_LOADED, function (e) {
+    parent.postMessage({name: 'load'}, '*'); // todo EVENT_LOADED instead load at 1.0.5
+});
 
 if (!init || init === INIT_AUTO) {
     window.testonomica.createApp(tag, config);
