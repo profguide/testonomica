@@ -23,6 +23,7 @@ yarn-error.log
 ###< symfony/webpack-encore-bundle ###
 
 .idea
+.DS_Store
 
 ### my
 /public/images/thumbnails/
