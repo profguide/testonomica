@@ -40,7 +40,11 @@ class TestProgressRestController extends AbstractTestRestController implements A
         $test = $this->getTest($testId);
         $questionId = $this->getRequestParameter($request, 'q');
 //        $value = $this->getRequestParameter($request, 'v', false); // взято чтобы провалидировать, так что желательно сделать.
-        return $this->json($this->questionResponseData($test, $this->questions->getNextQuestion($test, $questionId)));
+        $question = $this->questions->getNextQuestion($test, $questionId);
+        if (!$question) {
+            throw new \LogicException('No more questions.');
+        }
+        return $this->json($this->questionResponseData($test, $question));
     }
 
     /**

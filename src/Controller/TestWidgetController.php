@@ -42,7 +42,7 @@ class TestWidgetController extends AbstractController implements HostAuthenticat
      */
     public function widget(Request $request, int $id): Response
     {
-        $test = $this->getTest($id);
+//        $test = $this->getTest($id);
 
         // показывать ли результат при загрузке страницы если результат имеется
         $showResultAfterLoad = self::boolParam($request, 'showResultAfterLoad', true);
@@ -54,8 +54,18 @@ class TestWidgetController extends AbstractController implements HostAuthenticat
             'testId' => $id,
             'host' => $host,
             'token' => $token,
+            'sid' => $this->sid($request),
             'showResultAfterLoad' => $showResultAfterLoad
         ]);
+    }
+
+    private function sid(Request $request): string
+    {
+        $sid = $request->get('sid');
+        if (!$sid) {
+            throw $this->createAccessDeniedException('Parameter sid is absent.');
+        }
+        return $sid;
     }
 
     /**
