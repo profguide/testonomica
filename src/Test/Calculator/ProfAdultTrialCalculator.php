@@ -10,7 +10,7 @@ class ProfAdultTrialCalculator extends AbstractProforientationCalculator
 {
     protected function getProfessionsFileName(): string
     {
-        return $this->kernel->getProjectDir() . "/xml/proforientationTeenProfessions.xml";
+        return $this->kernel->getProjectDir() . "/xml/proftestProfessions.xml";
     }
 
     public function calculate(): array
