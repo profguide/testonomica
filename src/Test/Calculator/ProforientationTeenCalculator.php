@@ -10,6 +10,6 @@ class ProforientationTeenCalculator extends AbstractProforientationCalculator
 {
     protected function getProfessionsFileName(): string
     {
-        return $this->kernel->getProjectDir() . "/xml/proftestProfessions.xml";
+        return $this->kernel->getProjectDir() . "/xml/proftest/professions.xml";
     }
 }

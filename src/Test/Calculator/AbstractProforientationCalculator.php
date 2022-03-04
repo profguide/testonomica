@@ -9,10 +9,10 @@ namespace App\Test\Calculator;
 
 use App\Test\AbstractCalculator;
 use App\Test\AnswersHolder;
+use App\Test\CrawlerUtil;
 use App\Test\Proforientation\Profession;
 use App\Test\Proforientation\Types;
 use App\Test\QuestionsHolder;
-use App\Test\CrawlerUtil;
 use App\Util\AnswersUtil;
 use DOMElement;
 use Symfony\Component\DomCrawler\Crawler;
@@ -309,6 +309,8 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
      */
     protected function typesDescriptions(array $typesGroups)
     {
+        new Types($this->kernel, $this->locale); // init static config
+
         $descriptions = ['interest' => [], 'skills' => []];
         foreach ($typesGroups as $typeName => $groups) {
             $name = Types::name($typeName);
