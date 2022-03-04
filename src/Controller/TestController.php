@@ -16,6 +16,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\SerializerInterface;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
 /**
  * @Route("/tests", name="tests.")
@@ -78,17 +81,22 @@ class TestController extends AbstractController
     /**
      * @Route("/result/{uuid}/", name="result")
      * @param string $uuid
+     * @param Request $request
      * @return Response
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
      */
-    public function result(string $uuid): Response
+    public function result(string $uuid, Request $request): Response
     {
         $result = $this->getResult($uuid);
         $test = $result->getTest();
+        $locale = $request->getLocale();
         $data = array_merge([
             'test' => $test,
             'uuid' => $result->getUuid(),
             'status' => TestStatus::finished()
-        ], $this->calculatorService->calculate($result));
+        ], $this->calculatorService->calculate($result, $locale));
 
         return $this->render('tests/result.html.twig', [
             'test' => $test,
@@ -105,13 +113,15 @@ class TestController extends AbstractController
      * @Route("/result-raw/{uuid}/", name="result_raw")
      * @param string $uuid
      * @param SerializerInterface $serializer
+     * @param Request $request
      * @return Response
      */
-    public function resultRaw(string $uuid, SerializerInterface $serializer)
+    public function resultRaw(string $uuid, SerializerInterface $serializer, Request $request)
     {
         $result = $this->getResult($uuid);
+        $locale = $request->getLocale();
         $response = new JsonResponse();
-        $response->setJson($serializer->serialize($this->calculatorService->calculate($result), 'json'));
+        $response->setJson($serializer->serialize($this->calculatorService->calculate($result, $locale), 'json'));
         $response->setEncodingOptions(JSON_UNESCAPED_UNICODE);
         return $response;
     }

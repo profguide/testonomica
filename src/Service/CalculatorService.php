@@ -44,15 +44,15 @@ class CalculatorService
         $this->kernel = $kernel;
     }
 
-    public function calculate(Result $result): array
+    public function calculate(Result $result, string $locale): array
     {
         $calculator = ResultUtil::isComplex($result) ?
-            $this->initComplexCalculator($result) :
-            $this->initSingleCalculator($result);
+            $this->initComplexCalculator($result, $locale) :
+            $this->initSingleCalculator($result, $locale);
         return $calculator->calculate();
     }
 
-    private function initComplexCalculator(Result $complexResult): CalculatorInterface
+    private function initComplexCalculator(Result $complexResult, string $locale): CalculatorInterface
     {
         $calculators = [];
         $jsonResults = json_decode($complexResult->getData(), true);
@@ -60,7 +60,7 @@ class CalculatorService
             $result = new Result();
             $result->setTest($this->loadTest($testId));
             $result->setData(json_encode($resultData));
-            $calculators[$testId] = $this->initSingleCalculator($result);
+            $calculators[$testId] = $this->initSingleCalculator($result, $locale);
         }
         /**@var AbstractComplexCalculator $calculatorName */
         $calculatorName = $this->calculatorName($complexResult);
@@ -71,14 +71,15 @@ class CalculatorService
         return new $calculatorName($calculators, $this->kernel);
     }
 
-    private function initSingleCalculator(Result $result): CalculatorInterface
+    private function initSingleCalculator(Result $result, string $locale): CalculatorInterface
     {
         /**@var AbstractCalculator $calculatorName */
         $calculatorName = $this->calculatorName($result);
         return new $calculatorName(
             new AnswersHolder($this->serializer->deserialize($result->getData())),
             new QuestionsHolder($this->sourceRepository->getAllQuestions($result->getTest())),
-            $this->kernel);
+            $this->kernel,
+            $locale);
     }
 
     private function calculatorName(Result $result): string

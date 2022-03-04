@@ -63,7 +63,9 @@ class PartnerApiTestController extends AbstractRestController
         $result->setData($request->get('progress'));
         $result->setTest($this->getTest((int)$id));
 
-        return $this->json($calculatorService->calculate($result));
+        $locale = $request->getLocale();
+
+        return $this->json($calculatorService->calculate($result, $locale));
     }
 
     protected function getTest(int $id): Test

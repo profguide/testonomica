@@ -80,7 +80,8 @@ class TestResultRestController extends AbstractRestController implements AccessT
     {
         $key = $this->getRequestParameter($request, 'key');
         $result = $this->resultService->findByUuid($key);
-        $data = $this->calculatorService->calculate($result);
+        $locale = $request->getLocale();
+        $data = $this->calculatorService->calculate($result, $locale);
         $test = $result->getTest();
         return $this->resultRenderer->render($test, $data);
     }

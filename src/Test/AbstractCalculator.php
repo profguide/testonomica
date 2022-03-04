@@ -17,13 +17,17 @@ abstract class AbstractCalculator implements CalculatorInterface
 
     protected KernelInterface $kernel;
 
+    protected string $locale;
+
     public function __construct(
         AnswersHolder $answersHolder,
         QuestionsHolder $questionsHolder,
-        KernelInterface $kernel)
+        KernelInterface $kernel,
+        string $locale = 'ru')
     {
         $this->answersHolder = $answersHolder;
         $this->questionsHolder = $questionsHolder;
         $this->kernel = $kernel;
+        $this->locale = $locale;
     }
 }

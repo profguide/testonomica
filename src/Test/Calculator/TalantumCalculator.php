@@ -5,13 +5,21 @@ declare(strict_types=1);
 namespace App\Test\Calculator;
 
 use App\Test\AbstractCalculator;
+use App\Test\AnswersHolder;
+use App\Test\QuestionsHolder;
 use Symfony\Component\DomCrawler\Crawler;
+use Symfony\Component\HttpKernel\KernelInterface;
 
 class TalantumCalculator extends AbstractCalculator
 {
     const NON = 0;
     const MIN = 1;
     const MAX = 2;
+
+    public function __construct(AnswersHolder $answersHolder, QuestionsHolder $questionsHolder, KernelInterface $kernel)
+    {
+        parent::__construct($answersHolder, $questionsHolder, $kernel);
+    }
 
     function calculate(): array
     {
@@ -77,6 +85,7 @@ class TalantumCalculator extends AbstractCalculator
 
             $result[$id] = [
                 'name' => $skills[$id]['name'],
+                'about' => $skills[$id]['about'],
                 'value' => $conf['value'], // debug
                 'max' => $max, // debug
                 'percentage' => round($value * 100 / $max)
@@ -113,7 +122,7 @@ class TalantumCalculator extends AbstractCalculator
     {
         $i = 1;
         foreach ($result as $k => $row) {
-            $result[$k]['text'] = $skills[$k]['report'];
+            $result[$k]['details'] = $skills[$k]['details'];
             $i++;
             if ($i > $max) {
                 break;
@@ -130,19 +139,60 @@ class TalantumCalculator extends AbstractCalculator
     {
         $map = [];
 
-        $config = $this->getConfig();
+        $config = $this->config();
         $skills = $config->children('skills')->children();
         $skills->each(function (Crawler $skill) use (&$map) {
+
             $map[$skill->nodeName()] = [
-                'name' => $skill->children('text')->text(),
-                'report' => $skill->children('report')->text()
+                'name' => $this->locale($skill->children('name')),
+                'about' => $this->skillText($skill, 'about'),
+                'details' => [
+                    'unique' => $this->skillText($skill, 'unique'),
+                    'success' => $this->skillText($skill, 'success'),
+                    'warnings' => $this->skillText($skill, 'warnings'),
+                    'maximize' => $this->skillText($skill, 'maximize'),
+                ],
             ];
         });
 
         return $map;
     }
 
-    private function getConfig(): Crawler
+    /**
+     * Структура всегда такая:
+     * label:ru|en
+     * text:ru|en
+     *
+     * @param Crawler $crawler
+     * @param string $name
+     * @return array
+     */
+    private function skillText(Crawler $crawler, string $name): array
+    {
+        $block = $crawler->children($name);
+        $label = $this->locale($block->children('label'));
+        $text = $this->locale($block->children('text')); // todo use <p> as array
+
+        return [
+            'label' => $label,
+            'text' => $text,
+        ];
+    }
+
+    private function locale(Crawler $crawler): string
+    {
+        if ($crawler->count() == 0) {
+            return 'NO_TEXT'; // для тестирования. пустого текста не будет (может написать тест валидатор xml?)
+        }
+        $content = $crawler->children($this->locale);
+        if ($content->count() == 0) {
+            return 'NO_TEXT'; // для тестирования. пустого текста не будет (может написать тест валидатор xml?)
+        }
+
+        return $content->text();
+    }
+
+    private function config(): Crawler
     {
         if (empty(self::$configXmlCrawler)) {
             $filename = $this->kernel->getProjectDir() . "/xml/talantum/config.xml";

@@ -8,7 +8,10 @@
         <item id="1" group="optimizer-creative" timer="20" method="gradient" enabledBack="false">
             <name/>
             <options>
-                <option value="1">Я всегда выполняю работу быстро и с минимальными затратами сил</option>
+                <option value="1">
+                    <ru>Я всегда выполняю работу быстро и с минимальными затратами сил</ru>
+                    <en>...EXAMPLE: I always get the job done quickly and with minimal effort...</en>
+                </option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
