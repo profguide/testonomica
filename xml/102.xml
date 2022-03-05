@@ -2,10 +2,19 @@
 <quiz>
     <items>
         <item id="1">
-            <name>Вы бы предпочли:</name>
+            <name>
+                <ru>Вы бы предпочли:</ru>
+                <en>You'd like to do:</en>
+            </name>
             <options>
-                <option value="nature">Ухаживать за животными</option>
-                <option value="technic">Обслуживать машины, приборы</option>
+                <option value="nature">
+                    <ru>Ухаживать за животными</ru>
+                    <en>Take care of animals</en>
+                </option>
+                <option value="technic">
+                    <ru>Обслуживать машины, приборы</ru>
+                    <en>Servicing machines and appliances</en>
+                </option>
             </options>
         </item>
         <item id="2">
@@ -56,7 +65,8 @@
             </name>
             <options>
                 <option value="artist">Копировать рисунки, изображения, настраивать музыкальные инструменты</option>
-                <option value="technic">Управлять каким-либо грузовым, подъемным транспортным средством (подъемным краном, трактором, тепловозом и др.)
+                <option value="technic">Управлять каким-либо грузовым, подъемным транспортным средством (подъемным
+                    краном, трактором, тепловозом и др.)
                 </option>
             </options>
         </item>
@@ -93,7 +103,8 @@
             </name>
             <options>
                 <option value="nature">Выводить новые сорта растений</option>
-                <option value="technic">Конструировать, проектировать новые виды промышленных изделий (машины, одежду, дома, продукты питания)
+                <option value="technic">Конструировать, проектировать новые виды промышленных изделий (машины, одежду,
+                    дома, продукты питания)
                 </option>
             </options>
         </item>
@@ -159,7 +170,8 @@
             <name>Вы бы предпочли:
             </name>
             <options>
-                <option value="human">Организовывать культпоходы сверстников или младших товарищей в театры, музеи, на экскурсии, в туристические походы и т.п
+                <option value="human">Организовывать культпоходы сверстников или младших товарищей в театры, музеи, на
+                    экскурсии, в туристические походы и т.п
                 </option>
                 <option value="artist">Играть на сцене, принимать участие в концертах</option>
             </options>

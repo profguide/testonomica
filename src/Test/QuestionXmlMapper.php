@@ -4,6 +4,7 @@ namespace App\Test;
 
 use App\Entity\Question;
 use App\Entity\QuestionItem;
+use App\i18\Locale;
 use DOMElement;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -13,7 +14,7 @@ use Symfony\Component\DomCrawler\Crawler;
  */
 class QuestionXmlMapper
 {
-    public static function map(DOMElement $node): Question
+    public static function map(DOMElement $node, Locale $locale): Question
     {
         $crawler = new Crawler($node);
         $question = new Question();
@@ -52,7 +53,11 @@ class QuestionXmlMapper
         if ($nameNode->count() == 0) {
             throw new \DomainException('Question has to have node "name".');
         }
-        $question->setName($nameNode->text());
+        if ($nameNode->children()->count() == 0) {
+            $question->setName($nameNode->text());
+        } else {
+            $question->setName($nameNode->children($locale->value())->text());
+        }
 
         if (($text = $crawler->filterXPath('descendant-or-self::text'))->count() > 0) {
             $question->setText($text->text());
@@ -73,10 +78,17 @@ class QuestionXmlMapper
         if (($options = $crawler->filterXPath('descendant-or-self::options'))->count() > 0) {
             /**@var DOMElement $option */
             foreach ($options->children() as $option) {
+                $optionCrawler = new Crawler($option);
+                $optionLangTexts = $optionCrawler->children();
+                if ($optionLangTexts->count() == 0) {
+                    $optionText = $option->textContent;
+                } else {
+                    $optionText = $optionCrawler->children($locale->value())->text();
+                }
                 $question->addItem(
                     QuestionItem::createMinimal(
                         $option->getAttribute('value'),
-                        $option->textContent,
+                        $optionText,
                         $option->getAttribute('img'),
                         $option->getAttribute('correct') === "true"));
             }

@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Question;
 use App\Entity\Test;
+use App\i18\Locale;
 use App\Test\QuestionXmlMapper;
 use App\Test\TestItemNotFoundException;
 use DOMElement;
@@ -14,19 +15,22 @@ class XmlSourceRepository implements SourceRepositoryInterface
 {
     private KernelInterface $kernel;
 
+    private Locale $locale;
+
     // for request cache
     private static array $xml = [];
 
-    public function __construct(KernelInterface $kernel)
+    public function __construct(KernelInterface $kernel, Locale $locale)
     {
         $this->kernel = $kernel;
+        $this->locale = $locale;
     }
 
     public function getQuestion(Test $test, $id): Question
     {
         $items = $this->getItems($test);
         $position = $this->getItemPosition($items, $id);
-        return QuestionXmlMapper::map($items->getNode($position));
+        return QuestionXmlMapper::map($items->getNode($position), $this->locale);
     }
 
     public function getNextQuestion(Test $test, $id): ?Question
@@ -35,7 +39,7 @@ class XmlSourceRepository implements SourceRepositoryInterface
         $nextPosition = $this->getItemPosition($items, $id) + 1;
         /**@var DOMElement $nextItem */
         if (($nextItem = $items->getNode($nextPosition))) {
-            return QuestionXmlMapper::map($nextItem);
+            return QuestionXmlMapper::map($nextItem, $this->locale);
         }
         return null;
     }
@@ -46,7 +50,7 @@ class XmlSourceRepository implements SourceRepositoryInterface
         $prevPosition = $this->getItemPosition($items, $id) - 1;
         /**@var DOMElement $nextItem */
         if (($nextItem = $items->getNode($prevPosition))) {
-            return QuestionXmlMapper::map($nextItem);
+            return QuestionXmlMapper::map($nextItem, $this->locale);
         }
         return null;
     }
@@ -55,7 +59,7 @@ class XmlSourceRepository implements SourceRepositoryInterface
     {
         /**@var DOMElement $firstNode */
         $firstNode = $this->getItems($test)->getNode(0);
-        return QuestionXmlMapper::map($firstNode);
+        return QuestionXmlMapper::map($firstNode, $this->locale);
     }
 
     public function getLastQuestion(Test $test): Question
@@ -63,7 +67,7 @@ class XmlSourceRepository implements SourceRepositoryInterface
         $nodes = $this->getItems($test);
         /**@var DOMElement $lastNode */
         $lastNode = $nodes->getNode($nodes->count() - 1);
-        return QuestionXmlMapper::map($lastNode);
+        return QuestionXmlMapper::map($lastNode, $this->locale);
     }
 
     public function getQuestionNumber(Test $test, $id): int
@@ -76,7 +80,7 @@ class XmlSourceRepository implements SourceRepositoryInterface
         $questions = [];
         $nodes = $this->getItems($test);
         foreach ($nodes as $node) {
-            $question = QuestionXmlMapper::map($node);
+            $question = QuestionXmlMapper::map($node, $this->locale);
             $questions[$question->getId()] = $question;
         }
         return $questions;

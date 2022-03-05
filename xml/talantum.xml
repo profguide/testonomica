@@ -10,12 +10,15 @@
             <options>
                 <option value="1">
                     <ru>Я всегда выполняю работу быстро и с минимальными затратами сил</ru>
-                    <en>...EXAMPLE: I always get the job done quickly and with minimal effort...</en>
+                    <en>... English option 1</en>
                 </option>
                 <option value="2"/>
                 <option value="3"/>
                 <option value="4"/>
-                <option value="5">У меня получается привнести в рабочий процесс что-то совсем новое</option>
+                <option value="5">
+                    <ru>У меня получается привнести в рабочий процесс что-то совсем новое</ru>
+                    <en>... English option 2</en>
+                </option>
             </options>
         </item>
         <item id="2" group="optimizer-analyst" timer="20" method="gradient" enabledBack="false">
