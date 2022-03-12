@@ -839,12 +839,12 @@ todo подумать:
                 </ru><en>Clinical psychologist specialize in psychological diagnosis, counseling, and various types of psychotherapy, examine mental phenomena and disorders through the prism of their relationship to various diseases.</en></text>
             </kind>
             <kind>
-                <name><ru>Психолог-консультант</ru><en>Psychologist-consultant </en></name>
+                <name><ru>Психолог-консультант</ru><en>Consulting psychologist</en></name>
                 <pic>https://www.profguide.io/images/article/a/7/9rixAEUn_O.jpg</pic>
                 <link>https://www.profguide.io/professions/psychologist.html</link>
                 <text><ru>
 
-                </ru><en></en></text>
+                </ru><en>A consulting psychologist shall be defined as a psychologist who provides specialized technical assistance to individuals or organizations in regard to the psychological aspects of their work. Such assistance is advisory in nature and the consultant has no direct responsibility for its acceptance.</en></text>
             </kind>
             <kind>
                 <name><ru>Зоопсихолог</ru><en>Zoopsychologist</en></name>
@@ -1294,7 +1294,7 @@ todo подумать:
         </description>
     </profession>
     <profession>
-        <name><ru>Физик-теоретик</ru><en></en></name>
+        <name><ru>Физик-теоретик</ru><en>Theoretical physicists</en></name>
         <combs>
             <comb comb="tech,math"/>
         </combs>
@@ -1695,23 +1695,23 @@ todo подумать:
                     Устанавливает, монтирует и ремонтирует сантехнику. Хорошие заработки, высокая востребованность.
                     Обучают в
                     колледжах, поступление без экзаменов, есть курсы.
-                </ru><en></en></text>
+                </ru><en>A plumber is a person who specializes in installing and maintaining systems used for potable (drinking) water, and for sewage and drainage in plumbing systems.</en></text>
             </kind>
         </description>
     </profession>
     <profession not="it,human,natural,math">
-        <name><ru>Кузнец</ru><en></en></name>
+        <name><ru>Кузнец</ru><en>Blacksmith</en></name>
         <combs>
             <comb comb="tech,craft"/>
         </combs>
         <description>
             <kind>
-                <name><ru>Кузнец</ru><en></en></name>
+                <name><ru>Кузнец</ru><en>Blacksmith</en></name>
                 <pic>https://www.profguide.io/images/article/a/8/YJL8-JlXl9.jpg</pic>
                 <link>https://www.profguide.io/professions/Kuznec.html</link>
                 <text><ru>
                     Кузнец – мастер по обработке металла ковкой. Обучают в колледжах, куда поступают без экзаменов
-                </ru><en></en></text>
+                </ru><en>A blacksmith is a metalsmith who creates objects primarily from wrought iron or steel, but sometimes from other metals, by forging the metal, using tools to hammer, bend, and cut. Blacksmiths produce objects such as gates, grilles, railings, light fixtures, furniture, sculpture, tools, agricultural implements, decorative and religious items, cooking utensils, and weapons.</en></text>
             </kind>
         </description>
     </profession>
@@ -2454,7 +2454,7 @@ todo подумать:
                     тестирование, код специальности: 20.02.02) и в Академии гражданской защиты МЧС (коды специальности:
                     20.03.01, 20.05.01). При поступлении сдают профильную математику,
                     физику и русский язык.
-                </ru><en></en></text>
+                </ru><en>EMERCOM rescuers rescue victims in extreme situations, work for the Ministry of Emergency Situations.</en></text>
             </kind>
         </description>
     </profession>
