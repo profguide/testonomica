@@ -3,1032 +3,2431 @@
     <items>
         <!-- Тест Туника на инициатора/креатора (воображение, любознательность) -->
         <item id="1" group="creator">
-            <name><ru>Лучше я буду делать всё привычным мне способом, чем искать новые способы.</ru><en>I'd rather do everything like I usually do than invent something new.</en></name>
+            <name>
+                <ru>Лучше я буду делать всё привычным мне способом, чем искать новые способы.</ru>
+                <en>I'd rather do everything like I usually do than invent something new.</en>
+            </name>
             <options>
-                <option value="3"><ru>Верно</ru><en>True</en></option>
-                <option value="2"><ru>Отчасти верно</ru><en>Partially true</en></option>
-                <option value="0"><ru>Нет</ru><en>No</en></option>
-                <option value="1"><ru>Не знаю</ru><en>Don't know</en></option>
+                <option value="3">
+                    <ru>Верно</ru>
+                    <en>True</en>
+                </option>
+                <option value="2">
+                    <ru>Отчасти верно</ru>
+                    <en>Partially true</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Не знаю</ru>
+                    <en>Don't know</en>
+                </option>
             </options>
         </item>
         <item id="2" group="creator">
-            <name><ru>Мне нравится обсуждать мои идеи с друзьями</ru><en>I like discussing ideas with my friends.</en></name>
+            <name>
+                <ru>Мне нравится обсуждать мои идеи с друзьями</ru>
+                <en>I like discussing ideas with my friends.</en>
+            </name>
             <options>
-                <option value="3"><ru>Верно</ru><en>True</en></option>
-                <option value="2"><ru>Отчасти верно</ru><en>Partially true</en></option>
-                <option value="0"><ru>Нет</ru><en>No</en></option>
-                <option value="1"><ru>Не знаю</ru><en>Don't know</en></option>
+                <option value="3">
+                    <ru>Верно</ru>
+                    <en>True</en>
+                </option>
+                <option value="2">
+                    <ru>Отчасти верно</ru>
+                    <en>Partially true</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Не знаю</ru>
+                    <en>Don't know</en>
+                </option>
             </options>
         </item>
         <item id="3" group="creator">
-            <name><ru>Я выбираю друзей, которые всегда делают все привычным способом.</ru><en>I try to choose friends among people who do everything in a usual way.</en></name>
+            <name>
+                <ru>Я выбираю друзей, которые всегда делают все привычным способом.</ru>
+                <en>I try to choose friends among people who do everything in a usual way.</en>
+            </name>
             <options>
-                <option value="3"><ru>Верно</ru><en>True</en></option>
-                <option value="2"><ru>Отчасти верно</ru><en>Partially true</en></option>
-                <option value="0"><ru>Нет</ru><en>No</en></option>
-                <option value="1"><ru>Не знаю</ru><en>Don't know</en></option>
+                <option value="3">
+                    <ru>Верно</ru>
+                    <en>True</en>
+                </option>
+                <option value="2">
+                    <ru>Отчасти верно</ru>
+                    <en>Partially true</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Не знаю</ru>
+                    <en>Don't know</en>
+                </option>
             </options>
         </item>
         <item id="4" group="creator">
-            <name><ru>Мне нравится решать даже такую проблему, которая не имеет правильного ответа.</ru><en>I like solving problems, even if they don't have a correct answer</en></name>
+            <name>
+                <ru>Мне нравится решать даже такую проблему, которая не имеет правильного ответа.</ru>
+                <en>I like solving problems, even if they don't have a correct answer</en>
+            </name>
             <options>
-                <option value="3"><ru>Верно</ru><en>True</en></option>
-                <option value="2"><ru>Отчасти верно</ru><en>Partially true</en></option>
-                <option value="0"><ru>Нет</ru><en>No</en></option>
-                <option value="1"><ru>Не знаю</ru><en>Don't know</en></option>
+                <option value="3">
+                    <ru>Верно</ru>
+                    <en>True</en>
+                </option>
+                <option value="2">
+                    <ru>Отчасти верно</ru>
+                    <en>Partially true</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Не знаю</ru>
+                    <en>Don't know</en>
+                </option>
             </options>
         </item>
         <item id="5" group="creator">
-            <name><ru>Существуют вещи, с которыми мне хотелось бы поэкспериментировать.</ru><en>There are things I'd like to experiment with.</en></name>
+            <name>
+                <ru>Существуют вещи, с которыми мне хотелось бы поэкспериментировать.</ru>
+                <en>There are things I'd like to experiment with.</en>
+            </name>
             <options>
-                <option value="3"><ru>Верно</ru><en>True</en></option>
-                <option value="2"><ru>Отчасти верно</ru><en>Partially true</en></option>
-                <option value="0"><ru>Нет</ru><en>No</en></option>
-                <option value="1"><ru>Не знаю</ru><en>Don't know</en></option>
+                <option value="3">
+                    <ru>Верно</ru>
+                    <en>True</en>
+                </option>
+                <option value="2">
+                    <ru>Отчасти верно</ru>
+                    <en>Partially true</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Не знаю</ru>
+                    <en>Don't know</en>
+                </option>
             </options>
         </item>
         <item id="6" group="creator">
-            <name><ru>Если я однажды нашел ответ на вопрос, я буду придерживаться его, а не искать другие ответы.</ru><en>Once I've found a solution to a problem, I'll stick to it rather than try and look for different solutions.</en></name>
+            <name>
+                <ru>Если я однажды нашел ответ на вопрос, я буду придерживаться его, а не искать другие ответы.</ru>
+                <en>Once I've found a solution to a problem, I'll stick to it rather than try and look for different
+                    solutions.
+                </en>
+            </name>
             <options>
-                <option value="3"><ru>Верно</ru><en>True</en></option>
-                <option value="2"><ru>Отчасти верно</ru><en>Partially true</en></option>
-                <option value="0"><ru>Нет</ru><en>No</en></option>
-                <option value="1"><ru>Не знаю</ru><en>Don't know</en></option>
+                <option value="3">
+                    <ru>Верно</ru>
+                    <en>True</en>
+                </option>
+                <option value="2">
+                    <ru>Отчасти верно</ru>
+                    <en>Partially true</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Не знаю</ru>
+                    <en>Don't know</en>
+                </option>
             </options>
         </item>
         <item id="7" group="creator">
-            <name><ru>Я люблю размышлять на темы "А что если..."?</ru><en>I like to ask myself "What if...?"</en></name>
+            <name>
+                <ru>Я люблю размышлять на темы "А что если..."?</ru>
+                <en>I like to ask myself "What if...?"</en>
+            </name>
             <options>
-                <option value="3"><ru>Верно</ru><en>True</en></option>
-                <option value="2"><ru>Отчасти верно</ru><en>Partially true</en></option>
-                <option value="0"><ru>Нет</ru><en>No</en></option>
-                <option value="1"><ru>Не знаю</ru><en>Don't know</en></option>
+                <option value="3">
+                    <ru>Верно</ru>
+                    <en>True</en>
+                </option>
+                <option value="2">
+                    <ru>Отчасти верно</ru>
+                    <en>Partially true</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Не знаю</ru>
+                    <en>Don't know</en>
+                </option>
             </options>
         </item>
         <item id="8" group="creator">
-            <name><ru>Я люблю выдумывать что-то новое, даже если это невозможно применить на практике.</ru><en>I like to invent new ideas, even if they are unfeasible.</en></name>
+            <name>
+                <ru>Я люблю выдумывать что-то новое, даже если это невозможно применить на практике.</ru>
+                <en>I like to invent new ideas, even if they are unfeasible.</en>
+            </name>
             <options>
-                <option value="3"><ru>Верно</ru><en>True</en></option>
-                <option value="2"><ru>Отчасти верно</ru><en>Partially true</en></option>
-                <option value="0"><ru>Нет</ru><en>No</en></option>
-                <option value="1"><ru>Не знаю</ru><en>Don't know</en></option>
+                <option value="3">
+                    <ru>Верно</ru>
+                    <en>True</en>
+                </option>
+                <option value="2">
+                    <ru>Отчасти верно</ru>
+                    <en>Partially true</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Не знаю</ru>
+                    <en>Don't know</en>
+                </option>
             </options>
         </item>
         <item id="9" group="creator">
-            <name><ru>Я люблю браться за новое, чтобы посмотреть, что из этого выйдет.</ru><en>I like to try something new, just to see what would come out of it.</en></name>
+            <name>
+                <ru>Я люблю браться за новое, чтобы посмотреть, что из этого выйдет.</ru>
+                <en>I like to try something new, just to see what would come out of it.</en>
+            </name>
             <options>
-                <option value="3"><ru>Верно</ru><en>True</en></option>
-                <option value="2"><ru>Отчасти верно</ru><en>Partially true</en></option>
-                <option value="0"><ru>Нет</ru><en>No</en></option>
-                <option value="1"><ru>Не знаю</ru><en>Don't know</en></option>
+                <option value="3">
+                    <ru>Верно</ru>
+                    <en>True</en>
+                </option>
+                <option value="2">
+                    <ru>Отчасти верно</ru>
+                    <en>Partially true</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Не знаю</ru>
+                    <en>Don't know</en>
+                </option>
             </options>
         </item>
         <item id="10" group="creator">
-            <name><ru>Мне нравится размышлять о чем-то интересном, о том, что еще никому не приходило в голову.</ru><en>I like to think about interesting things no one has ever imagined before.</en></name>
+            <name>
+                <ru>Мне нравится размышлять о чем-то интересном, о том, что еще никому не приходило в голову.</ru>
+                <en>I like to think about interesting things no one has ever imagined before.</en>
+            </name>
             <options>
-                <option value="3"><ru>Верно</ru><en>True</en></option>
-                <option value="2"><ru>Отчасти верно</ru><en>Partially true</en></option>
-                <option value="0"><ru>Нет</ru><en>No</en></option>
-                <option value="1"><ru>Не знаю</ru><en>Don't know</en></option>
+                <option value="3">
+                    <ru>Верно</ru>
+                    <en>True</en>
+                </option>
+                <option value="2">
+                    <ru>Отчасти верно</ru>
+                    <en>Partially true</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Не знаю</ru>
+                    <en>Don't know</en>
+                </option>
             </options>
         </item>
         <item id="11" group="creator">
-            <name><ru>Когда я вижу картину, на которой изображен кто-либо незнакомый мне, мне интересно узнать, кто это.
-            </ru><enWhen I see a picture of a person I don't know, I always try to find out who it is.></en></name>
+            <name>
+                <ru>Когда я вижу картину, на которой изображен кто-либо незнакомый мне, мне интересно узнать, кто это.
+                </ru>
+                <en>When I see a picture of a person I don't know, I always try to find out who it is.></en></name>
            <options>
                <option value="3"><ru>Верно</ru><en>True</en></option>
                <option value="2"><ru>Отчасти верно</ru><en>Partially true</en></option>
                <option value="0"><ru>Нет</ru><en>No</en></option>
-               <option value="1"><ru>Не знаю</ru><en>Don't know</en></option>
+               <option value="1"><ru>Не знаю</ru><en>Don't know
+            </en>
+        </option>
     </options>
 </item>
 <item id="12" group="creator">
-<name><ru>Я люблю задавать вопросы о таких вещах, о которых другие люди не задумываются.</ru><en>I like to ask questions about things other people don't bother about.</en></name>
+<name>
+    <ru>Я люблю задавать вопросы о таких вещах, о которых другие люди не задумываются.</ru>
+    <en>I like to ask questions about things other people don't bother about.</en>
+</name>
 <options>
-    <option value="3"><ru>Верно</ru><en>True</en></option>
-    <option value="2"><ru>Отчасти верно</ru><en>Partially true</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
-    <option value="1"><ru>Не знаю</ru><en>Don't know</en></option>
+    <option value="3">
+        <ru>Верно</ru>
+        <en>True</en>
+    </option>
+    <option value="2">
+        <ru>Отчасти верно</ru>
+        <en>Partially true</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
+    <option value="1">
+        <ru>Не знаю</ru>
+        <en>Don't know</en>
+    </option>
 </options>
 </item>
         <!-- Руководитель (тест кто вы лидер или исполнитель) -->
 <item id="50" group="leader">
-<name><ru>Мне нужен пинок или похвала, чтобы хорошо учиться или работать.</ru><en>To study or work well, I need a praise or a reproach.</en></name>
+<name>
+    <ru>Мне нужен пинок или похвала, чтобы хорошо учиться или работать.</ru>
+    <en>To study or work well, I need a praise or a reproach.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="51" group="leader">
-<name><ru>Нужно организовать дежурство в школе. Охотно ли ты возьмёшься за эту задачу?</ru><en>You have been asked to become a class monitor. Will you agree?</en></name>
+<name>
+    <ru>Нужно организовать дежурство в школе. Охотно ли ты возьмёшься за эту задачу?</ru>
+    <en>You have been asked to become a class monitor. Will you agree?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="52" group="leader">
-<name><ru>Если в коллективе обсуждают сложную проблему, интересуются ли твоим мнением?</ru><en>Do people want to hear your opinion when discussing a difficult problem in a team?</en></name>
+<name>
+    <ru>Если в коллективе обсуждают сложную проблему, интересуются ли твоим мнением?</ru>
+    <en>Do people want to hear your opinion when discussing a difficult problem in a team?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="53" group="leader">
-<name><ru>Если ты чувствуешь свою правоту, то твердо ли ты отстаиваешь своё мнение, даже если большинство думает
-    иначе?
-</ru><en>Do you always stick to your opinion if you think you're right, even when others disagree?</en></name>
+<name>
+    <ru>Если ты чувствуешь свою правоту, то твердо ли ты отстаиваешь своё мнение, даже если большинство думает
+        иначе?
+    </ru>
+    <en>Do you always stick to your opinion if you think you're right, even when others disagree?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="54" group="leader">
-<name><ru>Во мне буйствует ревность, когда кому-то другому поручили ответственное дело.</ru><en>I feel jealous when someone else is trusted with an important matter and not me.</en></name>
+<name>
+    <ru>Во мне буйствует ревность, когда кому-то другому поручили ответственное дело.</ru>
+    <en>I feel jealous when someone else is trusted with an important matter and not me.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="55" group="leader">
-<name><ru>Если у тебя появилась здравая идея, ты будешь настаивать на том, чтобы она была реализована.</ru><en>If you have a sound idea, will you insist on implementing it?</en></name>
+<name>
+    <ru>Если у тебя появилась здравая идея, ты будешь настаивать на том, чтобы она была реализована.</ru>
+    <en>If you have a sound idea, will you insist on implementing it?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="56" group="leader">
-<name><ru>Начинаешь ли ты беспокоиться и прикладывать усилия, когда твои дела стабильно хороши?</ru><en>Do you worry and take extra effort even when your situation is good and stable?</en></name>
+<name>
+    <ru>Начинаешь ли ты беспокоиться и прикладывать усилия, когда твои дела стабильно хороши?</ru>
+    <en>Do you worry and take extra effort even when your situation is good and stable?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="57" group="leader">
-<name><ru>Есть ли у тебя опыт управления командой в школе (ты был старостой, капитаном команды, ставил спектакли
-    и тд)?
-</ru><en>Have you had experience of being a manager at school (being a class monitor, leading a sports team, directing a school play, etc.)?</en></name>
+<name>
+    <ru>Есть ли у тебя опыт управления командой в школе (ты был старостой, капитаном команды, ставил спектакли
+        и тд)?
+    </ru>
+    <en>Have you had experience of being a manager at school (being a class monitor, leading a sports team, directing a
+        school play, etc.)?
+    </en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="58" group="leader">
-<name><ru>Ты часто анализируешь результаты своего труда, свои достижения, предъявляешь к себе требования.</ru><en>Do you often analyze your work and your achievements, demanding yourself to do more?</en></name>
+<name>
+    <ru>Ты часто анализируешь результаты своего труда, свои достижения, предъявляешь к себе требования.</ru>
+    <en>Do you often analyze your work and your achievements, demanding yourself to do more?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="59" group="leader">
-<name><ru>Я готов отвечать не только за себя, но и за вверенных мне людей?</ru><en>I am ready to be responsible not only for myself, but also for my subordinates.</en></name>
+<name>
+    <ru>Я готов отвечать не только за себя, но и за вверенных мне людей?</ru>
+    <en>I am ready to be responsible not only for myself, but also for my subordinates.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="60" group="leader">
-<name><ru>Моя тревога за ответственное дело чаще всего бывает так велика, что лучше от этого дела отказаться.
-</ru><en>I am often so anxious about an important business that I'd rather pass on it.</en></name>
+<name>
+    <ru>Моя тревога за ответственное дело чаще всего бывает так велика, что лучше от этого дела отказаться.
+    </ru>
+    <en>I am often so anxious about an important business that I'd rather pass on it.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="61" group="leader">
-<name><ru>Я уступчивый и склонный к компромиссу человек.</ru><en>I am an acquiescent and amenable person.</en></name>
+<name>
+    <ru>Я уступчивый и склонный к компромиссу человек.</ru>
+    <en>I am an acquiescent and amenable person.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="62" group="leader">
-<name><ru>Если на меня оказывают сильное давление, то я уступаю, даже если этот вопрос важен для меня.</ru><en>I easily give up under pressure, even if the matter is important to me.</en></name>
+<name>
+    <ru>Если на меня оказывают сильное давление, то я уступаю, даже если этот вопрос важен для меня.</ru>
+    <en>I easily give up under pressure, even if the matter is important to me.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
         <!--Тест Айзенка на интроверсию/экстраверсию (коммуникативность, в команде) -->
 <item id="100" group="communicator">
-<name><ru>Предпочитаете ли вы чтение книг встречам с людьми?</ru><en>Do you prefer reading books to meeting people?</en></name>
+<name>
+    <ru>Предпочитаете ли вы чтение книг встречам с людьми?</ru>
+    <en>Do you prefer reading books to meeting people?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="101" group="communicator">
-<name><ru>Любите ли вы часто бывать в компании?</ru><en>Do you enjoy being in a company?</en></name>
+<name>
+    <ru>Любите ли вы часто бывать в компании?</ru>
+    <en>Do you enjoy being in a company?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="102" group="communicator">
-<name><ru>Стараетесь ли вы ограничить круг своих знакомств небольшим числом самых близких людей?</ru><en>Are you trying to limit your social contacts to a small number of intimate friends?</en></name>
+<name>
+    <ru>Стараетесь ли вы ограничить круг своих знакомств небольшим числом самых близких людей?</ru>
+    <en>Are you trying to limit your social contacts to a small number of intimate friends?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="103" group="communicator">
-<name><ru>Как вы думаете, считают ли вас человеком весёлым и живым?</ru><en>Do you think others find you cheerful and lively?</en></name>
+<name>
+    <ru>Как вы думаете, считают ли вас человеком весёлым и живым?</ru>
+    <en>Do you think others find you cheerful and lively?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="104" group="communicator">
-<name><ru>Чувствуете ли вы себя неуютно, находясь в большой компании?</ru><en>Do you feel uncomfortable in a large company?</en></name>
+<name>
+    <ru>Чувствуете ли вы себя неуютно, находясь в большой компании?</ru>
+    <en>Do you feel uncomfortable in a large company?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="105" group="communicator">
-<name><ru>Если вы ищете ответ на вопрос, что вы обычно предпочитаете?</ru><en>What would you prefer when looking for an answer?</en></name>
+<name>
+    <ru>Если вы ищете ответ на вопрос, что вы обычно предпочитаете?</ru>
+    <en>What would you prefer when looking for an answer?</en>
+</name>
 <options>
-    <option value="1"><ru>Найти ответ в книге</ru><en>Look it up in a book</en></option>
-    <option value="0"><ru>Спросить у друзей</ru><en>Ask your friends</en></option>
+    <option value="1">
+        <ru>Найти ответ в книге</ru>
+        <en>Look it up in a book</en>
+    </option>
+    <option value="0">
+        <ru>Спросить у друзей</ru>
+        <en>Ask your friends</en>
+    </option>
 </options>
 </item>
 <item id="106" group="communicator">
-<name><ru>Нравится ли вам работа, требующая уединения?</ru><en>Do you like working alone?</en></name>
+<name>
+    <ru>Нравится ли вам работа, требующая уединения?</ru>
+    <en>Do you like working alone?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="107" group="communicator">
-<name><ru>Бывает ли вам неприятно находиться в компании, где все подшучивают друг над другом?</ru><en>Do you sometimes feel uneasy in a company where everyone is putting jokes on each other?</en></name>
+<name>
+    <ru>Бывает ли вам неприятно находиться в компании, где все подшучивают друг над другом?</ru>
+    <en>Do you sometimes feel uneasy in a company where everyone is putting jokes on each other?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="108" group="communicator">
-<name><ru>Верно ли, что вы так любите общение, что не упускаете любого удобного случая побеседовать с новым
-    человеком?
-</ru><en>Do you like interacting with people so much that you never miss an opportunity to talk to someone new?</en></name>
+<name>
+    <ru>Верно ли, что вы так любите общение, что не упускаете любого удобного случая побеседовать с новым
+        человеком?
+    </ru>
+    <en>Do you like interacting with people so much that you never miss an opportunity to talk to someone new?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="109" group="communicator">
-<name><ru>Огорчились бы вы, если бы не смогли долго видеться с друзьями?</ru><en>Would you be sad if you couldn't talk to your friends for a while?</en></name>
+<name>
+    <ru>Огорчились бы вы, если бы не смогли долго видеться с друзьями?</ru>
+    <en>Would you be sad if you couldn't talk to your friends for a while?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="110" group="communicator">
-<name><ru>Трудно ли вам получить настоящее удовольствие от мероприятий, в которых участвует много людей?</ru><en>Do you find it hard to enjoy mass gatherings?</en></name>
+<name>
+    <ru>Трудно ли вам получить настоящее удовольствие от мероприятий, в которых участвует много людей?</ru>
+    <en>Do you find it hard to enjoy mass gatherings?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="111" group="communicator">
-<name><ru>Сумели бы вы внести оживление в скучную компанию?</ru><en>Can you enliven a boring gathering?</en></name>
+<name>
+    <ru>Сумели бы вы внести оживление в скучную компанию?</ru>
+    <en>Can you enliven a boring gathering?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="112" group="communicator">
-<name><ru>Любите ли вы подшутить над другими?</ru><en>Do you like making jokes at other people's expense?</en></name>
+<name>
+    <ru>Любите ли вы подшутить над другими?</ru>
+    <en>Do you like making jokes at other people's expense?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="113" group="communicator">
-<name><ru>Нравится ли вам заводить новых друзей?</ru><en>Do you like making new friends?</en></name>
+<name>
+    <ru>Нравится ли вам заводить новых друзей?</ru>
+    <en>Do you like making new friends?</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
         <!-- Уровень притязаний (Гербачевский) -->
         <!-- Оценка своего потенциала -->
 <item id="151" group="pretension-potential">
-<name><ru>Я чувствую себя сильным человеком.</ru><en>I think I am a strong person.</en></name>
+<name>
+    <ru>Я чувствую себя сильным человеком.</ru>
+    <en>I think I am a strong person.</en>
+</name>
 <options>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
-    <option value="1"><ru>Скорее нет</ru><en>Mostly no</en></option>
-    <option value="2"><ru>Не уверен</ru><en>Not sure</en></option>
-    <option value="3"><ru>Скорее да</ru><en>Mostly yes</en></option>
-    <option value="4"><ru>Да</ru><en>Yes</en></option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
+    <option value="1">
+        <ru>Скорее нет</ru>
+        <en>Mostly no</en>
+    </option>
+    <option value="2">
+        <ru>Не уверен</ru>
+        <en>Not sure</en>
+    </option>
+    <option value="3">
+        <ru>Скорее да</ru>
+        <en>Mostly yes</en>
+    </option>
+    <option value="4">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
 </options>
 </item>
 <item id="152" group="pretension-potential">
-<name><ru>Я чувствую, что могу преодолеть все трудности на пути к цели.</ru><en>I feel I am capable of overcoming all difficulties on my way to my goal.</en></name>
+<name>
+    <ru>Я чувствую, что могу преодолеть все трудности на пути к цели.</ru>
+    <en>I feel I am capable of overcoming all difficulties on my way to my goal.</en>
+</name>
 <options>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
-    <option value="1"><ru>Скорее нет</ru><en>Mostly no</en></option>
-    <option value="2"><ru>Не уверен</ru><en>Not sure</en></option>
-    <option value="3"><ru>Скорее да</ru><en>Mostly yes</en></option>
-    <option value="4"><ru>Да</ru><en>Yes</en></option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
+    <option value="1">
+        <ru>Скорее нет</ru>
+        <en>Mostly no</en>
+    </option>
+    <option value="2">
+        <ru>Не уверен</ru>
+        <en>Not sure</en>
+    </option>
+    <option value="3">
+        <ru>Скорее да</ru>
+        <en>Mostly yes</en>
+    </option>
+    <option value="4">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
 </options>
 </item>
 <item id="153" group="pretension-potential">
-<name><ru>Когда я берусь за дело, обычно я чувствую, что у меня ничего не выйдет.</ru><en>When I start doing something, I usually think I'm going to fail.</en></name>
+<name>
+    <ru>Когда я берусь за дело, обычно я чувствую, что у меня ничего не выйдет.</ru>
+    <en>When I start doing something, I usually think I'm going to fail.</en>
+</name>
 <options>
-    <option value="4"><ru>Нет</ru><en></en></option>
-    <option value="3"><ru>Скорее нет</ru><en>Mostly no</en></option>
-    <option value="2"><ru>Не уверен</ru><en>Not sure</en></option>
-    <option value="1"><ru>Скорее да</ru><en>Mostly yes</en></option>
-    <option value="0"><ru>Да</ru><en>Yes</en></option>
+    <option value="4">
+        <ru>Нет</ru>
+        <en></en>
+    </option>
+    <option value="3">
+        <ru>Скорее нет</ru>
+        <en>Mostly no</en>
+    </option>
+    <option value="2">
+        <ru>Не уверен</ru>
+        <en>Not sure</en>
+    </option>
+    <option value="1">
+        <ru>Скорее да</ru>
+        <en>Mostly yes</en>
+    </option>
+    <option value="0">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
 </options>
 </item>
         <!-- Мотив избегания -->
 <item id="154" group="pretension-avoid">
-<name><ru>В школе я не стремлюсь стать отличником, я стремлюсь не стать троечником.</ru><en>At school, I don`t try to get all A's, but I try not to get C's.</en></name>
+<name>
+    <ru>В школе я не стремлюсь стать отличником, я стремлюсь не стать троечником.</ru>
+    <en>At school, I don`t try to get all A's, but I try not to get C's.</en>
+</name>
 <options>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
-    <option value="1"><ru>Скорее нет</ru><en>Mostly no</en></option>
-    <option value="2"><ru>Не уверен</ru><en>Not sure</en></option>
-    <option value="3"><ru>Скорее да</ru><en>Mostly yes</en></option>
-    <option value="4"><ru>Да</ru><en>Yes</en></option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
+    <option value="1">
+        <ru>Скорее нет</ru>
+        <en>Mostly no</en>
+    </option>
+    <option value="2">
+        <ru>Не уверен</ru>
+        <en>Not sure</en>
+    </option>
+    <option value="3">
+        <ru>Скорее да</ru>
+        <en>Mostly yes</en>
+    </option>
+    <option value="4">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
 </options>
 </item>
 <item id="155" group="pretension-avoid">
-<name><ru>Обычно я не стремлюсь к победе, я стремлюсь к избеганию неудач.</ru><en>Usually, I don't strive for victory, I try to avoid failure.</en></name>
+<name>
+    <ru>Обычно я не стремлюсь к победе, я стремлюсь к избеганию неудач.</ru>
+    <en>Usually, I don't strive for victory, I try to avoid failure.</en>
+</name>
 <options>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
-    <option value="1"><ru>Скорее нет</ru><en>Mostly no</en></option>
-    <option value="2"><ru>Не уверен</ru><en>Not sure</en></option>
-    <option value="3"><ru>Скорее да</ru><en>Mostly yes</en></option>
-    <option value="4"><ru>Да</ru><en>Yes</en></option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
+    <option value="1">
+        <ru>Скорее нет</ru>
+        <en>Mostly no</en>
+    </option>
+    <option value="2">
+        <ru>Не уверен</ru>
+        <en>Not sure</en>
+    </option>
+    <option value="3">
+        <ru>Скорее да</ru>
+        <en>Mostly yes</en>
+    </option>
+    <option value="4">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
 </options>
 </item>
         <!-- Состязательный мотив -->
 <item id="156" group="pretension-competition">
-<name><ru>Меня интересует, лучше или хуже меня сдали экзамены, выполнили задания мои одноклассники (коллеги).
-</ru><en>I always try to find whether my classmates have passed the exams (or my colleagues have done the job) better or worse than me.</en></name>
+<name>
+    <ru>Меня интересует, лучше или хуже меня сдали экзамены, выполнили задания мои одноклассники (коллеги).
+    </ru>
+    <en>I always try to find whether my classmates have passed the exams (or my colleagues have done the job) better or
+        worse than me.
+    </en>
+</name>
 <options>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
-    <option value="1"><ru>Скорее нет</ru><en>Mostly no</en></option>
-    <option value="2"><ru>Не уверен</ru><en>Not sure</en></option>
-    <option value="3"><ru>Скорее да</ru><en>Mostly yes</en></option>
-    <option value="4"><ru>Да</ru><en>Yes</en></option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
+    <option value="1">
+        <ru>Скорее нет</ru>
+        <en>Mostly no</en>
+    </option>
+    <option value="2">
+        <ru>Не уверен</ru>
+        <en>Not sure</en>
+    </option>
+    <option value="3">
+        <ru>Скорее да</ru>
+        <en>Mostly yes</en>
+    </option>
+    <option value="4">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
 </options>
 </item>
 <item id="157" group="pretension-competition">
-<name><ru>Как правило, я стремлюсь к тому, чтобы мои результаты были лучше результатов одноклассников
-    (коллег).
-</ru><en>Usually, I try to get better results than my classmates (or colleagues).</en></name>
+<name>
+    <ru>Как правило, я стремлюсь к тому, чтобы мои результаты были лучше результатов одноклассников
+        (коллег).
+    </ru>
+    <en>Usually, I try to get better results than my classmates (or colleagues).</en>
+</name>
 <options>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
-    <option value="1"><ru>Скорее нет</ru><en>Mostly no</en></option>
-    <option value="2"><ru>Не уверен</ru><en>Not sure</en></option>
-    <option value="3"><ru>Скорее да</ru><en>Mostly yes</en></option>
-    <option value="4"><ru>Да</ru><en>Yes</en></option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
+    <option value="1">
+        <ru>Скорее нет</ru>
+        <en>Mostly no</en>
+    </option>
+    <option value="2">
+        <ru>Не уверен</ru>
+        <en>Not sure</en>
+    </option>
+    <option value="3">
+        <ru>Скорее да</ru>
+        <en>Mostly yes</en>
+    </option>
+    <option value="4">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
 </options>
 </item>
         <!-- Инициативность -->
 <item id="158" group="pretension-initiative">
-<name><ru>Я сам ставлю себе цели.</ru><en>I set my own goals.</en></name>
+<name>
+    <ru>Я сам ставлю себе цели.</ru>
+    <en>I set my own goals.</en>
+</name>
 <options>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
-    <option value="1"><ru>Скорее нет</ru><en>Mostly no</en></option>
-    <option value="2"><ru>Не уверен</ru><en>Not sure</en></option>
-    <option value="3"><ru>Скорее да</ru><en>Mostly yes</en></option>
-    <option value="4"><ru>Да</ru><en>Yes</en></option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
+    <option value="1">
+        <ru>Скорее нет</ru>
+        <en>Mostly no</en>
+    </option>
+    <option value="2">
+        <ru>Не уверен</ru>
+        <en>Not sure</en>
+    </option>
+    <option value="3">
+        <ru>Скорее да</ru>
+        <en>Mostly yes</en>
+    </option>
+    <option value="4">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
 </options>
 </item>
 <item id="159" group="pretension-initiative">
-<name><ru>Я не люблю, когда мне цели навязывают.</ru><en>I don't like when goals are imposed on me.</en></name>
+<name>
+    <ru>Я не люблю, когда мне цели навязывают.</ru>
+    <en>I don't like when goals are imposed on me.</en>
+</name>
 <options>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
-    <option value="1"><ru>Скорее нет</ru><en>Mostly no</en></option>
-    <option value="2"><ru>Не уверен</ru><en>Not sure</en></option>
-    <option value="3"><ru>Скорее да</ru><en>Mostly yes</en></option>
-    <option value="4"><ru>Да</ru><en>Yes</en></option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
+    <option value="1">
+        <ru>Скорее нет</ru>
+        <en>Mostly no</en>
+    </option>
+    <option value="2">
+        <ru>Не уверен</ru>
+        <en>Not sure</en>
+    </option>
+    <option value="3">
+        <ru>Скорее да</ru>
+        <en>Mostly yes</en>
+    </option>
+    <option value="4">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
 </options>
 </item>
         <!-- Ожидаемый уровень результатов -->
 <item id="160" group="pretension-expect">
-<name><ru>Если мне нравится какое-то дело, то я уверен, что у меня всё получится.</ru><en>If I like doing something, I'm sure I'll succeed.</en></name>
+<name>
+    <ru>Если мне нравится какое-то дело, то я уверен, что у меня всё получится.</ru>
+    <en>If I like doing something, I'm sure I'll succeed.</en>
+</name>
 <options>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
-    <option value="1"><ru>Скорее нет</ru><en>Mostly no</en></option>
-    <option value="2"><ru>Не уверен</ru><en>Not sure</en></option>
-    <option value="3"><ru>Скорее да</ru><en>Mostly yes</en></option>
-    <option value="4"><ru>Да</ru><en>Yes</en></option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
+    <option value="1">
+        <ru>Скорее нет</ru>
+        <en>Mostly no</en>
+    </option>
+    <option value="2">
+        <ru>Не уверен</ru>
+        <en>Not sure</en>
+    </option>
+    <option value="3">
+        <ru>Скорее да</ru>
+        <en>Mostly yes</en>
+    </option>
+    <option value="4">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
 </options>
 </item>
 <item id="161" group="pretension-expect">
-<name><ru>Если я увлекаюсь каким-то занятием, то я уверен, что смогу добиться только средних результатов.</ru><en>If I'm into something, I'm sure that I'm going to achieve average results.</en></name>
+<name>
+    <ru>Если я увлекаюсь каким-то занятием, то я уверен, что смогу добиться только средних результатов.</ru>
+    <en>If I'm into something, I'm sure that I'm going to achieve average results.</en>
+</name>
 <options>
-    <option value="4"><ru>Нет</ru><en></en></option>
-    <option value="3"><ru>Скорее нет</ru><en>Mostly no</en></option>
-    <option value="2"><ru>Не уверен</ru><en>Not sure</en></option>
-    <option value="1"><ru>Скорее да</ru><en>Mostly yes</en></option>
-    <option value="0"><ru>Да</ru><en>Yes</en></option>
+    <option value="4">
+        <ru>Нет</ru>
+        <en></en>
+    </option>
+    <option value="3">
+        <ru>Скорее нет</ru>
+        <en>Mostly no</en>
+    </option>
+    <option value="2">
+        <ru>Не уверен</ru>
+        <en>Not sure</en>
+    </option>
+    <option value="1">
+        <ru>Скорее да</ru>
+        <en>Mostly yes</en>
+    </option>
+    <option value="0">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
 </options>
 </item>
         <!-- Волевое усилие -->
 <item id="162" group="pretension-effort">
-<name><ru>Обычно я прикладываю все свои силы, если для меня задание важно.</ru><en>If I find the task personally important, I try to do my best.</en></name>
+<name>
+    <ru>Обычно я прикладываю все свои силы, если для меня задание важно.</ru>
+    <en>If I find the task personally important, I try to do my best.</en>
+</name>
 <options>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
-    <option value="1"><ru>Скорее нет</ru><en>Mostly no</en></option>
-    <option value="2"><ru>Не уверен</ru><en>Not sure</en></option>
-    <option value="3"><ru>Скорее да</ru><en>Mostly yes</en></option>
-    <option value="4"><ru>Да</ru><en>Yes</en></option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
+    <option value="1">
+        <ru>Скорее нет</ru>
+        <en>Mostly no</en>
+    </option>
+    <option value="2">
+        <ru>Не уверен</ru>
+        <en>Not sure</en>
+    </option>
+    <option value="3">
+        <ru>Скорее да</ru>
+        <en>Mostly yes</en>
+    </option>
+    <option value="4">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
 </options>
 </item>
 <item id="163" group="pretension-effort">
-<name><ru>Если я понимаю зачем я это делаю, то я очень стараюсь.</ru><en>I do my best if I know why I'm doing it.</en></name>
+<name>
+    <ru>Если я понимаю зачем я это делаю, то я очень стараюсь.</ru>
+    <en>I do my best if I know why I'm doing it.</en>
+</name>
 <options>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
-    <option value="1"><ru>Скорее нет</ru><en>Mostly no</en></option>
-    <option value="2"><ru>Не уверен</ru><en>Not sure</en></option>
-    <option value="3"><ru>Скорее да</ru><en>Mostly yes</en></option>
-    <option value="4"><ru>Да</ru><en>Yes</en></option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
+    <option value="1">
+        <ru>Скорее нет</ru>
+        <en>Mostly no</en>
+    </option>
+    <option value="2">
+        <ru>Не уверен</ru>
+        <en>Not sure</en>
+    </option>
+    <option value="3">
+        <ru>Скорее да</ru>
+        <en>Mostly yes</en>
+    </option>
+    <option value="4">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
 </options>
 </item>
 <item id="164" group="pretension-effort">
-<name><ru>Даже когда задача важная, я работаю вполсилы</ru><en>Even if the work is important, I do it half-heartedly.</en></name>
+<name>
+    <ru>Даже когда задача важная, я работаю вполсилы</ru>
+    <en>Even if the work is important, I do it half-heartedly.</en>
+</name>
 <options>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
-    <option value="1"><ru>Скорее нет</ru><en>Mostly no</en></option>
-    <option value="2"><ru>Не уверен</ru><en>Not sure</en></option>
-    <option value="3"><ru>Скорее да</ru><en>Mostly yes</en></option>
-    <option value="4"><ru>Да</ru><en>Yes</en></option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
+    <option value="1">
+        <ru>Скорее нет</ru>
+        <en>Mostly no</en>
+    </option>
+    <option value="2">
+        <ru>Не уверен</ru>
+        <en>Not sure</en>
+    </option>
+    <option value="3">
+        <ru>Скорее да</ru>
+        <en>Mostly yes</en>
+    </option>
+    <option value="4">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
 </options>
 </item>
         <!-- Темперамент Белова -->
         <!-- Флегматик -->
 <item id="201" group="temp-fleg">
-<name><ru>Вы молчаливы и не любите попусту болтать</ru><en>You are not talkative and don't enjoy idle talk.</en></name>
+<name>
+    <ru>Вы молчаливы и не любите попусту болтать</ru>
+    <en>You are not talkative and don't enjoy idle talk.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="202" group="temp-fleg">
-<name><ru>Вы легко сдерживаете свои порывы</ru><en>You can easily restrain your impulses.</en></name>
+<name>
+    <ru>Вы легко сдерживаете свои порывы</ru>
+    <en>You can easily restrain your impulses.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="203" group="temp-fleg">
-<name><ru>Вы последовательны, обстоятельны в делах</ru><en>You are meticulous at work.</en></name>
+<name>
+    <ru>Вы последовательны, обстоятельны в делах</ru>
+    <en>You are meticulous at work.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="204" group="temp-fleg">
-<name><ru>Вы любите аккуратность во всем, порядок во всем</ru><en>You value neatness, order in everything.</en></name>
+<name>
+    <ru>Вы любите аккуратность во всем, порядок во всем</ru>
+    <en>You value neatness, order in everything.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="205" group="temp-fleg">
-<name><ru>Вы с трудом приспосабливаетесь к новой обстановке</ru><en>You find it hard to get used to a new environment.</en></name>
+<name>
+    <ru>Вы с трудом приспосабливаетесь к новой обстановке</ru>
+    <en>You find it hard to get used to a new environment.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="206" group="temp-fleg">
-<name><ru>Вы инертны, малоподвижны, вялы</ru><en>You are inert, slow, and sluggish.</en></name>
+<name>
+    <ru>Вы инертны, малоподвижны, вялы</ru>
+    <en>You are inert, slow, and sluggish.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
         <!-- Меланхолик-->
 <item id="207" group="temp-mel">
-<name><ru>Вы не верите в свои силы</ru><en>You don't believe in yourself.</en></name>
+<name>
+    <ru>Вы не верите в свои силы</ru>
+    <en>You don't believe in yourself.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="208" group="temp-mel">
-<name><ru>Вы стеснительны, застенчивы</ru><en>You are shy and diffident.</en></name>
+<name>
+    <ru>Вы стеснительны, застенчивы</ru>
+    <en>You are shy and diffident.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="209" group="temp-mel">
-<name><ru>Вы впечатлительны до слезливости</ru><en>You are so impressionable that can break into tears.</en></name>
+<name>
+    <ru>Вы впечатлительны до слезливости</ru>
+    <en>You are so impressionable that can break into tears.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="210" group="temp-mel">
-<name><ru>Вы склонны к подозрительности, мнительности</ru><en>You are suspicious and mistrustful.</en></name>
+<name>
+    <ru>Вы склонны к подозрительности, мнительности</ru>
+    <en>You are suspicious and mistrustful.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="211" group="temp-mel">
-<name><ru>Вы чрезвычайно восприимчивы к одобрению и порицанию</ru><en>You are extremely sensitive to both praise and reproof.</en></name>
+<name>
+    <ru>Вы чрезвычайно восприимчивы к одобрению и порицанию</ru>
+    <en>You are extremely sensitive to both praise and reproof.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="212" group="temp-mel">
-<name><ru>Вы малоактивны и робки</ru><en>You are passive and timid.</en></name>
+<name>
+    <ru>Вы малоактивны и робки</ru>
+    <en>You are passive and timid.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
         <!-- Холерик -->
 <item id="213" group="temp-hol">
-<name><ru>Вы невыдержанны, вспыльчивы</ru><en>You are short-tempered and irascible.</en></name>
+<name>
+    <ru>Вы невыдержанны, вспыльчивы</ru>
+    <en>You are short-tempered and irascible.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="214" group="temp-hol">
-<name><ru>Вы обладаете быстрой, страстной, сбивчивой речью</ru><en>Your speech is fast, passionate, and frenzied.</en></name>
+<name>
+    <ru>Вы обладаете быстрой, страстной, сбивчивой речью</ru>
+    <en>Your speech is fast, passionate, and frenzied.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="215" group="temp-hol">
-<name><ru>Обычно ваши движения резкие, порывистые</ru><en>Your movements are forceful and violent.</en></name>
+<name>
+    <ru>Обычно ваши движения резкие, порывистые</ru>
+    <en>Your movements are forceful and violent.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="216" group="temp-hol">
-<name><ru>Вы решительны и инициативны</ru><en>You are determined and active.</en></name>
+<name>
+    <ru>Вы решительны и инициативны</ru>
+    <en>You are determined and active.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="217" group="temp-hol">
-<name><ru>Вы резки и прямолинейны в отношениях с людьми</ru><en>You are straightforward with people.</en></name>
+<name>
+    <ru>Вы резки и прямолинейны в отношениях с людьми</ru>
+    <en>You are straightforward with people.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="218" group="temp-hol">
-<name><ru>Вы склонны к риску</ru><en>You are prone to take risks.</en></name>
+<name>
+    <ru>Вы склонны к риску</ru>
+    <en>You are prone to take risks.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
         <!-- Сангвиник -->
 <item id="219" group="temp-san">
-<name><ru>Вы энергичны и деловиты</ru><en>You are energetic and industrious.</en></name>
+<name>
+    <ru>Вы энергичны и деловиты</ru>
+    <en>You are energetic and industrious.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="220" group="temp-san">
-<name><ru>Вы выносливы и работоспособны</ru><en>You are tough and hard-working.</en></name>
+<name>
+    <ru>Вы выносливы и работоспособны</ru>
+    <en>You are tough and hard-working.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="221" group="temp-san">
-<name><ru>Вы сохраняете самообладание в неожиданной, сложной обстановке</ru><en>You can stay cool in unpredictable and complicated situations.</en></name>
+<name>
+    <ru>Вы сохраняете самообладание в неожиданной, сложной обстановке</ru>
+    <en>You can stay cool in unpredictable and complicated situations.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="222" group="temp-san">
-<name><ru>Вы легко переживаете неудачи и неприятности</ru><en>You quickly recover from failures and troubles.</en></name>
+<name>
+    <ru>Вы легко переживаете неудачи и неприятности</ru>
+    <en>You quickly recover from failures and troubles.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="223" group="temp-san">
-<name><ru>Вы веселы и жизнерадостны</ru><en>You are cheerful and buoyant</en></name>
+<name>
+    <ru>Вы веселы и жизнерадостны</ru>
+    <en>You are cheerful and buoyant</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="224" group="temp-san">
-<name><ru>Вы общительны и отзывчивы, не чувствуете скованности с новыми для вас людьми</ru><en>You are sociable and helpful and don't feel awkward with new people.</en></name>
+<name>
+    <ru>Вы общительны и отзывчивы, не чувствуете скованности с новыми для вас людьми</ru>
+    <en>You are sociable and helpful and don't feel awkward with new people.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
         <!-- Уверенность в себе, социальная смелость (Давыдова ЭХ, Давыдов АЮ) -->
 <item id="250" group="confidence">
-<name><ru>Вам всегда страшно выступать на собрании</ru><en>You are always frightened when you have to speak in public.</en></name>
+<name>
+    <ru>Вам всегда страшно выступать на собрании</ru>
+    <en>You are always frightened when you have to speak in public.</en>
+</name>
 <options>
-    <option value="1"><ru>Нет</ru><en>No</en></option>
-    <option value="0"><ru>Да</ru><en>Yes</en></option>
+    <option value="1">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
+    <option value="0">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
 </options>
 </item>
 <item id="251" group="confidence">
-<name><ru>Вы легко можете позвонить в незнакомое вам место и задать вопрос</ru><en>You can easily call an unknown number and ask a question.</en></name>
+<name>
+    <ru>Вы легко можете позвонить в незнакомое вам место и задать вопрос</ru>
+    <en>You can easily call an unknown number and ask a question.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="252" group="confidence">
-<name><ru>Вам сложно торговаться, если это нужно</ru><en>You find it difficult to haggle, even if you have to.</en></name>
+<name>
+    <ru>Вам сложно торговаться, если это нужно</ru>
+    <en>You find it difficult to haggle, even if you have to.</en>
+</name>
 <options>
-    <option value="1"><ru>Нет</ru><en>No</en></option>
-    <option value="0"><ru>Да</ru><en>Yes</en></option>
+    <option value="1">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
+    <option value="0">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
 </options>
 </item>
 <item id="253" group="confidence">
-<name><ru>Вы уверены, что можете сдать экзамены, если хорошо подготовитесь</ru><en>You are sure you can pass your exams if you study well.</en></name>
+<name>
+    <ru>Вы уверены, что можете сдать экзамены, если хорошо подготовитесь</ru>
+    <en>You are sure you can pass your exams if you study well.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="254" group="confidence">
-<name><ru>Вы легко говорите "нет" людям, если вы не согласны что-то делать</ru><en>It is easy for you to say "no" to people if you don't want to do what they ask you to do.</en></name>
+<name>
+    <ru>Вы легко говорите "нет" людям, если вы не согласны что-то делать</ru>
+    <en>It is easy for you to say "no" to people if you don't want to do what they ask you to do.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
         <!-- Эмпатия (сочувствие) Белов-->
 <item id="300" group="empathy">
-<name><ru>Вы легко можете войти в доверие к человеку, если потребуется</ru><en>You can easily earn someone's trust if necessary.</en></name>
+<name>
+    <ru>Вы легко можете войти в доверие к человеку, если потребуется</ru>
+    <en>You can easily earn someone's trust if necessary.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="301" group="empathy">
-<name><ru>Часто своими словами вы обижаете близких вам людей, не замечая этого</ru><en>You often hurt your close ones with your words, even if you don't mean to.</en></name>
+<name>
+    <ru>Часто своими словами вы обижаете близких вам людей, не замечая этого</ru>
+    <en>You often hurt your close ones with your words, even if you don't mean to.</en>
+</name>
 <options>
-    <option value="0"><ru>Да</ru><en>Yes</en></option>
-    <option value="1"><ru>Нет</ru><en>No</en></option>
+    <option value="0">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="1">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="302" group="empathy">
-<name><ru>Иногда близкие упрекают вас в чёрствости, в невнимании к ним</ru><en>Sometimes your friends criticize you for being unsympathetic.</en></name>
+<name>
+    <ru>Иногда близкие упрекают вас в чёрствости, в невнимании к ним</ru>
+    <en>Sometimes your friends criticize you for being unsympathetic.</en>
+</name>
 <options>
-    <option value="0"><ru>Да</ru><en>Yes</en></option>
-    <option value="1"><ru>Нет</ru><en>No</en></option>
+    <option value="0">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="1">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="303" group="empathy">
-<name><ru>Вам было бы трудно задушевно доверительно беседовать с замкнутым человеком</ru><en>You would find it hard to be intimate with a reserved person.</en></name>
+<name>
+    <ru>Вам было бы трудно задушевно доверительно беседовать с замкнутым человеком</ru>
+    <en>You would find it hard to be intimate with a reserved person.</en>
+</name>
 <options>
-    <option value="0"><ru>Да</ru><en>Yes</en></option>
-    <option value="1"><ru>Нет</ru><en>No</en></option>
+    <option value="0">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="1">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="304" group="empathy">
-<name><ru>Если окружающие проявляют признаки нервозности, вы обычно остаётесь спокойны</ru><en>You manage to stay calm even if people around you are nervous.</en></name>
+<name>
+    <ru>Если окружающие проявляют признаки нервозности, вы обычно остаётесь спокойны</ru>
+    <en>You manage to stay calm even if people around you are nervous.</en>
+</name>
 <options>
-    <option value="0"><ru>Да</ru><en>Yes</en></option>
-    <option value="1"><ru>Нет</ru><en>No</en></option>
+    <option value="0">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="1">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="305" group="empathy">
-<name><ru>Вы теряете душевное равновесие, если окружающие чем-то угнетены</ru><en>You feel down when people around you are oppressed.</en></name>
+<name>
+    <ru>Вы теряете душевное равновесие, если окружающие чем-то угнетены</ru>
+    <en>You feel down when people around you are oppressed.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="306" group="empathy">
-<name><ru>Вы редко принимаете близко к сердцу проблемы ваших друзей</ru><en>You don't usually take problems of your friends close to heart.</en></name>
+<name>
+    <ru>Вы редко принимаете близко к сердцу проблемы ваших друзей</ru>
+    <en>You don't usually take problems of your friends close to heart.</en>
+</name>
 <options>
-    <option value="0"><ru>Да</ru><en>Yes</en></option>
-    <option value="1"><ru>Нет</ru><en>No</en></option>
+    <option value="0">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="1">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="307" group="empathy">
-<name><ru>Чужой смех обычно заражает вас</ru><en>You are easily infected by laughter.</en></name>
+<name>
+    <ru>Чужой смех обычно заражает вас</ru>
+    <en>You are easily infected by laughter.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="308" group="empathy">
-<name><ru>Вы расстраиваетесь, если видите плачущего человека</ru><en>You also get upset if you see a person in tears.</en></name>
+<name>
+    <ru>Вы расстраиваетесь, если видите плачущего человека</ru>
+    <en>You also get upset if you see a person in tears.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="309" group="empathy">
-<name><ru>Вы больше верите доводам своего рассудка, чем интуиции</ru><en>You rely on reason rather than intuition.</en></name>
+<name>
+    <ru>Вы больше верите доводам своего рассудка, чем интуиции</ru>
+    <en>You rely on reason rather than intuition.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="310" group="empathy">
-<name><ru>Часто, действуя наугад, вы тем не менее находите правильный подход к человеку</ru><en>Even if you're acting at random, you manage to find the right approach to another person.</en></name>
+<name>
+    <ru>Часто, действуя наугад, вы тем не менее находите правильный подход к человеку</ru>
+    <en>Even if you're acting at random, you manage to find the right approach to another person.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="311" group="empathy">
-<name><ru>Вам проще подсознательно почувствовать суть человека, чем понять его, разложив его по полочкам</ru><en>You find it easier to feel a person than to understand them.</en></name>
+<name>
+    <ru>Вам проще подсознательно почувствовать суть человека, чем понять его, разложив его по полочкам</ru>
+    <en>You find it easier to feel a person than to understand them.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 <item id="312" group="empathy">
-<name><ru>Обычно вы понимаете людей без лишних слов</ru><en>You are able to understand people without words.</en></name>
+<name>
+    <ru>Обычно вы понимаете людей без лишних слов</ru>
+    <en>You are able to understand people without words.</en>
+</name>
 <options>
-    <option value="1"><ru>Да</ru><en>Yes</en></option>
-    <option value="0"><ru>Нет</ru><en>No</en></option>
+    <option value="1">
+        <ru>Да</ru>
+        <en>Yes</en>
+    </option>
+    <option value="0">
+        <ru>Нет</ru>
+        <en>No</en>
+    </option>
 </options>
 </item>
 
         <!-- Система ценностей -->
 <item id="350" group="system_values" method="RATING">
-<name><ru>Выберите в порядке значимости ценности, связанные с работой. Сначала самые значимые для Вас.</ru><en>Rank these work-related values according to their importance to you, starting with the most important ones:</en></name>
+<name>
+    <ru>Выберите в порядке значимости ценности, связанные с работой. Сначала самые значимые для Вас.</ru>
+    <en>Rank these work-related values according to their importance to you, starting with the most important ones:</en>
+</name>
 <options>
-    <option value="salary">Высокая зарплата</ru><en>High salary</en></option>
-<option value="big-company">Работа в крупной компании</ru><en>Working for a big company</en></option>
-<option value="prestige">Престижность</ru><en>Prestige</en></option>
-<option value="travel">Ездить по всему миру</ru><en>Traveling around the world</en></option>
-<option value="promotion">Профессиональный рост, развитие</ru><en>Professional and career development</en></option>
-<option value="self-employ">Работать на себя</ru><en>Working for yourself</en></option>
-<option value="people">Работать с людьми</ru><en>Working with people</en></option>
-<option value="work-alone">Работать в уединении</ru><en>Working alone</en></option>
-<option value="gov">Госслужба</ru><en>Working for the state</en></option>
-<option value="benefit">Приносить пользу</ru><en>Be useful</en></option>
-<option value="art">Творчество</ru><en>Be creative</en></option>
-<option value="indoor">Работа в помещении</ru><en>Working indoors</en></option>
-<option value="outdoor">Работа на природе, на улице</ru><en>Working outdoors</en></option>
-<option value="difference">Разнообразие действий</ru><en>Having variety</en></option>
-<option value="publicity">Публичность</ru><en>Publicity</en></option>
-<option value="safe">Безопасность</ru><en>Security</en></option>
-<option value="result">Когда у работы есть результат</ru><en>Seeing results</en></option>
-<option value="intel">Интеллектуальный труд</ru><en>Intellectual work</en></option>
-<option value="hands">Ручной труд, физическая активность</ru><en>Manual labor</en></option>
-<option value="free-time">Много свободного времени</ru><en>Lots of free time</en></option>
-<option value="high-society">Добиться высокого положения в обществе</ru><en>Having a high social standing</en></option>
-<option value="light-work">Чистая и лёгкая работа</ru><en>The work is clean and easy</en></option>
+    <option value="salary"><ru>Высокая зарплата</ru>
+    <en>High salary</en>
+</option>
+<option value="big-company"><ru>Работа в крупной компании</ru>
+<en>Working for a big company</en>
+</option>
+<option value="prestige"><ru>Престижность</ru><en>Prestige</en></option>
+<option value="travel"><ru>Ездить по всему миру</ru><en>Traveling around the world</en></option>
+<option value="promotion"><ru>Профессиональный рост, развитие</ru><en>Professional and career development</en></option>
+<option value="self-employ"><ru>Работать на себя</ru><en>Working for yourself</en></option>
+<option value="people"><ru>Работать с людьми</ru><en>Working with people</en></option>
+<option value="work-alone"><ru>Работать в уединении</ru><en>Working alone</en></option>
+<option value="gov"><ru>Госслужба</ru><en>Working for the state</en></option>
+<option value="benefit"><ru>Приносить пользу</ru><en>Be useful</en></option>
+<option value="art"><ru>Творчество</ru><en>Be creative</en></option>
+<option value="indoor"><ru>Работа в помещении</ru><en>Working indoors</en></option>
+<option value="outdoor"><ru>Работа на природе, на улице</ru><en>Working outdoors</en></option>
+<option value="difference"><ru>Разнообразие действий</ru><en>Having variety</en></option>
+<option value="publicity"><ru>Публичность</ru><en>Publicity</en></option>
+<option value="safe"><ru>Безопасность</ru><en>Security</en></option>
+<option value="result"><ru>Когда у работы есть результат</ru><en>Seeing results</en></option>
+<option value="intel"><ru>Интеллектуальный труд</ru><en>Intellectual work</en></option>
+<option value="hands"><ru>Ручной труд, физическая активность</ru><en>Manual labor</en></option>
+<option value="free-time"><ru>Много свободного времени</ru><en>Lots of free time</en></option>
+<option value="high-society"><ru>Добиться высокого положения в обществе</ru><en>Having a high social standing</en></option>
+<option value="light-work"><ru>Чистая и лёгкая работа</ru><en>The work is clean and easy</en></option>
         </options>
         </item>
 
         <!-- Предприниматель ли ты-->
         <!-- Тест Грецов и Азбель (свое дело или работа), взято кое-что -->
 <item id="400" group="business-freedom">
-<name><ru>Я хочу иметь свое собственное дело, а не работать на кого-то.</ru><en>I want to run my own business rather than work for someone</en></name>
+<name>
+    <ru>Я хочу иметь свое собственное дело, а не работать на кого-то.</ru>
+    <en>I want to run my own business rather than work for someone</en>
+</name>
 <options>
-    <option value="4"><ru>Согласен</ru><en>Strongly agree</en></option>
-    <option value="3"><ru>Скорее согласен</ru><en>Agree</en></option>
-    <option value="2"><ru>Трудно сказать</ru><en>Neutral</en></option>
-    <option value="1"><ru>Скорее не согласен</ru><en>Disagree</en></option>
-    <option value="0"><ru>Не согласен</ru><en>Strongly disagree</en></option>
+    <option value="4">
+        <ru>Согласен</ru>
+        <en>Strongly agree</en>
+    </option>
+    <option value="3">
+        <ru>Скорее согласен</ru>
+        <en>Agree</en>
+    </option>
+    <option value="2">
+        <ru>Трудно сказать</ru>
+        <en>Neutral</en>
+    </option>
+    <option value="1">
+        <ru>Скорее не согласен</ru>
+        <en>Disagree</en>
+    </option>
+    <option value="0">
+        <ru>Не согласен</ru>
+        <en>Strongly disagree</en>
+    </option>
 </options>
 </item>
 <item id="401" group="business-stable">
-<name><ru>Для меня в работе социальные гарантии (выплата больничных, отпускных, будущая пенсия) важнее
-    свободного графика.
-</ru><en>Social guarantees (sick leave, vacation, pension) are more important for me than a flexible schedule.</en></name>
+<name>
+    <ru>Для меня в работе социальные гарантии (выплата больничных, отпускных, будущая пенсия) важнее
+        свободного графика.
+    </ru>
+    <en>Social guarantees (sick leave, vacation, pension) are more important for me than a flexible schedule.</en>
+</name>
 <options>
-    <option value="0"><ru>Согласен</ru><en>Strongly agree</en></option>
-    <option value="1"><ru>Скорее согласен</ru><en>Agree</en></option>
-    <option value="2"><ru>Трудно сказать</ru><en>Neutral</en></option>
-    <option value="3"><ru>Скорее не согласен</ru><en>Disagree</en></option>
-    <option value="4"><ru>Не согласен</ru><en>Strongly disagree</en></option>
+    <option value="0">
+        <ru>Согласен</ru>
+        <en>Strongly agree</en>
+    </option>
+    <option value="1">
+        <ru>Скорее согласен</ru>
+        <en>Agree</en>
+    </option>
+    <option value="2">
+        <ru>Трудно сказать</ru>
+        <en>Neutral</en>
+    </option>
+    <option value="3">
+        <ru>Скорее не согласен</ru>
+        <en>Disagree</en>
+    </option>
+    <option value="4">
+        <ru>Не согласен</ru>
+        <en>Strongly disagree</en>
+    </option>
 </options>
 </item>
 <item id="402" group="business-responsibility">
-<name><ru>Мне комфортнее, когда у меня есть начальник, к которому можно обратиться, спросить совета, чем если бы
-    все зависело только от меня.
-</ru><en>I feel more comfortable having a supervisor to ask for advice than bearing all responsibility.</en></name>
+<name>
+    <ru>Мне комфортнее, когда у меня есть начальник, к которому можно обратиться, спросить совета, чем если бы
+        все зависело только от меня.
+    </ru>
+    <en>I feel more comfortable having a supervisor to ask for advice than bearing all responsibility.</en>
+</name>
 <options>
-    <option value="4"><ru>Согласен</ru><en>Strongly agree</en></option>
-    <option value="3"><ru>Скорее согласен</ru><en>Agree</en></option>
-    <option value="2"><ru>Трудно сказать</ru><en>Neutral</en></option>
-    <option value="1"><ru>Скорее не согласен</ru><en>Disagree</en></option>
-    <option value="0"><ru>Не согласен</ru><en>Strongly disagree</en></option>
+    <option value="4">
+        <ru>Согласен</ru>
+        <en>Strongly agree</en>
+    </option>
+    <option value="3">
+        <ru>Скорее согласен</ru>
+        <en>Agree</en>
+    </option>
+    <option value="2">
+        <ru>Трудно сказать</ru>
+        <en>Neutral</en>
+    </option>
+    <option value="1">
+        <ru>Скорее не согласен</ru>
+        <en>Disagree</en>
+    </option>
+    <option value="0">
+        <ru>Не согласен</ru>
+        <en>Strongly disagree</en>
+    </option>
 </options>
 </item>
 <item id="403" group="business-stable">
-<name><ru>Пусть я даже не очень сильно продвинусь по карьерной лестнице, зато моя работа и зарплата будут
-    гарантированными.
-</ru><en>Even if I don't climb high on the career ladder, my job and salary will be stable.</en></name>
+<name>
+    <ru>Пусть я даже не очень сильно продвинусь по карьерной лестнице, зато моя работа и зарплата будут
+        гарантированными.
+    </ru>
+    <en>Even if I don't climb high on the career ladder, my job and salary will be stable.</en>
+</name>
 <options>
-    <option value="0"><ru>Согласен</ru><en>Strongly agree</en></option>
-    <option value="1"><ru>Скорее согласен</ru><en>Agree</en></option>
-    <option value="2"><ru>Трудно сказать</ru><en>Neutral</en></option>
-    <option value="3"><ru>Скорее не согласен</ru><en>Disagree</en></option>
-    <option value="4"><ru>Не согласен</ru><en>Strongly disagree</en></option>
+    <option value="0">
+        <ru>Согласен</ru>
+        <en>Strongly agree</en>
+    </option>
+    <option value="1">
+        <ru>Скорее согласен</ru>
+        <en>Agree</en>
+    </option>
+    <option value="2">
+        <ru>Трудно сказать</ru>
+        <en>Neutral</en>
+    </option>
+    <option value="3">
+        <ru>Скорее не согласен</ru>
+        <en>Disagree</en>
+    </option>
+    <option value="4">
+        <ru>Не согласен</ru>
+        <en>Strongly disagree</en>
+    </option>
 </options>
 </item>
 <item id="405" group="business-responsibility">
-<name><ru>Я был бы рад, чтобы именно я отвечал за благополучие всей компании: искал клиентов, платил бы налоги,
-    и организовывал работу сотрудников
-</ru><en>I would be happy if I had to be responsible for my company's well-being, looking for clients, doing the taxes, and organizing other employees.</en></name>
+<name>
+    <ru>Я был бы рад, чтобы именно я отвечал за благополучие всей компании: искал клиентов, платил бы налоги,
+        и организовывал работу сотрудников
+    </ru>
+    <en>I would be happy if I had to be responsible for my company's well-being, looking for clients, doing the taxes,
+        and organizing other employees.
+    </en>
+</name>
 <options>
-    <option value="4"><ru>Согласен</ru><en>Strongly agree</en></option>
-    <option value="3"><ru>Скорее согласен</ru><en>Agree</en></option>
-    <option value="2"><ru>Трудно сказать</ru><en>Neutral</en></option>
-    <option value="1"><ru>Скорее не согласен</ru><en>Disagree</en></option>
-    <option value="0"><ru>Не согласен</ru><en>Strongly disagree</en></option>
+    <option value="4">
+        <ru>Согласен</ru>
+        <en>Strongly agree</en>
+    </option>
+    <option value="3">
+        <ru>Скорее согласен</ru>
+        <en>Agree</en>
+    </option>
+    <option value="2">
+        <ru>Трудно сказать</ru>
+        <en>Neutral</en>
+    </option>
+    <option value="1">
+        <ru>Скорее не согласен</ru>
+        <en>Disagree</en>
+    </option>
+    <option value="0">
+        <ru>Не согласен</ru>
+        <en>Strongly disagree</en>
+    </option>
 </options>
 </item>
 <item id="406" group="business-risk">
-<name><ru>Я готов рискнуть собственными средствами, вложив их в дело, даже если успех не гарантирован</ru><en>I am ready to risk my own money by investing them into a business, even if success is not guaranteed.</en></name>
+<name>
+    <ru>Я готов рискнуть собственными средствами, вложив их в дело, даже если успех не гарантирован</ru>
+    <en>I am ready to risk my own money by investing them into a business, even if success is not guaranteed.</en>
+</name>
 <options>
-    <option value="4"><ru>Согласен</ru><en>Strongly agree</en></option>
-    <option value="3"><ru>Скорее согласен</ru><en>Agree</en></option>
-    <option value="2"><ru>Трудно сказать</ru><en>Neutral</en></option>
-    <option value="1"><ru>Скорее не согласен</ru><en>Disagree</en></option>
-    <option value="0"><ru>Не согласен</ru><en>Strongly disagree</en></option>
+    <option value="4">
+        <ru>Согласен</ru>
+        <en>Strongly agree</en>
+    </option>
+    <option value="3">
+        <ru>Скорее согласен</ru>
+        <en>Agree</en>
+    </option>
+    <option value="2">
+        <ru>Трудно сказать</ru>
+        <en>Neutral</en>
+    </option>
+    <option value="1">
+        <ru>Скорее не согласен</ru>
+        <en>Disagree</en>
+    </option>
+    <option value="0">
+        <ru>Не согласен</ru>
+        <en>Strongly disagree</en>
+    </option>
 </options>
 </item>
 <item id="407" group="business-responsibility">
-<name><ru>Я бы хотел, чтобы мои обязанности на работе были чётко обозначены начальством</ru><en>I'd like to have my responsibilities clearly set for me by the management.</en></name>
+<name>
+    <ru>Я бы хотел, чтобы мои обязанности на работе были чётко обозначены начальством</ru>
+    <en>I'd like to have my responsibilities clearly set for me by the management.</en>
+</name>
 <options>
-    <option value="0"><ru>Согласен</ru><en>Strongly agree</en></option>
-    <option value="1"><ru>Скорее согласен</ru><en>Agree</en></option>
-    <option value="2"><ru>Трудно сказать</ru><en>Neutral</en></option>
-    <option value="3"><ru>Скорее не согласен</ru><en>Disagree</en></option>
-    <option value="4"><ru>Не согласен</ru><en>Strongly disagree</en></option>
+    <option value="0">
+        <ru>Согласен</ru>
+        <en>Strongly agree</en>
+    </option>
+    <option value="1">
+        <ru>Скорее согласен</ru>
+        <en>Agree</en>
+    </option>
+    <option value="2">
+        <ru>Трудно сказать</ru>
+        <en>Neutral</en>
+    </option>
+    <option value="3">
+        <ru>Скорее не согласен</ru>
+        <en>Disagree</en>
+    </option>
+    <option value="4">
+        <ru>Не согласен</ru>
+        <en>Strongly disagree</en>
+    </option>
 </options>
 </item>
 <item id="408" group="business-risk">
-<name><ru>Не получать деньги, а зарабатывать их — это, по-моему, правильно</ru><en>Not getting money, but earning it, — that's more correct.</en></name>
+<name>
+    <ru>Не получать деньги, а зарабатывать их — это, по-моему, правильно</ru>
+    <en>Not getting money, but earning it, — that's more correct.</en>
+</name>
 <options>
-    <option value="4"><ru>Согласен</ru><en>Strongly agree</en></option>
-    <option value="3"><ru>Скорее согласен</ru><en>Agree</en></option>
-    <option value="2"><ru>Трудно сказать</ru><en>Neutral</en></option>
-    <option value="1"><ru>Скорее не согласен</ru><en>Disagree</en></option>
-    <option value="0"><ru>Не согласен</ru><en>Strongly disagree</en></option>
+    <option value="4">
+        <ru>Согласен</ru>
+        <en>Strongly agree</en>
+    </option>
+    <option value="3">
+        <ru>Скорее согласен</ru>
+        <en>Agree</en>
+    </option>
+    <option value="2">
+        <ru>Трудно сказать</ru>
+        <en>Neutral</en>
+    </option>
+    <option value="1">
+        <ru>Скорее не согласен</ru>
+        <en>Disagree</en>
+    </option>
+    <option value="0">
+        <ru>Не согласен</ru>
+        <en>Strongly disagree</en>
+    </option>
 </options>
 </item>
 <item id="409" group="business-search">
-<name><ru>Для меня естественно все время думать о способах зарабатывания денег</ru><en>It is natural for me to always think about how to make more money.</en></name>
+<name>
+    <ru>Для меня естественно все время думать о способах зарабатывания денег</ru>
+    <en>It is natural for me to always think about how to make more money.</en>
+</name>
 <options>
-    <option value="4"><ru>Согласен</ru><en>Strongly agree</en></option>
-    <option value="3"><ru>Скорее согласен</ru><en>Agree</en></option>
-    <option value="2"><ru>Трудно сказать</ru><en>Neutral</en></option>
-    <option value="1"><ru>Скорее не согласен</ru><en>Disagree</en></option>
-    <option value="0"><ru>Не согласен</ru><en>Strongly disagree</en></option>
+    <option value="4">
+        <ru>Согласен</ru>
+        <en>Strongly agree</en>
+    </option>
+    <option value="3">
+        <ru>Скорее согласен</ru>
+        <en>Agree</en>
+    </option>
+    <option value="2">
+        <ru>Трудно сказать</ru>
+        <en>Neutral</en>
+    </option>
+    <option value="1">
+        <ru>Скорее не согласен</ru>
+        <en>Disagree</en>
+    </option>
+    <option value="0">
+        <ru>Не согласен</ru>
+        <en>Strongly disagree</en>
+    </option>
 </options>
 </item>
 
         <!-- Структура интеллекта (КОТ) -->
 <item id="500" group="iq-verbal">
-<name><ru>Значение «заурядный» противоположно по смыслу:</ru><en>The word 'ordinary' is the opposite to...</en></name>
+<name>
+    <ru>Значение «заурядный» противоположно по смыслу:</ru>
+    <en>The word 'ordinary' is the opposite to...</en>
+</name>
 <options>
-    <option value="0"><ru>красивый</ru><en>beautiful</en></option>
-    <option value="0"><ru>престижный</ru><en>prestigious</en></option>
-    <option value="1" correct="true"><ru>выдающийся</ru><en>remarkable</en></option>
-    <option value="0"><ru>романтический</ru><en>romantic</en></option>
-    <option value="0"><ru>богатый</ru><en>rich</en></option>
+    <option value="0">
+        <ru>красивый</ru>
+        <en>beautiful</en>
+    </option>
+    <option value="0">
+        <ru>престижный</ru>
+        <en>prestigious</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>выдающийся</ru>
+        <en>remarkable</en>
+    </option>
+    <option value="0">
+        <ru>романтический</ru>
+        <en>romantic</en>
+    </option>
+    <option value="0">
+        <ru>богатый</ru>
+        <en>rich</en>
+    </option>
 </options>
 </item>
 <item id="501" group="iq-verbal">
-<name><ru>Выберите наиболее изящное продолжение стихотворения:</ru><en>Choose the most suitable continuation of the sentence:</en></name>
+<name>
+    <ru>Выберите наиболее изящное продолжение стихотворения:</ru>
+    <en>Choose the most suitable continuation of the sentence:</en>
+</name>
 <text>
-    <ru> Я вижу школу из окна, по мне соскучилась она...</ru>
+    <ru>Я вижу школу из окна, по мне соскучилась она...</ru>
     <en>This is my school I`m looking at...</en>
 </text>
 <options>
-    <option value="0"><ru>И я по ней давно скучал, но этого не замечал</ru><en>I wish I’d never left it...</en></option>
-    <option value="1" correct="true"><ru>И я по ней давно скучал, хотя и сам не замечал</ru><en>I feel so sad I can’t go back...</en></option>
-    <option value="0"><ru>И я по ней уже скучал, скорей в неё попасть мечтал</ru><en>I want to be a kid again...</en></option>
+    <option value="0">
+        <ru>И я по ней давно скучал, но этого не замечал</ru>
+        <en>I wish I’d never left it...</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>И я по ней давно скучал, хотя и сам не замечал</ru>
+        <en>I feel so sad I can’t go back...</en>
+    </option>
+    <option value="0">
+        <ru>И я по ней уже скучал, скорей в неё попасть мечтал</ru>
+        <en>I want to be a kid again...</en>
+    </option>
 </options>
 </item>
 <item id="502" group="iq-logic">
-<name><ru>Какое слово лишнее?</ru><en>Find the odd word</en></name>
+<name>
+    <ru>Какое слово лишнее?</ru>
+    <en>Find the odd word</en>
+</name>
 <options>
-    <option value="0"><ru>поэзия</ru><en>poetry</en></option>
-    <option value="0"><ru>музыка</ru><en>music</en></option>
-    <option value="0"><ru>живопись</ru><en>painting</en></option>
-    <option value="1" correct="true"><ru>искусствоведение</ru><en>criticism</en></option>
-    <option value="0"><ru>кино</ru><en>cinematography</en></option>
+    <option value="0">
+        <ru>поэзия</ru>
+        <en>poetry</en>
+    </option>
+    <option value="0">
+        <ru>музыка</ru>
+        <en>music</en>
+    </option>
+    <option value="0">
+        <ru>живопись</ru>
+        <en>painting</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>искусствоведение</ru>
+        <en>criticism</en>
+    </option>
+    <option value="0">
+        <ru>кино</ru>
+        <en>cinematography</en>
+    </option>
 </options>
 </item>
 <item id="503" group="iq-verbal">
-<name><ru>В каком предложении ошибка?</ru><en>Which of the following sentences contains a mistake?</en></name>
+<name>
+    <ru>В каком предложении ошибка?</ru>
+    <en>Which of the following sentences contains a mistake?</en>
+</name>
 <options>
-    <option value="0"><ru>Как бы ни было тяжело, а ты учись</ru><en>You should be diligent at your studies.</en></option>
-    <option value="1" correct="true"><ru>Как бы не было тяжело, а ты учись</ru><en>You should be diligent at you're studies.</en></option>
+    <option value="0">
+        <ru>Как бы ни было тяжело, а ты учись</ru>
+        <en>You should be diligent at your studies.</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>Как бы не было тяжело, а ты учись</ru>
+        <en>You should be diligent at you're studies.</en>
+    </option>
 </options>
 </item>
 <item id="504" group="iq-logic" method="CHECKBOX" count="2">
-<name><ru>Какие два слова определяют понятие «река» точнее всего:</ru><en>Which two words can be used to define a 'river'?</en></name>
+<name>
+    <ru>Какие два слова определяют понятие «река» точнее всего:</ru>
+    <en>Which two words can be used to define a 'river'?</en>
+</name>
 <options>
-    <option value="0" correct="true"><ru>берег</ru><en>bank</en></option>
-    <option value="1"><ru>рыба</ru><en>fish</en></option>
-    <option value="2"><ru>рыболов</ru><en>fisher</en></option>
-    <option value="3" correct="true"><ru>вода</ru><en>water</en></option>
-    <option value="4"><ru>ива</ru><en>willow</en></option>
+    <option value="0" correct="true">
+        <ru>берег</ru>
+        <en>bank</en>
+    </option>
+    <option value="1">
+        <ru>рыба</ru>
+        <en>fish</en>
+    </option>
+    <option value="2">
+        <ru>рыболов</ru>
+        <en>fisher</en>
+    </option>
+    <option value="3" correct="true">
+        <ru>вода</ru>
+        <en>water</en>
+    </option>
+    <option value="4">
+        <ru>ива</ru>
+        <en>willow</en>
+    </option>
 </options>
 </item>
 <item id="505" group="iq-attention">
-<name><ru>Сколько раз буква «а» встречается в приведенном отрывке?</ru><en>How many “s” are there in the following text?</en></name>
+<name>
+    <ru>Сколько раз буква «а» встречается в приведенном отрывке?</ru>
+    <en>How many “s” are there in the following text?</en>
+</name>
 <text>
     <ru>
         — Мне нравится эта птица... — сказал я. — Ты знаешь?
         Во время перелета коростель не летит, а по земле бежит.
         Перелетает только через реки и моря, а то всё пешком.
     </ru>
-    <en>SQUIRE TRELAWNEY, Dr. Livesey, and the rest of these gentlemen having asked me to write down the whole particulars about Treasure Island, from the beginning to the end, keeping nothing back but the bearings of the island...
+    <en>SQUIRE TRELAWNEY, Dr. Livesey, and the rest of these gentlemen having asked me to write down the whole
+        particulars about Treasure Island, from the beginning to the end, keeping nothing back but the bearings of the
+        island...
     </en>
 </text>
 <options>
-    <option value="0"><ru>7</ru><en>7</en></option>
-    <option value="0"><ru>8</ru><en>8</en></option>
-    <option value="0"><ru>9</ru><en>9</en></option>
-    <option value="1" correct="true"><ru>10</ru><en>10</en></option>
-    <option value="0"><ru>11</ru><en>11</en></option>
+    <option value="0">
+        <ru>7</ru>
+        <en>7</en>
+    </option>
+    <option value="0">
+        <ru>8</ru>
+        <en>8</en>
+    </option>
+    <option value="0">
+        <ru>9</ru>
+        <en>9</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>10</ru>
+        <en>10</en>
+    </option>
+    <option value="0">
+        <ru>11</ru>
+        <en>11</en>
+    </option>
 </options>
 </item>
 <item id="506" group="iq-verbal">
-<name><ru>Найдите синоним слову «робкий»:</ru><en>Find a synonym to the word 'timid':</en></name>
+<name>
+    <ru>Найдите синоним слову «робкий»:</ru>
+    <en>Find a synonym to the word 'timid':</en>
+</name>
 <options>
-    <option value="0"><ru>испуганный</ru><en>scared</en></option>
-    <option value="0"><ru>жалкий</ru><en>pitiful</en></option>
-    <option value="1" correct="true"><ru>застенчивый</ru><en>shy</en></option>
-    <option value="0"><ru>стыдливый</ru><en>diffident</en></option>
-    <option value="0"><ru>неопытный</ru><en>inexperienced</en></option>
+    <option value="0">
+        <ru>испуганный</ru>
+        <en>scared</en>
+    </option>
+    <option value="0">
+        <ru>жалкий</ru>
+        <en>pitiful</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>застенчивый</ru>
+        <en>shy</en>
+    </option>
+    <option value="0">
+        <ru>стыдливый</ru>
+        <en>diffident</en>
+    </option>
+    <option value="0">
+        <ru>неопытный</ru>
+        <en>inexperienced</en>
+    </option>
 </options>
 </item>
 <item id="507" group="iq-math" method="TEXT">
-<name><ru>Один человек в 3 раза старше другого.
-    Если разность в их возрасте составляет 32 года, какова сумма их возрастов.
-</ru><en>One person is three times older than the other. What is the sum of their ages, if their age difference is 32 years?</en></name>
+<name>
+    <ru>Один человек в 3 раза старше другого.
+        Если разность в их возрасте составляет 32 года, какова сумма их возрастов.
+    </ru>
+    <en>One person is three times older than the other. What is the sum of their ages, if their age difference is 32
+        years?
+    </en>
+</name>
 <fields>
-    <field type="number" placeholder="Введите число" correct="64" placeholder-en="Enter a number" correct-en="64" /> <!-- 64 -->
+    <field type="number" placeholder="Введите число" correct="64" placeholder-en="Enter a number"
+           correct-en="64"/> <!-- 64 -->
 </fields>
 </item>
 <item id="508" group="iq-math" method="TEXT">
-<name><ru>Длина прямоугольника в 3 раза больше его удвоенной ширины.
-    Определи размеры прямоугольника, если его
-    периметр равен 168см.
-</ru><en>The length of the rectangle is three times its double width. Find its dimensions, if its perimeter is 168 cm.</en></name>
+<name>
+    <ru>Длина прямоугольника в 3 раза больше его удвоенной ширины.
+        Определи размеры прямоугольника, если его
+        периметр равен 168см.
+    </ru>
+    <en>The length of the rectangle is three times its double width. Find its dimensions, if its perimeter is 168 cm.
+    </en>
+</name>
 <fields>
-    <field type="number" placeholder="Ширина" correct="12" placeholder-en="Width"  correct-en="12"/>
-    <field type="number" placeholder="Длина" correct="72" placeholder-en="Length" correct-en="72" />
+    <field type="number" placeholder="Ширина" correct="12" placeholder-en="Width" correct-en="12"/>
+    <field type="number" placeholder="Длина" correct="72" placeholder-en="Length" correct-en="72"/>
 </fields>
 </item>
 <item id="509" group="iq-attention">
-<name><ru>В каком ряду спрятано число 1071?</ru><en>In which row can you find the number '1071'?</en></name>
+<name>
+    <ru>В каком ряду спрятано число 1071?</ru>
+    <en>In which row can you find the number '1071'?</en>
+</name>
 <options>
-    <option value="0"><ru>120750938500385100175991271</ru><en>120750938500385100175991271</en></option>
-    <option value="0"><ru>301780917047120184334072010</ru><en>301780917047120184334072010</en></option>
-    <option value="1" correct="true"><ru>701256905930010717085673027</ru><en>701256905930010717085673027</en></option>
-    <option value="0"><ru>107071956001763890194498910</ru><en>107071956001763890194498910</en></option>
+    <option value="0">
+        <ru>120750938500385100175991271</ru>
+        <en>120750938500385100175991271</en>
+    </option>
+    <option value="0">
+        <ru>301780917047120184334072010</ru>
+        <en>301780917047120184334072010</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>701256905930010717085673027</ru>
+        <en>701256905930010717085673027</en>
+    </option>
+    <option value="0">
+        <ru>107071956001763890194498910</ru>
+        <en>107071956001763890194498910</en>
+    </option>
 </options>
 </item>
 <item id="510" group="iq-verbal">
-<name><ru>«Дружеский» противоположно слову</ru><en>The word 'amicable' is the opposite to...</en></name>
+<name>
+    <ru>«Дружеский» противоположно слову</ru>
+    <en>The word 'amicable' is the opposite to...</en>
+</name>
 <options>
-    <option value="0"><ru>завистливый</ru><en>envious</en></option>
-    <option value="1" correct="true"><ru>враждебный</ru><en>hostile</en></option>
-    <option value="0"><ru>приятельский</ru><en>friendly</en></option>
-    <option value="0"><ru>братский</ru><en>familiar</en></option>
-    <option value="0"><ru>хороший</ru><en>nice</en></option>
+    <option value="0">
+        <ru>завистливый</ru>
+        <en>envious</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>враждебный</ru>
+        <en>hostile</en>
+    </option>
+    <option value="0">
+        <ru>приятельский</ru>
+        <en>friendly</en>
+    </option>
+    <option value="0">
+        <ru>братский</ru>
+        <en>familiar</en>
+    </option>
+    <option value="0">
+        <ru>хороший</ru>
+        <en>nice</en>
+    </option>
 </options>
 </item>
 <item id="511" group="iq-math">
-<name><ru>20% от 200 это...</ru><en>What is 20% of 200?</en></name>
+<name>
+    <ru>20% от 200 это...</ru>
+    <en>What is 20% of 200?</en>
+</name>
 <options>
-    <option value="0"><ru>20</ru><en>20</en></option>
-    <option value="1" correct="true"><ru>40</ru><en>40</en></option>
-    <option value="0"><ru>60</ru><en>60</en></option>
-    <option value="0"><ru>80</ru><en>80</en></option>
+    <option value="0">
+        <ru>20</ru>
+        <en>20</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>40</ru>
+        <en>40</en>
+    </option>
+    <option value="0">
+        <ru>60</ru>
+        <en>60</en>
+    </option>
+    <option value="0">
+        <ru>80</ru>
+        <en>80</en>
+    </option>
 </options>
 </item>
 <item id="512" group="iq-verbal" method="TEXT">
-<name><ru>У этих слов одинаковое окончание. Найдите его и впишите в ответ.</ru><en>All these words have the same ending. Guess what it is and enter below.
+<name>
+    <ru>У этих слов одинаковое окончание. Найдите его и впишите в ответ.</ru>
+    <en>All these words have the same ending. Guess what it is and enter below.
 
-</en></name>
-<text><ru>за..., фла..., бал..., бе..., ко...</ru>
-    <en>per..., pri..., ar..., les..., rea...</en></text>
+    </en>
+</name>
+<text>
+    <ru>за..., фла..., бал..., бе..., ко...</ru>
+    <en>per..., pri..., ar..., les..., rea...</en>
+</text>
 <fields>
-    <field type="string" placeholder="Введите слог" correct="кон" placeholder-en="Enter a number" correct-en="son"/> <!-- кон -->
+    <field type="string" placeholder="Введите слог" correct="кон" placeholder-en="Enter a number"
+           correct-en="son"/> <!-- кон -->
 </fields>
 </item>
 <item id="513" group="iq-spatial">
 <!-- todo заменить это на задачу 08.15 Математика для 5 класса -->
-<name><ru>Какой из приведенных ниже пяти рисунков наиболее отличен от других?</ru><en>Which of the five images below differs the most from the rest?</en></name>
+<name>
+    <ru>Какой из приведенных ниже пяти рисунков наиболее отличен от других?</ru>
+    <en>Which of the five images below differs the most from the rest?</en>
+</name>
 <options>
     <option value="0" img="https://testonomica.com/static/img/4/g_2_4.svg"/>
     <option value="0" img="https://testonomica.com/static/img/4/g_3_3.svg"/>
@@ -1038,19 +2437,26 @@
 </options>
 </item>
 <item id="514" group="iq-math" method="TEXT">
-<name><ru>Два продавца продали 24 автомобиля.
-    Первый продал на 6 автомобилей больше, чем второй.
-    Сколько продал второй?
-</ru><en>Two car sellers have sold 24 cars.
-    The first seller has sold 6 cars more than the second one.
-    How many cars has the second seller sold?
-</en></name>
+<name>
+    <ru>Два продавца продали 24 автомобиля.
+        Первый продал на 6 автомобилей больше, чем второй.
+        Сколько продал второй?
+    </ru>
+    <en>Two car sellers have sold 24 cars.
+        The first seller has sold 6 cars more than the second one.
+        How many cars has the second seller sold?
+    </en>
+</name>
 <fields>
-    <field type="number" placeholder="Введите число" correct="9" placeholder-en="Enter a number" correct-en="9" /> <!-- 9 -->
+    <field type="number" placeholder="Введите число" correct="9" placeholder-en="Enter a number"
+           correct-en="9"/> <!-- 9 -->
 </fields>
 </item>
 <item id="515" group="iq-verbal" method="TEXT">
-<name><ru>Какое существительное подходит обоим прилагательным?</ru><en>Which noun can follow both of the below?</en></name>
+<name>
+    <ru>Какое существительное подходит обоим прилагательным?</ru>
+    <en>Which noun can follow both of the below?</en>
+</name>
 <text>
     <ru>
         <![CDATA[
@@ -1069,38 +2475,71 @@
     </en>
 </text>
 <fields>
-    <field type="number" placeholder="Введите слово" correct="палата"  placeholder-en="Enter a number" correct-en="wire"/> <!-- палата -->
+    <field type="number" placeholder="Введите слово" correct="палата" placeholder-en="Enter a number"
+           correct-en="wire"/> <!-- палата -->
 </fields>
 </item>
 <item id="516" group="iq-logic">
-<name><ru>Решите задачу</ru><en>Solve the following problem</en></name>
-<text><ru>
-    В квартире живут 5 домашних животных: собаки и кошки.
-    Из всех животных только одно не является собакой. Сколько всего собак?</ru>
+<name>
+    <ru>Решите задачу</ru>
+    <en>Solve the following problem</en>
+</name>
+<text>
+    <ru>
+        В квартире живут 5 домашних животных: собаки и кошки.
+        Из всех животных только одно не является собакой. Сколько всего собак?
+    </ru>
     <en>Five pets — cats and dogs — are living in the apartment.
         Of them, only one is not a dog. How many dogs are there?
     </en>
 </text>
 <options>
-    <option value="0"><ru>1</ru><en>1</en></option>
-    <option value="0"><ru>2</ru><en>2</en></option>
-    <option value="0"><ru>3</ru><en>3</en></option>
-    <option value="1" correct="true"><ru>4</ru><en>4</en></option>
-    <option value="0"><ru>5</ru><en>5</en></option>
+    <option value="0">
+        <ru>1</ru>
+        <en>1</en>
+    </option>
+    <option value="0">
+        <ru>2</ru>
+        <en>2</en>
+    </option>
+    <option value="0">
+        <ru>3</ru>
+        <en>3</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>4</ru>
+        <en>4</en>
+    </option>
+    <option value="0">
+        <ru>5</ru>
+        <en>5</en>
+    </option>
 </options>
 </item>
 <item id="517" group="iq-logic" method="TEXT">
-<name><ru>Продолжите ряд чисел:</ru><en>Continue the sequence of numbers:</en></name>
-<text><ru>1 2 5 10 17 26 ... ...</ru><en>1 2 5 10 17 26 ... ...</en></text>
+<name>
+    <ru>Продолжите ряд чисел:</ru>
+    <en>Continue the sequence of numbers:</en>
+</name>
+<text>
+    <ru>1 2 5 10 17 26 ... ...</ru>
+    <en>1 2 5 10 17 26 ... ...</en>
+</text>
 <fields>
-    <field type="number" placeholder="Введите число" correct="37" placeholder-en="Enter a number" correct-en="37"/> <!-- 37 -->
-    <field type="number" placeholder="Введите число" correct="50" placeholder-en="Enter a number" correct-en="50"/> <!-- 50 -->
+    <field type="number" placeholder="Введите число" correct="37" placeholder-en="Enter a number"
+           correct-en="37"/> <!-- 37 -->
+    <field type="number" placeholder="Введите число" correct="50" placeholder-en="Enter a number"
+           correct-en="50"/> <!-- 50 -->
 </fields>
 </item>
 <item id="518" group="iq-logic">
-<name><ru>Сделайте вывод из двух утверждений:</ru><en>Make a deduction from the two following statements:</en></name>
-<text><ru>
-    <![CDATA[
+<name>
+    <ru>Сделайте вывод из двух утверждений:</ru>
+    <en>Make a deduction from the two following statements:</en>
+</name>
+<text>
+    <ru>
+        <![CDATA[
                    <ul>
                        <li>Ни один кит не дышит жабрами</li>
                        <li>Все рыбы дышат жабрами</li>
@@ -1115,62 +2554,122 @@
                ]]></en>
 </text>
 <options>
-    <option value="0"><ru>Всякая рыба - кит</ru><en>All fish are whales</en></option>
-    <option value="1" correct="1">Ни одна рыба не является китом</ru><en>No fish is a whale</en></option>
-<option value="0"><ru>Некоторые рыбы - киты</ru><en>Some fish are whales</en></option>
-<option value="0"><ru>Некоторые рыбы не являются китами</ru><en>Some fish are not whales</en></option>
+    <option value="0">
+        <ru>Всякая рыба - кит</ru>
+        <en>All fish are whales</en>
+    </option>
+    <option value="1" correct="1"><ru>Ни одна рыба не является китом</ru>
+    <en>No fish is a whale</en>
+</option>
+<option value="0">
+    <ru>Некоторые рыбы - киты</ru>
+    <en>Some fish are whales</en>
+</option>
+<option value="0">
+    <ru>Некоторые рыбы не являются китами</ru>
+    <en>Some fish are not whales</en>
+</option>
 </options>
         </item>
 <item id="519" group="iq-math" method="TEXT">
-<name><ru>Длина Петиного шага в среднем равна 60 см. Его отец делает шаги длиной в 80 см.
-    Какова разница в количестве их шагов на дистанции 2 километра и 400 метров?
-</ru><en>An average Peter's stride is 60 cm long. His father's strides are 80 cm long.
-    What will be the difference between the numbers of strides each of them has to make in order to walk 2,400 m?
-</en></name>
+<name>
+    <ru>Длина Петиного шага в среднем равна 60 см. Его отец делает шаги длиной в 80 см.
+        Какова разница в количестве их шагов на дистанции 2 километра и 400 метров?
+    </ru>
+    <en>An average Peter's stride is 60 cm long. His father's strides are 80 cm long.
+        What will be the difference between the numbers of strides each of them has to make in order to walk 2,400 m?
+    </en>
+</name>
 <fields>
-    <field type="number" placeholder="Введите число" correct="1000" placeholder-en="Enter a number" correct-en="1000"/> <!-- 1000 -->
+    <field type="number" placeholder="Введите число" correct="1000" placeholder-en="Enter a number"
+           correct-en="1000"/> <!-- 1000 -->
 </fields>
 </item>
 <item id="520" group="iq-logic">
-<name><ru>Бензобак Васиной машины был на 75% полон, когда Вася отправился на работу.
-    За весь день Вася использовал 40% имевшегося бензина. Какую часть бака Вася истратил (в процентах)?
-</ru><en>When John went to work, his car's gas tank was 75% full.
-    Over the day, John has spent 40% of the gas he had. How much of the tank has John used up (percentage)?
-</en></name>
+<name>
+    <ru>Бензобак Васиной машины был на 75% полон, когда Вася отправился на работу.
+        За весь день Вася использовал 40% имевшегося бензина. Какую часть бака Вася истратил (в процентах)?
+    </ru>
+    <en>When John went to work, his car's gas tank was 75% full.
+        Over the day, John has spent 40% of the gas he had. How much of the tank has John used up (percentage)?
+    </en>
+</name>
 <options>
-    <option value="0"><ru>10</ru><en>10</en></option>
-    <option value="0"><ru>20</ru><en>20</en></option>
-    <option value="1" correct="true"><ru>30</ru><en>30</en></option>
-    <option value="0"><ru>40</ru><en>40</en></option>
-    <option value="0"><ru>50</ru><en>50</en></option>
-    <option value="0"><ru>60</ru><en>60</en></option>
-    <option value="0"><ru>70</ru><en>70</en></option>
-    <option value="0"><ru>80</ru><en>80</en></option>
-    <option value="0"><ru>90</ru><en>90</en></option>
+    <option value="0">
+        <ru>10</ru>
+        <en>10</en>
+    </option>
+    <option value="0">
+        <ru>20</ru>
+        <en>20</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>30</ru>
+        <en>30</en>
+    </option>
+    <option value="0">
+        <ru>40</ru>
+        <en>40</en>
+    </option>
+    <option value="0">
+        <ru>50</ru>
+        <en>50</en>
+    </option>
+    <option value="0">
+        <ru>60</ru>
+        <en>60</en>
+    </option>
+    <option value="0">
+        <ru>70</ru>
+        <en>70</en>
+    </option>
+    <option value="0">
+        <ru>80</ru>
+        <en>80</en>
+    </option>
+    <option value="0">
+        <ru>90</ru>
+        <en>90</en>
+    </option>
 </options>
 </item>
 <item id="521" group="iq-math" method="TEXT">
-<name><ru>Тыква весит два килограмма и еще столько, сколько весит полтыквы. Сколько весит тыква?
-</ru><en>The pumpkin weighs two kilos plus a half of the pumpkin. How much does the pumpkin weigh?</en></name>
+<name>
+    <ru>Тыква весит два килограмма и еще столько, сколько весит полтыквы. Сколько весит тыква?
+    </ru>
+    <en>The pumpkin weighs two kilos plus a half of the pumpkin. How much does the pumpkin weigh?</en>
+</name>
 <fields>
-    <field type="number" placeholder="Введите число" correct="4" placeholder-en="Enter a number" correct-en="4"/> <!-- 4-->
+    <field type="number" placeholder="Введите число" correct="4" placeholder-en="Enter a number"
+           correct-en="4"/> <!-- 4-->
 </fields>
 </item>
 <item id="522" group="iq-spatial" method="TEXT">
 <!-- todo Катя нарисует https://3.bp.blogspot.com/-FQgwzhaz_58/Vw9qDij_CKI/AAAAAAAAAZY/ap7Lvn6bXK4vClhhdWzBxQAbpFzP7_xbwCLcB/s1600/9_%25D0%25BB%25D0%25B8%25D1%2581%25D1%2582%2B%25D1%2581%25D0%25BB%25D0%25BE%25D0%25B6%25D0%25B8%25D0%25BB%25D0%25B8%2B%25D0%25B8%2B%25D0%25BE%25D1%2582%25D1%2580%25D0%25B5%25D0%25B7%25D0%25B0%25D0%25BB%25D0%25B8%2B%25D1%2583%25D0%25B3%25D0%25BE%25D0%25BB%25D0%25BE%25D0%25BA-02.jpg-->
-<name><ru>Разделите эту геометрическую фигуру прямой линией на две части так, чтобы, переместив одну из их в
-    другое место, можно было получить квадрат. В качестве ответа введите номера двух соединяемых точек.
-</ru><en>Divide this shape into two by drawing a straight line between two dots, so that by moving one part you could construct a square. Enter the numbers of two dots that have to be connected.</en></name>
+<name>
+    <ru>Разделите эту геометрическую фигуру прямой линией на две части так, чтобы, переместив одну из их в
+        другое место, можно было получить квадрат. В качестве ответа введите номера двух соединяемых точек.
+    </ru>
+    <en>Divide this shape into two by drawing a straight line between two dots, so that by moving one part you could
+        construct a square. Enter the numbers of two dots that have to be connected.
+    </en>
+</name>
 <img>https://testonomica.com/static/img/4/g_1_1.svg</img>
 <fields>
-    <field type="number" placeholder="Введите число" correct="2" placeholder-en="Enter a number" correct-en="2"/> <!-- 2 -->
-    <field type="number" placeholder="Введите число" correct="13" placeholder-en="Enter a number" correct-en="13"/> <!-- 13 -->
+    <field type="number" placeholder="Введите число" correct="2" placeholder-en="Enter a number"
+           correct-en="2"/> <!-- 2 -->
+    <field type="number" placeholder="Введите число" correct="13" placeholder-en="Enter a number"
+           correct-en="13"/> <!-- 13 -->
 </fields>
 </item>
 <item id="523" group="iq-logic">
-<name><ru>Сделайте вывод из этих двух утверждений.</ru><en>Make a deduction from the two following statements:</en></name>
-<text><ru>
-    <![CDATA[
+<name>
+    <ru>Сделайте вывод из этих двух утверждений.</ru>
+    <en>Make a deduction from the two following statements:</en>
+</name>
+<text>
+    <ru>
+        <![CDATA[
                    <ul>
                        <li>Все ученики изучают математику в школе.</li>
                        <li>Некоторые из учеников знают математику очень хорошо.</li>
@@ -1185,27 +2684,46 @@
                ]]></en>
 </text>
 <options>
-    <option value="0"><ru>Все ученики знают математику очень хорошо.</ru><en>All students know mathematics very well.</en></option>
-    <option value="0"><ru>Те ученики, кто знает математику очень хорошо, учат её только в школе.</ru><en>Those students who know mathematics very well study it only at school.</en></option>
-    <option value="1" correct="true"><ru>Не все ученики знают математику очень хорошо.</ru><en>Not all students know mathematics very well.</en></option>
-    <option value="0"><ru>Те, кто знает математику очень хорошо, не способнее тех, кто знает её хуже.
-    </ru><en>Those students who know mathematics very well are not more capable than those who don't.</en></option>
+    <option value="0">
+        <ru>Все ученики знают математику очень хорошо.</ru>
+        <en>All students know mathematics very well.</en>
+    </option>
+    <option value="0">
+        <ru>Те ученики, кто знает математику очень хорошо, учат её только в школе.</ru>
+        <en>Those students who know mathematics very well study it only at school.</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>Не все ученики знают математику очень хорошо.</ru>
+        <en>Not all students know mathematics very well.</en>
+    </option>
+    <option value="0">
+        <ru>Те, кто знает математику очень хорошо, не способнее тех, кто знает её хуже.
+        </ru>
+        <en>Those students who know mathematics very well are not more capable than those who don't.</en>
+    </option>
 </options>
 </item>
 <item id="524" group="iq-math" method="TEXT">
-<name><ru>Маша прошла 200 метров за 3,5 минуты.
-    Сколько минут ей понадобится для того, чтобы с той же скоростью пройти 4 километра?
-</ru><en>Mary can walk 200 m in 3.5 min.
-    How much time (in min.) will it take her to walk 4 km with the same speed?
-</en></name>
+<name>
+    <ru>Маша прошла 200 метров за 3,5 минуты.
+        Сколько минут ей понадобится для того, чтобы с той же скоростью пройти 4 километра?
+    </ru>
+    <en>Mary can walk 200 m in 3.5 min.
+        How much time (in min.) will it take her to walk 4 km with the same speed?
+    </en>
+</name>
 <fields>
-    <field type="number" placeholder="Введите число" correct="70" placeholder-en="Enter a number" correct-en="70"/> <!-- 70 -->
+    <field type="number" placeholder="Введите число" correct="70" placeholder-en="Enter a number"
+           correct-en="70"/> <!-- 70 -->
 </fields>
 </item>
 <item id="525" group="iq-spatial" method="CHECKBOX" count="3">
 <!-- todo заменить это этим: https://chudo-udo.info/razvivaem-logiku/881-najdi-figuru-po-proektsii
     https://chudo-udo.info/media/k2/items/cache/893c4fdc824f051f07606f44d5d60e5a_XL.jpg-->
-<name><ru>Три из пяти фигур нужно соединить таким образом, чтобы получилась равнобедренная трапеция</ru><en>Three of the five shapes have to be joined together in order to construct an isosceles trapezoid.</en></name>
+<name>
+    <ru>Три из пяти фигур нужно соединить таким образом, чтобы получилась равнобедренная трапеция</ru>
+    <en>Three of the five shapes have to be joined together in order to construct an isosceles trapezoid.</en>
+</name>
 <options>
     <option value="1" img="https://testonomica.com/static/img/4/g_4_1.svg" correct="true"/>
     <option value="2" img="https://testonomica.com/static/img/4/g_4_2.svg" correct="true"/>
@@ -1215,22 +2733,30 @@
 </options>
 </item>
 <item id="526" group="iq-math" method="TEXT">
-<name><ru>
-    Старик нашел в лесу грибы. Идет он домой и думает: вот если бы к моим грибам прибавить половину и еще
-    десяток,
-    то у меня была бы целая сотня грибов.
-    Сколько грибов он собрал?
-</ru><en>An old man has been picking mushrooms. On his way home, he thinks to himself: If I had a half my mushrooms more plus ten, I'd have a hundred mushrooms.
-    How many mushrooms has he picked?
-</en></name>
+<name>
+    <ru>
+        Старик нашел в лесу грибы. Идет он домой и думает: вот если бы к моим грибам прибавить половину и еще
+        десяток,
+        то у меня была бы целая сотня грибов.
+        Сколько грибов он собрал?
+    </ru>
+    <en>An old man has been picking mushrooms. On his way home, he thinks to himself: If I had a half my mushrooms more
+        plus ten, I'd have a hundred mushrooms.
+        How many mushrooms has he picked?
+    </en>
+</name>
 <fields>
     <field type="number" placeholder="Введите число" correct="60" placeholder-en="Enter a number" correct-en="60"/>
 </fields>
 </item>
 <item id="527" group="iq-logic">
-<name><ru>Значения следующих двух предложений</ru><en>The meanings of the two following phrases...</en></name>
-<text><ru>
-    <![CDATA[
+<name>
+    <ru>Значения следующих двух предложений</ru>
+    <en>The meanings of the two following phrases...</en>
+</name>
+<text>
+    <ru>
+        <![CDATA[
                    <ul>
                        <li>Повторенье - мать ученья.</li>
                        <li>Ученье - свет, а неученье - тьма.</li>
@@ -1245,81 +2771,182 @@
                ]]></en>
 </text>
 <options>
-    <option value="0"><ru>сходны</ru><en>...are similar</en></option>
-    <option value="0"><ru>противоположны</ru><en>...are opposite</en></option>
-    <option value="1" correct="true"><ru>ни сходны, ни противоположны</ru><en>...are neither similar, nor opposite</en></option>
+    <option value="0">
+        <ru>сходны</ru>
+        <en>...are similar</en>
+    </option>
+    <option value="0">
+        <ru>противоположны</ru>
+        <en>...are opposite</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>ни сходны, ни противоположны</ru>
+        <en>...are neither similar, nor opposite</en>
+    </option>
 </options>
 </item>
 <item id="528" group="iq-verbal">
-<name><ru>Если переставить буквы в слове ИРМАНДАН, получится название:</ru><en>If you rearrange letters in RINTANEGE, you'll get a name of...</en></name>
+<name>
+    <ru>Если переставить буквы в слове ИРМАНДАН, получится название:</ru>
+    <en>If you rearrange letters in RINTANEGE, you'll get a name of...</en>
+</name>
 <options>
-    <option value="0"><ru>города</ru><en>a town</en></option>
-    <option value="0"><ru>цветка</ru><en>a flower</en></option>
-    <option value="0"><ru>животного</ru><en>an animal</en></option>
-    <option value="1" correct="true"><ru>фрукта</ru><en>a fruit</en></option>
-    <option value="0"><ru>страны</ru><en>a country</en></option>
+    <option value="0">
+        <ru>города</ru>
+        <en>a town</en>
+    </option>
+    <option value="0">
+        <ru>цветка</ru>
+        <en>a flower</en>
+    </option>
+    <option value="0">
+        <ru>животного</ru>
+        <en>an animal</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>фрукта</ru>
+        <en>a fruit</en>
+    </option>
+    <option value="0">
+        <ru>страны</ru>
+        <en>a country</en>
+    </option>
 </options>
 </item>
 <item id="529" group="iq-logic">
-<name><ru>Найдите лишнее</ru><en>Find the odd word</en></name>
+<name>
+    <ru>Найдите лишнее</ru>
+    <en>Find the odd word</en>
+</name>
 <options>
-    <option value="0"><ru>весы</ru><en>scales</en></option>
-    <option value="0"><ru>часы</ru><en>clock</en></option>
-    <option value="1" correct="true"><ru>календарь</ru><en>calendar</en></option>
-    <option value="0"><ru>компас</ru><en>compass</en></option>
+    <option value="0">
+        <ru>весы</ru>
+        <en>scales</en>
+    </option>
+    <option value="0">
+        <ru>часы</ru>
+        <en>clock</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>календарь</ru>
+        <en>calendar</en>
+    </option>
+    <option value="0">
+        <ru>компас</ru>
+        <en>compass</en>
+    </option>
 </options>
 </item>
 <item id="530" group="iq-verbal">
-<name><ru>Выберите слово, наиболее близкое по значению слову «адекватный»:</ru><en>Which of the following words has the closest meaning to 'relevant'?</en></name>
+<name>
+    <ru>Выберите слово, наиболее близкое по значению слову «адекватный»:</ru>
+    <en>Which of the following words has the closest meaning to 'relevant'?</en>
+</name>
 <options>
-    <option value="0"><ru>счастливый</ru><en>happy</en></option>
-    <option value="1" correct="true"><ru>соответствующий</ru><en>equivalent</en></option>
-    <option value="0"><ru>честный</ru><en>honest</en></option>
-    <option value="0"><ru>быстрый</ru><en>reasonable</en></option>
-    <option value="0"><ru>решительный</ru><en>decisive</en></option>
+    <option value="0">
+        <ru>счастливый</ru>
+        <en>happy</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>соответствующий</ru>
+        <en>equivalent</en>
+    </option>
+    <option value="0">
+        <ru>честный</ru>
+        <en>honest</en>
+    </option>
+    <option value="0">
+        <ru>быстрый</ru>
+        <en>reasonable</en>
+    </option>
+    <option value="0">
+        <ru>решительный</ru>
+        <en>decisive</en>
+    </option>
 </options>
 </item>
 <item id="531" group="iq-logic">
-<name><ru>Отец брата и брат отца это:</ru><en>Your brother's father and your father's brother are...</en></name>
+<name>
+    <ru>Отец брата и брат отца это:</ru>
+    <en>Your brother's father and your father's brother are...</en>
+</name>
 <options>
-    <option value="0"><ru>один человек</ru><en>the same person</en></option>
-    <option value="1" correct="true"><ru>два разных человека</ru><en>two different people</en></option>
-    <option value="0"><ru>возможны оба варианта</ru><en>both options are possible</en></option>
+    <option value="0">
+        <ru>один человек</ru>
+        <en>the same person</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>два разных человека</ru>
+        <en>two different people</en>
+    </option>
+    <option value="0">
+        <ru>возможны оба варианта</ru>
+        <en>both options are possible</en>
+    </option>
 </options>
 </item>
 <item id="532" group="iq-math" method="TEXT">
-<name><ru>У кондитера есть план по выпечке пирогов. За два часа он выполниляет 8% от плана.
-    За сколько дней он сможет выполнить план, если рабочий день ограничен 5 часами?
-</ru><en>A baker has a target number of pies to be baked. In two hours, he is able to complete 8% of the target.
-    How many days does he need to reach the target, working no longer than 5 hours a day?
-</en></name>
+<name>
+    <ru>У кондитера есть план по выпечке пирогов. За два часа он выполниляет 8% от плана.
+        За сколько дней он сможет выполнить план, если рабочий день ограничен 5 часами?
+    </ru>
+    <en>A baker has a target number of pies to be baked. In two hours, he is able to complete 8% of the target.
+        How many days does he need to reach the target, working no longer than 5 hours a day?
+    </en>
+</name>
 <fields>
-    <field type="number" placeholder="Введите число" correct="5" placeholder-en="Enter a number" correct-en="5"/> <!-- 5 -->
+    <field type="number" placeholder="Введите число" correct="5" placeholder-en="Enter a number"
+           correct-en="5"/> <!-- 5 -->
 </fields>
 </item>
 <item id="533" group="iq-math" method="TEXT">
-<name><ru>Два брата получили в наследство 117 соток земли в соотношении 4:5.
-    Сколько соток получит каждый брат?
-</ru><en>Two brothers have inherited 117 acres of land in the ratio of 4:5.
-    How many acres has each of the brothers got?
-</en></name>
+<name>
+    <ru>Два брата получили в наследство 117 соток земли в соотношении 4:5.
+        Сколько соток получит каждый брат?
+    </ru>
+    <en>Two brothers have inherited 117 acres of land in the ratio of 4:5.
+        How many acres has each of the brothers got?
+    </en>
+</name>
 <fields>
-    <field type="number" placeholder="Введите число" correct="52" placeholder-en="Enter a number" correct-en="52"/> <!-- 52 -->
-    <field type="number" placeholder="Введите число" correct="65" placeholder-en="Enter a number" correct-en="65"/> <!-- 65 -->
+    <field type="number" placeholder="Введите число" correct="52" placeholder-en="Enter a number"
+           correct-en="52"/> <!-- 52 -->
+    <field type="number" placeholder="Введите число" correct="65" placeholder-en="Enter a number"
+           correct-en="65"/> <!-- 65 -->
 </fields>
 </item>
 <item id="534" group="iq-verbal" method="CHECKBOX" count="2">
-<name><ru>Какие два слова определяют понятие «неделя» точнее всего:</ru><en>Which two words can be used to define a 'week'?</en></name>
+<name>
+    <ru>Какие два слова определяют понятие «неделя» точнее всего:</ru>
+    <en>Which two words can be used to define a 'week'?</en>
+</name>
 <options>
-    <option value="1" correct="true"><ru>выходные</ru><en>weekend</en></option>
-    <option value="2"><ru>понедельник</ru><en>Monday</en></option>
-    <option value="3" correct="true"><ru>будни</ru><en>weekday</en></option>
-    <option value="4"><ru>воскресенье</ru><en>Sunday</en></option>
-    <option value="5">праздник</ru><en>holiday</en></option>
+    <option value="1" correct="true">
+        <ru>выходные</ru>
+        <en>weekend</en>
+    </option>
+    <option value="2">
+        <ru>понедельник</ru>
+        <en>Monday</en>
+    </option>
+    <option value="3" correct="true">
+        <ru>будни</ru>
+        <en>weekday</en>
+    </option>
+    <option value="4">
+        <ru>воскресенье</ru>
+        <en>Sunday</en>
+    </option>
+    <option value="5"><ru>праздник</ru>
+    <en>holiday</en>
+</option>
 </options>
         </item>
 <item id="535" group="iq-spatial">
-<name><ru>Какая из этих фигур наиболее отлична от других?</ru><en>Which of the shapes differs the most from the rest?</en></name>
+<name>
+    <ru>Какая из этих фигур наиболее отлична от других?</ru>
+    <en>Which of the shapes differs the most from the rest?</en>
+</name>
 <options>
     <option value="1" img="https://testonomica.com/static/img/4/g_2_4.svg"/>
     <option value="2" img="https://testonomica.com/static/img/4/g_3_3.svg"/>
@@ -1330,185 +2957,485 @@
 </item>
         <!-- Абстрактное мышление -->
 <item id="550" group="iq-abstract">
-<name><ru>Выберите аналогичную пару слов к: <![CDATA[Нарушение — Штраф]]></ru><en>Choose a pair of words, which is similar to <![CDATA["Violation — Fine"]]></en></name>
+<name>
+    <ru>Выберите аналогичную пару слов к: <![CDATA[Нарушение — Штраф]]></ru>
+    <en>Choose a pair of words, which is similar to <![CDATA["Violation — Fine"]]></en>
+</name>
 <options>
-    <option value="0"><ru>Склад — Хранилище</ru><en>Storage — Warehouse</en></option>
-    <option value="1" correct="true"><ru>Нагревание — Кипение</ru><en>Heating — Boiling</en></option>
-    <option value="0"><ru>Эскиз — Картина</ru><en>Sketch — Painting</en></option>
+    <option value="0">
+        <ru>Склад — Хранилище</ru>
+        <en>Storage — Warehouse</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>Нагревание — Кипение</ru>
+        <en>Heating — Boiling</en>
+    </option>
+    <option value="0">
+        <ru>Эскиз — Картина</ru>
+        <en>Sketch — Painting</en>
+    </option>
 </options>
 </item>
 <item id="551" group="iq-abstract">
-<name><ru>Выберите аналогичную пару слов к: <![CDATA[Хирург — Операция]]></ru><en>Choose a pair of words, which is similar to <![CDATA["Surgeon — Surgery"]]>
-</en></name>
+<name>
+    <ru>Выберите аналогичную пару слов к: <![CDATA[Хирург — Операция]]></ru>
+    <en>Choose a pair of words, which is similar to <![CDATA["Surgeon — Surgery"]]>
+    </en>
+</name>
 <options>
-    <option value="0"><ru>Клетка — Организм</ru><en>Cell — Organism</en></option>
-    <option value="1" correct="true"><ru>Картина — Художник</ru><en>Painter — Painting</en></option>
-    <option value="0"><ru>Посев — Урожай</ru><en>Planting — Harvest</en></option>
+    <option value="0">
+        <ru>Клетка — Организм</ru>
+        <en>Cell — Organism</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>Картина — Художник</ru>
+        <en>Painter — Painting</en>
+    </option>
+    <option value="0">
+        <ru>Посев — Урожай</ru>
+        <en>Planting — Harvest</en>
+    </option>
 </options>
 </item>
 <item id="552" group="iq-abstract">
-<name><ru>Выберите аналогичную пару слов к: <![CDATA[Идти — Шагать]]></ru><en>Choose a pair of words, which is similar to "Walk — Stroll"</en></name>
+<name>
+    <ru>Выберите аналогичную пару слов к: <![CDATA[Идти — Шагать]]></ru>
+    <en>Choose a pair of words, which is similar to "Walk — Stroll"</en>
+</name>
 <options>
-    <option value="0"><ru>Высоко — Низко</ru><en>High — Low</en></option>
-    <option value="0"><ru>Рябина — Дерево</ru><en>Willow — Tree</en></option>
-    <option value="1" correct="true"><ru>Скала — Утёс</ru><en>Cliff — Crag</en></option>
+    <option value="0">
+        <ru>Высоко — Низко</ru>
+        <en>High — Low</en>
+    </option>
+    <option value="0">
+        <ru>Рябина — Дерево</ru>
+        <en>Willow — Tree</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>Скала — Утёс</ru>
+        <en>Cliff — Crag</en>
+    </option>
 </options>
 </item>
 <item id="553" group="iq-abstract">
-<name><ru>Выберите аналогичную пару слов к: <![CDATA[Вагон — Поезд]]></ru><en>Choose a pair of words, which is similar to <![CDATA["Railcar— Train"]]></en></name>
+<name>
+    <ru>Выберите аналогичную пару слов к: <![CDATA[Вагон — Поезд]]></ru>
+    <en>Choose a pair of words, which is similar to <![CDATA["Railcar— Train"]]></en>
+</name>
 <options>
-    <option value="1" correct="true"><ru>Клетка — Организм</ru><en>Cell — Organism</en></option>
-    <option value="0"><ru>Кондитер — Торт</ru><en>Baker — Bread</en></option>
-    <option value="0"><ru>Сапоги — Обувь</ru><en>Boots — Shoes</en></option>
+    <option value="1" correct="true">
+        <ru>Клетка — Организм</ru>
+        <en>Cell — Organism</en>
+    </option>
+    <option value="0">
+        <ru>Кондитер — Торт</ru>
+        <en>Baker — Bread</en>
+    </option>
+    <option value="0">
+        <ru>Сапоги — Обувь</ru>
+        <en>Boots — Shoes</en>
+    </option>
 </options>
 </item>
 <item id="554" group="iq-abstract">
-<name><ru>Выберите аналогичную пару слов к: <![CDATA[Понедельник — Вторник]]></ru><en>Choose a pair of words, which is similar to <![CDATA["Monday — Tuesday"]]></en></name>
+<name>
+    <ru>Выберите аналогичную пару слов к: <![CDATA[Понедельник — Вторник]]></ru>
+    <en>Choose a pair of words, which is similar to <![CDATA["Monday — Tuesday"]]></en>
+</name>
 <options>
-    <option value="0"><ru>Милый — Пригожий</ru><en>Handsome — Attractive</en></option>
-    <option value="0"><ru>Щекотка — Смех</ru><en>Tickling — Laughter</en></option>
-    <option value="1" correct="true"><ru>Сон — Пробуждение</ru><en>Sleep — Awakening</en></option>
+    <option value="0">
+        <ru>Милый — Пригожий</ru>
+        <en>Handsome — Attractive</en>
+    </option>
+    <option value="0">
+        <ru>Щекотка — Смех</ru>
+        <en>Tickling — Laughter</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>Сон — Пробуждение</ru>
+        <en>Sleep — Awakening</en>
+    </option>
 </options>
 </item>
 <item id="555" group="iq-abstract">
-<name><ru>Выберите аналогичную пару слов к: <![CDATA[Тепло — Холодно]]></ru><en>Choose a pair of words, which is similar to <![CDATA["Warm — Cold"]]></en></name>
+<name>
+    <ru>Выберите аналогичную пару слов к: <![CDATA[Тепло — Холодно]]></ru>
+    <en>Choose a pair of words, which is similar to <![CDATA["Warm — Cold"]]></en>
+</name>
 <options>
-    <option value="1" correct="true"><ru>Талантливо — Бездарно</ru><en>Professional — Amateur</en></option>
-    <option value="0"><ru>Абсурд — Нелепость</ru><en>Absurd — Ridiculous</en></option>
-    <option value="0"><ru>Болезнь — Корь</ru><en>Disease — Measles</en></option>
+    <option value="1" correct="true">
+        <ru>Талантливо — Бездарно</ru>
+        <en>Professional — Amateur</en>
+    </option>
+    <option value="0">
+        <ru>Абсурд — Нелепость</ru>
+        <en>Absurd — Ridiculous</en>
+    </option>
+    <option value="0">
+        <ru>Болезнь — Корь</ru>
+        <en>Disease — Measles</en>
+    </option>
 </options>
 </item>
 <item id="556" group="iq-abstract">
-<name><ru>Выберите аналогичную пару слов к: <![CDATA[Тарелка — Чашка]]></ru><en>Choose a pair of words, which is similar to <![CDATA["Plate — Cup"]]></en></name>
+<name>
+    <ru>Выберите аналогичную пару слов к: <![CDATA[Тарелка — Чашка]]></ru>
+    <en>Choose a pair of words, which is similar to <![CDATA["Plate — Cup"]]></en>
+</name>
 <options>
-    <option value="0"><ru>Охотник — Добыча</ru><en>Hunter — Quarry</en></option>
-    <option value="1" correct="true"><ru>Берёза — Липа</ru><en>Birch — Oak</en></option>
-    <option value="0"><ru>Буря — Ураган</ru><en>Storm — Hurricane</en></option>
+    <option value="0">
+        <ru>Охотник — Добыча</ru>
+        <en>Hunter — Quarry</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>Берёза — Липа</ru>
+        <en>Birch — Oak</en>
+    </option>
+    <option value="0">
+        <ru>Буря — Ураган</ru>
+        <en>Storm — Hurricane</en>
+    </option>
 </options>
 </item>
 <item id="557" group="iq-abstract">
-<name><ru>Выберите аналогичную пару слов к: <![CDATA[Орёл — Птица]]></ru><en>Choose a pair of words, which is similar to <![CDATA["Eagle — Bird"]]></en></name>
+<name>
+    <ru>Выберите аналогичную пару слов к: <![CDATA[Орёл — Птица]]></ru>
+    <en>Choose a pair of words, which is similar to <![CDATA["Eagle — Bird"]]></en>
+</name>
 <options>
-    <option value="0"><ru>Зима — Весна</ru><en>Winter — Spring</en></option>
-    <option value="0"><ru>Живое — Неживое</ru><en>Living — Dead</en></option>
-    <option value="1" correct="true"><ru>Автомобиль — Транспорт</ru><en>Car — Vehicle</en></option>
+    <option value="0">
+        <ru>Зима — Весна</ru>
+        <en>Winter — Spring</en>
+    </option>
+    <option value="0">
+        <ru>Живое — Неживое</ru>
+        <en>Living — Dead</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>Автомобиль — Транспорт</ru>
+        <en>Car — Vehicle</en>
+    </option>
 </options>
 </item>
 <item id="558" group="iq-abstract">
-<name><ru>Выберите аналогичную пару слов к: <![CDATA[Доктор — Врач]]></ru><en>Choose a pair of words, which is similar to <![CDATA["Doctor — Physician"]]></en></name>
+<name>
+    <ru>Выберите аналогичную пару слов к: <![CDATA[Доктор — Врач]]></ru>
+    <en>Choose a pair of words, which is similar to <![CDATA["Doctor — Physician"]]></en>
+</name>
 <options>
-    <option value="1" correct="true"><ru>Буря — Ураган</ru><en>Storm — Hurricane</en></option>
-    <option value="0"><ru>Актёр — Театр</ru><en>Actor — Theater</en></option>
-    <option value="0"><ru>Бактерия — Вирус</ru><en>Bacterium — Virus</en></option>
+    <option value="1" correct="true">
+        <ru>Буря — Ураган</ru>
+        <en>Storm — Hurricane</en>
+    </option>
+    <option value="0">
+        <ru>Актёр — Театр</ru>
+        <en>Actor — Theater</en>
+    </option>
+    <option value="0">
+        <ru>Бактерия — Вирус</ru>
+        <en>Bacterium — Virus</en>
+    </option>
 </options>
 </item>
 <item id="559" group="iq-abstract">
-<name><ru>Выберите аналогичную пару слов к: <![CDATA[Труд — Усталость]]></ru><en>Choose a pair of words, which is similar to <![CDATA["Toil — Exhaustion"]]></en></name>
+<name>
+    <ru>Выберите аналогичную пару слов к: <![CDATA[Труд — Усталость]]></ru>
+    <en>Choose a pair of words, which is similar to <![CDATA["Toil — Exhaustion"]]></en>
+</name>
 <options>
-    <option value="0"><ru>Футболист — Гол</ru><en>Footballer — Goal</en></option>
-    <option value="1" correct="true"><ru>Взрыв — Разрушение</ru><en>Explosion — Destruction</en></option>
-    <option value="0"><ru>Пустой — Полный</ru><en>Empty — Full</en></option>
+    <option value="0">
+        <ru>Футболист — Гол</ru>
+        <en>Footballer — Goal</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>Взрыв — Разрушение</ru>
+        <en>Explosion — Destruction</en>
+    </option>
+    <option value="0">
+        <ru>Пустой — Полный</ru>
+        <en>Empty — Full</en>
+    </option>
 </options>
 </item>
         <!-- ШТУР Эрудиция -->
 <item id="600" group="iq-erudition">
-<name><ru>Гуманный - это ...</ru><en>“Humane” means...</en></name>
+<name>
+    <ru>Гуманный - это ...</ru>
+    <en>“Humane” means...</en>
+</name>
 <options>
-    <option value="0"><ru>общественный</ru><en>public</en></option>
-    <option value="1" correct="true"><ru>человечный</ru><en>compassionate</en></option>
-    <option value="0"><ru>профессиональный</ru><en>professional</en></option>
-    <option value="0"><ru>прогрессивный</ru><en>progressive</en></option>
-    <option value="0"><ru>пренебрежительный</ru><en>arrogant</en></option>
+    <option value="0">
+        <ru>общественный</ru>
+        <en>public</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>человечный</ru>
+        <en>compassionate</en>
+    </option>
+    <option value="0">
+        <ru>профессиональный</ru>
+        <en>professional</en>
+    </option>
+    <option value="0">
+        <ru>прогрессивный</ru>
+        <en>progressive</en>
+    </option>
+    <option value="0">
+        <ru>пренебрежительный</ru>
+        <en>arrogant</en>
+    </option>
 </options>
 </item>
 <item id="601" group="iq-erudition">
-<name><ru>Одинаковыми по смыслу являются слова "демократия" и ...</ru><en>The word 'democracy' has the same meaning as...</en></name>
+<name>
+    <ru>Одинаковыми по смыслу являются слова "демократия" и ...</ru>
+    <en>The word 'democracy' has the same meaning as...</en>
+</name>
 <options>
-    <option value="0"><ru>анархия</ru><en>anarchy</en></option>
-    <option value="0"><ru>абсолютизм</ru><en>absolutism</en></option>
-    <option value="1" correct="true"><ru>народовластие</ru><en>people power</en></option>
-    <option value="0"><ru>династия</ru><en>dynasty</en></option>
-    <option value="0"><ru>классы</ru><en>class society</en></option>
+    <option value="0">
+        <ru>анархия</ru>
+        <en>anarchy</en>
+    </option>
+    <option value="0">
+        <ru>абсолютизм</ru>
+        <en>absolutism</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>народовластие</ru>
+        <en>people power</en>
+    </option>
+    <option value="0">
+        <ru>династия</ru>
+        <en>dynasty</en>
+    </option>
+    <option value="0">
+        <ru>классы</ru>
+        <en>class society</en>
+    </option>
 </options>
 </item>
 <item id="602" group="iq-erudition">
-<name><ru>Наука о выведении лучших пород животных и сортов растений называется ...</ru><en>The science of breeding better animal breeds or plant species is called ...</en></name>
+<name>
+    <ru>Наука о выведении лучших пород животных и сортов растений называется ...</ru>
+    <en>The science of breeding better animal breeds or plant species is called ...</en>
+</name>
 <options>
-    <option value="0"><ru>бионика</ru><en>bionics</en></option>
-    <option value="0"><ru>химия</ru><en>chemistry</en></option>
-    <option value="1" correct="true"><ru>селекция</ru><en>selection</en></option>
-    <option value="0"><ru>ботаника</ru><en>botanics</en></option>
-    <option value="0"><ru>физиология</ru><en>physiology</en></option>
+    <option value="0">
+        <ru>бионика</ru>
+        <en>bionics</en>
+    </option>
+    <option value="0">
+        <ru>химия</ru>
+        <en>chemistry</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>селекция</ru>
+        <en>selection</en>
+    </option>
+    <option value="0">
+        <ru>ботаника</ru>
+        <en>botanics</en>
+    </option>
+    <option value="0">
+        <ru>физиология</ru>
+        <en>physiology</en>
+    </option>
 </options>
 </item>
 <item id="603" group="iq-erudition">
-<name><ru>Начитанность, глубокие и широкие познания - это ...</ru><en>The wide reading, the depth and breadth of knowledge, is called...</en></name>
+<name>
+    <ru>Начитанность, глубокие и широкие познания - это ...</ru>
+    <en>The wide reading, the depth and breadth of knowledge, is called...</en>
+</name>
 <options>
-    <option value="0"><ru>интеллигентность</ru><en>intelligence</en></option>
-    <option value="0"><ru>опытность</ru><en>experience</en></option>
-    <option value="1" correct="true"><ru>эрудиция</ru><en>erudition</en></option>
-    <option value="0"><ru>талант</ru><en>talent</en></option>
-    <option value="0"><ru>самомнение</ru><en>boasting</en></option>
+    <option value="0">
+        <ru>интеллигентность</ru>
+        <en>intelligence</en>
+    </option>
+    <option value="0">
+        <ru>опытность</ru>
+        <en>experience</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>эрудиция</ru>
+        <en>erudition</en>
+    </option>
+    <option value="0">
+        <ru>талант</ru>
+        <en>talent</en>
+    </option>
+    <option value="0">
+        <ru>самомнение</ru>
+        <en>boasting</en>
+    </option>
 </options>
 </item>
 <item id="604" group="iq-erudition">
-<name><ru>Свод законов, относящихся к какой-либо области человеческой жизни и деятельности называется ...</ru><en>A set of conventions or rules governing a particular sphere of human life or activity is called...</en></name>
+<name>
+    <ru>Свод законов, относящихся к какой-либо области человеческой жизни и деятельности называется ...</ru>
+    <en>A set of conventions or rules governing a particular sphere of human life or activity is called...</en>
+</name>
 <options>
-    <option value="0"><ru>революцией</ru><en>revolution</en></option>
-    <option value="0"><ru>постановлением</ru><en>decree</en></option>
-    <option value="0"><ru>традицией</ru><en>tradition</en></option>
-    <option value="1" correct="true"><ru>кодексом</ru><en>code</en></option>
-    <option value="0"><ru>проектом</ru><en>draft</en></option>
+    <option value="0">
+        <ru>революцией</ru>
+        <en>revolution</en>
+    </option>
+    <option value="0">
+        <ru>постановлением</ru>
+        <en>decree</en>
+    </option>
+    <option value="0">
+        <ru>традицией</ru>
+        <en>tradition</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>кодексом</ru>
+        <en>code</en>
+    </option>
+    <option value="0">
+        <ru>проектом</ru>
+        <en>draft</en>
+    </option>
 </options>
 </item>
 <item id="605" group="iq-erudition">
-<name><ru>Если спор заканчивается взаимными уступками, тогда говорят о ...</ru><en>An agreement or settlement of a dispute that is reached by each side making concessions is called...</en></name>
+<name>
+    <ru>Если спор заканчивается взаимными уступками, тогда говорят о ...</ru>
+    <en>An agreement or settlement of a dispute that is reached by each side making concessions is called...</en>
+</name>
 <options>
-    <option value="1" correct="true"><ru>компромиссе</ru><en>compromise</en></option>
-    <option value="0"><ru>общении</ru><en>discussion</en></option>
-    <option value="0"><ru>объединении</ru><en>union</en></option>
-    <option value="0"><ru>переговорах</ru><en>negotiation</en></option>
-    <option value="0"><ru>противоречии</ru><en>contradiction</en></option>
+    <option value="1" correct="true">
+        <ru>компромиссе</ru>
+        <en>compromise</en>
+    </option>
+    <option value="0">
+        <ru>общении</ru>
+        <en>discussion</en>
+    </option>
+    <option value="0">
+        <ru>объединении</ru>
+        <en>union</en>
+    </option>
+    <option value="0">
+        <ru>переговорах</ru>
+        <en>negotiation</en>
+    </option>
+    <option value="0">
+        <ru>противоречии</ru>
+        <en>contradiction</en>
+    </option>
 </options>
 </item>
 <item id="606" group="iq-erudition">
-<name><ru>Этика - это учение о ...</ru><en>Ethics is a branch of knowledge that deals with...</en></name>
+<name>
+    <ru>Этика - это учение о ...</ru>
+    <en>Ethics is a branch of knowledge that deals with...</en>
+</name>
 <options>
-    <option value="0"><ru>психике</ru><en>psyche</en></option>
-    <option value="1" correct="true"><ru>морали</ru><en>moral principles</en></option>
-    <option value="0"><ru>природе</ru><en>nature</en></option>
-    <option value="0"><ru>обществе</ru><en>society</en></option>
-    <option value="0"><ru>искусстве</ru><en>arts</en></option>
+    <option value="0">
+        <ru>психике</ru>
+        <en>psyche</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>морали</ru>
+        <en>moral principles</en>
+    </option>
+    <option value="0">
+        <ru>природе</ru>
+        <en>nature</en>
+    </option>
+    <option value="0">
+        <ru>обществе</ru>
+        <en>society</en>
+    </option>
+    <option value="0">
+        <ru>искусстве</ru>
+        <en>arts</en>
+    </option>
 </options>
 </item>
 <item id="607" group="iq-erudition">
-<name><ru>Противоположностью понятия "идентичный" будет ...</ru><en>The word 'identical' is the opposite to...</en></name>
+<name>
+    <ru>Противоположностью понятия "идентичный" будет ...</ru>
+    <en>The word 'identical' is the opposite to...</en>
+</name>
 <options>
-    <option value="1" correct="true"><ru>тождественный</ru><en>similar</en></option>
-    <option value="0"><ru>единственный</ru><en>unique</en></option>
-    <option value="0"><ru>внушительный</ru><en>impressive</en></option>
-    <option value="0"><ru>различный</ru><en>different</en></option>
-    <option value="0"><ru>изолированный</ru><en>isolated</en></option>
+    <option value="1" correct="true">
+        <ru>тождественный</ru>
+        <en>similar</en>
+    </option>
+    <option value="0">
+        <ru>единственный</ru>
+        <en>unique</en>
+    </option>
+    <option value="0">
+        <ru>внушительный</ru>
+        <en>impressive</en>
+    </option>
+    <option value="0">
+        <ru>различный</ru>
+        <en>different</en>
+    </option>
+    <option value="0">
+        <ru>изолированный</ru>
+        <en>isolated</en>
+    </option>
 </options>
 </item>
 <item id="608" group="iq-erudition">
-<name><ru>Освобождение от зависимости, предрассудков, уравнение в правах - это ...</ru><en>The fact or process of being set free from legal, social, or political restrictions is called...</en></name>
+<name>
+    <ru>Освобождение от зависимости, предрассудков, уравнение в правах - это ...</ru>
+    <en>The fact or process of being set free from legal, social, or political restrictions is called...</en>
+</name>
 <options>
-    <option value="0"><ru>закон</ru><en>law</en></option>
-    <option value="0"><ru>эмиграция</ru><en>emigration</en></option>
-    <option value="0"><ru>воззрение</ru><en>alignment</en></option>
-    <option value="0"><ru>действие</ru><en>action</en></option>
-    <option value="1" correct="true"><ru>эмансипация</ru><en>emancipation</en></option>
+    <option value="0">
+        <ru>закон</ru>
+        <en>law</en>
+    </option>
+    <option value="0">
+        <ru>эмиграция</ru>
+        <en>emigration</en>
+    </option>
+    <option value="0">
+        <ru>воззрение</ru>
+        <en>alignment</en>
+    </option>
+    <option value="0">
+        <ru>действие</ru>
+        <en>action</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>эмансипация</ru>
+        <en>emancipation</en>
+    </option>
 </options>
 </item>
 <item id="609" group="iq-erudition">
-<name><ru>Человек, который скептически относится к прогрессу, является</ru><en>A person, who is averse to progress and change, can be called... </en></name>
+<name>
+    <ru>Человек, который скептически относится к прогрессу, является</ru>
+    <en>A person, who is averse to progress and change, can be called...</en>
+</name>
 <options>
-    <option value="0"><ru>демократом</ru><en>a democrat</en></option>
-    <option value="0"><ru>радикалом</ru><en>an extremist</en></option>
-    <option value="1" correct="true"><ru>консерватором</ru><en>a conservative</en></option>
-    <option value="0"><ru>либералом</ru><en>a liberal</en></option>
-    <option value="0"><ru>анархистом</ru><en>an anarchist</en></option>
+    <option value="0">
+        <ru>демократом</ru>
+        <en>a democrat</en>
+    </option>
+    <option value="0">
+        <ru>радикалом</ru>
+        <en>an extremist</en>
+    </option>
+    <option value="1" correct="true">
+        <ru>консерватором</ru>
+        <en>a conservative</en>
+    </option>
+    <option value="0">
+        <ru>либералом</ru>
+        <en>a liberal</en>
+    </option>
+    <option value="0">
+        <ru>анархистом</ru>
+        <en>an anarchist</en>
+    </option>
 </options>
 </item>
         </items>

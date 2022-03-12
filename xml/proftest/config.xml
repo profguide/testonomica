@@ -2,549 +2,1342 @@
 <config>
     <types>
         <natural>
-            <name><ru>Естественные науки и практики</ru><en>Natural sciences and practice</en></name>
+            <name>
+                <ru>Естественные науки и практики</ru>
+                <en>Natural sciences and practice</en>
+            </name>
             <interest>
-                <min><ru>Вам неинтересны биология и химия, а также устройство организмов и способов их существования, у вас
-                    нет потребности читать и думать про это и удивляться этому. Вы можете с интересом посмотреть хорошее
-                    видео про животный мир. Можете иметь домашнего питомца, играть с ним, ухаживать за домашними
-                    растениями без особенного желания. Вы могли бы даже обработать рану кому-то, но точно понимая: на
-                    каждый день работы с человеческим телом «меня не хватит». Вы никак не можете вспомнить чем
-                    отличается митоз от мейоза, вирус от бактерии и катион от аниона. При таком уровне интереса к живой
-                    природе не стоит учиться на химика, биолога, врача и т.д.
-                </ru><en>Biology and chemistry do not interest you, nor do organisms or how they exist and work. You don’t find the need to read about these things, think about them or reflect on them for long periods of time. Perhaps you sometimes enjoy watching videos on nature and the animal world. Maybe you have a pet that you enjoy playing with and taking care of, or house plants that you look after without any particular intensity. You may be capable of treating a wound, but you know that the thought of having to work every day with the human body is not for you and you would not manage to do so. You pay no attention to remembering how mitosis differs from meiosis, how a virus is different from a bacterium or how a cation differs from an anion. With this level of interest, it is not worth you studying to become a doctor, chemist or biologist.</en></min>
-                <mid><ru>У вас есть общий интерес к живому, возможно, эстетический, бытовой, но не научный, нет особенного
-                    интереса к устройству живых организмов, тканей и молекул, нет упорных попыток ухаживать за животными
-                    и растениями, нет знаний на эту тему выше даваемых в школе. Возможно, вы получаете хорошие отметки в
-                    школе по химии и биологии. Но серьезного опыта самостоятельного чтения научно-популярной литературы
-                    и длительного опыта занятий в кружках по химии или биологии у вас нет. Ваша память на сведения по
-                    химии и биологии средняя. С таким уровнем интереса к биологии и химии не стоит становиться врачом,
-                    биологом, химиком-исследователем или химиком-технологом, но можно работать в продажах или закупках
-                    биологического сырья.
-                </ru><en>You have a general interest in living things, perhaps on an aesthetic, everyday rather than scientific level. You have no particular interest in the structure of living organisms, tissues and molecules and you do not make particular attempts to care for animals or plants. You do not have knowledge on these topics other than the general level you have acquired at school. Maybe you receive good grades in chemistry and biology at school, but you don’t take the time to read independently on scientific literature outside of the curriculum and you don’t take part in afterschool or additional classes on these two subjects. Your memory for chemistry and biology is average. With this level of interest in biology and chemistry you may not be a suitable candidate for work as a doctor, biologist, research chemist or chemical engineer, but you may be suited to work in sales in the field of biological materials.</en></mid>
-                <max><ru>Вы показали высокий уровень интереса к живому — организмам, их устройству, молекулам и атомам,
-                    интуитивное понимание их функционирования. Это проявляется осмысленных попытках "лечить",
-                    препарировать, проводить химические опыты, а также в чтении специальной литературы и просмотре
-                    фильмов, youtubе-каналов на данную тему, занятиях в кружках, мыслях на данную тему в неподходящем
-                    месте, например, во время обеда или на уроке литературы. С этим уровнем интереса и прилежания к
-                    тонким природным явлениям и при наличии способностей — возможна работа в медицине, химических или
-                    биохимических технологиях, в науке, в генной инженерии в частности.
-                </ru><en>You demonstrated strong interest in living things: organisms, their structure, molecules and atoms, and you have an intuitive understanding of how they all function. That is expressed in your intelligent attempts to ‘treat’ or dissect things, carry out chemistry experiments, as well as reading specialist literature, watching films or Youtube channels on the topic and taking afterschool or extra-curricular classes. You often find yourself occupied by thoughts on these subjects at strange times, such as during lunchbreak or in the middle of a literature class. With this level of interest and a due diligence to the subtleties of these subjects, coupled with the necessary abilities, it is possible to look towards work in the field of medicine, chemical and biochemical technology, or in science, genetic engineering in particular.</en></max>
+                <min>
+                    <ru>Вам неинтересны биология и химия, а также устройство организмов и способов их существования, у
+                        вас
+                        нет потребности читать и думать про это и удивляться этому. Вы можете с интересом посмотреть
+                        хорошее
+                        видео про животный мир. Можете иметь домашнего питомца, играть с ним, ухаживать за домашними
+                        растениями без особенного желания. Вы могли бы даже обработать рану кому-то, но точно понимая:
+                        на
+                        каждый день работы с человеческим телом «меня не хватит». Вы никак не можете вспомнить чем
+                        отличается митоз от мейоза, вирус от бактерии и катион от аниона. При таком уровне интереса к
+                        живой
+                        природе не стоит учиться на химика, биолога, врача и т.д.
+                    </ru>
+                    <en>Biology and chemistry do not interest you, nor do organisms or how they exist and work. You
+                        don’t find the need to read about these things, think about them or reflect on them for long
+                        periods of time. Perhaps you sometimes enjoy watching videos on nature and the animal world.
+                        Maybe you have a pet that you enjoy playing with and taking care of, or house plants that you
+                        look after without any particular intensity. You may be capable of treating a wound, but you
+                        know that the thought of having to work every day with the human body is not for you and you
+                        would not manage to do so. You pay no attention to remembering how mitosis differs from meiosis,
+                        how a virus is different from a bacterium or how a cation differs from an anion. With this level
+                        of interest, it is not worth you studying to become a doctor, chemist or biologist.
+                    </en>
+                </min>
+                <mid>
+                    <ru>У вас есть общий интерес к живому, возможно, эстетический, бытовой, но не научный, нет
+                        особенного
+                        интереса к устройству живых организмов, тканей и молекул, нет упорных попыток ухаживать за
+                        животными
+                        и растениями, нет знаний на эту тему выше даваемых в школе. Возможно, вы получаете хорошие
+                        отметки в
+                        школе по химии и биологии. Но серьезного опыта самостоятельного чтения научно-популярной
+                        литературы
+                        и длительного опыта занятий в кружках по химии или биологии у вас нет. Ваша память на сведения
+                        по
+                        химии и биологии средняя. С таким уровнем интереса к биологии и химии не стоит становиться
+                        врачом,
+                        биологом, химиком-исследователем или химиком-технологом, но можно работать в продажах или
+                        закупках
+                        биологического сырья.
+                    </ru>
+                    <en>You have a general interest in living things, perhaps on an aesthetic, everyday rather than
+                        scientific level. You have no particular interest in the structure of living organisms, tissues
+                        and molecules and you do not make particular attempts to care for animals or plants. You do not
+                        have knowledge on these topics other than the general level you have acquired at school. Maybe
+                        you receive good grades in chemistry and biology at school, but you don’t take the time to read
+                        independently on scientific literature outside of the curriculum and you don’t take part in
+                        afterschool or additional classes on these two subjects. Your memory for chemistry and biology
+                        is average. With this level of interest in biology and chemistry you may not be a suitable
+                        candidate for work as a doctor, biologist, research chemist or chemical engineer, but you may be
+                        suited to work in sales in the field of biological materials.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень интереса к живому — организмам, их устройству, молекулам и атомам,
+                        интуитивное понимание их функционирования. Это проявляется осмысленных попытках "лечить",
+                        препарировать, проводить химические опыты, а также в чтении специальной литературы и просмотре
+                        фильмов, youtubе-каналов на данную тему, занятиях в кружках, мыслях на данную тему в
+                        неподходящем
+                        месте, например, во время обеда или на уроке литературы. С этим уровнем интереса и прилежания к
+                        тонким природным явлениям и при наличии способностей — возможна работа в медицине, химических
+                        или
+                        биохимических технологиях, в науке, в генной инженерии в частности.
+                    </ru>
+                    <en>You demonstrated strong interest in living things: organisms, their structure, molecules and
+                        atoms, and you have an intuitive understanding of how they all function. That is expressed in
+                        your intelligent attempts to ‘treat’ or dissect things, carry out chemistry experiments, as well
+                        as reading specialist literature, watching films or Youtube channels on the topic and taking
+                        afterschool or extra-curricular classes. You often find yourself occupied by thoughts on these
+                        subjects at strange times, such as during lunchbreak or in the middle of a literature class.
+                        With this level of interest and a due diligence to the subtleties of these subjects, coupled
+                        with the necessary abilities, it is possible to look towards work in the field of medicine,
+                        chemical and biochemical technology, or in science, genetic engineering in particular.
+                    </en>
+                </max>
             </interest>
             <skills>
-                <min><ru>Вы показали довольно низкий уровень способностей к работе с живой материей - с организмами и
-                    тканями, молекулами и атомами. Это выражается в сильном затруднении понимания, запоминания данных из
-                    химии и биологии. В этом случае не стоит становиться врачом, биологом, химиком-исследователем или
-                    химиком-технологом.
-                </ru><en>You demonstrated low aptitude for working with living matter, such as organisms, tissues, molecules and atoms. You have a lot of difficulty understanding and remembering information relating to chemistry or biology. It would not be advised to pursue the career of doctor, biologist, research or industrial chemist.</en></min>
-                <mid><ru>Вы показали средний уровень способностей к работе с живой материей с организмами и тканями,
-                    молекулами и атомами. Это проявилось в физической возможности производить тонкие действия руками
-                    (как это делают врач, медсестра, ученый в лаборатории). Средний уровень способностей выражается в
-                    интеллектуальной возможности понимать, запоминать немалые массивы данных из химии и биологии - но не
-                    слишком легко, а с трудом. С таким уровнем способностей при желании можно стать врачом, биологом или
-                    химиком-исследователем или химиком-технологом.
-                </ru><en>You demonstrated average aptitude for working with living matter, such as organisms, tissues, molecules and atoms. This manifests itself in the physical ability to perform subtle and important actions by hand (such as doctors, nurses or scientists in laboratories do day-to-day). This average level of ability is expressed in your abilities to understand and memorize large amounts of data in the fields of biology and chemistry, although you often do so with some difficulty. With this level of ability, you would be able to become a doctor, biologist, research chemist or industrial chemist if you so desired.</en></mid>
-                <max><ru>Вы показали высокий уровень способностей к работе с живой материей: организмами и тканями,
-                    молекулами и атомами. Вы способны производить тонкие действия руками. В будущем вы бы могли ловко
-                    настроить аппаратуру для измерений, наблюдений (для ученого). Высокий уровень способностей
-                    выражается у вас в возможности понимать, запоминать существенные массивы данных из химии и биологии,
-                    которыми в работе пришлось бы успешно оперировать. С этим уровнем способностей и прилежания к тонким
-                    природным явлениям возможна работа в медицине, химических или биохимических технологиях, в науке, в
-                    генной инженерии в частности.
-                </ru><en>You demonstrated strong aptitude for working with living matter: organisms and tissues, molecules and atoms. You are capable of performing subtle tasks by hand. In the future, you could be in charge of setting up scientific equipment for measurements and observations. Your ability is shown through your understanding and significant memorization of large amounts of data in the fields of chemistry and biology, which would be needed to successfully work in the given field. With this level of ability and dedication to the ins and outs of natural phenomena, it is possible for you to work in medicine, chemical or biochemical technology, or in science, in particular genetic engineering.</en></max>
+                <min>
+                    <ru>Вы показали довольно низкий уровень способностей к работе с живой материей - с организмами и
+                        тканями, молекулами и атомами. Это выражается в сильном затруднении понимания, запоминания
+                        данных из
+                        химии и биологии. В этом случае не стоит становиться врачом, биологом, химиком-исследователем
+                        или
+                        химиком-технологом.
+                    </ru>
+                    <en>You demonstrated low aptitude for working with living matter, such as organisms, tissues,
+                        molecules and atoms. You have a lot of difficulty understanding and remembering information
+                        relating to chemistry or biology. It would not be advised to pursue the career of doctor,
+                        biologist, research or industrial chemist.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень способностей к работе с живой материей с организмами и тканями,
+                        молекулами и атомами. Это проявилось в физической возможности производить тонкие действия руками
+                        (как это делают врач, медсестра, ученый в лаборатории). Средний уровень способностей выражается
+                        в
+                        интеллектуальной возможности понимать, запоминать немалые массивы данных из химии и биологии -
+                        но не
+                        слишком легко, а с трудом. С таким уровнем способностей при желании можно стать врачом, биологом
+                        или
+                        химиком-исследователем или химиком-технологом.
+                    </ru>
+                    <en>You demonstrated average aptitude for working with living matter, such as organisms, tissues,
+                        molecules and atoms. This manifests itself in the physical ability to perform subtle and
+                        important actions by hand (such as doctors, nurses or scientists in laboratories do day-to-day).
+                        This average level of ability is expressed in your abilities to understand and memorize large
+                        amounts of data in the fields of biology and chemistry, although you often do so with some
+                        difficulty. With this level of ability, you would be able to become a doctor, biologist,
+                        research chemist or industrial chemist if you so desired.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень способностей к работе с живой материей: организмами и тканями,
+                        молекулами и атомами. Вы способны производить тонкие действия руками. В будущем вы бы могли
+                        ловко
+                        настроить аппаратуру для измерений, наблюдений (для ученого). Высокий уровень способностей
+                        выражается у вас в возможности понимать, запоминать существенные массивы данных из химии и
+                        биологии,
+                        которыми в работе пришлось бы успешно оперировать. С этим уровнем способностей и прилежания к
+                        тонким
+                        природным явлениям возможна работа в медицине, химических или биохимических технологиях, в
+                        науке, в
+                        генной инженерии в частности.
+                    </ru>
+                    <en>You demonstrated strong aptitude for working with living matter: organisms and tissues,
+                        molecules and atoms. You are capable of performing subtle tasks by hand. In the future, you
+                        could be in charge of setting up scientific equipment for measurements and observations. Your
+                        ability is shown through your understanding and significant memorization of large amounts of
+                        data in the fields of chemistry and biology, which would be needed to successfully work in the
+                        given field. With this level of ability and dedication to the ins and outs of natural phenomena,
+                        it is possible for you to work in medicine, chemical or biochemical technology, or in science,
+                        in particular genetic engineering.
+                    </en>
+                </max>
             </skills>
         </natural>
 
         <tech>
-            <name><ru>Технические науки и практики</ru><en>Technical sciences and practice</en></name>
+            <name>
+                <ru>Технические науки и практики</ru>
+                <en>Technical sciences and practice</en>
+            </name>
             <interest>
-                <min><ru>Приборы и оборудование вам неинтересны, не понятны, вызывают недоумение, может быть, опасение. Вы
-                    можете ими пользоваться, но «как все», не продвинутым способом, если что-то ломается, самостоятельно
-                    вы не возьметесь чинить, а позовете мастера. Вы не смотрите видео об устройстве и работе двигателя,
-                    электронных приборов. Если нужно купить прибор, вы возьмете с собой того, кто лучше в этом
-                    разбирается. Память у вас на технические сведения не очень хороша. Вам сложно понять разницу между
-                    силой тока и напряжением. При таком уровне интереса к технике не стоит учиться на инженерном
-                    факультете технического вуза.
-                </ru><en>Technical devices and equipment are not interesting or easily understandable to you, perhaps they are even seen as unfamiliar and alien. You are able to use them ‘like everybody else’ but not in any advanced way. If something breaks you will not attempt to repair it yourself, but rather take it to a repair shop. You spend no time watching videos about technology or the operation of engines and electronic devices. If you need to buy a new gadget, you’ll ask someone who has a better understanding for advice. Your memory for technical information is not particularly good. You find it difficult to gauge the difference between current and voltage. With this level of interest in technology, it is unlikely you would take an engineering pathway at a technical university.</en></min>
-                <mid><ru>Вы показали средний интерес к технике, оборудованию. Скорее пользовательский (количество лошадиных
-                    сил, объем памяти компьютера, цена и т.п.), у вас нет особенного интереса к устройству, нет упорных
-                    попыток чинить, разбирать и собирать приборы. Возможно, вы получаете хорошие отметки по физике. Но у
-                    вас нет опыта чтения технической литературы и длительного опыта занятий в технических кружках.
-                    Память на технические сведениях у вас средняя. С таким уровнем интереса к технике не стоит
-                    становиться инженером, но можно работать в продажах или закупках техники, в логистике.
-                </ru><en>You demonstrated average interest in technology and technological equipment. You have a good working-knowledge of tech (horsepower, computer memory, prices etc) but you have no particular interest in the devices themselves, nor do you take the time to repair, take apart or assemble these devices. You may be getting good grades in physics, but you do not spend time reading specialist technical literature outside of your school curriculum or dedicate any time to extra-curricular classes on this topic. You have an average memory for technical information. With this level of interest in technology, you may not become an engineer, but you could look at working in technology sales or logistics.</en></mid>
-                <max><ru>Вы показали высокий уровень интереса к приборам и оборудованию, их устройству, в интуитивном
-                    понимании их работы. Это проявилось в осмысленных попытках разобрать и собрать, починить прибор и
-                    оборудование, а также в чтении специальной литературы и просмотру фильмов, youtubе- каналов на
-                    данную тему, занятиях в кружках, мыслях на данную тему в неподходящем месте, например, на уроке
-                    литературы. С этим уровнем интереса и прилежания к технике — возможна работа в одной из инженерных
-                    профессий.
-                </ru><en>You demonstrated strong interest in technical devices and equipment, as well as their design, and have an intuitive understanding of how they work. That is expressed in your intelligent attempts to assemble and disassemble devices and repair equipment, as well as spending time reading specialist literature, watching films and Youtube videos on this topic or taking afterschool or additional classes. You find yourself thinking of tech at inappropriate times, for example, in a literature lesson. With this level of interest and commitment to technology, it is possible to look towards a career in an engineering profession.</en></max>
+                <min>
+                    <ru>Приборы и оборудование вам неинтересны, не понятны, вызывают недоумение, может быть, опасение.
+                        Вы
+                        можете ими пользоваться, но «как все», не продвинутым способом, если что-то ломается,
+                        самостоятельно
+                        вы не возьметесь чинить, а позовете мастера. Вы не смотрите видео об устройстве и работе
+                        двигателя,
+                        электронных приборов. Если нужно купить прибор, вы возьмете с собой того, кто лучше в этом
+                        разбирается. Память у вас на технические сведения не очень хороша. Вам сложно понять разницу
+                        между
+                        силой тока и напряжением. При таком уровне интереса к технике не стоит учиться на инженерном
+                        факультете технического вуза.
+                    </ru>
+                    <en>Technical devices and equipment are not interesting or easily understandable to you, perhaps
+                        they are even seen as unfamiliar and alien. You are able to use them ‘like everybody else’ but
+                        not in any advanced way. If something breaks you will not attempt to repair it yourself, but
+                        rather take it to a repair shop. You spend no time watching videos about technology or the
+                        operation of engines and electronic devices. If you need to buy a new gadget, you’ll ask someone
+                        who has a better understanding for advice. Your memory for technical information is not
+                        particularly good. You find it difficult to gauge the difference between current and voltage.
+                        With this level of interest in technology, it is unlikely you would take an engineering pathway
+                        at a technical university.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний интерес к технике, оборудованию. Скорее пользовательский (количество
+                        лошадиных
+                        сил, объем памяти компьютера, цена и т.п.), у вас нет особенного интереса к устройству, нет
+                        упорных
+                        попыток чинить, разбирать и собирать приборы. Возможно, вы получаете хорошие отметки по физике.
+                        Но у
+                        вас нет опыта чтения технической литературы и длительного опыта занятий в технических кружках.
+                        Память на технические сведениях у вас средняя. С таким уровнем интереса к технике не стоит
+                        становиться инженером, но можно работать в продажах или закупках техники, в логистике.
+                    </ru>
+                    <en>You demonstrated average interest in technology and technological equipment. You have a good
+                        working-knowledge of tech (horsepower, computer memory, prices etc) but you have no particular
+                        interest in the devices themselves, nor do you take the time to repair, take apart or assemble
+                        these devices. You may be getting good grades in physics, but you do not spend time reading
+                        specialist technical literature outside of your school curriculum or dedicate any time to
+                        extra-curricular classes on this topic. You have an average memory for technical information.
+                        With this level of interest in technology, you may not become an engineer, but you could look at
+                        working in technology sales or logistics.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень интереса к приборам и оборудованию, их устройству, в интуитивном
+                        понимании их работы. Это проявилось в осмысленных попытках разобрать и собрать, починить прибор
+                        и
+                        оборудование, а также в чтении специальной литературы и просмотру фильмов, youtubе- каналов на
+                        данную тему, занятиях в кружках, мыслях на данную тему в неподходящем месте, например, на уроке
+                        литературы. С этим уровнем интереса и прилежания к технике — возможна работа в одной из
+                        инженерных
+                        профессий.
+                    </ru>
+                    <en>You demonstrated strong interest in technical devices and equipment, as well as their design,
+                        and have an intuitive understanding of how they work. That is expressed in your intelligent
+                        attempts to assemble and disassemble devices and repair equipment, as well as spending time
+                        reading specialist literature, watching films and Youtube videos on this topic or taking
+                        afterschool or additional classes. You find yourself thinking of tech at inappropriate times,
+                        for example, in a literature lesson. With this level of interest and commitment to technology,
+                        it is possible to look towards a career in an engineering profession.
+                    </en>
+                </max>
             </interest>
             <skills>
-                <min><ru>Вы показали довольно низкий уровень способностей к работе с техническим устройствами. Это
-                    выражается в непонимании того, как техника устроена и как она работает. Вы бы могли ею пользоваться
-                    как простой пользователь. В значительной степени это связано с отсутствием интереса к такой материи,
-                    как техника. При таком уровне способностей к технике вам не стоит учиться на инженерном факультете
-                    технического вуза, исключение может составлять геология и строительство.
-                </ru><en>You demonstrated low aptitude for working with technical devices. That is expressed in your lack of understanding of in-depth technology and how it works. You are able to get to grips with it as a normal user, but you have a general lack of interest in matters such as technology in any thorough way. With this level of technical ability and dedication, an engineering path would not be recommended at a technical university, except for perhaps geology or civil engineering.</en></min>
-                <mid><ru>Вы показали средние способности к действиям с оборудованием. Это выражается в умении разумно
-                    пользоваться оборудованием, может быть, порой починить, но никак не разрабатывать его. С таким
-                    уровнем способностей к технике можно даже окончить инженерный вуз, например, геологический
-                    факультет, и на работе использовать технику для измерений.
-                </ru><en>You demonstrated average aptitude for working with technical equipment. That is expressed in your ability to use equipment correctly, maybe fix it sometimes, but not develop it in any way. With this level of aptitude, you could look towards enrolling in an engineering school, perhaps in the geology faculty, and find work that may require you to use technology for measurements and quantification.</en></mid>
-                <max><ru>Вы показали высокий уровень способностей к работе с приборами и оборудованием. Это выражается в
-                    интуитивном понимании вами их устройства и принципов работы, в понимании физических показателей
-                    (масса и вес, напряжение и сила тока), в умении производить расчеты с этими и другими физическими
-                    показателями — для того, чтобы настроить и починить и даже разработать новый прибор. Высокий уровень
-                    выражается в ваших успехах, когда вы создали (починили) реально работающий прибор. С этим уровнем
-                    способностей к технике — для вас возможна успешная работа в одной из инженерных профессий — как в
-                    разработке, так и в сервисе оборудования.
-                </ru><en>You demonstrated strong aptitude for working with technical devices and equipment. That is expressed in your intuitive understanding of devices and the principles of how they operate, as well as concepts such as mass and weight, voltage and current. You have the ability to calculate using these and other physical indicators and to use the findings to set up, repair or even develop a new piece of technology. You may have even created or fully repaired a working device. With this level of aptitude, it is possible for you to pursue a career in an engineering profession, either in design or technical equipment services.</en></max>
+                <min>
+                    <ru>Вы показали довольно низкий уровень способностей к работе с техническим устройствами. Это
+                        выражается в непонимании того, как техника устроена и как она работает. Вы бы могли ею
+                        пользоваться
+                        как простой пользователь. В значительной степени это связано с отсутствием интереса к такой
+                        материи,
+                        как техника. При таком уровне способностей к технике вам не стоит учиться на инженерном
+                        факультете
+                        технического вуза, исключение может составлять геология и строительство.
+                    </ru>
+                    <en>You demonstrated low aptitude for working with technical devices. That is expressed in your lack
+                        of understanding of in-depth technology and how it works. You are able to get to grips with it
+                        as a normal user, but you have a general lack of interest in matters such as technology in any
+                        thorough way. With this level of technical ability and dedication, an engineering path would not
+                        be recommended at a technical university, except for perhaps geology or civil engineering.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средние способности к действиям с оборудованием. Это выражается в умении разумно
+                        пользоваться оборудованием, может быть, порой починить, но никак не разрабатывать его. С таким
+                        уровнем способностей к технике можно даже окончить инженерный вуз, например, геологический
+                        факультет, и на работе использовать технику для измерений.
+                    </ru>
+                    <en>You demonstrated average aptitude for working with technical equipment. That is expressed in
+                        your ability to use equipment correctly, maybe fix it sometimes, but not develop it in any way.
+                        With this level of aptitude, you could look towards enrolling in an engineering school, perhaps
+                        in the geology faculty, and find work that may require you to use technology for measurements
+                        and quantification.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень способностей к работе с приборами и оборудованием. Это выражается в
+                        интуитивном понимании вами их устройства и принципов работы, в понимании физических показателей
+                        (масса и вес, напряжение и сила тока), в умении производить расчеты с этими и другими
+                        физическими
+                        показателями — для того, чтобы настроить и починить и даже разработать новый прибор. Высокий
+                        уровень
+                        выражается в ваших успехах, когда вы создали (починили) реально работающий прибор. С этим
+                        уровнем
+                        способностей к технике — для вас возможна успешная работа в одной из инженерных профессий — как
+                        в
+                        разработке, так и в сервисе оборудования.
+                    </ru>
+                    <en>You demonstrated strong aptitude for working with technical devices and equipment. That is
+                        expressed in your intuitive understanding of devices and the principles of how they operate, as
+                        well as concepts such as mass and weight, voltage and current. You have the ability to calculate
+                        using these and other physical indicators and to use the findings to set up, repair or even
+                        develop a new piece of technology. You may have even created or fully repaired a working device.
+                        With this level of aptitude, it is possible for you to pursue a career in an engineering
+                        profession, either in design or technical equipment services.
+                    </en>
+                </max>
             </skills>
         </tech>
 
         <human>
-            <name><ru>Гуманитарные науки и практики</ru><en></en></name>
+            <name>
+                <ru>Гуманитарные науки и практики</ru>
+                <en></en>
+            </name>
             <interest>
-                <min><ru>Вы показали довольно низкий уровень интереса к гуманитарному знанию и текстам. Вам не очень
-                    интересен человек, его поведение, душевная и духовная его жизнь, общественные процессы. Вы не
-                    желаете думать про это, может быть, вы даже не уважаете гуманитарные предметы в школе (история,
-                    обществознание, литература), не любите читать художественную литературу. Такое состояние интересов
-                    не предполагает работы педагогом, журналистом, психологом, журналистом, политологом, историком.
-                </ru><en>You demonstrated fairly low interest in the humanities and texts. You are not very interested in human beings or their behavior, nor the mental and spiritual intricacies of people or social processes. You do not spend any time thinking about these things and perhaps you have little respect toward the humanities at school (history, social studies, literature). You don’t like to read literary texts or fiction. It is not recommended for you to pursue a career as a teacher, journalist, psychologist, political scientist, or historian.</en></min>
-                <mid><ru>Вы показали средний уровень интереса к гуманитарному знанию и гуманитарной практике. Это выражается
-                    в попытках размышлять на темы закономерностей общественной жизни, поведения людей в прошлом и
-                    настоящем и даже в чтении художественной литературы, заданной в школе, но без особенной страсти и
-                    без стремления самому писать тексты. Такой уровень интереса может привести вас к работе с людьми
-                    (например, менеджер по персоналу) и даже к работе с текстами такого рода, как юридические, деловые
-                    (письма), канцелярские.
-                </ru><en>You demonstrated average interest in humanitarian knowledge and practice. You sometimes think about the patterns of social life and human behavior in the past and present. Sometimes you engage in literary reading that has been given to you at school, but you have little passion or drive to write any kind of texts yourself. This level of interest could lead towards a career working with people (such as a HR manager), or work that involves some sort of legal, business or clerical texts.</en></mid>
-                <max><ru>Вы показали высокий уровень интереса к гуманитарному знанию и гуманитарной практике. У вас это
-                    выражается в неотступном размышлении на темы закономерностей общественной жизни, поведения людей в
-                    прошлом и настоящем, а также в активном поиске и чтении - художественных, философских,
-                    политологических, искусствоведческих, литературоведческих, психологических текстов, а также в
-                    стремлении самому писать тексты: дневники, эссе, сочинения, а также во внимательном отношении к
-                    тексту и способности получать удовольствие от хорошего текста или страдать от плохого текста. Такой
-                    выраженный интерес в сочетании со способностями к тексту может вас привести к профессиям
-                    гуманитарного типа: философия, филология, журналистика, политология, история, теология, социальная
-                    психология, даже психотерапия.
-                </ru><en>You demonstrated strong interest in humanitarian knowledge and practice. That is expressed in your reflection on the patterns of social life and society, human behaviors in the past and present, as well as engaging in active research and reading on everything artistic, philosophical, political and scientific, as well as engaging with art criticism, literary criticism and psychological texts. You have a desire to write and keep diaries or write essays yourself. You also possess an intelligent attentiveness towards texts, be that an ability to enjoy good writing or to suffer when engaging with bad writing. This pronounced interest combined with an aptitude for writing can lead to careers in the humanities, such as philosophy, philology, journalism, political science, history, theology, social psychology or even psychotherapy.</en></max>
+                <min>
+                    <ru>Вы показали довольно низкий уровень интереса к гуманитарному знанию и текстам. Вам не очень
+                        интересен человек, его поведение, душевная и духовная его жизнь, общественные процессы. Вы не
+                        желаете думать про это, может быть, вы даже не уважаете гуманитарные предметы в школе (история,
+                        обществознание, литература), не любите читать художественную литературу. Такое состояние
+                        интересов
+                        не предполагает работы педагогом, журналистом, психологом, журналистом, политологом, историком.
+                    </ru>
+                    <en>You demonstrated fairly low interest in the humanities and texts. You are not very interested in
+                        human beings or their behavior, nor the mental and spiritual intricacies of people or social
+                        processes. You do not spend any time thinking about these things and perhaps you have little
+                        respect toward the humanities at school (history, social studies, literature). You don’t like to
+                        read literary texts or fiction. It is not recommended for you to pursue a career as a teacher,
+                        journalist, psychologist, political scientist, or historian.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень интереса к гуманитарному знанию и гуманитарной практике. Это
+                        выражается
+                        в попытках размышлять на темы закономерностей общественной жизни, поведения людей в прошлом и
+                        настоящем и даже в чтении художественной литературы, заданной в школе, но без особенной страсти
+                        и
+                        без стремления самому писать тексты. Такой уровень интереса может привести вас к работе с людьми
+                        (например, менеджер по персоналу) и даже к работе с текстами такого рода, как юридические,
+                        деловые
+                        (письма), канцелярские.
+                    </ru>
+                    <en>You demonstrated average interest in humanitarian knowledge and practice. You sometimes think
+                        about the patterns of social life and human behavior in the past and present. Sometimes you
+                        engage in literary reading that has been given to you at school, but you have little passion or
+                        drive to write any kind of texts yourself. This level of interest could lead towards a career
+                        working with people (such as a HR manager), or work that involves some sort of legal, business
+                        or clerical texts.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень интереса к гуманитарному знанию и гуманитарной практике. У вас это
+                        выражается в неотступном размышлении на темы закономерностей общественной жизни, поведения людей
+                        в
+                        прошлом и настоящем, а также в активном поиске и чтении - художественных, философских,
+                        политологических, искусствоведческих, литературоведческих, психологических текстов, а также в
+                        стремлении самому писать тексты: дневники, эссе, сочинения, а также во внимательном отношении к
+                        тексту и способности получать удовольствие от хорошего текста или страдать от плохого текста.
+                        Такой
+                        выраженный интерес в сочетании со способностями к тексту может вас привести к профессиям
+                        гуманитарного типа: философия, филология, журналистика, политология, история, теология,
+                        социальная
+                        психология, даже психотерапия.
+                    </ru>
+                    <en>You demonstrated strong interest in humanitarian knowledge and practice. That is expressed in
+                        your reflection on the patterns of social life and society, human behaviors in the past and
+                        present, as well as engaging in active research and reading on everything artistic,
+                        philosophical, political and scientific, as well as engaging with art criticism, literary
+                        criticism and psychological texts. You have a desire to write and keep diaries or write essays
+                        yourself. You also possess an intelligent attentiveness towards texts, be that an ability to
+                        enjoy good writing or to suffer when engaging with bad writing. This pronounced interest
+                        combined with an aptitude for writing can lead to careers in the humanities, such as philosophy,
+                        philology, journalism, political science, history, theology, social psychology or even
+                        psychotherapy.
+                    </en>
+                </max>
             </interest>
             <skills>
-                <min><ru>Вы показали довольно низкий уровень способности к гуманитарному знанию и текстам. Это выражается в
-                    слабой способности рифмовать, недостаточном чувстве размера и ритма текста, а также в невозможности
-                    получать удовольствие от текста как такового, в трудностях понимания любого гуманитарного текста,
-                    кроме газетного.
-                </ru><en>You demonstrated low aptitude for humanities. You struggle with words and textual rhythm and find it hard to sense the level and ebb and flow of texts. You are unable to fully enjoy texts and have difficulties fully understanding any text of this kind, except for newspapers.</en></min>
-                <mid><ru>Вы показали средний уровень способностей к гуманитарному знанию и гуманитарной практике. Это
-                    выразилось в отсутствии особенной легкости при освоении таких предметов, как литература и история,
-                    философия, языки, а также в затруднениях при написании текстов по этим предметам («туговато идет»).
-                    При наличии у вас серьезного интереса к этим предметам, можно было бы достичь хороших результатов,
-                    научиться писать внятные умные тексты на любую гуманитарную тему и претендовать на работу в
-                    гуманитарной сфере.
-                </ru><en>You demonstrated average aptitude for the humanities. You do not find it particularly easy to master such subjects as literature, history, philosophy and languages and you also have difficulties in writing texts on certain subjects: you have some trouble expressing certain things. If you have a serious interest in these subjects, you could achieve good results, practice writing coherent and intelligent texts on a variety of humanitarian topics, and then apply for a job in the field of humanities.</en></mid>
-                <max><ru>Вы показали высокий уровень способностей к гуманитарному знанию и гуманитарной практике. Это
-                    выразилось в легкости понимания художественной литературы, в частности, поэзии, а также рассуждений
-                    философов, литературоведов, искусствоведов, а также в легком запоминании слов, умении с ними легко
-                    обращаться в устной или письменной речи; в глубоких собственных размышлениях на темы общественной
-                    жизни, морали, психологии человека, истории, искусств и т.д.
-                </ru><en>You demonstrated strong aptitude for the humanities. You find it easy to understand literary writing and poetry, as well as the reasoning of philosophers, literary critics and art historians. You find it easy to memorize words and have the ability to manipulate them in speech or written texts, offering deep, original reflections on topics such as society and social life, morality, human psychology, history and the arts etc.</en></max>
+                <min>
+                    <ru>Вы показали довольно низкий уровень способности к гуманитарному знанию и текстам. Это выражается
+                        в
+                        слабой способности рифмовать, недостаточном чувстве размера и ритма текста, а также в
+                        невозможности
+                        получать удовольствие от текста как такового, в трудностях понимания любого гуманитарного
+                        текста,
+                        кроме газетного.
+                    </ru>
+                    <en>You demonstrated low aptitude for humanities. You struggle with words and textual rhythm and
+                        find it hard to sense the level and ebb and flow of texts. You are unable to fully enjoy texts
+                        and have difficulties fully understanding any text of this kind, except for newspapers.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень способностей к гуманитарному знанию и гуманитарной практике. Это
+                        выразилось в отсутствии особенной легкости при освоении таких предметов, как литература и
+                        история,
+                        философия, языки, а также в затруднениях при написании текстов по этим предметам («туговато
+                        идет»).
+                        При наличии у вас серьезного интереса к этим предметам, можно было бы достичь хороших
+                        результатов,
+                        научиться писать внятные умные тексты на любую гуманитарную тему и претендовать на работу в
+                        гуманитарной сфере.
+                    </ru>
+                    <en>You demonstrated average aptitude for the humanities. You do not find it particularly easy to
+                        master such subjects as literature, history, philosophy and languages and you also have
+                        difficulties in writing texts on certain subjects: you have some trouble expressing certain
+                        things. If you have a serious interest in these subjects, you could achieve good results,
+                        practice writing coherent and intelligent texts on a variety of humanitarian topics, and then
+                        apply for a job in the field of humanities.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень способностей к гуманитарному знанию и гуманитарной практике. Это
+                        выразилось в легкости понимания художественной литературы, в частности, поэзии, а также
+                        рассуждений
+                        философов, литературоведов, искусствоведов, а также в легком запоминании слов, умении с ними
+                        легко
+                        обращаться в устной или письменной речи; в глубоких собственных размышлениях на темы
+                        общественной
+                        жизни, морали, психологии человека, истории, искусств и т.д.
+                    </ru>
+                    <en>You demonstrated strong aptitude for the humanities. You find it easy to understand literary
+                        writing and poetry, as well as the reasoning of philosophers, literary critics and art
+                        historians. You find it easy to memorize words and have the ability to manipulate them in speech
+                        or written texts, offering deep, original reflections on topics such as society and social life,
+                        morality, human psychology, history and the arts etc.
+                    </en>
+                </max>
             </skills>
         </human>
 
         <body>
-            <name><ru>Работа собственным телом</ru><en></en></name>
+            <name>
+                <ru>Работа собственным телом</ru>
+                <en></en>
+            </name>
             <interest>
-                <min><ru>Вы показали довольно низкий уровень интереса к работе собственным телом. Это выражается в нежелании
-                    производить существенные мышечные усилия и желании не производить такие усилия в течение работы и
-                    учебы и даже в свободное от работы время. Вы скорее выбрали бы работать сидя.
-                </ru><en>You demonstrated fairly low interest in working with your body. That is expressed in your desire to avoid significant physical effort at work, in your studies, and in your free time. You would most likely prefer to work sitting down.</en></min>
-                <mid><ru>Вы показали средний уровень интереса к работе собственным телом. Это выражается в желании телесно
-                    напрягаться не в течение всего рабочего или учебного дня, а в желании двигаться и напрягаться
-                    физически в свободное от основных дел время.
-                </ru><en>You demonstrated average interest in working with your body. That is expressed in your desire to move and be physically active in your spare time rather than throughout the entirety of your work day or studies.</en></mid>
-                <max><ru>Вы показали высокий уровень интереса к работе собственным телом. Это выражается в стремлении
-                    действовать телом — спортивно, в танце, в цирковом искусстве (джигитовка, эквилибристика и прочее),
-                    в физической работе, где задействовано все тело, например, в работе спортивного тренера,
-                    реабилитолога (ЛФК), актёра, каскадёра, в работе матроса на флоте, монтажника-высотника или
-                    ремонтника автомобилей и т.д.'
-                </ru><en>You demonstrated strong interest in working with your body. That is expressed in your passion for physical exercise: athletics, dance, the circus arts (trick riding, tightrope, and so on), and manual labor that involves the whole body. Some examples are fitness trainer, physical therapist, actor, stuntman, sailor, high-rise repairman, mechanic, and so on.</en></max>
+                <min>
+                    <ru>Вы показали довольно низкий уровень интереса к работе собственным телом. Это выражается в
+                        нежелании
+                        производить существенные мышечные усилия и желании не производить такие усилия в течение работы
+                        и
+                        учебы и даже в свободное от работы время. Вы скорее выбрали бы работать сидя.
+                    </ru>
+                    <en>You demonstrated fairly low interest in working with your body. That is expressed in your desire
+                        to avoid significant physical effort at work, in your studies, and in your free time. You would
+                        most likely prefer to work sitting down.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень интереса к работе собственным телом. Это выражается в желании
+                        телесно
+                        напрягаться не в течение всего рабочего или учебного дня, а в желании двигаться и напрягаться
+                        физически в свободное от основных дел время.
+                    </ru>
+                    <en>You demonstrated average interest in working with your body. That is expressed in your desire to
+                        move and be physically active in your spare time rather than throughout the entirety of your
+                        work day or studies.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень интереса к работе собственным телом. Это выражается в стремлении
+                        действовать телом — спортивно, в танце, в цирковом искусстве (джигитовка, эквилибристика и
+                        прочее),
+                        в физической работе, где задействовано все тело, например, в работе спортивного тренера,
+                        реабилитолога (ЛФК), актёра, каскадёра, в работе матроса на флоте, монтажника-высотника или
+                        ремонтника автомобилей и т.д.'
+                    </ru>
+                    <en>You demonstrated strong interest in working with your body. That is expressed in your passion
+                        for physical exercise: athletics, dance, the circus arts (trick riding, tightrope, and so on),
+                        and manual labor that involves the whole body. Some examples are fitness trainer, physical
+                        therapist, actor, stuntman, sailor, high-rise repairman, mechanic, and so on.
+                    </en>
+                </max>
             </interest>
             <skills>
-                <min><ru>Вы показали высокий уровень способностей к работе с собственным телом — спортивно, в танце, в
-                    цирковом искусстве (джигитовка, эквилибристика и прочее). Это выражается в гибкости, выносливости,
-                    физической крепкости, а также, может быть, в чувстве ритма. В некоторых профессиях имеет важное
-                    значение красота телосложения. Высоким уровнем развития телесных качеств обладает танцор, актёр,
-                    каскадёр, спортсмен. У вас высокие шансы быть успешным работать в одной из этих профессий.
-                </ru><en>You demonstrated low aptitude for working with your body. That is expressed in underdeveloped muscles or physical pain. You’re best suited for office work that doesn’t require physical activity.</en></min>
-                <mid><ru>Вы показали средний уровень способностей к работе собственным телом. Вы физически здоровый и имеете
-                    возможность некоторое время проводить на ногах, испытывая нагрузки. Но вряд ли вам подойдет работать
-                    физически часами, в течение рабочих дней стоять, идти, плыть, поднимать тяжести и т.д. Со средним
-                    уровнем способностей к работе своим телом можно быть театральным и киноактёром, парикмахером,
-                    ремонтником оборудования, поваром.
-                </ru><en>You demonstrated average aptitude for working with your body. You’re physically healthy and can spend some time on your legs, though that can be a strain. With that said, you are most likely not a fit for hours of physical labor or a job that has you standing, walking, swimming, lifting, and so on throughout the day. With an average aptitude for working with your body, you might consider a career as an actor (theater or film), hairdresser, equipment repairman, or chef.</en></mid>
-                <max><ru>Вы показали высокий уровень способностей к работе с собственным телом — спортивно, в танце, в
-                    цирковом искусстве (джигитовка, эквилибристика и прочее). Это выражается в гибкости, выносливости,
-                    физической крепкости, а также, может быть, в чувстве ритма. В некоторых профессиях имеет важное
-                    значение красота телосложения. Высоким уровнем развития телесных качеств обладает танцор, актёр,
-                    каскадёр, спортсмен. У вас высокие шансы быть успешным работать в одной из этих профессий.
-                </ru><en>You demonstrated strong aptitude for working with your body, be that in athletics, dance, or the circus arts (trick riding, tightrope, and so on). That is expressed in your flexibility, stamina, physical strength, and perhaps even sense of rhythm. For some professions, an attractive figure is important. Dancers, actors, stuntmen, and athletes all have well-developed physical attributes, so you have an excellent chance at a successful career in one of those professions.</en></max>
+                <min>
+                    <ru>Вы показали высокий уровень способностей к работе с собственным телом — спортивно, в танце, в
+                        цирковом искусстве (джигитовка, эквилибристика и прочее). Это выражается в гибкости,
+                        выносливости,
+                        физической крепкости, а также, может быть, в чувстве ритма. В некоторых профессиях имеет важное
+                        значение красота телосложения. Высоким уровнем развития телесных качеств обладает танцор, актёр,
+                        каскадёр, спортсмен. У вас высокие шансы быть успешным работать в одной из этих профессий.
+                    </ru>
+                    <en>You demonstrated low aptitude for working with your body. That is expressed in underdeveloped
+                        muscles or physical pain. You’re best suited for office work that doesn’t require physical
+                        activity.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень способностей к работе собственным телом. Вы физически здоровый и
+                        имеете
+                        возможность некоторое время проводить на ногах, испытывая нагрузки. Но вряд ли вам подойдет
+                        работать
+                        физически часами, в течение рабочих дней стоять, идти, плыть, поднимать тяжести и т.д. Со
+                        средним
+                        уровнем способностей к работе своим телом можно быть театральным и киноактёром, парикмахером,
+                        ремонтником оборудования, поваром.
+                    </ru>
+                    <en>You demonstrated average aptitude for working with your body. You’re physically healthy and can
+                        spend some time on your legs, though that can be a strain. With that said, you are most likely
+                        not a fit for hours of physical labor or a job that has you standing, walking, swimming,
+                        lifting, and so on throughout the day. With an average aptitude for working with your body, you
+                        might consider a career as an actor (theater or film), hairdresser, equipment repairman, or
+                        chef.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень способностей к работе с собственным телом — спортивно, в танце, в
+                        цирковом искусстве (джигитовка, эквилибристика и прочее). Это выражается в гибкости,
+                        выносливости,
+                        физической крепкости, а также, может быть, в чувстве ритма. В некоторых профессиях имеет важное
+                        значение красота телосложения. Высоким уровнем развития телесных качеств обладает танцор, актёр,
+                        каскадёр, спортсмен. У вас высокие шансы быть успешным работать в одной из этих профессий.
+                    </ru>
+                    <en>You demonstrated strong aptitude for working with your body, be that in athletics, dance, or the
+                        circus arts (trick riding, tightrope, and so on). That is expressed in your flexibility,
+                        stamina, physical strength, and perhaps even sense of rhythm. For some professions, an
+                        attractive figure is important. Dancers, actors, stuntmen, and athletes all have well-developed
+                        physical attributes, so you have an excellent chance at a successful career in one of those
+                        professions.
+                    </en>
+                </max>
             </skills>
         </body>
 
         <math>
-            <name><ru>Знаки: числа, таблицы и схемы</ru><en></en></name>
+            <name>
+                <ru>Знаки: числа, таблицы и схемы</ru>
+                <en></en>
+            </name>
             <interest>
-                <min><ru>Вы показали довольно низкий уровень интереса к цифрам, схемам, таблицам. Это проявилось в довольно
-                    низком уровне внимания к числам и другим знакам, а также в полном отсутствии удовольствия от
-                    операций с числами и таблицами и ощущении «бессмысленности» данных операций, возможно, в стремлении
-                    избегнуть этой работы и по возможности поручить эти действия кому-то другому. С этим уровнем
-                    интереса и прилежания к знакам и системе знаков лучше бы вам не помещать себя в ситуацию, где
-                    придется много иметь дела с числами, графиками и таблицами: то есть ни в экономике, ни в точных
-                    науках лучше не работать.
-                </ru><en>You demonstrated fairly low interest in numbers, diagrams, and tables. That is expressed in how little attention you pay to numbers and other symbols as well as the complete lack of interest you take in numerical operations and tables. You feel like it’s pointless, maybe even try to avoid similar work, or perhaps delegate it to someone else. With this level of interest in symbols and symbol systems, you’re better off not venturing near work that needs numbers, graphs, or tables. Stay away from economics and the exact sciences.</en></min>
-                <mid><ru>Вы показали средний уровень интереса к цифрам, схемам, таблицам. Вы могли бы заниматься графиками,
-                    схемами, вычислениями лишь по необходимости и с некоторым внутренним сопротивлением. Вы у себя не
-                    наблюдаете стремления измерять и описывать в знаках что бы то ни было, зашифровывать что-то. С таким
-                    уровнем интереса и прилежания к знакам и системе знаков возможна работа в продажах, управлении
-                    гостиницей, маркетинге, архитектуре, технологиях производства — где вычисления есть, но они не
-                    преобладают по сравнению с другими действиями.
-                </ru><en>You demonstrated average interest in numbers, diagrams, and tables. You can work with graphs, diagrams, and calculations, but only by necessity and with some internal resistance. There’s no strong desire to measure or describe things using symbols, and you don’t feel a pull toward encryption. With this level of interest in symbols and symbol systems, you might consider work in sales, hotel management, marketing, architecture, or manufacturing technology, areas where calculations are needed but balanced against other activity.</en></mid>
-                <max><ru>Вы показали высокий уровень интереса к цифрам, схемам, таблицам. Это выражается в вашем
-                    удовольствии от составления графиков, точных вычислений по поводу чего бы то ни было (расстояния,
-                    деньги, вес, объем и т/п). И проявляется в стремлении измерять и описывать в знаках: картах,
-                    таблицах или в шифровании. С этим уровнем интереса и прилежания к знакам и системе знаков для вас
-                    возможна работа в экономике, картографии, в естественных и технических практиках и науках (например,
-                    в теоретической физике и астрофизике) и, конечно, в самой математике, в аналитике данных.
-                </ru><en>You demonstrated strong interest in numbers, diagrams, and tables. That is expressed in how much you enjoy putting together graphs and calculating just about anything (distance, money, weight, volume, and so on). It also shows up in your desire to measure and describe using symbols: maps, tables, or encryption. With this level of interest in symbols and symbol systems, you might work in economics, cartography, the natural sciences (theoretical physics or astrophysics, for instance), engineering, mathematics, or data analysis.</en></max>
+                <min>
+                    <ru>Вы показали довольно низкий уровень интереса к цифрам, схемам, таблицам. Это проявилось в
+                        довольно
+                        низком уровне внимания к числам и другим знакам, а также в полном отсутствии удовольствия от
+                        операций с числами и таблицами и ощущении «бессмысленности» данных операций, возможно, в
+                        стремлении
+                        избегнуть этой работы и по возможности поручить эти действия кому-то другому. С этим уровнем
+                        интереса и прилежания к знакам и системе знаков лучше бы вам не помещать себя в ситуацию, где
+                        придется много иметь дела с числами, графиками и таблицами: то есть ни в экономике, ни в точных
+                        науках лучше не работать.
+                    </ru>
+                    <en>You demonstrated fairly low interest in numbers, diagrams, and tables. That is expressed in how
+                        little attention you pay to numbers and other symbols as well as the complete lack of interest
+                        you take in numerical operations and tables. You feel like it’s pointless, maybe even try to
+                        avoid similar work, or perhaps delegate it to someone else. With this level of interest in
+                        symbols and symbol systems, you’re better off not venturing near work that needs numbers,
+                        graphs, or tables. Stay away from economics and the exact sciences.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень интереса к цифрам, схемам, таблицам. Вы могли бы заниматься
+                        графиками,
+                        схемами, вычислениями лишь по необходимости и с некоторым внутренним сопротивлением. Вы у себя
+                        не
+                        наблюдаете стремления измерять и описывать в знаках что бы то ни было, зашифровывать что-то. С
+                        таким
+                        уровнем интереса и прилежания к знакам и системе знаков возможна работа в продажах, управлении
+                        гостиницей, маркетинге, архитектуре, технологиях производства — где вычисления есть, но они не
+                        преобладают по сравнению с другими действиями.
+                    </ru>
+                    <en>You demonstrated average interest in numbers, diagrams, and tables. You can work with graphs,
+                        diagrams, and calculations, but only by necessity and with some internal resistance. There’s no
+                        strong desire to measure or describe things using symbols, and you don’t feel a pull toward
+                        encryption. With this level of interest in symbols and symbol systems, you might consider work
+                        in sales, hotel management, marketing, architecture, or manufacturing technology, areas where
+                        calculations are needed but balanced against other activity.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень интереса к цифрам, схемам, таблицам. Это выражается в вашем
+                        удовольствии от составления графиков, точных вычислений по поводу чего бы то ни было
+                        (расстояния,
+                        деньги, вес, объем и т/п). И проявляется в стремлении измерять и описывать в знаках: картах,
+                        таблицах или в шифровании. С этим уровнем интереса и прилежания к знакам и системе знаков для
+                        вас
+                        возможна работа в экономике, картографии, в естественных и технических практиках и науках
+                        (например,
+                        в теоретической физике и астрофизике) и, конечно, в самой математике, в аналитике данных.
+                    </ru>
+                    <en>You demonstrated strong interest in numbers, diagrams, and tables. That is expressed in how much
+                        you enjoy putting together graphs and calculating just about anything (distance, money, weight,
+                        volume, and so on). It also shows up in your desire to measure and describe using symbols: maps,
+                        tables, or encryption. With this level of interest in symbols and symbol systems, you might work
+                        in economics, cartography, the natural sciences (theoretical physics or astrophysics, for
+                        instance), engineering, mathematics, or data analysis.
+                    </en>
+                </max>
             </interest>
             <skills>
-                <min><ru>Вы показали довольно низкий уровень способностей к цифрам, схемам, таблицам. Это проявляется в
-                    низком уровне внимания и понимания числовых данных и манипуляций со знаковыми системами, и тяжелым
-                    процессом понимания графиков. С этим уровнем способностей вам лучше не помещать себя в ситуацию, где
-                    придется много иметь дела с числами, графиками и таблицами, то есть ни в налогах, ни в экономике, ни
-                    в точных науках лучше не работать.
-                </ru><en>You demonstrated low aptitude for working with numbers, diagrams, and tables. That is expressed in how little attention you pay to and understand numbers and working with symbol systems, not to mention how difficult it is for you to grasp graphs. With this level of aptitude, you’re better off avoiding situations where you have to work with numbers, graphs, and tables. Don’t work in taxes, economics, or the exact sciences.</en></min>
-                <mid><ru>Вы показали средний уровень способностей к действиям с цифрами, схемами, таблицами. Это проявляется
-                    в том, что вам удаётся этому научиться и успешно действовать с этой материей, но вам это даётся не
-                    легко и не слишком быстро, а после упорного труда. При наличии интереса с такими уровнем
-                    способностей вы могли бы успешно работать с числами, таблицами, графиками.
-                </ru><en>You demonstrated average aptitude for working with numbers, diagrams, and tables. That is expressed in how you’re able to learn and work with this kind of material even though it’s not easy and sometimes takes some effort. If your interest is at the same level, you can successfully work with numbers, tables, and graphs.</en></mid>
-                <max><ru>Вы показали высокий уровень способностей к работе с числами, схемами, таблицами. Это выразилось в
-                    легкости, с которой вы усваиваете такого рода знания, и в лёгкости, с которой вы их применяете на
-                    уроках и в жизни. С этим уровнем способностей и прилежания к знакам и системе знаков для вас
-                    возможна работа в экономике, картографии, в естественных и технических практиках и науках (например,
-                    в теоретической физике и астрофизике) и, конечно, в самой математике, в аналитике больших данных.
-                </ru><en>You demonstrated strong aptitude for working with numbers, diagrams, and tables. That is expressed in the ease with which you master related knowledge and apply it to your life. With this level of aptitude for symbols and symbol systems, you’re best suited to work in economics, cartography, the natural sciences (theoretical physics or astrophysics, for instance), engineering, mathematics, or data analysis.</en></max>
+                <min>
+                    <ru>Вы показали довольно низкий уровень способностей к цифрам, схемам, таблицам. Это проявляется в
+                        низком уровне внимания и понимания числовых данных и манипуляций со знаковыми системами, и
+                        тяжелым
+                        процессом понимания графиков. С этим уровнем способностей вам лучше не помещать себя в ситуацию,
+                        где
+                        придется много иметь дела с числами, графиками и таблицами, то есть ни в налогах, ни в
+                        экономике, ни
+                        в точных науках лучше не работать.
+                    </ru>
+                    <en>You demonstrated low aptitude for working with numbers, diagrams, and tables. That is expressed
+                        in how little attention you pay to and understand numbers and working with symbol systems, not
+                        to mention how difficult it is for you to grasp graphs. With this level of aptitude, you’re
+                        better off avoiding situations where you have to work with numbers, graphs, and tables. Don’t
+                        work in taxes, economics, or the exact sciences.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень способностей к действиям с цифрами, схемами, таблицами. Это
+                        проявляется
+                        в том, что вам удаётся этому научиться и успешно действовать с этой материей, но вам это даётся
+                        не
+                        легко и не слишком быстро, а после упорного труда. При наличии интереса с такими уровнем
+                        способностей вы могли бы успешно работать с числами, таблицами, графиками.
+                    </ru>
+                    <en>You demonstrated average aptitude for working with numbers, diagrams, and tables. That is
+                        expressed in how you’re able to learn and work with this kind of material even though it’s not
+                        easy and sometimes takes some effort. If your interest is at the same level, you can
+                        successfully work with numbers, tables, and graphs.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень способностей к работе с числами, схемами, таблицами. Это выразилось
+                        в
+                        легкости, с которой вы усваиваете такого рода знания, и в лёгкости, с которой вы их применяете
+                        на
+                        уроках и в жизни. С этим уровнем способностей и прилежания к знакам и системе знаков для вас
+                        возможна работа в экономике, картографии, в естественных и технических практиках и науках
+                        (например,
+                        в теоретической физике и астрофизике) и, конечно, в самой математике, в аналитике больших
+                        данных.
+                    </ru>
+                    <en>You demonstrated strong aptitude for working with numbers, diagrams, and tables. That is
+                        expressed in the ease with which you master related knowledge and apply it to your life. With
+                        this level of aptitude for symbols and symbol systems, you’re best suited to work in economics,
+                        cartography, the natural sciences (theoretical physics or astrophysics, for instance),
+                        engineering, mathematics, or data analysis.
+                    </en>
+                </max>
             </skills>
         </math>
 
         <it>
-            <name><ru>Информационные технологии</ru><en></en></name>
+            <name>
+                <ru>Информационные технологии</ru>
+                <en></en>
+            </name>
             <interest>
-                <min><ru>Вы показали низкий уровень интереса к информационным технологиям. Это выражается в полном или почти
-                    полном отсутствии интереса к тому, как работает сам компьютер, его программы, а так же страхе перед
-                    программами и компьютером. Вы ловко пользуетесь телефоном, но писать программы в действительности не
-                    захотите (при всех знаемых вами достоинствах профессии программист).
-                </ru><en>You demonstrated fairly low interest in IT. That is expressed in the complete or nearly complete lack of attention you pay to how your computer and its programs work, and possibly also in a fear of computers and computer programs. While you know how to use your phone, you have no desire to write programs even though you’re aware of all the benefits that come with working as a programmer.</en></min>
-                <mid><ru>Вы показали средний уровень интереса к информационным технологиям. Возможно, это выражается в
-                    некотором знании операционных систем и даже в попытках программировать, но без удовольствия, без
-                    энтузиазма. Вы скорее хотели бы быть пользователем программ, или, принимать участие в их создании не
-                    как программист, а, например, как продакт-менеджер или системный аналитик.
-                </ru><en>You demonstrated average interest in IT. That may be expressed in how you know something about operating systems and have even tried your hand at programming, only it’s not something you enjoy or are enthusiastic about. More likely, you’d rather use programs than build them, perhaps as a product manager or system analyst.</en></mid>
-                <max><ru>Вы показали высокий уровень интереса к информационным технологиям. Это проявляется в удовольствии
-                    от попыток программирования, а также трепетном и неутомимым отношением к этому делу, в легком
-                    запоминании материала, даваемого в школе на уроках информатики, интересе к решению логических задач
-                    и построению схем, систем, интерес к математике, дополнительным занятиям на кружках и секциях по
-                    информатике и математике.
-                </ru><en>You demonstrated strong interest in IT. That is expressed in how much you enjoy programming, not to mention your passion and how you can spend long hours working at it. You understand everything you’re taught at school, and you’re interested in logic problems as well as building plans and systems. You like math and might take additional IT and math lessons.</en></max>
+                <min>
+                    <ru>Вы показали низкий уровень интереса к информационным технологиям. Это выражается в полном или
+                        почти
+                        полном отсутствии интереса к тому, как работает сам компьютер, его программы, а так же страхе
+                        перед
+                        программами и компьютером. Вы ловко пользуетесь телефоном, но писать программы в
+                        действительности не
+                        захотите (при всех знаемых вами достоинствах профессии программист).
+                    </ru>
+                    <en>You demonstrated fairly low interest in IT. That is expressed in the complete or nearly complete
+                        lack of attention you pay to how your computer and its programs work, and possibly also in a
+                        fear of computers and computer programs. While you know how to use your phone, you have no
+                        desire to write programs even though you’re aware of all the benefits that come with working as
+                        a programmer.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень интереса к информационным технологиям. Возможно, это выражается в
+                        некотором знании операционных систем и даже в попытках программировать, но без удовольствия, без
+                        энтузиазма. Вы скорее хотели бы быть пользователем программ, или, принимать участие в их
+                        создании не
+                        как программист, а, например, как продакт-менеджер или системный аналитик.
+                    </ru>
+                    <en>You demonstrated average interest in IT. That may be expressed in how you know something about
+                        operating systems and have even tried your hand at programming, only it’s not something you
+                        enjoy or are enthusiastic about. More likely, you’d rather use programs than build them, perhaps
+                        as a product manager or system analyst.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень интереса к информационным технологиям. Это проявляется в
+                        удовольствии
+                        от попыток программирования, а также трепетном и неутомимым отношением к этому делу, в легком
+                        запоминании материала, даваемого в школе на уроках информатики, интересе к решению логических
+                        задач
+                        и построению схем, систем, интерес к математике, дополнительным занятиям на кружках и секциях по
+                        информатике и математике.
+                    </ru>
+                    <en>You demonstrated strong interest in IT. That is expressed in how much you enjoy programming, not
+                        to mention your passion and how you can spend long hours working at it. You understand
+                        everything you’re taught at school, and you’re interested in logic problems as well as building
+                        plans and systems. You like math and might take additional IT and math lessons.
+                    </en>
+                </max>
             </interest>
             <skills>
-                <min><ru>Вы показали довольно низкий уровень способностей к информационным технологиям. Это выражается в
-                    полном или почти полном отсутствии понимания - несмотря на уроки информатики - того, как работает
-                    компьютер или программа. Вы ловко умеете пользоваться телефоном, но писать программы вы не захотите
-                    и не сможете, а попытки научиться не приводили вас к знанию и умению.
-                </ru><en>You demonstrated low aptitude for IT. That is expressed in the complete or nearly complete lack of understanding you have of how computers and programs work despite the IT classes you’ve taken. You know how to use your phone, though you have neither the desire nor the ability to code programs, and all attempts to teach you have failed.</en></min>
-                <mid><ru>Вы показали средний уровень способностей к информационным технологиям. И это проявляется в
-                    относительно легком понимании того, что происходит в компьютерной сети и компьютере, в относительной
-                    легкости овладевания программами и языками программирования, в не быстром, но и не тяжелом понимании
-                    и запоминании материала, даваемого в школе на уроках информатики, математики. С таким уровнем
-                    способностей вы бы могли работать и программистом, и в сетевым администратором, и системным
-                    администратором, и специалистам ИБ.
-                </ru><en>You demonstrated average aptitude for IT. That is expressed in the relative ease with which you understand what happens in networks and computers and the way you can understand and memorize the material you learn in computer and math classes even if it’s not a fast process. With this level of aptitude, you could work as a programmer, a network administrator, a system administrator, or an information security officer.</en></mid>
-                <max><ru>Вы показали высокий уровень способностей к информационным технологиям. И это проявляется в легком
-                    понимании того, что происходит в компьютерной сети и компьютере, в легкости овладевания программами
-                    и языками программирования, в быстром понимании и запоминании материала, даваемого в школе на уроках
-                    информатики, легкости в решении логических задач и построении схем, систем, легкость усвоения
-                    математики.
-                </ru><en>You demonstrated strong aptitude for IT. That is expressed in how easily you grasp what happens in networks and computers, how easily you pick up programs and programming languages, and how quickly you understand and memorize the material you learn in computer classes. You’re also good at solving logical problems, mathematics is a piece of cake, and you have no problem building schematics and systems.</en></max>
+                <min>
+                    <ru>Вы показали довольно низкий уровень способностей к информационным технологиям. Это выражается в
+                        полном или почти полном отсутствии понимания - несмотря на уроки информатики - того, как
+                        работает
+                        компьютер или программа. Вы ловко умеете пользоваться телефоном, но писать программы вы не
+                        захотите
+                        и не сможете, а попытки научиться не приводили вас к знанию и умению.
+                    </ru>
+                    <en>You demonstrated low aptitude for IT. That is expressed in the complete or nearly complete lack
+                        of understanding you have of how computers and programs work despite the IT classes you’ve
+                        taken. You know how to use your phone, though you have neither the desire nor the ability to
+                        code programs, and all attempts to teach you have failed.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень способностей к информационным технологиям. И это проявляется в
+                        относительно легком понимании того, что происходит в компьютерной сети и компьютере, в
+                        относительной
+                        легкости овладевания программами и языками программирования, в не быстром, но и не тяжелом
+                        понимании
+                        и запоминании материала, даваемого в школе на уроках информатики, математики. С таким уровнем
+                        способностей вы бы могли работать и программистом, и в сетевым администратором, и системным
+                        администратором, и специалистам ИБ.
+                    </ru>
+                    <en>You demonstrated average aptitude for IT. That is expressed in the relative ease with which you
+                        understand what happens in networks and computers and the way you can understand and memorize
+                        the material you learn in computer and math classes even if it’s not a fast process. With this
+                        level of aptitude, you could work as a programmer, a network administrator, a system
+                        administrator, or an information security officer.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень способностей к информационным технологиям. И это проявляется в
+                        легком
+                        понимании того, что происходит в компьютерной сети и компьютере, в легкости овладевания
+                        программами
+                        и языками программирования, в быстром понимании и запоминании материала, даваемого в школе на
+                        уроках
+                        информатики, легкости в решении логических задач и построении схем, систем, легкость усвоения
+                        математики.
+                    </ru>
+                    <en>You demonstrated strong aptitude for IT. That is expressed in how easily you grasp what happens
+                        in networks and computers, how easily you pick up programs and programming languages, and how
+                        quickly you understand and memorize the material you learn in computer classes. You’re also good
+                        at solving logical problems, mathematics is a piece of cake, and you have no problem building
+                        schematics and systems.
+                    </en>
+                </max>
             </skills>
         </it>
 
         <craft>
-            <name><ru>Ремёсла</ru><en></en></name>
+            <name>
+                <ru>Ремёсла</ru>
+                <en></en>
+            </name>
             <interest>
-                <min><ru>Вы показали низкий уровень интереса к ручным действиям с предметами (камни, металлы, дерево, кожа,
-                    ткани, продукты питания…). Это выражается в вашем нежелании действовать с какими-либо из
-                    материальных предметов. Случается, что вы даже заявляете о таком интересе, но практически никогда не
-                    получаете удовольствия от этих действий и стремитесь поскорее закончить начатую не по вашей воле, а
-                    по необходимости, работу с материалами. С таким уровнем интереса и прилежания к ручной работе с той
-                    или иной материей не стоит себе выбирать профессию, в которой есть много элементов ручного труда.
-                </ru><en>You demonstrated fairly low interest in working with your hands on objects like stone, metal, wood, leather, cloth, and food. That is expressed in how little you want to interact with them. Once in a while, you may mention that you have some interest, though you almost never enjoy it and generally try to just finish work you probably didn’t get yourself into of your own free will. With this level of interest in working with your hands, you shouldn’t choose a profession that includes a lot of it.</en></min>
-                <mid><ru>Вы показали средний уровень интереса к ручным действиям. И это выражается в том, что вы совершаете
-                    действия с предметами (камни, металл, ткани, дерево, мука и сахар и т.д.), но не часто, а иногда, и
-                    жалуясь, что «вдохновения нет». При наличии вдохновения вы можете что-то поделать, и у вас даже
-                    порой неплохо получается. Бывает, что видео в интернете или чужой пример побуждает вас купить
-                    материалы для работы, но до дела обычно не доходит. И мысль о том, чтобы делать руками интересную
-                    для вас работу ежедневно с утра до вечера — вызывает у вас не очень радостные чувства. Поэтому
-                    полностью исключать ручные действия из профессии вам не стоит, но и не стоит выбирать себе в
-                    качестве основной профессии только ручную работу.
-                </ru><en>You demonstrated average interest in working with your hands. That is expressed in how you work with objects like stone, metal, cloth, wood, flower, and sugar, if not regularly and usually while complaining about how you don’t feel inspired. When you do feel inspired, you can pull something off, and you’re even pretty good at it. Online videos or watching someone else might spur you on to buy something to work with, though that’s generally where the idea ends. And the idea of working with your hands from morning till night every day is less than thrilling. With that in mind, you should make sure your main profession isn’t working with your hands, though it should have some of that mixed in.</en></mid>
-                <max><ru>Вы показали высокий уровень интереса к ручным действиям. Это выражается в вашем удовольствии от
-                    действий с какими-либо предметами: камни, металлы, дерево, кожа, ткани, продукты питания… Интерес
-                    проявляется и в постоянном стремлении обрабатывать материалы, что-то создавать из них, а также в
-                    стремлении этому учиться доступными средствами (в интернете, на очных курсах, в кружках). С таким
-                    уровнем интереса и прилежания к ручной работе можно успешно работать поваром, парикмахером,
-                    визажистом, столяром, плотником, печником, ювелиром, жестянщиком и т.д.
-                </ru><en>You demonstrated strong interest in working with your hands. That is expressed in how much you enjoy working with objects like stone, metal, wood, leather, cloth, and food. Your interest shows up in how you’re always trying to process materials or make something out of them, not to mention how you enjoy learning as much as you can (online, at in-person classes, in special interest groups). With this level of interest and your knack for working with your hands, you could work as a chef, hairdresser, stylist, carpenter, builder, jeweler, smith, or something similar.</en></max>
+                <min>
+                    <ru>Вы показали низкий уровень интереса к ручным действиям с предметами (камни, металлы, дерево,
+                        кожа,
+                        ткани, продукты питания…). Это выражается в вашем нежелании действовать с какими-либо из
+                        материальных предметов. Случается, что вы даже заявляете о таком интересе, но практически
+                        никогда не
+                        получаете удовольствия от этих действий и стремитесь поскорее закончить начатую не по вашей
+                        воле, а
+                        по необходимости, работу с материалами. С таким уровнем интереса и прилежания к ручной работе с
+                        той
+                        или иной материей не стоит себе выбирать профессию, в которой есть много элементов ручного
+                        труда.
+                    </ru>
+                    <en>You demonstrated fairly low interest in working with your hands on objects like stone, metal,
+                        wood, leather, cloth, and food. That is expressed in how little you want to interact with them.
+                        Once in a while, you may mention that you have some interest, though you almost never enjoy it
+                        and generally try to just finish work you probably didn’t get yourself into of your own free
+                        will. With this level of interest in working with your hands, you shouldn’t choose a profession
+                        that includes a lot of it.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень интереса к ручным действиям. И это выражается в том, что вы
+                        совершаете
+                        действия с предметами (камни, металл, ткани, дерево, мука и сахар и т.д.), но не часто, а
+                        иногда, и
+                        жалуясь, что «вдохновения нет». При наличии вдохновения вы можете что-то поделать, и у вас даже
+                        порой неплохо получается. Бывает, что видео в интернете или чужой пример побуждает вас купить
+                        материалы для работы, но до дела обычно не доходит. И мысль о том, чтобы делать руками
+                        интересную
+                        для вас работу ежедневно с утра до вечера — вызывает у вас не очень радостные чувства. Поэтому
+                        полностью исключать ручные действия из профессии вам не стоит, но и не стоит выбирать себе в
+                        качестве основной профессии только ручную работу.
+                    </ru>
+                    <en>You demonstrated average interest in working with your hands. That is expressed in how you work
+                        with objects like stone, metal, cloth, wood, flower, and sugar, if not regularly and usually
+                        while complaining about how you don’t feel inspired. When you do feel inspired, you can pull
+                        something off, and you’re even pretty good at it. Online videos or watching someone else might
+                        spur you on to buy something to work with, though that’s generally where the idea ends. And the
+                        idea of working with your hands from morning till night every day is less than thrilling. With
+                        that in mind, you should make sure your main profession isn’t working with your hands, though it
+                        should have some of that mixed in.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень интереса к ручным действиям. Это выражается в вашем удовольствии от
+                        действий с какими-либо предметами: камни, металлы, дерево, кожа, ткани, продукты питания…
+                        Интерес
+                        проявляется и в постоянном стремлении обрабатывать материалы, что-то создавать из них, а также в
+                        стремлении этому учиться доступными средствами (в интернете, на очных курсах, в кружках). С
+                        таким
+                        уровнем интереса и прилежания к ручной работе можно успешно работать поваром, парикмахером,
+                        визажистом, столяром, плотником, печником, ювелиром, жестянщиком и т.д.
+                    </ru>
+                    <en>You demonstrated strong interest in working with your hands. That is expressed in how much you
+                        enjoy working with objects like stone, metal, wood, leather, cloth, and food. Your interest
+                        shows up in how you’re always trying to process materials or make something out of them, not to
+                        mention how you enjoy learning as much as you can (online, at in-person classes, in special
+                        interest groups). With this level of interest and your knack for working with your hands, you
+                        could work as a chef, hairdresser, stylist, carpenter, builder, jeweler, smith, or something
+                        similar.
+                    </en>
+                </max>
             </interest>
             <skills>
-                <min><ru>Вы показали низкий уровень способностей к ручным действиям с предметами (камни, металлы, дерево,
-                    кожа, ткани, продукты питания…). Это следствие недостаточно развитой ловкости рук, пальцев. Такое
-                    может происходить в результате врожденных или приобретенных неврологических заболеваний или травм
-                    костей и мышц, связок. С таким уровнем возможностей не стоит выбирать постоянную работу, в которой
-                    есть даже элементы ручного труда.
-                </ru><en>You demonstrated low aptitude for working with your hands on stone, metal, wood, leather, cloth, food, and the like. This is because your hands and fingers aren’t particularly nimble. That could be due to a lack of innate ability, neurological diseases, or injuries to bones, muscles, or tendons. With your aptitude, you shouldn’t pick a job that includes even aspects of working with your hands.</en></min>
-                <mid><ru>Вы показали средний уровень способностей к ручным действиям. У вас есть физическая возможность
-                    совершать действия с физической материей (ткани, металл, дерево и прочее), но без удивляющих
-                    результатов и без высокой скорости. Однако при наличии желания упорства и систематического обучения
-                    вы можете добиться впечатляющих результатов в ремёслах.
-                </ru><en>You demonstrated average aptitude for working with your hands. You have the physical ability to work with materials like cloth, metal, and wood, though you won’t come up with anything special, and it won’t be very fast. But if you have the desire, the persistence, and a systematic education, you can impress with your handiwork.</en></mid>
-                <max><ru>Вы показали высокий уровень способностей к ручным действиям с материальными предметами. Это
-                    проявляется в выраженной ловкости в обращении с инструментом и материалом, а также в высоком
-                    качестве изготавливаемого вами продукта. С таким уровнем способностей к ручной работе с той или иной
-                    материей и при желании вы могли бы успешно работать поваром, парикмахером, визажистом, столяром,
-                    плотники, печником, ювелиром, жестянщиком и т.д.
-                </ru><en>You demonstrated strong aptitude for working with your hands. That is expressed in how good you are with tools and materials as well as the high quality of everything you produce. With your level of aptitude for working with materials and the requisite desire, you would have a successful career as a chef, hairdresser, stylist, carpenter, builder, jeweler, smith, or similar.</en></max>
+                <min>
+                    <ru>Вы показали низкий уровень способностей к ручным действиям с предметами (камни, металлы, дерево,
+                        кожа, ткани, продукты питания…). Это следствие недостаточно развитой ловкости рук, пальцев.
+                        Такое
+                        может происходить в результате врожденных или приобретенных неврологических заболеваний или
+                        травм
+                        костей и мышц, связок. С таким уровнем возможностей не стоит выбирать постоянную работу, в
+                        которой
+                        есть даже элементы ручного труда.
+                    </ru>
+                    <en>You demonstrated low aptitude for working with your hands on stone, metal, wood, leather, cloth,
+                        food, and the like. This is because your hands and fingers aren’t particularly nimble. That
+                        could be due to a lack of innate ability, neurological diseases, or injuries to bones, muscles,
+                        or tendons. With your aptitude, you shouldn’t pick a job that includes even aspects of working
+                        with your hands.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень способностей к ручным действиям. У вас есть физическая возможность
+                        совершать действия с физической материей (ткани, металл, дерево и прочее), но без удивляющих
+                        результатов и без высокой скорости. Однако при наличии желания упорства и систематического
+                        обучения
+                        вы можете добиться впечатляющих результатов в ремёслах.
+                    </ru>
+                    <en>You demonstrated average aptitude for working with your hands. You have the physical ability to
+                        work with materials like cloth, metal, and wood, though you won’t come up with anything special,
+                        and it won’t be very fast. But if you have the desire, the persistence, and a systematic
+                        education, you can impress with your handiwork.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень способностей к ручным действиям с материальными предметами. Это
+                        проявляется в выраженной ловкости в обращении с инструментом и материалом, а также в высоком
+                        качестве изготавливаемого вами продукта. С таким уровнем способностей к ручной работе с той или
+                        иной
+                        материей и при желании вы могли бы успешно работать поваром, парикмахером, визажистом, столяром,
+                        плотники, печником, ювелиром, жестянщиком и т.д.
+                    </ru>
+                    <en>You demonstrated strong aptitude for working with your hands. That is expressed in how good you
+                        are with tools and materials as well as the high quality of everything you produce. With your
+                        level of aptitude for working with materials and the requisite desire, you would have a
+                        successful career as a chef, hairdresser, stylist, carpenter, builder, jeweler, smith, or
+                        similar.
+                    </en>
+                </max>
             </skills>
         </craft>
 
         <art>
-            <name><ru>Искусства</ru><en></en></name>
+            <name>
+                <ru>Искусства</ru>
+                <en></en>
+            </name>
             <interest>
-                <min><ru>Вы показали низкий уровень интереса к созданию художественных произведений. Это выражается в полном
-                    отсутствии интереса и удовольствия от деятельности, которая ведет к созданию художественного
-                    произведения: рисовать, лепить, музицировать, шить, стричь, красиво одевать людей, создавать
-                    интерьеры, фотографировать, ставить спектакли и танцы, писать художественные тексты и прочее.
-                    Отсутствие интереса проявляется в нежелании учиться этому в кружках, в художественной или
-                    музыкальной школе или самостоятельно по своей воле. Но это не исключает того, что вам нравится
-                    слушать и смотреть чужие произведения. Понимая толк в искусстве, но не создавая искусство, можно
-                    продавать произведения искусства, оценивать их, организовывать выставки, писать и говорить об
-                    искусстве.
-                </ru><en>You demonstrated fairly low interest in the arts. That is expressed in the complete lack of enjoyment you get from creating—drawing, molding, making music, sewing, cutting hair, dressing people, creating interior designs, taking pictures, choreographing plays or dances, writing, and so on. With that in mind, you also don’t like learning something new in this area, be it in related circles, at art school, at music school, or on your own. But that doesn’t mean you don’t enjoy watching or listening to other people’s creations. If you understand art but don’t want to create it, you can sell works of art, appraise them, organize exhibits, or write and talk about art.</en></min>
-                <mid><ru>Вы показали средний уровень интереса к созданию художественных произведений (рисовать, лепить,
-                    музицировать, шить, стричь, красиво одевать людей, создавать интерьеры, фотографировать, ставить
-                    спектакли и танцы, писать художественные тексты и прочее). Это выражается в непостоянстве
-                    художественных усилий и в редких вдохновениях. Попытки учиться чему-то из этого приводят к вашим
-                    сомнениям «мое ли это». И мысль о том, что придется на работе рисовать каждый день или музицировать
-                    каждый день вызывают у вас противоречивые и не очень приятные чувства. Возможно, вы бы скорее хотели
-                    быть в творческой среде не творцом, а кем-то иным, например, организатором процесса или
-                    искусствоведом. Тогда вам надо выбирать не художественное направление, а управленческое,
-                    продюсерское, искусствоведческое.
-                </ru><en>You demonstrated average interest in the arts (drawing, molding, photography, choreographing plays or dances, writing, and so on). That is expressed in how your artistic efforts come in fits and starts, while you also find yourself only rarely inspired. Attempts to learn something new make you wonder if this is an area you really enjoy. And the thought of drawing or making music every day gives you mixed feelings. Possibly, you’d prefer to work in the creative sphere, just not as a creator—you could organize processes or teach. In that case, you should pick a management, production, or professorial role rather than an artistic one.</en></mid>
-                <max><ru>Вы показали высокий уровень интереса к созданию художественных произведений. Это выражается в
-                    удовольствии от деятельности, которая ведет к созданию художественного произведения. Вы замечаете за
-                    собой, что вам интересно рисовать / лепить / музицировать / шить / стричь / красиво одевать людей /
-                    создавать интерьеры / фотографировать / ставить спектакли и танцы / писать художественные тексты и
-                    прочее. Ваш интерес проявляется и в наслаждении чужими произведениями, и в постоянном стремлении
-                    учиться этому в кружках, в художественной или музыкальной школе, в стремлении совершенствовать ваши
-                    умения. Если ваш интерес к искусству сопровождается желанием и возможностью его создавать, то вам
-                    можно рассматривать художественное направление — какое вам ближе по опыту и интересу: если вы
-                    рисуете — то живопись, графический дизайн, если вы музицируете — то музыка, если снимаете фото — то
-                    фотография или видеография и т.п.
-                </ru><en>You demonstrated strong interest in the arts. That is expressed in the enjoyment you take from creating and all things artistic. You’ve noticed how much you enjoy drawing/molding/making music/sewing/cutting hair/dressing people/creating interior designs/taking pictures/choreographing plays or dances/writing. Your interest shows up in your enjoyment of other people’s work, while you’re also always looking to learn something new in like-minded circles or art or music school. If you have the desire to create art in addition to the interest you take in it, you can look at whichever kind of art you most enjoy. If that’s drawing, then painting or graphic design. It could also be the music industry, photography, videography, or something similar.</en></max>
+                <min>
+                    <ru>Вы показали низкий уровень интереса к созданию художественных произведений. Это выражается в
+                        полном
+                        отсутствии интереса и удовольствия от деятельности, которая ведет к созданию художественного
+                        произведения: рисовать, лепить, музицировать, шить, стричь, красиво одевать людей, создавать
+                        интерьеры, фотографировать, ставить спектакли и танцы, писать художественные тексты и прочее.
+                        Отсутствие интереса проявляется в нежелании учиться этому в кружках, в художественной или
+                        музыкальной школе или самостоятельно по своей воле. Но это не исключает того, что вам нравится
+                        слушать и смотреть чужие произведения. Понимая толк в искусстве, но не создавая искусство, можно
+                        продавать произведения искусства, оценивать их, организовывать выставки, писать и говорить об
+                        искусстве.
+                    </ru>
+                    <en>You demonstrated fairly low interest in the arts. That is expressed in the complete lack of
+                        enjoyment you get from creating—drawing, molding, making music, sewing, cutting hair, dressing
+                        people, creating interior designs, taking pictures, choreographing plays or dances, writing, and
+                        so on. With that in mind, you also don’t like learning something new in this area, be it in
+                        related circles, at art school, at music school, or on your own. But that doesn’t mean you don’t
+                        enjoy watching or listening to other people’s creations. If you understand art but don’t want to
+                        create it, you can sell works of art, appraise them, organize exhibits, or write and talk about
+                        art.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень интереса к созданию художественных произведений (рисовать, лепить,
+                        музицировать, шить, стричь, красиво одевать людей, создавать интерьеры, фотографировать, ставить
+                        спектакли и танцы, писать художественные тексты и прочее). Это выражается в непостоянстве
+                        художественных усилий и в редких вдохновениях. Попытки учиться чему-то из этого приводят к вашим
+                        сомнениям «мое ли это». И мысль о том, что придется на работе рисовать каждый день или
+                        музицировать
+                        каждый день вызывают у вас противоречивые и не очень приятные чувства. Возможно, вы бы скорее
+                        хотели
+                        быть в творческой среде не творцом, а кем-то иным, например, организатором процесса или
+                        искусствоведом. Тогда вам надо выбирать не художественное направление, а управленческое,
+                        продюсерское, искусствоведческое.
+                    </ru>
+                    <en>You demonstrated average interest in the arts (drawing, molding, photography, choreographing
+                        plays or dances, writing, and so on). That is expressed in how your artistic efforts come in
+                        fits and starts, while you also find yourself only rarely inspired. Attempts to learn something
+                        new make you wonder if this is an area you really enjoy. And the thought of drawing or making
+                        music every day gives you mixed feelings. Possibly, you’d prefer to work in the creative sphere,
+                        just not as a creator—you could organize processes or teach. In that case, you should pick a
+                        management, production, or professorial role rather than an artistic one.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень интереса к созданию художественных произведений. Это выражается в
+                        удовольствии от деятельности, которая ведет к созданию художественного произведения. Вы
+                        замечаете за
+                        собой, что вам интересно рисовать / лепить / музицировать / шить / стричь / красиво одевать
+                        людей /
+                        создавать интерьеры / фотографировать / ставить спектакли и танцы / писать художественные тексты
+                        и
+                        прочее. Ваш интерес проявляется и в наслаждении чужими произведениями, и в постоянном стремлении
+                        учиться этому в кружках, в художественной или музыкальной школе, в стремлении совершенствовать
+                        ваши
+                        умения. Если ваш интерес к искусству сопровождается желанием и возможностью его создавать, то
+                        вам
+                        можно рассматривать художественное направление — какое вам ближе по опыту и интересу: если вы
+                        рисуете — то живопись, графический дизайн, если вы музицируете — то музыка, если снимаете фото —
+                        то
+                        фотография или видеография и т.п.
+                    </ru>
+                    <en>You demonstrated strong interest in the arts. That is expressed in the enjoyment you take from
+                        creating and all things artistic. You’ve noticed how much you enjoy drawing/molding/making
+                        music/sewing/cutting hair/dressing people/creating interior designs/taking
+                        pictures/choreographing plays or dances/writing. Your interest shows up in your enjoyment of
+                        other people’s work, while you’re also always looking to learn something new in like-minded
+                        circles or art or music school. If you have the desire to create art in addition to the interest
+                        you take in it, you can look at whichever kind of art you most enjoy. If that’s drawing, then
+                        painting or graphic design. It could also be the music industry, photography, videography, or
+                        something similar.
+                    </en>
+                </max>
             </interest>
             <skills>
-                <min><ru>Вы показали ниже среднего уровень способностей к созданию художественных произведений. Это
-                    выражается не только в недостатке своих собственных идей, в возможности только копировать чужие
-                    произведения, а также и в низком уровне ремесленной части после изрядных попыток научиться.
-                </ru><en>You have demonstrated a low level of creative abilities. That is expressed not only in your inability to generate your own ideas, in the ability only to copy others' work but also in the low level of craftsmanship despite a lot of effort you put into acquiring these skills.</en></min>
-                <mid><ru>Вы показали средний уровень способностей к созданию художественных произведений (рисовать, лепить,
-                    музицировать, шить, стричь, красиво одевать людей, создавать интерьеры, фотографировать, ставить
-                    спектакли и танцы, писать художественные тексты и прочее). Это выражается в недостаточной
-                    оригинальности вашего подхода и вашего взгляда на предмет, а также в недостаточной легкости
-                    исполнения. У вас нет собственных идей, но вы способны хорошо копировать чужие произведения. Однако
-                    при наличии упорства вы могли бы достичь впечатляющих результатов.
-                </ru><en>You demonstrated average aptitude for the arts (drawing, molding, photography, choreographing plays or dances, writing, and so on). That is expressed in the lack of originality of your ideas and approaches, and you cannot create with ease. While having no original ideas, you are still able to copy the works of others pretty well. With enough perseverance, you might achieve spectacular results.</en></mid>
-                <max><ru>Вы показали высокий уровень способностей к созданию художественных произведений. Это выражается не
-                    только в оригинальности изготавливаемого вами продукта, но и в необычайно тонком умении увидеть
-                    необычное в обычном предмете, а также в тонком чувствовании формы, цвета, звука и запаха.
-                </ru><en>You demonstrated strong aptitude for the arts. Not only you are able to produce highly original work, but also you can be extremely sensitive when it comes to noticing unusual traits in objects, as well as perceiving shapes, colors, sounds, and smells.</en></max>
+                <min>
+                    <ru>Вы показали ниже среднего уровень способностей к созданию художественных произведений. Это
+                        выражается не только в недостатке своих собственных идей, в возможности только копировать чужие
+                        произведения, а также и в низком уровне ремесленной части после изрядных попыток научиться.
+                    </ru>
+                    <en>You have demonstrated a low level of creative abilities. That is expressed not only in your
+                        inability to generate your own ideas, in the ability only to copy others' work but also in the
+                        low level of craftsmanship despite a lot of effort you put into acquiring these skills.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень способностей к созданию художественных произведений (рисовать,
+                        лепить,
+                        музицировать, шить, стричь, красиво одевать людей, создавать интерьеры, фотографировать, ставить
+                        спектакли и танцы, писать художественные тексты и прочее). Это выражается в недостаточной
+                        оригинальности вашего подхода и вашего взгляда на предмет, а также в недостаточной легкости
+                        исполнения. У вас нет собственных идей, но вы способны хорошо копировать чужие произведения.
+                        Однако
+                        при наличии упорства вы могли бы достичь впечатляющих результатов.
+                    </ru>
+                    <en>You demonstrated average aptitude for the arts (drawing, molding, photography, choreographing
+                        plays or dances, writing, and so on). That is expressed in the lack of originality of your ideas
+                        and approaches, and you cannot create with ease. While having no original ideas, you are still
+                        able to copy the works of others pretty well. With enough perseverance, you might achieve
+                        spectacular results.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень способностей к созданию художественных произведений. Это выражается
+                        не
+                        только в оригинальности изготавливаемого вами продукта, но и в необычайно тонком умении увидеть
+                        необычное в обычном предмете, а также в тонком чувствовании формы, цвета, звука и запаха.
+                    </ru>
+                    <en>You demonstrated strong aptitude for the arts. Not only you are able to produce highly original
+                        work, but also you can be extremely sensitive when it comes to noticing unusual traits in
+                        objects, as well as perceiving shapes, colors, sounds, and smells.
+                    </en>
+                </max>
             </skills>
         </art>
 
         <hoz>
-            <name><ru>Хозяйство</ru><en></en></name>
+            <name>
+                <ru>Хозяйство</ru>
+                <en></en>
+            </name>
             <interest>
-                <min><ru>Вы показали низкий уровень интересов в хозяйственной области. У вас это выражается в отсутствии
-                    заботы о предметах и процессах быта. В фокусе вашего внимания не экономия средств, не разумное
-                    использовании ресурсов и отходов дома и на работе: у вас другие интересы.
-                </ru><en>You demonstrated fairly low interest in housekeeping. You do not care about household items or processes at all. Your personal focus is not on economy or resource and waste management at home or at work; your interests lie elsewhere.</en></min>
-                <mid><ru>Вы показали средний уровень интересов в хозяйственной области. Это выражается в личной вашей заботе
-                    о личных ваших предметах и процессах личного быта. Вы думаете об экономии средств, о разумном
-                    использовании ресурсов и отходов, но не готовы заниматься этим постоянно в качестве наемного
-                    сотрудника и даже в своем бизнесе вы были бы не в силах сосредоточить всё своё внимание на
-                    хозяйственных вопросах.
-                </ru><en>You demonstrated average interest in housekeeping. That is expressed in your paying attention to your personal effects and everyday items. You think about economy, resource and waste management, but are not ready to do this on a daily basis or as a job. Even in your own business, you would not be able to focus on household issues.</en></mid>
-                <max><ru>Вы показали высокий уровень интересов к ведению хозяйства. Это выражается в высоком уровне заботы о
-                    предметах и процессах быта. Вы постоянно заботитесь об экономии средств, о разумном использовании
-                    материальных и денежных ресурсов и отходов. Вы бы могли управлять гостиницей, заведовать хозяйством
-                    офисного здания, жилищно-коммунальным хозяйством, быть главной медсестрой, старшей медсестрой,
-                    дворецким, хаускипинг-менеджером.
-                </ru><en>You demonstrated strong interest in housekeeping. That is expressed in you being extremely attentive to household items and processes. You always try to economize, using material resources and waste prudently. You can work as a hotel manager, a supply manager in an office, a public utility administrator, a head nurse, a butler, or a housekeeper.</en></max>
+                <min>
+                    <ru>Вы показали низкий уровень интересов в хозяйственной области. У вас это выражается в отсутствии
+                        заботы о предметах и процессах быта. В фокусе вашего внимания не экономия средств, не разумное
+                        использовании ресурсов и отходов дома и на работе: у вас другие интересы.
+                    </ru>
+                    <en>You demonstrated fairly low interest in housekeeping. You do not care about household items or
+                        processes at all. Your personal focus is not on economy or resource and waste management at home
+                        or at work; your interests lie elsewhere.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень интересов в хозяйственной области. Это выражается в личной вашей
+                        заботе
+                        о личных ваших предметах и процессах личного быта. Вы думаете об экономии средств, о разумном
+                        использовании ресурсов и отходов, но не готовы заниматься этим постоянно в качестве наемного
+                        сотрудника и даже в своем бизнесе вы были бы не в силах сосредоточить всё своё внимание на
+                        хозяйственных вопросах.
+                    </ru>
+                    <en>You demonstrated average interest in housekeeping. That is expressed in your paying attention to
+                        your personal effects and everyday items. You think about economy, resource and waste
+                        management, but are not ready to do this on a daily basis or as a job. Even in your own
+                        business, you would not be able to focus on household issues.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень интересов к ведению хозяйства. Это выражается в высоком уровне
+                        заботы о
+                        предметах и процессах быта. Вы постоянно заботитесь об экономии средств, о разумном
+                        использовании
+                        материальных и денежных ресурсов и отходов. Вы бы могли управлять гостиницей, заведовать
+                        хозяйством
+                        офисного здания, жилищно-коммунальным хозяйством, быть главной медсестрой, старшей медсестрой,
+                        дворецким, хаускипинг-менеджером.
+                    </ru>
+                    <en>You demonstrated strong interest in housekeeping. That is expressed in you being extremely
+                        attentive to household items and processes. You always try to economize, using material
+                        resources and waste prudently. You can work as a hotel manager, a supply manager in an office, a
+                        public utility administrator, a head nurse, a butler, or a housekeeper.
+                    </en>
+                </max>
             </interest>
             <skills>
-                <min><ru>Низкий уровень способностей в хозяйственной области выражается у вас в почти полном отсутствии
-                    внимания к хозяйственным вопросам, неспособности сосредоточить внимание на этих вопросах, в
-                    постоянных и досадных ошибках, ведущих к потерям ресурсов и средств. Вам не стоит работать в АХО, на
-                    складе, логистом.
-                </ru><en>You demonstrated low aptitude for housekeeping. You are unable to focus on household issues, and your embarrassing errors are constantly causing financial and material losses. You should not work as a supply manager, a storekeeper, or a logistics manager.</en></min>
-                <mid><ru>Средний уровень способностей позволяет вам контролировать доходы и расходы, ведение хозяйственных
-                    процессов — но с постоянными и несущественными ошибками. Вы способны совершать хозяйственные
-                    расчёты, думать об экономии средств, о разумном использовании ресурсов, но лучше вам не заниматься
-                    этим профессионально и постоянно, ведь вы не в силах сосредоточить всё свое внимание на
-                    хозяйственных вопросах.
-                </ru><en>You demonstrated average aptitude for housekeeping. You are capable of managing your income and losses, as well as household issues. However, you are still prone to making errors. You can economize and manage resources at your disposal, but you should better delegate these functions as you are unable to maintain your focus on them.</en></mid>
-                <max><ru>Вы показали высокий уровень способностей к хозяйственной деятельности. Это выражается в том, что вы
-                    можете в вашем сознании удерживать все хозяйственные компоненты и все своевременно контролировать:
-                    финансы, предметы и процессы быта. У вас всегда порядок в вещах и документах, вы знаете где что у
-                    вас лежит и по какой цене вы это купили.
-                </ru><en>You demonstrated strong aptitude for housekeeping. That is expressed in your ability to keep in mind and control your finances, stock, and household processes. You are very orderly when it comes to arranging items and documents. You always know where everything is, when and for how much you have bought it.</en></max>
+                <min>
+                    <ru>Низкий уровень способностей в хозяйственной области выражается у вас в почти полном отсутствии
+                        внимания к хозяйственным вопросам, неспособности сосредоточить внимание на этих вопросах, в
+                        постоянных и досадных ошибках, ведущих к потерям ресурсов и средств. Вам не стоит работать в
+                        АХО, на
+                        складе, логистом.
+                    </ru>
+                    <en>You demonstrated low aptitude for housekeeping. You are unable to focus on household issues, and
+                        your embarrassing errors are constantly causing financial and material losses. You should not
+                        work as a supply manager, a storekeeper, or a logistics manager.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Средний уровень способностей позволяет вам контролировать доходы и расходы, ведение
+                        хозяйственных
+                        процессов — но с постоянными и несущественными ошибками. Вы способны совершать хозяйственные
+                        расчёты, думать об экономии средств, о разумном использовании ресурсов, но лучше вам не
+                        заниматься
+                        этим профессионально и постоянно, ведь вы не в силах сосредоточить всё свое внимание на
+                        хозяйственных вопросах.
+                    </ru>
+                    <en>You demonstrated average aptitude for housekeeping. You are capable of managing your income and
+                        losses, as well as household issues. However, you are still prone to making errors. You can
+                        economize and manage resources at your disposal, but you should better delegate these functions
+                        as you are unable to maintain your focus on them.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень способностей к хозяйственной деятельности. Это выражается в том, что
+                        вы
+                        можете в вашем сознании удерживать все хозяйственные компоненты и все своевременно
+                        контролировать:
+                        финансы, предметы и процессы быта. У вас всегда порядок в вещах и документах, вы знаете где что
+                        у
+                        вас лежит и по какой цене вы это купили.
+                    </ru>
+                    <en>You demonstrated strong aptitude for housekeeping. That is expressed in your ability to keep in
+                        mind and control your finances, stock, and household processes. You are very orderly when it
+                        comes to arranging items and documents. You always know where everything is, when and for how
+                        much you have bought it.
+                    </en>
+                </max>
             </skills>
         </hoz>
 
         <com>
-            <name><ru>Коммуникативные практики</ru><en></en></name>
+            <name>
+                <ru>Коммуникативные практики</ru>
+                <en></en>
+            </name>
             <interest>
-                <min><ru>Вы показали довольно низкий уровень интереса к общению с людьми. Это выражается в закрытости, в
-                    отсутствии привычки наблюдать за людьми и вникать в обстоятельства их жизни, причины их поведения,
-                    отсутствии стремления влиять на людей, организовывать их, воспитывать, развлекать, помогать им и
-                    совершать другие действия с людьми. Вероятно, вам не стоит выбирать профессию, в которой приходится
-                    много общаться.
-                </ru><en>You demonstrated fairly low interest in communication. That is expressed in your closed nature, you are not in the habit of watching people, looking into their lives, or finding out reasons for their behavior. You do not strive to impact, organize, educate, entertain, help people around you or interact with them otherwise. You should avoid jobs that involve a lot of communication.</en></min>
-                <mid><ru>Вы показали средний уровень интереса к общению с людьми: это выражается в умеренном интересе к
-                    окружающим людям и довольно среднем желании взаимодействовать с ними, узнавать обстоятельства их
-                    жизни, причины их поведения, умеренном желании тратить силы на непосредственный контакт с людьми.
-                    Даже если вы читаете книги по психологии, ваш интерес к реальным людям не так велик.
-                </ru><en>You demonstrated average interest in communication. You are moderately inclined to watch people and interact with them, learn about their lives and what makes them tick. You do not have an aversion to talking to people. Still, you are not particularly interested in knowing people well, even if you like reading books on psychology.</en></mid>
-                <max><ru>Вы показали высокий уровень интереса к общению с людьми. Это выражается в интересе к окружающим
-                    людям, открытости, желании взаимодействовать с ними, знать обстоятельства их жизни, в попытках
-                    понять причины их поведения, влиять на людей, организовывая их, воспитывая, развлекая и помогая им.
-                    А также в чтении биографической, психологической и художественной литературы. Интерес к людям может
-                    быть у интровертного человека, желающего не очень много общаться, но зато глубоко. У экстравертного
-                    человека интерес к общению проявляется иначе, чем у интроверта: в желании вступать в открытый
-                    контакт с бОльшим количеством людей.
-                </ru><en>You demonstrated strong interest in communication. That is expressed in your open eagerness to interact with people, learn about their lives and what makes them tick, as well as impact, organize, educate, entertain, or help them. You like reading biographies, fiction, and books on psychology. Even if you are introverted by nature, you can still strive for deep and intimate communication with a limited number of people. Extroverted people, on the contrary, are willing to communicate with as many people as possible.</en></max>
+                <min>
+                    <ru>Вы показали довольно низкий уровень интереса к общению с людьми. Это выражается в закрытости, в
+                        отсутствии привычки наблюдать за людьми и вникать в обстоятельства их жизни, причины их
+                        поведения,
+                        отсутствии стремления влиять на людей, организовывать их, воспитывать, развлекать, помогать им и
+                        совершать другие действия с людьми. Вероятно, вам не стоит выбирать профессию, в которой
+                        приходится
+                        много общаться.
+                    </ru>
+                    <en>You demonstrated fairly low interest in communication. That is expressed in your closed nature,
+                        you are not in the habit of watching people, looking into their lives, or finding out reasons
+                        for their behavior. You do not strive to impact, organize, educate, entertain, help people
+                        around you or interact with them otherwise. You should avoid jobs that involve a lot of
+                        communication.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень интереса к общению с людьми: это выражается в умеренном интересе к
+                        окружающим людям и довольно среднем желании взаимодействовать с ними, узнавать обстоятельства их
+                        жизни, причины их поведения, умеренном желании тратить силы на непосредственный контакт с
+                        людьми.
+                        Даже если вы читаете книги по психологии, ваш интерес к реальным людям не так велик.
+                    </ru>
+                    <en>You demonstrated average interest in communication. You are moderately inclined to watch people
+                        and interact with them, learn about their lives and what makes them tick. You do not have an
+                        aversion to talking to people. Still, you are not particularly interested in knowing people
+                        well, even if you like reading books on psychology.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень интереса к общению с людьми. Это выражается в интересе к окружающим
+                        людям, открытости, желании взаимодействовать с ними, знать обстоятельства их жизни, в попытках
+                        понять причины их поведения, влиять на людей, организовывая их, воспитывая, развлекая и помогая
+                        им.
+                        А также в чтении биографической, психологической и художественной литературы. Интерес к людям
+                        может
+                        быть у интровертного человека, желающего не очень много общаться, но зато глубоко. У
+                        экстравертного
+                        человека интерес к общению проявляется иначе, чем у интроверта: в желании вступать в открытый
+                        контакт с бОльшим количеством людей.
+                    </ru>
+                    <en>You demonstrated strong interest in communication. That is expressed in your open eagerness to
+                        interact with people, learn about their lives and what makes them tick, as well as impact,
+                        organize, educate, entertain, or help them. You like reading biographies, fiction, and books on
+                        psychology. Even if you are introverted by nature, you can still strive for deep and intimate
+                        communication with a limited number of people. Extroverted people, on the contrary, are willing
+                        to communicate with as many people as possible.
+                    </en>
+                </max>
             </interest>
             <skills>
-                <min><ru>Вы показали низкий уровень способности к общению с людьми: это выражается в неумении чувствовать
-                    эмоции других людей, неумении предсказывать последствия текущих социальных ситуаций. С таким уровнем
-                    коммуникативных способностей или умений — стоит выбирать работы, где предметом труда не является
-                    человек.
-                </ru><en>You demonstrated low aptitude for communication. You are unable to feel other people’s emotions or predict the outcome of a social situation. You should better look for a job that does not involve interacting with people.</en></min>
-                <mid><ru>Вы показали средний уровень способности к общению с людьми: это выражается в недостаточно высоком
-                    уровне энергии общения, в некоторых коммуникативных ошибках, некоторых ограничениях (не можете легко
-                    выступать на публике или не можете легко говорить по телефону). Ваша работа может совершаться в
-                    коллективе, в команде, а недостатки в общении можно прорабатывать по ходу дела.
-                </ru><en>You demonstrated average aptitude for communication. You do not have sufficient communicative energy, which leads to errors in interacting with people and limited interpersonal activity, i.e. you find it hard to speak in public or talk over the phone. Still, you are able to work in a team or a collective while overcoming your communicative drawbacks.</en></mid>
-                <max><ru>Вы показали высокий уровень способностей к общению с людьми: это выражается в эмпатии, в вашем
-                    интуитивном умении чувствовать и правильно понимать настроения рядом находящихся людей, а также в
-                    смелости преодолевать коммуникативные барьеры, в коммуникативной точности и умении доносить до
-                    человека вашу мысль, точно понимать направленное на вас сообщение, развитую способность
-                    сопротивляться манипуляциям. Такие развитые коммуникативные умения необходимы в работе психолога,
-                    врача, менеджера, юриста, продавца и т.п.
-                </ru><en>You demonstrated strong aptitude for communication. You have empathy, can intuitively feel and understand the mood of people around you, and also bravely overcome communicative barriers. You are able to get your messages across clearly and effectively, understand what others are telling you, and resist manipulations. Such skills may be very useful for a psychologist, a doctor, a manager, a lawyer, a salesperson, etc.</en></max>
+                <min>
+                    <ru>Вы показали низкий уровень способности к общению с людьми: это выражается в неумении чувствовать
+                        эмоции других людей, неумении предсказывать последствия текущих социальных ситуаций. С таким
+                        уровнем
+                        коммуникативных способностей или умений — стоит выбирать работы, где предметом труда не является
+                        человек.
+                    </ru>
+                    <en>You demonstrated low aptitude for communication. You are unable to feel other people’s emotions
+                        or predict the outcome of a social situation. You should better look for a job that does not
+                        involve interacting with people.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень способности к общению с людьми: это выражается в недостаточно
+                        высоком
+                        уровне энергии общения, в некоторых коммуникативных ошибках, некоторых ограничениях (не можете
+                        легко
+                        выступать на публике или не можете легко говорить по телефону). Ваша работа может совершаться в
+                        коллективе, в команде, а недостатки в общении можно прорабатывать по ходу дела.
+                    </ru>
+                    <en>You demonstrated average aptitude for communication. You do not have sufficient communicative
+                        energy, which leads to errors in interacting with people and limited interpersonal activity,
+                        i.e. you find it hard to speak in public or talk over the phone. Still, you are able to work in
+                        a team or a collective while overcoming your communicative drawbacks.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень способностей к общению с людьми: это выражается в эмпатии, в вашем
+                        интуитивном умении чувствовать и правильно понимать настроения рядом находящихся людей, а также
+                        в
+                        смелости преодолевать коммуникативные барьеры, в коммуникативной точности и умении доносить до
+                        человека вашу мысль, точно понимать направленное на вас сообщение, развитую способность
+                        сопротивляться манипуляциям. Такие развитые коммуникативные умения необходимы в работе
+                        психолога,
+                        врача, менеджера, юриста, продавца и т.п.
+                    </ru>
+                    <en>You demonstrated strong aptitude for communication. You have empathy, can intuitively feel and
+                        understand the mood of people around you, and also bravely overcome communicative barriers. You
+                        are able to get your messages across clearly and effectively, understand what others are telling
+                        you, and resist manipulations. Such skills may be very useful for a psychologist, a doctor, a
+                        manager, a lawyer, a salesperson, etc.
+                    </en>
+                </max>
             </skills>
         </com>
 
         <boss>
-            <name><ru>Коммерция</ru><en></en></name>
+            <name>
+                <ru>Коммерция</ru>
+                <en></en>
+            </name>
             <interest>
-                <min><ru>Вы показали низкий уровень интересов к предпринимательству: это выражается в полном или почти
-                    полном отсутствии интереса к тому, как государство или компания богатеют и разоряются. Вы никогда не
-                    задумываетесь о таких категориях, как цена, себестоимость, прибыль и доходы. У вас другие интересы.
-                </ru><en>You demonstrated fairly low interest in doing business. That is expressed in only the slightest interest, if at all, in how a state or a company can get rich or go bankrupt. You do not care about such notions as price, cost, income or profit. Your real interests lie elsewhere.</en></min>
-                <mid><ru>Вы показали средний уровень интересов к предпринимательству: вам интересна тема бизнеса, но пока вы
-                    не делали попыток заработать самостоятельно. Средний интерес к предпринимательству может выражаться
-                    в чтении литературы о бизнесе, в накопленных знаниях об основных экономических законах. Однако без
-                    попыток заработать самостоятельно интерес у бизнесу остается теоретическим. Если так будет и дальше
-                    - вы сможете работать наёмно в чужом бизнесе, делая определенный вклад в бизнес со своей стороны,
-                    например, как логист или как экономист-аналитик, маркетолог, специалист по продажам и т.п.
-                </ru><en>You demonstrated average interest in doing business. While you are keen on entrepreneurship, you have not yet tried to make money by yourself. You may like reading business-related literature or have certain knowledge about how the economy works. However, your interest is mostly academic. Even if it remains so, you could still be successful as an employee, contributing to someone else’s business as a logistics specialist, economy or market analyst, sales manager, etc.</en></mid>
-                <max><ru>Вы показали высокий уровень интересов к предпринимательству: это выражается в стремлении и попытках
-                    зарабатывать, не устраиваясь на работу наемно. А также вы довольно много размышляете о способах
-                    зарабатывать так или иначе. Высокий уровень интереса к предпринимательству выражается у вас также в
-                    чтении литературы о бизнесе, в накопленных знаниях об основных экономических законах. О временем с,
-                    большой вероятностью, вы возглавите бизнес-направление (продажи, маркетинг) в компании, какой бы они
-                    ни была (инженерная, IT, медиа или образовательная и т.д.).
-                </ru><en>You demonstrated strong interest in doing business. That is expressed in striving and trying to earn money without taking a job for hire. You think a lot about different ways of making money. Besides, you like reading business-related literature, and you possess vast knowledge about how the economy works. In time, you are more than likely to head a sales or marketing department in a company, whatever business it is doing (engineering, IT, media, education, etc.).</en></max>
+                <min>
+                    <ru>Вы показали низкий уровень интересов к предпринимательству: это выражается в полном или почти
+                        полном отсутствии интереса к тому, как государство или компания богатеют и разоряются. Вы
+                        никогда не
+                        задумываетесь о таких категориях, как цена, себестоимость, прибыль и доходы. У вас другие
+                        интересы.
+                    </ru>
+                    <en>You demonstrated fairly low interest in doing business. That is expressed in only the slightest
+                        interest, if at all, in how a state or a company can get rich or go bankrupt. You do not care
+                        about such notions as price, cost, income or profit. Your real interests lie elsewhere.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень интересов к предпринимательству: вам интересна тема бизнеса, но пока
+                        вы
+                        не делали попыток заработать самостоятельно. Средний интерес к предпринимательству может
+                        выражаться
+                        в чтении литературы о бизнесе, в накопленных знаниях об основных экономических законах. Однако
+                        без
+                        попыток заработать самостоятельно интерес у бизнесу остается теоретическим. Если так будет и
+                        дальше
+                        - вы сможете работать наёмно в чужом бизнесе, делая определенный вклад в бизнес со своей
+                        стороны,
+                        например, как логист или как экономист-аналитик, маркетолог, специалист по продажам и т.п.
+                    </ru>
+                    <en>You demonstrated average interest in doing business. While you are keen on entrepreneurship, you
+                        have not yet tried to make money by yourself. You may like reading business-related literature
+                        or have certain knowledge about how the economy works. However, your interest is mostly
+                        academic. Even if it remains so, you could still be successful as an employee, contributing to
+                        someone else’s business as a logistics specialist, economy or market analyst, sales manager,
+                        etc.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень интересов к предпринимательству: это выражается в стремлении и
+                        попытках
+                        зарабатывать, не устраиваясь на работу наемно. А также вы довольно много размышляете о способах
+                        зарабатывать так или иначе. Высокий уровень интереса к предпринимательству выражается у вас
+                        также в
+                        чтении литературы о бизнесе, в накопленных знаниях об основных экономических законах. О временем
+                        с,
+                        большой вероятностью, вы возглавите бизнес-направление (продажи, маркетинг) в компании, какой бы
+                        они
+                        ни была (инженерная, IT, медиа или образовательная и т.д.).
+                    </ru>
+                    <en>You demonstrated strong interest in doing business. That is expressed in striving and trying to
+                        earn money without taking a job for hire. You think a lot about different ways of making money.
+                        Besides, you like reading business-related literature, and you possess vast knowledge about how
+                        the economy works. In time, you are more than likely to head a sales or marketing department in
+                        a company, whatever business it is doing (engineering, IT, media, education, etc.).
+                    </en>
+                </max>
             </interest>
             <skills>
-                <min><ru>Вы показали низкий уровень способности к предпринимательству: это обычно у человека выражается в
-                    отсутствии социальной ловкости, неумении договариваться и в трудностях понимания того, как
-                    зарабатываются деньги. При желании вы могли бы даже работать бухгалтером у в компании, иметь дело с
-                    деньгами и коммерческими документами, но лишь анализировать то, что заработали другие.
-                </ru><en>You demonstrated low aptitude for business abilities. People like you are usually socially inept, unable to make a deal, and have difficulty in understanding how money is made. In theory, you could even become an accountant and work with finances and commercial papers, but you will never be able to establish your own business.</en></min>
-                <mid><ru>Вы показали средний уровень способности к предпринимательству: обычно это выражается в здравом
-                    смысле и реалистичности, самостоятельности, попытках заработать, ответственности в принятии решений,
-                    но и в желании иметь защиту со стороны, возможно, партнера или руководителя. При желании вы могли бы
-                    работать в отделе продаж или маркетинга или логистики и проявлять ловкость, сообразительность в
-                    зарабатывании денег для себя и компании — в положении наемного человека.
-                </ru><en>You demonstrated average aptitude for business. People like you usually have common sense and realistic thinking, make attempts to earn money, are responsible for their decisions, but at the same time, they look to a partner or, perhaps, a boss for protection. You could make yourself useful in sales, marketing, or logistics department, or contribute your cunning and flexibility to earn money for yourself and your company as an employee.</en></mid>
-                <max><ru>Вы показали высокий уровень способностей к предпринимательству. Обычно это выражается в успешных
-                    попытках заработать своими собственными усилиями, не устраиваясь на работу наемно, стремлении самому
-                    находить цели и ставить перед собой задачи. Способности к предпринимательству могут выражаться в
-                    самостоятельности в принятии решений, трудоспособности и воле к победе, а также в социальной
-                    смелости, высоком социальном интеллекте, здравом смысле и реалистичности.
-                </ru><en>You demonstrated strong aptitude for business. People like you are usually successful in making money on their own, setting their own goals and achieving them. Entrepreneurial abilities may be reflected in independent decision-making, diligence, willingness to win, as well as in social bravery, high EQ, common sense and realistic thinking.</en></max>
+                <min>
+                    <ru>Вы показали низкий уровень способности к предпринимательству: это обычно у человека выражается в
+                        отсутствии социальной ловкости, неумении договариваться и в трудностях понимания того, как
+                        зарабатываются деньги. При желании вы могли бы даже работать бухгалтером у в компании, иметь
+                        дело с
+                        деньгами и коммерческими документами, но лишь анализировать то, что заработали другие.
+                    </ru>
+                    <en>You demonstrated low aptitude for business abilities. People like you are usually socially
+                        inept, unable to make a deal, and have difficulty in understanding how money is made. In theory,
+                        you could even become an accountant and work with finances and commercial papers, but you will
+                        never be able to establish your own business.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень способности к предпринимательству: обычно это выражается в здравом
+                        смысле и реалистичности, самостоятельности, попытках заработать, ответственности в принятии
+                        решений,
+                        но и в желании иметь защиту со стороны, возможно, партнера или руководителя. При желании вы
+                        могли бы
+                        работать в отделе продаж или маркетинга или логистики и проявлять ловкость, сообразительность в
+                        зарабатывании денег для себя и компании — в положении наемного человека.
+                    </ru>
+                    <en>You demonstrated average aptitude for business. People like you usually have common sense and
+                        realistic thinking, make attempts to earn money, are responsible for their decisions, but at the
+                        same time, they look to a partner or, perhaps, a boss for protection. You could make yourself
+                        useful in sales, marketing, or logistics department, or contribute your cunning and flexibility
+                        to earn money for yourself and your company as an employee.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень способностей к предпринимательству. Обычно это выражается в успешных
+                        попытках заработать своими собственными усилиями, не устраиваясь на работу наемно, стремлении
+                        самому
+                        находить цели и ставить перед собой задачи. Способности к предпринимательству могут выражаться в
+                        самостоятельности в принятии решений, трудоспособности и воле к победе, а также в социальной
+                        смелости, высоком социальном интеллекте, здравом смысле и реалистичности.
+                    </ru>
+                    <en>You demonstrated strong aptitude for business. People like you are usually successful in making
+                        money on their own, setting their own goals and achieving them. Entrepreneurial abilities may be
+                        reflected in independent decision-making, diligence, willingness to win, as well as in social
+                        bravery, high EQ, common sense and realistic thinking.
+                    </en>
+                </max>
             </skills>
         </boss>
 
         <war>
-            <name><ru>Военно-спасательные практики</ru><en></en></name>
+            <name>
+                <ru>Военно-спасательные практики</ru>
+                <en></en>
+            </name>
             <interest>
-                <min><ru>Вы показали низкий уровень интереса к деятельностям, связанным с риском: это выражается в полном
-                    отсутствии у вас попыток совершать рискованные действия ради удовольствия рисковать. Но чтение
-                    литературы о войне, об оружии, просмотр боевиков может быть интересен вам. Вам интересно наблюдать,
-                    как рискуют другие, но сами вы рисковать собой не согласны. Поэтому такие профессии, как пожарный,
-                    полицейский, пилот не подходят вам.
-                </ru><en>You demonstrated fairly low interest in risky activities. That is expressed in your complete lack of attempting to take risks for the sake of the pleasure of taking risks. However, you may still like reading about war and weapons or watching action movies. You would rather watch other people risk themselves than try it yourself. Therefore, such jobs as a firefighter, a police officer, or a pilot are not suitable for you.</en></min>
-                <mid><ru>Вы показали средний уровень интереса к деятельностям, связанным с риском: вы не очень осторожный
-                    человек и вы читаете литературу о войне, об оружии. Но в основном интерес остается теоретическим: вы
-                    не хотели бы зарабатывать рискованными действиями — тушением пожара, летным делом, каскадерством,
-                    ловлей змей и прочее.
-                </ru><en>You demonstrated average interest in risky activities. You do not fit the description of a careful person and you like reading about war and weapons. However, your interest is purely academic as you would not like to have a job that involves risks, such as fighting fires, piloting aircraft, doing stunts, catching snakes, etc.</en></mid>
-                <max><ru>Вы показали высокий уровень интереса к деятельностям, связанным с риском: это выражается в
-                    систематических реальных попытках совершать физически рискованные действия (заплывать далеко, высоко
-                    залезать, драться и прочее), в чтении литературы о войне, об оружии, в просмотре боевиков.
-                </ru><en>You demonstrated strong interest in risky activities. That is expressed in your systematic attempts to subject yourself to real physical risks, such as swimming far away from the shore, climbing high above ground, getting into fights, etc., or gain adrenaline rushes by reading about war and weapons, or by watching action movies.</en></max>
+                <min>
+                    <ru>Вы показали низкий уровень интереса к деятельностям, связанным с риском: это выражается в полном
+                        отсутствии у вас попыток совершать рискованные действия ради удовольствия рисковать. Но чтение
+                        литературы о войне, об оружии, просмотр боевиков может быть интересен вам. Вам интересно
+                        наблюдать,
+                        как рискуют другие, но сами вы рисковать собой не согласны. Поэтому такие профессии, как
+                        пожарный,
+                        полицейский, пилот не подходят вам.
+                    </ru>
+                    <en>You demonstrated fairly low interest in risky activities. That is expressed in your complete
+                        lack of attempting to take risks for the sake of the pleasure of taking risks. However, you may
+                        still like reading about war and weapons or watching action movies. You would rather watch other
+                        people risk themselves than try it yourself. Therefore, such jobs as a firefighter, a police
+                        officer, or a pilot are not suitable for you.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень интереса к деятельностям, связанным с риском: вы не очень осторожный
+                        человек и вы читаете литературу о войне, об оружии. Но в основном интерес остается
+                        теоретическим: вы
+                        не хотели бы зарабатывать рискованными действиями — тушением пожара, летным делом,
+                        каскадерством,
+                        ловлей змей и прочее.
+                    </ru>
+                    <en>You demonstrated average interest in risky activities. You do not fit the description of a
+                        careful person and you like reading about war and weapons. However, your interest is purely
+                        academic as you would not like to have a job that involves risks, such as fighting fires,
+                        piloting aircraft, doing stunts, catching snakes, etc.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень интереса к деятельностям, связанным с риском: это выражается в
+                        систематических реальных попытках совершать физически рискованные действия (заплывать далеко,
+                        высоко
+                        залезать, драться и прочее), в чтении литературы о войне, об оружии, в просмотре боевиков.
+                    </ru>
+                    <en>You demonstrated strong interest in risky activities. That is expressed in your systematic
+                        attempts to subject yourself to real physical risks, such as swimming far away from the shore,
+                        climbing high above ground, getting into fights, etc., or gain adrenaline rushes by reading
+                        about war and weapons, or by watching action movies.
+                    </en>
+                </max>
             </interest>
             <skills>
-                <min><ru>Вы показали низкий уровень способностей к деятельностям, связанным с риском. Обычно это выражается
-                    в серьезной физической, психологической, интеллектуальной неловкости, негибкости, физической
-                    слабости или медлительности, а также пугливости, невнимательности. С этим набором качеств не стоит
-                    работать в полиции, в МЧС, в разведке, пилотом авиации и т.п.
-                </ru><en>You demonstrated low aptitude for risk-taking activities. Usually
-                    That is expressed in some serious physical, psychological, intellectual awkwardness, inflexibility, frailty, or slowness, as well as by fearfulness and lack of focus. These qualities are undesirable for such jobs as a police officer, a rescue worker, an intelligence operative, a pilot, etc.</en></min>
-                <mid><ru>Вы показали средний уровень способностей к деятельностям, связанным с риском: это выражается в
-                    некоторой неловкости, медлительности, либо эмоциональной нестабильности и (или) недостаточной
-                    внимательности. Вы можете делать роковые ошибки из-за неумения владеть собой в ситуации риска или
-                    неумении владеть физическими или ментальными инструментами. Некоторые из этих недостатков можно
-                    исправить путем тренировок.
-                </ru><en>You demonstrated average aptitude for risk-taking activities. You are somewhat awkward, slow, emotionally unstable, and/or lack focus. You may make fatal mistakes because you are unable to control yourself in a risky situation or because you are not in full possession of your mental or physical faculties. However, some of these drawbacks can be corrected by training.</en></mid>
-                <max><ru>Вы показали высокий уровень способностей к деятельностям, связанным с риском: это выражается в
-                    вашем умении справляться с ситуациями повышенного риска.
-                </ru><en>You demonstrated strong aptitude for risk-taking activities. That is expressed in your capability to deal with situations that involve heightened risks.</en></max>
+                <min>
+                    <ru>Вы показали низкий уровень способностей к деятельностям, связанным с риском. Обычно это
+                        выражается
+                        в серьезной физической, психологической, интеллектуальной неловкости, негибкости, физической
+                        слабости или медлительности, а также пугливости, невнимательности. С этим набором качеств не
+                        стоит
+                        работать в полиции, в МЧС, в разведке, пилотом авиации и т.п.
+                    </ru>
+                    <en>You demonstrated low aptitude for risk-taking activities. Usually
+                        That is expressed in some serious physical, psychological, intellectual awkwardness,
+                        inflexibility, frailty, or slowness, as well as by fearfulness and lack of focus. These
+                        qualities are undesirable for such jobs as a police officer, a rescue worker, an intelligence
+                        operative, a pilot, etc.
+                    </en>
+                </min>
+                <mid>
+                    <ru>Вы показали средний уровень способностей к деятельностям, связанным с риском: это выражается в
+                        некоторой неловкости, медлительности, либо эмоциональной нестабильности и (или) недостаточной
+                        внимательности. Вы можете делать роковые ошибки из-за неумения владеть собой в ситуации риска
+                        или
+                        неумении владеть физическими или ментальными инструментами. Некоторые из этих недостатков можно
+                        исправить путем тренировок.
+                    </ru>
+                    <en>You demonstrated average aptitude for risk-taking activities. You are somewhat awkward, slow,
+                        emotionally unstable, and/or lack focus. You may make fatal mistakes because you are unable to
+                        control yourself in a risky situation or because you are not in full possession of your mental
+                        or physical faculties. However, some of these drawbacks can be corrected by training.
+                    </en>
+                </mid>
+                <max>
+                    <ru>Вы показали высокий уровень способностей к деятельностям, связанным с риском: это выражается в
+                        вашем умении справляться с ситуациями повышенного риска.
+                    </ru>
+                    <en>You demonstrated strong aptitude for risk-taking activities. That is expressed in your
+                        capability to deal with situations that involve heightened risks.
+                    </en>
+                </max>
             </skills>
         </war>
     </types>
