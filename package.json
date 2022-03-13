@@ -1,7 +1,7 @@
 {
     "devDependencies": {
         "@babel/preset-react": "^7.0.0",
-        "@symfony/webpack-encore": "^0.31.0",
+        "@symfony/webpack-encore": "^1.8.1",
         "core-js": "^3.0.0",
         "regenerator-runtime": "^0.13.2",
         "webpack-notifier": "^1.6.0"
@@ -18,13 +18,13 @@
         "axios": "^0.21.4",
         "bootstrap": "^4.5.3",
         "jquery": "^3.5.1",
-        "node-sass": "^4.14.1",
         "popper.js": "^1.16.1",
         "prop-types": "^15.7.2",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-transition-group": "^4.4.2",
+        "sass": "^1.49.9",
         "sass-loader": "^9.0.1",
-        "testonomica_api": "^1.0.4"
+        "testonomica_api": "^1.0.3"
     }
 }

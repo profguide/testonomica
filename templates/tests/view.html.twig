@@ -9,7 +9,7 @@
     {% endblock %}
     <section class="tnc-welcome container" id="app-preload-screen">
         <h1 class="tnc-welcome__title">{{ test.name }}</h1>
-        <div class="tnc-welcome__duration">{{ test.duration }} минут</div>
+        <div class="tnc-welcome__duration">{{ test.duration }} {% trans %}минут{% endtrans %}</div>
         <div class="tnc-welcome__description">{{ test.description|raw }}</div>
         <div class="tnc-welcome__loading stage"></div>
     </section>
