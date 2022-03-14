@@ -4,7 +4,6 @@ namespace App\Test;
 
 use App\Entity\Question;
 use App\Entity\QuestionItem;
-use App\i18\Locale;
 use DOMElement;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -14,7 +13,7 @@ use Symfony\Component\DomCrawler\Crawler;
  */
 class QuestionXmlMapper
 {
-    public static function map(DOMElement $node, Locale $locale): Question
+    public static function map(DOMElement $node, string $locale): Question
     {
         $crawler = new Crawler($node);
         $question = new Question();
@@ -56,7 +55,7 @@ class QuestionXmlMapper
         if ($nameNode->children()->count() == 0) {
             $question->setName($nameNode->text());
         } else {
-            $question->setName($nameNode->children($locale->value())->text());
+            $question->setName($nameNode->children($locale)->text());
         }
 
         if (($text = $crawler->filterXPath('descendant-or-self::text'))->count() > 0) {
@@ -83,7 +82,7 @@ class QuestionXmlMapper
                 if ($optionLangTexts->count() == 0) {
                     $optionText = $option->textContent;
                 } else {
-                    $optionText = $optionCrawler->children($locale->value())->text();
+                    $optionText = $optionCrawler->children($locale)->text();
                 }
                 $question->addItem(
                     QuestionItem::createMinimal(

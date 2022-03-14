@@ -4,13 +4,16 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-#  app.supported_locales: 'en|ru'
+  app.default_locale: ru
+#  app.supported_locales: en|ru
 
 services:
   # default configuration for services in *this* file
   _defaults:
     autowire: true      # Automatically injects dependencies in your services.
     autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+    bind:
+      $locale: "@=service('request_stack').getCurrentRequest().getLocale()"
 
   # makes classes in src/ available to be used as services
   # this creates a service per class whose id is the fully-qualified class name
@@ -35,8 +38,8 @@ services:
 
   # Locale as Service
   # add to nginx config: fastcgi_param lang "en";
-  App\i18\Locale:
-    arguments: [ '%env(lang)%' ]
+#  App\i18\Locale:
+#    arguments: [ "@=service('request_stack').getCurrentRequest().getLocale()" ]
 
   # add more service definitions when explicit configuration is needed
   # please note that last definitions always *replace* previous ones

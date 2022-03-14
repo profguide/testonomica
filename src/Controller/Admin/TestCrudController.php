@@ -58,13 +58,13 @@ class TestCrudController extends AbstractCrudController
             AssociationField::new('catalog'),
             IntegerField::new('duration', 'Продолжительность в минутах')->hideOnIndex(),
             TextEditorField::new('annotation', 'Вступление')->hideOnIndex(),
-//            TextEditorField::new('annotationEn', 'Вступление (en)')->hideOnIndex(),
+            TextEditorField::new('annotationEn', 'Вступление (en)')->hideOnIndex(),
             TextEditorField::new('description', 'Описание на странице')->hideOnIndex(),
-//            TextEditorField::new('descriptionEn', 'Описание на странице (en)')->hideOnIndex(),
+            TextEditorField::new('descriptionEn', 'Описание на странице (en)')->hideOnIndex(),
             BooleanField::new('active', 'Активность'),
 //            BooleanField::new('activeEn', 'Активность (en)'),
             BooleanField::new('inList', 'В списках'),
-            BooleanField::new('isXmlSource', 'XML источник'),
+            BooleanField::new('isXmlSource', 'XML источник')->hideOnIndex(),
             Field::new('xmlFilename', 'XML файл')->onlyOnForms(),
             ChoiceField::new('calculator', 'Калькулятор')->setChoices([
                 'Автоматический' => Test::CALCULATOR_AUTO,
@@ -73,7 +73,7 @@ class TestCrudController extends AbstractCrudController
 
             // Анализ результатов
             FormField::addPanel('Результат', 'fa fa-code'),
-            CollectionField::new('analyses', 'Конструктор ответов')
+            CollectionField::new('analyses', 'Конструктор ответов')->hideOnIndex()
                 ->allowAdd(true)
                 ->allowDelete(true)
                 ->setEntryIsComplex(true)
@@ -88,7 +88,7 @@ class TestCrudController extends AbstractCrudController
                         'label' => false,
                     ],
                 ]),
-            CodeEditorField::new('resultView')
+            CodeEditorField::new('resultView')->hideOnIndex()
                 ->setLabel(false)
                 ->addCssClass('full-width')
                 ->setFormTypeOptions([
@@ -96,9 +96,9 @@ class TestCrudController extends AbstractCrudController
                 ]),
 
             // Вопросы
-            FormField::addPanel('Вопросы', 'fa fa-question-circle')
+            FormField::addPanel('Вопросы', 'fa fa-question-circle')->hideOnIndex()
                 ->addCssClass('my-full-width questions-panel'), // @see admin.css
-            CollectionField::new('questions', 'Вопросы')
+            CollectionField::new('questions', 'Вопросы')->hideOnIndex()
                 ->allowAdd(true)
                 ->allowDelete(true)
                 ->setEntryIsComplex(true)

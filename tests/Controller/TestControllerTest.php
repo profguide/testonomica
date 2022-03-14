@@ -48,59 +48,12 @@ class TestControllerTest extends WebTestCase
         $this->serializer = self::$container->get(AnswersSerializer::class);
         $this->test = $this->testRepository->findOneBySlug(TestFixture::TEST_1_SLUG);
     }
-//
-//    public function testViewStatusFinished()
-//    {
-//        $result = $this->initResult();
-//        $this->resultRepository->save($result);
-//        $categorySlug = $this->test->getCatalog()->getSlug();
-//        $testSlug = $this->test->getSlug();
-//        $this->client->request('POST', "/tests/$categorySlug/$testSlug/");
-//        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
-//        dd($this->client->getResponse()->getContent());
-//    }
 
     public function testViewPayableTestWithoutAccess()
     {
         $this->requestView();
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
-//        $crawler = new Crawler($this->client->getResponse()->getContent());
-//        $this->assertEquals(1, $crawler->filter('.start-test')->count());
-//        $this->assertEquals(0, $crawler->filter('.restore-test')->count());
     }
-
-//    public function testViewStatusNone()
-//    {
-//        $testSlug = $this->test->getSlug();
-//        $this->client->request('POST', "/tests/view/$testSlug/");
-//        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
-//        $crawler = new Crawler($this->client->getResponse()->getContent());
-//        $this->assertEquals(1, $crawler->filter('.start-test')->count());
-//        $this->assertEquals(0, $crawler->filter('.restore-test')->count());
-//    }
-//
-//    public function testViewStatusProcess()
-//    {
-//        $this->answerService->save($this->test, new Answer(1, ['some-value']));
-//        $testSlug = $this->test->getSlug();
-//        $this->client->request('POST', "/tests/view/$testSlug/");
-//        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
-//        $crawler = new Crawler($this->client->getResponse()->getContent());
-//        $this->assertEquals(1, $crawler->filter('.start-test')->count());
-//        $this->assertEquals(1, $crawler->filter('.restore-test')->count());
-//    }
-//
-//    public function testViewStatusFinished()
-//    {
-//        $result = $this->initResult();
-//        $this->resultService->save($result);
-//        $this->resultService->saveSessionResult($result);
-//        $testSlug = $this->test->getSlug();
-//        $this->client->request('POST', "/tests/view/$testSlug/");
-//        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
-//        $crawler = new Crawler($this->client->getResponse()->getContent());
-//        $this->assertEquals(1, $crawler->filter('.test__btn-again')->count());
-//    }
 
     /**
      * Страница результата

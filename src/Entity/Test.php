@@ -197,9 +197,14 @@ class Test
         $this->slug = $slug;
     }
 
-    public function getName(): string
+    public function getName(?string $locale = 'ru'): string
     {
-        return $this->name;
+        if ($locale === 'ru') {
+            return $this->name;
+        } elseif ($locale === 'en') {
+            return $this->nameEn ?? $this->name;
+        }
+        throw new \DomainException("Unsupported locale $locale.");
     }
 
     public function setName(string $name): void
@@ -217,9 +222,14 @@ class Test
         $this->nameEn = $nameEn;
     }
 
-    public function getDescription(): ?string
+    public function getDescription(?string $locale = 'ru'): ?string
     {
-        return $this->description;
+        if ($locale === 'ru') {
+            return $this->description;
+        } elseif ($locale === 'en') {
+            return $this->descriptionEn ?? $this->description;
+        }
+        throw new \DomainException("Unsupported locale $locale.");
     }
 
     public function setDescription($description): void

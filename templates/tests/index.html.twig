@@ -17,7 +17,7 @@
                 {# <article class="col-lg-3 col-12 test-in-list"> #}
                 <tr>
                     <td>
-                        <a href="{{ path('tests.view', {slug: test.slug}) }}">{{ test.name|e }}</a>
+                        <a href="{{ path('tests.view', {slug: test.slug}) }}">{{ test.name(app.request.locale)|e }}</a>
                     </td>
                 </tr>
                 {# </article> #}

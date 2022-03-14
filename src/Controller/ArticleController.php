@@ -30,7 +30,7 @@ class ArticleController extends AbstractController
     }
 
     /**
-     * @Route("/", name="main")
+     * @Route("/", name="index")
      * todo подгрузка, т.е. пейджинг
      * @return Response
      */
