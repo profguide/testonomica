@@ -244,7 +244,7 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
     private function mapProfession(Crawler $crawler): Profession
     {
         return new Profession(
-            $crawler->children('name')->text(),
+            $this->langText($crawler->children('name')),
             $this->parseCombs($crawler->children('combs')),
             $this->parseProfessionNot($crawler),
             $this->parseProfessionDescription($crawler));
@@ -288,7 +288,14 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
                     /**@var DOMElement $tag */
                     $kind = [];
                     foreach ($kindCrawler->children() as $tag) {
-                        $kind[$tag->nodeName] = $tag->textContent;
+                        $tagCrawler = new Crawler($tag);
+                        $tagLangTexts = $tagCrawler->children();
+                        if ($tagLangTexts->count() == 0) {
+                            $tagText = $tag->textContent;
+                        } else {
+                            $tagText = $tagCrawler->children($this->locale)->text();
+                        }
+                        $kind[$tag->nodeName] = $tagText;
                     }
                     $description[] = $kind;
                 }
@@ -353,4 +360,14 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
     }
 
     protected abstract function getProfessionsFileName(): string;
+
+    private function langText(Crawler $crawler): string
+    {
+        $children = $crawler->children();
+        if ($children->count() == 0) {
+            return $children->text();
+        } else {
+            return $crawler->children($this->locale)->text();
+        }
+    }
 }

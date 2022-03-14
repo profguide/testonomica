@@ -87,16 +87,15 @@ class TestController extends AbstractController
      * @throws RuntimeError
      * @throws SyntaxError
      */
-    public function result(string $uuid, Request $request): Response
+    public function result(string $uuid): Response
     {
         $result = $this->getResult($uuid);
         $test = $result->getTest();
-        $locale = $request->getLocale();
         $data = array_merge([
             'test' => $test,
             'uuid' => $result->getUuid(),
             'status' => TestStatus::finished()
-        ], $this->calculatorService->calculate($result, $locale));
+        ], $this->calculatorService->calculate($result));
 
         return $this->render('tests/result.html.twig', [
             'test' => $test,
@@ -113,15 +112,13 @@ class TestController extends AbstractController
      * @Route("/result-raw/{uuid}/", name="result_raw")
      * @param string $uuid
      * @param SerializerInterface $serializer
-     * @param Request $request
      * @return Response
      */
-    public function resultRaw(string $uuid, SerializerInterface $serializer, Request $request)
+    public function resultRaw(string $uuid, SerializerInterface $serializer)
     {
         $result = $this->getResult($uuid);
-        $locale = $request->getLocale();
         $response = new JsonResponse();
-        $response->setJson($serializer->serialize($this->calculatorService->calculate($result, $locale), 'json'));
+        $response->setJson($serializer->serialize($this->calculatorService->calculate($result), 'json'));
         $response->setEncodingOptions(JSON_UNESCAPED_UNICODE);
         return $response;
     }

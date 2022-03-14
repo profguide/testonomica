@@ -30,29 +30,33 @@ class CalculatorService
 
     private KernelInterface $kernel;
 
+    private string $locale;
+
     const CALCULATORS_NAMESPACE = '\App\Test\Calculator\\';
 
     public function __construct(
         AnswersSerializer $serializer,
         SourceRepositoryInterface $sourceRepository,
         TestRepositoryInterface $testRepository,
-        KernelInterface $kernel)
+        KernelInterface $kernel,
+        string $locale)
     {
         $this->serializer = $serializer;
         $this->sourceRepository = $sourceRepository;
         $this->testRepository = $testRepository;
         $this->kernel = $kernel;
+        $this->locale = $locale;
     }
 
-    public function calculate(Result $result, string $locale): array
+    public function calculate(Result $result): array
     {
         $calculator = ResultUtil::isComplex($result) ?
-            $this->initComplexCalculator($result, $locale) :
-            $this->initSingleCalculator($result, $locale);
+            $this->initComplexCalculator($result) :
+            $this->initSingleCalculator($result);
         return $calculator->calculate();
     }
 
-    private function initComplexCalculator(Result $complexResult, string $locale): CalculatorInterface
+    private function initComplexCalculator(Result $complexResult): CalculatorInterface
     {
         $calculators = [];
         $jsonResults = json_decode($complexResult->getData(), true);
@@ -60,7 +64,7 @@ class CalculatorService
             $result = new Result();
             $result->setTest($this->loadTest($testId));
             $result->setData(json_encode($resultData));
-            $calculators[$testId] = $this->initSingleCalculator($result, $locale);
+            $calculators[$testId] = $this->initSingleCalculator($result);
         }
         /**@var AbstractComplexCalculator $calculatorName */
         $calculatorName = $this->calculatorName($complexResult);
@@ -71,7 +75,7 @@ class CalculatorService
         return new $calculatorName($calculators, $this->kernel);
     }
 
-    private function initSingleCalculator(Result $result, string $locale): CalculatorInterface
+    private function initSingleCalculator(Result $result): CalculatorInterface
     {
         /**@var AbstractCalculator $calculatorName */
         $calculatorName = $this->calculatorName($result);
@@ -79,7 +83,7 @@ class CalculatorService
             new AnswersHolder($this->serializer->deserialize($result->getData())),
             new QuestionsHolder($this->sourceRepository->getAllQuestions($result->getTest())),
             $this->kernel,
-            $locale);
+            $this->locale);
     }
 
     private function calculatorName(Result $result): string
