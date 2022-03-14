@@ -791,7 +791,7 @@
 <options>
     <option value="4">
         <ru>Нет</ru>
-        <en></en>
+        <en>No</en>
     </option>
     <option value="3">
         <ru>Скорее нет</ru>
@@ -1024,7 +1024,7 @@
 <options>
     <option value="4">
         <ru>Нет</ru>
-        <en></en>
+        <en>No</en>
     </option>
     <option value="3">
         <ru>Скорее нет</ru>
