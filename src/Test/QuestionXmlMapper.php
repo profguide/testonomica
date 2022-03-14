@@ -58,8 +58,13 @@ class QuestionXmlMapper
             $question->setName($nameNode->children($locale)->text());
         }
 
-        if (($text = $crawler->filterXPath('descendant-or-self::text'))->count() > 0) {
-            $question->setText($text->text());
+        $textNode = $crawler->filterXPath('descendant-or-self::text');
+        if ($textNode->count() > 0) {
+            if ($nameNode->children()->count() == 0) {
+                $question->setText($textNode->text());
+            } else {
+                $question->setText($textNode->children($locale)->text());
+            }
         }
 
         if (($img = $crawler->filterXPath('descendant-or-self::img'))->count() > 0) {
