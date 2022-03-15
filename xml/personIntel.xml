@@ -2312,8 +2312,7 @@
     </en>
 </name>
 <fields>
-    <field type="number" placeholder="Введите число" correct="64" placeholder-en="Enter a number"
-           correct-en="64"/> <!-- 64 -->
+    <field type="number" placeholder="Введите число" placeholder-en="Enter the number" correct="64"/>
 </fields>
 </item>
 <item id="508" group="iq-math" method="TEXT">
@@ -2326,8 +2325,8 @@
     </en>
 </name>
 <fields>
-    <field type="number" placeholder="Ширина" correct="12" placeholder-en="Width" correct-en="12"/>
-    <field type="number" placeholder="Длина" correct="72" placeholder-en="Length" correct-en="72"/>
+    <field type="number" placeholder="Ширина" placeholder-en="Width" correct="12" />
+    <field type="number" placeholder="Длина" placeholder-en="Length" correct="72"/>
 </fields>
 </item>
 <item id="509" group="iq-attention">
@@ -2418,8 +2417,7 @@
     <en>per..., pri..., ar..., les..., rea...</en>
 </text>
 <fields>
-    <field type="string" placeholder="Введите слог" correct="кон" placeholder-en="Enter a number"
-           correct-en="son"/> <!-- кон -->
+    <field type="string" placeholder="Введите слог" placeholder-en="Enter a number" correct="кон" correct-en="son"/> <!-- кон -->
 </fields>
 </item>
 <item id="513" group="iq-spatial">
@@ -2448,8 +2446,7 @@
     </en>
 </name>
 <fields>
-    <field type="number" placeholder="Введите число" correct="9" placeholder-en="Enter a number"
-           correct-en="9"/> <!-- 9 -->
+    <field type="number" placeholder="Введите число" placeholder-en="Enter a number" correct="9"/>
 </fields>
 </item>
 <item id="515" group="iq-verbal" method="TEXT">
@@ -2475,8 +2472,7 @@
     </en>
 </text>
 <fields>
-    <field type="number" placeholder="Введите слово" correct="палата" placeholder-en="Enter a number"
-           correct-en="wire"/> <!-- палата -->
+    <field type="number" placeholder="Введите слово" placeholder-en="Enter a number" correct="палата" correct-en="wire"/>
 </fields>
 </item>
 <item id="516" group="iq-logic">
@@ -2526,10 +2522,8 @@
     <en>1 2 5 10 17 26 ... ...</en>
 </text>
 <fields>
-    <field type="number" placeholder="Введите число" correct="37" placeholder-en="Enter a number"
-           correct-en="37"/> <!-- 37 -->
-    <field type="number" placeholder="Введите число" correct="50" placeholder-en="Enter a number"
-           correct-en="50"/> <!-- 50 -->
+    <field type="number" placeholder="Введите число" placeholder-en="Enter a number" correct="37"/>
+    <field type="number" placeholder="Введите число" placeholder-en="Enter a number" correct="50"/>
 </fields>
 </item>
 <item id="518" group="iq-logic">
@@ -2581,8 +2575,7 @@
     </en>
 </name>
 <fields>
-    <field type="number" placeholder="Введите число" correct="1000" placeholder-en="Enter a number"
-           correct-en="1000"/> <!-- 1000 -->
+    <field type="number" placeholder="Введите число" placeholder-en="Enter a number" correct="1000" />
 </fields>
 </item>
 <item id="520" group="iq-logic">
@@ -2640,8 +2633,7 @@
     <en>The pumpkin weighs two kilos plus a half of the pumpkin. How much does the pumpkin weigh?</en>
 </name>
 <fields>
-    <field type="number" placeholder="Введите число" correct="4" placeholder-en="Enter a number"
-           correct-en="4"/> <!-- 4-->
+    <field type="number" placeholder="Введите число" placeholder-en="Enter a number" correct="4"/>
 </fields>
 </item>
 <item id="522" group="iq-spatial" method="TEXT">
@@ -2656,10 +2648,8 @@
 </name>
 <img>https://testonomica.com/static/img/4/g_1_1.svg</img>
 <fields>
-    <field type="number" placeholder="Введите число" correct="2" placeholder-en="Enter a number"
-           correct-en="2"/> <!-- 2 -->
-    <field type="number" placeholder="Введите число" correct="13" placeholder-en="Enter a number"
-           correct-en="13"/> <!-- 13 -->
+    <field type="number" placeholder="Введите число" placeholder-en="Enter a number" correct="2" />
+    <field type="number" placeholder="Введите число" placeholder-en="Enter a number" correct="13"/>
 </fields>
 </item>
 <item id="523" group="iq-logic">
@@ -2713,8 +2703,7 @@
     </en>
 </name>
 <fields>
-    <field type="number" placeholder="Введите число" correct="70" placeholder-en="Enter a number"
-           correct-en="70"/> <!-- 70 -->
+    <field type="number" placeholder="Введите число" placeholder-en="Enter a number" correct="70"/>
 </fields>
 </item>
 <item id="525" group="iq-spatial" method="CHECKBOX" count="3">
@@ -2746,7 +2735,7 @@
     </en>
 </name>
 <fields>
-    <field type="number" placeholder="Введите число" correct="60" placeholder-en="Enter a number" correct-en="60"/>
+    <field type="number" placeholder="Введите число" placeholder-en="Enter a number" correct="60"/>
 </fields>
 </item>
 <item id="527" group="iq-logic">
@@ -2895,8 +2884,7 @@
     </en>
 </name>
 <fields>
-    <field type="number" placeholder="Введите число" correct="5" placeholder-en="Enter a number"
-           correct-en="5"/> <!-- 5 -->
+    <field type="number" placeholder="Введите число" placeholder-en="Enter a number" correct="5"/>
 </fields>
 </item>
 <item id="533" group="iq-math" method="TEXT">
@@ -2909,10 +2897,8 @@
     </en>
 </name>
 <fields>
-    <field type="number" placeholder="Введите число" correct="52" placeholder-en="Enter a number"
-           correct-en="52"/> <!-- 52 -->
-    <field type="number" placeholder="Введите число" correct="65" placeholder-en="Enter a number"
-           correct-en="65"/> <!-- 65 -->
+    <field type="number" placeholder="Введите число" placeholder-en="Enter a number" correct="52"/>
+    <field type="number" placeholder="Введите число" placeholder-en="Enter a number" correct="65"/>
 </fields>
 </item>
 <item id="534" group="iq-verbal" method="CHECKBOX" count="2">

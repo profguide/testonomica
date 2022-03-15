@@ -614,7 +614,7 @@
                 </en>
             </name>
             <fields>
-                <field type="number" placeholder="Введите число" correct="40"/>
+                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter the number" correct="40"/>
             </fields>
         </item>
 
@@ -1345,7 +1345,8 @@
                 </en>
             </name>
             <fields>
-                <field type="number" placeholder="Введите число" correct="5"/> <!-- 5 -->
+                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter the number"
+                       correct="5"/> <!-- 5 -->
             </fields>
         </item>
         <item id="424" group="math-skills" method="TEXT">
@@ -1359,7 +1360,8 @@
                 </en>
             </name>
             <fields>
-                <field type="number" placeholder="Введите число" correct="10"/> <!-- 10 -->
+                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter the number"
+                       correct="10"/> <!-- 10 -->
             </fields>
         </item>
         <item id="425" group="math-skills" method="TEXT">
@@ -1372,7 +1374,7 @@
                 </en>
             </name>
             <fields>
-                <field type="number" placeholder="Введите число" correct="64"/> <!-- 64 -->
+                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter the number" correct="64"/>
             </fields>
         </item>
 
