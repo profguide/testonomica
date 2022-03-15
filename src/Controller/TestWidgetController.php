@@ -44,6 +44,9 @@ class TestWidgetController extends AbstractController implements HostAuthenticat
     {
 //        $test = $this->getTest($id);
 
+        // показ результата по окончании теста
+        $displayReport = self::boolParam($request, 'displayReport', true);
+
         // показывать ли результат при загрузке страницы если результат имеется
         $showResultAfterLoad = self::boolParam($request, 'showResultAfterLoad', true);
 
@@ -55,7 +58,8 @@ class TestWidgetController extends AbstractController implements HostAuthenticat
             'host' => $host,
             'token' => $token,
             'sid' => $this->sid($request),
-            'showResultAfterLoad' => $showResultAfterLoad
+            'displayReport' => $displayReport,
+            'showResultAfterLoad' => $showResultAfterLoad,
         ]);
     }
 

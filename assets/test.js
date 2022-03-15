@@ -20,6 +20,9 @@ const init = tag.getAttribute('data-init') ?? null;
 
 // настройки теста
 const config = new Config({
+    // показ отчёта
+    displayReport: tag.getAttribute('data-display-report') ?? true,
+    // показ отчёта после загрузки теста (если был)
     showResultAfterLoad: tag.getAttribute('data-show-result-after-load') ?? true
 });
 
