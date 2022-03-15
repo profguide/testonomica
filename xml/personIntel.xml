@@ -2312,7 +2312,7 @@
     </en>
 </name>
 <fields>
-    <field type="number" placeholder="Введите число" placeholder-en="Enter the number" correct="64"/>
+    <field type="number" placeholder="Введите число" placeholder-en="Enter a number" correct="64"/>
 </fields>
 </item>
 <item id="508" group="iq-math" method="TEXT">
@@ -2643,7 +2643,7 @@
         другое место, можно было получить квадрат. В качестве ответа введите номера двух соединяемых точек.
     </ru>
     <en>Divide this shape into two by drawing a straight line between two dots, so that by moving one part you could
-        construct a square. Enter the numbers of two dots that have to be connected.
+        construct a square. Enter a numbers of two dots that have to be connected.
     </en>
 </name>
 <img>https://testonomica.com/static/img/4/g_1_1.svg</img>

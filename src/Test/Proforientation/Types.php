@@ -7,6 +7,7 @@
 namespace App\Test\Proforientation;
 
 
+use App\Util\XmlUtil;
 use Symfony\Component\DomCrawler\Crawler;
 use Symfony\Component\HttpKernel\KernelInterface;
 
@@ -23,22 +24,22 @@ class Types
         $crawler = $crawler = new Crawler(file_get_contents($kernel->getProjectDir() . "/xml/proftest/config.xml"));
         $types = $crawler->children('types');
 
-        $types->children()->each(function (Crawler $type) use (&$config) {
+        $types->children()->each(function (Crawler $type) use (&$config, $locale) {
 
             $interestNode = $type->children('interest');
             $skillsNode = $type->children('skills');
 
             $config['types'][$type->nodeName()] = [
-                'name' => $type->children('name')->text(),
+                'name' => XmlUtil::langText($type->children('name'), $locale),
                 'interest' => [
-                    'min' => $interestNode->children('min')->text(),
-                    'mid' => $interestNode->children('mid')->text(),
-                    'max' => $interestNode->children('max')->text(),
+                    'min' => XmlUtil::langText($interestNode->children('min'), $locale),
+                    'mid' => XmlUtil::langText($interestNode->children('mid'), $locale),
+                    'max' => XmlUtil::langText($interestNode->children('max'), $locale),
                 ],
                 'skills' => [
-                    'min' => $skillsNode->children('min')->text(),
-                    'mid' => $skillsNode->children('mid')->text(),
-                    'max' => $skillsNode->children('max')->text(),
+                    'min' => XmlUtil::langText($skillsNode->children('min'), $locale),
+                    'mid' => XmlUtil::langText($skillsNode->children('mid'), $locale),
+                    'max' => XmlUtil::langText($skillsNode->children('max'), $locale),
                 ]
             ];
         });

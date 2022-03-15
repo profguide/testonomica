@@ -4,6 +4,7 @@ namespace App\Test;
 
 use App\Entity\Question;
 use App\Entity\QuestionItem;
+use App\Util\XmlUtil;
 use DOMElement;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -52,11 +53,11 @@ class QuestionXmlMapper
         if ($nameNode->count() == 0) {
             throw new \DomainException('Question has to have node "name".');
         }
-        $question->setName(self::langText($nameNode, $locale));
+        $question->setName(XmlUtil::langText($nameNode, $locale));
 
         $textNode = $crawler->filterXPath('descendant-or-self::text');
         if ($textNode->count() > 0) {
-            $question->setText(self::langText($textNode, $locale));
+            $question->setText(XmlUtil::langText($textNode, $locale));
         }
 
         if (($img = $crawler->filterXPath('descendant-or-self::img'))->count() > 0) {
@@ -64,11 +65,11 @@ class QuestionXmlMapper
         }
 
         if (($right = $crawler->filterXPath('descendant-or-self::right'))->count() > 0) {
-            $question->setCorrect(self::langText($right, $locale));
+            $question->setCorrect(XmlUtil::langText($right, $locale));
         }
 
         if (($wrong = $crawler->filterXPath('descendant-or-self::wrong'))->count() > 0) {
-            $question->setWrong(self::langText($wrong, $locale));
+            $question->setWrong(XmlUtil::langText($wrong, $locale));
         }
 
         if (($options = $crawler->filterXPath('descendant-or-self::options'))->count() > 0) {
@@ -77,7 +78,7 @@ class QuestionXmlMapper
                 $question->addItem(
                     QuestionItem::createMinimal(
                         $option->getAttribute('value'),
-                        self::langText(new Crawler($option), $locale),
+                        XmlUtil::langText(new Crawler($option), $locale),
                         $option->getAttribute('img'),
                         $option->getAttribute('correct') === "true"));
             }
@@ -87,34 +88,10 @@ class QuestionXmlMapper
             foreach ($fields->children() as $field) {
                 $question->addItem(
                     QuestionItem::createMinimal(
-                        self::langAttribute($field, 'correct', $locale),
-                        self::langAttribute($field, 'placeholder', $locale)));
+                        XmlUtil::langAttribute($field, 'correct', $locale),
+                        XmlUtil::langAttribute($field, 'placeholder', $locale)));
             }
         }
         return $question;
-    }
-
-    private static function langText(Crawler $crawler, string $locale): string
-    {
-        if ($crawler->children()->count() == 0) {
-            return $crawler->text();
-        } else {
-            return $crawler->children($locale)->text();
-        }
-    }
-
-    /**
-     * Locale attribute: placeholder-ru, placeholder-en, placeholder
-     * If no locale attribute found, base attribute will be used (placeholder).
-     *
-     * @param DOMElement $field
-     * @param string $baseAttrName e.g. placeholder|correct
-     * @param string $locale ru|en
-     * @return string|null
-     */
-    private static function langAttribute(DOMElement $field, string $baseAttrName, string $locale): ?string
-    {
-        $localeAttrName = $baseAttrName . '-' . $locale;
-        return $field->getAttribute($localeAttrName) ?? $field->getAttribute($baseAttrName);
     }
 }
