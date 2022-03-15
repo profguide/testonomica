@@ -274,7 +274,7 @@
         <human>
             <name>
                 <ru>Гуманитарные науки и практики</ru>
-                <en></en>
+                <en>Human sciences and Practices</en>
             </name>
             <interest>
                 <min>
@@ -396,7 +396,7 @@
         <body>
             <name>
                 <ru>Работа собственным телом</ru>
-                <en></en>
+                <en>Working with your own body</en>
             </name>
             <interest>
                 <min>
@@ -491,7 +491,7 @@
         <math>
             <name>
                 <ru>Знаки: числа, таблицы и схемы</ru>
-                <en></en>
+                <en>Signs: Numbers, Tables and Diagrams</en>
             </name>
             <interest>
                 <min>
@@ -608,7 +608,7 @@
         <it>
             <name>
                 <ru>Информационные технологии</ru>
-                <en></en>
+                <en>Information Technologies</en>
             </name>
             <interest>
                 <min>
@@ -711,7 +711,7 @@
         <craft>
             <name>
                 <ru>Ремёсла</ru>
-                <en></en>
+                <en>Crafts</en>
             </name>
             <interest>
                 <min>
@@ -830,7 +830,7 @@
         <art>
             <name>
                 <ru>Искусства</ru>
-                <en></en>
+                <en>Arts</en>
             </name>
             <interest>
                 <min>
@@ -952,7 +952,7 @@
         <hoz>
             <name>
                 <ru>Хозяйство</ru>
-                <en></en>
+                <en>Household</en>
             </name>
             <interest>
                 <min>
@@ -1045,7 +1045,7 @@
         <com>
             <name>
                 <ru>Коммуникативные практики</ru>
-                <en></en>
+                <en>Communication Practices</en>
             </name>
             <interest>
                 <min>
@@ -1148,7 +1148,7 @@
         <boss>
             <name>
                 <ru>Коммерция</ru>
-                <en></en>
+                <en>Commerce</en>
             </name>
             <interest>
                 <min>
@@ -1254,7 +1254,7 @@
         <war>
             <name>
                 <ru>Военно-спасательные практики</ru>
-                <en></en>
+                <en>Military Rescue Practices</en>
             </name>
             <interest>
                 <min>
