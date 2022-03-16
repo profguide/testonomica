@@ -614,7 +614,7 @@
                 </en>
             </name>
             <fields>
-                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter the number" correct="40"/>
+                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter a number" correct="40"/>
             </fields>
         </item>
 
@@ -1345,7 +1345,7 @@
                 </en>
             </name>
             <fields>
-                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter the number"
+                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter a number"
                        correct="5"/> <!-- 5 -->
             </fields>
         </item>
@@ -1360,7 +1360,7 @@
                 </en>
             </name>
             <fields>
-                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter the number"
+                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter a number"
                        correct="10"/> <!-- 10 -->
             </fields>
         </item>
@@ -1374,7 +1374,7 @@
                 </en>
             </name>
             <fields>
-                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter the number" correct="64"/>
+                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter a number" correct="64"/>
             </fields>
         </item>
 
