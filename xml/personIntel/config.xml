@@ -7,7 +7,11 @@
                     творчество, продуктивность, развитие, безопасность, свобода. Хорошо известно, что высокая зарплата
                     сама по себе в какой-то момент перестает быть двигателем интереса к работе.
                 </ru>
-                <en></en>
+                <en>For you, remuneration is more important than many other things in work. You should consider whether
+                    it is more important to you than creativity, efficiency, development, safety, freedom. It is a
+                    common knowledge that a high salary in itself at some point ceases to be the driving force of
+                    interest in work.
+                </en>
             </description>
         </salary>
         <big-company>
@@ -16,7 +20,10 @@
                     вы надеетесь и на карьерный рост. Но помните, в крупной компании карьерный рост может происходить
                     медленнее, даже если он гарантирован.
                 </ru>
-                <en></en>
+                <en>Stability and confidence in your social status and income are more important to you than other
+                    things. Perhaps you look forward to career growth. But remember, career growth in a large company
+                    may be slower, even if guaranteed.
+                </en>
             </description>
         </big-company>
         <prestige>
@@ -25,7 +32,10 @@
                     Взвесьте, что важнее для вас - свобода, доход, творчество, развитие или престижность. И ответьте на
                     вопрос: к чему вы придёте, если ориентируетесь главным образом на престижность?
                 </ru>
-                <en></en>
+                <en>It is very important to you what other people (perhaps your family members) think about your
+                    occupation. Consider what is more important to you - freedom, income, creativity, development or
+                    prestige. And answer the question: what will you come to if your main focus is prestige?
+                </en>
             </description>
         </prestige>
         <travel>
@@ -34,7 +44,10 @@
                     видеть мир. Стоит подумать над тем, что именно вы станете делать в разных странах и что именно будет
                     результатом ваших действий?
                 </ru>
-                <en></en>
+                <en>You would prefer your profession to give you the opportunity to communicate with people of different
+                    cultures, to see the world. It is worth thinking about what exactly you would do in different
+                    countries and what exactly the result of your actions would be?
+                </en>
             </description>
         </travel>
         <promotion>
@@ -43,7 +56,11 @@
                     знания для вас важнее многих других качеств в работе. Не забывайте при этом ради чего вы растёте и
                     что вы даёте человечеству и в кого вы превращаетесь сами в процессе вашего профессионального роста.
                 </ru>
-                <en></en>
+                <en>It is very important for you to become a consummate professional, an expert; constant improvement of
+                    your skills and knowledge is more important for you than many other factors in your work. At that,
+                    do not forget what you are growing for and what you are giving to humanity and what you are turning
+                    into in the process of your professional growth.
+                </en>
             </description>
         </promotion>
         <self-employ>
@@ -54,7 +71,12 @@
                     современном мире не просто торговец. Ему приходится все время наращивать свой интеллектуальный
                     потенциал.
                 </ru>
-                <en></en>
+                <en>Freedom and independence in making decisions are truly valuable to you. You would prefer to earn
+                    money instead of getting a salary, so that your income would directly depend on your efforts. You
+                    are not afraid to risk income. Try not to forget about your professional development. An
+                    entrepreneur in the modern world is not just a merchant. An entrepreneur needs to increase his or
+                    her intellectual potential all the time.
+                </en>
             </description>
         </self-employ>
         <people>
@@ -63,7 +85,10 @@
                     потребует от вас разнообразных качеств: социального и эмоционального интеллекта, способности к
                     противостоянию и гибкости. Развивайте это в себе.
                 </ru>
-                <en></en>
+                <en>Work in contact with your colleagues or even clients is more important to you than other job
+                    aspects. This requires a variety of personal skills and qualities: social and emotional
+                    intelligence, resilience and flexibility. Develop them in yourself.
+                </en>
             </description>
         </people>
         <work-alone>
@@ -72,7 +97,10 @@
                     вашего труда. Такое положение на работе приятно, но рискованно - если вы: 1) не обмениваетесь опытом
                     с коллегами и 2) не тренируетесь в общении с людьми
                 </ru>
-                <en></en>
+                <en>You prefer working individually, not in a team, being solely responsible for the results of your
+                    work. This position at work is quite favorable, but risky if you: (1) do not exchange experience
+                    with colleagues and (2) do not train in communicating with people
+                </en>
             </description>
         </work-alone>
         <gov>
@@ -81,7 +109,10 @@
                     ведомстве дает вам финансовую и социальную защиту. Однако в госслужбе не высокие зарплаты и очень
                     много работы.
                 </ru>
-                <en></en>
+                <en>Probably you seek to be entirely secure, believing that working for a government agency would give
+                    you financial and social security. However, salaries in the civil service are not really high, and
+                    there is lots of work to do.
+                </en>
             </description>
         </gov>
         <benefit>
@@ -90,7 +121,10 @@
                     если вы работаете с людьми непосредственно, нужно отдыхать от избыточного коммуникативного
                     напряжения. Иначе может произойти эмоциональное выгорание.
                 </ru>
-                <en></en>
+                <en>For you, to benefit people with your work is more important than other aspects of work. It should be
+                    remembered that if you work with people directly, you need to rest from excessive communicative
+                    tension. Otherwise, it may lead to emotional burnout.
+                </en>
             </description>
         </benefit>
         <art>
@@ -100,7 +134,11 @@
                     действительно хотите творить или вы хотите находиться в творческой среде, но не творить, а помогать
                     творцам или организовывать работу творцов.
                 </ru>
-                <en></en>
+                <en>You truly appreciate each opportunity to participate in the creating a new product that never
+                    existed before. This is more important to you than many other job considerations. However, try to
+                    understand if you really want to create or you want to be in a creative environment, not creating,
+                    but helping creators or organize their work.
+                </en>
             </description>
         </art>
         <indoor>
@@ -109,7 +147,11 @@
                     еще операционная, библиотека, музей, выставочное пространство, сцена, школьный класс,
                     университетская аудитория, научная лаборатория. Смотрите на места работы шире.
                 </ru>
-                <en></en>
+                <en>Comfortable working conditions are important for you, without being exposed to rain, wind and sun.
+                    Remember that apart from the office, there are such places to work as a surgery room, a library, a
+                    museum, an exhibition space, a stage, a school class, a university lecture hall, a research
+                    laboratory. Keep your eyes open to other places of work.
+                </en>
             </description>
         </indoor>
         <outdoor>
@@ -119,7 +161,12 @@
                     природе. Думайте и о том, куда вас приведет работа на природе: в научную лабораторию, офис торговой
                     компании, магазин, ферму, школьный класс и прочее. Думайте о будущем вашем месте.
                 </ru>
-                <en></en>
+                <en>It is important to you that your work would give you the opportunity not to sit still, but to move
+                    around in the wider space of a city and the world. Remember that you will not always be able to work
+                    hard and a lot outdoors. Think also about where outdoor work might take you: to a research
+                    laboratory, a trading company office, a store, a farm, a school class, etc. Think about your future
+                    place.
+                </en>
             </description>
         </outdoor>
         <difference>
@@ -128,7 +175,10 @@
                     то другим делом. Вы не хотите рутинной работы. Однако помните, что в любой профессии есть повторы и
                     рутина - в творческих профессиях этого тоже много.
                 </ru>
-                <en></en>
+                <en>The most important thing about the job for you is the opportunity to alternate between doing one
+                    thing and another. You don't want routine work. However, remember that in any profession there are
+                    mundanity and routine, there are lots of them even in creative occupations.
+                </en>
             </description>
         </difference>
         <publicity>
@@ -138,7 +188,11 @@
                     - чтобы было что отдать людям. А иначе на вас перестанут смотреть и вас перестанут слушать.
                     Наполняйте себя знанием и пониманием.
                 </ru>
-                <en></en>
+                <en>You would love to have a part of your work take place in public. Being a famous public person is
+                    most important for you. Fine. Do not forget the important thing: you always need to have a lot
+                    inside of you, to be able to share it with people. Otherwise, they will stop watching you and stop
+                    listening to you. Fill yourself with knowledge and understanding.
+                </en>
             </description>
         </publicity>
         <safe>
@@ -148,7 +202,11 @@
                     других, меньше зарабатываете. Главное и самое трудное развитие - развитие в интеллектуальной
                     плоскости.
                 </ru>
-                <en></en>
+                <en>The most important thing for you is that your work would not expose you to physical and social
+                    risks. However, it should be remembered that the riskiest thing is not to develop. Without
+                    developing daily, you are left behind, you earn less. The main and most difficult development is a
+                    development in the intellectual plane.
+                </en>
             </description>
         </safe>
         <result>
@@ -157,7 +215,10 @@
                     Это действительно важно. Многие взрослые страдают именно от того, что их работа не результативна. А
                     вы заранее знаете - насколько это важно.
                 </ru>
-                <en></en>
+                <en>For you, the most important thing in your work is that it would give an obvious result or even a
+                    product. This is really important. Many adults suffer from their work not being productive. And you
+                    already know how important it is.
+                </en>
             </description>
         </result>
         <intel>
@@ -167,7 +228,10 @@
                     тяжелый и самый многообещающий. Ваша профессиональная жизнь сложится очень благополучно, если вы
                     дадите себе труд все время учиться.
                 </ru>
-                <en></en>
+                <en>The most important thing for you is that the work must be intellectual, that is, make you think
+                    hard, force you to remember a lot and solve difficult tasks. Intellectual work is the hardest and
+                    most promising. Your professional life will turn out very well if you keep studying all the time.
+                </en>
             </description>
         </intel>
         <hands>
@@ -177,7 +241,11 @@
                     вам, но не забывайте, что люди изобретают все новые и новые технологии работы. Учитесь им. И вас
                     никто не обгонит!
                 </ru>
-                <en></en>
+                <en>The most important thing about work for you is to work with your hands, so that your body (movement,
+                    exertion) would also participate in it. As a rule, physical labor brings obvious results. You enjoy
+                    it, but do not forget that people invent more and more new work technologies. Master them. And no
+                    one will overtake you.
+                </en>
             </description>
         </hands>
         <free-time>
@@ -186,7 +254,10 @@
                     не только работа, но и частная жизнь. Люди, успешные в профессии, так никогда не рассуждают. Но,
                     может быть, это и не ваша линия - сделать карьеру и зарабатывать много.
                 </ru>
-                <en></en>
+                <en>It is valuable to you to have work granting you a lot of free time for yourself. Not only work is
+                    important to you, but also your private life. Successful people never talk like that. But maybe
+                    career and high earnings are not what you want.
+                </en>
             </description>
         </free-time>
         <high-society>
@@ -196,7 +267,12 @@
                     обществе - нужно развивать умения обращаться с людьми и с временем, выступать публично, ставить
                     промежуточные цели и вовремя от них отказываться, если они уже не ведут вас куда вам надо.
                 </ru>
-                <en></en>
+                <en>You don't just want to achieve a high position in society, but you want to achieve it step-by-step.
+                    If this is the case, if you don’t want to get a position for doing nothing, but to come to it
+                    through your work, you need to develop interpersonal and time management skills, speak in public,
+                    set intermediate goals and abandon them in good time if they no longer lead you where you want to
+                    be.
+                </en>
             </description>
         </high-society>
         <light-work>
@@ -207,7 +283,12 @@
                     подумайте - что вам легче дается: работа с техникой, текстом, числами или людьми. А также скажите
                     себе: к какой чистоте вы стремитесь: духовной или физической.
                 </ru>
-                <en></en>
+                <en>For you, above all, the job should not be hard and dirty. The essence of the work is not really
+                    important to you today, as far as it is simple and not messy. Physical labor is never easy.
+                    Intellectual work is not easy either. Communication is very difficult for some people. Think for
+                    yourself, what is easier for you: working with technology, texts, figures or people. And also tell
+                    yourself: what kind of ‘cleanness’ do you strive for, spiritual or physical.
+                </en>
             </description>
         </light-work>
     </values>
