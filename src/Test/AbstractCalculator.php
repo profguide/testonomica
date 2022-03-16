@@ -7,6 +7,7 @@
 namespace App\Test;
 
 
+use Symfony\Component\DomCrawler\Crawler;
 use Symfony\Component\HttpKernel\KernelInterface;
 
 abstract class AbstractCalculator implements CalculatorInterface
@@ -29,5 +30,22 @@ abstract class AbstractCalculator implements CalculatorInterface
         $this->questionsHolder = $questionsHolder;
         $this->kernel = $kernel;
         $this->locale = $locale;
+    }
+
+    /**
+     * @var Crawler[]
+     */
+    private static array $xml = [];
+
+    /**
+     * @param string $filename /xml/proftest/config.xml
+     * @return Crawler
+     */
+    protected function xml(string $filename): Crawler
+    {
+        if (!isset(self::$xml[$filename])) {
+            self::$xml[$filename] = new Crawler(file_get_contents($this->kernel->getProjectDir() . $filename));
+        }
+        return self::$xml[$filename];
     }
 }

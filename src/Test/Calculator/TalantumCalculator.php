@@ -130,8 +130,6 @@ class TalantumCalculator extends AbstractCalculator
         }
     }
 
-    private static Crawler $configXmlCrawler;
-
     /**
      * @return array, e.g. ['creative' => 'Креативность'...]
      */
@@ -194,11 +192,6 @@ class TalantumCalculator extends AbstractCalculator
 
     private function config(): Crawler
     {
-        if (empty(self::$configXmlCrawler)) {
-            $filename = $this->kernel->getProjectDir() . "/xml/talantum/config.xml";
-            $fileContent = file_get_contents($filename);
-            self::$configXmlCrawler = new Crawler($fileContent);
-        }
-        return self::$configXmlCrawler;
+        return $this->xml("/xml/talantum/config.xml");
     }
 }
