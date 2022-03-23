@@ -3,197 +3,385 @@
     <items>
         <item id="1">
             <name>
-                <ru>Вы бы предпочли:</ru>
-                <en>You'd like to do:</en>
+                <ru>
+                    Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
                 <option value="nature">
-                    <ru>Ухаживать за животными</ru>
-                    <en>Take care of animals</en>
+                    <ru>Ухаживать за животными
+                    </ru>
+                    <en>Taking care of animals</en>
                 </option>
                 <option value="technic">
-                    <ru>Обслуживать машины, приборы</ru>
-                    <en>Servicing machines and appliances</en>
+                    <ru>Обслуживать машины, приборы
+                    </ru>
+                    <en>Operating machinery, devices</en>
                 </option>
             </options>
         </item>
         <item id="2">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="human">Помогать больным людям</option>
-                <option value="sign">Составлять таблицы, схемы, программы вычислительных машин</option>
+                <option value="human">
+                    <ru>Помогать больным людям</ru>
+                    <en>Helping sick people</en>
+                </option>
+                <option value="sign">
+                    <ru>Составлять таблицы, схемы, программы вычислительных машин</ru>
+                    <en>Preparing tables, diagrams, computer programs</en>
+                </option>
             </options>
         </item>
         <item id="3">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="artist">Следить за качеством книжных иллюстраций, плакатов, художественных открыток
+                <option value="artist">
+                    <ru>Следить за качеством книжных иллюстраций, плакатов, художественных открыток
+                    </ru>
+                    <en>Controlling quality of book illustrations, posters, picture cards</en>
                 </option>
-                <option value="nature">Следить за состоянием, развитием растений</option>
+                <option value="nature">
+                    <ru>Следить за состоянием, развитием растений</ru>
+                    <en>Tending and taking care of plants</en>
+                </option>
             </options>
         </item>
         <item id="4">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="technic">Обрабатывать материалы (дерево, ткань, металл, пластмассу)</option>
-                <option value="human">Доводить товары до потребителя (рекламировать, продавать)</option>
+                <option value="technic">
+                    <ru>Обрабатывать материалы (дерево, ткань, металл, пластмассу)</ru>
+                    <en>Processing materials (wood, fabric, metal, plastic)</en>
+                </option>
+                <option value="human">
+                    <ru>Доводить товары до потребителя (рекламировать, продавать)</ru>
+                    <en>Bringing goods up to consumers (promoting, selling)</en>
+                </option>
             </options>
         </item>
         <item id="5">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="sign">Обсуждать научно популярные книги, статьи</option>
-                <option value="artist">Обсуждать художественные книги</option>
+                <option value="sign">
+                    <ru>Обсуждать научно популярные книги, статьи</ru>
+                    <en>Discussing popular scientific books, articles</en>
+                </option>
+                <option value="artist">
+                    <ru>Обсуждать художественные книги</ru>
+                    <en>Discussing fiction books</en>
+                </option>
             </options>
         </item>
         <item id="6">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="nature">Выращивать молодняк животных какой-либо породы</option>
-                <option value="human">Тренировать сверстников (или младших) в выполнении каких-либо действий
-                    (трудовых, учебных, спортивных)
+                <option value="nature">
+                    <ru>Выращивать молодняк животных какой-либо породы</ru>
+                    <en>Raising young animals of any breed</en>
+                </option>
+                <option value="human">
+                    <ru>Тренировать сверстников (или младших) в выполнении каких-либо действий
+                        (трудовых, учебных, спортивных)
+                    </ru>
+                    <en>Training someone of the same age (or younger) to do any activities (occupational, educational,
+                        sports-oriented)
+                    </en>
                 </option>
             </options>
         </item>
         <item id="7">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="artist">Копировать рисунки, изображения, настраивать музыкальные инструменты</option>
-                <option value="technic">Управлять каким-либо грузовым, подъемным транспортным средством (подъемным
-                    краном, трактором, тепловозом и др.)
+                <option value="artist">
+                    <ru>Копировать рисунки, изображения, настраивать музыкальные инструменты</ru>
+                    <en>Copying drawings, illustrations, tuning musical instruments</en>
+                </option>
+                <option value="technic">
+                    <ru>Управлять каким-либо грузовым, подъемным транспортным средством (подъемным
+                        краном, трактором, тепловозом и др.)
+                    </ru>
+                    <en>Operating any load carrier, lifting vehicle (a crane, a tractor, a locomotive, etc.)</en>
                 </option>
             </options>
         </item>
         <item id="8">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="human">Сообщать, разъяснять людям нужные им сведения (в справочном бюро, на экскурсии
-                    и т.п.)
+                <option value="human">
+                    <ru>Сообщать, разъяснять людям нужные им сведения (в справочном бюро, на экскурсии
+                        и т.п.)
+                    </ru>
+                    <en>Informing people about any information they need and making it clear to them (in an enquiry
+                        office, during an excursion, etc.)
+                    </en>
                 </option>
-                <option value="artist">Художественно оформлять выставки, витрины, участвовать в подготовке пьес,
-                    концертов
+                <option value="artist">
+                    <ru>Художественно оформлять выставки, витрины, участвовать в подготовке пьес,
+                        концертов
+                    </ru>
+                    <en>Preparing artistic design of exhibitions, display windows, participating in preparation of
+                        plays, concerts
+                    </en>
                 </option>
             </options>
         </item>
         <item id="9">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="technic">Ремонтировать изделия, вещи (одежду, технику), жилище</option>
-                <option value="sign">Искать и исправлять ошибки в текстах, таблицах, рисунках</option>
+                <option value="technic">
+                    <ru>Ремонтировать изделия, вещи (одежду, технику), жилище</ru>
+                    <en>Repairing goods, items (clothes, equipment), residential space</en>
+                </option>
+                <option value="sign">
+                    <ru>Искать и исправлять ошибки в текстах, таблицах, рисунках</ru>
+                    <en>Editing texts, tables, drawings</en>
+                </option>
             </options>
         </item>
         <item id="10">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="nature">Лечить животных</option>
-                <option value="sign">Выполнять вычисления, расчеты</option>
+                <option value="nature">
+                    <ru>Лечить животных</ru>
+                    <en>Treating animals</en>
+                </option>
+                <option value="sign">
+                    <ru>Выполнять вычисления, расчеты</ru>
+                    <en>Making calculations, evaluations</en>
+                </option>
             </options>
         </item>
         <item id="11">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="nature">Выводить новые сорта растений</option>
-                <option value="technic">Конструировать, проектировать новые виды промышленных изделий (машины, одежду,
-                    дома, продукты питания)
+                <option value="nature">
+                    <ru>Выводить новые сорта растений</ru>
+                    <en>Breeding new plant varieties</en>
+                </option>
+                <option value="technic">
+                    <ru>Конструировать, проектировать новые виды промышленных изделий (машины, одежду,
+                        дома, продукты питания)
+                    </ru>
+                    <en>Designing, engineering new types of industrial goods (machinery, clothes, buildings, foods)</en>
                 </option>
             </options>
         </item>
         <item id="12">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="human">Разбирать споры, ссоры между людьми, убеждать, разъяснять, поощрять,
-                    наказывать
+                <option value="human">
+                    <ru>Разбирать споры, ссоры между людьми, убеждать, разъяснять, поощрять,
+                        наказывать
+                    </ru>
+                    <en>Handling disputes, solving disagreements between people, convincing, explaining, encouraging,
+                        punishing
+                    </en>
                 </option>
-                <option value="sign">Разбираться в чертежах, схемах, таблицах (проверять, уточнять, приводить в
-                    порядок)
+                <option value="sign">
+                    <ru>Разбираться в чертежах, схемах, таблицах (проверять, уточнять, приводить в
+                        порядок)
+                    </ru>
+                    <en>Analyzing drawings, diagrams, tables (checking, specifying, rearranging)</en>
                 </option>
             </options>
         </item>
         <item id="13">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="artist">Наблюдать, изучать работу кружков художественной самодеятельности</option>
-                <option value="nature">Наблюдать, изучать жизнь микробов</option>
+                <option value="artist">
+                    <ru>Наблюдать, изучать работу кружков художественной самодеятельности</ru>
+                    <en>Supervising, examining activities of amateur-talent groups</en>
+                </option>
+                <option value="nature">
+                    <ru>Наблюдать, изучать жизнь микробов</ru>
+                    <en>Observing, studying living microbes</en>
+                </option>
             </options>
         </item>
         <item id="14">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="technic">Обслуживать, налаживать медицинские приборы и аппараты</option>
-                <option value="human">Оказывать людям медицинскую помощь при ранениях, ушибах, ожогах и т.п.
+                <option value="technic">
+                    <ru>Обслуживать, налаживать медицинские приборы и аппараты</ru>
+                    <en>Servicing, adjusting medical devices and appliances</en>
+                </option>
+                <option value="human">
+                    <ru>Оказывать людям медицинскую помощь при ранениях, ушибах, ожогах и т.п.
+                    </ru>
+                    <en>Providing medical assistance to people in case of injuries, wounding, burns, etc.</en>
                 </option>
             </options>
         </item>
         <item id="15">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="sign">Составлять точные описания (отчеты) о наблюдаемых явлениях, событиях,
-                    измеряемых объектах
+                <option value="sign">
+                    <ru>Составлять точные описания (отчеты) о наблюдаемых явлениях, событиях,
+                        измеряемых объектах
+                    </ru>
+                    <en>Preparing accurate descriptions (reports) of any observed phenomena, events, measured objects
+                    </en>
                 </option>
-                <option value="artist">Художественно описывать, изображать события, наблюдаемые или
-                    представляемые
+                <option value="artist">
+                    <ru>Художественно описывать, изображать события, наблюдаемые или
+                        представляемые
+                    </ru>
+                    <en>Describing, depicting any observed or imagined events artistically</en>
                 </option>
             </options>
         </item>
         <item id="16">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="nature">Делать лабораторные анализы в больнице.</option>
-                <option value="human">Принимать, осматривать больных, беседовать с ними, назначать лечение
+                <option value="nature">
+                    <ru>Делать лабораторные анализы в больнице.</ru>
+                    <en>Making laboratory analyses in a hospital</en>
+                </option>
+                <option value="human">
+                    <ru>Принимать, осматривать больных, беседовать с ними, назначать лечение
+                    </ru>
+                    <en>Seeing, examining patients, talking to them, making prescriptions</en>
                 </option>
             </options>
         </item>
         <item id="17">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="artist">Красить или расписывать стены помещений, поверхность изделий</option>
-                <option value="technic">Осуществлять монтаж здания или сборку машин, приборов</option>
+                <option value="artist">
+                    <ru>Красить или расписывать стены помещений, поверхность изделий</ru>
+                    <en>Applying paint on the room walls, item surfaces or making murals</en>
+                </option>
+                <option value="technic">
+                    <ru>Осуществлять монтаж здания или сборку машин, приборов</ru>
+                    <en>Implementing erection of buildings or assembling machinery, devices</en>
+                </option>
             </options>
         </item>
         <item id="18">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="human">Организовывать культпоходы сверстников или младших товарищей в театры, музеи, на
-                    экскурсии, в туристические походы и т.п
+                <option value="human">
+                    <ru>Организовывать культпоходы сверстников или младших товарищей в театры, музеи, на
+                        экскурсии, в туристические походы и т.п
+                    </ru>
+                    <en>Organizing cultural outing for people of the same age or younger to theatres, museums, arranging
+                        excursions backpacking trips, etc.
+                    </en>
                 </option>
-                <option value="artist">Играть на сцене, принимать участие в концертах</option>
+                <option value="artist">
+                    <ru>Играть на сцене, принимать участие в концертах</ru>
+                    <en>Performing on stage, participating in concerts</en>
+                </option>
             </options>
         </item>
         <item id="19">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="technic">Изготовлять по чертежам детали изделия (машины, одежду), строить здания
+                <option value="technic">
+                    <ru>Изготовлять по чертежам детали изделия (машины, одежду), строить здания
+                    </ru>
+                    <en>Making parts of goods (machinery, clothes) based on drawings, constructing buildings</en>
                 </option>
-                <option value="sign">Заниматься черчением, копировать чертежи, карты</option>
+                <option value="sign">
+                    <ru>Заниматься черчением, копировать чертежи, карты</ru>
+                    <en>Making drawings, copying drafts, maps</en>
+                </option>
             </options>
         </item>
         <item id="20">
-            <name>Вы бы предпочли:
+            <name>
+                <ru>Вы бы предпочли:
+                </ru>
+                <en>What would you prefer:</en>
             </name>
             <options>
-                <option value="nature">Вести борьбу с болезнями растений, с вредителями леса, сада</option>
-                <option value="sign">Работать на клавишных машинах (пишущей машинке, телетайпе, наборной машине и
-                    др.)
+                <option value="nature">
+                    <ru>Вести борьбу с болезнями растений, с вредителями леса, сада</ru>
+                    <en>Fighting plant diseases, forest and garden pests</en>
+                </option>
+                <option value="sign">
+                    <ru>Работать на клавишных машинах (пишущей машинке, телетайпе, наборной машине и
+                        др.)
+                    </ru>
+                    <en>Working on key machines (a typewriter, a teletype, a typesetter, etc.)</en>
                 </option>
             </options>
         </item>
     </items>
 </quiz>
+
+
