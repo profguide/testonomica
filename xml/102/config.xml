@@ -1,5 +1,127 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <config>
-    <values>
-    </values>
+    <types>
+        <human-to-nature>
+            <name>
+                <ru>Человек-Природа</ru>
+                <en>Human-to-Nature</en>
+            </name>
+            <text>
+                <ru>
+                    Это профессии, в которых человек работает с живой и неживой природой. Это может быть
+                    ученый-исследователь физических, химических и биологических процессов природы. Это может быть
+                    технолог, создающий в лаборатории новые лекарства, новые материалы, новые живые организмы (как
+                    селекционер и генный инженер). Это может быть и медик который ставит диагноз и лечит человека. Это
+                    может быть и геолог, и океанолог, и эколог, и почвовед, и энолог, агроном, а также кинолог,
+                    растениевод, зоолог, и даже логопед и дефектолог. Главное - объект труда данного специалиста -
+                    како-либо природное явление или объект природы.
+                </ru>
+                <en>These professions include those where a person works with organic and inorganic nature. It may be an
+                    occupation of a scientist researching physical, chemical and biological natural processes. It may be
+                    a process specialist engaged in development of new medicines, new materials, and new living
+                    organisms in a laboratory (like a breeder or a gene engineer). It may be also be a medical worker
+                    who makes diagnoses and treats people. It may be a geologist, an ocean scientist, an environmental
+                    expert, a soil investigator, an oenologist, an agriculturist, as well as a dog breeder, a plant
+                    breeder, a zoologist, and even a logopedist or a speech pathologist. The main thing is this
+                    specialist’s labor is focused on some natural phenomena or natural object.
+                </en>
+            </text>
+        </human-to-nature>
+        <human-to-human>
+            <name>
+                <ru>Человек-Человек</ru>
+                <en>Human-to-Human</en>
+            </name>
+            <text>
+                <ru>
+                    Это профессии, в которых человек работает с человеком или несколькими людьми. Он может работать как
+                    с телом человека, так и с его душой, сознанием, поведением. Он может лечить людей, обучать их,
+                    продавать им что-то, управлять ими, выступать перед ними, судить их, помогать им, выслушивать,
+                    проповедовать им,изучать их, развлекать их и т. д. К этой группе относятся врачи, медсестры,
+                    массажисты, учителя,
+                    воспитатели, социологи, психологи, логопеды, политики, продавцы, менеджеры (пиар, HR, event, mice,
+                    отельеры, рестораторы и т.п.), парикмахеры, гиды-экскурсоводы, журналисты и прочие люди, которые
+                    напрямую общаются с людьми на работе и этим зарабатывают.
+                </ru>
+                <en>These are the professions where a person works with a person or several people. They may also handle
+                    both a human body and a human soul, consciousness, behavior. They may treat people, teach them, sell
+                    something to them, control them, perform for them, judge them, help them, listen to them, preach to
+                    them, study, entertain them, etc. This group includes doctors, nurses, massage therapists, teachers,
+                    educators, social scientists, psychologists, logopedists, politicians, sellers, managers (PR, HR,
+                    event, MICE, hoteliers, restaurant keepers, etc.), hairdressers, tour guides, journalists and other
+                    people who directly interact with people at work and make money in this way.
+                </en>
+            </text>
+        </human-to-human>
+        <human-to-machinery>
+            <name>
+                <ru>Человек-Техника</ru>
+                <en>Human-to-Machinery</en>
+            </name>
+            <text>
+                <ru>
+                    Это профессии, в которых человек работает с техникой. Он технику разрабатывает, чинит, обслуживает,
+                    эксплуатирует. Это может быть инженер любого рода: энергетик, робототехник, самолётостроитель,
+                    автомобилестроитель, строитель поездов, лифтов, холодильников, станков, трубопроводов, медицинской
+                    техники, звукотехники и видеотехники, компьютерной техники… Все эти виды техники можно не только
+                    создавать, но и обслуживать (сервисный инженер, наладчик), а также эксплуатировать её. Учителя,
+                    врачи, продавцы тоже используют технику на своей работе - но она для них не объект труда, а
+                    инструмент. Например, все они пользуются компьютером. Поэтому их нельзя отнести к категории человек
+                    - техника.
+                </ru>
+                <en>People of these professions work with machinery. They develop, fix, service, operate it. They may
+                    include engineers of any kind: a power engineer, a robot technician, an aircraft industry
+                    specialist, an automobile industry specialist, a constructor of trains, elevators, refrigerators,
+                    tools, piping, medical appliances, sound and video equipment, computer hardware, etc. All these
+                    types of machinery may not only be developed but also serviced (a service engineer, a maintenance
+                    specialist) and operated. Teachers, doctors, sellers also use machinery in their work, but it is not
+                    a labor object for them but a tool. For instance, all of them use computers. Therefore, they may not
+                    be attributed to the human-to-machinery category.
+                </en>
+            </text>
+        </human-to-machinery>
+        <human-to-semiotic-system>
+            <name>
+                <ru>Человек-Знаковая система</ru>
+                <en>Human-to-Semiotic System</en>
+            </name>
+            <text>
+                <ru>
+                    Это профессии, в которых человек работает с числами, таблицами, графиками, схемами, буквами,
+                    шифрами. Сюда относятся бухгалтеры, экономисты, финансовые брокеры, математики, проектировщики
+                    оборудования и зданий, архитекторы, конструкторы одежды, корректоры, редакторы, звукорежиссеры,
+                    картографы, кадастровые инженеры, шифровальщики и все остальные работники чисел, таблиц, схем,
+                    графиков и букв.
+                </ru>
+                <en>These occupations suggest that a person deals with numbers, tables, diagrams, graphs, letters,
+                    ciphers. These include accountants, economists, financial brokers, mathematicians, equipment and
+                    building designers, architects, fashion designers, proofreaders, editors, sound producers,
+                    mapmakers, cadastral engineers, cipher officers, and other workers dealing with numbers, tables,
+                    diagrams, charts and letters.
+                </en>
+            </text>
+        </human-to-semiotic-system>
+        <human-to-artistic-image>
+            <name>
+                <ru>Человек-Художественный образ</ru>
+                <en>Human-to-Artistic Image</en>
+            </name>
+            <text>
+                <ru>
+                    Это профессии, в которых человек работает с художественными образами, создавая их визуальное
+                    изображение, звуковой образ, литературный образ. Это такие профессионалы: дизайнеры, художники,
+                    иллюстраторы, композиторы, саунд-дизайнеры, звукорежиссеры, поэты, сценаристы, писатели,
+                    парикмахеры, стилисты, визажисты, гримеры, тату-мастера… Относятся ли к этой группе искусствоведы,
+                    литературоведы? Да, если они глубоко изучают произведение литературы и искусства, созданной другими
+                    людьми.
+                </ru>
+                <en>These are the professions where people work with artistic images by creating their visual picture,
+                    sound picture, literature image. Such professionals include designers, illustrators, composers,
+                    sound designers, sound producers, poets, script writers, writers, hairdressers, stylists, makeup
+                    experts and artists, tattoo artists, etc. Does this group include fine art experts, literature
+                    specialists? Yes, if they inquire into the literature works and artworks created by other people.
+                </en>
+            </text>
+        </human-to-artistic-image>
+    </types>
 </config>
