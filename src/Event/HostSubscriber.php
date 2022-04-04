@@ -35,7 +35,7 @@ class HostSubscriber implements EventSubscriberInterface
                 'http://career.local/',
                 'https://career.local/'
             ])) {
-                throw new AccessDeniedHttpException('Unknown host.');
+                throw new AccessDeniedHttpException("Unknown host $host.");
             }
         }
     }
