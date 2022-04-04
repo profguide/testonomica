@@ -27,8 +27,10 @@ class HostSubscriber implements EventSubscriberInterface
 //            if ($event->getRequest()->server->get('SERVER_NAME') === '127.0.0.1:8000') {
 //                return;
 //            }
-            $host = $event->getRequest()->server->get('HTTP_REFERER');
+            $host = parse_url($event->getRequest()->server->get('HTTP_REFERER'), PHP_URL_HOST);
             if (!in_array($host, [
+                'profguide.io',
+                'www.profguide.io',
                 'http://pg/',
                 'https://www.profguide.io/',
                 'https://chooseyourcareer.ru/',
