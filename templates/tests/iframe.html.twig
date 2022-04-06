@@ -1,6 +1,16 @@
-<html lang="ru">
+<!doctype html>
+<html lang="{{ app.request.locale }}">
 <head>
     <title>Iframe checker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Widget</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+        {{ encore_entry_link_tags('test') }}
+    {% endblock %}
 </head>
 <body>
 <script>
@@ -10,6 +20,18 @@
     }, 1000);
 </script>
 
-{#<script src="https://widget.cloudpayments.ru/bundles/cloudpayments/"></script>#}
+{% block javascripts %}
+    {{ encore_entry_script_tags('test') }}
+    <script>
+        window.parent.postMessage({name: 'inline'}, '*');
+        // notify parent window about height change.
+        testonomica.addEventListener('resize', function (e) {
+            let rect = e[0].contentRect;
+            let height = rect.height;
+            window.parent.postMessage({name: 'frameHeight', frameHeight: height}, '*');
+        });
+    </script>
+    {#    <script src="https://widget.cloudpayments.ru/bundles/cloudpayments/"></script>#}
+{% endblock %}
 </body>
 </html>
