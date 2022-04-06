@@ -51,6 +51,15 @@ class TestController extends AbstractController
     }
 
     /**
+     * @Route("/iframe/", name="iframe")
+     * @return Response
+     */
+    public function iframe(): Response
+    {
+        return $this->render('tests/iframe.html.twig');
+    }
+
+    /**
      * @Route("/", name="index")
      * @return Response
      */
