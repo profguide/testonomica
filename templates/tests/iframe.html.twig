@@ -1,3 +1,13 @@
+<html lang="ru">
+<head>
+    <title>Iframe checker</title>
+</head>
+<body>
 <script>
-    window.parent.postMessage({load: 'I am testonomica.'});
+    window.parent.postMessage({load: 'I am testonomica 1.'}, '*');
+    setTimeout(function () {
+        window.parent.postMessage({timeout: 'I am testonomica 2.'}, '*');
+    }, 1000);
 </script>
+</body>
+</html>
