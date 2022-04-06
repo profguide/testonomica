@@ -25,6 +25,7 @@
 {% block javascripts %}
     {{ encore_entry_script_tags('test') }}
     <script>
+        window.parent.postMessage({name: 'inline'}, '*');
         // notify parent window about height change.
         testonomica.addEventListener('resize', function (e) {
             let rect = e[0].contentRect;
