@@ -31,7 +31,7 @@ class TestWidgetController extends AbstractController implements HostAuthenticat
     }
 
     /**
-     * @Route("/tests/widget/{id}/", name="test.widget")
+     * @Route("/tests/w/{id}/", name="test.widget")
      * Страница должна быть загружена на сайте партнёра в Iframe.
      * Данная страница предоставляет тест полностью - оплата, приветствие, прогресс, результат.
      * Нет ни шапки, ни подвала. 100% ширина и высота отданы под тест.
