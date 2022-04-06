@@ -6,6 +6,9 @@ import 'testonomica_api/src/style.scss';
 import ProgressStorage from "../../testonomica_api/src/service/storage/ProgressStorage";
 import ProgressFirebaseStorage from "../../testonomica_api/src/service/storage/ProgressFirebaseStorage";
 
+// just for debugging
+window.parent.postMessage({name: 'connect'}, '*');
+
 const INIT_AUTO = 'auto';
 const INIT_MANUAL = 'manual';
 
@@ -43,10 +46,10 @@ window.testonomica = new Testonomica(storage, testId, host, token);
 
 // получен результат в ходе прохождения теста
 window.testonomica.addEventListener(EVENT_FINISH, function (e) {
-    parent.postMessage({name: EVENT_FINISH, key: e.key}, '*');
+    window.parent.postMessage({name: EVENT_FINISH, key: e.key}, '*');
 });
 window.testonomica.addEventListener(EVENT_LOADED, function (e) {
-    parent.postMessage({name: EVENT_LOADED}, '*');
+    window.parent.postMessage({name: EVENT_LOADED}, '*');
 });
 
 if (!init || init === INIT_AUTO) {
