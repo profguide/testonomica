@@ -26,12 +26,12 @@
     {{ encore_entry_script_tags('test') }}
     <script>
         window.parent.postMessage({name: 'inline'}, '*');
-        // notify parent window about height change.
-        testonomica.addEventListener('resize', function (e) {
-            let rect = e[0].contentRect;
-            let height = rect.height;
-            window.parent.postMessage({name: 'frameHeight', frameHeight: height}, '*');
-        });
+        // // notify parent window about height change.
+        // testonomica.addEventListener('resize', function (e) {
+        //     let rect = e[0].contentRect;
+        //     let height = rect.height;
+        //     window.parent.postMessage({name: 'frameHeight', frameHeight: height}, '*');
+        // });
     </script>
 {#    <script src="https://widget.cloudpayments.ru/bundles/cloudpayments/"></script>#}
 {% endblock %}
