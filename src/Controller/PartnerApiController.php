@@ -8,6 +8,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Entity\PaymentType;
 use App\Repository\ProviderRepository;
 use App\Repository\ServiceRepository;
 use App\Service\PublicTokenService;
@@ -18,11 +19,11 @@ use Symfony\Component\HttpKernel\Exception\PreconditionFailedHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
+ * Генерирует токен для доступа к услуге или токен на оплату услуги
+ * Запрос должен идти скрытно.
+ *
  * @Route("/partner/api", name="partner.api.")
  * https://testonomica.com/partner/api/token/
- *
- * Генерирует токен для доступа к услуге или токен на оплату услуги
- * Запрос должен идти скрытно
  */
 class PartnerApiController extends AbstractController
 {
@@ -31,6 +32,10 @@ class PartnerApiController extends AbstractController
     private ProviderRepository $providers;
 
     private ServiceRepository $services;
+
+    const PAYMENT_TYPE_INTERNAL = 'internal';
+
+    const PAYMENT_TYPE_EXTERNAL = 'external';
 
     public function __construct(
         PublicTokenService $providerPaymentService,
@@ -43,13 +48,18 @@ class PartnerApiController extends AbstractController
     }
 
     /**
-     * Получение публичного токена.
-     * Это будет либо токен оплаты, либо токен доступа.
+     * Выпуск публичного токена
+     * Будет возвращён либо токен оплаты, либо токен доступа.
+     * Если передан payment_type=external, то будет создан доверительный платёж с последующим выпуском токена доступа.
      *
      * @Route("/token/", name="get_token")
      * @param Request $request
      * @return JsonResponse
-     * @example /token/?token=12313&user=1&service=proforientation
+     * @example /token/?token=PROVIDER_SECRET_TOKEN&user=PROVIDER_USER_ID&service=TESTONOMICA_SERVICE_NAME
+     *  token - секретный токен партнёра
+     *  user - id пользователя партнёра
+     *  service - услуга
+     *  payment_type (internal|external) - вид оплаты (на чьей стороне)
      */
     public function getToken(Request $request): JsonResponse
     {
@@ -64,9 +74,9 @@ class PartnerApiController extends AbstractController
         self::guardService($serviceSlug);
         $service = $this->services->getOneBySlug($serviceSlug);
 
-        $testMode = self::isTestMode($request);
+        $paymentType = self::paymentType($request);
 
-        $tokenObject = $this->publicTokenService->token($service, $provider, $providerUser, $testMode);
+        $tokenObject = $this->publicTokenService->token($service, $provider, $providerUser, $paymentType, self::isTestMode($request));
 
         return $this->json([
             'token' => $tokenObject->getToken()
@@ -97,5 +107,16 @@ class PartnerApiController extends AbstractController
     private static function isTestMode(Request $request): bool
     {
         return $request->get('isTest', false) == 1;
+    }
+
+    private static function paymentType(Request $request): PaymentType
+    {
+        $val = $request->get('payment_type', self::PAYMENT_TYPE_INTERNAL);
+        if ($val === self::PAYMENT_TYPE_INTERNAL) {
+            return new PaymentType(PaymentType::INTERNAL);
+        } elseif ($val === self::PAYMENT_TYPE_EXTERNAL) {
+            return new PaymentType(PaymentType::EXTERNAL);
+        }
+        throw new PreconditionFailedHttpException("Unsupported payment type: $val.");
     }
 }

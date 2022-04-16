@@ -13,7 +13,7 @@ use Twig\TwigFunction;
 
 class FunctionsExtension extends AbstractExtension
 {
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
             new TwigFunction('progress', [$this, 'progress']),

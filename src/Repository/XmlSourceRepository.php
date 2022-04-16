@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Question;
 use App\Entity\Test;
+use App\Subscriber\Locale;
 use App\Test\QuestionXmlMapper;
 use App\Test\TestItemNotFoundException;
 use DOMElement;
@@ -14,12 +15,12 @@ class XmlSourceRepository implements SourceRepositoryInterface
 {
     private KernelInterface $kernel;
 
-    private string $locale;
+    private Locale $locale;
 
     // for request cache
     private static array $xml = [];
 
-    public function __construct(KernelInterface $kernel, string $locale)
+    public function __construct(KernelInterface $kernel, Locale $locale)
     {
         $this->kernel = $kernel;
         $this->locale = $locale;

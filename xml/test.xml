@@ -2,14 +2,33 @@
 <quiz>
     <items>
         <item id="1">
-            <name>Как называется музыкальный интервал, в котором соотношение частот между звуками составляет один к двум
-                (то есть частота высокого звука в два раза больше низкого)?
+            <name>
+                <ru>
+                    Как называется музыкальный интервал, в котором соотношение частот между звуками составляет один к
+                    двум (то есть частота высокого звука в два раза больше низкого)?
+                </ru>
+                <en>
+                    What is the name of the musical interval in which the frequency ratio between sounds is one to two
+                    (that is, the frequency of high sound is twice as high as low)?
+                </en>
             </name>
             <options>
-                <option value="0">Квинта</option>
-                <option value="0">Секста</option>
-                <option value="0">Септима</option>
-                <option value="key">Октава</option>
+                <option value="0">
+                    <ru>Квинта</ru>
+                    <en>Quint</en>
+                </option>
+                <option value="0">
+                    <ru>Секста</ru>
+                    <en>Sexta</en>
+                </option>
+                <option value="0">
+                    <ru>Септима</ru>
+                    <en>Septima</en>
+                </option>
+                <option value="key">
+                    <ru>Октава</ru>
+                    <en>Octave</en>
+                </option>
             </options>
         </item>
         <item id="2">

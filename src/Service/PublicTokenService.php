@@ -8,6 +8,7 @@ namespace App\Service;
 
 
 use App\Entity\Access;
+use App\Entity\PaymentType;
 use App\Entity\Provider;
 use App\Entity\ProviderPayment;
 use App\Entity\Service;
@@ -54,14 +55,23 @@ class PublicTokenService
      * @param Service $service
      * @param Provider $provider
      * @param string $user
+     * @param PaymentType $paymentType
      * @param bool $testMode
      * @return TokenableInterface
      */
-    public function token(Service $service, Provider $provider, string $user, bool $testMode = false): TokenableInterface
+    public function token(Service $service, Provider $provider, string $user, PaymentType $paymentType, bool $testMode = false): TokenableInterface
     {
         if ($this->isPaid($provider, $user, $service)) {
             return $this->accessToken($service);
         } else {
+            // todo check
+            if ($paymentType->is(PaymentType::EXTERNAL)) {
+                // Публичный токен доступа с доверительным платежом
+                // Партнёр принимает оплату на своей стороне
+                // Создаём доверительный платёж сразу оплаченным
+                $this->providerUserPaymentService->createTrust($provider, $user, $service);
+                return $this->accessToken($service);
+            }
             return $this->paymentToken($service, $provider, $user, $testMode);
         }
     }

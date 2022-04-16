@@ -2,34 +2,36 @@
 <html lang="{{ app.request.locale }}">
 <head>
     <title>Iframe checker</title>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Widget</title>
-    {% block stylesheets %}
-        {{ encore_entry_link_tags('app') }}
-        {{ encore_entry_link_tags('test') }}
-    {% endblock %}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport"#}
+{#          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">#}
+{#    <meta http-equiv="X-UA-Compatible" content="ie=edge">#}
+{#    <title>Widget</title>#}
+{#    {% block stylesheets %}#}
+{#        {{ encore_entry_link_tags('app') }}#}
+{#        {{ encore_entry_link_tags('test') }}#}
+{#    {% endblock %}#}
 </head>
 <body>
 <script>
-    window.parent.postMessage({load: 'I am testonomica 1.'}, '*');
+    window.parent.postMessage({name: 'loaded'}, '*');
     setTimeout(function () {
         window.parent.postMessage({timeout: 'I am testonomica 2.'}, '*');
     }, 1000);
 </script>
 
-<div id="testonomica_app"
-     data-test="102"
-     data-init="auto"></div>
+<h1>I am testonomica</h1>
 
-{% block javascripts %}
-    {{ encore_entry_script_tags('test') }}
-    <script>
-        window.parent.postMessage({name: 'inline'}, '*');
-    </script>
-    {#    <script src="https://widget.cloudpayments.ru/bundles/cloudpayments/"></script>#}
-{% endblock %}
+{#<div id="testonomica_app"#}
+{#     data-test="102"#}
+{#     data-init="auto"></div>#}
+
+{#{% block javascripts %}#}
+{#    {{ encore_entry_script_tags('test') }}#}
+{#    <script>#}
+{#        window.parent.postMessage({name: 'inline'}, '*');#}
+{#    </script>#}
+{#    #}{#    <script src="https://widget.cloudpayments.ru/bundles/cloudpayments/"></script>#}
+{#{% endblock %}#}
 </body>
 </html>

@@ -6,6 +6,7 @@ namespace App\Event;
 
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 
+// todo Delete? сейчас и без этого работает.
 class LocaleRequestListener
 {
     private string $defaultLocale;

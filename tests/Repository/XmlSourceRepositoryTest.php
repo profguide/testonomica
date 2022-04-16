@@ -2,6 +2,7 @@
 
 namespace App\Tests\Repository;
 
+use App\Controller\TestController;
 use App\DataFixtures\TestFixture;
 use App\Entity\Test;
 use App\Repository\DBSourceRepository;
@@ -20,9 +21,9 @@ class XmlSourceRepositoryTest extends KernelTestCase
     public function setUp(): void
     {
         self::bootKernel();
-        $testRepository = self::$container->get(TestRepository::class);
+        $testRepository = self::getContainer()->get(TestRepository::class);
         $this->test = $testRepository->findOneBySlug(TestFixture::TEST_1_SLUG);
-        $this->dbSourceRepository = self::$container->get(XmlSourceRepository::class);
+        $this->dbSourceRepository = self::getContainer()->get(XmlSourceRepository::class);
     }
 
     public function testFindQuestion()

@@ -17,6 +17,6 @@ class ProforientationTeenCalculatorTest extends AbstractProforientationCalculato
 
     protected function getSrcFilename(): string
     {
-        return self::$kernel->getProjectDir() . "/xml/proforientationTeen.xml";
+        return self::$kernel->getProjectDir() . "/xml/proftest.xml";
     }
 }

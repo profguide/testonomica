@@ -37,11 +37,6 @@ class PaymentService
         throw new \DomainException("Payment id#$id not found.");
     }
 
-    public function create(Service $service, bool $testMode): Payment
-    {
-        return $this->repository->save(Payment::init($service, $service->getSum(), $testMode));
-    }
-
     public function save($payment): Payment
     {
         return $this->repository->save($payment);

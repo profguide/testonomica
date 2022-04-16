@@ -43,6 +43,10 @@ class XmlUtil
     public static function langAttribute(DOMElement $field, string $baseAttrName, string $locale): ?string
     {
         $localeAttrName = $baseAttrName . '-' . $locale;
-        return $field->getAttribute($localeAttrName) ?? $field->getAttribute($baseAttrName);
+        $localeAttributeValue = $field->getAttribute($localeAttrName);
+        if (!empty($localeAttributeValue)) {
+            return $localeAttributeValue;
+        }
+        return $field->getAttribute($baseAttrName);
     }
 }

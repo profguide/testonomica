@@ -8,7 +8,7 @@ controllers:
 #    _locale: '%app.default_locale%'
 #    prefix: /{_locale}
 #    requirements:
-#      _locale: '%app.supported_locales%''
+#      _locale: '%app.supported_locales%'
 
 kernel:
   resource: ../../src/Kernel.php

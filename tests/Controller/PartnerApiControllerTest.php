@@ -33,9 +33,9 @@ class PartnerApiControllerTest extends WebTestCase
     {
         $this->client = static::createClient();
         /**@var ProviderRepository $providerRepository */
-        $this->providerRepository = self::$container->get(ProviderRepository::class);
-        $this->providerPaymentRepository = self::$container->get(ProviderPaymentRepository::class);
-        $this->accessRepository = self::$container->get(AccessRepository::class);
+        $this->providerRepository = self::getContainer()->get(ProviderRepository::class);
+        $this->providerPaymentRepository = self::getContainer()->get(ProviderPaymentRepository::class);
+        $this->accessRepository = self::getContainer()->get(AccessRepository::class);
     }
 
     /**
@@ -99,6 +99,7 @@ class PartnerApiControllerTest extends WebTestCase
             'token' => $provider->getToken(),
             'user' => 'new-user',
             'service' => ServiceFixture::SERVICE_1,
+            'payment_type' => 'external'
         ];
         // делаем два запроса, чтобы получить два токена
         $token1 = $this->requestToken($requestParams);

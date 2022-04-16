@@ -11,6 +11,7 @@ use App\Entity\Result;
 use App\Entity\Test;
 use App\Repository\SourceRepositoryInterface;
 use App\Repository\TestRepositoryInterface;
+use App\Subscriber\Locale;
 use App\Test\AbstractCalculator;
 use App\Test\AbstractComplexCalculator;
 use App\Test\AnswersHolder;
@@ -39,13 +40,13 @@ class CalculatorService
         SourceRepositoryInterface $sourceRepository,
         TestRepositoryInterface $testRepository,
         KernelInterface $kernel,
-        string $locale)
+        Locale $locale)
     {
         $this->serializer = $serializer;
         $this->sourceRepository = $sourceRepository;
         $this->testRepository = $testRepository;
         $this->kernel = $kernel;
-        $this->locale = $locale;
+        $this->locale = $locale->getValue();
     }
 
     public function calculate(Result $result): array

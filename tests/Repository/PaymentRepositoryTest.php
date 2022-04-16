@@ -11,6 +11,7 @@ use App\DataFixtures\ProviderFixture;
 use App\DataFixtures\ServiceFixture;
 use App\Entity\Payment;
 use App\Entity\PaymentStatus;
+use App\Entity\PaymentType;
 use App\Entity\Provider;
 use App\Entity\ProviderPayment;
 use App\Entity\Service;
@@ -34,7 +35,7 @@ class PaymentRepositoryTest extends KernelTestCase
     /**@var Provider */
     private $provider;
 
-    public function setUp()
+    public function setUp(): void
     {
         self::bootKernel();
         $this->paymentRepository = self::$container->get(PaymentRepository::class);
@@ -75,7 +76,7 @@ class PaymentRepositoryTest extends KernelTestCase
 
     private function createProviderPayment(Payment $payment, string $user)
     {
-        $providerPayment = ProviderPayment::init($payment, $this->provider, $user);
+        $providerPayment = ProviderPayment::init($payment, $this->provider, $user, new PaymentType(PaymentType::DEFAULT));
         return $this->providerPaymentRepository->save($providerPayment);
     }
 

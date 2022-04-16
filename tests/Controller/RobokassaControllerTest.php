@@ -82,7 +82,7 @@ class RobokassaControllerTest extends WebTestCase
         $response = $this->client->getResponse();
         $this->assertEquals(302, $response->getStatusCode());
         $location = $response->headers->get('location');
-        $this->assertStringStartsWith('/tests/widget/3/?token=', $location, 'Redirect url has to include this substring.');
+        $this->assertStringStartsWith('/tests/w/3/?token=', $location, 'Redirect url has to include this substring.');
     }
 
     /**

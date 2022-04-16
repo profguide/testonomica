@@ -8,6 +8,7 @@ namespace App\Tests\Test\Calculator;
 
 
 use App\Entity\Answer;
+use App\Subscriber\Locale;
 use App\Test\AnswersHolder;
 use App\Test\Calculator\AbstractProforientationCalculator;
 use App\Test\CrawlerUtil;
@@ -15,6 +16,7 @@ use App\Test\Proforientation\Profession;
 use App\Test\QuestionsHolder;
 use App\Test\QuestionXmlMapper;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 abstract class AbstractProforientationCalculatorTest extends KernelTestCase
 {
@@ -22,7 +24,7 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
     protected $calculatorName;
 
     /**
-     * Натуральный тест - как его бы видит тестируемый - передача ответов
+     * Натуральный тест - как его видит тестируемый - передача ответов
      * Задействованы все механизмы
      */
     public function testCalculateTypesGroups()
@@ -34,7 +36,7 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
             100 => [1], 101 => [1], //tech-force;
             102 => [1], // tech-force/it-force
             110 => [1], 111 => [1], 112 => [1], //tech-interest
-            120 => [1], 121 => [1], 122 => [1], 123 => [40], //tech-interest
+            120 => [1], 121 => [1], 122 => [1], 123 => [40], //tech-skills
 
             700 => [1], 701 => [1]
         ]);
@@ -43,8 +45,8 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
         $calculator = new $this->calculatorName($answersHolder, $this->questionsHolder(), self::$kernel);
 
         $this->assertEquals([
-            'natural' => [100, 50, 0],
-            'tech' => [100, 100, 100],
+            'natural' => [100.0, 50, 0],
+            'tech' => [100.0, 100.0, 100.0],
             'human' => [0, 0, 0],
             'body' => [0, 0, 0],
             'math' => [0, 0, 0],
@@ -209,7 +211,7 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
         $crawler = CrawlerUtil::load($this->getSrcFilename());
         $questions = [];
         foreach ($crawler->children() as $node) {
-            $question = QuestionXmlMapper::map($node);
+            $question = QuestionXmlMapper::map($node, new Locale(new RequestStack()));
             $questions[$question->getId()] = $question;
         }
         return new QuestionsHolder($questions);

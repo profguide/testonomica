@@ -4,6 +4,7 @@ namespace App\Test;
 
 use App\Entity\Question;
 use App\Entity\QuestionItem;
+use App\Subscriber\Locale;
 use App\Util\XmlUtil;
 use DOMElement;
 use Symfony\Component\DomCrawler\Crawler;
@@ -14,7 +15,7 @@ use Symfony\Component\DomCrawler\Crawler;
  */
 class QuestionXmlMapper
 {
-    public static function map(DOMElement $node, string $locale): Question
+    public static function map(DOMElement $node, Locale $locale): Question
     {
         $crawler = new Crawler($node);
         $question = new Question();
@@ -53,11 +54,11 @@ class QuestionXmlMapper
         if ($nameNode->count() == 0) {
             throw new \DomainException('Question has to have node "name".');
         }
-        $question->setName(XmlUtil::langText($nameNode, $locale));
+        $question->setName(XmlUtil::langText($nameNode, $locale->getValue()));
 
         $textNode = $crawler->filterXPath('descendant-or-self::text');
         if ($textNode->count() > 0) {
-            $question->setText(XmlUtil::langText($textNode, $locale));
+            $question->setText(XmlUtil::langText($textNode, $locale->getValue()));
         }
 
         if (($img = $crawler->filterXPath('descendant-or-self::img'))->count() > 0) {
@@ -65,11 +66,11 @@ class QuestionXmlMapper
         }
 
         if (($right = $crawler->filterXPath('descendant-or-self::right'))->count() > 0) {
-            $question->setCorrect(XmlUtil::langText($right, $locale));
+            $question->setCorrect(XmlUtil::langText($right, $locale->getValue()));
         }
 
         if (($wrong = $crawler->filterXPath('descendant-or-self::wrong'))->count() > 0) {
-            $question->setWrong(XmlUtil::langText($wrong, $locale));
+            $question->setWrong(XmlUtil::langText($wrong, $locale->getValue()));
         }
 
         if (($options = $crawler->filterXPath('descendant-or-self::options'))->count() > 0) {
@@ -78,7 +79,7 @@ class QuestionXmlMapper
                 $question->addItem(
                     QuestionItem::createMinimal(
                         $option->getAttribute('value'),
-                        XmlUtil::langText(new Crawler($option), $locale),
+                        XmlUtil::langText(new Crawler($option), $locale->getValue()),
                         $option->getAttribute('img'),
                         $option->getAttribute('correct') === "true"));
             }
@@ -88,8 +89,8 @@ class QuestionXmlMapper
             foreach ($fields->children() as $field) {
                 $question->addItem(
                     QuestionItem::createMinimal(
-                        XmlUtil::langAttribute($field, 'correct', $locale),
-                        XmlUtil::langAttribute($field, 'placeholder', $locale)));
+                        XmlUtil::langAttribute($field, 'correct', $locale->getValue()),
+                        XmlUtil::langAttribute($field, 'placeholder', $locale->getValue())));
             }
         }
         return $question;

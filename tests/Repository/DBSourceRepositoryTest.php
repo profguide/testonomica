@@ -19,9 +19,9 @@ class DBSourceRepositoryTest extends KernelTestCase
     public function setUp(): void
     {
         self::bootKernel();
-        $testRepository = self::$container->get(TestRepository::class);
+        $testRepository = self::getContainer()->get(TestRepository::class);
         $this->test = $testRepository->findOneBySlug(TestFixture::TEST_2_SLUG);
-        $this->dbSourceRepository = self::$container->get(DBSourceRepository::class);
+        $this->dbSourceRepository = self::getContainer()->get(DBSourceRepository::class);
     }
 
     public function testFindQuestion()

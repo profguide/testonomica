@@ -63,6 +63,13 @@ class ProviderPayment implements TokenableInterface
      */
     private bool $grantedAccess = false;
 
+    /**
+     * Payments might be local or external. external - provider is supposed to provide payment on their own.
+     * @ORM\Column(type="integer", length=1, nullable=false, options={"default": 0})
+     * @var int
+     */
+    private $type = PaymentType::DEFAULT;
+
     public function getId(): int
     {
         return $this->id;
@@ -121,13 +128,19 @@ class ProviderPayment implements TokenableInterface
         $this->grantedAccess = true;
     }
 
-    public static function init(Payment $payment, Provider $provider, string $user): ProviderPayment
+    public function setType(string $type): void
+    {
+        $this->type = $type;
+    }
+
+    public static function init(Payment $payment, Provider $provider, string $user, PaymentType $type): ProviderPayment
     {
         $providerPayment = new self();
         $providerPayment->payment = $payment;
         $providerPayment->provider = $provider;
         $providerPayment->user = $user;
         $providerPayment->token = Uuid::v4();
+        $providerPayment->type = $type->value();
         return $providerPayment;
     }
 }

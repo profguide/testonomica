@@ -11,6 +11,7 @@ use App\DataFixtures\ProviderFixture;
 use App\DataFixtures\ProviderPaymentFixture;
 use App\DataFixtures\ServiceFixture;
 use App\Entity\Access;
+use App\Entity\PaymentType;
 use App\Entity\Provider;
 use App\Entity\ProviderPayment;
 use App\Entity\Service;
@@ -50,7 +51,7 @@ class PublicTokenServiceTest extends KernelTestCase
     {
         $service = $this->loadService();
 
-        $tokenable = $this->service->token($service, $this->provider, 'some_user');
+        $tokenable = $this->service->token($service, $this->provider, 'some_user', new PaymentType(PaymentType::DEFAULT));
         $this->assertEquals(ProviderPayment::class, get_class($tokenable));
     }
 
@@ -62,8 +63,8 @@ class PublicTokenServiceTest extends KernelTestCase
     {
         $service = $this->loadService();
 
-        $tokenable1 = $this->service->token($service, $this->provider, 'some_user');
-        $tokenable2 = $this->service->token($service, $this->provider, 'some_user');
+        $tokenable1 = $this->service->token($service, $this->provider, 'some_user', new PaymentType(PaymentType::DEFAULT));
+        $tokenable2 = $this->service->token($service, $this->provider, 'some_user', new PaymentType(PaymentType::DEFAULT));
         $this->assertEquals($tokenable1, $tokenable2);
     }
 
@@ -75,10 +76,10 @@ class PublicTokenServiceTest extends KernelTestCase
     {
         $service = $this->loadService();
 
-        $tokenable1 = $this->service->token($service, $this->provider, ProviderPaymentFixture::PAID_USER);
+        $tokenable1 = $this->service->token($service, $this->provider, ProviderPaymentFixture::PAID_USER, new PaymentType(PaymentType::DEFAULT));
         $this->assertEquals(Access::class, get_class($tokenable1));
 
-        $tokenable2 = $this->service->token($service, $this->provider, ProviderPaymentFixture::PAID_USER);
+        $tokenable2 = $this->service->token($service, $this->provider, ProviderPaymentFixture::PAID_USER, new PaymentType(PaymentType::DEFAULT));
         $this->assertEquals(Access::class, get_class($tokenable2));
 
         $this->assertFalse($tokenable1 === $tokenable2);

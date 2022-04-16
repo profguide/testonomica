@@ -114,7 +114,7 @@ class Question
      * Диапазон сгенерированных ответов.
      * Может быть сспользовано в вопросах типа gradient.
      */
-    private $range;
+    private int $gradient = 0;
 
     /**
      * @ORM\Column(type="integer", options={"default": 0})
@@ -314,14 +314,14 @@ class Question
         $this->count = $count;
     }
 
-    public function getRange()
+    public function getGradient()
     {
-        return $this->range;
+        return $this->gradient;
     }
 
-    public function setRange($range): void
+    public function setGradient($gradient): void
     {
-        $this->range = $range;
+        $this->gradient = $gradient;
     }
 
     public function getTimer(): int
@@ -469,6 +469,7 @@ class Question
         /**@var QuestionItem $item */
         foreach ($this->getItems() as $item) {
             if ($this->type == self::TYPE_TEXT) {
+                // todo что происходит? что такое getValue в текстовом поле?
                 $values[] = $item->getValue();
             } elseif ($this->type == self::TYPE_OPTION || $this->type == self::TYPE_CHECKBOX) {
                 if ($item->isCorrect()) {
