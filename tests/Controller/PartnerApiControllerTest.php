@@ -7,15 +7,21 @@
 namespace App\Tests\Controller;
 
 
+use App\Controller\PartnerApiController;
 use App\DataFixtures\ProviderFixture;
 use App\DataFixtures\ProviderPaymentFixture;
 use App\DataFixtures\ServiceFixture;
+use App\Entity\PaymentType;
+use App\Entity\Provider;
 use App\Repository\AccessRepository;
 use App\Repository\ProviderPaymentRepository;
 use App\Repository\ProviderRepository;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
+/**
+ * @see PartnerApiController
+ */
 class PartnerApiControllerTest extends WebTestCase
 {
     private KernelBrowser $client;
@@ -39,13 +45,14 @@ class PartnerApiControllerTest extends WebTestCase
     }
 
     /**
-     * Получение токена
-     * Неоплаченный юзер
+     * Получение платёжного токена
+     * Условие:
+     * - для указанного юзера нет оплаченных заказов
      * Ожидание:
      * - создан токен оплаты
      * - при повторном обращении токен остается тем же
      */
-    public function testGetTokenOnNotPayed()
+    public function testGetPaidTokenForUnpaidUser()
     {
         $provider = $this->providerRepository->findBySlug(ProviderFixture::TESTOMETRIKA);
         $requestParams = [
@@ -53,18 +60,17 @@ class PartnerApiControllerTest extends WebTestCase
             'user' => ProviderPaymentFixture::PENDING_USER,
             'service' => ServiceFixture::SERVICE_1,
         ];
-        // делаем два запроса, чтобы получить два токена
-        $token1 = $this->requestToken($requestParams);
-        $token2 = $this->requestToken($requestParams);
-        // токены должны быть одинаковыми
-        $this->assertEquals($token1, $token2);
-        // токен должен быть персистен и быть типа ProviderPayment
-        $this->assertNotNull($this->providerPaymentRepository->findByToken($token1));
+        $token = $this->requestToken($requestParams);
+        $this->assertTokenIsPayment($token);
+
+        $tokenRepeat = $this->requestToken($requestParams);
+        $this->assertEquals($token, $tokenRepeat, 'Tokens should be equal every time.');
     }
 
     /**
-     * Получение токена
-     * Оплаченный юзер
+     * Получение пропускного токена
+     * Условие
+     * - для указанного юзера есть оплаченный заказ
      * Ожидание:
      * - создан токен доступа
      * - при повторном обращении токены разные
@@ -77,38 +83,45 @@ class PartnerApiControllerTest extends WebTestCase
             'user' => ProviderPaymentFixture::PAID_USER,
             'service' => ServiceFixture::SERVICE_1,
         ];
-        // делаем два запроса, чтобы получить два токена
-        $token1 = $this->requestToken($requestParams);
-        $token2 = $this->requestToken($requestParams);
-        // токены должны быть разными
-        $this->assertFalse($token1 == $token2);
-        // токены должены быть персистентны и быть типа ProviderAccess
-        $this->assertNotNull($this->accessRepository->findOneByToken($token1));
-        $this->assertNotNull($this->accessRepository->findOneByToken($token2));
+
+        $token = $this->requestToken($requestParams);
+        $this->assertTokenIsAccess($token);
+
+        $tokenRepeat = $this->requestToken($requestParams);
+        $this->assertTokenIsAccess($tokenRepeat);
+
+        $this->assertNotEquals($token, $tokenRepeat, 'Tokens should be different every time.');
     }
 
     /**
-     * Получение токена
-     * Бесплатный доступ
-     * Ожидание: создан токен доступа. При повторном обращении токены разные
+     * Получение пропускного токена без реальной оплаты
+     * Условие:
+     * - указан параметр для создания пропусков
+     * Ожидание:
+     * - создан доверительный платёж
+     * - платёж числится оплаченным
+     * - создан токен доступа
+     * - возвращён токен доступа
      */
     public function testGetTokenFree()
     {
-        $provider = $this->providerRepository->findBySlug(ProviderFixture::PROFGUIDE);
+        $provider = $this->providerRepository->findBySlug(ProviderFixture::TESTOMETRIKA);
         $requestParams = [
             'token' => $provider->getToken(),
             'user' => 'new-user',
             'service' => ServiceFixture::SERVICE_1,
-            'payment_type' => 'external'
+            'payment_type' => PartnerApiController::PAYMENT_TYPE_EXTERNAL // <<<
         ];
-        // делаем два запроса, чтобы получить два токена
-        $token1 = $this->requestToken($requestParams);
-        $token2 = $this->requestToken($requestParams);
-        // токены должны быть разными
-        $this->assertTrue($token1 !== $token2, 'Tokens must be different every time');
-        // токены должены быть типа ProviderAccess
-        $this->assertNotNull($this->accessRepository->findOneByToken($token1));
-        $this->assertNotNull($this->accessRepository->findOneByToken($token2));
+
+        $token = $this->requestToken($requestParams);
+        $this->assertTokenIsAccess($token);
+
+        $this->assertTrustedPaymentCreated($provider, 'new-user');
+
+        $tokenRepeat = $this->requestToken($requestParams);
+        $this->assertTokenIsAccess($tokenRepeat);
+
+        $this->assertNotEquals($token, $tokenRepeat, 'Tokens should be different every time');
     }
 
     // Helpers bellow
@@ -123,5 +136,22 @@ class PartnerApiControllerTest extends WebTestCase
     private function parseToken(string $string): string
     {
         return json_decode($string, true)['token'];
+    }
+
+    private function assertTokenIsPayment(string $token)
+    {
+        $this->assertNotNull($this->providerPaymentRepository->findByToken($token), 'Payment has to be persisted.');
+    }
+
+    private function assertTokenIsAccess(string $token)
+    {
+        $this->assertNotNull($this->accessRepository->findOneByToken($token), 'Access has to ve persisted.');
+    }
+
+    private function assertTrustedPaymentCreated(Provider $provider, string $userId)
+    {
+        $payment = $this->providerPaymentRepository->findOneByProviderAndUser($provider, $userId);
+        $this->assertNotNull($payment);
+        $this->assertEquals(new PaymentType(PaymentType::EXTERNAL), $payment->getType(), 'Payment should be marked as trusted.');
     }
 }

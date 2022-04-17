@@ -35,7 +35,7 @@ class HostSubscriber implements EventSubscriberInterface
 //                return;
 //            }
             $host = parse_url($event->getRequest()->server->get('HTTP_REFERER'), PHP_URL_HOST);
-            $this->logger->warning("HostSubscriber", ['host' => $host]);
+            $this->logger->info("HostSubscriber", ['host' => $host]);
             if (!in_array($host, [
                 'profguide.io',
                 'www.profguide.io',

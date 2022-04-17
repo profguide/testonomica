@@ -37,6 +37,8 @@ class PartnerApiController extends AbstractController
 
     const PAYMENT_TYPE_EXTERNAL = 'external';
 
+    const PAYMENT_TYPE_DEFAULT = self::PAYMENT_TYPE_INTERNAL;
+
     public function __construct(
         PublicTokenService $providerPaymentService,
         ProviderRepository $providerRepository,
@@ -111,7 +113,7 @@ class PartnerApiController extends AbstractController
 
     private static function paymentType(Request $request): PaymentType
     {
-        $val = $request->get('payment_type', self::PAYMENT_TYPE_INTERNAL);
+        $val = $request->get('payment_type', self::PAYMENT_TYPE_DEFAULT);
         if ($val === self::PAYMENT_TYPE_INTERNAL) {
             return new PaymentType(PaymentType::INTERNAL);
         } elseif ($val === self::PAYMENT_TYPE_EXTERNAL) {

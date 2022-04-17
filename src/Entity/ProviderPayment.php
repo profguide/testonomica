@@ -133,6 +133,11 @@ class ProviderPayment implements TokenableInterface
         $this->type = $type;
     }
 
+    public function getType(): PaymentType
+    {
+        return new PaymentType($this->type);
+    }
+
     public static function init(Payment $payment, Provider $provider, string $user, PaymentType $type): ProviderPayment
     {
         $providerPayment = new self();

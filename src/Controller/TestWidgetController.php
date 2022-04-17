@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use App\Entity\Test;
-use App\Repository\TestRepository;
 use App\Service\PublicTokenService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,37 +11,28 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Тест в виджете
- *
- * Class TestWidgetController
- * @package App\Controller
+ * Виджет теста для Iframe.
+ * Представляет собой HTML страницу с загруженными стилями теста и rect приложением.
+ * Нет ни шапки, ни подвала. 100% ширина и высота отданы под тест.
+ * React приложение является полноценным, содержит как сам тест, так и приём платежа.
  */
 class TestWidgetController extends AbstractController implements HostAuthenticatedController
 {
-    private TestRepository $tests;
-
     private PublicTokenService $publicTokenService;
 
-    public function __construct(TestRepository $tests, PublicTokenService $publicTokenService)
+    public function __construct(PublicTokenService $publicTokenService)
     {
-        $this->tests = $tests;
         $this->publicTokenService = $publicTokenService;
     }
 
     /**
      * @Route("/tests/w/{id}/", name="test.widget")
-     * Страница должна быть загружена на сайте партнёра в Iframe.
-     * Данная страница предоставляет тест полностью - оплата, приветствие, прогресс, результат.
-     * Нет ни шапки, ни подвала. 100% ширина и высота отданы под тест.
-     *
      * @param Request $request
      * @param int $id
      * @return Response
      */
     public function widget(Request $request, int $id): Response
     {
-//        $test = $this->getTest($id);
-
         // показ результата по окончании теста
         $displayReport = self::boolParam($request, 'displayReport', true);
 
@@ -86,15 +75,5 @@ class TestWidgetController extends AbstractController implements HostAuthenticat
             return $default;
         }
         return $request->get($name) == 1;
-    }
-
-//  todo loadTestByKey like testometrika does
-    private function getTest(int $id): Test
-    {
-        $test = $this->tests->findOneById($id);
-        if (!$test) {
-            throw self::createNotFoundException();
-        }
-        return $test;
     }
 }
