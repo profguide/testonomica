@@ -31,17 +31,15 @@ class HostSubscriber implements EventSubscriberInterface
         }
 
         if ($controller instanceof HostAuthenticatedController) {
-//            if ($event->getRequest()->server->get('SERVER_NAME') === '127.0.0.1:8000') {
-//                return;
-//            }
             $host = parse_url($event->getRequest()->server->get('HTTP_REFERER'), PHP_URL_HOST);
-            $this->logger->info("HostSubscriber", ['host' => $host]);
+//            $this->logger->info("HostSubscriber", ['host' => $host]);
             if (!in_array($host, [
                 'profguide.io',
                 'www.profguide.io',
                 'pg',
                 'chooseyourcareer.ru',
                 'career.local',
+                'studika.ru'
             ])) {
                 throw new AccessDeniedHttpException("Unknown host $host.");
             }
