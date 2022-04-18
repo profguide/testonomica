@@ -59,6 +59,10 @@
 Xdebug 3 в консоли работает только с портом 9003. Поэтому в PhpStorm нужно поменять порядок портов с 9000,9003 на
 9003,9000
 
+# Upgrading a Minor Version
+
+    https://symfony.com/doc/current/setup/upgrade_minor.html#upgrading-other-packages
+
 # Интеграция (текст дополняется при каждом изменении)
 
 Интеграция возможна на платной и бесплатной основе (бесплатные тесты).
