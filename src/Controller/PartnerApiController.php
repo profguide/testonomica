@@ -12,7 +12,6 @@ use App\Entity\PaymentType;
 use App\Repository\ProviderRepository;
 use App\Repository\ServiceRepository;
 use App\Service\PublicTokenService;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\PreconditionFailedHttpException;
@@ -22,10 +21,10 @@ use Symfony\Component\Routing\Annotation\Route;
  * Генерирует токен для доступа к услуге или токен на оплату услуги
  * Запрос должен идти скрытно.
  *
- * @Route("/partner/api", name="partner.api.")
+ * @Route("/partner/api", name="partner.api.", format="json")
  * https://testonomica.com/partner/api/token/
  */
-class PartnerApiController extends AbstractController
+class PartnerApiController extends AbstractRestController
 {
     private PublicTokenService $publicTokenService;
 
