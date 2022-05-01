@@ -13,6 +13,11 @@
         <div class="tnc-welcome__description">{{ test.description(app.request.locale)|raw }}</div>
         <div class="tnc-welcome__loading stage"></div>
     </section>
+    <style>
+        #testonomica_app {
+            padding: 0;
+        }
+    </style>
     <div id="testonomica_app"
          data-test="{{ test.id }}"
 {#         data-token="SOME_PUBLIC_TOKEN"#}
