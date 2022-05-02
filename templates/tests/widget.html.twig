@@ -30,10 +30,11 @@
         testonomica.addEventListener('resize', function (e) {
             let rect = e[0].contentRect;
             let height = rect.height;
+            // const height = e.height;
             window.parent.postMessage({name: 'frameHeight', frameHeight: height}, '*');
         });
     </script>
-{#    <script src="https://widget.cloudpayments.ru/bundles/cloudpayments/"></script>#}
+    {# <script src="https://widget.cloudpayments.ru/bundles/cloudpayments/"></script> #}
 {% endblock %}
 </body>
 </html>
