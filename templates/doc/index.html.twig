@@ -7,15 +7,19 @@
         <h1>Интеграция</h1>
 
         <p>На данной странице описаны все доступные варианты интеграции.</p>
-        <p>На Тестономике представлены как бесплатные, так и платные тесты. Это определяет различие в способе установки тестов на ваш сайт.</p>
+        <p>На Тестономике представлены как бесплатные, так и платные тесты. Это определяет различие в способе установки
+            тестов на ваш сайт.</p>
 
         <h2>Интеграция бесплатного теста</h2>
         <code>
-            <span>&lt;script src="https://cdn.jsdelivr.net/gh/davidtema/testonomica_widget/index.min.js"&gt;&lt;/script&gt;<br/>&lt;</span><span>div </span><span>id</span><span>="testonomica_app" </span><span>data-test</span><span>="{TEST_ID}"</span><span>&gt;&lt;/</span><span>div</span><span>&gt;</span>
+            <span>&lt;link href="https://cdn.jsdelivr.net/gh/davidtema/testonomica_widget/build/main.css" rel="stylesheet"&gt;<br/></span>
+            <span>&lt;</span><span>div </span><span>id</span><span>="testonomica_app" </span><span>data-test</span><span>="{TEST_ID}"</span><span>&gt;&lt;/</span><span>div</span><span>&gt;</span><br/>
+            <span>&lt;script src="https://cdn.jsdelivr.net/gh/davidtema/testonomica_widget/build/bundle.js"&gt;&lt;/script&gt;</span>
         </code>
         <br><br/>
         <h4>Определённая версия виджета</h4>
-        <p>По умолчанию будет загружена последняя версия виджета. Однако если требуется, то вы можете указать определённую версию таким образом: <code>.../testonomica_widget@1.1.5/index.min.js</code></p>
+        <p>По умолчанию будет загружена последняя версия виджета. Однако если требуется, то вы можете указать
+            определённую версию таким образом: <code>.../testonomica_widget@2.0.2/build/bundle.js</code></p>
 
         <hr>
         <br>
@@ -27,7 +31,8 @@
         </ul>
 
 
-        <p>Оба подхода предполагают изначально <a href="#gprt">#получение вами {SECRET_TOKEN}, {TEST_ID} и {SERVICE_NAME}</a> и последующее <a href="#gput">#получение {PUBLIC_TOKEN}</a> с этими параметрами.</p>
+        <p>Оба подхода предполагают изначально <a href="#gprt">#получение вами {SECRET_TOKEN}, {TEST_ID} и
+                {SERVICE_NAME}</a> и последующее <a href="#gput">#получение {PUBLIC_TOKEN}</a> с этими параметрами.</p>
 
         <h3 id="gprt" class="mt-5">Получение {SECRET_TOKEN}, {TEST_ID} и {SERVICE_NAME}</h3>
         <p>Отправьте запрос нам на почту <a href="mailto:info@profguide.ru">info@profguide.ru</a>: укажите ваше имя,
@@ -39,7 +44,8 @@
         </div>
 
         <h3 id="gput" class="mt-5">Получение {PUBLIC_TOKEN}</h3>
-        <p>{PUBLIC_TOKEN} &mdash; одноразовый публичный токен, который получается в скрытом запросе по URL (backend, curl). Конфигурацию URL должны знать только вы
+        <p>{PUBLIC_TOKEN} &mdash; одноразовый публичный токен, который получается в скрытом запросе по URL (backend,
+            curl). Конфигурацию URL должны знать только вы
             и она должна остаться в <b>тайне от третьих лиц</b>.</p>
         <code>
             https://testonomica.com/partner/api/token/?token={SECRETE_TOKEN}&user={USER_ID}&service={SERVICE_NAME}
@@ -54,16 +60,20 @@
 
         <h4 class="mt-4">Вариант интеграции с приёмом платежа на вашей стороне:</h4>
         <p>Описанный выше пример получения токена предполагает последующий приём платежа Тестономикой.
-            Для приёма платежей на вашей стороне предусмотрен параметр <code>payment_type</code> со значением <code>external</code>:</p>
+            Для приёма платежей на вашей стороне предусмотрен параметр <code>payment_type</code> со значением <code>external</code>:
+        </p>
         <code>
             https://testonomica.com/partner/api/token/?token={SECRETE_TOKEN}&user={USER_ID}&service={SERVICE_NAME}&payment_type=external
         </code>
         <br><br>
-        <p>Напишите нам на <a href="mailto:info@profguide.ru">info@profguide.ru</a>, чтобы получить специальное разрешение для приёма платежей на вашем сайте.</p>
+        <p>Напишите нам на <a href="mailto:info@profguide.ru">info@profguide.ru</a>, чтобы получить специальное
+            разрешение для приёма платежей на вашем сайте.</p>
 
         <h3 id="igt" class="mt-5">Интеграция с переходом на Тестономику</h3>
-        <p><a href="https://www.profguide.io/test/testonomica-direct/">Демо</a>. Данный способ отображает тест не на вашем сайте, а на Тестономике.</p>
-        <p>Всё что нужно сделать - это направить пользователя по следующему URL с помощью редиректа или по кнопке на сайте:</p>
+        <p><a href="https://www.profguide.io/test/testonomica-direct/">Демо</a>. Данный способ отображает тест не на
+            вашем сайте, а на Тестономике.</p>
+        <p>Всё что нужно сделать - это направить пользователя по следующему URL с помощью редиректа или по кнопке на
+            сайте:</p>
         <code>
             https://testonomica.com/partner/provide/?token={PUBLIC_TOKEN}
         </code>
@@ -72,18 +82,24 @@
         <hr>
 
         <h3 id="iw" class="mt-3">Интеграция через виджет на сайте</h3>
-        <p><a href="https://www.profguide.io/test/testonomica-widget/">Демо</a>. Данный способ позволяет загрузить тест на вашем сайте в Iframe.</p>
-        <p>Необходимо установить HTML-код в месте предполагаемого отображения теста и подставить полученные ранее параметры.</p>
+        <p><a href="https://www.profguide.io/test/testonomica-widget/">Демо</a>. Данный способ позволяет загрузить тест
+            на вашем сайте в Iframe.</p>
+        <p>Необходимо установить HTML-код в месте предполагаемого отображения теста и подставить полученные ранее
+            параметры.</p>
         <code>
-            <span>&lt;script src="https://cdn.jsdelivr.net/gh/davidtema/testonomica_widget/index.min.js"&gt;&lt;/script&gt;<br/>&lt;</span><span>div </span><span>id</span><span>="testonomica_app" </span><span>data-test</span><span>="{TEST_ID}" </span><span>data-token</span><span>="{PUBLIC_TOKEN}"</span><span>&gt;&lt;/</span><span>div</span><span>&gt;</span>
+            <span>&lt;link href="https://cdn.jsdelivr.net/gh/davidtema/testonomica_widget/build/main.css" rel="stylesheet"&gt;<br/></span>
+            <span>&lt;</span><span>div </span><span>id</span><span>="testonomica_app" </span><span>data-test</span><span>="{TEST_ID}" </span><span>data-token</span><span>="{PUBLIC_TOKEN}"</span><span>&gt;&lt;/</span><span>div</span><span>&gt;</span><br/>
+            <span>&lt;script src="https://cdn.jsdelivr.net/gh/davidtema/testonomica_widget/build/bundle.js"&gt;&lt;/script&gt;</span>
         </code>
         <br/>
 
         <h4 class="mt-4">Конфигурация виджета</h4>
-        <p>Все доступные варианты конфигурации вижета описаны на его <a href="https://github.com/davidtema/testonomica_widget">официальной странице в GutHub</a>.</p>
+        <p>Все доступные варианты конфигурации вижета описаны на его <a
+                    href="https://github.com/davidtema/testonomica_widget">официальной странице в GutHub</a>.</p>
 
         <hr>
-        Напишите нам на <a href="mailto:info@profguide.ru">info@profguide.ru</a> если у вас остались вопросы или требуется помощь.
+        Напишите нам на <a href="mailto:info@profguide.ru">info@profguide.ru</a> если у вас остались вопросы или
+        требуется помощь.
 
     </div>
 {% endblock %}
