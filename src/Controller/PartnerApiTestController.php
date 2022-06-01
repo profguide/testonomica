@@ -9,14 +9,13 @@ use App\Entity\Test;
 use App\Repository\ResultRepository;
 use App\Repository\TestRepository;
 use App\Service\CalculatorService;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("/partner/api/test", name="partner.api.test.")
- *
- * Доступ только для ПрофГида.
  */
 class PartnerApiTestController extends AbstractRestController
 {
@@ -27,6 +26,21 @@ class PartnerApiTestController extends AbstractRestController
     {
         $this->tests = $tests;
         $this->results = $results;
+    }
+
+    /**
+     * @Route("/result/{key}/", name="result")
+     *
+     * todo Студентика имеет доступ без оплаты. Надо срочно продумать.
+     *
+     * @param string $key
+     * @param CalculatorService $calculatorService
+     * @return JsonResponse
+     */
+    public function result(string $key, CalculatorService $calculatorService): Response
+    {
+        $result = $this->results->findByUuid($key);
+        return $this->json($calculatorService->calculate($result));
     }
 
     /**
