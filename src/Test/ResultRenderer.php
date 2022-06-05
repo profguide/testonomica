@@ -44,7 +44,9 @@ class ResultRenderer
     private function json(Test $test, array $data): JsonResponse
     {
         if ($test->getSlug() === 'proforientation-v2') {
-            return new JsonResponse($data);
+            $response = new JsonResponse($data);
+            $response->setEncodingOptions(JSON_UNESCAPED_UNICODE);
+            return $response;
         }
         throw new \DomainException('The test doest not support JSON report.');
     }

@@ -68,22 +68,23 @@ class RobokassaControllerTest extends WebTestCase
         $this->assertCookie($response, 'access');
     }
 
-    public function test_success_redirect_to_widget()
-    {
-        // executed payment
-        $payment = Payment::init($this->service1(), 99);
-        $payment->addStatusExecuted();
-        // set redirect route
-        $payment->setBackRoute(new PaymentBackRoute(PaymentBackRoute::TEST_WIDGET));
-        $this->paymentService->save($payment);
-
-        $this->client->request('POST', '/robokassa/success/', ['InvId' => $payment->getId()]);
-
-        $response = $this->client->getResponse();
-        $this->assertEquals(302, $response->getStatusCode());
-        $location = $response->headers->get('location');
-        $this->assertStringStartsWith('/tests/w/3/?token=', $location, 'Redirect url has to include this substring.');
-    }
+//    раньше был виджет, теперь его нет
+//    public function test_success_redirect_to_widget()
+//    {
+//        // executed payment
+//        $payment = Payment::init($this->service1(), 99);
+//        $payment->addStatusExecuted();
+//        // set redirect route
+//        $payment->setBackRoute(new PaymentBackRoute(PaymentBackRoute::TEST_WIDGET));
+//        $this->paymentService->save($payment);
+//
+//        $this->client->request('POST', '/robokassa/success/', ['InvId' => $payment->getId()]);
+//
+//        $response = $this->client->getResponse();
+//        $this->assertEquals(302, $response->getStatusCode());
+//        $location = $response->headers->get('location');
+//        $this->assertStringStartsWith('/tests/w/3/?token=', $location, 'Redirect url has to include this substring.');
+//    }
 
     /**
      *
