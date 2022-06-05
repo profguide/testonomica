@@ -4,6 +4,7 @@
     "require": {
         "php": ">=7.4.1",
         "ext-ctype": "*",
+        "ext-dom": "*",
         "ext-iconv": "*",
         "composer/package-versions-deprecated": "^1.11",
         "doctrine/annotations": "^1.0",
@@ -12,6 +13,7 @@
         "doctrine/orm": "^2.8",
         "easycorp/easyadmin-bundle": "^3.1",
         "knplabs/knp-paginator-bundle": "^5.4",
+        "knplabs/knp-snappy-bundle": "^1.9",
         "nelmio/cors-bundle": "^2.1",
         "phpdocumentor/reflection-docblock": "^5.2",
         "sensio/framework-extra-bundle": "^6.2",
@@ -45,8 +47,7 @@
         "symfony/yaml": "5.4.*",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/twig": "^2.12|^3.0",
-        "vich/uploader-bundle": "^1.17",
-      "ext-dom": "*"
+        "vich/uploader-bundle": "^1.17"
     },
     "require-dev": {
         "dama/doctrine-test-bundle": "^7.0",

@@ -7,7 +7,7 @@ namespace App\Payment;
 class PaymentBackRoute
 {
     const TEST_VIEW = 'view';
-    const TEST_WIDGET = 'widget';
+    const TEST_WIDGET = 'widget'; // todo раньше был виджет, теперь его нет
 
     private ?string $value = null;
 

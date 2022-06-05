@@ -4,11 +4,10 @@ namespace App\Test;
 
 use App\Entity\Test;
 use App\Service\AnalysisRenderer;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
-use Twig\Error\LoaderError;
-use Twig\Error\RuntimeError;
-use Twig\Error\SyntaxError;
 
 class ResultRenderer
 {
@@ -26,12 +25,39 @@ class ResultRenderer
      * Рендерит HTML результата
      * @param Test $test
      * @param array $data
+     * @param ViewFormat $format
      * @return Response
-     * @throws LoaderError
-     * @throws RuntimeError
-     * @throws SyntaxError
      */
-    public function render(Test $test, array $data): Response
+    public function render(Test $test, array $data, ViewFormat $format): Response
+    {
+        if ($format->value() === ViewFormat::HTML) {
+            return $this->html($test, $data);
+        } elseif ($format->value() === ViewFormat::JSON) {
+            return $this->json($test, $data);
+        } elseif ($format->value() === ViewFormat::PDF) {
+            return $this->pdf($test, $data);
+        }
+
+        throw new \RuntimeException("Unsupported render format: {$format->value()}.");
+    }
+
+    private function json(Test $test, array $data): JsonResponse
+    {
+        if ($test->getSlug() === 'proforientation-v2') {
+            return new JsonResponse($data);
+        }
+        throw new \DomainException('The test doest not support JSON report.');
+    }
+
+    private function pdf(Test $test, array $data): JsonResponse
+    {
+        if ($test->getSlug() === 'proforientation-v2') {
+            return new BinaryFileResponse();
+        }
+        throw new \DomainException('The test doest not support PDF report.');
+    }
+
+    private function html(Test $test, array $data): Response
     {
         // templated from the db
         $resultBlocksOutput = $this->analysisRenderer->render($test, $data);

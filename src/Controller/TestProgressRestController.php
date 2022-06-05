@@ -12,9 +12,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("/tests/api/v1", format="json")
- * todo удалить остальные контроллеры и инфраструктуру связанную с хранением прогресса на сервере.
- * todo кешировать вопросы с помощью Redis
- * Можно пойти еще дальше: тест полностью загружается при старте: никакого next и prev на сервере нет.
  */
 class TestProgressRestController extends AbstractTestRestController implements AccessTokenAuthenticatedController
 {

@@ -9,6 +9,8 @@ use App\Entity\Test;
 use App\Repository\ResultRepository;
 use App\Repository\TestRepository;
 use App\Service\CalculatorService;
+use App\Test\ResultRenderer;
+use App\Test\ViewFormat;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,12 +22,16 @@ use Symfony\Component\Routing\Annotation\Route;
 class PartnerApiTestController extends AbstractRestController
 {
     private TestRepository $tests;
+
     private ResultRepository $results;
 
-    public function __construct(TestRepository $tests, ResultRepository $results)
+    private ResultRenderer $renderer;
+
+    public function __construct(TestRepository $tests, ResultRepository $results, ResultRenderer $renderer)
     {
         $this->tests = $tests;
         $this->results = $results;
+        $this->renderer = $renderer;
     }
 
     /**
@@ -34,13 +40,17 @@ class PartnerApiTestController extends AbstractRestController
      * todo Студентика имеет доступ без оплаты. Надо срочно продумать.
      *
      * @param string $key
+     * @param Request $request
      * @param CalculatorService $calculatorService
      * @return JsonResponse
      */
-    public function result(string $key, CalculatorService $calculatorService): Response
+    public function result(string $key, Request $request, CalculatorService $calculatorService): Response
     {
+        $format = new ViewFormat($request->get('format', ViewFormat::JSON));
+
         $result = $this->results->findByUuid($key);
-        return $this->json($calculatorService->calculate($result));
+        $data = $calculatorService->calculate($result);
+        return $this->renderer->render($result->getTest(), $data, $format);
     }
 
     /**

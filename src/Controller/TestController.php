@@ -10,15 +10,11 @@ use App\Service\ResultService;
 use App\Service\TestService;
 use App\Test\ResultRenderer;
 use App\Test\TestStatus;
+use App\Test\ViewFormat;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Serializer\SerializerInterface;
-use Twig\Error\LoaderError;
-use Twig\Error\RuntimeError;
-use Twig\Error\SyntaxError;
 
 /**
  * @Route("/tests", name="tests.")
@@ -90,11 +86,7 @@ class TestController extends AbstractController
     /**
      * @Route("/result/{uuid}/", name="result")
      * @param string $uuid
-     * @param Request $request
      * @return Response
-     * @throws LoaderError
-     * @throws RuntimeError
-     * @throws SyntaxError
      */
     public function result(string $uuid): Response
     {
@@ -106,30 +98,13 @@ class TestController extends AbstractController
             'status' => TestStatus::finished()
         ], $this->calculatorService->calculate($result));
 
+        $format = new ViewFormat(ViewFormat::HTML);
         return $this->render('tests/result.html.twig', [
             'test' => $test,
             'status' => TestStatus::finished(),
             'uuid' => $result->getUuid(),
-            'result' => $this->resultRenderer->render($test, $data)->getContent()
+            'result' => $this->resultRenderer->render($test, $data, $format)->getContent()
         ]);
-    }
-
-    /**
-     * Результат как набор подсчитанных значений в JSON.
-     * todo move to TestApiStatelessResultController
-     *
-     * @Route("/result-raw/{uuid}/", name="result_raw")
-     * @param string $uuid
-     * @param SerializerInterface $serializer
-     * @return Response
-     */
-    public function resultRaw(string $uuid, SerializerInterface $serializer)
-    {
-        $result = $this->getResult($uuid);
-        $response = new JsonResponse();
-        $response->setJson($serializer->serialize($this->calculatorService->calculate($result), 'json'));
-        $response->setEncodingOptions(JSON_UNESCAPED_UNICODE);
-        return $response;
     }
 
     private function getTest(string $slug): Test

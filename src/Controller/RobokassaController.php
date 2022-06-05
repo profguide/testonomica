@@ -110,6 +110,7 @@ class RobokassaController extends AbstractController
 
         $backRoute = $payment->getBackRoute()->getValue();
 
+        // todo раньше был виджет, теперь его нет
         if ($backRoute === PaymentBackRoute::TEST_WIDGET) {
             return new RedirectResponse($this->generateUrl('test.widget', [
                 'id' => $firstTest->getId(),

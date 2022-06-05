@@ -11,13 +11,11 @@ use App\Service\CalculatorService;
 use App\Service\ResultService;
 use App\Service\TestSourceService;
 use App\Test\ResultRenderer;
+use App\Test\ViewFormat;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
-use Twig\Error\LoaderError;
-use Twig\Error\RuntimeError;
-use Twig\Error\SyntaxError;
 
 /**
  * @Route("/tests/api/v1")
@@ -48,6 +46,10 @@ class TestResultRestController extends AbstractRestController implements AccessT
         $this->resultRenderer = $resultRenderer;
     }
 
+    //
+    // actions
+    //
+
     /**
      * @Route("/save/{testId<\d+>}/")
      * @param int $testId
@@ -72,9 +74,6 @@ class TestResultRestController extends AbstractRestController implements AccessT
      * @Route("/result/{testId<\d+>}/")
      * @param Request $request
      * @return Response
-     * @throws LoaderError
-     * @throws RuntimeError
-     * @throws SyntaxError
      */
     public function result(Request $request): Response
     {
@@ -82,8 +81,14 @@ class TestResultRestController extends AbstractRestController implements AccessT
         $result = $this->resultService->findByUuid($key);
         $data = $this->calculatorService->calculate($result);
         $test = $result->getTest();
-        return $this->resultRenderer->render($test, $data);
+
+        $format = new ViewFormat(ViewFormat::HTML);
+        return $this->resultRenderer->render($test, $data, $format);
     }
+
+    //
+    // private methods
+    //
 
     private function getRequestParameter(Request $request, string $name, bool $isRequired = true)
     {
