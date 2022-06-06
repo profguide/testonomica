@@ -58,6 +58,12 @@
 
     yarn link testonomica_api
 
+# Окружение
+    
+Чтобы сгенерировать .env.local.php на продакте:
+
+    symfony composer dump-env prod
+
 # PHPSTORM
 
 Xdebug 3 в консоли работает только с портом 9003. Поэтому в PhpStorm нужно установить порядок портов 9003,9000

@@ -41,14 +41,15 @@ when@prod:
   monolog:
     handlers:
       main:
-        type: fingers_crossed
+        type: fingers_crossed # this is a handler, which allows to filter messages e.g. excluded_http_codes and pass further
         action_level: error
         handler: nested
         excluded_http_codes: [ 405 ]
         buffer_size: 50 # How many messages should be saved? Prevent memory leaks
       nested:
         type: stream
-        path: php://stderr
+        path: "%kernel.logs_dir%/%kernel.environment%.log"
+        #path: php://stderr
         level: debug
         formatter: monolog.formatter.json
       console:
