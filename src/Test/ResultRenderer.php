@@ -66,7 +66,7 @@ class ResultRenderer
         $pdf = $this->pdf->getOutputFromHtml($this->html($test, $data), [
             'encoding' => 'utf-8',
         ]);
-        $name = 'report_' . date('d.m.Y_h.i') . 'pdf';
+        $name = 'report_' . date('d.m.Y_h.i') . '.pdf';
         return new PdfResponse($pdf, $name);
     }
 

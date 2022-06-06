@@ -8,3 +8,6 @@ if [[ "cache" == $1 ]]; then
   sudo chown -R www-data:www-data var
   echo "done"
 fi
+if [[ "env" == $1 ]]; then
+  symfony composer dump-env prod
+fi
