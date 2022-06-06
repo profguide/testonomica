@@ -52,8 +52,16 @@ class ResultRenderer
         return $response;
     }
 
+    /**
+     * Renders PDF based of HTML
+     *
+     * @param Test $test
+     * @param array $data
+     * @return Response
+     */
     private function pdf(Test $test, array $data): Response
     {
+        // other useful params:
         // https://stackoverflow.com/questions/30303218/bad-characters-when-generating-pdf-file-with-knp-snappy
         $pdf = $this->pdf->getOutputFromHtml($this->html($test, $data), [
             'encoding' => 'utf-8',
