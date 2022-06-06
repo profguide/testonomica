@@ -31,13 +31,14 @@ class PartnerProvideControllerTest extends WebTestCase
     /**@var ProviderRepository */
     private $providerRepository;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->client = static::createClient();
+
         /**@var ProviderRepository $providerRepository */
-        $this->providerRepository = self::$container->get(ProviderRepository::class);
-        $this->providerPaymentRepository = self::$container->get(ProviderPaymentRepository::class);
-        $this->accessRepository = self::$container->get(AccessRepository::class);
+        $this->providerRepository = self::getContainer()->get(ProviderRepository::class);
+        $this->providerPaymentRepository = self::getContainer()->get(ProviderPaymentRepository::class);
+        $this->accessRepository = self::getContainer()->get(AccessRepository::class);
     }
 
     /**
@@ -47,9 +48,9 @@ class PartnerProvideControllerTest extends WebTestCase
      */
     public function testProvideUnPayedToken()
     {
-        $payment = $this->paymentByToken(ProviderPaymentFixture::PENDING_TOKEN);
         $this->assertProvideIsRedirectingByToken(ProviderPaymentFixture::PENDING_TOKEN);
-        $this->assertStringStartsWith('https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=testonomica',
+        $this->assertStringStartsWith(
+            'https://auth.robokassa.ru/Merchant/Index.aspx?MerchantLogin=testonomica',
             $this->client->getResponse()->headers->get('location'));
     }
 

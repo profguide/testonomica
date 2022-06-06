@@ -36,8 +36,10 @@ class PartnerApiTestController extends AbstractRestController
 
     /**
      * @Route("/result/{key}/", name="result")
+     * additional params:
+     * - format: html/pdf/json (json by default).
      *
-     * todo Студентика имеет доступ без оплаты. Надо срочно продумать.
+     * todo Студентика имеет доступ без оплаты. Надо скорее продумать, как защититься. И еще токен: F5 и у тебя миллион доступов.
      *
      * @param string $key
      * @param Request $request
@@ -46,10 +48,9 @@ class PartnerApiTestController extends AbstractRestController
      */
     public function result(string $key, Request $request, CalculatorService $calculatorService): Response
     {
-        $format = new ViewFormat($request->get('format', ViewFormat::JSON));
-
         $result = $this->results->findByUuid($key);
         $data = $calculatorService->calculate($result);
+        $format = new ViewFormat($request->get('format', ViewFormat::JSON));
         return $this->renderer->render($result->getTest(), $data, $format);
     }
 

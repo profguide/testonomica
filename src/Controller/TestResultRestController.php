@@ -72,6 +72,8 @@ class TestResultRestController extends AbstractRestController implements AccessT
 
     /**
      * @Route("/result/{testId<\d+>}/")
+     * additional params:
+     * - format: html/pdf/json (html by default).
      * @param Request $request
      * @return Response
      */
@@ -82,7 +84,7 @@ class TestResultRestController extends AbstractRestController implements AccessT
         $data = $this->calculatorService->calculate($result);
         $test = $result->getTest();
 
-        $format = new ViewFormat(ViewFormat::HTML);
+        $format = new ViewFormat($request->get('format', ViewFormat::HTML));
         return $this->resultRenderer->render($test, $data, $format);
     }
 

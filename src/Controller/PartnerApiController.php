@@ -9,6 +9,8 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Entity\PaymentType;
+use App\Entity\Provider;
+use App\Entity\Service;
 use App\Repository\ProviderRepository;
 use App\Repository\ServiceRepository;
 use App\Service\PublicTokenService;
@@ -64,20 +66,17 @@ class PartnerApiController extends AbstractRestController
      */
     public function getToken(Request $request): JsonResponse
     {
-        $providerToken = $request->get('token');
-        self::guardProviderToken($providerToken);
-        $provider = $this->providers->getByToken($providerToken);
-
-        $providerUser = $request->get('user');
-        self::guardProviderUser($providerUser);
-
-        $serviceSlug = $request->get('service');
-        self::guardService($serviceSlug);
-        $service = $this->services->getOneBySlug($serviceSlug);
-
+        $service = $this->service($request);
+        $provider = $this->provider($request);
+        $user = self::user($request);
         $paymentType = self::paymentType($request);
 
-        $tokenObject = $this->publicTokenService->token($service, $provider, $providerUser, $paymentType, self::isTestMode($request));
+        $tokenObject = $this->publicTokenService->token(
+            $service,
+            $provider,
+            $user,
+            $paymentType,
+            self::isTestMode($request));
 
         return $this->json([
             'token' => $tokenObject->getToken()
@@ -119,5 +118,34 @@ class PartnerApiController extends AbstractRestController
             return new PaymentType(PaymentType::EXTERNAL);
         }
         throw new PreconditionFailedHttpException("Unsupported payment type: $val.");
+    }
+
+    private function service(Request $request): Service
+    {
+        $slug = $request->get('service');
+        self::guardService($slug);
+        $service = $this->services->getOneBySlug($slug);
+        if (!$service) {
+            throw new PreconditionFailedHttpException("Service \"$slug\" not found.");
+        }
+        return $service;
+    }
+
+    private function provider(Request $request): Provider
+    {
+        $token = $request->get('token');
+        self::guardProviderToken($token);
+        $provider = $this->providers->getByToken($token);
+        if (!$provider) {
+            throw new \DomainException("Provider token#$token not found.");
+        }
+        return $provider;
+    }
+
+    private static function user(Request $request): string
+    {
+        $id = $request->get('user');
+        self::guardProviderUser($id);
+        return $id;
     }
 }

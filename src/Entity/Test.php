@@ -430,6 +430,11 @@ class Test
         $this->isXmlSource = $isXmlSource;
     }
 
+    public function hasResultView(): bool
+    {
+        return $this->getResultView() !== null;
+    }
+
     public function getResultView(): ?string
     {
         return $this->resultView;

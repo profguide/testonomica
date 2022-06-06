@@ -32,13 +32,10 @@ class ServiceRepository extends ServiceEntityRepository
         throw new \DomainException("Service not found (id: \"$id\").");
     }
 
-    public function getOneBySlug(string $slug): Service
+    public function getOneBySlug(string $slug): ?Service
     {
         /**@var Service $service */
         $service = $this->findOneBy(['slug' => $slug]);
-        if ($service) {
-            return $service;
-        }
-        throw new \DomainException("Service not found (slug: \"$slug\").");
+        return $service;
     }
 }

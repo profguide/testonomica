@@ -4,7 +4,8 @@ namespace App\Test;
 
 use App\Entity\Test;
 use App\Service\AnalysisRenderer;
-use Symfony\Component\HttpFoundation\BinaryFileResponse;
+use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
+use Knp\Snappy\Pdf;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
@@ -13,11 +14,14 @@ class ResultRenderer
 {
     private Environment $twig;
 
+    private Pdf $pdf;
+
     private AnalysisRenderer $analysisRenderer;
 
-    public function __construct(Environment $twig, AnalysisRenderer $analysisRenderer)
+    public function __construct(Environment $twig, Pdf $pdf, AnalysisRenderer $analysisRenderer)
     {
         $this->twig = $twig;
+        $this->pdf = $pdf;
         $this->analysisRenderer = $analysisRenderer;
     }
 
@@ -30,50 +34,44 @@ class ResultRenderer
      */
     public function render(Test $test, array $data, ViewFormat $format): Response
     {
-        if ($format->value() === ViewFormat::HTML) {
-            return $this->html($test, $data);
-        } elseif ($format->value() === ViewFormat::JSON) {
-            return $this->json($test, $data);
-        } elseif ($format->value() === ViewFormat::PDF) {
-            return $this->pdf($test, $data);
+        switch ($format->value()) {
+            case ViewFormat::HTML:
+                return new Response($this->html($test, $data));
+            case ViewFormat::JSON:
+                return $this->json($data);
+            case ViewFormat::PDF:
+                return $this->pdf($test, $data);
         }
-
         throw new \RuntimeException("Unsupported render format: {$format->value()}.");
     }
 
-    private function json(Test $test, array $data): JsonResponse
+    private function json(array $data): JsonResponse
     {
-        if ($test->getSlug() === 'proforientation-v2') {
-            $response = new JsonResponse($data);
-            $response->setEncodingOptions(JSON_UNESCAPED_UNICODE);
-            return $response;
-        }
-        throw new \DomainException('The test doest not support JSON report.');
+        $response = new JsonResponse($data);
+        $response->setEncodingOptions(JSON_UNESCAPED_UNICODE);
+        return $response;
     }
 
-    private function pdf(Test $test, array $data): JsonResponse
+    private function pdf(Test $test, array $data): Response
     {
-        if ($test->getSlug() === 'proforientation-v2') {
-            return new BinaryFileResponse();
-        }
-        throw new \DomainException('The test doest not support PDF report.');
+        // https://stackoverflow.com/questions/30303218/bad-characters-when-generating-pdf-file-with-knp-snappy
+        $pdf = $this->pdf->getOutputFromHtml($this->html($test, $data), [
+            'encoding' => 'utf-8',
+        ]);
+        $name = 'report_' . date('d.m.Y_h.i') . 'pdf';
+        return new PdfResponse($pdf, $name);
     }
 
-    private function html(Test $test, array $data): Response
+    private function html(Test $test, array $data): string
     {
         // templated from the db
         $resultBlocksOutput = $this->analysisRenderer->render($test, $data);
-        if (!empty($resultBlocksOutput) || $test->getResultView() != null) {
-//            $template = "{% extends('tests/result.html.twig') %}{% block result %}<div class=\"container\">"
-//                . $resultBlocksOutput
-//                . $test->getResultView()
-//                . "</div>{% endblock %}";
+        if (!empty($resultBlocksOutput) || $test->hasResultView()) {
             $template = $resultBlocksOutput . $test->getResultView();
             $template = $this->twig->createTemplate($template);
-            return new Response($template->render($data));
+            return $template->render($data);
         } else {
-            // templated by filename
-            return new Response($this->twig->render('tests/result/' . ResultUtil::resolveViewName($test) . '.html.twig', $data));
+            return $this->twig->render('tests/result/' . ResultUtil::resolveViewName($test) . '.html.twig', $data);
         }
     }
 }

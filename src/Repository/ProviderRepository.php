@@ -33,9 +33,6 @@ class ProviderRepository extends ServiceEntityRepository
     {
         /**@var Provider $provider */
         $provider = $this->findOneBy(['token' => $token]);
-        if ($provider) {
-            return $provider;
-        }
-        throw new \DomainException("Provider not found (token: \"$token\").");
+        return $provider;
     }
 }

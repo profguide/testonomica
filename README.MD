@@ -1,3 +1,13 @@
+# Requirements
+
+- wkhtmltopdf
+
+  Mac:
+  brew install wkhtmltopdf
+
+  Debian:
+  https://wkhtmltopdf.org/downloads.html
+
 # TODO
 
 - перевод сделать через доп.таблицу, (тут про это сказано: https://phrase.com/blog/posts/symfony-4-i18n/)

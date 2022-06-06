@@ -61,7 +61,7 @@ class PartnerProvideController extends AbstractController
         if (($providerPayment = $this->providerUserPaymentService->findOneByToken($token)) != null) {
             return $this->goToPayment($providerPayment);
         } elseif (($access = $this->accessService->findOneByToken($token)) != null) {
-            return $this->goToService($access, $token, $request);
+            return $this->goToService($request, $access, $token);
         }
         throw new AccessDeniedHttpException('Unknown token.');
     }
@@ -76,7 +76,7 @@ class PartnerProvideController extends AbstractController
         return new RedirectResponse($this->robokassa->createUrl($payment));
     }
 
-    private function goToService(Access $access, string $token, Request $request): RedirectResponse
+    private function goToService(Request $request, Access $access, string $token): RedirectResponse
     {
         $cookieToken = $request->cookies->get('access');
         if ($cookieToken == $token || !$access->isUsed()) {
@@ -85,7 +85,7 @@ class PartnerProvideController extends AbstractController
                 'slug' => 'proforientation-v2'
             ]));
             $this->accessService->setCookie($access, $response);
-            $response->send();
+//            $response->send(); // todo это точно надо? во время тестов оно выводит в консоль html
             return $response;
         }
         throw new AccessDeniedHttpException('The token has already been used.');

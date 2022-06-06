@@ -98,12 +98,11 @@ class TestController extends AbstractController
             'status' => TestStatus::finished()
         ], $this->calculatorService->calculate($result));
 
-        $format = new ViewFormat(ViewFormat::HTML);
         return $this->render('tests/result.html.twig', [
             'test' => $test,
             'status' => TestStatus::finished(),
             'uuid' => $result->getUuid(),
-            'result' => $this->resultRenderer->render($test, $data, $format)->getContent()
+            'result' => $this->resultRenderer->render($test, $data, new ViewFormat(ViewFormat::HTML))->getContent()
         ]);
     }
 
