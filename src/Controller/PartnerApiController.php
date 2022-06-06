@@ -83,6 +83,10 @@ class PartnerApiController extends AbstractRestController
         ]);
     }
 
+    //
+    // private methods
+    //
+
     private static function guardProviderToken(?string $token)
     {
         if (empty($token)) {
