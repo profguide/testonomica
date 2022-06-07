@@ -44,6 +44,77 @@ class PartnerApiControllerTest extends WebTestCase
         $this->accessRepository = self::getContainer()->get(AccessRepository::class);
     }
 
+    public function testErrorEmptyProvider()
+    {
+        $this->client->request('POST', "/partner/api/token/", [
+            'token' => null,
+            'user' => ProviderPaymentFixture::PENDING_USER,
+            'service' => ServiceFixture::SERVICE_1,
+        ]);
+        self::assertEquals(412, $this->client->getResponse()->getStatusCode());
+        $this->responseWithErrorText('Token must be specified.');
+    }
+
+    public function testErrorWrongProvider()
+    {
+        $this->client->request('POST', "/partner/api/token/", [
+            'token' => 'wrong-provider-token',
+            'user' => ProviderPaymentFixture::PENDING_USER,
+            'service' => ServiceFixture::SERVICE_1,
+        ]);
+        self::assertEquals(412, $this->client->getResponse()->getStatusCode());
+        $this->responseWithErrorText('Provider not found.');
+    }
+
+    public function testErrorEmptyService()
+    {
+        $provider = $this->providerRepository->findBySlug(ProviderFixture::TESTOMETRIKA);
+        $this->client->request('POST', "/partner/api/token/", [
+            'token' => $provider->getToken(),
+            'user' => ProviderPaymentFixture::PENDING_USER,
+            'service' => null,
+        ]);
+        self::assertEquals(412, $this->client->getResponse()->getStatusCode());
+        $this->responseWithErrorText('Service must be specified.');
+    }
+
+    public function testErrorWrongService()
+    {
+        $provider = $this->providerRepository->findBySlug(ProviderFixture::TESTOMETRIKA);
+        $this->client->request('POST', "/partner/api/token/", [
+            'token' => $provider->getToken(),
+            'user' => ProviderPaymentFixture::PENDING_USER,
+            'service' => 'non-existent-service-name',
+        ]);
+        self::assertEquals(412, $this->client->getResponse()->getStatusCode());
+        $this->responseWithErrorText('Service "non-existent-service-name" not found.');
+    }
+
+    public function testErrorEmptyUser()
+    {
+        $provider = $this->providerRepository->findBySlug(ProviderFixture::TESTOMETRIKA);
+        $this->client->request('POST', "/partner/api/token/", [
+            'token' => $provider->getToken(),
+            'user' => null,
+            'service' => ServiceFixture::SERVICE_1,
+        ]);
+        self::assertEquals(412, $this->client->getResponse()->getStatusCode());
+        $this->responseWithErrorText('User must be specified.');
+    }
+
+    public function testErrorWrongPaymentType()
+    {
+        $provider = $this->providerRepository->findBySlug(ProviderFixture::TESTOMETRIKA);
+        $this->client->request('POST', "/partner/api/token/", [
+            'token' => $provider->getToken(),
+            'user' => ProviderPaymentFixture::PENDING_USER,
+            'service' => ServiceFixture::SERVICE_1,
+            'payment_type' => 'wrong-payment-type'
+        ]);
+        self::assertEquals(412, $this->client->getResponse()->getStatusCode());
+        $this->responseWithErrorText('Unsupported payment type: wrong-payment-type.');
+    }
+
     /**
      * Получение платёжного токена
      * Условие:
@@ -153,5 +224,11 @@ class PartnerApiControllerTest extends WebTestCase
         $payment = $this->providerPaymentRepository->findOneByProviderAndUser($provider, $userId);
         $this->assertNotNull($payment);
         $this->assertEquals(new PaymentType(PaymentType::EXTERNAL), $payment->getType(), 'Payment should be marked as trusted.');
+    }
+
+    private function responseWithErrorText(string $string)
+    {
+        $content = json_decode($this->client->getResponse()->getContent());
+        self::assertEquals($string, $content->detail);
     }
 }

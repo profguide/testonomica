@@ -6,7 +6,17 @@
       brew install wkhtmltopdf
     
       Debian:
-      apt-get install wkhtmltopdf
+        Instruction here: https://github.com/wkhtmltopdf/wkhtmltopdf/issues/2037
+        Releases here: https://github.com/wkhtmltopdf/packaging/releases/
+
+        Download
+        wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.1.4-2/wkhtmltox_0.12.1.4-2.stretch_amd64.deb
+        
+        Install
+        sudo dpkg -i wkhtmltox_0.12.1.4-2.stretch_amd64.deb
+        If you run into an error with missing dependencies, install the dependencies with sudo apt install -f.
+
+        wkhtmltopdf --version
 
 # Сервер
 
@@ -59,7 +69,7 @@
     yarn link testonomica_api
 
 # Окружение
-    
+
 Чтобы сгенерировать .env.local.php на продакте:
 
     symfony composer dump-env prod
@@ -305,6 +315,7 @@ prepayment и postpaid) нужно вести учёт сколько израс
 2. Запрашивать чек (номер чека).
 
 Однако и чек и юзера и IP - всё это можно подделать, и я не узнаю правды. Есть только два решения:
+
 - 1 юзер = 1 результат (или 1 чек = 1 результат)
 - частая контролььная закупка (но токен можно получить, а юзать вообще на другом сайте).
 

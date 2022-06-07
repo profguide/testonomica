@@ -11,3 +11,11 @@ fi
 if [[ "env" == $1 ]]; then
   symfony composer dump-env prod
 fi
+if [[ "test" == $1 ]]; then
+  echo "php bin/phpunit"
+  php bin/phpunit
+fi
+if [[ "test-coverage" == $1 ]]; then
+  echo "php bin/phpunit --coverage-html ./var/coverage"
+  php bin/phpunit --coverage-html ./var/coverage
+fi

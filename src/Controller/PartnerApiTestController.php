@@ -38,9 +38,6 @@ class PartnerApiTestController extends AbstractRestController
      * @Route("/result/{key}/", name="result")
      * additional params:
      * - format: html/pdf/json (json by default).
-     *
-     * todo Студентика имеет доступ без оплаты. Надо скорее продумать, как защититься. И еще токен: F5 и у тебя миллион доступов.
-     *
      * @param string $key
      * @param Request $request
      * @param CalculatorService $calculatorService

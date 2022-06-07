@@ -141,7 +141,7 @@ class PartnerApiController extends AbstractRestController
         self::guardProviderToken($token);
         $provider = $this->providers->getByToken($token);
         if (!$provider) {
-            throw new \DomainException("Provider token#$token not found.");
+            throw new PreconditionFailedHttpException("Provider not found.");
         }
         return $provider;
     }

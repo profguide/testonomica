@@ -11,6 +11,7 @@ class MainController extends AbstractController
 {
     /**
      * @Route("/", name="main")
+     * @codeCoverageIgnore
      */
     public function index(Request $request): Response
     {
