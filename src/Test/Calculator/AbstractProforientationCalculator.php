@@ -39,11 +39,12 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
         $professions = $this->grabProfessionsByTypes($typesSinglePercent);
         $professions = $this->sliceProfessions($professions, self::MAXIMUM_PROFESSIONS);
         return [
-            'types_group_percent' => $typesGroupsPercent,
-            'types_single_percent' => $typesSinglePercent,
-            'types_descriptions' => $this->typesDescriptions($typesGroupsPercent),
-            'types_top' => $this->grabTopTypes($typesSinglePercent),
-            'professions' => $professions
+//            'types_group_percent' => $typesGroupsPercent,
+//            'types_single_percent' => $typesSinglePercent,
+//            'types_descriptions' => $this->typesDescriptions($typesGroupsPercent),
+            'professions' => $professions,
+            'types_descriptions' => $this->typesDescriptionsByName($typesGroupsPercent),
+            'types_top' => $this->grabTopTypes($typesSinglePercent), // being used in trial report
         ];
     }
 
@@ -310,6 +311,7 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
     }
 
     /**
+     * Устарело, надо удалить.
      * Подбирает текстовые описания всех типов по значениям групп: интересы (среднее от усилий интересов) и способности
      * @param array $typesGroups
      * @return array вида ['tech' => ['interest' => '...', 'skills' => '...'], 'natural' => ...]
@@ -337,6 +339,39 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
                     'absolute' => Types::level($skillValue)
                 ]];
         }
+        return $descriptions;
+    }
+
+    /**
+     * Подбирает текстовые описания всех типов по значениям групп: интересы (среднее от усилий интересов) и способности
+     * @param array $typesGroups
+     * @return array вида ['tech' => ['interest' => '...', 'skills' => '...'], 'natural' => ...]
+     */
+    private function typesDescriptionsByName(array $typesGroups): array
+    {
+        new Types($this->kernel, $this->locale); // init static config
+
+        $descriptions = [];
+
+        foreach ($typesGroups as $typeName => $groups) {
+            $name = Types::name($typeName);
+            // интерес - это среднее от force + interest
+            $interestValue = ($groups[0] + $groups[1]) / 2;
+            $skillValue = $groups[2];
+
+            $descriptions[$typeName] = [
+                'name' => $name,
+                'interest' => [
+                    'text' => Types::interestText($typeName, $interestValue),
+                    'absolute' => Types::level($interestValue)
+                ],
+                'skills' => [
+                    'text' => Types::skillsText($typeName, $skillValue),
+                    'absolute' => Types::level($skillValue)
+                ],
+            ];
+        }
+
         return $descriptions;
     }
 
