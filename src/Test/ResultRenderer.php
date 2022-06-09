@@ -63,6 +63,7 @@ class ResultRenderer
     {
         // other useful params:
         // https://stackoverflow.com/questions/30303218/bad-characters-when-generating-pdf-file-with-knp-snappy
+        // todo wrap with empty html
         $pdf = $this->pdf->getOutputFromHtml($this->html($test, $data), [
             'encoding' => 'utf-8',
         ]);
