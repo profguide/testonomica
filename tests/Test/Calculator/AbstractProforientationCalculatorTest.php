@@ -122,17 +122,17 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
             ['natural' => 100], new Profession('some', [['natural', 'tech'], ['natural', 'tech', 'body']])));
     }
 
-    public function testFitVersionV201()
-    {
-        /**@var AbstractProforientationCalculator $calculator */
-        $calculator = new $this->calculatorName(new AnswersHolder([
-            720 => new Answer(720, [1]),
-            721 => new Answer(721, [1]),
-            722 => new Answer(722, [1]),
-            // << absent 723 answer obliged Calculator to ignore 723 question
-        ]), $this->questionsHolder(), self::$kernel);
-        $this->assertEquals(100, $calculator->calculate()['types_group_percent']['art'][2]);
-    }
+//    public function testFitVersionV201()
+//    {
+//        /**@var AbstractProforientationCalculator $calculator */
+//        $calculator = new $this->calculatorName(new AnswersHolder([
+//            720 => new Answer(720, [1]),
+//            721 => new Answer(721, [1]),
+//            722 => new Answer(722, [1]),
+//            // << absent 723 answer obliged Calculator to ignore 723 question
+//        ]), $this->questionsHolder(), self::$kernel);
+//        $this->assertEquals(100, $calculator->calculate()['types_group_percent']['art'][2]);
+//    }
 
 //    /**
 //     * Убедиться, что не существует комбинаций, которые не дают ни одной профессии
