@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /tests/api/*
+Disallow: /tests/result/*
+
+Host: https://wowtests.com/
