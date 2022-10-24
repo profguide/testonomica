@@ -1,157 +1,155 @@
-{% extends('tests/result.html.twig') %}
+{#{% extends('tests/result.html.twig') %}#}
 
 {% block result %}
-    <div class="container">
-        {% if ia >= 1 %}
-            <p><b>Индекс агрессивности:</b></p>
+    {% if ia >= 1 %}
+        <p><b>Индекс агрессивности:</b></p>
 
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: {{ scale.ia }}%;"
-                     aria-valuenow="{{ scale.ia }}"
-                     aria-valuemin="0"
-                     aria-valuemax="100">{{ ia }} {% trans %}out of{% endtrans %} 110
-                </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale.ia }}%;"
+                 aria-valuenow="{{ scale.ia }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ ia }} {% trans %}out of{% endtrans %} 110
             </div>
-        {% endif %}
+        </div>
+    {% endif %}
 
-        <br>
+    <br>
 
-        {% if iv >= 1 %}
-            <p><b>Индекс враждебности:</b></p>
+    {% if iv >= 1 %}
+        <p><b>Индекс враждебности:</b></p>
 
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: {{ scale.iv }}%;"
-                     aria-valuenow="{{ scale.iv }}"
-                     aria-valuemin="0"
-                     aria-valuemax="100">{{ iv }} {% trans %}out of{% endtrans %} 101
-                </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale.iv }}%;"
+                 aria-valuenow="{{ scale.iv }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ iv }} {% trans %}out of{% endtrans %} 101
             </div>
-        {% endif %}
+        </div>
+    {% endif %}
 
-        <br>
+    <br>
 
-        {% if fiz >= 1 and fiz <= 110 %}
-            <p><b>Физическая агрессия:</b></p>
-            <p>Использование физической силы против другого лица.</p>
+    {% if fiz >= 1 and fiz <= 110 %}
+        <p><b>Физическая агрессия:</b></p>
+        <p>Использование физической силы против другого лица.</p>
 
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: {{ scale.fiz }}%;"
-                     aria-valuenow="{{ scale.fiz }}"
-                     aria-valuemin="0"
-                     aria-valuemax="100">{{ fiz }} {% trans %}out of{% endtrans %} 110
-                </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale.fiz }}%;"
+                 aria-valuenow="{{ scale.fiz }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ fiz }} {% trans %}out of{% endtrans %} 110
             </div>
-        {% endif %}
+        </div>
+    {% endif %}
 
-        <br>
+    <br>
 
-        {% if verb >= 1 and verb <= 104 %}
-            <p><b>Вербальная агрессия:</b></p>
-            <p>Выражение негативных чувств как через форму (ссора, крик, визг), так и через содержание словесных обращений к
-                другим лицам (угроза, проклятия, ругань).</p>
+    {% if verb >= 1 and verb <= 104 %}
+        <p><b>Вербальная агрессия:</b></p>
+        <p>Выражение негативных чувств как через форму (ссора, крик, визг), так и через содержание словесных обращений к
+            другим лицам (угроза, проклятия, ругань).</p>
 
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: {{ scale.verb }}%;"
-                     aria-valuenow="{{ scale.verb }}"
-                     aria-valuemin="0"
-                     aria-valuemax="100">{{ verb }} {% trans %}out of{% endtrans %} 104
-                </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale.verb }}%;"
+                 aria-valuenow="{{ scale.verb }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ verb }} {% trans %}out of{% endtrans %} 104
             </div>
-        {% endif %}
+        </div>
+    {% endif %}
 
-        <br>
+    <br>
 
-        {% if kosv >= 1 and kosv <= 117 %}
-            <p><b>Косвенная агрессия:</b></p>
-            <p>Использование окольным путем направленных против других лиц сплетен, шуток и проявление ненаправленных,
-                неупорядоченных, взрывов ярости (в крике, топании ногами и т. п.).</p>
+    {% if kosv >= 1 and kosv <= 117 %}
+        <p><b>Косвенная агрессия:</b></p>
+        <p>Использование окольным путем направленных против других лиц сплетен, шуток и проявление ненаправленных,
+            неупорядоченных, взрывов ярости (в крике, топании ногами и т. п.).</p>
 
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: {{ scale.kosv }}%;"
-                     aria-valuenow="{{ scale.kosv }}"
-                     aria-valuemin="0"
-                     aria-valuemax="100">{{ kosv }} {% trans %}out of{% endtrans %} 117
-                </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale.kosv }}%;"
+                 aria-valuenow="{{ scale.kosv }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ kosv }} {% trans %}out of{% endtrans %} 117
             </div>
-        {% endif %}
+        </div>
+    {% endif %}
 
-        <br>
+    <br>
 
-        {% if negativ >= 1 and negativ <= 100 %}
-            <p><b>Негативизм:</b></p>
-            <p>Оппозиционная форма поведения, направленная обычно против авторитета и руководства, которая может нарастать от
-                пассивного сопротивления до активных действий против требований, правил, законов.</p>
+    {% if negativ >= 1 and negativ <= 100 %}
+        <p><b>Негативизм:</b></p>
+        <p>Оппозиционная форма поведения, направленная обычно против авторитета и руководства, которая может нарастать от
+            пассивного сопротивления до активных действий против требований, правил, законов.</p>
 
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: {{ scale.negativ }}%;"
-                     aria-valuenow="{{ scale.negativ }}"
-                     aria-valuemin="0"
-                     aria-valuemax="100">{{ negativ }} {% trans %}out of{% endtrans %} 100
-                </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale.negativ }}%;"
+                 aria-valuenow="{{ scale.negativ }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ negativ }} {% trans %}out of{% endtrans %} 100
             </div>
-        {% endif %}
+        </div>
+    {% endif %}
 
-        <br>
+    <br>
 
-        {% if razdraj >= 1 and razdraj <= 99 %}
-            <p><b>Раздражение:</b></p>
-            <p>Склонность к раздражению, готовность при малейшем возбуждении излиться во вспыльчивости, резкости, грубости.</p>
+    {% if razdraj >= 1 and razdraj <= 99 %}
+        <p><b>Раздражение:</b></p>
+        <p>Склонность к раздражению, готовность при малейшем возбуждении излиться во вспыльчивости, резкости, грубости.</p>
 
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: {{ scale.razdraj }}%;"
-                     aria-valuenow="{{ scale.razdraj }}"
-                     aria-valuemin="0"
-                     aria-valuemax="100">{{ razdraj }} {% trans %}out of{% endtrans %} 99
-                </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale.razdraj }}%;"
+                 aria-valuenow="{{ scale.razdraj }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ razdraj }} {% trans %}out of{% endtrans %} 99
             </div>
-        {% endif %}
+        </div>
+    {% endif %}
 
-        <br>
+    <br>
 
-        {% if podozr >= 1 and podozr <= 99 %}
-            <p><b>Подозрительность:</b></p>
-            <p>Склонность к недоверию и осторожному отношению к людям, проистекающим из убеждения, что окружающие намерены
-                причинить вред.</p>
+    {% if podozr >= 1 and podozr <= 99 %}
+        <p><b>Подозрительность:</b></p>
+        <p>Склонность к недоверию и осторожному отношению к людям, проистекающим из убеждения, что окружающие намерены
+            причинить вред.</p>
 
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: {{ scale.podozr }}%;"
-                     aria-valuenow="{{ scale.podozr }}"
-                     aria-valuemin="0"
-                     aria-valuemax="100">{{ podozr }} {% trans %}out of{% endtrans %} 99
-                </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale.podozr }}%;"
+                 aria-valuenow="{{ scale.podozr }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ podozr }} {% trans %}out of{% endtrans %} 99
             </div>
-        {% endif %}
+        </div>
+    {% endif %}
 
-        <br>
+    <br>
 
-        {% if obida >= 1 and obida <= 104 %}
-            <p><b>Обида:</b></p>
-            <p>Проявления зависти и ненависти к окружающим, обусловленные чувством гнева, недовольства кем-то именно или всем
-                миром за действительные или мнимые страдания.</p>
+    {% if obida >= 1 and obida <= 104 %}
+        <p><b>Обида:</b></p>
+        <p>Проявления зависти и ненависти к окружающим, обусловленные чувством гнева, недовольства кем-то именно или всем
+            миром за действительные или мнимые страдания.</p>
 
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: {{ scale.obida }}%;"
-                     aria-valuenow="{{ scale.obida }}"
-                     aria-valuemin="0"
-                     aria-valuemax="100">{{ obida }} {% trans %}out of{% endtrans %} 104
-                </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale.obida }}%;"
+                 aria-valuenow="{{ scale.obida }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ obida }} {% trans %}out of{% endtrans %} 104
             </div>
-        {% endif %}
+        </div>
+    {% endif %}
 
-        <br>
+    <br>
 
-        {% if vina >= 1 and vina <= 99 %}
-            <p><b>Аутоагрессия или чувство вины:</b></p>
-            <p>Отношение и действия по отношению к себе и окружающим, проистекающие из возможного убеждения самого обследуемого
-                в том, что он является плохим человеком, поступает нехорошо: вредно, злобно или бессовестно.</p>
+    {% if vina >= 1 and vina <= 99 %}
+        <p><b>Аутоагрессия или чувство вины:</b></p>
+        <p>Отношение и действия по отношению к себе и окружающим, проистекающие из возможного убеждения самого обследуемого
+            в том, что он является плохим человеком, поступает нехорошо: вредно, злобно или бессовестно.</p>
 
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: {{ scale.vina }}%;"
-                     aria-valuenow="{{ scale.vina }}"
-                     aria-valuemin="0"
-                     aria-valuemax="100">{{ vina }} {% trans %}out of{% endtrans %} 99
-                </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ scale.vina }}%;"
+                 aria-valuenow="{{ scale.vina }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ vina }} {% trans %}out of{% endtrans %} 99
             </div>
-        {% endif %}
-    </div>
+        </div>
+    {% endif %}
 {% endblock %}

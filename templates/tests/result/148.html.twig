@@ -1,23 +1,21 @@
-{% extends('tests/result.html.twig') %}
+{#{% extends('tests/result.html.twig') %}#}
 
 {% block result %}
-    <div class="container">
-        {% if sum >= 70 and sum <= 80 %}
-            <p><b>У вас истинное депрессивное состояние.</b></p>
-            {% elseif sum >= 60 and sum <= 69 %}
-            <p><b>У вас субдепрессивное состояние или маскированная депрессия.</b></p>
-            {% elseif sum >= 50 and sum <= 59 %}
-            <p><b>У вас легкая депрессия ситуативного или невротического генеза.</b></p>
-            {% elseif sum >= 0 and sum <= 50 %}
-            <p><b>У вас нет депрессии.</b></p>
-        {% endif %}
+    {% if sum >= 70 and sum <= 80 %}
+        <p><b>У вас истинное депрессивное состояние.</b></p>
+    {% elseif sum >= 60 and sum <= 69 %}
+        <p><b>У вас субдепрессивное состояние или маскированная депрессия.</b></p>
+    {% elseif sum >= 50 and sum <= 59 %}
+        <p><b>У вас легкая депрессия ситуативного или невротического генеза.</b></p>
+    {% elseif sum >= 0 and sum <= 50 %}
+        <p><b>У вас нет депрессии.</b></p>
+    {% endif %}
 
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: {{ scale }}%;"
-                 aria-valuenow="{{ scale }}"
-                 aria-valuemin="0"
-                 aria-valuemax="100">{{ sum }} {% trans %}out of{% endtrans %} 80
-            </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: {{ scale }}%;"
+             aria-valuenow="{{ scale }}"
+             aria-valuemin="0"
+             aria-valuemax="100">{{ sum }} {% trans %}out of{% endtrans %} 80
         </div>
     </div>
 {% endblock %}

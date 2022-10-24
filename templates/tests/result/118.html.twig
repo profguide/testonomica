@@ -1,486 +1,484 @@
 {#{% extends('tests/result.html.twig') %}#}
 
 {% block result %}
-    <div class="container">
-        <style>
-            article {
-                display: flex;
-                width: 100%;
-                margin: 0 -10px;
-            }
+    <style>
+        article {
+            display: flex;
+            width: 100%;
+            margin: 0 -10px;
+        }
 
-            article > div {
-                padding: 10px;
-            }
+        article > div {
+            padding: 10px;
+        }
 
-            article .name {
-                flex: 5;
-            }
+        article .name {
+            flex: 5;
+        }
 
-            article .progress-place {
-                flex: 7;
-            }
+        article .progress-place {
+            flex: 7;
+        }
 
-            article .summ {
-                flex: 1;
-            }
+        article .summ {
+            flex: 1;
+        }
 
-            /*todo: вынести в общий файл*/
-            .progress {
-                height: 1.5rem;
-            }
-        </style>
-        <div>
-            {% if nesovpadenie >= 29 and nesovpadenie <= 43 %}
-                <article>
-                    <div class="name">Повышенная тревожность ребенка</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.nesovpadenie }}%;"
-                                 aria-valuenow="{{ scale.nesovpadenie }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ nesovpadenie }} из 58
-                            </div>
+        /*todo: вынести в общий файл*/
+        .progress {
+            height: 1.5rem;
+        }
+    </style>
+    <div>
+        {% if nesovpadenie >= 29 and nesovpadenie <= 43 %}
+            <article>
+                <div class="name">Повышенная тревожность ребенка</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.nesovpadenie }}%;"
+                             aria-valuenow="{{ scale.nesovpadenie }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ nesovpadenie }} из 58
                         </div>
                     </div>
-                    <div class="summ">{{ scale.nesovpadenie }}%</div>
-                </article>
-            {% endif %}
-            {% if nesovpadenie >= 44 and nesovpadenie  <=  58 %}
-                <article>
-                    <div class="name">Высокая тревожность ребенка</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.nesovpadenie }}%;"
-                                 aria-valuenow="{{ scale.nesovpadenie }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ nesovpadenie }} из 58
-                            </div>
+                </div>
+                <div class="summ">{{ scale.nesovpadenie }}%</div>
+            </article>
+        {% endif %}
+        {% if nesovpadenie >= 44 and nesovpadenie  <=  58 %}
+            <article>
+                <div class="name">Высокая тревожность ребенка</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.nesovpadenie }}%;"
+                             aria-valuenow="{{ scale.nesovpadenie }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ nesovpadenie }} из 58
                         </div>
                     </div>
-                    <div class="summ">
-                        {{ scale.nesovpadenie }}%
-                    </div>
-                </article>
-            {% endif %}
-            {% if trevoga >= 0 and trevoga <= 12 %}
-                <article>
-                    <div class="name">Общая тревожность в школе</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.trevoga }}%;"
-                                 aria-valuenow="{{ scale.trevoga }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ trevoga }} из 22
-                            </div>
+                </div>
+                <div class="summ">
+                    {{ scale.nesovpadenie }}%
+                </div>
+            </article>
+        {% endif %}
+        {% if trevoga >= 0 and trevoga <= 12 %}
+            <article>
+                <div class="name">Общая тревожность в школе</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.trevoga }}%;"
+                             aria-valuenow="{{ scale.trevoga }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ trevoga }} из 22
                         </div>
-                        <p>Общее эмоциональное состояние ребенка, связанное с различными формами его включения в жизнь
-                            школы.</p>
                     </div>
-                    <div class="summ">{{ scale.trevoga }}%
-                    </div>
-                </article>
-            {% endif %}
-            {% if trevoga >= 12 and trevoga  <=  16 %}
-                <article>
-                    <div class="name">Повышенная тревожность в школе</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.trevoga }}%;"
-                                 aria-valuenow="{{ scale.trevoga }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ trevoga }} из 22
-                            </div>
+                    <p>Общее эмоциональное состояние ребенка, связанное с различными формами его включения в жизнь
+                        школы.</p>
+                </div>
+                <div class="summ">{{ scale.trevoga }}%
+                </div>
+            </article>
+        {% endif %}
+        {% if trevoga >= 12 and trevoga  <=  16 %}
+            <article>
+                <div class="name">Повышенная тревожность в школе</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.trevoga }}%;"
+                             aria-valuenow="{{ scale.trevoga }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ trevoga }} из 22
                         </div>
-                        <p>Общее эмоциональное состояние ребенка, связанное с различными формами его включения в жизнь
-                            школы.</p>
                     </div>
-                    <div class="summ">{{ scale.trevoga }}%
-                    </div>
-                </article>
-            {% endif %}
-            {% if trevoga >= 17 and trevoga  <=  22 %}
-                <article>
-                    <div class="name">Высокая тревожность в школе</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.trevoga }}%;"
-                                 aria-valuenow="{{ scale.trevoga }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ trevoga }} из 22
-                            </div>
+                    <p>Общее эмоциональное состояние ребенка, связанное с различными формами его включения в жизнь
+                        школы.</p>
+                </div>
+                <div class="summ">{{ scale.trevoga }}%
+                </div>
+            </article>
+        {% endif %}
+        {% if trevoga >= 17 and trevoga  <=  22 %}
+            <article>
+                <div class="name">Высокая тревожность в школе</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.trevoga }}%;"
+                             aria-valuenow="{{ scale.trevoga }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ trevoga }} из 22
                         </div>
-                        <p>Общее эмоциональное состояние ребенка, связанное с различными формами его включения в жизнь
-                            школы.</p>
                     </div>
-                    <div class="summ">{{ scale.trevoga }}%
-                    </div>
-                </article>
-            {% endif %}
-            {% if perejivanie >= 0 and perejivanie  <=  5 %}
-                <article>
-                    <div class="name">Переживания социального стресса</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.perejivanie }}%;"
-                                 aria-valuenow="{{ scale.perejivanie }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ perejivanie }} из 11
-                            </div>
+                    <p>Общее эмоциональное состояние ребенка, связанное с различными формами его включения в жизнь
+                        школы.</p>
+                </div>
+                <div class="summ">{{ scale.trevoga }}%
+                </div>
+            </article>
+        {% endif %}
+        {% if perejivanie >= 0 and perejivanie  <=  5 %}
+            <article>
+                <div class="name">Переживания социального стресса</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.perejivanie }}%;"
+                             aria-valuenow="{{ scale.perejivanie }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ perejivanie }} из 11
                         </div>
-                        <p>Эмоциональное состояние ребенка, на фоне которого развиваются его социальные контакты (прежде всего -
-                            со сверстниками).</p>
                     </div>
-                    <div class="summ">{{ perejivanie }}%
-                    </div>
-                </article>
-            {% endif %}
-            {% if perejivanie >= 6 and perejivanie  <=  8 %}
-                <article>
-                    <div class="name">Повышенное переживание социального стресса</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.perejivanie }}%;"
-                                 aria-valuenow="{{ scale.perejivanie }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ perejivanie }} из 11
-                            </div>
+                    <p>Эмоциональное состояние ребенка, на фоне которого развиваются его социальные контакты (прежде всего -
+                        со сверстниками).</p>
+                </div>
+                <div class="summ">{{ perejivanie }}%
+                </div>
+            </article>
+        {% endif %}
+        {% if perejivanie >= 6 and perejivanie  <=  8 %}
+            <article>
+                <div class="name">Повышенное переживание социального стресса</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.perejivanie }}%;"
+                             aria-valuenow="{{ scale.perejivanie }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ perejivanie }} из 11
                         </div>
-                        <p>Эмоциональное состояние ребенка, на фоне которого развиваются его социальные контакты (прежде всего -
-                            со сверстниками).</p>
                     </div>
-                    <div class="summ">{{ scale.perejivanie }}%
-                    </div>
-                </article>
-            {% endif %}
-            {% if perejivanie >= 9 and perejivanie  <=  11 %}
-                <article>
-                    <div class="name">Высокое переживание социального стресса</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.perejivanie }}%;"
-                                 aria-valuenow="{{ scale.perejivanie }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ perejivanie }} из 11
-                            </div>
+                    <p>Эмоциональное состояние ребенка, на фоне которого развиваются его социальные контакты (прежде всего -
+                        со сверстниками).</p>
+                </div>
+                <div class="summ">{{ scale.perejivanie }}%
+                </div>
+            </article>
+        {% endif %}
+        {% if perejivanie >= 9 and perejivanie  <=  11 %}
+            <article>
+                <div class="name">Высокое переживание социального стресса</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.perejivanie }}%;"
+                             aria-valuenow="{{ scale.perejivanie }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ perejivanie }} из 11
                         </div>
-                        <p>Эмоциональное состояние ребенка, на фоне которого развиваются его социальные контакты (прежде всего -
-                            со сверстниками).</p>
                     </div>
-                    <div class="summ">{{ scale.perejivanie }}%</div>
-                </article>
-            {% endif %}
-            {% if frustraciya >= 0 and frustraciya <= 6 %}
-                <article>
-                    <div class="name">Фрустрация потребности в достижении успеха</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.frustraciya }}%;"
-                                 aria-valuenow="{{ scale.frustraciya }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ frustraciya }} из 13
-                            </div>
+                    <p>Эмоциональное состояние ребенка, на фоне которого развиваются его социальные контакты (прежде всего -
+                        со сверстниками).</p>
+                </div>
+                <div class="summ">{{ scale.perejivanie }}%</div>
+            </article>
+        {% endif %}
+        {% if frustraciya >= 0 and frustraciya <= 6 %}
+            <article>
+                <div class="name">Фрустрация потребности в достижении успеха</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.frustraciya }}%;"
+                             aria-valuenow="{{ scale.frustraciya }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ frustraciya }} из 13
                         </div>
-                        <p>Неблагоприятный психический фон, не позволяющий ребенку развивать свои потребности в успехе,
-                            достижении высокого результата и т. д.</p>
                     </div>
-                    <div class="summ">{{ scale.frustraciya }}%
-                    </div>
-                </article>
-            {% endif %}
-            {% if frustraciya >= 7 and frustraciya  <=  10 %}
-                <article>
-                    <div class="name">Повышенный уровень фрустрации потребности в достижении успеха</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.frustraciya }}%;"
-                                 aria-valuenow="{{ scale.frustraciya }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ frustraciya }} из 13
-                            </div>
+                    <p>Неблагоприятный психический фон, не позволяющий ребенку развивать свои потребности в успехе,
+                        достижении высокого результата и т. д.</p>
+                </div>
+                <div class="summ">{{ scale.frustraciya }}%
+                </div>
+            </article>
+        {% endif %}
+        {% if frustraciya >= 7 and frustraciya  <=  10 %}
+            <article>
+                <div class="name">Повышенный уровень фрустрации потребности в достижении успеха</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.frustraciya }}%;"
+                             aria-valuenow="{{ scale.frustraciya }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ frustraciya }} из 13
                         </div>
-                        <p>Неблагоприятный психический фон, не позволяющий ребенку развивать свои потребности в успехе,
-                            достижении высокого результата и т. д.</p>
                     </div>
-                    <div class="summ">{{ scale.frustraciya }}%</div>
-                </article>
-            {% endif %}
-            {% if frustraciya >= 11 and frustraciya  <=  13 %}
-                <article>
-                    <div class="name">Высокий уровень фрустрации потребности в достижении успеха</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.frustraciya }}%;"
-                                 aria-valuenow="{{ scale.frustraciya }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ frustraciya }} из 13
-                            </div>
+                    <p>Неблагоприятный психический фон, не позволяющий ребенку развивать свои потребности в успехе,
+                        достижении высокого результата и т. д.</p>
+                </div>
+                <div class="summ">{{ scale.frustraciya }}%</div>
+            </article>
+        {% endif %}
+        {% if frustraciya >= 11 and frustraciya  <=  13 %}
+            <article>
+                <div class="name">Высокий уровень фрустрации потребности в достижении успеха</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.frustraciya }}%;"
+                             aria-valuenow="{{ scale.frustraciya }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ frustraciya }} из 13
                         </div>
-                        <p>Неблагоприятный психический фон, не позволяющий ребенку развивать свои потребности в успехе,
-                            достижении высокого результата и т. д.</p>
                     </div>
-                    <div class="summ">{{ scale.frustraciya }}%
-                    </div>
-                </article>
-            {% endif %}
-            {% if samovirajenie >= 0 and samovirajenie  <=  2 %}
-                <article>
-                    <div class="name">Страх самовыражения</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.samovirajenie }}%;"
-                                 aria-valuenow="{{ scale.samovirajenie }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ samovirajenie }} из 6
-                            </div>
+                    <p>Неблагоприятный психический фон, не позволяющий ребенку развивать свои потребности в успехе,
+                        достижении высокого результата и т. д.</p>
+                </div>
+                <div class="summ">{{ scale.frustraciya }}%
+                </div>
+            </article>
+        {% endif %}
+        {% if samovirajenie >= 0 and samovirajenie  <=  2 %}
+            <article>
+                <div class="name">Страх самовыражения</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.samovirajenie }}%;"
+                             aria-valuenow="{{ scale.samovirajenie }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ samovirajenie }} из 6
                         </div>
-                        <p>Негативные эмоциональные переживания ситуаций, сопряженных с необходимостью самораскрытия,
-                            предъявления себя другим, демонстрации своих возможностей.</p>
                     </div>
-                    <div class="summ">{{ scale.samovirajenie }}%</div>
-                </article>
-            {% endif %}
-            {% if samovirajenie >= 3 and samovirajenie  <=  4 %}
-                <article>
-                    <div class="name">Повышенный уровень страха самовыражения</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.samovirajenie }}%;"
-                                 aria-valuenow="{{ scale.samovirajenie }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ samovirajenie }} из 6
-                            </div>
+                    <p>Негативные эмоциональные переживания ситуаций, сопряженных с необходимостью самораскрытия,
+                        предъявления себя другим, демонстрации своих возможностей.</p>
+                </div>
+                <div class="summ">{{ scale.samovirajenie }}%</div>
+            </article>
+        {% endif %}
+        {% if samovirajenie >= 3 and samovirajenie  <=  4 %}
+            <article>
+                <div class="name">Повышенный уровень страха самовыражения</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.samovirajenie }}%;"
+                             aria-valuenow="{{ scale.samovirajenie }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ samovirajenie }} из 6
                         </div>
-                        <p>Негативные эмоциональные переживания ситуаций, сопряженных с необходимостью самораскрытия,
-                            предъявления себя другим, демонстрации своих возможностей.</p>
                     </div>
-                    <div class="summ">{{ scale.samovirajenie }}%</div>
-                </article>
-            {% endif %}
-            {% if samovirajenie >= 5 and samovirajenie  <=  6 %}
-                <article>
-                    <div class="name">Высокий уровень страха самовыражения</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.samovirajenie }}%;"
-                                 aria-valuenow="{{ scale.samovirajenie }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ samovirajenie }} из 6
-                            </div>
+                    <p>Негативные эмоциональные переживания ситуаций, сопряженных с необходимостью самораскрытия,
+                        предъявления себя другим, демонстрации своих возможностей.</p>
+                </div>
+                <div class="summ">{{ scale.samovirajenie }}%</div>
+            </article>
+        {% endif %}
+        {% if samovirajenie >= 5 and samovirajenie  <=  6 %}
+            <article>
+                <div class="name">Высокий уровень страха самовыражения</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.samovirajenie }}%;"
+                             aria-valuenow="{{ scale.samovirajenie }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ samovirajenie }} из 6
                         </div>
-                        <p>Негативные эмоциональные переживания ситуаций, сопряженных с необходимостью самораскрытия,
-                            предъявления себя другим, демонстрации своих возможностей.</p>
                     </div>
-                    <div class="summ">{{ scale.samovirajenie }}%</div>
-                </article>
-            {% endif %}
-            {% if proverka_znaniy >= 0 and proverka_znaniy  <=  2 %}
-                <article>
-                    <div class="name">Страх ситуации проверки знаний</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.proverka_znaniy }}%;"
-                                 aria-valuenow="{{ scale.proverka_znaniy }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ proverka_znaniy }} из 6
-                            </div>
+                    <p>Негативные эмоциональные переживания ситуаций, сопряженных с необходимостью самораскрытия,
+                        предъявления себя другим, демонстрации своих возможностей.</p>
+                </div>
+                <div class="summ">{{ scale.samovirajenie }}%</div>
+            </article>
+        {% endif %}
+        {% if proverka_znaniy >= 0 and proverka_znaniy  <=  2 %}
+            <article>
+                <div class="name">Страх ситуации проверки знаний</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.proverka_znaniy }}%;"
+                             aria-valuenow="{{ scale.proverka_znaniy }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ proverka_znaniy }} из 6
                         </div>
-                        <p>Негативное отношение и переживание тревоги в ситуациях проверки (особенно - публичной) знаний,
-                            достижений, возможностей.</p>
                     </div>
-                    <div class="summ">{{ scale.proverka_znaniy }}%</div>
-                </article>
-            {% endif %}
-            {% if proverka_znaniy >= 3 and proverka_znaniy  <=  4 %}
-                <article>
-                    <div class="name">Повышенный уровень страха ситуации проверки знаний</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.proverka_znaniy }}%;"
-                                 aria-valuenow="{{ scale.proverka_znaniy }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ proverka_znaniy }} из 6
-                            </div>
+                    <p>Негативное отношение и переживание тревоги в ситуациях проверки (особенно - публичной) знаний,
+                        достижений, возможностей.</p>
+                </div>
+                <div class="summ">{{ scale.proverka_znaniy }}%</div>
+            </article>
+        {% endif %}
+        {% if proverka_znaniy >= 3 and proverka_znaniy  <=  4 %}
+            <article>
+                <div class="name">Повышенный уровень страха ситуации проверки знаний</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.proverka_znaniy }}%;"
+                             aria-valuenow="{{ scale.proverka_znaniy }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ proverka_znaniy }} из 6
                         </div>
-                        <p>Негативное отношение и переживание тревоги в ситуациях проверки (особенно - публичной) знаний,
-                            достижений, возможностей.</p>
                     </div>
-                    <div class="summ">{{ scale.proverka_znaniy }}%</div>
-                </article>
-            {% endif %}
-            {% if proverka_znaniy >= 5 and proverka_znaniy  <=  6 %}
-                <article>
-                    <div class="name">Высокий уровень страха ситуации проверки знаний</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.proverka_znaniy }}%;"
-                                 aria-valuenow="{{ scale.proverka_znaniy }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ proverka_znaniy }} из 6
-                            </div>
+                    <p>Негативное отношение и переживание тревоги в ситуациях проверки (особенно - публичной) знаний,
+                        достижений, возможностей.</p>
+                </div>
+                <div class="summ">{{ scale.proverka_znaniy }}%</div>
+            </article>
+        {% endif %}
+        {% if proverka_znaniy >= 5 and proverka_znaniy  <=  6 %}
+            <article>
+                <div class="name">Высокий уровень страха ситуации проверки знаний</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.proverka_znaniy }}%;"
+                             aria-valuenow="{{ scale.proverka_znaniy }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ proverka_znaniy }} из 6
                         </div>
-                        <p>Негативное отношение и переживание тревоги в ситуациях проверки (особенно - публичной) знаний,
-                            достижений, возможностей.</p>
                     </div>
-                    <div class="summ">{{ scale.proverka_znaniy }}%</div>
-                </article>
-            {% endif %}
-            {% if ojidaniya >= 0 and ojidaniya  <=  2 %}
-                <article>
-                    <div class="name">Страх не соответствовать ожиданиям окружающих</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.ojidaniya }}%;"
-                                 aria-valuenow="{{ scale.ojidaniya }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ ojidaniya }} из 5
-                            </div>
+                    <p>Негативное отношение и переживание тревоги в ситуациях проверки (особенно - публичной) знаний,
+                        достижений, возможностей.</p>
+                </div>
+                <div class="summ">{{ scale.proverka_znaniy }}%</div>
+            </article>
+        {% endif %}
+        {% if ojidaniya >= 0 and ojidaniya  <=  2 %}
+            <article>
+                <div class="name">Страх не соответствовать ожиданиям окружающих</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.ojidaniya }}%;"
+                             aria-valuenow="{{ scale.ojidaniya }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ ojidaniya }} из 5
                         </div>
-                        <p>Ориентация на значимость других в оценке своих результатов, поступков, и мыслей, тревога по поводу
-                            оценок, даваемых окружающим, ожидание негативных оценок.</p>
                     </div>
-                    <div class="summ">{{ scale.ojidaniya }}%</div>
-                </article>
-            {% endif %}
-            {% if ojidaniya == 3 %}
-                <article>
-                    <div class="name">Повышенный уровень страха не соответствовать ожиданиям окружающих</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.ojidaniya }}%;"
-                                 aria-valuenow="{{ scale.ojidaniya }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ ojidaniya }} из 5
-                            </div>
+                    <p>Ориентация на значимость других в оценке своих результатов, поступков, и мыслей, тревога по поводу
+                        оценок, даваемых окружающим, ожидание негативных оценок.</p>
+                </div>
+                <div class="summ">{{ scale.ojidaniya }}%</div>
+            </article>
+        {% endif %}
+        {% if ojidaniya == 3 %}
+            <article>
+                <div class="name">Повышенный уровень страха не соответствовать ожиданиям окружающих</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.ojidaniya }}%;"
+                             aria-valuenow="{{ scale.ojidaniya }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ ojidaniya }} из 5
                         </div>
-                        <p>Ориентация на значимость других в оценке своих результатов, поступков, и мыслей, тревога по поводу
-                            оценок, даваемых окружающим, ожидание негативных оценок.</p>
                     </div>
-                    <div class="summ">{{ scale.ojidaniya }}%</div>
-                </article>
-            {% endif %}
-            {% if ojidaniya >= 4 and ojidaniya  <=  5 %}
-                <article>
-                    <div class="name">Высокий уровень страха не соответствовать ожиданиям окружающих</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.ojidaniya }}%;"
-                                 aria-valuenow="{{ scale.ojidaniya }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ ojidaniya }} из 5
-                            </div>
+                    <p>Ориентация на значимость других в оценке своих результатов, поступков, и мыслей, тревога по поводу
+                        оценок, даваемых окружающим, ожидание негативных оценок.</p>
+                </div>
+                <div class="summ">{{ scale.ojidaniya }}%</div>
+            </article>
+        {% endif %}
+        {% if ojidaniya >= 4 and ojidaniya  <=  5 %}
+            <article>
+                <div class="name">Высокий уровень страха не соответствовать ожиданиям окружающих</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.ojidaniya }}%;"
+                             aria-valuenow="{{ scale.ojidaniya }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ ojidaniya }} из 5
                         </div>
-                        <p>Ориентация на значимость других в оценке своих результатов, поступков, и мыслей, тревога по поводу
-                            оценок, даваемых окружающим, ожидание негативных оценок.</p>
                     </div>
-                    <div class="summ">{{ scale.ojidaniya }}%</div>
-                </article>
-            {% endif %}
-            {% if soprotivlyaemost >= 0 and soprotivlyaemost  <=  2 %}
-                <article>
-                    <div class="name">Низкая физиологическая сопротивляемость стрессу</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.soprotivlyaemost }}%;"
-                                 aria-valuenow="{{ scale.soprotivlyaemost }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ soprotivlyaemost }} из 5
-                            </div>
+                    <p>Ориентация на значимость других в оценке своих результатов, поступков, и мыслей, тревога по поводу
+                        оценок, даваемых окружающим, ожидание негативных оценок.</p>
+                </div>
+                <div class="summ">{{ scale.ojidaniya }}%</div>
+            </article>
+        {% endif %}
+        {% if soprotivlyaemost >= 0 and soprotivlyaemost  <=  2 %}
+            <article>
+                <div class="name">Низкая физиологическая сопротивляемость стрессу</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.soprotivlyaemost }}%;"
+                             aria-valuenow="{{ scale.soprotivlyaemost }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ soprotivlyaemost }} из 5
                         </div>
-                        <p>Особенности психофизиологической организации, снижающие приспособляемость ребенка к ситуациям
-                            стрессогенного характера, повышающие вероятность неадекватного, деструктивного реагирования на
-                            тревожный фактор среды.</p>
                     </div>
-                    <div class="summ">{{ scale.soprotivlyaemost }}%</div>
-                </article>
-            {% endif %}
-            {% if soprotivlyaemost == 3 %}
-                <article>
-                    <div class="name">Повышенный уровень низкой физиологической сопротивляемости стрессу</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.soprotivlyaemost }}%;"
-                                 aria-valuenow="{{ scale.soprotivlyaemost }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ soprotivlyaemost }} из 5
-                            </div>
+                    <p>Особенности психофизиологической организации, снижающие приспособляемость ребенка к ситуациям
+                        стрессогенного характера, повышающие вероятность неадекватного, деструктивного реагирования на
+                        тревожный фактор среды.</p>
+                </div>
+                <div class="summ">{{ scale.soprotivlyaemost }}%</div>
+            </article>
+        {% endif %}
+        {% if soprotivlyaemost == 3 %}
+            <article>
+                <div class="name">Повышенный уровень низкой физиологической сопротивляемости стрессу</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.soprotivlyaemost }}%;"
+                             aria-valuenow="{{ scale.soprotivlyaemost }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ soprotivlyaemost }} из 5
                         </div>
-                        <p>Особенности психофизиологической организации, снижающие приспособляемость ребенка к ситуациям
-                            стрессогенного характера, повышающие вероятность неадекватного, деструктивного реагирования на
-                            тревожный фактор среды.</p>
                     </div>
-                    <div class="summ">{{ scale.soprotivlyaemost }}%</div>
-                </article>
-            {% endif %}
-            {% if soprotivlyaemost >= 4 and soprotivlyaemost  <=  5 %}
-                <article>
-                    <div class="name">Высокий уровень низкой физиологической сопротивляемости стрессу</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.soprotivlyaemost }}%;"
-                                 aria-valuenow="{{ scale.soprotivlyaemost }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ soprotivlyaemost }} из 5
-                            </div>
+                    <p>Особенности психофизиологической организации, снижающие приспособляемость ребенка к ситуациям
+                        стрессогенного характера, повышающие вероятность неадекватного, деструктивного реагирования на
+                        тревожный фактор среды.</p>
+                </div>
+                <div class="summ">{{ scale.soprotivlyaemost }}%</div>
+            </article>
+        {% endif %}
+        {% if soprotivlyaemost >= 4 and soprotivlyaemost  <=  5 %}
+            <article>
+                <div class="name">Высокий уровень низкой физиологической сопротивляемости стрессу</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.soprotivlyaemost }}%;"
+                             aria-valuenow="{{ scale.soprotivlyaemost }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ soprotivlyaemost }} из 5
                         </div>
-                        <p>Особенности психофизиологической организации, снижающие приспособляемость ребенка к ситуациям
-                            стрессогенного характера, повышающие вероятность неадекватного, деструктивного реагирования на
-                            тревожный фактор среды.</p>
                     </div>
-                    <div class="summ">{{ scale.soprotivlyaemost }}%</div>
-                </article>
-            {% endif %}
-            {% if otnosheniya >= 0 and otnosheniya  <=  4 %}
-                <article>
-                    <div class="name">Проблемы и страхи в отношениях с учителями</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.otnosheniya }}%;"
-                                 aria-valuenow="{{ scale.otnosheniya }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ otnosheniya }} из 8
-                            </div>
+                    <p>Особенности психофизиологической организации, снижающие приспособляемость ребенка к ситуациям
+                        стрессогенного характера, повышающие вероятность неадекватного, деструктивного реагирования на
+                        тревожный фактор среды.</p>
+                </div>
+                <div class="summ">{{ scale.soprotivlyaemost }}%</div>
+            </article>
+        {% endif %}
+        {% if otnosheniya >= 0 and otnosheniya  <=  4 %}
+            <article>
+                <div class="name">Проблемы и страхи в отношениях с учителями</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.otnosheniya }}%;"
+                             aria-valuenow="{{ scale.otnosheniya }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ otnosheniya }} из 8
                         </div>
-                        <p>Общий негативный эмоциональный фон отношений со взрослыми в школе, снижающий успешность обучения
-                            ребенка.</p>
                     </div>
-                    <div class="summ">{{ scale.otnosheniya }}%</div>
-                </article>
-            {% endif %}
-            {% if otnosheniya == 5 %}
-                <article>
-                    <div class="name">Повышенный уровень проблем и страхов в отношениях с учителями</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.otnosheniya }}%;"
-                                 aria-valuenow="{{ scale.otnosheniya }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ otnosheniya }} из 8
-                            </div>
+                    <p>Общий негативный эмоциональный фон отношений со взрослыми в школе, снижающий успешность обучения
+                        ребенка.</p>
+                </div>
+                <div class="summ">{{ scale.otnosheniya }}%</div>
+            </article>
+        {% endif %}
+        {% if otnosheniya == 5 %}
+            <article>
+                <div class="name">Повышенный уровень проблем и страхов в отношениях с учителями</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.otnosheniya }}%;"
+                             aria-valuenow="{{ scale.otnosheniya }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ otnosheniya }} из 8
                         </div>
-                        <p>Общий негативный эмоциональный фон отношений со взрослыми в школе, снижающий успешность обучения
-                            ребенка.</p>
                     </div>
-                    <div class="summ">{{ scale.otnosheniya }}%</div>
-                </article>
-            {% endif %}
-            {% if otnosheniya >= 6 and otnosheniya  <=  8 %}
-                <article>
-                    <div class="name">Высокий уровень проблем и страхов в отношениях с учителями</div>
-                    <div class="progress-place">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: {{ scale.otnosheniya }}%;"
-                                 aria-valuenow="{{ scale.otnosheniya }}"
-                                 aria-valuemin="0"
-                                 aria-valuemax="100">{{ otnosheniya }} из 8
-                            </div>
+                    <p>Общий негативный эмоциональный фон отношений со взрослыми в школе, снижающий успешность обучения
+                        ребенка.</p>
+                </div>
+                <div class="summ">{{ scale.otnosheniya }}%</div>
+            </article>
+        {% endif %}
+        {% if otnosheniya >= 6 and otnosheniya  <=  8 %}
+            <article>
+                <div class="name">Высокий уровень проблем и страхов в отношениях с учителями</div>
+                <div class="progress-place">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: {{ scale.otnosheniya }}%;"
+                             aria-valuenow="{{ scale.otnosheniya }}"
+                             aria-valuemin="0"
+                             aria-valuemax="100">{{ otnosheniya }} из 8
                         </div>
-                        <p>Общий негативный эмоциональный фон отношений со взрослыми в школе, снижающий успешность обучения
-                            ребенка.</p>
                     </div>
-                    <div class="summ">{{ scale.otnosheniya }}%</div>
-                </article>
-            {% endif %}
-        </div>
+                    <p>Общий негативный эмоциональный фон отношений со взрослыми в школе, снижающий успешность обучения
+                        ребенка.</p>
+                </div>
+                <div class="summ">{{ scale.otnosheniya }}%</div>
+            </article>
+        {% endif %}
     </div>
 {% endblock %}

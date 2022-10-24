@@ -1,30 +1,28 @@
 {#{% extends('tests/result.html.twig') %}#}
 
 {% block result %}
-    <div class="container">
-        {% if sum >= 13 and sum <= 16 %}
-            <p><b>Вы отгадали большинство стран! Это впечатляет!</b></p>
-            {% elseif sum >= 8 and sum <= 12 %}
-            <p><b>Хоть вам и не удалось ответить на все вопросы верно, но чёрт возьми, как вы смогли ответить на {{ sum }} вопросов?!</b></p>
-            {% elseif sum >= 5 and sum <= 7 %}
-            <p><b>Вы не смогли отгадать и половину стран. Тем не менее, ответы на {{ sum }} вопросов вам оказались известны!</b></p>
-            {% elseif sum >= 0 and sum <= 4 %}
-            <p><b>Вы не смогли отгадать и половину стран. Тем не менее, ответы на {{ sum }} вопроса вам оказались известны!</b></p>
-        {% endif %}
+    {% if sum >= 13 and sum <= 16 %}
+        <p><b>Вы отгадали большинство стран! Это впечатляет!</b></p>
+    {% elseif sum >= 8 and sum <= 12 %}
+        <p><b>Хоть вам и не удалось ответить на все вопросы верно, но чёрт возьми, как вы смогли ответить на {{ sum }} вопросов?!</b></p>
+    {% elseif sum >= 5 and sum <= 7 %}
+        <p><b>Вы не смогли отгадать и половину стран. Тем не менее, ответы на {{ sum }} вопросов вам оказались известны!</b></p>
+    {% elseif sum >= 0 and sum <= 4 %}
+        <p><b>Вы не смогли отгадать и половину стран. Тем не менее, ответы на {{ sum }} вопроса вам оказались известны!</b></p>
+    {% endif %}
 
-        <p>{% trans %}Correct answers{% endtrans %}:</p>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: {{ scale }}%;"
-                 aria-valuenow="{{ scale }}"
-                 aria-valuemin="0"
-                 aria-valuemax="100">{{ sum }} {% trans %}out of{% endtrans %} 16
-            </div>
+    <p>{% trans %}Correct answers{% endtrans %}:</p>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: {{ scale }}%;"
+             aria-valuenow="{{ scale }}"
+             aria-valuemin="0"
+             aria-valuemax="100">{{ sum }} {% trans %}out of{% endtrans %} 16
         </div>
-
-        <br/>
-
-        {% if sum >= 16 %}
-            {% include "/tests/_medal.html.twig" with {'name': 'Странный эксперт'|trans} %}
-        {% endif %}
     </div>
+
+    <br/>
+
+    {% if sum >= 16 %}
+        {% include "/tests/_medal.html.twig" with {'name': 'Странный эксперт'|trans} %}
+    {% endif %}
 {% endblock %}

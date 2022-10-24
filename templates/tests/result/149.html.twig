@@ -1,77 +1,73 @@
-{% extends('tests/result.html.twig') %}
+{#{% extends('tests/result.html.twig') %}#}
 
 {% block result %}
-    <div class="container">
-        {% if t >= 15 and t <= 20 %}
-            <p><b>У вас очень тревожное психическое состояние.</b></p>
-            {% elseif t >= 8 and t <= 14 %}
-            <p><b>У вас тревожность средняя, допустимого уровня.</b></p>
-            {% elseif t >= 0 and t <= 7 %}
-            <p><b>У вас нет тревожного психического состояния.</b></p>
-        {% endif %}
+    {% if t >= 15 and t <= 20 %}
+        <p><b>У вас очень тревожное психическое состояние.</b></p>
+    {% elseif t >= 8 and t <= 14 %}
+        <p><b>У вас тревожность средняя, допустимого уровня.</b></p>
+    {% elseif t >= 0 and t <= 7 %}
+        <p><b>У вас нет тревожного психического состояния.</b></p>
+    {% endif %}
 
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: {{ scale.t }}%;"
-                 aria-valuenow="{{ scale.t }}"
-                 aria-valuemin="0"
-                 aria-valuemax="100">{{ t }} {% trans %}out of{% endtrans %} 20
-            </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: {{ scale.t }}%;"
+             aria-valuenow="{{ scale.t }}"
+             aria-valuemin="0"
+             aria-valuemax="100">{{ t }} {% trans %}out of{% endtrans %} 20
         </div>
+    </div>
 
-        <br/>
+    <br/>
 
-        {% if f >= 15 and f <= 20 %}
-            <p><b>У вас низкая самооценка, вы избегаете трудностей, боитесь неудач.</b></p>
-            {% elseif f >= 8 and f <= 14 %}
-            <p><b>У вас средний уровень фрустрации.</b></p>
-            {% elseif f >= 0 and f <= 7 %}
-            <p><b>Вы имеете высокую самооценку, устойчивы к неудачам и не боитесь трудностей.</b></p>
-        {% endif %}
+    {% if f >= 15 and f <= 20 %}
+        <p><b>У вас низкая самооценка, вы избегаете трудностей, боитесь неудач.</b></p>
+    {% elseif f >= 8 and f <= 14 %}
+        <p><b>У вас средний уровень фрустрации.</b></p>
+    {% elseif f >= 0 and f <= 7 %}
+        <p><b>Вы имеете высокую самооценку, устойчивы к неудачам и не боитесь трудностей.</b></p>
+    {% endif %}
 
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: {{ scale.f }}%;"
-                 aria-valuenow="{{ scale.f }}"
-                 aria-valuemin="0"
-                 aria-valuemax="100">{{ f }} {% trans %}out of{% endtrans %} 20
-            </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: {{ scale.f }}%;"
+             aria-valuenow="{{ scale.f }}"
+             aria-valuemin="0"
+             aria-valuemax="100">{{ f }} {% trans %}out of{% endtrans %} 20
         </div>
+    </div>
 
-        <br/>
+    <br/>
 
-        {% if a >= 15 and a <= 20 %}
-            <p><b>Вы агрессивны, невыдержанны. Есть трудности в работе с людьми.</b></p>
-            {% elseif a >= 8 and a <= 14 %}
-            <p><b>У вас средний уровень агрессивности.</b></p>
-            {% elseif a >= 0 and a <= 7 %}
-            <p><b>Вы спокойны, выдержаны.</b></p>
-        {% endif %}
+    {% if a >= 15 and a <= 20 %}
+        <p><b>Вы агрессивны, невыдержанны. Есть трудности в работе с людьми.</b></p>
+    {% elseif a >= 8 and a <= 14 %}
+        <p><b>У вас средний уровень агрессивности.</b></p>
+    {% elseif a >= 0 and a <= 7 %}
+        <p><b>Вы спокойны, выдержаны.</b></p>
+    {% endif %}
 
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: {{ scale.a }}%;"
-                 aria-valuenow="{{ scale.a }}"
-                 aria-valuemin="0"
-                 aria-valuemax="100">{{ a }} {% trans %}out of{% endtrans %} 20
-            </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: {{ scale.a }}%;"
+             aria-valuenow="{{ scale.a }}"
+             aria-valuemin="0"
+             aria-valuemax="100">{{ a }} {% trans %}out of{% endtrans %} 20
         </div>
+    </div>
 
-        <br/>
+    <br/>
 
-        {% if r >= 15 and r <= 20 %}
-            <p><b>Сильно выраженная ригидность, вам противопоказаны смена места работы, изменения в семье.</b></p>
-            {% elseif r >= 8 and r <= 14 %}
-            <p><b>У вас средний уровень ригидности.</b></p>
-            {% elseif r >= 0 and r <= 7 %}
-            <p><b>Ригидности нет, легкая переключаемость.</b></p>
-        {% endif %}
+    {% if r >= 15 and r <= 20 %}
+        <p><b>Сильно выраженная ригидность, вам противопоказаны смена места работы, изменения в семье.</b></p>
+    {% elseif r >= 8 and r <= 14 %}
+        <p><b>У вас средний уровень ригидности.</b></p>
+    {% elseif r >= 0 and r <= 7 %}
+        <p><b>Ригидности нет, легкая переключаемость.</b></p>
+    {% endif %}
 
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: {{ scale.r }}%;"
-                 aria-valuenow="{{ scale.r }}"
-                 aria-valuemin="0"
-                 aria-valuemax="100">{{ r }} {% trans %}out of{% endtrans %} 20
-            </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: {{ scale.r }}%;"
+             aria-valuenow="{{ scale.r }}"
+             aria-valuemin="0"
+             aria-valuemax="100">{{ r }} {% trans %}out of{% endtrans %} 20
         </div>
-
-        <br/>
     </div>
 {% endblock %}

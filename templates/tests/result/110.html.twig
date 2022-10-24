@@ -14,84 +14,82 @@
             }
         }
     </style>
-    <div class="container">
-        <table class="table result_table">
-            <tr>
-                <td><b>Соперничество (конкуренция) или административный тип</b>, как стремление добиться удовлетворения
-                    своих интересов в ущерб другому.
-                </td>
-                <td>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: {{ Sopernichestvo.percentage }}%;"
-                             aria-valuenow="{{ Sopernichestvo.percentage }}" aria-valuemin="0"
-                             aria-valuemax="100">{{ Sopernichestvo.sum }} из 12
-                        </div>
+    <table class="table result_table">
+        <tr>
+            <td><b>Соперничество (конкуренция) или административный тип</b>, как стремление добиться удовлетворения
+                своих интересов в ущерб другому.
+            </td>
+            <td>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: {{ Sopernichestvo.percentage }}%;"
+                         aria-valuenow="{{ Sopernichestvo.percentage }}" aria-valuemin="0"
+                         aria-valuemax="100">{{ Sopernichestvo.sum }} из 12
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <td><b>Сотрудничество или корпоративный тип</b>, когда участники ситуации приходят к альтернативе,
-                    полностью удовлетворяющей интересы обеих сторон.
-                </td>
-                <td>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: {{ Sotrudnichestvo.percentage }}%;"
-                             aria-valuenow="{{ Sotrudnichestvo.percentage }}" aria-valuemin="0"
-                             aria-valuemax="100">{{ Sotrudnichestvo.sum }} из 12
-                        </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Сотрудничество или корпоративный тип</b>, когда участники ситуации приходят к альтернативе,
+                полностью удовлетворяющей интересы обеих сторон.
+            </td>
+            <td>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: {{ Sotrudnichestvo.percentage }}%;"
+                         aria-valuenow="{{ Sotrudnichestvo.percentage }}" aria-valuemin="0"
+                         aria-valuemax="100">{{ Sotrudnichestvo.sum }} из 12
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <td><b>Компромисс или экономический тип</b>.</td>
-                <td>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: {{ Kompromiss.percentage }}%;"
-                             aria-valuenow="{{ Kompromiss.percentage }}" aria-valuemin="0"
-                             aria-valuemax="100">{{ Kompromiss.sum }} из 12
-                        </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Компромисс или экономический тип</b>.</td>
+            <td>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: {{ Kompromiss.percentage }}%;"
+                         aria-valuenow="{{ Kompromiss.percentage }}" aria-valuemin="0"
+                         aria-valuemax="100">{{ Kompromiss.sum }} из 12
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <td><b>Избегание или традиционный тип</b>, для которого характерно как отсутствие стремления к
-                    кооперации, так и отсутствие тенденции к достижению собственных целей.
-                </td>
-                <td>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: {{ Izbeganie.percentage }}%;"
-                             aria-valuenow="{{ Izbeganie.percentage }}" aria-valuemin="0"
-                             aria-valuemax="100">{{ Izbeganie.sum }} из 12
-                        </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Избегание или традиционный тип</b>, для которого характерно как отсутствие стремления к
+                кооперации, так и отсутствие тенденции к достижению собственных целей.
+            </td>
+            <td>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: {{ Izbeganie.percentage }}%;"
+                         aria-valuenow="{{ Izbeganie.percentage }}" aria-valuemin="0"
+                         aria-valuemax="100">{{ Izbeganie.sum }} из 12
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <td><b>Приспособление (приспосабливание)</b>, означающее, в противоположность соперничеству, принесение
-                    в жертву собственных интересов ради интересов другого человека.
-                </td>
-                <td>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: {{ Prisposoblenie.percentage }}%;"
-                             aria-valuenow="{{ Prisposoblenie.percentage }}" aria-valuemin="0"
-                             aria-valuemax="100">{{ Prisposoblenie.sum }} из 12
-                        </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Приспособление (приспосабливание)</b>, означающее, в противоположность соперничеству, принесение
+                в жертву собственных интересов ради интересов другого человека.
+            </td>
+            <td>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: {{ Prisposoblenie.percentage }}%;"
+                         aria-valuenow="{{ Prisposoblenie.percentage }}" aria-valuemin="0"
+                         aria-valuemax="100">{{ Prisposoblenie.sum }} из 12
                     </div>
-                </td>
-            </tr>
-        </table>
-        <p>К. Томас полагал, что при избегании конфликта ни одна из сторон не достигнет успеха. При таких формах
-            поведения как конкуренция, приспособление и компромисс или один участник оказывается в выигрыше, а другой
-            проигрывает, либо проигрывают оба, так как идут на компромиссные уступки. И только в ситуации сотрудничества
-            обе стороны оказываются в выигрыше.</p>
-        <p>Другие специалисты убеждены, что оптимальной стратегией в конфликте считается такая, когда применяются все
-            пять тактик поведения, и каждая из них имеет значение в интервале от 5 до 7 баллов. Если ваш результат
-            отличен от оптимального, то одни тактики выражены слабо - имеют значения ниже 5 баллов, другие - сильно -
-            выше 7 баллов.</p>
-        <p>Формулы, для прогнозирования исхода конфликтной ситуации:</p>
-        <p>А) Соревнование + Решение проблемы + 1/2 Компромисса <br>
-            Б) Приспособление + Избегание + 1/2 Компромисса</p>
-        <p>Если сумма А > суммы Б, шанс выиграть конфликтную ситуацию есть у вас. <br>
-            Если сумма Б > суммы А, шанс выиграть конфликт есть у вашего оппонента.</p>
-    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <p>К. Томас полагал, что при избегании конфликта ни одна из сторон не достигнет успеха. При таких формах
+        поведения как конкуренция, приспособление и компромисс или один участник оказывается в выигрыше, а другой
+        проигрывает, либо проигрывают оба, так как идут на компромиссные уступки. И только в ситуации сотрудничества
+        обе стороны оказываются в выигрыше.</p>
+    <p>Другие специалисты убеждены, что оптимальной стратегией в конфликте считается такая, когда применяются все
+        пять тактик поведения, и каждая из них имеет значение в интервале от 5 до 7 баллов. Если ваш результат
+        отличен от оптимального, то одни тактики выражены слабо - имеют значения ниже 5 баллов, другие - сильно -
+        выше 7 баллов.</p>
+    <p>Формулы, для прогнозирования исхода конфликтной ситуации:</p>
+    <p>А) Соревнование + Решение проблемы + 1/2 Компромисса <br>
+        Б) Приспособление + Избегание + 1/2 Компромисса</p>
+    <p>Если сумма А > суммы Б, шанс выиграть конфликтную ситуацию есть у вас. <br>
+        Если сумма Б > суммы А, шанс выиграть конфликт есть у вашего оппонента.</p>
 {% endblock %}

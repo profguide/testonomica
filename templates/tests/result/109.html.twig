@@ -1,106 +1,104 @@
 {#{% extends('tests/result.html.twig') %}#}
 
 {% block result %}
-    <div class="container">
-        {% if total >= 30 %}
-            <div>У вас очень высокий уровень эмпатии</div>
-        {% endif %}
-        {% if total >= 22 and total <= 29 %}
-            <div>У вас средний уровень эмпатии</div>
-        {% endif %}
-        {% if total >= 15 and total <= 21 %}
-            <div>У вас заниженный уровень эмпатии</div>
-        {% endif %}
-        {% if total <= 14 %}
-            <div>У вас очень низкий уровень эмпатии</div>
-        {% endif %}
-        <br>
-        {% if Racionalniy.sum >= 0 and Racionalniy.sum <= 6 %}
-            <h4>Рациональный канал эмпатии</h4>
-            <div class="progress" style="margin-bottom: 15px;">
-                <div class="progress-bar" role="progressbar" style="width: {{ Racionalniy.percentage }}%" aria-valuenow="{{ Racionalniy.percentage }}"
-                     aria-valuemin="0" aria-valuemax="100">{{ Racionalniy.sum }} из 6
-                </div>
+    {% if total >= 30 %}
+        <div>У вас очень высокий уровень эмпатии</div>
+    {% endif %}
+    {% if total >= 22 and total <= 29 %}
+        <div>У вас средний уровень эмпатии</div>
+    {% endif %}
+    {% if total >= 15 and total <= 21 %}
+        <div>У вас заниженный уровень эмпатии</div>
+    {% endif %}
+    {% if total <= 14 %}
+        <div>У вас очень низкий уровень эмпатии</div>
+    {% endif %}
+    <br>
+    {% if Racionalniy.sum >= 0 and Racionalniy.sum <= 6 %}
+        <h4>Рациональный канал эмпатии</h4>
+        <div class="progress" style="margin-bottom: 15px;">
+            <div class="progress-bar" role="progressbar" style="width: {{ Racionalniy.percentage }}%" aria-valuenow="{{ Racionalniy.percentage }}"
+                 aria-valuemin="0" aria-valuemax="100">{{ Racionalniy.sum }} из 6
             </div>
-            <div>Характеризует направленность внимания, восприятия и мышления эмпатирующего на сущность любого другого человека
-                — на его состояние, проблемы, поведение. Это спонтанный интерес к другому, открывающий шлюзы эмоционального и
-                интуитивного отражения партнера. В рациональном компоненте эмпатии не следует искать логику или мотивацию
-                интереса к другому. Партнер привлекает внимание своей бытийностью, что позволяет эмпатирующему непредвзято
-                выявлять его сущность.
+        </div>
+        <div>Характеризует направленность внимания, восприятия и мышления эмпатирующего на сущность любого другого человека
+            — на его состояние, проблемы, поведение. Это спонтанный интерес к другому, открывающий шлюзы эмоционального и
+            интуитивного отражения партнера. В рациональном компоненте эмпатии не следует искать логику или мотивацию
+            интереса к другому. Партнер привлекает внимание своей бытийностью, что позволяет эмпатирующему непредвзято
+            выявлять его сущность.
+        </div>
+    {% endif %}
+    <br>
+    {% if Emocionalniy.sum >= 0 and Emocionalniy.sum  <= 6 %}
+        <h4>Эмоциональный канал эмпатии</h4>
+        <div class="progress" style="margin-bottom: 15px;">
+            <div class="progress-bar" role="progressbar" style="width: {{ Emocionalniy.percentage }}%;" aria-valuenow="{{ Emocionalniy.percentage }}"
+                 aria-valuemin="0" aria-valuemax="100">{{ Emocionalniy.sum }} из 6
             </div>
-        {% endif %}
-        <br>
-        {% if Emocionalniy.sum >= 0 and Emocionalniy.sum  <= 6 %}
-            <h4>Эмоциональный канал эмпатии</h4>
-            <div class="progress" style="margin-bottom: 15px;">
-                <div class="progress-bar" role="progressbar" style="width: {{ Emocionalniy.percentage }}%;" aria-valuenow="{{ Emocionalniy.percentage }}"
-                     aria-valuemin="0" aria-valuemax="100">{{ Emocionalniy.sum }} из 6
-                </div>
+        </div>
+        <div>Фиксируется способность эмпатирующего входить в одну эмоциональную "волну" с окружающими — сопереживать,
+            соучаствовать. Эмоциональная отзывчивость в данном случае становится средством “вхождения” в энергетическое поле
+            партнера. Понять его внутренний мир, прогнозировать поведение и эффективно воздействовать возможно только в том
+            случае, если произошла эмоциональная подстройка к эмпатируемому. Соучастие и сопереживание выполняют роль
+            связующего звена, проводника от эмпатирующего к эмпатируемому и обратно.
+        </div>
+    {% endif %}
+    <br>
+    {% if Intuitivniy.sum >= 0 and Intuitivniy.sum  <= 6 %}
+        <h4>Интуитивный канал эмпатии</h4>
+        <div class="progress" style="margin-bottom: 15px;">
+            <div class="progress-bar" role="progressbar" style="width: {{ Intuitivniy.percentage }}%;" aria-valuenow="{{ Intuitivniy.percentage }}"
+                 aria-valuemin="0" aria-valuemax="100">{{ Intuitivniy.sum }} из 6
             </div>
-            <div>Фиксируется способность эмпатирующего входить в одну эмоциональную "волну" с окружающими — сопереживать,
-                соучаствовать. Эмоциональная отзывчивость в данном случае становится средством “вхождения” в энергетическое поле
-                партнера. Понять его внутренний мир, прогнозировать поведение и эффективно воздействовать возможно только в том
-                случае, если произошла эмоциональная подстройка к эмпатируемому. Соучастие и сопереживание выполняют роль
-                связующего звена, проводника от эмпатирующего к эмпатируемому и обратно.
+        </div>
+        <div>Балльная оценка свидетельствует о способности человека видеть поведение партнеров, действовать в условиях
+            нехватки объективной информации о них, опираясь на опыт, хранящийся в подсознании. На уровне интуиции
+            формируются различные сведения о партнерах. Интуиция менее зависит от стереотипов, чем осмысленное понимание
+            партнеров.
+        </div>
+    {% endif %}
+    <br>
+    {% if Ustanovki.sum >= 0 and Ustanovki.sum  <= 6 %}
+        <h4>Установки, способствующие эмпатии</h4>
+        <div class="progress" style="margin-bottom: 15px;">
+            <div class="progress-bar" role="progressbar" style="width: {{ Ustanovki.percentage }}%;" aria-valuenow="{{ Ustanovki.percentage }}"
+                 aria-valuemin="0" aria-valuemax="100">{{ Ustanovki.sum }} из 6
             </div>
-        {% endif %}
-        <br>
-        {% if Intuitivniy.sum >= 0 and Intuitivniy.sum  <= 6 %}
-            <h4>Интуитивный канал эмпатии</h4>
-            <div class="progress" style="margin-bottom: 15px;">
-                <div class="progress-bar" role="progressbar" style="width: {{ Intuitivniy.percentage }}%;" aria-valuenow="{{ Intuitivniy.percentage }}"
-                     aria-valuemin="0" aria-valuemax="100">{{ Intuitivniy.sum }} из 6
-                </div>
+        </div>
+        <div>Установки, способствующие или препятствующие эмпатии, соответственно, облегчают или затрудняют действие всех
+            эмпатических каналов. Эффективность эмпатии снижается, если человек старается избегать личных контактов, считает
+            неуместным проявлять любопытство к другой личности, убедил себя спокойно относиться к переживаниям и проблемам
+            окружающих. Подобные умонастроения резко ограничивают диапазон эмоциональной отзывчивости и эмпатического
+            восприятия. Напротив, различные каналы эмпатии действуют активнее и надежнее, если нет препятствий со стороны
+            установок личности.
+        </div>
+    {% endif %}
+    <br>
+    {% if Pronikaushaya.sum >= 0 and Pronikaushaya.sum <= 6 %}
+        <h4>Проникающая способность в эмпатии</h4>
+        <div class="progress" style="margin-bottom: 15px;">
+            <div class="progress-bar" role="progressbar" style="width: {{ Pronikaushaya.percentage }}%;" aria-valuenow="{{ Pronikaushaya.percentage }}"
+                 aria-valuemin="0" aria-valuemax="100">{{ Pronikaushaya.sum }} из 6
             </div>
-            <div>Балльная оценка свидетельствует о способности человека видеть поведение партнеров, действовать в условиях
-                нехватки объективной информации о них, опираясь на опыт, хранящийся в подсознании. На уровне интуиции
-                формируются различные сведения о партнерах. Интуиция менее зависит от стереотипов, чем осмысленное понимание
-                партнеров.
+        </div>
+        <div>Проникающая способность в эмпатии расценивается как важное коммуникативное свойство человека, позволяющее
+            создавать атмосферу открытости, доверительности, задушевности. Каждый из нас своим поведением и отношением к
+            партнерам способствует словесно-эмоциональному обмену или препятствует ему. Расслабление партнера содействует
+            эмпатии, а атмосфера напряженности, неестественности, подозрительности препятствует раскрытию и эмпатическому
+            постижению.
+        </div>
+    {% endif %}
+    <br>
+    {% if Identifikaciya.sum >= 0 and Identifikaciya.sum <= 6 %}
+        <h4>Идентификация в эмпатии</h4>
+        <div class="progress" style="margin-bottom: 15px;">
+            <div class="progress-bar" role="progressbar" style="width: {{ Identifikaciya.percentage }}%;" aria-valuenow="{{ Identifikaciya.percentage }}"
+                 aria-valuemin="0" aria-valuemax="100">{{ Identifikaciya.sum }} из 6
             </div>
-        {% endif %}
-        <br>
-        {% if Ustanovki.sum >= 0 and Ustanovki.sum  <= 6 %}
-            <h4>Установки, способствующие эмпатии</h4>
-            <div class="progress" style="margin-bottom: 15px;">
-                <div class="progress-bar" role="progressbar" style="width: {{ Ustanovki.percentage }}%;" aria-valuenow="{{ Ustanovki.percentage }}"
-                     aria-valuemin="0" aria-valuemax="100">{{ Ustanovki.sum }} из 6
-                </div>
-            </div>
-            <div>Установки, способствующие или препятствующие эмпатии, соответственно, облегчают или затрудняют действие всех
-                эмпатических каналов. Эффективность эмпатии снижается, если человек старается избегать личных контактов, считает
-                неуместным проявлять любопытство к другой личности, убедил себя спокойно относиться к переживаниям и проблемам
-                окружающих. Подобные умонастроения резко ограничивают диапазон эмоциональной отзывчивости и эмпатического
-                восприятия. Напротив, различные каналы эмпатии действуют активнее и надежнее, если нет препятствий со стороны
-                установок личности.
-            </div>
-        {% endif %}
-        <br>
-        {% if Pronikaushaya.sum >= 0 and Pronikaushaya.sum <= 6 %}
-            <h4>Проникающая способность в эмпатии</h4>
-            <div class="progress" style="margin-bottom: 15px;">
-                <div class="progress-bar" role="progressbar" style="width: {{ Pronikaushaya.percentage }}%;" aria-valuenow="{{ Pronikaushaya.percentage }}"
-                     aria-valuemin="0" aria-valuemax="100">{{ Pronikaushaya.sum }} из 6
-                </div>
-            </div>
-            <div>Проникающая способность в эмпатии расценивается как важное коммуникативное свойство человека, позволяющее
-                создавать атмосферу открытости, доверительности, задушевности. Каждый из нас своим поведением и отношением к
-                партнерам способствует словесно-эмоциональному обмену или препятствует ему. Расслабление партнера содействует
-                эмпатии, а атмосфера напряженности, неестественности, подозрительности препятствует раскрытию и эмпатическому
-                постижению.
-            </div>
-        {% endif %}
-        <br>
-        {% if Identifikaciya.sum >= 0 and Identifikaciya.sum <= 6 %}
-            <h4>Идентификация в эмпатии</h4>
-            <div class="progress" style="margin-bottom: 15px;">
-                <div class="progress-bar" role="progressbar" style="width: {{ Identifikaciya.percentage }}%;" aria-valuenow="{{ Identifikaciya.percentage }}"
-                     aria-valuemin="0" aria-valuemax="100">{{ Identifikaciya.sum }} из 6
-                </div>
-            </div>
-            <div>Идентификация — еще одно непременное условие успешной эмпатии. Это умение понять другого на основе
-                сопереживаний, постановки себя на место партнера. В основе идентификации легкость, подвижность и гибкость
-                эмоций, способность к подражанию.
-            </div>
-        {% endif %}
-    </div>
+        </div>
+        <div>Идентификация — еще одно непременное условие успешной эмпатии. Это умение понять другого на основе
+            сопереживаний, постановки себя на место партнера. В основе идентификации легкость, подвижность и гибкость
+            эмоций, способность к подражанию.
+        </div>
+    {% endif %}
 {% endblock %}

@@ -1,19 +1,17 @@
-{% extends('tests/result.html.twig') %}
+{#{% extends('tests/result.html.twig') %}#}
 
 {% block result %}
-    <div class="container">
-        {% if sum >= 24 %}
-            <p><b>Высокая вероятность невроза</b></p>
-            {% elseif sum >= 0 and sum <= 23 %}
-            <p><b>Низкая вероятность невроза</b></p>
-        {% endif %}
+    {% if sum >= 24 %}
+        <p><b>Высокая вероятность невроза</b></p>
+    {% elseif sum >= 0 and sum <= 23 %}
+        <p><b>Низкая вероятность невроза</b></p>
+    {% endif %}
 
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: {{ scale }}%;"
-                 aria-valuenow="{{ scale }}"
-                 aria-valuemin="0"
-                 aria-valuemax="100">{{ sum }} {% trans %}out of{% endtrans %} 40
-            </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: {{ scale }}%;"
+             aria-valuenow="{{ scale }}"
+             aria-valuemin="0"
+             aria-valuemax="100">{{ sum }} {% trans %}out of{% endtrans %} 40
         </div>
     </div>
 {% endblock %}

@@ -1,33 +1,30 @@
-{% extends('tests/result.html.twig') %}
+{#{% extends('tests/result.html.twig') %}#}
 
 {% block result %}
-    <div class="container">
-        {% if sum >= 3.5 %}
-            <p><b>Очень высокий уровень фрустрированности.</b></p>
-            {% elseif sum >= 3 and sum < 3.5 %}
-            <p><b>Повышенный высокий уровень фрустрированности.</b></p>
-            {% elseif sum >= 2.5 and sum < 3 %}
-            <p><b>Умеренный уровень фрустрированности.</b></p>
-            {% elseif sum >= 2 and sum < 2.5 %}
-            <p><b>Неопределённый уровень фрустрированности.</b></p>
-            {% elseif sum >= 1.5 and sum < 2 %}
-            <p><b>Пониженный уровень фрустрированности.</b></p>
-            {% elseif sum >= 0.5 and sum < 1.5 %}
-            <p><b>Очень низкий уровень фрустрированности.</b></p>
-            {% elseif sum < 0.5 %}
-            <p><b>Отсутствие (почти отсутствие) фрустрированности.</b></p>
-        {% endif %}
+    {% if sum >= 3.5 %}
+        <p><b>Очень высокий уровень фрустрированности.</b></p>
+    {% elseif sum >= 3 and sum < 3.5 %}
+        <p><b>Повышенный высокий уровень фрустрированности.</b></p>
+    {% elseif sum >= 2.5 and sum < 3 %}
+        <p><b>Умеренный уровень фрустрированности.</b></p>
+    {% elseif sum >= 2 and sum < 2.5 %}
+        <p><b>Неопределённый уровень фрустрированности.</b></p>
+    {% elseif sum >= 1.5 and sum < 2 %}
+        <p><b>Пониженный уровень фрустрированности.</b></p>
+    {% elseif sum >= 0.5 and sum < 1.5 %}
+        <p><b>Очень низкий уровень фрустрированности.</b></p>
+    {% elseif sum < 0.5 %}
+        <p><b>Отсутствие (почти отсутствие) фрустрированности.</b></p>
+    {% endif %}
 
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: {{ scale }}%;"
-                 aria-valuenow="{{ scale }}"
-                 aria-valuemin="0"
-                 aria-valuemax="100">{{ sum }} {% trans %}out of{% endtrans %} 4
-            </div>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: {{ scale }}%;"
+             aria-valuenow="{{ scale }}"
+             aria-valuemin="0"
+             aria-valuemax="100">{{ sum }} {% trans %}out of{% endtrans %} 4
         </div>
-
-        <p class="mt-2">Социальная фрустрированность — это вид (форма) психического напряжения, обусловленного неудовлетворенностью
-            достижениями и положением индивида в социальных иерархиях.</p>
-
     </div>
+
+    <p class="mt-2">Социальная фрустрированность — это вид (форма) психического напряжения, обусловленного неудовлетворенностью
+        достижениями и положением индивида в социальных иерархиях.</p>
 {% endblock %}
