@@ -91,6 +91,7 @@ class HttpRequiringAccessTokenSubscriber implements EventSubscriberInterface
         if ($accessToken) {
             $service = $this->services->getById(1);
             $access = $this->accessService->create($service);
+            $event->getResponse()->headers->set('Access-Control-Expose-Headers', ['X-TOKEN']);
             $event->getResponse()->headers->set('X-TOKEN', $access->getToken());
             $this->accessService->setCookie($access, $event->getResponse());
         }
