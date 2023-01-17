@@ -11,9 +11,14 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class CrawlerUtil
 {
+    public static function create(string $content): Crawler
+    {
+        $crawler = new Crawler($content);
+        return $crawler->children();
+    }
+
     public static function load(string $fileName): Crawler
     {
-        $crawler = new Crawler(file_get_contents($fileName));
-        return $crawler->children();
+        return self::create(file_get_contents($fileName));
     }
 }

@@ -1811,42 +1811,39 @@
 
         <!-- Система ценностей -->
 <item id="350" group="system_values" method="RATING">
-<name>
-    <ru>Выберите в порядке значимости ценности, связанные с работой. Сначала самые значимые для Вас.</ru>
-    <en>Rank these work-related values according to their importance to you, starting with the most important ones:</en>
-</name>
-<options>
-    <option value="salary"><ru>Высокая зарплата</ru>
-    <en>High salary</en>
-</option>
-<option value="big-company"><ru>Работа в крупной компании</ru>
-<en>Working for a big company</en>
-</option>
-<option value="prestige"><ru>Престижность</ru><en>Prestige</en></option>
-<option value="travel"><ru>Ездить по всему миру</ru><en>Traveling around the world</en></option>
-<option value="promotion"><ru>Профессиональный рост, развитие</ru><en>Professional and career development</en></option>
-<option value="self-employ"><ru>Работать на себя</ru><en>Working for yourself</en></option>
-<option value="people"><ru>Работать с людьми</ru><en>Working with people</en></option>
-<option value="work-alone"><ru>Работать в уединении</ru><en>Working alone</en></option>
-<option value="gov"><ru>Госслужба</ru><en>Working for the state</en></option>
-<option value="benefit"><ru>Приносить пользу</ru><en>Be useful</en></option>
-<option value="art"><ru>Творчество</ru><en>Be creative</en></option>
-<option value="indoor"><ru>Работа в помещении</ru><en>Working indoors</en></option>
-<option value="outdoor"><ru>Работа на природе, на улице</ru><en>Working outdoors</en></option>
-<option value="difference"><ru>Разнообразие действий</ru><en>Having variety</en></option>
-<option value="publicity"><ru>Публичность</ru><en>Publicity</en></option>
-<option value="safe"><ru>Безопасность</ru><en>Security</en></option>
-<option value="result"><ru>Когда у работы есть результат</ru><en>Seeing results</en></option>
-<option value="intel"><ru>Интеллектуальный труд</ru><en>Intellectual work</en></option>
-<option value="hands"><ru>Ручной труд, физическая активность</ru><en>Manual labor</en></option>
-<option value="free-time"><ru>Много свободного времени</ru><en>Lots of free time</en></option>
-<option value="high-society"><ru>Добиться высокого положения в обществе</ru><en>Having a high social standing</en></option>
-<option value="light-work"><ru>Чистая и лёгкая работа</ru><en>The work is clean and easy</en></option>
-        </options>
-        </item>
+    <name>
+        <ru>Выберите в порядке значимости ценности, связанные с работой. Сначала самые значимые для Вас.</ru>
+        <en>Rank these work-related values according to their importance to you, starting with the most important ones:</en>
+    </name>
+    <options>
+        <option value="salary"><ru>Высокая зарплата</ru><en>High salary</en></option>
+        <option value="big-company"><ru>Работа в крупной компании</ru><en>Working for a big company</en></option>
+        <option value="prestige"><ru>Престижность</ru><en>Prestige</en></option>
+        <option value="travel"><ru>Ездить по всему миру</ru><en>Traveling around the world</en></option>
+        <option value="promotion"><ru>Профессиональный рост, развитие</ru><en>Professional and career development</en></option>
+        <option value="self-employ"><ru>Работать на себя</ru><en>Working for yourself</en></option>
+        <option value="people"><ru>Работать с людьми</ru><en>Working with people</en></option>
+        <option value="work-alone"><ru>Работать в уединении</ru><en>Working alone</en></option>
+        <option value="gov"><ru>Госслужба</ru><en>Working for the state</en></option>
+        <option value="benefit"><ru>Приносить пользу</ru><en>Be useful</en></option>
+        <option value="art"><ru>Творчество</ru><en>Be creative</en></option>
+        <option value="indoor"><ru>Работа в помещении</ru><en>Working indoors</en></option>
+        <option value="outdoor"><ru>Работа на природе, на улице</ru><en>Working outdoors</en></option>
+        <option value="difference"><ru>Разнообразие действий</ru><en>Having variety</en></option>
+        <option value="publicity"><ru>Публичность</ru><en>Publicity</en></option>
+        <option value="safe"><ru>Безопасность</ru><en>Security</en></option>
+        <option value="result"><ru>Когда у работы есть результат</ru><en>Seeing results</en></option>
+        <option value="intel"><ru>Интеллектуальный труд</ru><en>Intellectual work</en></option>
+        <option value="hands"><ru>Ручной труд</ru><en>Manual labor</en></option>
+        <option value="body"><ru>Физическая активность</ru><en>Physical activity</en></option>
+        <option value="free-time"><ru>Много свободного времени</ru><en>Lots of free time</en></option>
+        <option value="high-society"><ru>Добиться высокого положения в обществе</ru><en>Having a high social standing</en></option>
+        <option value="light-work"><ru>Чистая и лёгкая работа</ru><en>The work is clean and easy</en></option>
+    </options>
+</item>
 
-        <!-- Предприниматель ли ты-->
-        <!-- Тест Грецов и Азбель (свое дело или работа), взято кое-что -->
+<!-- Предприниматель ли ты-->
+<!-- Тест Грецов и Азбель (свое дело или работа), взято кое-что -->
 <item id="400" group="business-freedom">
 <name>
     <ru>Я хочу иметь свое собственное дело, а не работать на кого-то.</ru>

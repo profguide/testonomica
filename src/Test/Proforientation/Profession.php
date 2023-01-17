@@ -6,49 +6,55 @@
 
 namespace App\Test\Proforientation;
 
+use App\Tests\Test\Proforientation\ProfessionTest;
+use InvalidArgumentException;
 
+/**
+ * @see ProfessionTest
+ */
 class Profession
 {
-    private $name;
+    private string $name;
 
-    private $combs;
+    private array $combs;
 
-    private $not = [];
+    private array $not = [];
 
-    private $description = [];
+    private array $description = [];
 
-    private $rating = 0;
+    private array $systemValues = [];
 
-    public function __construct(string $name, array $combs, $not = [], $description = [])
+    private int $rating = 0;
+
+    public function __construct(string $name, array $combs, $systemValues = [], $not = [], $description = [])
     {
+        self::guardCombs($combs);
+
         $this->name = $name;
         $this->combs = $combs;
         $this->not = $not;
         $this->description = $description;
+        $this->systemValues = $systemValues;
     }
 
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
-    public function getCombs()
+    public function getCombs(): array
     {
         return $this->combs;
     }
 
-    public function getNot()
+    public function getNot(): array
     {
         return $this->not;
     }
 
-    public function hasComb(string $str)
+    public function getSystemValues(): array
     {
-        foreach ($this->combs as $comb) {
-            if ($str == implode(",", $comb)) {
-                return true;
-            }
-        }
+        return $this->systemValues;
     }
 
     /**
@@ -75,33 +81,17 @@ class Profession
         return $this->description;
     }
 
-    public function combsString()
-    {
-        $combs = [];
-        foreach ($this->combs as $k => $comb) {
-            $combs[] = implode(",", $comb);
-        }
-        return implode("\n", $combs);
-    }
-
-    public function anyTypeList(string $str)
-    {
-        $typesNeed = explode(',', $str);
-        $list = [];
-        foreach ($this->combs as $comb) {
-            $cross = array_intersect($comb, $typesNeed);
-            if (!empty($cross)) {
-                $crossStr = implode(',', $cross);
-                if (!in_array($crossStr, $list)) {
-                    $list[] = $crossStr;
-                }
-            }
-        }
-        return implode(';', $list);
-    }
-
-    public function __toString()
+    public function __toString(): string
     {
         return $this->name;
+    }
+
+    private static function guardCombs(array $combs)
+    {
+        foreach ($combs as $comb) {
+            if (!is_array($comb)) {
+                throw new InvalidArgumentException('Every combination must be an array.');
+            }
+        }
     }
 }

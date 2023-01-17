@@ -16,6 +16,9 @@ todo подумать:
         <combs>
             <comb comb="art,tech"/>
         </combs>
+        <values>
+            <value value="art,intel,benefit,result,promotion,work-alone,prestige"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -47,6 +50,9 @@ todo подумать:
             <comb comb="human,body,art,com"/>
             <comb comb="body,art,com"/>
         </combs>
+        <values>
+            <value value="art,publicity,difference,people,hands"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -80,6 +86,9 @@ todo подумать:
             <comb comb="human,art"/>
             <comb comb="art"/>
         </combs>
+        <values>
+            <value value="art,intel,difference,people,promotion,result"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -116,6 +125,9 @@ todo подумать:
         <combs>
             <comb comb="art"/>
         </combs>
+        <values>
+            <value value="hands,art,result,people,travel"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -148,6 +160,9 @@ todo подумать:
         <combs>
             <comb comb="art"/>
         </combs>
+        <values>
+            <value value="work-alone,result,art,indoor,safe"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -186,6 +201,9 @@ todo подумать:
         <combs>
             <comb comb="art,craft"/>
         </combs>
+        <values>
+            <value value="hands,art,people,result,indoor,light-work,self-employ"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -234,6 +252,9 @@ todo подумать:
             <comb comb="com,craft"/>
             <comb comb="craft"/>
         </combs>
+        <values>
+            <value value="hands,people,result,indoor,self-employ"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -261,6 +282,9 @@ todo подумать:
         <combs>
             <comb comb="art"/>
         </combs>
+        <values>
+            <value value="art,result,intel,promotion,self-employ,light-work,work-alone"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -293,6 +317,9 @@ todo подумать:
         <combs>
             <comb comb="art,com,math"/>
         </combs>
+        <values>
+            <value value="art,result,benefit,difference,promotion,travel,intel,self-employ,free-time"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -321,6 +348,9 @@ todo подумать:
         <combs>
             <comb comb="natural,art"/>
         </combs>
+        <values>
+            <value value="art,result,benefit,outdoor,difference,travel,intel,promotion,free-time"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -350,6 +380,9 @@ todo подумать:
         <combs>
             <comb comb="art,tech"/>
         </combs>
+        <values>
+            <value value="art,result,benefit,indoor,intel,promotion,light-work"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -381,6 +414,9 @@ todo подумать:
         <combs>
             <comb comb="art"/>
         </combs>
+        <values>
+            <value value="art,result,intel,free-time,light-work,indoor,work-alone,self-employ,promotion,safe"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -411,6 +447,9 @@ todo подумать:
         <combs>
             <comb comb="art"/>
         </combs>
+        <values>
+            <value value="publicity,travel,art,free-time,light-work,people,indoor,body"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -444,6 +483,9 @@ todo подумать:
         <combs>
             <comb comb="craft,art"/>
         </combs>
+        <values>
+            <value value="art,hands,body,result,work-alone,self-employ,indoor,free-time"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -471,6 +513,9 @@ todo подумать:
         <combs>
             <comb comb="art"/>
         </combs>
+        <values>
+            <value value="art,result,indoor,work-alone,intel,hands,light-work,self-employ,free-time,safe"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -505,6 +550,9 @@ todo подумать:
             <comb comb="human,art,com"/> <!--todo art:interest-->
             <comb comb="human,com"/>
         </combs>
+        <values>
+            <value value="intel,people,travel,self-employ,indoor,safe,free-time,light-work,art"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -541,6 +589,9 @@ todo подумать:
             <comb comb="com,boss"/>
             <comb comb="boss,art"/> <!--todo art:interest-->
         </combs>
+        <values>
+            <value value="self-employ,travel,intel,salary,free-time,difference,people,art,light-work"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -570,6 +621,9 @@ todo подумать:
         <combs>
             <comb comb="art,craft"/>
         </combs>
+        <values>
+            <value value="art,hands,result,indoor,work-alone,safe"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -603,6 +657,9 @@ todo подумать:
         <combs>
             <comb comb="art,body,com"/>
         </combs>
+        <values>
+            <value value="art,body,people,free-time,indoor,difference,publicity,travel"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -635,6 +692,9 @@ todo подумать:
         <combs>
             <comb comb="art,com"/>
         </combs>
+        <values>
+            <value value="people,travel,result,body,art,free-time,light-work,difference,indoor"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -669,6 +729,9 @@ todo подумать:
             <comb comb="com,craft"/>
             <comb comb="craft"/>
         </combs>
+        <values>
+            <value value="hands,people,result,benefit,indoor,self-employ,art"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -696,6 +759,9 @@ todo подумать:
         <combs>
             <comb comb="art,body"/>
         </combs>
+        <values>
+            <value value="art,publicity,body,people,indoor,travel"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -734,6 +800,9 @@ todo подумать:
             <comb comb="boss,com"/> <!--маркетолог брендов-->
             <comb comb="math"/> <!--маркетолог-исследователь-->
         </combs>
+        <values>
+            <value value="intel,difference,salary,benefit,result,promotion,people,big-company,indoor"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -816,6 +885,9 @@ todo подумать:
         <combs>
             <comb comb="com,math"/>
         </combs>
+        <values>
+            <value value="intel,big-company,result,people,benefit,indoor,travel,promotion"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -851,6 +923,9 @@ todo подумать:
             <comb comb="com,math"/>
             <comb comb="math"/>
         </combs>
+        <values>
+            <value value="travel,people,result,benefit,indoor,light-work,difference"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -886,6 +961,9 @@ todo подумать:
         <combs>
             <comb comb="math"/>
         </combs>
+        <values>
+            <value value="gov,indoor,work-alone,light-work,big-company"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -921,6 +999,9 @@ todo подумать:
             <comb comb="com,math"/>
             <comb comb="com"/>
         </combs>
+        <values>
+            <value value="people,indoor,difference,result,intel,salary,big-company"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -950,6 +1031,9 @@ todo подумать:
         <combs>
             <comb comb="com,math"/>
         </combs>
+        <values>
+            <value value="people,free-time,difference,result,salary,self-employ,travel,benefit"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -984,6 +1068,9 @@ todo подумать:
             <comb comb="art,com,boss"/>
             <comb comb="com,boss"/>
         </combs>
+        <values>
+            <value value="people,intel,travel,art,difference,self-employ,free-time,result"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -1015,6 +1102,9 @@ todo подумать:
         <combs>
             <comb comb="math"/>
         </combs>
+        <values>
+            <value value="indoor,big-company,people,intel"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -1047,6 +1137,9 @@ todo подумать:
         <combs>
             <comb comb="com,human"/>
         </combs>
+        <values>
+            <value value="intel,people,benefit,indoor,big-company,gov,salary,promotion"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -1090,6 +1183,9 @@ todo подумать:
             <comb comb="hoz,war"/>
             <comb comb="war"/>
         </combs>
+        <values>
+            <value value="gov,body,people,travel,difference,outdoor,promotion"/>
+        </values>
         <description>
             <kind>
                 <name>

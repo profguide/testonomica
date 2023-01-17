@@ -9,13 +9,11 @@ namespace App\Test\Calculator;
 
 use App\Test\AbstractCalculator;
 use App\Test\AnswersHolder;
-use App\Test\CrawlerUtil;
+use App\Test\Helper\ProfessionsMapper;
 use App\Test\Proforientation\Profession;
 use App\Test\Proforientation\Types;
 use App\Test\QuestionsHolder;
 use App\Util\AnswersUtil;
-use DOMElement;
-use Symfony\Component\DomCrawler\Crawler;
 
 abstract class AbstractProforientationCalculator extends AbstractCalculator
 {
@@ -228,83 +226,6 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
         return $top;
     }
 
-    /**
-     * @return Profession[]
-     */
-    public function getProfessions(): array
-    {
-        $professions = [];
-        $crawler = CrawlerUtil::load($this->getProfessionsFileName());
-        foreach ($crawler as $professionNode) {
-            $professions[] = $this->mapProfession((new Crawler($professionNode)));
-        }
-        return $professions;
-    }
-
-    // todo phpunit
-    private function mapProfession(Crawler $crawler): Profession
-    {
-        return new Profession(
-            $this->langText($crawler->children('name')),
-            $this->parseCombs($crawler->children('combs')),
-            $this->parseProfessionNot($crawler),
-            $this->parseProfessionDescription($crawler));
-    }
-
-    public function parseCombs(Crawler $combs): array
-    {
-        $arr = [];
-        /**@var \DOMElement $comb */
-        foreach ($combs->children() as $comb) {
-            $arr[] = explode(",", trim($comb->getAttribute('comb')));
-        }
-        return $arr;
-    }
-
-    private function parseProfessionNot(Crawler $crawler)
-    {
-        $arr = [];
-        $not = $crawler->attr('not');
-        if (!empty($not)) {
-            foreach (explode(",", $not) as $word) {
-                $arr[] = trim($word);
-            }
-        }
-        return $arr;
-    }
-
-    // если будет отнимать много времени, можно сделать lazy, то есть в Profession передавать Crawler всей профессии
-    // а когда надо парсить его и доставать нужные части. Вот для описания пригодилось бы. А парсить надо через хелпер
-    // ProforientationProfessionMapper::mapDescription($this->crawler);
-    // и вообще можно kind сделать объектом ProfessionDescriptionKind
-    private function parseProfessionDescription(Crawler $crawler): array
-    {
-        $description = [];
-        $nodeDescription = $crawler->filterXPath('descendant-or-self::description');
-        if ($nodeDescription->count() > 0) {
-            $kindNodes = $nodeDescription->filterXPath('descendant-or-self::kind');
-            if ($kindNodes->count() > 0) {
-                foreach ($kindNodes as $kindNode) {
-                    $kindCrawler = new Crawler($kindNode);
-                    /**@var DOMElement $tag */
-                    $kind = [];
-                    foreach ($kindCrawler->children() as $tag) {
-                        $tagCrawler = new Crawler($tag);
-                        $tagLangTexts = $tagCrawler->children();
-                        if ($tagLangTexts->count() == 0) {
-                            $tagText = $tag->textContent;
-                        } else {
-                            $tagText = $tagCrawler->children($this->locale)->text();
-                        }
-                        $kind[$tag->nodeName] = $tagText;
-                    }
-                    $description[] = $kind;
-                }
-            }
-        }
-        return $description;
-    }
-
     private function sliceProfessions($professions, int $limit)
     {
         return array_slice($professions, 0, $limit);
@@ -394,15 +315,9 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
         }
     }
 
-    protected abstract function getProfessionsFileName(): string;
-
-    private function langText(Crawler $crawler): string
+    private function getProfessions(): array
     {
-        $children = $crawler->children();
-        if ($children->count() == 0) {
-            return $children->text();
-        } else {
-            return $crawler->children($this->locale)->text();
-        }
+        $xml = $this->kernel->getProjectDir() . '/xml/proftest/professions.xml';
+        return (new ProfessionsMapper(file_get_contents($xml), $this->locale))->getProfessions();
     }
 }

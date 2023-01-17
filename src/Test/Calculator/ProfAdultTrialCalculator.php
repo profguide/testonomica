@@ -8,11 +8,6 @@ namespace App\Test\Calculator;
 
 class ProfAdultTrialCalculator extends AbstractProforientationCalculator
 {
-    protected function getProfessionsFileName(): string
-    {
-        return $this->kernel->getProjectDir() . "/xml/proftest/professions.xml";
-    }
-
     public function calculate(): array
     {
         $this->fitVersion();
