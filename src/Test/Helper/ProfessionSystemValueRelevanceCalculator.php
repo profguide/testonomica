@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Test\Helper;
 
+use App\Test\Proforientation\ValueSystem;
 use InvalidArgumentException;
 
 final class ProfessionSystemValueRelevanceCalculator
@@ -21,14 +22,11 @@ final class ProfessionSystemValueRelevanceCalculator
 
     public function __construct(array $allValues, array $userValues)
     {
-        $this->allValues = $allValues;
-
-        if (count($userValues) < self::NUMBER_VALUES_INVOLVED_IN_CALCULATION) {
-            throw new InvalidArgumentException('user values number must be at least ' . self::NUMBER_VALUES_INVOLVED_IN_CALCULATION);
-        }
+        self::guardUserValues($userValues);
         self::preFilter($userValues);
-        $this->userValues = $this->prepareSystemValues($userValues);
 
+        $this->allValues = $allValues;
+        $this->userValues = $this->prepareSystemValues($userValues);
     }
 
     /**
@@ -38,14 +36,14 @@ final class ProfessionSystemValueRelevanceCalculator
      * Чем выше в списке (index 0) ценность, тем выше должна быть оценка профессии, если профессия имеют такую ценность
      * Вопрос - нужно ли сортировать ценности в самой профессии?
      *
-     * @param array $professionValues - ценности профессии
+     * @param ValueSystem $professionValueSystem - ценности профессии
      * @return float
      */
-    public function calculate(array $professionValues): float
+    public function calculate(ValueSystem $professionValueSystem): float
     {
+        $professionValues = $professionValueSystem->values();
         self::preFilter($professionValues);
 
-//        $max = count($this->userValues);
         $max = self::NUMBER_VALUES_INVOLVED_IN_CALCULATION;
 
         $sum = 0;
@@ -56,7 +54,6 @@ final class ProfessionSystemValueRelevanceCalculator
             }
 
             // todo добавить все-таки еще и учитывание порядок в профессии (попробовать)
-            // или ввести новые правила - если требует людей, то уединение в минусе
 
             // формула - чем ближе к началу, тем больше оценка
             // Например, макс - 22, индекс = 0, значит оценка - 22
@@ -103,5 +100,12 @@ final class ProfessionSystemValueRelevanceCalculator
     {
         unset($values['prestige']);
         unset($values['salary']);
+    }
+
+    private static function guardUserValues(array $userValues)
+    {
+        if (count($userValues) < self::NUMBER_VALUES_INVOLVED_IN_CALCULATION) {
+            throw new InvalidArgumentException('user values number must be at least ' . self::NUMBER_VALUES_INVOLVED_IN_CALCULATION);
+        }
     }
 }

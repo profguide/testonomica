@@ -26,6 +26,8 @@ class Profession
 
     private int $rating = 0;
 
+    private float $valueScore = 0;
+
     public function __construct(string $name, array $combs, ValueSystem $valueSystem, $not = [], $description = [])
     {
         self::guardCombs($combs);
@@ -93,5 +95,15 @@ class Profession
                 throw new InvalidArgumentException('Every combination must be an array.');
             }
         }
+    }
+
+    public function setValueScore(float $score)
+    {
+        $this->valueScore = $score;
+    }
+
+    public function getValueScore(): float
+    {
+        return $this->valueScore;
     }
 }
