@@ -45,7 +45,7 @@ final class NewTest extends KernelTestCase
 
         self::print($professions);
 
-        die();
+//        die();
     }
 
     private static function calculate(array &$professions, array $valuesComb): void

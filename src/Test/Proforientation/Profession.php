@@ -18,15 +18,15 @@ class Profession
 
     private array $combs;
 
-    private array $not = [];
+    private array $not;
 
-    private array $description = [];
+    private array $description;
 
-    private array $systemValues = [];
+    private ValueSystem $systemValues;
 
     private int $rating = 0;
 
-    public function __construct(string $name, array $combs, $systemValues = [], $not = [], $description = [])
+    public function __construct(string $name, array $combs, ValueSystem $valueSystem, $not = [], $description = [])
     {
         self::guardCombs($combs);
 
@@ -34,7 +34,7 @@ class Profession
         $this->combs = $combs;
         $this->not = $not;
         $this->description = $description;
-        $this->systemValues = $systemValues;
+        $this->systemValues = $valueSystem;
     }
 
     public function getName(): string
@@ -52,7 +52,7 @@ class Profession
         return $this->not;
     }
 
-    public function getSystemValues(): array
+    public function valueSystem(): ValueSystem
     {
         return $this->systemValues;
     }

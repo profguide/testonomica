@@ -13,6 +13,7 @@ use App\Test\AnswersHolder;
 use App\Test\Calculator\AbstractProforientationCalculator;
 use App\Test\CrawlerUtil;
 use App\Test\Proforientation\Profession;
+use App\Test\Proforientation\ValueSystem;
 use App\Test\QuestionsHolder;
 use App\Test\QuestionXmlMapper;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
@@ -113,13 +114,13 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
         $calculator = $this->createEmptyCalculator();
         // Один вариант со 100% совпадением - это 1
         $this->assertEquals(200, $calculator->combsRating(
-            ['natural' => 100, 'tech' => 100], new Profession('some', [['natural', 'tech']])));
+            ['natural' => 100, 'tech' => 100], new Profession('some', [['natural', 'tech']], new ValueSystem([]))));
         // Два варианта, один 100%, другой 0 - это 1
         $this->assertEquals(200, $calculator->combsRating(
-            ['natural' => 100, 'tech' => 100], new Profession('some', [['natural', 'tech'], ['natural', 'tech', 'body']])));
+            ['natural' => 100, 'tech' => 100], new Profession('some', [['natural', 'tech'], ['natural', 'tech', 'body']], new ValueSystem([]))));
         // Два варианта, один 0 и другой 0 - это 0
         $this->assertEquals(0, $calculator->combsRating(
-            ['natural' => 100], new Profession('some', [['natural', 'tech'], ['natural', 'tech', 'body']])));
+            ['natural' => 100], new Profession('some', [['natural', 'tech'], ['natural', 'tech', 'body']], new ValueSystem([]))));
     }
 
 //    public function testFitVersionV201()

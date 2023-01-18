@@ -49,6 +49,6 @@ final class ProfessionMapperTest extends KernelTestCase
         self::assertCount(1, $professions);
         self::assertEquals('Архитектор', $professions[0]->getName());
         self::assertEquals([['art', 'tech']], $professions[0]->getCombs());
-        self::assertEquals(['art', 'intel', 'benefit', 'result', 'promotion', 'work-alone', 'prestige'], $professions[0]->getSystemValues());
+        self::assertEquals(['art', 'intel', 'benefit', 'result', 'promotion', 'work-alone', 'prestige'], $professions[0]->valueSystem()->values());
     }
 }

@@ -6,6 +6,7 @@ namespace App\Test\Helper;
 
 use App\Test\CrawlerUtil;
 use App\Test\Proforientation\Profession;
+use App\Test\Proforientation\ValueSystem;
 use App\Tests\Test\Helper\ProfessionMapperTest;
 use DOMElement;
 use Symfony\Component\DomCrawler\Crawler;
@@ -42,7 +43,7 @@ final class ProfessionsMapper
         return new Profession(
             $this->langText($crawler->children('name')),
             $this->parseCombs($crawler),
-            $this->parseSystemValues($crawler),
+            $this->parseValueSystem($crawler),
             $this->parseProfessionNot($crawler),
             $this->parseProfessionDescription($crawler));
     }
@@ -100,14 +101,17 @@ final class ProfessionsMapper
         return $arr;
     }
 
-    private function parseSystemValues(Crawler $crawler): array
+    // система ценностей
+    private function parseValueSystem(Crawler $crawler): ValueSystem
     {
+        $values = [];
+
         $value = $crawler->children('values > value');
         if ($value->count() > 0) {
-            return explode(",", $value->attr('value'));
+            $values = explode(",", $value->attr('value'));
         }
 
-        return [];
+        return new ValueSystem($values);
     }
 
     private function langText(Crawler $crawler): string
