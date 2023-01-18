@@ -3877,6 +3877,9 @@ todo подумать:
         <combs>
             <comb comb="com,math,boss"/>
         </combs>
+        <values>
+            <value value="people,result,light-work,free-time,travel,difference,safe"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -3917,6 +3920,9 @@ todo подумать:
             <comb comb="math,com"/>
             <comb comb="math"/>
         </combs>
+        <values>
+            <value value="intel,result,light-work,people,indoor,big-company,benefit"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -3979,6 +3985,9 @@ todo подумать:
         <combs>
             <comb comb="com,hoz"/>
         </combs>
+        <values>
+            <value value="people,indoor,difference,promotion"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4043,6 +4052,9 @@ todo подумать:
         <combs>
             <comb comb="com,hoz"/>
         </combs>
+        <values>
+            <value value="people,indoor,high-society,light-work,difference,safe"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4082,6 +4094,9 @@ todo подумать:
         <combs>
             <comb comb="com,hoz"/>
         </combs>
+        <values>
+            <value value="indoor,people,benefit,result,safe"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4120,6 +4135,9 @@ todo подумать:
         <combs>
             <comb comb="hoz"/>
         </combs>
+        <values>
+            <value value="indoor,people,benefit,result,hands"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4156,6 +4174,9 @@ todo подумать:
             <comb comb="math,hoz"/>
             <comb comb="tech,hoz"/>
         </combs>
+        <values>
+            <value value="people,benefit,result,difference,indoor"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4189,6 +4210,9 @@ todo подумать:
             <comb comb="com,math,hoz,boss"/>
             <comb comb="com,math,hoz"/>
         </combs>
+        <values>
+            <value value="people,indoor,big-company,high-society"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4234,6 +4258,9 @@ todo подумать:
         <combs>
             <comb comb="human,com"/>
         </combs>
+        <values>
+            <value value="people,body,travel,outdoor,publicity,intel,benefit,free-time,self-employ"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4269,6 +4296,9 @@ todo подумать:
             <comb comb="body,war"/>
             <comb comb="war"/>
         </combs>
+        <values>
+            <value value="hands,body,benefit,gov,outdoor,travel,result,difference"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4319,6 +4349,9 @@ todo подумать:
         <combs>
             <comb comb="body"/>
         </combs>
+        <values>
+            <value value="body,travel,people,publicity,result"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4349,6 +4382,9 @@ todo подумать:
         <combs>
             <comb comb="body,com"/>
         </combs>
+        <values>
+            <value value="people,indoor,benefit,body,self-employ,free-time"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4380,6 +4416,9 @@ todo подумать:
         <combs>
             <comb comb="tech,math"/>
         </combs>
+        <values>
+            <value value="intel,result,benefit,people,indoor,big-company,promotion"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4412,6 +4451,9 @@ todo подумать:
         <combs>
             <comb comb="math"/>
         </combs>
+        <values>
+            <value value="intel,big-company,indoor,work-alone,promotion,light-work,result"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4445,6 +4487,9 @@ todo подумать:
         <combs>
             <comb comb="math"/>
         </combs>
+        <values>
+            <value value="intel,promotion,indoor,light-work,people"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4492,6 +4537,9 @@ todo подумать:
         <combs>
             <comb comb="com,math"/>
         </combs>
+        <values>
+            <value value="people,intel,free-time,indoor,light-work,safe,promotion"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4524,6 +4572,9 @@ todo подумать:
         <combs>
             <comb comb="math"/>
         </combs>
+        <values>
+            <value value="intel,result,indoor,light-work,safe,work-alone"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4554,6 +4605,9 @@ todo подумать:
         <combs>
             <comb comb="math"/>
         </combs>
+        <values>
+            <value value="intel,result,indoor,light-work,safe,people"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4585,6 +4639,9 @@ todo подумать:
         <combs>
             <comb comb="math"/>
         </combs>
+        <values>
+            <value value="intel,result,indoor,light-work,safe"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4618,6 +4675,9 @@ todo подумать:
         <combs>
             <comb comb="math,com"/>
         </combs>
+        <values>
+            <value value="intel,indoor,light-work,promotion,gov,safe,people"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4676,6 +4736,9 @@ todo подумать:
         <combs>
             <comb comb="math"/>
         </combs>
+        <values>
+            <value value="intel,result,indoor,people,light-work"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4718,6 +4781,9 @@ todo подумать:
             <comb comb="tech,math"/>
             <comb comb="it"/>
         </combs>
+        <values>
+            <value value="intel,result,indoor,promotion,people,difference,light-work,safe,salary,self-employ"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4752,6 +4818,9 @@ todo подумать:
             <comb comb="tech,math,it"/>
             <comb comb="tech,it"/>
         </combs>
+        <values>
+            <value value="intel,result,indoor,promotion,people,difference,big-company,hands,benefit"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4785,6 +4854,9 @@ todo подумать:
             <comb comb="math,it"/>
             <comb comb="it"/>
         </combs>
+        <values>
+            <value value="intel,light-work,result,indoor,promotion,people,big-company,benefit"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4817,6 +4889,9 @@ todo подумать:
         <combs>
             <comb comb="math,com"/>
         </combs>
+        <values>
+            <value value="intel,people,result,benefit,indoor,promotion,difference,big-company,light-work"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4850,6 +4925,9 @@ todo подумать:
             <comb comb="it,com"/>
             <comb comb="com,math"/>
         </combs>
+        <values>
+            <value value="intel,result,safe,free-time,light-work,people,benefit,indoor"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4881,6 +4959,9 @@ todo подумать:
             <comb comb="it,math"/>
             <comb comb="it"/>
         </combs>
+        <values>
+            <value value="intel,indoor,result,light-work,benefit,people,safe"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4923,6 +5004,9 @@ todo подумать:
             <!--<comb comb="human,boss"/>-->
             <comb comb="human,math"/>
         </combs>
+        <values>
+            <value value="intel,result,people,benefit,indoor,difference,free-time,light-work"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -4982,6 +5066,9 @@ todo подумать:
             <comb comb="art,com,it,human"/>
             <comb comb="art,com,it"/>
         </combs>
+        <values>
+            <value value="intel,people,art,result,safe,free-time,high-society,light-work,difference,indoor"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -5025,6 +5112,9 @@ todo подумать:
             <comb comb="art,it"/>
             <comb comb="art"/>
         </combs>
+        <values>
+            <value value="intel,art,indoor,difference,people,promotion,light-work,safe"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -5099,6 +5189,9 @@ todo подумать:
             <comb comb="human,math,it"/>
             <comb comb="human,it"/>
         </combs>
+        <values>
+            <value value="intel,result,light-work,safe,people,indoor,big-company"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -5128,6 +5221,9 @@ todo подумать:
         <combs>
             <comb comb="human"/>
         </combs>
+        <values>
+            <value value="intel,free-time,light-work,safe,people,indoor,travel,work-alone"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -5160,6 +5256,9 @@ todo подумать:
         <combs>
             <comb comb="human"/>
         </combs>
+        <values>
+            <value value="safe,gov,indoor,work-alone,light-work"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -5212,6 +5311,9 @@ todo подумать:
             <comb comb="com,it,boss"/>
             <comb comb="com,it"/>
         </combs>
+        <values>
+            <value value="people,indoor,result,safe,difference,promotion"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -5244,6 +5346,9 @@ todo подумать:
             <comb comb="com,it"/>
             <comb comb="com"/>
         </combs>
+        <values>
+            <value value="intel,people,result,indoor,promotion,difference,light-work"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -5285,6 +5390,9 @@ todo подумать:
             <comb comb="boss,com"/>
             <comb comb="boss"/>
         </combs>
+        <values>
+            <value value="intel,people,result,difference,free-time,self-employ"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -5327,6 +5435,9 @@ todo подумать:
         <combs>
             <comb comb="boss,math"/>
         </combs>
+        <values>
+            <value value="intel,result,self-employ,work-alone,indoor,light-work,free-time"/>
+        </values>
         <description>
             <kind>
                 <name>
@@ -5354,6 +5465,28 @@ todo подумать:
             </kind>
         </description>
     </profession>
+
+    <!--
+        TODO добавить:
+            Но помнить сперва, что нужно стремиться к объединению похожих профессий в одну.
+            Например, спелеолог - подотряд геологов. Значит нужен только геолог, а в нём написать, что он может быть спелеологом.
+            - SCRAM-мастер
+            - Тьютор
+            - Продюсер образовательных проектов
+            - UX-исследователь
+            - UX-писатель
+            - Копирайтер
+            - Фотограф
+            - (профессии из нетологии/яндекс.практикум/гикбрейнс)
+            - Каскадёр
+            - Блогер
+            - Сценарист
+            - Наративный дизайнер
+            - Психологический тренер
+            - Проектировщик инженерных систем здания
+            - Список ниже тоже
+    -->
+
     <!--<profession>-->
     <!--<name><ru>Каскадёр</ru><en></en></name>-->
     <!--<combs>-->

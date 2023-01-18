@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Tests\Test;
 
 use App\Test\Helper\ProfessionsMapper;
-use App\Test\Helper\ProfessionSystemValueRelevanceCalculator;
+use App\Test\Helper\ProfessionValueSystemRelevanceCalculator;
 use App\Test\Proforientation\Profession;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
@@ -57,7 +57,7 @@ final class NewTest extends KernelTestCase
      */
     private static function calculate(array &$professions, array $valuesComb): void
     {
-        $calculator = new ProfessionSystemValueRelevanceCalculator(self::VALUES, $valuesComb);
+        $calculator = new ProfessionValueSystemRelevanceCalculator(self::VALUES, $valuesComb);
         foreach ($professions as &$profession) {
             $profession->setValueScore($calculator->calculate($profession->valueSystem()));
         }

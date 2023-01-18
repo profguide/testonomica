@@ -7,7 +7,7 @@ namespace App\Test\Helper;
 use App\Test\Proforientation\ValueSystem;
 use InvalidArgumentException;
 
-final class ProfessionSystemValueRelevanceCalculator
+final class ProfessionValueSystemRelevanceCalculator
 {
     private array $allValues;
 
