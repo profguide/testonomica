@@ -41,14 +41,17 @@ final class NewTest extends KernelTestCase
 //        $userValues = ['salary', 'big-company', 'prestige', 'travel', 'promotion', 'self-employ', 'people', 'work-alone', 'gov', 'benefit', 'art', 'indoor', 'outdoor', 'difference', 'publicity', 'safe', 'result', 'intel', 'hands', 'free-time', 'high-society', 'light-work'];
 //        $userValues = ['people'];
 //        $userValues = ['art', 'people', 'intel', 'difference', 'promotion', 'result', 'travel', 'safe', 'promotion', 'free-time'];
-        $userValues = ['intel', 'indoor', 'people', 'self-employ', 'gov', 'promotion', 'benefit', 'sigh-society', 'light-work', 'safe'];
+//        $userValues = ['intel', 'people', 'self-employ', 'promotion', 'outdoor', 'benefit', 'sigh-society', 'light-work', 'safe', 'gov'];
+//        $userValues = ['free-time', 'publicity', 'light-work', 'intel', 'difference', 'people', 'self-employ', 'benefit', 'result', 'promotion', 'indoor', 'gov', 'big-company', 'art', 'outdoor', 'work-alone', 'safe', 'hands', 'body', 'travel', 'high-society', 'salary', 'prestige'];
+//        $userValues = ['gov', 'safe', 'big-company', 'light-work', 'self-employ', 'work-alone', 'indoor', 'result', 'art', 'intel', 'benefit', 'difference', 'people', 'publicity', 'hands', 'body', 'free-time', 'high-society', 'travel', 'promotion', 'outdoor', 'salary', 'prestige'];
+        $userValues = ['high-society', 'big-company', 'safe', 'light-work', 'free-time', 'indoor', 'result', 'art', 'intel', 'benefit', 'difference', 'work-alone', 'people', 'publicity', 'hands', 'body', 'gov', 'travel', 'promotion', 'outdoor', 'self-employ', 'salary', 'prestige'];
 
         self::calculate($professions, $userValues);
         self::sortByScore($professions);
 
         self::print($professions);
 
-//        die();
+        die();
     }
 
     /***
@@ -81,7 +84,10 @@ final class NewTest extends KernelTestCase
         echo '=== Таблица результатов ===' . PHP_EOL . PHP_EOL;
 
         foreach ($professions as $index => $profession) {
-            echo ($profession->getValueScore()) . ' - ' . $profession->getName() . PHP_EOL;
+            echo ++$index . ') ' . ($profession->getValueScore()) . ' - ' . $profession->getName() . PHP_EOL;
+            if ($index === 15) {
+                break;
+            }
         }
 
         echo PHP_EOL . '===' . PHP_EOL;

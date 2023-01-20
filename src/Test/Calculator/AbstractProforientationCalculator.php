@@ -11,7 +11,7 @@ use App\Test\AbstractCalculator;
 use App\Test\AnswersHolder;
 use App\Test\Helper\ProfessionsMapper;
 use App\Test\Proforientation\Profession;
-use App\Test\Proforientation\Types;
+use App\Test\Proforientation\ProftestConfig;
 use App\Test\QuestionsHolder;
 use App\Util\AnswersUtil;
 
@@ -239,25 +239,25 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
      */
     protected function typesDescriptions(array $typesGroups)
     {
-        new Types($this->kernel, $this->locale); // init static config
+        new ProftestConfig($this->kernel, $this->locale); // init static config
 
         $descriptions = ['interest' => [], 'skills' => []];
         foreach ($typesGroups as $typeName => $groups) {
-            $name = Types::name($typeName);
+            $name = ProftestConfig::name($typeName);
             // интерес - это среднее от force + interest
             $interestValue = ($groups[0] + $groups[1]) / 2;
             $skillValue = $groups[2];
             $descriptions['interest'][$typeName] = [
                 'name' => $name,
-                'text' => Types::interestText($typeName, $interestValue),
+                'text' => ProftestConfig::interestText($typeName, $interestValue),
                 'level' => [
-                    'absolute' => Types::level($interestValue)
+                    'absolute' => ProftestConfig::level($interestValue)
                 ]];
             $descriptions['skills'][$typeName] = [
                 'name' => $name,
-                'text' => Types::skillsText($typeName, $skillValue),
+                'text' => ProftestConfig::skillsText($typeName, $skillValue),
                 'level' => [
-                    'absolute' => Types::level($skillValue)
+                    'absolute' => ProftestConfig::level($skillValue)
                 ]];
         }
         return $descriptions;
@@ -270,12 +270,12 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
      */
     private function typesDescriptionsByName(array $typesGroups): array
     {
-        new Types($this->kernel, $this->locale); // init static config
+        new ProftestConfig($this->kernel, $this->locale); // init static config
 
         $descriptions = [];
 
         foreach ($typesGroups as $typeName => $groups) {
-            $name = Types::name($typeName);
+            $name = ProftestConfig::name($typeName);
             // интерес - это среднее от force + interest
             $interestValue = ($groups[0] + $groups[1]) / 2;
             $skillValue = $groups[2];
@@ -283,12 +283,12 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
             $descriptions[$typeName] = [
                 'name' => $name,
                 'interest' => [
-                    'text' => Types::interestText($typeName, $interestValue),
-                    'absolute' => Types::level($interestValue)
+                    'text' => ProftestConfig::interestText($typeName, $interestValue),
+                    'absolute' => ProftestConfig::level($interestValue)
                 ],
                 'skills' => [
-                    'text' => Types::skillsText($typeName, $skillValue),
-                    'absolute' => Types::level($skillValue)
+                    'text' => ProftestConfig::skillsText($typeName, $skillValue),
+                    'absolute' => ProftestConfig::level($skillValue)
                 ],
             ];
         }

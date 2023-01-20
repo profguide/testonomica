@@ -236,13 +236,12 @@
         </intel>
         <hands>
             <description>
-                <ru>Для вас важнее всего, чтобы работа ваша делалась руками, чтобы в ней участвовало бы и ваше тело
-                    (движение, напряжение). Обычно физические труд приносит очевидные результаты, плоды. Это приятно
-                    вам, но не забывайте, что люди изобретают все новые и новые технологии работы. Учитесь им. И вас
-                    никто не обгонит!
+                <ru>Для вас очень важно действовать не только головой, но и руками: чувствовать предметы наощупь и чтобы
+                    ваш труд приводил к очевидным и осязаемым плодам. Эти плоды очень нужны людям: ведь они полезны,
+                    удобны, красивы, вкусны.
                 </ru>
-                <en>The most important thing about work for you is to work with your hands, so that your body (movement,
-                    exertion) would also participate in it. As a rule, physical labor brings obvious results. You enjoy
+                <en>The most important thing about work for you is to work with your hands. As a rule, physical labor
+                    brings obvious results. You enjoy
                     it, but do not forget that people invent more and more new work technologies. Master them. And no
                     one will overtake you.
                 </en>
@@ -250,8 +249,15 @@
         </hands>
         <body>
             <description>
-                <ru>Для вас важна физическая работа.</ru>
-                <en>Physical work is important to you.</en>
+                <ru>Для вас важно, чтобы не только ваш ум мог работать, но и ваше тело в процессе работы не было бы
+                    статично, а могло бы разнообразно двигаться, напрягаться, чтобы работали разные группы мышц. Для вас
+                    и в этом есть источник радости и удовлетворения на работе. Таких профессий довольно много.
+                </ru>
+                <en>It is important for you that not only your mind can work, but also your body in the process of work
+                    would not be static, but could move in a variety of ways, strain so that different muscle groups
+                    work. For you, this is a source of joy and satisfaction at work. There are quite a lot of such
+                    professions.
+                </en>
             </description>
         </body>
         <free-time>

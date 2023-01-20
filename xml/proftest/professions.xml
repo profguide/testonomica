@@ -318,7 +318,7 @@ todo подумать:
             <comb comb="art,com,math"/>
         </combs>
         <values>
-            <value value="art,result,benefit,difference,promotion,travel,intel,self-employ,free-time"/>
+            <value value="art,result,benefit,difference,promotion,intel,self-employ,free-time"/>
         </values>
         <description>
             <kind>
@@ -349,7 +349,7 @@ todo подумать:
             <comb comb="natural,art"/>
         </combs>
         <values>
-            <value value="art,result,benefit,outdoor,difference,travel,intel,promotion,free-time"/>
+            <value value="art,result,benefit,outdoor,difference,intel,promotion,free-time"/>
         </values>
         <description>
             <kind>
@@ -1032,7 +1032,7 @@ todo подумать:
             <comb comb="com,math"/>
         </combs>
         <values>
-            <value value="people,free-time,difference,result,salary,self-employ,travel,benefit"/>
+            <value value="people,free-time,difference,result,salary,self-employ,benefit"/>
         </values>
         <description>
             <kind>
