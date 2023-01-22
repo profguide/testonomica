@@ -7,18 +7,18 @@
 namespace App\Test\Proforientation;
 
 use App\Tests\Test\Proforientation\ProfessionTest;
-use InvalidArgumentException;
+use JsonSerializable;
 
 /**
  * @see ProfessionTest
  */
-class Profession
+class Profession implements JsonSerializable
 {
     private string $name;
 
-    private array $combs;
+    private Types $types;
 
-    private array $not;
+    private TypesCombination $typesNot;
 
     private array $description;
 
@@ -28,30 +28,28 @@ class Profession
 
     private float $valueScore = 0;
 
-    public function __construct(string $name, array $combs, ValueSystem $valueSystem, $not = [], $description = [])
+    public function __construct(string $name, Types $types, TypesCombination $typesNot, ValueSystem $valueSystem, $description = [])
     {
-        self::guardCombs($combs);
-
         $this->name = $name;
-        $this->combs = $combs;
-        $this->not = $not;
+        $this->types = $types;
+        $this->typesNot = $typesNot;
         $this->description = $description;
         $this->systemValues = $valueSystem;
     }
 
-    public function getName(): string
+    public function name(): string
     {
         return $this->name;
     }
 
-    public function getCombs(): array
+    public function types(): Types
     {
-        return $this->combs;
+        return $this->types;
     }
 
-    public function getNot(): array
+    public function typesNot(): TypesCombination
     {
-        return $this->not;
+        return $this->typesNot;
     }
 
     public function valueSystem(): ValueSystem
@@ -60,6 +58,7 @@ class Profession
     }
 
     /**
+     * todo add ProfessionScore: {values, types}
      * @return int
      */
     public function getRating(): int
@@ -68,6 +67,7 @@ class Profession
     }
 
     /**
+     * todo add ProfessionScore: {values, types}
      * @param int $rating
      */
     public function setRating(int $rating): void
@@ -78,25 +78,12 @@ class Profession
     /**
      * @return array
      */
-    public function getDescription(): array
+    public function description(): array
     {
         return $this->description;
     }
 
-    public function __toString(): string
-    {
-        return $this->name;
-    }
-
-    private static function guardCombs(array $combs)
-    {
-        foreach ($combs as $comb) {
-            if (!is_array($comb)) {
-                throw new InvalidArgumentException('Every combination must be an array.');
-            }
-        }
-    }
-
+    // todo add ProfessionScore: {values, types}
     public function setValueScore(float $score)
     {
         $this->valueScore = $score;
@@ -105,5 +92,15 @@ class Profession
     public function getValueScore(): float
     {
         return $this->valueScore;
+    }
+
+    public function __toString(): string
+    {
+        return $this->name;
+    }
+
+    public function jsonSerialize(): array
+    {
+        return get_object_vars($this);
     }
 }

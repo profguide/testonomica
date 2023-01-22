@@ -6,17 +6,18 @@ namespace App\Test\Proforientation;
 
 final class Types
 {
-    const ALL = ['natural', 'tech', 'human', 'body', 'math', 'it', 'craft', 'art', 'hoz', 'com', 'boss', 'war'];
-
-    private array $values = [];
+    /**
+     * @var TypesCombination[]
+     */
+    private array $combinations = [];
 
     public function __construct(array $types)
     {
-        $this->values = $types;
+        $this->combinations = $types;
     }
 
-    public function values(): array
+    public function combinations(): array
     {
-        return $this->values;
+        return $this->combinations;
     }
 }

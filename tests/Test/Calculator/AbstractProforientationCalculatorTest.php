@@ -58,7 +58,7 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
             'com' => [0, 0, 0],
             'boss' => [0, 0, 0],
             'war' => [0, 0, 0],
-        ], $calculator->calculateTypesGroups());
+        ], $calculator->calculateUserTypes());
     }
 
     public function testSummationTypesGroups()
@@ -73,13 +73,13 @@ abstract class AbstractProforientationCalculatorTest extends KernelTestCase
             'natural' => 40,
             'tech' => 40,
             'body' => 0
-        ], $calculator->sumTypesGroups($types));
+        ], $calculator->avgValueByTypes($types));
     }
 
     public function testGrabTopTypes()
     {
         $calculator = $this->createEmptyCalculator();
-        $result = $calculator->grabTopTypes([
+        $result = $calculator->filterTopTypes([
             'natural' => 10,
             'tech' => 50,
             'human' => 40,

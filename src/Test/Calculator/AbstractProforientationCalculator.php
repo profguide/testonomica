@@ -10,14 +10,32 @@ namespace App\Test\Calculator;
 use App\Test\AbstractCalculator;
 use App\Test\AnswersHolder;
 use App\Test\Helper\ProfessionsMapper;
+use App\Test\Proforientation\Calc\CalculationTypesValues;
+use App\Test\Proforientation\Calc\ProfessionTypeScoreCalculator;
+use App\Test\Proforientation\Calc\Values;
+use App\Test\Proforientation\Mapper\ConfigMapper;
 use App\Test\Proforientation\Profession;
 use App\Test\Proforientation\ProftestConfig;
+use App\Test\Proforientation\TypesCombination;
 use App\Test\QuestionsHolder;
 use App\Util\AnswersUtil;
+use Symfony\Component\HttpKernel\KernelInterface;
 
 abstract class AbstractProforientationCalculator extends AbstractCalculator
 {
-    const MAXIMUM_PROFESSIONS = 15;
+    const MAXIMUM_PROFESSIONS_NUMBER = 15;
+
+    private ProftestConfig $config;
+
+    public function __construct(
+        AnswersHolder $answersHolder,
+        QuestionsHolder $questionsHolder,
+        KernelInterface $kernel,
+        string $locale = 'ru')
+    {
+        parent::__construct($answersHolder, $questionsHolder, $kernel, $locale);
+        $this->initConfig();
+    }
 
     protected function fitVersion(): void
     {
@@ -32,169 +50,93 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
     public function calculate(): array
     {
         $this->fitVersion();
-        $typesGroupsPercent = $this->calculateTypesGroups();
-        $typesSinglePercent = $this->sumTypesGroups($typesGroupsPercent);
-        $professions = $this->grabProfessionsByTypes($typesSinglePercent);
-        $professions = $this->sliceProfessions($professions, self::MAXIMUM_PROFESSIONS);
+
+        // считаем сколько набрали в каждом типе: усилия, интересы, скилы
+        $typesCalculation = $this->calculateUserTypes();
+        // считаем среднее для каждого типа
+        $avgValueByTypes = $this->avgValueByTypes($typesCalculation); // [art => 65]
+        // типы с наибольшими значениями
+        $bestTypes = $this->filterTopTypes($avgValueByTypes); // [art => 65]
+
+        $professions = $this->getProfessions();
+        $professions = $this->scoreProfessions($professions, $bestTypes);
+        // оставим топ подходящих профессий
+        $professions = array_slice($professions, 0, self::MAXIMUM_PROFESSIONS_NUMBER);
+
         return [
-//            'types_group_percent' => $typesGroupsPercent,
-//            'types_single_percent' => $typesSinglePercent,
-//            'types_descriptions' => $this->typesDescriptions($typesGroupsPercent),
             'professions' => $professions,
-            'types_descriptions' => $this->typesDescriptionsByName($typesGroupsPercent),
-            'types_top' => $this->grabTopTypes($typesSinglePercent), // being used in trial report
+            'types_descriptions' => $this->typesDescriptions($typesCalculation),
+            'types_top' => $bestTypes, // being used in trial report
         ];
     }
 
-    /**
-     * Из ответов формирует массив с процентами вида ['tech' => [33, 20, 50], 'body' => [0, 50, 0]]
-     * @return array
-     */
-    public function calculateTypesGroups(): array
+    public function calculateUserTypes(): CalculationTypesValues
     {
-        $types = ['natural', 'tech', 'human', 'body', 'math', 'it', 'craft', 'art', 'hoz', 'com', 'boss', 'war'];
-        $result = [];
-        foreach ($types as $type) {
-            $result[$type] = $this->calculateTypeGroups($type, $this->answersHolder, $this->questionsHolder);
+        $result = new CalculationTypesValues();
+
+        foreach (TypesCombination::ALL as $name) {
+            $result->add($name, new Values(
+                $this->calculateUserType("{$name}-force"),
+                $this->calculateUserType("{$name}-interest"),
+                $this->calculateUserType("{$name}-skills")
+            ));
         }
-        return $result;
-    }
 
-    /**
-     * @param string $groupMainName e.g. tech
-     * @param AnswersHolder $answersHolder
-     * @param QuestionsHolder $questionsHolder
-     * @return array
-     */
-    protected function calculateTypeGroups(string $groupMainName, AnswersHolder $answersHolder, QuestionsHolder $questionsHolder)
-    {
-        return [
-            $this->calculateTypeGroup($groupMainName . '-force', $answersHolder, $questionsHolder),
-            $this->calculateTypeGroup($groupMainName . '-interest', $answersHolder, $questionsHolder),
-            $this->calculateTypeGroup($groupMainName . '-skills', $answersHolder, $questionsHolder),
-        ];
+        return $result;
     }
 
     /**
      * Высчитывает сумму положительных и правильных ответов для группы вопросов
      * @param string $groupName e.g. tech-skills
-     * @param AnswersHolder $answersHolder
-     * @param QuestionsHolder $questionsHolder
      * @return float
      */
-    private function calculateTypeGroup(string $groupName, AnswersHolder $answersHolder, QuestionsHolder $questionsHolder): float
+    private function calculateUserType(string $groupName): float
     {
-        $questions = $questionsHolder->group($groupName);
+        $questions = $this->questionsHolder->group($groupName);
         $count = count($questions);
-        $rightSum = AnswersUtil::sum(new QuestionsHolder($questions), $answersHolder);
-        $this->applyExtraAnswers($groupName, $answersHolder, $rightSum, $count);
+        $rightSum = AnswersUtil::sum(new QuestionsHolder($questions), $this->answersHolder);
+        $this->applyExtraAnswers($groupName, $this->answersHolder, $rightSum, $count);
+
         return (round($rightSum / $count * 100));
     }
 
     /**
-     * Суммирует значения групп типов
-     * @param array ['tech' => [33, 20, 50], 'body' => [0, 50, 0], 'human' => [40, 40, 40]]
+     * Среднее значение по типу
+     * @param CalculationTypesValues $typesValuesCalculation
      * @return array ['tech' => 34.3, 'body' => 16.6, 'human' => 40]
      */
-    public function sumTypesGroups(array $typesScored): array
+    public function avgValueByTypes(CalculationTypesValues $typesValuesCalculation): array
     {
         $result = [];
-        foreach ($typesScored as $name => $groups) {
-            $result[$name] = round(array_sum($groups) / count($groups));
+        foreach ($typesValuesCalculation->all() as $name => $values) {
+            $sum = $values->force() + $values->skills() + $values->interest();
+            $result[$name] = round($sum / 3);
         }
         arsort($result);
         return $result;
     }
 
     /**
-     * Считает рейтинг профессий, используя набранные типы
-     * @param array ['tech' => 20, 'body' => 50, 'human' => 0]
-     * @return array ['Архитектор' => 1, 'Бариста' => 0.2]
-     */
-    public function grabProfessionsByTypes(array $typesScored): array
-    {
-        return $this->grabProfessionsByTypesCombs($this->grabTopTypes($typesScored));
-    }
-
-    /**
+     * Рассчитывает счёт профессии с использованием набранных значений
      *
-     * @param array $topTypes
-     * @return array
+     * @param Profession[] $professions
+     * @param array $topTypes ['tech' => 20, 'body' => 50, 'human' => 0]
+     * @return Profession[] with added scores
      */
-    public function grabProfessionsByTypesCombs(array $topTypes): array
+    public function scoreProfessions(array $professions, array $topTypes): array
     {
-        $resultProfessions = [];
-        foreach ($this->getProfessions() as $profession) {
-            // посчитаем рейтинг профессии
-            $rating = $this->combsRating($topTypes, $profession);
-            // отсекаем профессии с нулевым совпадением
-            if ($rating > 0) {
-                $profession->setRating($rating);
-                $resultProfessions[] = $profession;
-            }
+        $calculator = new ProfessionTypeScoreCalculator($topTypes);
+        foreach ($professions as $i => $profession) {
+            $score = $calculator->calculate($profession->types(), $profession->typesNot());
+            $profession->setRating($score);
         }
-        usort($resultProfessions, function ($a, $b) {
-            /**@var $a Profession */
-            /**@var $b Profession */
-            if ($a->getRating() == $b->getRating()) {
-                return 0;
-            }
-            return ($a->getRating() > $b->getRating()) ? -1 : 1;
+
+        // отсортируем профессии по очкам
+        usort($professions, function (Profession $a, Profession $b) {
+            return $b->getRating() <=> $a->getRating();
         });
-        return $resultProfessions;
-    }
 
-    public function combsRating(array $types, Profession $profession): float
-    {
-        $max = 0.0;
-        foreach ($profession->getCombs() as $comb) {
-            if (($combRating = $this->oneCombRating($types, $comb, $profession->getNot())) > $max) {
-                $max = $combRating;
-            }
-        }
-        return $max;
-    }
-
-    /**
-     * @param array $typesScored
-     * @param array $typesNeeded
-     * @param array $not - не учитывать комбинации, где присутствуют опредённые типы.
-     * Пригождается, чтобы отсечь профессии, не требовательные к сложным навыками, когда человек их набрал.
-     * Например, слесарь - только body, а человек набрал и body и human и it. Если в профессии указано not="human",
-     * то рейтинг будет 0
-     * @return float
-     */
-    public function oneCombRating(array $typesScored, array $typesNeeded, array $not = []): float
-    {
-        $keysTypesScored = array_keys($typesScored);
-
-        // если не набраны все требуемые типы, то это не подходит
-        foreach ($typesNeeded as $typeNeed) {
-            if (!in_array($typeNeed, $keysTypesScored)) {
-                return 0;
-            }
-        }
-
-        // если набранный тип указан в $not, профессия не подходит
-        foreach (array_keys($typesScored) as $typeScored) {
-            if (in_array($typeScored, $not)) {
-                return 0;
-            }
-        }
-
-        // сложим успех набранных типов ($typesScored), которые востребованны (есть в $typesNeeded)
-        $rate = 0;
-        foreach ($typesScored as $type => $value) {
-            if (in_array($type, $typesNeeded)) {
-                $rate += $value;
-            }
-        }
-
-//        // получим среднее, чтобы рейтинг был максимум 100% и приведем к дроби, где 1 - это 100%
-//        return $rate / count($typesNeeded) / 100;
-
-        // получим сумму сильных качеств
-        return $rate;
+        return $professions;
     }
 
     /*
@@ -203,92 +145,76 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
      * =>
      * ['body' => 50, 'craft' => 40]
      */
-    public function grabTopTypes(array $values)
+    public function filterTopTypes(array $values): array
     {
         arsort($values); // сортируем
-        $maxValue = $values[array_key_first($values)]; // максимальное
+
+        $max = reset($values);
+        $min = $max - $max / 1.5; // такая вот формула из головы
+        // скорее всего нужно сложить все, взять медиану - всё что выше - топ
+//        $min = array_slice($values, 6, 1); // todo протестировать с медианой вместо $min = $max - $max / 1.5
+
+
+        $limit = 4; // а почему 4?
         $top = [];
-//        $offsetTopValues = 20; // от топа вниз на сколько процентов считаем топом
-//        $offsetTopValues = 35; // от топа вниз на сколько процентов считаем топом
-        $allowMinValue = $maxValue - $maxValue / 1.5;
-        $maxCount = 4;
         foreach ($values as $name => $value) {
-//            if ($percent >= $maxValue - $offsetTopValues) {
-//                $top[$name] = $percent;
-//            }
-            if ($value >= $maxValue - $allowMinValue) {
+            if ($value >= $max - $min) { // интересная формула. почему так?
                 $top[$name] = $value;
             }
-            if (count($top) >= $maxCount) {
+            if (count($top) >= $limit) {
                 break;
             }
         }
+
         return $top;
     }
 
-    private function sliceProfessions($professions, int $limit)
-    {
-        return array_slice($professions, 0, $limit);
-    }
-
-    /**
-     * Устарело, надо удалить.
-     * Подбирает текстовые описания всех типов по значениям групп: интересы (среднее от усилий интересов) и способности
-     * @param array $typesGroups
-     * @return array вида ['tech' => ['interest' => '...', 'skills' => '...'], 'natural' => ...]
-     */
-    protected function typesDescriptions(array $typesGroups)
-    {
-        new ProftestConfig($this->kernel, $this->locale); // init static config
-
-        $descriptions = ['interest' => [], 'skills' => []];
-        foreach ($typesGroups as $typeName => $groups) {
-            $name = ProftestConfig::name($typeName);
-            // интерес - это среднее от force + interest
-            $interestValue = ($groups[0] + $groups[1]) / 2;
-            $skillValue = $groups[2];
-            $descriptions['interest'][$typeName] = [
-                'name' => $name,
-                'text' => ProftestConfig::interestText($typeName, $interestValue),
-                'level' => [
-                    'absolute' => ProftestConfig::level($interestValue)
-                ]];
-            $descriptions['skills'][$typeName] = [
-                'name' => $name,
-                'text' => ProftestConfig::skillsText($typeName, $skillValue),
-                'level' => [
-                    'absolute' => ProftestConfig::level($skillValue)
-                ]];
-        }
-        return $descriptions;
-    }
-
     /**
      * Подбирает текстовые описания всех типов по значениям групп: интересы (среднее от усилий интересов) и способности
-     * @param array $typesGroups
+     * @param CalculationTypesValues $userTypes
      * @return array вида ['tech' => ['interest' => '...', 'skills' => '...'], 'natural' => ...]
      */
-    private function typesDescriptionsByName(array $typesGroups): array
+    private function typesDescriptions(CalculationTypesValues $userTypes): array
     {
-        new ProftestConfig($this->kernel, $this->locale); // init static config
-
         $descriptions = [];
 
-        foreach ($typesGroups as $typeName => $groups) {
-            $name = ProftestConfig::name($typeName);
-            // интерес - это среднее от force + interest
-            $interestValue = ($groups[0] + $groups[1]) / 2;
-            $skillValue = $groups[2];
+        foreach ($userTypes->all() as $name => $values) {
+            $interestValue = ($values->force() + $values->interest()) / 2; // интерес - это среднее от force + interest
+            $skillValue = $values->skills();
 
-            $descriptions[$typeName] = [
-                'name' => $name,
+            $configType = $this->config->types()->get($name);
+
+            if ($interestValue >= 66) {
+                $interestAbsoluteValue = 2;
+                $interestText = $configType->interest()->maxText();
+            } elseif ($interestValue >= 33) {
+                $interestAbsoluteValue = 1;
+                $interestText = $configType->interest()->midText();
+            } else {
+                $interestAbsoluteValue = 0;
+                $interestText = $configType->interest()->minText();
+            }
+
+            if ($skillValue >= 66) {
+                $skillsAbsoluteValue = 2;
+                $skillsText = $configType->skill()->maxText();
+            } elseif ($skillValue >= 33) {
+                $skillsAbsoluteValue = 1;
+                $skillsText = $configType->skill()->midText();
+            } else {
+                $skillsAbsoluteValue = 0;
+                $skillsText = $configType->skill()->minText();
+            }
+
+            $descriptions[$name] = [
+                'name' => $configType->name(),
                 'interest' => [
-                    'text' => ProftestConfig::interestText($typeName, $interestValue),
-                    'absolute' => ProftestConfig::level($interestValue)
+                    'text' => $interestText,
+                    'absolute' => $interestAbsoluteValue
                 ],
                 'skills' => [
-                    'text' => ProftestConfig::skillsText($typeName, $skillValue),
-                    'absolute' => ProftestConfig::level($skillValue)
+                    'text' => $skillsText,
+                    'absolute' => $skillsAbsoluteValue
                 ],
             ];
         }
@@ -315,9 +241,18 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
         }
     }
 
+    /**
+     * @return Profession[]
+     */
     private function getProfessions(): array
     {
         $xml = $this->kernel->getProjectDir() . '/xml/proftest/professions.xml';
         return (new ProfessionsMapper(file_get_contents($xml), $this->locale))->getProfessions();
+    }
+
+    private function initConfig()
+    {
+        $xml = $this->kernel->getProjectDir() . '/xml/proftest/config.xml';
+        $this->config = (new ConfigMapper(file_get_contents($xml), $this->locale))->parse();
     }
 }

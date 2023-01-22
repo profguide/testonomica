@@ -6,6 +6,8 @@ namespace App\Test\Helper;
 
 use App\Test\CrawlerUtil;
 use App\Test\Proforientation\Profession;
+use App\Test\Proforientation\Types;
+use App\Test\Proforientation\TypesCombination;
 use App\Test\Proforientation\ValueSystem;
 use App\Tests\Test\Helper\ProfessionMapperTest;
 use DOMElement;
@@ -43,8 +45,8 @@ final class ProfessionsMapper
         return new Profession(
             $this->langText($crawler->children('name')),
             $this->parseCombs($crawler),
-            $this->parseValueSystem($crawler),
             $this->parseProfessionNot($crawler),
+            $this->parseValueSystem($crawler),
             $this->parseProfessionDescription($crawler));
     }
 
@@ -80,16 +82,16 @@ final class ProfessionsMapper
         return $description;
     }
 
-    private function parseCombs(Crawler $crawler): array
+    private function parseCombs(Crawler $crawler): Types
     {
-        $arr = [];
-        $crawler->children('combs > comb')->each(function (Crawler $comb) use (&$arr) {
-            $arr[] = explode(",", trim($comb->attr('comb')));
+        $combs = [];
+        $crawler->children('combs > comb')->each(function (Crawler $comb) use (&$combs) {
+            $combs[] = new TypesCombination(explode(",", trim($comb->attr('comb'))));
         });
-        return $arr;
+        return new Types($combs);
     }
 
-    private function parseProfessionNot(Crawler $crawler): array
+    private function parseProfessionNot(Crawler $crawler): TypesCombination
     {
         $arr = [];
         $not = $crawler->attr('not');
@@ -98,7 +100,7 @@ final class ProfessionsMapper
                 $arr[] = trim($word);
             }
         }
-        return $arr;
+        return new TypesCombination($arr);
     }
 
     // система ценностей

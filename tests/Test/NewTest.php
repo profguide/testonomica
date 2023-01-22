@@ -51,7 +51,7 @@ final class NewTest extends KernelTestCase
 
         self::print($professions);
 
-        die();
+//        die();
     }
 
     /***
@@ -84,7 +84,7 @@ final class NewTest extends KernelTestCase
         echo '=== Таблица результатов ===' . PHP_EOL . PHP_EOL;
 
         foreach ($professions as $index => $profession) {
-            echo ++$index . ') ' . ($profession->getValueScore()) . ' - ' . $profession->getName() . PHP_EOL;
+            echo ++$index . ') ' . ($profession->getValueScore()) . ' - ' . $profession->name() . PHP_EOL;
             if ($index === 15) {
                 break;
             }

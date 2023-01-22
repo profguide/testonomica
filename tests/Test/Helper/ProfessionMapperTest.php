@@ -13,7 +13,7 @@ final class ProfessionMapperTest extends KernelTestCase
     {
         $xml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
             <professions>
-                <profession>
+                <profession not="war">
                     <name>
                         <ru>Архитектор</ru>
                         <en>Architect</en>
@@ -46,9 +46,14 @@ final class ProfessionMapperTest extends KernelTestCase
         $mapper = new ProfessionsMapper($xml, $locale);
         $professions = $mapper->getProfessions();
 
+
         self::assertCount(1, $professions);
-        self::assertEquals('Архитектор', $professions[0]->getName());
-        self::assertEquals([['art', 'tech']], $professions[0]->getCombs());
+
+        self::assertEquals('Архитектор', $professions[0]->name());
+
+        self::assertEquals([['art', 'tech']], $professions[0]->types());
+        self::assertEquals(['war'], $professions[0]->typesNot());
+
         self::assertEquals(['art', 'intel', 'benefit', 'result', 'promotion', 'work-alone', 'prestige'], $professions[0]->valueSystem()->values());
     }
 }

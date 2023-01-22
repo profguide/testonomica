@@ -6,6 +6,7 @@ namespace App\Tests\Test\Proforientation;
 
 use App\Test\Helper\ProfessionsMapper;
 use App\Test\Proforientation\Profession;
+use App\Test\Proforientation\TypesCombination;
 use App\Test\Proforientation\ValueSystem;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
@@ -30,28 +31,28 @@ final class ProfessionXmlValidationTest extends KernelTestCase
     public function testEveryProfessionHasTypes()
     {
         foreach ($this->professions as $profession) {
-            self::assertNotEmpty($profession->getCombs(), "Assert that {$profession->getName()}`s types are not empty.");
+            self::assertNotEmpty($profession->types(), "Assert that {$profession->name()}`s types are not empty.");
         }
     }
 
     public function testTypesValuesCorrect()
     {
-        // 'natural', 'tech', 'human', 'body', 'math', 'it', 'craft', 'art', 'hoz', 'com', 'boss', 'war'
+        foreach ($this->professions as $profession) {
+            foreach ($profession->types()->combinations() as $comb) {
+                foreach ($comb->values() as $value) {
+                    self::assertContains($value, TypesCombination::ALL, "Assert that {$profession->name()}`s types are correct.");
+                }
+            }
+        }
+    }
 
-        // todo типы вытащить в value-object, чтобы легче было работать с ним:
-        //  $profession->types()->values()
-        //  $profession->not()->values()
-
-        // 1. (ГОТОВО) Types переименовать в ProftestConfigTypes
-        // 2. (ГОТОВО) Создать Types (value-object)
-        // 3. написать хелпер (калькулятор по типу ProfessionValueSystemRelevanceCalculator)
-        //  - ProfessionTypeRelevanceCalculator (это который Types в данный момент)
-
-//        foreach ($this->professions as $profession) {
-//            foreach ($profession->valueSystem()->values() as $value) {
-//                self::assertContains($value, ValueSystem::ALL, "Assert that {$profession->getName()}`s types are correct.");
-//            }
-//        }
+    public function testTypesNotValuesCorrect()
+    {
+        foreach ($this->professions as $profession) {
+            foreach ($profession->typesNot()->values() as $value) {
+                self::assertContains($value, TypesCombination::ALL, "Assert that {$profession->name()}`s types are correct.");
+            }
+        }
     }
 
     // Value System
@@ -59,7 +60,7 @@ final class ProfessionXmlValidationTest extends KernelTestCase
     public function testEveryProfessionHasValueSystem()
     {
         foreach ($this->professions as $profession) {
-            self::assertNotEmpty($profession->valueSystem()->values(), "Assert that {$profession->getName()}`s value system are not empty.");
+            self::assertNotEmpty($profession->valueSystem()->values(), "Assert that {$profession->name()}`s value system are not empty.");
         }
     }
 
@@ -70,7 +71,7 @@ final class ProfessionXmlValidationTest extends KernelTestCase
         foreach ($this->professions as $profession) {
             $count = count($profession->valueSystem()->values());
 
-            self::assertTrue($count <= $limit, "Assert that {$profession->getName()}`s value system are within the limit.");
+            self::assertTrue($count <= $limit, "Assert that {$profession->name()}`s value system are within the limit.");
         }
     }
 
@@ -78,7 +79,7 @@ final class ProfessionXmlValidationTest extends KernelTestCase
     {
         foreach ($this->professions as $profession) {
             foreach ($profession->valueSystem()->values() as $value) {
-                self::assertContains($value, ValueSystem::ALL, "Assert that {$profession->getName()}`s value system are correct.");
+                self::assertContains($value, ValueSystem::ALL, "Assert that {$profession->name()}`s value system are correct.");
             }
         }
     }
