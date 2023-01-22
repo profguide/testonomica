@@ -42,6 +42,7 @@ final class ProfessionTypeScoreCalculator
      */
     private function scoreCombination(TypesCombination $types, TypesCombination $not): float
     {
+        // todo поставить точку здесь и на примере первой профессии подумать о новой формуле
         $keysTypesScored = array_keys($this->userTypes);
 
         // если не набраны все требуемые типы, то это не подходит
@@ -59,13 +60,13 @@ final class ProfessionTypeScoreCalculator
         }
 
         // сложим значения набранных типов
-        $score = 0;
+        $sum = 0;
         foreach ($this->userTypes as $type => $value) {
             if (in_array($type, $types->values())) {
-                $score += $value;
+                $sum += $value;
             }
         }
 
-        return $score;
+        return $sum / count($types->values());
     }
 }
