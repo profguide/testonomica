@@ -4,8 +4,9 @@
  * @since: 09.12.2020
  */
 
-namespace App\Test\Calculator;
+declare(strict_types=1);
 
+namespace App\Test\Calculator;
 
 use App\Test\AbstractCalculator;
 use App\Test\AnswersHolder;
@@ -13,13 +14,11 @@ use App\Test\Helper\ProfessionsMapper;
 use App\Test\Proforientation\Calc\CalculationTypesValues;
 use App\Test\Proforientation\Calc\ProfessionTypeScoreCalculator;
 use App\Test\Proforientation\Calc\TopTypesCalculator;
-use App\Test\Proforientation\Calc\Values;
+use App\Test\Proforientation\Calc\UserTypesCalculator;
 use App\Test\Proforientation\Mapper\ConfigMapper;
 use App\Test\Proforientation\Profession;
 use App\Test\Proforientation\ProftestConfig;
-use App\Test\Proforientation\TypesCombination;
 use App\Test\QuestionsHolder;
-use App\Util\AnswersUtil;
 use Symfony\Component\HttpKernel\KernelInterface;
 
 abstract class AbstractProforientationCalculator extends AbstractCalculator
@@ -43,7 +42,7 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
         $this->fitVersion();
 
         // считаем сколько набрали в каждом типе: усилия, интересы, скилы
-        $userTypes = $this->calculateUserTypes();
+        $userTypes = (new UserTypesCalculator($this->questionsHolder, $this->answersHolder))->calculate();
         // считаем среднее для каждого типа
         $avgUserTypes = self::avgValueByTypes($userTypes); // [art => 65]
         // Топовые типы
@@ -62,36 +61,6 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
             'types_descriptions' => $this->typesDescriptions($userTypes),
             'types_top' => $bestUserTypes, // being used in trial report
         ];
-    }
-
-    private function calculateUserTypes(): CalculationTypesValues
-    {
-        $result = new CalculationTypesValues();
-
-        foreach (TypesCombination::ALL as $name) {
-            $result->add($name, new Values(
-                $this->calculateUserType("{$name}-force"),
-                $this->calculateUserType("{$name}-interest"),
-                $this->calculateUserType("{$name}-skills")
-            ));
-        }
-
-        return $result;
-    }
-
-    /**
-     * Высчитывает сумму положительных и правильных ответов для группы вопросов
-     * @param string $groupName e.g. tech-skills
-     * @return float
-     */
-    private function calculateUserType(string $groupName): float
-    {
-        $questions = $this->questionsHolder->group($groupName);
-        $count = count($questions);
-        $rightSum = AnswersUtil::sum(new QuestionsHolder($questions), $this->answersHolder);
-        $this->applyExtraAnswers($groupName, $this->answersHolder, $rightSum, $count);
-
-        return (round($rightSum / $count * 100));
     }
 
     /**
@@ -121,7 +90,7 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
         $calculator = new ProfessionTypeScoreCalculator($topTypes);
         foreach ($professions as $i => $profession) {
             $score = $calculator->calculate($profession->types(), $profession->typesNot());
-            $profession->setRating($score);
+            $profession->setRating((int)$score);
         }
     }
 
@@ -204,27 +173,8 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
         // 2.0.1 - 26.12.2020
         // added question 723
         // Rule: Calculator must ignore question if no corresponding answer
-        if (!$this->answersHolder->has(723) && $this->questionsHolder->has(723)) {
-            $this->questionsHolder->remove(723);
-        }
-    }
-
-    /**
-     * Применяет дополнительные правила подсчета
-     * @param string $groupName
-     * @param AnswersHolder $answersHolder
-     * @param int $rightSum
-     * @param int $count
-     */
-    private function applyExtraAnswers(string $groupName, AnswersHolder $answersHolder, int &$rightSum, int &$count)
-    {
-        if ($groupName == 'it-force') {
-            $questionIds = [102];
-
-            foreach ($questionIds as $questionId) {
-                $rightSum += $answersHolder->getValuesSum($questionId);
-            }
-            $count += count($questionIds);
+        if (!$this->answersHolder->has('723') && $this->questionsHolder->has('723')) {
+            $this->questionsHolder->remove('723');
         }
     }
 

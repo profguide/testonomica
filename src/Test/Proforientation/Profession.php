@@ -72,9 +72,9 @@ class Profession implements JsonSerializable
      */
     public function setRating(int $rating): void
     {
-        foreach ($this->description as $i => $description) {
-            $this->description[$i]['name'] .= ' (' . $rating . ')';
-        }
+//        foreach ($this->description as $i => $description) {
+//            $this->description[$i]['name'] .= ' (' . $rating . ')';
+//        }
         $this->rating = $rating;
     }
 
