@@ -58,7 +58,7 @@ final class ProfessionTypeScoreCalculator
             }
         }
 
-        // сложим успех набранных типов ($typesScored), которые востребованны (есть в $typesNeeded)
+        // сложим значения набранных типов
         $score = 0;
         foreach ($this->userTypes as $type => $value) {
             if (in_array($type, $types->values())) {

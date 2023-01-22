@@ -30,8 +30,8 @@ final class TopTypesCalculatorTest extends KernelTestCase
         $source = ['natural' => 90, 'tech' => 50, 'human' => 45, 'body' => 30, 'math' => 25, 'it' => 25, 'craft' => 25, 'art' => 25, 'hoz' => 25, 'com' => 25, 'boss' => 25, 'war' => 25];
 
         $result = (new TopTypesCalculator())->calc($source);
-        // 30 не проходит потому что слишком маленькое значение (33% от 90)
-        // 45 проходит, потому что это допустимые 50% от 90
-        self::assertEquals(['natural' => 90, 'tech' => 50, 'human' => 45], $result);
+        // 50 не проходит потому что слишком маленькое значение (55% от 90)
+        // остальные еще меньше
+        self::assertEquals(['natural' => 90], $result);
     }
 }

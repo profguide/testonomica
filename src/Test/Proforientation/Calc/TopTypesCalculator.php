@@ -19,14 +19,35 @@ final class TopTypesCalculator
      */
     public function calc(array $values): array
     {
-        // $top = self::medianBased($values);
+//        $top = self::medianBased($values);
 //        $top = self::fiftyPercentBased($values);
-        $top = self::seventyFivePercentBased($values);
+        $top = self::sixtySixPercentBased($values);
+//        $top = self::seventyFivePercentBased($values);
+//        $top = self::seventyPercentBased($values);
 
         return array_slice($top, 0, self::NUMBER);
     }
 
     /**
+     * Топ - всё что от максимума отличается не более, чем на 30%
+     * @param array $values
+     * @return array
+     */
+    private static function seventyPercentBased(array $values): array
+    {
+        // максимальное значение первое
+        $max = reset($values);
+
+        // минимальное значение
+        $min = $max * 0.7;
+
+        return array_filter($values, function (float $value) use ($min) {
+            return $value >= $min;
+        });
+    }
+
+    /**
+     * Топ - всё что от максимума отличается не более, чем на 35%
      * @param array $values
      * @return array
      */
@@ -36,15 +57,35 @@ final class TopTypesCalculator
         $max = reset($values);
 
         // минимальное значение
-        $min = $max / 1.5;
+        $min = $max * 0.75;
 
         return array_filter($values, function (float $value) use ($min) {
-            return $value >=  $min;
+            return $value >= $min;
         });
     }
 
     /**
-     * Расчёт на основе формулы = fn(max/2) - всё что выше половины максимума - топ.
+     * Топ - всё что от максимума отличается не более, чем на 33%
+     * Эта формаула работала с ~07.2021 по 01.2023 год, жалоб было немного.
+     * @param array $values
+     * @return array
+     */
+    private static function sixtySixPercentBased(array $values): array
+    {
+        // максимальное значение первое
+        $max = reset($values);
+
+        // минимальное значение
+        $min = $max * 0.66;
+
+        return array_filter($values, function (float $value) use ($min) {
+            return $value >= $min;
+        });
+    }
+
+    /**
+     * Топ - всё что от максимума отличается не более, чем на 50%
+     * Плохо тем, что повылезали профессии лишние
      * @param array $values
      * @return array
      */
@@ -54,7 +95,7 @@ final class TopTypesCalculator
         $max = reset($values);
 
         // минимальное значение - 50% от максимума
-        $min = $max / 2;
+        $min = $max * 0.5;
 
         return array_filter($values, function (float $value) use ($min) {
             return $value >= $min;

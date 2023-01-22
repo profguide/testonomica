@@ -51,9 +51,11 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
         $professions = $this->getProfessions();
         // расчитаем и выставим очки профессиям
         self::scoreProfessions($professions, $bestUserTypes);
+        // отфильтруем профессии с низкими очками
+        self::filterLowScoredProfessions($professions);
         // отсортируем профессии по очкам
         self::sortProfessions($professions);
-        // оставим по максимуму
+        // отрежем по максимуму
         self::sliceProfessions($professions, self::MAXIMUM_PROFESSIONS_NUMBER);
 
         return [
@@ -82,20 +84,33 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
     /**
      * Рассчитывает и выставляет очки профессии с использованием набранных значений
      * @param Profession[] $professions
-     * @param array $topTypes ['tech' => 20, 'body' => 50, 'human' => 0]
+     * @param array $userTypes ['tech' => 20, 'body' => 50, 'human' => 0]
      * @return void with added scores
      */
-    private static function scoreProfessions(array $professions, array $topTypes): void
+    private static function scoreProfessions(array $professions, array $userTypes): void
     {
         // todo подумать, как дополнительно фильтровать профессии для Art: музыка/дизайн (есть вопросы про музыку/диайны)
 
-        $calculator = new ProfessionTypeScoreCalculator($topTypes);
+        $calculator = new ProfessionTypeScoreCalculator($userTypes);
         foreach ($professions as $i => $profession) {
             $score = $calculator->calculate($profession->types(), $profession->typesNot());
+            // todo предлагаю обойтись без топа типов.
+            //  вместо этого сделать все типы частью формулы
+            //  но нужно учесть, что больше типов еще не означает более точное совпадение
+            //  значит их число в комбинации нельзя учитывать. Интересная задача
             $profession->setRating((int)$score);
-//            if ($score === 0) {
-//                unset($professions[$i]);
-//            }
+        }
+    }
+
+    /**
+     * @param Profession[] $professions
+     */
+    private static function filterLowScoredProfessions(array &$professions)
+    {
+        foreach ($professions as $i => $profession) {
+            if ($profession->getRating() == 0) {
+                unset($professions[$i]);
+            }
         }
     }
 
