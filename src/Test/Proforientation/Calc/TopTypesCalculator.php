@@ -20,9 +20,27 @@ final class TopTypesCalculator
     public function calc(array $values): array
     {
         // $top = self::medianBased($values);
-        $top = self::fiftyPercentBased($values);
+//        $top = self::fiftyPercentBased($values);
+        $top = self::seventyFivePercentBased($values);
 
         return array_slice($top, 0, self::NUMBER);
+    }
+
+    /**
+     * @param array $values
+     * @return array
+     */
+    private static function seventyFivePercentBased(array $values): array
+    {
+        // максимальное значение первое
+        $max = reset($values);
+
+        // минимальное значение
+        $min = $max / 1.5;
+
+        return array_filter($values, function (float $value) use ($min) {
+            return $value >=  $min;
+        });
     }
 
     /**

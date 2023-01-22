@@ -87,10 +87,15 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
      */
     private static function scoreProfessions(array $professions, array $topTypes): void
     {
+        // todo подумать, как дополнительно фильтровать профессии для Art: музыка/дизайн (есть вопросы про музыку/диайны)
+
         $calculator = new ProfessionTypeScoreCalculator($topTypes);
         foreach ($professions as $i => $profession) {
             $score = $calculator->calculate($profession->types(), $profession->typesNot());
             $profession->setRating((int)$score);
+//            if ($score === 0) {
+//                unset($professions[$i]);
+//            }
         }
     }
 
