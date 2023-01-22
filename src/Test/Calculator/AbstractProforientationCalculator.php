@@ -12,6 +12,7 @@ use App\Test\AnswersHolder;
 use App\Test\Helper\ProfessionsMapper;
 use App\Test\Proforientation\Calc\CalculationTypesValues;
 use App\Test\Proforientation\Calc\ProfessionTypeScoreCalculator;
+use App\Test\Proforientation\Calc\TopTypesCalculator;
 use App\Test\Proforientation\Calc\Values;
 use App\Test\Proforientation\Mapper\ConfigMapper;
 use App\Test\Proforientation\Profession;
@@ -37,40 +38,33 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
         $this->initConfig();
     }
 
-    protected function fitVersion(): void
-    {
-        // 2.0.1 - 26.12.2020
-        // added question 723
-        // Rule: Calculator must ignore question if no corresponding answer
-        if (!$this->answersHolder->has(723) && $this->questionsHolder->has(723)) {
-            $this->questionsHolder->remove(723);
-        }
-    }
-
     public function calculate(): array
     {
         $this->fitVersion();
 
         // считаем сколько набрали в каждом типе: усилия, интересы, скилы
-        $typesCalculation = $this->calculateUserTypes();
+        $userTypes = $this->calculateUserTypes();
         // считаем среднее для каждого типа
-        $avgValueByTypes = $this->avgValueByTypes($typesCalculation); // [art => 65]
-        // типы с наибольшими значениями
-        $bestTypes = $this->filterTopTypes($avgValueByTypes); // [art => 65]
+        $avgUserTypes = self::avgValueByTypes($userTypes); // [art => 65]
+        // Топовые типы
+        $bestUserTypes = (new TopTypesCalculator)->calc($avgUserTypes); // [art => 65]
 
         $professions = $this->getProfessions();
-        $professions = $this->scoreProfessions($professions, $bestTypes);
-        // оставим топ подходящих профессий
-        $professions = array_slice($professions, 0, self::MAXIMUM_PROFESSIONS_NUMBER);
+        // расчитаем и выставим очки профессиям
+        self::scoreProfessions($professions, $bestUserTypes);
+        // отсортируем профессии по очкам
+        self::sortProfessions($professions);
+        // оставим по максимуму
+        self::sliceProfessions($professions, self::MAXIMUM_PROFESSIONS_NUMBER);
 
         return [
             'professions' => $professions,
-            'types_descriptions' => $this->typesDescriptions($typesCalculation),
-            'types_top' => $bestTypes, // being used in trial report
+            'types_descriptions' => $this->typesDescriptions($userTypes),
+            'types_top' => $bestUserTypes, // being used in trial report
         ];
     }
 
-    public function calculateUserTypes(): CalculationTypesValues
+    private function calculateUserTypes(): CalculationTypesValues
     {
         $result = new CalculationTypesValues();
 
@@ -105,7 +99,7 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
      * @param CalculationTypesValues $typesValuesCalculation
      * @return array ['tech' => 34.3, 'body' => 16.6, 'human' => 40]
      */
-    public function avgValueByTypes(CalculationTypesValues $typesValuesCalculation): array
+    private static function avgValueByTypes(CalculationTypesValues $typesValuesCalculation): array
     {
         $result = [];
         foreach ($typesValuesCalculation->all() as $name => $values) {
@@ -117,56 +111,39 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
     }
 
     /**
-     * Рассчитывает счёт профессии с использованием набранных значений
-     *
+     * Рассчитывает и выставляет очки профессии с использованием набранных значений
      * @param Profession[] $professions
      * @param array $topTypes ['tech' => 20, 'body' => 50, 'human' => 0]
-     * @return Profession[] with added scores
+     * @return void with added scores
      */
-    public function scoreProfessions(array $professions, array $topTypes): array
+    private static function scoreProfessions(array $professions, array $topTypes): void
     {
         $calculator = new ProfessionTypeScoreCalculator($topTypes);
         foreach ($professions as $i => $profession) {
             $score = $calculator->calculate($profession->types(), $profession->typesNot());
             $profession->setRating($score);
         }
+    }
 
-        // отсортируем профессии по очкам
+    /**
+     * Сортирует профессии по очкам
+     * @param array $professions
+     */
+    private static function sortProfessions(array &$professions)
+    {
         usort($professions, function (Profession $a, Profession $b) {
             return $b->getRating() <=> $a->getRating();
         });
-
-        return $professions;
     }
 
-    /*
-     * Выделяет наиболее высокие типы
-     * ['tech' => 20, 'body' => 50, 'human' => 0, 'craft' => 40]
-     * =>
-     * ['body' => 50, 'craft' => 40]
+    /**
+     * Отрезает по максимуму
+     * @param array $professions
+     * @param int $sliceNumber
      */
-    public function filterTopTypes(array $values): array
+    private static function sliceProfessions(array &$professions, int $sliceNumber)
     {
-        arsort($values); // сортируем
-
-        $max = reset($values);
-        $min = $max - $max / 1.5; // такая вот формула из головы
-        // скорее всего нужно сложить все, взять медиану - всё что выше - топ
-//        $min = array_slice($values, 6, 1); // todo протестировать с медианой вместо $min = $max - $max / 1.5
-
-
-        $limit = 4; // а почему 4?
-        $top = [];
-        foreach ($values as $name => $value) {
-            if ($value >= $max - $min) { // интересная формула. почему так?
-                $top[$name] = $value;
-            }
-            if (count($top) >= $limit) {
-                break;
-            }
-        }
-
-        return $top;
+        $professions = array_slice($professions, 0, $sliceNumber);
     }
 
     /**
@@ -220,6 +197,16 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
         }
 
         return $descriptions;
+    }
+
+    protected function fitVersion(): void
+    {
+        // 2.0.1 - 26.12.2020
+        // added question 723
+        // Rule: Calculator must ignore question if no corresponding answer
+        if (!$this->answersHolder->has(723) && $this->questionsHolder->has(723)) {
+            $this->questionsHolder->remove(723);
+        }
     }
 
     /**
