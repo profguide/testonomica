@@ -67,6 +67,7 @@ final class ProfessionTypeScoreCalculator
             }
         }
 
-        return $sum / count($types->values());
+        // среднее арифметическое
+        return $sum; // / count($types->values());
     }
 }

@@ -50,7 +50,7 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
 
         $professions = $this->getProfessions();
         // расчитаем и выставим очки профессиям
-        self::scoreProfessions($professions, $avgUserTypes);
+        self::scoreProfessions($professions, $bestUserTypes);
         // отфильтруем профессии с низкими очками
         self::filterLowScoredProfessions($professions);
         // отсортируем профессии по очкам
