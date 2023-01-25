@@ -42,7 +42,6 @@ final class ProfessionTypeScoreCalculator
      */
     private function scoreCombination(TypesCombination $types, TypesCombination $not): float
     {
-        // todo поставить точку здесь и на примере первой профессии подумать о новой формуле
         $keysTypesScored = array_keys($this->userTypes);
 
         // если не набраны все требуемые типы, то это не подходит
