@@ -166,11 +166,8 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
 
         $calculator = new ProfessionTypeScoreCalculator($userTypes);
         foreach ($professions as $i => $profession) {
+            // todo use new way: New2Test
             $score = $calculator->calculate($profession->types(), $profession->typesNot());
-            // todo предлагаю обойтись без топа типов.
-            //  вместо этого сделать все типы частью формулы
-            //  но нужно учесть, что больше типов еще не означает более точное совпадение
-            //  значит их число в комбинации нельзя учитывать. Интересная задача
             $profession->setRating((int)$score);
         }
     }
