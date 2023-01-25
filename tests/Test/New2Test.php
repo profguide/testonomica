@@ -158,20 +158,9 @@ final class New2Test extends KernelTestCase
             ['name' => 'Каскадёр', 'types' => ['body' => 100]], // нулевой
         ];
 
-        $this->calc($userTypes, $professions);
-        $this->sort($professions);
-
-        echo PHP_EOL . '. . . . . . . . . . . . .' . PHP_EOL;
-        foreach ($professions as $i => $profession) {
-            echo $i . ') ';
-            echo $profession['score']->value() . '% - ';
-            echo $profession['name'] . ' (';
-            foreach ($profession['score']->parts() as $typeName => $typeValue) {
-                echo $typeName . ': ' . $typeValue . ', ';
-            }
-            echo ')' . PHP_EOL;
-        }
-        echo '. . . . . . . . . . . . .' . PHP_EOL;
+        self::calc($userTypes, $professions);
+        self::sort($professions);
+        self::print($professions);
     }
 
     private function calc(array $userTypes, array &$professions)
@@ -234,6 +223,21 @@ final class New2Test extends KernelTestCase
         usort($professions, function (array $a, array $b) {
             return $b['score']->value() <=> $a['score']->value();
         });
+    }
+
+    private static function print(array $professions)
+    {
+        echo PHP_EOL . '. . . . . . . . . . . . .' . PHP_EOL;
+        foreach ($professions as $i => $profession) {
+            echo $i . ') ';
+            echo $profession['score']->value() . '% - ';
+            echo $profession['name'] . ' (';
+            foreach ($profession['score']->parts() as $typeName => $typeValue) {
+                echo $typeName . ': ' . $typeValue . ', ';
+            }
+            echo ')' . PHP_EOL;
+        }
+        echo '. . . . . . . . . . . . .' . PHP_EOL;
     }
 }
 

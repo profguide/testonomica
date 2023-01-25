@@ -6,6 +6,7 @@ namespace App\Test\Proforientation\Calc;
 
 use App\Test\Proforientation\Types;
 use App\Test\Proforientation\TypesCombination;
+use App\Tests\Test\Proforientation\Calc\ProfessionTypeScoreCalculatorBasedOnTopTypesTest;
 
 /**
  * Старый алгоритм, основанный на понятии "Топ" типов.
@@ -24,7 +25,7 @@ use App\Test\Proforientation\TypesCombination;
  * После этого мы начали искать другую формулу, и это привело к алгоритму,
  * в коротом топов больше нет @see ProfessionTypeScoreCalculatorBasedOnParts
  *
- * @see ProfessionTypeScoreCalculatorTest
+ * @see ProfessionTypeScoreCalculatorBasedOnTopTypesTest
  */
 final class ProfessionTypeScoreCalculatorBasedOnTopTypes
 {
@@ -32,7 +33,8 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypes
 
     public function __construct(array $userTypes)
     {
-        $this->userTypes = $userTypes;
+        // Топовые типы
+        $this->userTypes = (new TopTypesCalculator)->calc($userTypes);
     }
 
     public function calculate(Types $types, TypesCombination $not): float
@@ -55,11 +57,8 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypes
      */
     private function scoreCombination(TypesCombination $types, TypesCombination $not): float
     {
-        // Топовые типы
-        $userTypes = (new TopTypesCalculator)->calc($this->userTypes);
-
         // если не набраны все требуемые типы, то это не подходит
-        $keysTypesScored = array_keys($userTypes);
+        $keysTypesScored = array_keys($this->userTypes);
         foreach ($types->values() as $name => $value) {
             if (!in_array($name, $keysTypesScored)) {
                 return 0;
@@ -67,7 +66,7 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypes
         }
 
         // если набранный тип указан в $not, профессия не подходит
-        foreach (array_keys($userTypes) as $typeScored) {
+        foreach (array_keys($this->userTypes) as $typeScored) {
             if (array_key_exists($typeScored, $not->values())) {
                 return 0;
             }
@@ -75,7 +74,7 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypes
 
         // сложим значения набранных типов
         $sum = 0;
-        foreach ($userTypes as $type => $value) {
+        foreach ($this->userTypes as $type => $value) {
             if (array_key_exists($type, $types->values())) {
                 $sum += $value;
             }

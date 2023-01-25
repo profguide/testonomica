@@ -30,14 +30,12 @@ use App\Test\Proforientation\TypesCombination;
  *      Потому что оптимально - это когда и профессия и человек совпадают.
  *      Чем точнее совпадение, тем меньше получается коэффициент.
  *
- *
  * ## Как устроена логика подсчёта
  * Пользователь набирает процент силы.
  * В профессии стоит долевой процент участия (НЕ СИЛА!)
  * Силу и доли сравнивать нельзя, поэтому силу указанныз типов приводим к долям.
  * Дальше уже сравниваем доли простым делением. Получается что-то типа коэффициента совпадения.
  * Дальше коэффициент умножаем на силу. Потому что сила тоже важна - это фактор хотения/умения - высокий или низкий сами о себе много говорят.
- *
  *
  */
 final class ProfessionTypeScoreCalculatorBasedOnParts
@@ -122,7 +120,7 @@ final class ProfessionTypeScoreCalculatorBasedOnParts
 
         // сумма значений для полсчёта доли.
         $sum = array_sum($userTypes);
-        if ($sum == 0) { // not === because array_sum might return float
+        if ($sum == 0) { // not "===" because array_sum might return float
             $sum = 1;
         }
         foreach ($userTypes as $name => $value) {
