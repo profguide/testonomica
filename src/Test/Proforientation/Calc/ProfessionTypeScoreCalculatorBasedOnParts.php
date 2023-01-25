@@ -72,9 +72,9 @@ final class ProfessionTypeScoreCalculatorBasedOnParts
      */
     private function scoreCombination(TypesCombination $types, TypesCombination $not): float
     {
-        // если набранный тип указан в $not, профессия не подходит
+//        // если набранный тип указан в $not, профессия не подходит
         foreach (array_keys($this->userTypes) as $typeScored) {
-            if (array_key_exists($typeScored, $not->values())) {
+            if (in_array($typeScored, $not->values())) {
                 return 0;
             }
         }
