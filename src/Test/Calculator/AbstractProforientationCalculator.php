@@ -12,8 +12,7 @@ use App\Test\AbstractCalculator;
 use App\Test\AnswersHolder;
 use App\Test\Helper\ProfessionsMapper;
 use App\Test\Proforientation\Calc\CalculationTypesValues;
-use App\Test\Proforientation\Calc\ProfessionTypeScoreCalculator;
-use App\Test\Proforientation\Calc\TopTypesCalculator;
+use App\Test\Proforientation\Calc\ProfessionTypeScoreCalculatorBasedOnTopTypes;
 use App\Test\Proforientation\Calc\UserTypesCalculator;
 use App\Test\Proforientation\Mapper\ConfigMapper;
 use App\Test\Proforientation\Profession;
@@ -118,12 +117,10 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
         $userTypes = (new UserTypesCalculator($this->questionsHolder, $this->answersHolder))->calculate();
         // считаем среднее для каждого типа
         $avgUserTypes = self::avgValueByTypes($userTypes); // [art => 65]
-        // Топовые типы
-        $bestUserTypes = (new TopTypesCalculator)->calc($avgUserTypes); // [art => 65]
 
         $professions = $this->getProfessions();
         // расчитаем и выставим очки профессиям
-        self::scoreProfessions($professions, $bestUserTypes);
+        self::scoreProfessions($professions, $avgUserTypes);
         // отфильтруем профессии с низкими очками
         self::filterLowScoredProfessions($professions);
         // отсортируем профессии по очкам
@@ -134,7 +131,6 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
         return [
             'professions' => $professions,
             'types_descriptions' => $this->typesDescriptions($userTypes),
-            'types_top' => $bestUserTypes, // being used in trial report
         ];
     }
 
@@ -162,14 +158,13 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
      */
     private static function scoreProfessions(array $professions, array $userTypes): void
     {
-        // todo подумать, как дополнительно фильтровать профессии для Art: музыка/дизайн (есть вопросы про музыку/диайны)
-
-        $calculator = new ProfessionTypeScoreCalculator($userTypes);
+        $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes);
         foreach ($professions as $i => $profession) {
-            // todo use new way: New2Test
             $score = $calculator->calculate($profession->types(), $profession->typesNot());
             $profession->setRating((int)$score);
         }
+
+        // todo подумать, как отдельно влиять на очки профессии для art: музыка/дизайн (есть вопросы про музыку/дизайн)
     }
 
     /**

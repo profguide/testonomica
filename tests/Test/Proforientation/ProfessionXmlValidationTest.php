@@ -31,17 +31,20 @@ final class ProfessionXmlValidationTest extends KernelTestCase
     public function testEveryProfessionHasTypes()
     {
         foreach ($this->professions as $profession) {
-            self::assertNotEmpty($profession->types(), "Assert that {$profession->name()}`s types are not empty.");
+            self::assertNotEmpty($profession->types(), "Assert that types not empty at {$profession->name()}.");
         }
     }
 
     public function testTypesValuesCorrect()
     {
         foreach ($this->professions as $profession) {
-            foreach ($profession->types()->combinations() as $comb) {
-                foreach ($comb->values() as $value) {
-                    self::assertContains($value, TypesCombination::ALL, "Assert that {$profession->name()}`s types are correct.");
+            foreach ($profession->types()->combinations() as $i => $comb) {
+                $sum = 0;
+                foreach ($comb->values() as $name => $value) {
+                    $sum += $value;
+                    self::assertContains($name, TypesCombination::ALL, "Assert that type name is correct at {$profession->name()}.");
                 }
+                self::assertEquals(100, $sum, "Assert that {$profession->name()}`s types sum equals 100 at combination #$i.");
             }
         }
     }
@@ -50,7 +53,7 @@ final class ProfessionXmlValidationTest extends KernelTestCase
     {
         foreach ($this->professions as $profession) {
             foreach ($profession->typesNot()->values() as $value) {
-                self::assertContains($value, TypesCombination::ALL, "Assert that {$profession->name()}`s types are correct.");
+                self::assertContains($value, TypesCombination::ALL, "Assert that types are correct at {$profession->name()}.");
             }
         }
     }
@@ -60,7 +63,7 @@ final class ProfessionXmlValidationTest extends KernelTestCase
     public function testEveryProfessionHasValueSystem()
     {
         foreach ($this->professions as $profession) {
-            self::assertNotEmpty($profession->valueSystem()->values(), "Assert that {$profession->name()}`s value system are not empty.");
+            self::assertNotEmpty($profession->valueSystem()->values(), "Assert that value system is not empty at {$profession->name()}.");
         }
     }
 
@@ -71,7 +74,7 @@ final class ProfessionXmlValidationTest extends KernelTestCase
         foreach ($this->professions as $profession) {
             $count = count($profession->valueSystem()->values());
 
-            self::assertTrue($count <= $limit, "Assert that {$profession->name()}`s value system are within the limit.");
+            self::assertTrue($count <= $limit, "Assert that value system is within the limit at {$profession->name()}.");
         }
     }
 
@@ -79,7 +82,7 @@ final class ProfessionXmlValidationTest extends KernelTestCase
     {
         foreach ($this->professions as $profession) {
             foreach ($profession->valueSystem()->values() as $value) {
-                self::assertContains($value, ValueSystem::ALL, "Assert that {$profession->name()}`s value system are correct.");
+                self::assertContains($value, ValueSystem::ALL, "Assert that value system is correct {$profession->name()}.");
             }
         }
     }

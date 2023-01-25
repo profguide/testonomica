@@ -91,7 +91,7 @@ final class ProfessionsMapper
             $types = [];
             foreach ($typesWithValues as $pair) {
                 $pair = explode(':', $pair);
-                $types[] = $pair[0];
+                $types[$pair[0]] = $pair[1];
             }
 
             $combs[] = new TypesCombination($types);

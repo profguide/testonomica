@@ -117,7 +117,8 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art,tech"/>-->
-            <comb comb="math:0,art:0,com:0"/>
+<!--            <comb comb="math:33,art:33,com:34"/>-->
+            <comb comb="math:50,art:50"/>
         </combs>
         <values>
             <value value="art,intel,benefit,result,promotion,work-alone,prestige"/>
@@ -152,7 +153,8 @@ l * 100
         <combs>
             <!--            <comb comb="human,body,art,com"/>-->
             <!--            <comb comb="body,art,com"/>-->
-            <comb comb="human:0,body:0,art:0,com:0"/>
+            <comb comb="human:25,body:25,art:25,com:25"/>
+            <comb comb="body:33,art:33,com:34"/>
         </combs>
         <values>
             <value value="art,publicity,difference,people,hands"/>
@@ -189,9 +191,9 @@ l * 100
             <!--            <comb comb="human,art,com"/>-->
             <!--            <comb comb="human,art"/>-->
             <!--            <comb comb="art"/>-->
-            <comb comb="human:0,art:0,com:0"/>
-            <comb comb="human:0,art:0"/>
-            <comb comb="art:0"/>
+            <comb comb="human:33,art:34,com:33"/>
+            <comb comb="human:50,art:50"/>
+            <comb comb="art:100"/>
         </combs>
         <values>
             <value value="art,intel,difference,people,promotion,result"/>
@@ -230,7 +232,7 @@ l * 100
             <en>Cameraman</en>
         </name>
         <combs>
-            <comb comb="art:0"/>
+            <comb comb="art:70,body:30"/>
         </combs>
         <values>
             <value value="hands,art,result,people,travel"/>
@@ -265,7 +267,7 @@ l * 100
             <en>Sound engineer</en>
         </name>
         <combs>
-            <comb comb="art:0"/>
+            <comb comb="art:100"/>
         </combs>
         <values>
             <value value="work-alone,result,art,indoor,safe"/>
@@ -306,7 +308,7 @@ l * 100
             <en>Visagiste, Make-up artist</en>
         </name>
         <combs>
-            <comb comb="art:0,craft:0"/>
+            <comb comb="art:50,craft:50"/>
         </combs>
         <values>
             <value value="hands,art,people,result,indoor,light-work,self-employ"/>
@@ -358,7 +360,8 @@ l * 100
         <combs>
             <!--            <comb comb="com,craft"/>-->
             <!--            <comb comb="craft"/>-->
-            <comb comb="com:0,craft:0"/>
+            <comb comb="com:50,craft:50"/>
+            <comb comb="craft:100"/>
         </combs>
         <values>
             <value value="hands,people,result,indoor,self-employ"/>
@@ -388,7 +391,7 @@ l * 100
             <en>Designer</en>
         </name>
         <combs>
-            <comb comb="art:0"/>
+            <comb comb="art:100"/>
         </combs>
         <values>
             <value value="art,result,intel,promotion,self-employ,light-work,work-alone"/>
@@ -423,7 +426,7 @@ l * 100
             <en>Interior designer</en>
         </name>
         <combs>
-            <comb comb="art:0,com:0,math:0"/>
+            <comb comb="art:34,com:33,math:33"/>
         </combs>
         <values>
             <value value="art,result,benefit,difference,promotion,intel,self-employ,free-time"/>
@@ -454,7 +457,7 @@ l * 100
             <en>Landscape designer</en>
         </name>
         <combs>
-            <comb comb="natural:0,art:0"/>
+            <comb comb="natural:50,art:50"/>
         </combs>
         <values>
             <value value="art,result,benefit,outdoor,difference,intel,promotion,free-time"/>
@@ -486,7 +489,7 @@ l * 100
             <en>Industrial designer</en>
         </name>
         <combs>
-            <comb comb="art:0,tech:0"/>
+            <comb comb="art:50,tech:50"/>
         </combs>
         <values>
             <value value="art,result,benefit,indoor,intel,promotion,light-work"/>
@@ -520,7 +523,7 @@ l * 100
             <en>Composer</en>
         </name>
         <combs>
-            <comb comb="art:0"/>
+            <comb comb="art:100"/>
         </combs>
         <values>
             <value value="art,result,intel,free-time,light-work,indoor,work-alone,self-employ,promotion,safe"/>
@@ -553,7 +556,7 @@ l * 100
             <en>Musician</en>
         </name>
         <combs>
-            <comb comb="art:0"/>
+            <comb comb="art:100"/>
         </combs>
         <values>
             <value value="publicity,travel,art,free-time,light-work,people,indoor,body"/>
@@ -589,7 +592,7 @@ l * 100
             <en>Sculptor</en>
         </name>
         <combs>
-            <comb comb="craft:0,art:0"/>
+            <comb comb="craft:50,art:50"/>
         </combs>
         <values>
             <value value="art,hands,body,result,work-alone,self-employ,indoor,free-time"/>
@@ -619,7 +622,7 @@ l * 100
             <en>Illustrator</en>
         </name>
         <combs>
-            <comb comb="art:0"/>
+            <comb comb="art:100"/>
         </combs>
         <values>
             <value value="art,result,indoor,work-alone,intel,hands,light-work,self-employ,free-time,safe"/>
@@ -657,7 +660,8 @@ l * 100
         <combs>
             <!--            <comb comb="human,art,com"/>-->
             <!--            <comb comb="human,com"/>-->
-            <comb comb="human:0,art:0,com:0"/>
+            <comb comb="human:34,art:33,com:33"/>
+            <comb comb="human:50,com:50"/>
         </combs>
         <values>
             <value value="intel,people,travel,self-employ,indoor,safe,free-time,light-work,art"/>
@@ -697,7 +701,9 @@ l * 100
             <!--            <comb comb="com,boss,art"/>-->
             <!--            <comb comb="com,boss"/>-->
             <!--            <comb comb="boss,art"/>-->
-            <comb comb="com:0,boss:0,art:0"/>
+            <comb comb="com:34,boss:33,art:33"/>
+            <comb comb="com:50,boss:50"/>
+            <comb comb="boss:50,art:50"/>
         </combs>
         <values>
             <value value="self-employ,travel,intel,salary,free-time,difference,people,art,light-work"/>
@@ -729,7 +735,7 @@ l * 100
             <en>Jeweler</en>
         </name>
         <combs>
-            <comb comb="art:0,craft:0"/>
+            <comb comb="art:50,craft:50"/>
         </combs>
         <values>
             <value value="art,hands,result,indoor,work-alone,safe"/>
@@ -765,7 +771,7 @@ l * 100
             <en>Choreographer</en>
         </name>
         <combs>
-            <comb comb="art:0,body:0,com:0"/>
+            <comb comb="art:33,body:34,com:33"/>
         </combs>
         <values>
             <value value="art,body,people,free-time,indoor,difference,publicity,travel"/>
@@ -800,7 +806,7 @@ l * 100
             <en>Image-maker</en>
         </name>
         <combs>
-            <comb comb="art:0,com:0"/>
+            <comb comb="art:50,com:50"/>
         </combs>
         <values>
             <value value="people,travel,result,body,art,free-time,light-work,difference,indoor"/>
@@ -838,7 +844,8 @@ l * 100
         <combs>
             <!--            <comb comb="com,craft"/>-->
             <!--            <comb comb="craft"/>-->
-            <comb comb="com:0,craft:0"/>
+            <comb comb="com:50,craft:50"/>
+            <comb comb="craft:100"/>
         </combs>
         <values>
             <value value="hands,people,result,benefit,indoor,self-employ,art"/>
@@ -868,7 +875,7 @@ l * 100
             <en>Dancer</en>
         </name>
         <combs>
-            <comb comb="art:0,body:0"/>
+            <comb comb="art:50,body:50"/>
         </combs>
         <values>
             <value value="art,publicity,body,people,indoor,travel"/>
@@ -910,11 +917,11 @@ l * 100
             <!--            <comb comb="human,boss,com"/> &lt;!&ndash;маркетолог брендов&ndash;&gt;-->
             <!--            <comb comb="boss,com"/> &lt;!&ndash;маркетолог брендов&ndash;&gt;-->
             <!--            <comb comb="math"/> &lt;!&ndash;маркетолог-исследователь&ndash;&gt;-->
-            <comb comb="boss:0,human:0,math:0"/>
-            <comb comb="human:0,math:0"/>
-            <comb comb="human:0,boss:0,com:0"/>
-            <comb comb="boss:0,com:0"/>
-            <comb comb="math:0"/>
+            <comb comb="boss:34,human:33,math:33"/>
+            <comb comb="human:33,boss:34,com:33"/>
+            <comb comb="human:50,math:50"/>
+            <comb comb="boss:50,com:50"/>
+            <comb comb="math:100"/>
         </combs>
         <values>
             <value value="intel,difference,salary,benefit,result,promotion,people,big-company,indoor"/>
@@ -999,7 +1006,7 @@ l * 100
             <en>Logistician</en>
         </name>
         <combs>
-            <comb comb="com:0,math:0"/>
+            <comb comb="com:50,math:50"/>
         </combs>
         <values>
             <value value="intel,big-company,result,people,benefit,indoor,travel,promotion"/>
@@ -1038,7 +1045,8 @@ l * 100
         <combs>
             <!--            <comb comb="com,math"/>-->
             <!--            <comb comb="math"/>-->
-            <comb comb="com:0,math:0"/>
+            <comb comb="com:50,math:50"/>
+            <comb comb="math:100"/>
         </combs>
         <values>
             <value value="travel,people,result,benefit,indoor,light-work,difference"/>
@@ -1076,7 +1084,7 @@ l * 100
             <en>Customs clearance specialist</en>
         </name>
         <combs>
-            <comb comb="math:0"/>
+            <comb comb="math:100"/>
         </combs>
         <values>
             <value value="gov,indoor,work-alone,light-work,big-company"/>
@@ -1115,7 +1123,8 @@ l * 100
         <combs>
             <!--            <comb comb="com,math"/>-->
             <!--            <comb comb="com"/>-->
-            <comb comb="com:0,math:0"/>
+            <comb comb="com:50,math:50"/>
+            <comb comb="com:100"/>
         </combs>
         <values>
             <value value="people,indoor,difference,result,intel,salary,big-company"/>
@@ -1147,7 +1156,7 @@ l * 100
             <en>Realtor</en>
         </name>
         <combs>
-            <comb comb="com:0,math:0"/>
+            <comb comb="com:50,math:50"/>
         </combs>
         <values>
             <value value="people,free-time,difference,result,salary,self-employ,benefit"/>
@@ -1185,9 +1194,9 @@ l * 100
             <!--            <comb comb="art,hoz,com,boss"/>-->
             <!--            <comb comb="art,com,boss"/>-->
             <!--            <comb comb="com,boss"/>-->
-            <comb comb="art:0,hoz:0,com:0,boss:0"/>
-            <comb comb="art:0,com:0,boss:0"/>
-            <comb comb="com:0,boss:0"/>
+            <comb comb="art:25,hoz:25,com:25,boss:25"/>
+            <comb comb="art:33,com:34,boss:33"/>
+            <comb comb="com:50,boss:50"/>
         </combs>
         <values>
             <value value="people,intel,travel,art,difference,self-employ,free-time,result"/>
@@ -1221,7 +1230,7 @@ l * 100
             <en>Merchandiser</en>
         </name>
         <combs>
-            <comb comb="math:0"/>
+            <comb comb="math:100"/>
         </combs>
         <values>
             <value value="indoor,big-company,people,intel"/>
@@ -1256,7 +1265,7 @@ l * 100
             <en>Lawyer</en>
         </name>
         <combs>
-            <comb comb="com:0,human:0"/>
+            <comb comb="com:50,human:50"/>
         </combs>
         <values>
             <value value="intel,people,benefit,indoor,big-company,gov,salary,promotion"/>
@@ -1302,14 +1311,14 @@ l * 100
             <!--            <comb comb="craft,war"/> &lt;!&ndash; лопатой работать, снег красить &ndash;&gt;-->
             <!--            <comb comb="hoz,war"/>-->
             <!--            <comb comb="war"/>-->
-            <comb comb="hoz:0,com:0,boss:0,war:0"/>
-            <comb comb="body:0,war:0,com:0"/>
-            <comb comb="body:0,war:0"/>
-            <comb comb="com:0,war:0"/>
-            <comb comb="math:0,war:0"/>
-            <comb comb="craft:0,war:0"/>
-            <comb comb="hoz:0,war:0"/>
-            <comb comb="war:0"/>
+            <comb comb="hoz:25,com:25,boss:25,war:25"/>
+            <comb comb="body:33,war:34,com:33"/>
+            <comb comb="body:50,war:50"/>
+            <comb comb="com:50,war:50"/>
+            <comb comb="math:50,war:50"/>
+            <comb comb="craft:50,war:50"/>
+            <comb comb="hoz:50,war:50"/>
+            <comb comb="war:100"/>
         </combs>
         <values>
             <value value="gov,body,people,travel,difference,outdoor,promotion"/>
@@ -1352,7 +1361,9 @@ l * 100
             <!--            <comb comb="body,war,com"/>-->
             <!--            <comb comb="body,war"/>-->
             <!--            <comb comb="war"/>-->
-            <comb comb="body:0,war:0,com:0"/>
+            <comb comb="body:33,war:33,com:34"/>
+            <comb comb="body:50,war:50"/>
+            <comb comb="war:100"/>
         </combs>
         <values>
             <value value="gov,people,difference,body,outdoor,promotion,benefit"/>
@@ -1383,7 +1394,7 @@ l * 100
             <en>Radiation, chemical, and biological defense officers</en>
         </name>
         <combs>
-            <comb comb="natural:0,war:0"/>
+            <comb comb="natural:50,war:50"/>
         </combs>
         <values>
             <value value="gov,benefit,outdoor,promotion,intel"/>
@@ -1421,7 +1432,7 @@ l * 100
             <en>Sociologist</en>
         </name>
         <combs>
-            <comb comb="human:0,math:0"/>
+            <comb comb="human:50,math:50"/>
         </combs>
         <values>
             <value value="intel,people,indoor,light-work,big-company,safe"/>
@@ -1456,7 +1467,7 @@ l * 100
             <en>Philosopher</en>
         </name>
         <combs>
-            <comb comb="human:0"/>
+            <comb comb="human:100"/>
         </combs>
         <values>
             <value value="intel,indoor,light-work,free-time,safe"/>
@@ -1492,7 +1503,7 @@ l * 100
             <en>Political Scientist</en>
         </name>
         <combs>
-            <comb comb="human:0"/>
+            <comb comb="human:100"/>
         </combs>
         <values>
             <value value="intel,people,indoor,publicity,free-time,light-work,difference"/>
@@ -1534,9 +1545,9 @@ l * 100
             <!--            <comb comb="human,com,natural"/>-->
             <!--            <comb comb="human,com"/>-->
             <!--            <comb comb="human,natural"/>-->
-            <comb comb="human:0,com:0,natural:0"/>
-            <comb comb="human:0,com:0"/>
-            <comb comb="human:0,natural:0"/>
+            <comb comb="human:34,com:33,natural:33"/>
+<!--            <comb comb="human:50,com:50"/>-->
+<!--            <comb comb="human:50,natural:50"/>-->
         </combs>
         <values>
             <value value="intel,people,benefit,indoor,free-time,light-work,difference"/>
@@ -1625,7 +1636,7 @@ l * 100
             <en>Editor</en>
         </name>
         <combs>
-            <comb comb="human:0"/>
+            <comb comb="human:100"/>
         </combs>
         <values>
             <value value="intel,work-alone,indoor,light-work,result,safe"/>
@@ -1662,7 +1673,7 @@ l * 100
             <en>PR manager</en>
         </name>
         <combs>
-            <comb comb="com:0,human:0"/>
+            <comb comb="com:50,human:50"/>
         </combs>
         <values>
             <value value="intel,art,people,indoor,difference,publicity,promotion,light-work"/>
@@ -1697,8 +1708,8 @@ l * 100
         <combs>
             <!--            <comb comb="human,com"/>-->
             <!--            <comb comb="human"/>-->
-            <comb comb="human:0,com:0"/>
-            <comb comb="human:0"/>
+            <comb comb="human:50,com:50"/>
+            <comb comb="human:100"/>
         </combs>
         <values>
             <value value="intel,indoor,light-work,result,safe,work-alone,free-time"/>
@@ -1730,7 +1741,7 @@ l * 100
             <en>Philologist</en>
         </name>
         <combs>
-            <comb comb="human:0"/>
+            <comb comb="human:100"/>
         </combs>
         <values>
             <value value="intel,indoor,safe,light-work,free-time"/>
@@ -1761,7 +1772,7 @@ l * 100
             <en>Journalist</en>
         </name>
         <combs>
-            <comb comb="human:0,com:0"/>
+            <comb comb="human:50,com:50"/>
         </combs>
         <values>
             <value value="intel,people,art,difference,publicity,free-time"/>
@@ -1797,7 +1808,7 @@ l * 100
             <en>Diplomat</en>
         </name>
         <combs>
-            <comb comb="com:0,human:0"/>
+            <comb comb="com:50,human:50"/>
         </combs>
         <values>
             <value value="gov,intel,people,travel,high-society,light-work,indoor"/>
@@ -1831,7 +1842,7 @@ l * 100
             <en>Social worker</en>
         </name>
         <combs>
-            <comb comb="com:0"/>
+            <comb comb="com:100"/>
         </combs>
         <values>
             <value value="gov,people,benefit,body,indoor"/>
@@ -1873,9 +1884,9 @@ l * 100
             <!--            <comb comb="human,com"/>-->
             <!--            <comb comb="tech,com"/>-->
             <!--            <comb comb="natural,com"/>-->
-            <comb comb="human:0,com:0"/>
-            <comb comb="tech:0,com:0"/>
-            <comb comb="natural:0,com:0"/>
+            <comb comb="human:50,com:50"/>
+            <comb comb="tech:50,com:50"/>
+            <comb comb="natural:50,com:50"/>
         </combs>
         <values>
             <value value="intel,people,indoor,benefit,self-employ"/>
@@ -1921,7 +1932,7 @@ l * 100
             <en>Cook</en>
         </name>
         <combs>
-            <comb comb="craft:0,body:0"/>
+            <comb comb="craft:50,body:50"/>
         </combs>
         <values>
             <value value="indoor,hands,result,art,safe,people"/>
@@ -1953,7 +1964,7 @@ l * 100
             <en>Geologist</en>
         </name>
         <combs>
-            <comb comb="tech:0,math:0"/>
+            <comb comb="tech:50,math:50"/>
         </combs>
         <values>
             <value value="intel,body,travel,difference,outdoor,work-alone"/>
@@ -1989,7 +2000,7 @@ l * 100
             <en>Biologists</en>
         </name>
         <combs>
-            <comb comb="natural:0"/>
+            <comb comb="natural:100"/>
         </combs>
         <values>
             <value value="intel,outdoor,difference,travel,promotion,body"/>
@@ -2032,7 +2043,7 @@ l * 100
             <en>Plant grower, breeder</en>
         </name>
         <combs>
-            <comb comb="natural:0,craft:0"/>
+            <comb comb="natural:50,craft:50"/>
         </combs>
         <values>
             <value value="intel,outdoor,hands,body,result,safe,difference,travel"/>
@@ -2091,7 +2102,7 @@ l * 100
             <en>Agronomist</en>
         </name>
         <combs>
-            <comb comb="natural:0"/>
+            <comb comb="natural:100"/>
         </combs>
         <values>
             <value value="intel,result,benefit,outdoor,body,safe,people,big-company"/>
@@ -2141,8 +2152,8 @@ l * 100
         <combs>
             <!--            <comb comb="natural,math"/>-->
             <!--            <comb comb="natural"/>-->
-            <comb comb="natural:0,math:0"/>
-            <comb comb="natural:0"/>
+            <comb comb="natural:50,math:50"/>
+            <comb comb="natural:100"/>
         </combs>
         <values>
             <value value="intel,indoor,benefit,light-work,safe"/>
@@ -2204,9 +2215,9 @@ l * 100
             <!--            <comb comb="natural,it,math"/>-->
             <!--            <comb comb="natural,math"/>-->
             <!--            <comb comb="natural,it"/>-->
-            <comb comb="natural:0,it:0,math:0"/>
-            <comb comb="natural:0,math:0"/>
-            <comb comb="natural:0,it:0"/>
+            <comb comb="natural:34,it:33,math:33"/>
+            <comb comb="natural:50,math:50"/>
+            <comb comb="natural:50,it:50"/>
         </combs>
         <values>
             <value value="intel,indoor,benefit,safe,light-work,result,high-society"/>
@@ -2239,7 +2250,7 @@ l * 100
             <en>Soil Scientist</en>
         </name>
         <combs>
-            <comb comb="natural:0,math:0"/>
+            <comb comb="natural:50,math:50"/>
         </combs>
         <values>
             <value value="intel,outdoor,hands,body,travel,safe,benefit"/>
@@ -2272,7 +2283,7 @@ l * 100
             <en>Ecologist</en>
         </name>
         <combs>
-            <comb comb="natural:0,math:0"/>
+            <comb comb="natural:50,math:50"/>
         </combs>
         <values>
             <value value="intel,safe,benefit,big-company"/>
@@ -2319,8 +2330,8 @@ l * 100
         <combs>
             <!--            <comb comb="natural,tech,math"/> &lt;!&ndash;химик-технолог&ndash;&gt;-->
             <!--            <comb comb="natural,math"/> &lt;!&ndash;химик-исследователь&ndash;&gt;-->
-            <comb comb="natural:0,tech:0,math:0"/>
-            <comb comb="natural:0,math:0"/>
+            <comb comb="natural:34,tech:33,math:33"/>
+            <comb comb="natural:50,math:50"/>
         </combs>
         <values>
             <value value="intel,indoor,safe,result,benefit,hands,promotion"/>
@@ -2417,7 +2428,7 @@ l * 100
             <en>Theoretical physicists</en>
         </name>
         <combs>
-            <comb comb="tech:0,math:0"/>
+            <comb comb="tech:50,math:50"/>
         </combs>
         <values>
             <value value="intel,indoor,safe,promotion,gov,light-work"/>
@@ -2454,7 +2465,7 @@ l * 100
             <en>Astrophysicist</en>
         </name>
         <combs>
-            <comb comb="tech:0,math:0"/>
+            <comb comb="tech:50,math:50"/>
         </combs>
         <values>
             <value value="intel,indoor,safe,promotion,gov,light-work"/>
@@ -2491,7 +2502,7 @@ l * 100
             <en>Geophysicist</en>
         </name>
         <combs>
-            <comb comb="tech:0,math:0"/>
+            <comb comb="tech:50,math:50"/>
         </combs>
         <values>
             <value value="intel,big-company,benefit,result,safe,promotion,difference"/>
@@ -2527,8 +2538,8 @@ l * 100
         <combs>
             <!--            <comb comb="natural,hoz"/>-->
             <!--            <comb comb="natural"/>-->
-            <comb comb="natural:0,hoz:0"/>
-            <comb comb="natural:0"/>
+            <comb comb="natural:50,hoz:50"/>
+            <comb comb="natural:100"/>
         </combs>
         <values>
             <value value="body,outdoor,result,benefit"/>
@@ -2567,9 +2578,9 @@ l * 100
             <!--            <comb comb="natural,tech"/> &lt;!&ndash; если океанолог в геологии &ndash;&gt;-->
             <!--            <comb comb="natural,math"/>-->
             <!--            <comb comb="natural"/>-->
-            <comb comb="natural:0,tech:0"/>
-            <comb comb="natural:0,math:0"/>
-            <comb comb="natural:0"/>
+            <comb comb="natural:50,tech:50"/>
+            <comb comb="natural:50,math:50"/>
+            <comb comb="natural:100"/>
         </combs>
         <values>
             <value value="intel,outdoor,benefit,promotion,travel,difference,body,gov"/>
@@ -2607,9 +2618,9 @@ l * 100
             <!--            <comb comb="natural,craft,hoz"/>-->
             <!--            <comb comb="natural,craft"/>-->
             <!--            <comb comb="natural,hoz"/>-->
-            <comb comb="natural:0,craft:0,hoz:0"/>
-            <comb comb="natural:0,craft:0"/>
-            <comb comb="natural:0,hoz:0"/>
+            <comb comb="natural:33,craft:33,hoz:34"/>
+            <comb comb="natural:50,craft:50"/>
+            <comb comb="natural:50,hoz:50"/>
         </combs>
         <values>
             <value value="outdoor,hands,body,result,benefit,work-alone,difference"/>
@@ -2641,7 +2652,7 @@ l * 100
             <en>Florist</en>
         </name>
         <combs>
-            <comb comb="art:0,craft:0"/>
+            <comb comb="art:50,craft:50"/>
         </combs>
         <values>
             <value value="hands,body,art,indoor,result,safe,people"/>
@@ -2675,8 +2686,8 @@ l * 100
         <combs>
             <!--            <comb comb="natural,body,com"/>-->
             <!--            <comb comb="body,com"/>-->
-            <comb comb="natural:0,body:0,com:0"/>
-            <comb comb="body:0,com:0"/>
+            <comb comb="natural:33,body:33,com:34"/>
+            <comb comb="body:50,com:50"/>
         </combs>
         <values>
             <value value="outdoor,body,hands,benefit,result,free-time,self-employ"/>
@@ -2713,8 +2724,8 @@ l * 100
         <combs>
             <!--            <comb comb="tech,math"/>-->
             <!--            <comb comb="tech"/>-->
-            <comb comb="tech:0,math:0"/>
-            <comb comb="tech:0"/>
+            <comb comb="tech:50,math:50"/>
+            <comb comb="tech:100"/>
         </combs>
         <values>
             <value value="intel,result,benefit,indoor,promotion,people"/>
@@ -2756,8 +2767,8 @@ l * 100
         <combs>
             <!--            <comb comb="tech,math,war"/>-->
             <!--            <comb comb="tech,math"/>-->
-            <comb comb="tech:0,math:0,war:0"/>
-            <comb comb="tech:0,math:0"/>
+            <comb comb="tech:33,math:34,war:33"/>
+            <comb comb="tech:50,math:50"/>
         </combs>
         <values>
             <value value="travel,big-company,outdoor,high-society,salary,body,people,result,benefit"/>
@@ -2794,7 +2805,7 @@ l * 100
             <en>Mechatronics engineer (robotics technician)</en>
         </name>
         <combs>
-            <comb comb="tech:0,math:0,it:0"/>
+            <comb comb="tech:34,math:33,it:33"/>
         </combs>
         <values>
             <value value="intel,indoor,result,benefit,difference,big-company,promotion,people,safe"/>
@@ -2826,8 +2837,8 @@ l * 100
         <combs>
             <!--            <comb comb="tech,war"/>-->
             <!--            <comb comb="tech"/>-->
-            <comb comb="tech:0,war:0"/>
-            <comb comb="tech:0"/>
+            <comb comb="tech:50,war:50"/>
+            <comb comb="tech:100"/>
         </combs>
         <values>
             <value value="intel,body,hands,result,benefit,difference"/>
@@ -2863,9 +2874,9 @@ l * 100
             <!--            <comb comb="tech,math,natural"/>-->
             <!--            <comb comb="tech,math"/>-->
             <!--            <comb comb="tech,war"/> &lt;!&ndash;разработчик военного оборудования&ndash;&gt;-->
-            <comb comb="tech:0,math:0,natural:0"/>
-            <comb comb="tech:0,math:0"/>
-            <comb comb="tech:0,war:0"/>
+            <comb comb="tech:34,math:33,natural:33"/>
+            <comb comb="tech:50,math:50"/>
+            <comb comb="tech:50,war:50"/>
         </combs>
         <values>
             <value value="intel,indoor,promotion,light-work,people,safe"/>
@@ -2898,7 +2909,7 @@ l * 100
             <en>Equipment adjuster</en>
         </name>
         <combs>
-            <comb comb="tech:0,craft:0"/>
+            <comb comb="tech:50,craft:50"/>
         </combs>
         <values>
             <value value="hands,body,result,benefit,work-alone"/>
@@ -2931,8 +2942,8 @@ l * 100
         <combs>
             <!--            <comb comb="tech,it,math"/>-->
             <!--            <comb comb="tech,it"/>-->
-            <comb comb="tech:0,it:0,math:0"/>
-            <comb comb="tech:0,it:0"/>
+            <comb comb="tech:34,it:33,math:33"/>
+            <comb comb="tech:50,it:50"/>
         </combs>
         <values>
             <value value="intel,indoor,result,benefit,promotion,people,light-work,big-company,gov"/>
@@ -2976,7 +2987,7 @@ l * 100
             <en>Restorer</en>
         </name>
         <combs>
-            <comb comb="craft:0,hoz:0"/>
+            <comb comb="craft:50,hoz:50"/>
         </combs>
         <values>
             <value value="hands,art,work-alone,result,indoor,safe"/>
@@ -3007,7 +3018,7 @@ l * 100
             <en>Mill operator</en>
         </name>
         <combs>
-            <comb comb="tech:0,craft:0"/>
+            <comb comb="tech:50,craft:50"/>
         </combs>
         <values>
             <value value="hands,body,indoor,work-alone,result,benefit"/>
@@ -3036,7 +3047,7 @@ l * 100
             <en>Locksmith</en>
         </name>
         <combs>
-            <comb comb="tech:0,craft:0"/>
+            <comb comb="tech:50,craft:50"/>
         </combs>
         <values>
             <value value="hands,body,work-alone,result,benefit"/>
@@ -3069,8 +3080,8 @@ l * 100
         <combs>
             <!--            <comb comb="tech,craft"/>-->
             <!--            <comb comb="craft"/>-->
-            <comb comb="tech:0,craft:0"/>
-            <comb comb="craft:0"/>
+            <comb comb="tech:50,craft:50"/>
+            <comb comb="craft:100"/>
         </combs>
         <values>
             <value value="hands,body,work-alone,result,benefit"/>
@@ -3118,7 +3129,7 @@ l * 100
             <en>Plumber</en>
         </name>
         <combs>
-            <comb comb="tech:0,craft:0"/>
+            <comb comb="tech:50,craft:50"/>
         </combs>
         <values>
             <value value="hands,body,people,result,benefit"/>
@@ -3149,7 +3160,7 @@ l * 100
             <en>Blacksmith</en>
         </name>
         <combs>
-            <comb comb="tech:0,craft:0"/>
+            <comb comb="tech:50,craft:50"/>
         </combs>
         <values>
             <value value="hands,body,work-alone,result,benefit,art,indoor"/>
@@ -3182,7 +3193,7 @@ l * 100
             <en>Welder</en>
         </name>
         <combs>
-            <comb comb="tech:0,craft:0"/>
+            <comb comb="tech:50,craft:50"/>
         </combs>
         <values>
             <value value="hands,body,result,benefit,indoor"/>
@@ -3215,7 +3226,7 @@ l * 100
             <en>Automechanic</en>
         </name>
         <combs>
-            <comb comb="tech:0,craft:0"/>
+            <comb comb="tech:50,craft:50"/>
         </combs>
         <values>
             <value value="hands,body,result,people,benefit"/>
@@ -3247,7 +3258,7 @@ l * 100
             <en>Electrician (wireman)</en>
         </name>
         <combs>
-            <comb comb="tech:0,craft:0"/>
+            <comb comb="tech:50,craft:50"/>
         </combs>
         <values>
             <value value="hands,body,result,people,benefit"/>
@@ -3278,7 +3289,7 @@ l * 100
             <en>Train Driver</en>
         </name>
         <combs>
-            <comb comb="tech:0"/>
+            <comb comb="tech:100"/>
         </combs>
         <values>
             <value value="travel,outdoor,result,benefit,work-alone,gov"/>
@@ -3311,7 +3322,7 @@ l * 100
             <en>Food technologist</en>
         </name>
         <combs>
-            <comb comb="natural:0,math:0"/>
+            <comb comb="natural:50,math:50"/>
         </combs>
         <values>
             <value value="intel,people,result,benefit,indoor,promotion,hands"/>
@@ -3346,7 +3357,7 @@ l * 100
             <en>Captain of a river or sea ship</en>
         </name>
         <combs>
-            <comb comb="tech:0"/>
+            <comb comb="tech:100"/>
         </combs>
         <values>
             <value value="travel,outdoor,result,benefit,people,gov,high-society"/>
@@ -3380,7 +3391,7 @@ l * 100
             <en>MICE Manager</en>
         </name>
         <combs>
-            <comb comb="com:0"/>
+            <comb comb="com:100"/>
         </combs>
         <values>
             <value value="people,result,intel,free-time,difference,light-work,travel"/>
@@ -3415,7 +3426,7 @@ l * 100
             <en>Flight Attendant</en>
         </name>
         <combs>
-            <comb comb="com:0"/>
+            <comb comb="com:100"/>
         </combs>
         <values>
             <value value="people,travel,hands,body,big-company,benefit"/>
@@ -3448,7 +3459,7 @@ l * 100
             <en>Mathematician</en>
         </name>
         <combs>
-            <comb comb="math:0"/>
+            <comb comb="math:100"/>
         </combs>
         <values>
             <value value="intel,work-alone,safe,big-company,result,indoor,free-time,light-work"/>
@@ -3488,8 +3499,8 @@ l * 100
         <combs>
             <!--            <comb comb="math,it"/>-->
             <!--            <comb comb="math"/>-->
-            <comb comb="math:0,it:0"/>
-            <comb comb="math:0"/>
+            <comb comb="math:50,it:50"/>
+            <comb comb="math:100"/>
         </combs>
         <values>
             <value value="intel,work-alone,safe,big-company,result,indoor,free-time,light-work"/>
@@ -3529,7 +3540,7 @@ l * 100
             <en>Farmer</en>
         </name>
         <combs>
-            <comb comb="natural:0,boss:0,hoz:0"/>
+            <comb comb="natural:34,boss:33,hoz:33"/>
         </combs>
         <values>
             <value value="outdoor,hands,body,people,difference,result,benefit,self-employ"/>
@@ -3573,9 +3584,9 @@ l * 100
             <!--            <comb comb="body,natural,com"/>-->
             <!--            <comb comb="body,natural"/>-->
             <!--            <comb comb="natural,craft"/>-->
-            <comb comb="body:0,natural:0,com:0"/>
-            <comb comb="body:0,natural:0"/>
-            <comb comb="natural:0,craft:0"/>
+            <comb comb="body:33,natural:34,com:33"/>
+            <comb comb="body:50,natural:50"/>
+            <comb comb="natural:50,craft:50"/>
         </combs>
         <values>
             <value value="people,hands,hands,body,result,benefit,indoor,difference"/>
@@ -3606,7 +3617,7 @@ l * 100
             <en>Head nurse</en>
         </name>
         <combs>
-            <comb comb="com:0,hoz:0"/>
+            <comb comb="com:50,hoz:50"/>
         </combs>
         <values>
             <value value="people,light-work,intel,indoor,safe,promotion,high-society"/>
@@ -3645,7 +3656,7 @@ l * 100
             <en>Doctor</en>
         </name>
         <combs>
-            <comb comb="natural:0,com:0"/>
+            <comb comb="natural:50,com:50"/>
         </combs>
         <values>
             <value value="people,intel,result,benefit,indoor,body"/>
@@ -3682,8 +3693,8 @@ l * 100
         <combs>
             <!--            <comb comb="natural,craft,tech"/>-->
             <!--            <comb comb="natural,craft"/>-->
-            <comb comb="natural:0,craft:0,tech:0"/>
-            <comb comb="natural:0,craft:0"/>
+            <comb comb="natural:34,craft:33,tech:33"/>
+            <comb comb="natural:50,craft:50"/>
         </combs>
         <values>
             <value value="people,intel,result,benefit,indoor,hands,body,high-society"/>
@@ -3718,7 +3729,7 @@ l * 100
             <en>Laboratory physician</en>
         </name>
         <combs>
-            <comb comb="natural:0"/>
+            <comb comb="natural:100"/>
         </combs>
         <values>
             <value value="intel,result,benefit,indoor,work-alone,hands,safe"/>
@@ -3752,10 +3763,10 @@ l * 100
             <!--            <comb comb="natural,body"/>-->
             <!--            <comb comb="natural,craft"/>-->
             <!--            <comb comb="body"/>-->
-            <comb comb="natural:0,body:0,craft:0"/>
-            <comb comb="natural:0,body:0"/>
-            <comb comb="natural:0,craft:0"/>
-            <comb comb="body:0"/>
+            <comb comb="natural:33,body:34,craft:33"/>
+            <comb comb="natural:50,body:50"/>
+            <comb comb="natural:50,craft:50"/>
+            <comb comb="body:100"/>
         </combs>
         <values>
             <value value="hands,body,people,result,benefit,indoor,self-employ"/>
@@ -3786,7 +3797,7 @@ l * 100
             <en>Pharmacists Or druggists</en>
         </name>
         <combs>
-            <comb comb="natural:0,com:0"/>
+            <comb comb="natural:50,com:50"/>
         </combs>
         <values>
             <value value="intel,benefit,result,indoor,people,promotion,difference,light-work,safe"/>
@@ -3829,7 +3840,7 @@ l * 100
             <en>Psychotherapist</en>
         </name>
         <combs>
-            <comb comb="natural:0,human:0,com:0"/>
+            <comb comb="natural:33,human:33,com:34"/>
         </combs>
         <values>
             <value value="people,benefit,intel,free-time,indoor,light-work"/>
@@ -3861,8 +3872,8 @@ l * 100
         <combs>
             <!--            <comb comb="natural,human,com"/>-->
             <!--            <comb comb="natural,human"/>-->
-            <comb comb="natural:0,human:0,com:0"/>
-            <comb comb="natural:0,human:0"/>
+            <comb comb="natural:34,human:33,com:33"/>
+            <comb comb="natural:50,human:50"/>
         </combs>
         <values>
             <value value="people,intel,benefit,result,indoor,light-work"/>
@@ -3891,7 +3902,7 @@ l * 100
             <en>Physical Therapy Coach</en>
         </name>
         <combs>
-            <comb comb="natural:0,body:0,com:0"/>
+            <comb comb="natural:33,body:33,com:34"/>
         </combs>
         <values>
             <value value="body,people,intel,result,safe"/>
@@ -3925,7 +3936,7 @@ l * 100
             <en>Veterinarian</en>
         </name>
         <combs>
-            <comb comb="natural:0,body:0"/>
+            <comb comb="natural:50,body:50"/>
         </combs>
         <values>
             <value value="intel,hands,body,result,benefit,indoor,self-employ"/>
@@ -3969,9 +3980,9 @@ l * 100
             <!--            <comb comb="natural,human,com"/>-->
             <!--            <comb comb="human,natural"/>-->
             <!--            <comb comb="human,com"/>-->
-            <comb comb="natural:0,human:0,com:0"/>
-            <comb comb="human:0,natural:0"/>
-            <comb comb="human:0,com:0"/>
+            <comb comb="natural:34,human:33,com:33"/>
+            <comb comb="human:50,natural:50"/>
+            <comb comb="human:50,com:50"/>
         </combs>
         <values>
             <value value="people,intel,result,benefit,self-employ,indoor,light-work"/>
@@ -4023,7 +4034,7 @@ l * 100
             <en>Human Resources Manager</en>
         </name>
         <combs>
-            <comb comb="human:0,com:0"/>
+            <comb comb="human:50,com:50"/>
         </combs>
         <values>
             <value value="people,intel,result,safe,light-work,indoor,promotion,big-company"/>
@@ -4058,7 +4069,7 @@ l * 100
             <en>Sports manager</en>
         </name>
         <combs>
-            <comb comb="com:0,math:0,boss:0"/>
+            <comb comb="com:33,math:33,boss:34"/>
         </combs>
         <values>
             <value value="people,result,light-work,free-time,travel,difference,safe"/>
@@ -4102,8 +4113,8 @@ l * 100
         <combs>
             <!--            <comb comb="math,com"/>-->
             <!--            <comb comb="math"/>-->
-            <comb comb="math:0,com:0"/>
-            <comb comb="math:0"/>
+            <comb comb="math:50,com:50"/>
+            <comb comb="math:100"/>
         </combs>
         <values>
             <value value="intel,result,light-work,people,indoor,big-company,benefit"/>
@@ -4168,7 +4179,7 @@ l * 100
             <en>Hotel managers (hoteliers)</en>
         </name>
         <combs>
-            <comb comb="com:0,hoz:0"/>
+            <comb comb="com:50,hoz:50"/>
         </combs>
         <values>
             <value value="people,indoor,difference,promotion"/>
@@ -4235,7 +4246,7 @@ l * 100
             <en>Butler-Major</en>
         </name>
         <combs>
-            <comb comb="com:0,hoz:0"/>
+            <comb comb="com:50,hoz:50"/>
         </combs>
         <values>
             <value value="people,indoor,high-society,light-work,difference,safe"/>
@@ -4277,7 +4288,7 @@ l * 100
             <en>Housekeeping manager (manager of housekeeping services)</en>
         </name>
         <combs>
-            <comb comb="com:0,hoz:0"/>
+            <comb comb="com:50,hoz:50"/>
         </combs>
         <values>
             <value value="indoor,people,benefit,result,safe"/>
@@ -4318,7 +4329,7 @@ l * 100
             <en>Housekeeper, home care assistant, storekeeper, chatelaine</en>
         </name>
         <combs>
-            <comb comb="hoz:0"/>
+            <comb comb="hoz:100"/>
         </combs>
         <values>
             <value value="indoor,people,benefit,result,hands"/>
@@ -4358,9 +4369,9 @@ l * 100
             <!--            <comb comb="tech,math,hoz"/>-->
             <!--            <comb comb="math,hoz"/>-->
             <!--            <comb comb="tech,hoz"/>-->
-            <comb comb="tech:0,math:0,hoz:0"/>
-            <comb comb="math:0,hoz:0"/>
-            <comb comb="tech:0,hoz:0"/>
+            <comb comb="tech:33,math:33,hoz:34"/>
+            <comb comb="math:50,hoz:50"/>
+            <comb comb="tech:50,hoz:50"/>
         </combs>
         <values>
             <value value="people,benefit,result,difference,indoor"/>
@@ -4397,9 +4408,9 @@ l * 100
             <!--            <comb comb="com,tech,math,hoz,boss"/>-->
             <!--            <comb comb="com,math,hoz,boss"/>-->
             <!--            <comb comb="com,math,hoz"/>-->
-            <comb comb="com:0,tech:0,math:0,hoz:0,boss:0"/>
-            <comb comb="com:0,math:0,hoz:0,boss:0"/>
-            <comb comb="com:0,math:0,hoz:0"/>
+            <comb comb="com:20,tech:20,math:20,hoz:20,boss:20"/>
+            <comb comb="com:25,math:25,hoz:25,boss:25"/>
+            <comb comb="com:33,math:33,hoz:34"/>
         </combs>
         <values>
             <value value="people,indoor,big-company,high-society"/>
@@ -4447,7 +4458,7 @@ l * 100
             <en>Tour Guide</en>
         </name>
         <combs>
-            <comb comb="human:0,com:0"/>
+            <comb comb="human:50,com:50"/>
         </combs>
         <values>
             <value value="people,body,travel,outdoor,publicity,intel,benefit,free-time,self-employ"/>
@@ -4486,8 +4497,8 @@ l * 100
         <combs>
             <!--            <comb comb="body,war"/>-->
             <!--            <comb comb="war"/>-->
-            <comb comb="body:0,war:0"/>
-            <comb comb="war:0"/>
+            <comb comb="body:50,war:50"/>
+            <comb comb="war:100"/>
         </combs>
         <values>
             <value value="hands,body,benefit,gov,outdoor,travel,result,difference"/>
@@ -4540,7 +4551,7 @@ l * 100
             </en>
         </name>
         <combs>
-            <comb comb="body:0"/>
+            <comb comb="body:100"/>
         </combs>
         <values>
             <value value="body,travel,people,publicity,result"/>
@@ -4573,7 +4584,7 @@ l * 100
             <en>Sports coach</en>
         </name>
         <combs>
-            <comb comb="body:0,com:0"/>
+            <comb comb="body:50,com:50"/>
         </combs>
         <values>
             <value value="people,indoor,benefit,body,self-employ,free-time"/>
@@ -4607,7 +4618,7 @@ l * 100
             <en>Industrial Technologist</en>
         </name>
         <combs>
-            <comb comb="tech:0,math:0"/>
+            <comb comb="tech:50,math:50"/>
         </combs>
         <values>
             <value value="intel,result,benefit,people,indoor,big-company,promotion"/>
@@ -4642,7 +4653,7 @@ l * 100
             <en>Financial analyst</en>
         </name>
         <combs>
-            <comb comb="math:0"/>
+            <comb comb="math:100"/>
         </combs>
         <values>
             <value value="intel,big-company,indoor,work-alone,promotion,light-work,result"/>
@@ -4678,7 +4689,7 @@ l * 100
             <en>Accountant, Auditor</en>
         </name>
         <combs>
-            <comb comb="math:0"/>
+            <comb comb="math:100"/>
         </combs>
         <values>
             <value value="intel,promotion,indoor,light-work,people"/>
@@ -4728,7 +4739,7 @@ l * 100
             <en>Financial risk insurance specialists</en>
         </name>
         <combs>
-            <comb comb="com:0,math:0"/>
+            <comb comb="com:50,math:50"/>
         </combs>
         <values>
             <value value="people,intel,free-time,indoor,light-work,safe,promotion"/>
@@ -4763,7 +4774,7 @@ l * 100
             <en>Actuary</en>
         </name>
         <combs>
-            <comb comb="math:0"/>
+            <comb comb="math:100"/>
         </combs>
         <values>
             <value value="intel,result,indoor,light-work,safe,work-alone"/>
@@ -4796,7 +4807,7 @@ l * 100
             <en>Financial consultant</en>
         </name>
         <combs>
-            <comb comb="math:0"/>
+            <comb comb="math:100"/>
         </combs>
         <values>
             <value value="intel,result,indoor,light-work,safe,people"/>
@@ -4830,7 +4841,7 @@ l * 100
             <en>Economist, managerial accounting specialist</en>
         </name>
         <combs>
-            <comb comb="math:0"/>
+            <comb comb="math:100"/>
         </combs>
         <values>
             <value value="intel,result,indoor,light-work,safe"/>
@@ -4866,7 +4877,7 @@ l * 100
             <en>Tax Consultant</en>
         </name>
         <combs>
-            <comb comb="math:0,com:0"/>
+            <comb comb="math:50,com:50"/>
         </combs>
         <values>
             <value value="intel,indoor,light-work,promotion,gov,safe,people"/>
@@ -4927,7 +4938,7 @@ l * 100
             <en>Securities specialists, investment consultants</en>
         </name>
         <combs>
-            <comb comb="math:0"/>
+            <comb comb="math:100"/>
         </combs>
         <values>
             <value value="intel,result,indoor,people,light-work"/>
@@ -4973,11 +4984,11 @@ l * 100
             <!--            <comb comb="it,math"/>-->
             <!--            <comb comb="tech,math"/>-->
             <!--            <comb comb="it"/>-->
-            <comb comb="it:0,tech:0,math:0"/>
-            <comb comb="it:0,tech:0"/>
-            <comb comb="it:0,math:0"/>
-            <comb comb="tech:0,math:0"/>
-            <comb comb="it:0"/>
+            <comb comb="it:34,tech:33,math:33"/>
+            <comb comb="it:50,tech:50"/>
+            <comb comb="it:50,math:50"/>
+            <comb comb="tech:50,math:50"/>
+            <comb comb="it:100"/>
         </combs>
         <values>
             <value value="intel,result,indoor,promotion,people,difference,light-work,safe,salary,self-employ"/>
@@ -5015,8 +5026,8 @@ l * 100
         <combs>
             <!--            <comb comb="tech,math,it"/>-->
             <!--            <comb comb="tech,it"/>-->
-            <comb comb="tech:0,math:0,it:0"/>
-            <comb comb="tech:0,it:0"/>
+            <comb comb="tech:33,math:33,it:34"/>
+            <comb comb="tech:50,it:50"/>
         </combs>
         <values>
             <value value="intel,result,indoor,promotion,people,difference,big-company,hands,benefit"/>
@@ -5053,8 +5064,8 @@ l * 100
         <combs>
             <!--            <comb comb="math,it"/>-->
             <!--            <comb comb="it"/>-->
-            <comb comb="math:0,it:0"/>
-            <comb comb="it:0"/>
+            <comb comb="math:50,it:50"/>
+            <comb comb="it:100"/>
         </combs>
         <values>
             <value value="intel,light-work,result,indoor,promotion,people,big-company,benefit"/>
@@ -5089,7 +5100,7 @@ l * 100
             <en>Business Analyst</en>
         </name>
         <combs>
-            <comb comb="math:0,com:0"/>
+            <comb comb="math:50,com:50"/>
         </combs>
         <values>
             <value value="intel,people,result,benefit,indoor,promotion,difference,big-company,light-work"/>
@@ -5126,9 +5137,9 @@ l * 100
             <!--            <comb comb="it,com,math"/>-->
             <!--            <comb comb="it,com"/>-->
             <!--            <comb comb="com,math"/>-->
-            <comb comb="it:0,com:0,math:0"/>
-            <comb comb="it:0,com:0"/>
-            <comb comb="com:0,math:0"/>
+            <comb comb="it:33,com:33,math:34"/>
+            <comb comb="it:50,com:50"/>
+            <comb comb="com:50,math:50"/>
         </combs>
         <values>
             <value value="intel,result,safe,free-time,light-work,people,benefit,indoor"/>
@@ -5163,8 +5174,8 @@ l * 100
         <combs>
             <!--            <comb comb="it,math"/>-->
             <!--            <comb comb="it"/>-->
-            <comb comb="it:0,math:0"/>
-            <comb comb="it:0"/>
+            <comb comb="it:50,math:50"/>
+            <comb comb="it:100"/>
         </combs>
         <values>
             <value value="intel,indoor,result,light-work,benefit,people,safe"/>
@@ -5209,8 +5220,8 @@ l * 100
         <combs>
             <!--            <comb comb="human,math,it"/>-->
             <!--            <comb comb="human,math"/>-->
-            <comb comb="human:0,math:0,it:0"/>
-            <comb comb="human:0,math:0"/>
+            <comb comb="human:33,math:34,it:33"/>
+            <comb comb="human:50,math:50"/>
         </combs>
         <values>
             <value value="intel,result,people,benefit,indoor,difference,free-time,light-work"/>
@@ -5273,8 +5284,8 @@ l * 100
         <combs>
             <!--            <comb comb="art,com,it,human"/>-->
             <!--            <comb comb="art,com,it"/>-->
-            <comb comb="art:0,com:0,it:0,human:0"/>
-            <comb comb="art:0,com:0,it:0"/>
+            <comb comb="art:25,com:25,it:25,human:25"/>
+            <comb comb="art:34,com:33,it:33"/>
         </combs>
         <values>
             <value value="intel,people,art,result,safe,free-time,high-society,light-work,difference,indoor"/>
@@ -5321,9 +5332,9 @@ l * 100
             <!--            <comb comb="art,it,com"/>-->
             <!--            <comb comb="art,it"/>-->
             <!--            <comb comb="art"/>-->
-            <comb comb="art:0,it:0,com:0"/>
-            <comb comb="art:0,it:0"/>
-            <comb comb="art:0"/>
+            <comb comb="art:34,it:33,com:33"/>
+            <comb comb="art:50,it:50"/>
+            <comb comb="art:100"/>
         </combs>
         <values>
             <value value="intel,art,indoor,difference,people,promotion,light-work,safe"/>
@@ -5401,8 +5412,8 @@ l * 100
         <combs>
             <!--            <comb comb="human,math,it"/>-->
             <!--            <comb comb="human,it"/>-->
-            <comb comb="human:0,math:0,it:0"/>
-            <comb comb="human:0,it:0"/>
+            <comb comb="human:33,math:34,it:33"/>
+            <comb comb="human:50,it:50"/>
         </combs>
         <values>
             <value value="intel,result,light-work,safe,people,indoor,big-company"/>
@@ -5434,7 +5445,7 @@ l * 100
             <en>Historian</en>
         </name>
         <combs>
-            <comb comb="human:0"/>
+            <comb comb="human:100"/>
         </combs>
         <values>
             <value value="intel,free-time,light-work,safe,people,indoor,travel,work-alone"/>
@@ -5469,7 +5480,7 @@ l * 100
             <en>Librarian, Archivist</en>
         </name>
         <combs>
-            <comb comb="human:0"/>
+            <comb comb="human:100"/>
         </combs>
         <values>
             <value value="safe,gov,indoor,work-alone,light-work"/>
@@ -5525,8 +5536,8 @@ l * 100
         <combs>
             <!--            <comb comb="com,it,boss"/>-->
             <!--            <comb comb="com,it"/>-->
-            <comb comb="com:0,it:0,boss:0"/>
-            <comb comb="com:0,it:0"/>
+            <comb comb="com:34,it:33,boss:33"/>
+            <comb comb="com:50,it:50"/>
         </combs>
         <values>
             <value value="people,indoor,result,safe,difference,promotion"/>
@@ -5562,8 +5573,8 @@ l * 100
         <combs>
             <!--            <comb comb="com,it"/>-->
             <!--            <comb comb="com"/>-->
-            <comb comb="com:0,it:0"/>
-            <comb comb="com:0"/>
+            <comb comb="com:50,it:50"/>
+            <comb comb="com:100"/>
         </combs>
         <values>
             <value value="intel,people,result,indoor,promotion,difference,light-work"/>
@@ -5608,10 +5619,10 @@ l * 100
             <!--            <comb comb="boss,it,com"/>-->
             <!--            <comb comb="boss,com"/>-->
             <!--            <comb comb="boss"/>-->
-            <comb comb="hoz:0,boss:0,com:0"/>
-            <comb comb="boss:0,it:0,com:0"/>
-            <comb comb="boss:0,com:0"/>
-            <comb comb="boss:0"/>
+            <comb comb="hoz:34,boss:33,com:33"/>
+            <comb comb="boss:34,it:33,com:33"/>
+            <comb comb="boss:50,com:50"/>
+            <comb comb="boss:100"/>
         </combs>
         <values>
             <value value="intel,people,result,difference,free-time,self-employ"/>
@@ -5656,7 +5667,7 @@ l * 100
             <en>Financial broker</en>
         </name>
         <combs>
-            <comb comb="boss:0,math:0"/>
+            <comb comb="boss:50,math:50"/>
         </combs>
         <values>
             <value value="intel,result,self-employ,work-alone,indoor,light-work,free-time"/>

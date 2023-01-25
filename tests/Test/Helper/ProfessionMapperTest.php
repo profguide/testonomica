@@ -19,7 +19,7 @@ final class ProfessionMapperTest extends KernelTestCase
                         <en>Architect</en>
                     </name>
                     <combs>
-                        <comb comb="art,tech"/>
+                        <comb comb="art:50,tech:50"/>
                     </combs>
                     <values>
                         <value value="art,intel,benefit,result,promotion,work-alone,prestige"/>
@@ -51,7 +51,7 @@ final class ProfessionMapperTest extends KernelTestCase
 
         self::assertEquals('Архитектор', $professions[0]->name());
 
-        self::assertEquals(['art', 'tech'], $professions[0]->types()->combinations()[0]->values());
+        self::assertEquals(['art' => 50, 'tech' => 50], $professions[0]->types()->combinations()[0]->values());
         self::assertEquals(['war'], $professions[0]->typesNot()->values());
 
         self::assertEquals(['art', 'intel', 'benefit', 'result', 'promotion', 'work-alone', 'prestige'], $professions[0]->valueSystem()->values());
