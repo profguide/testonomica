@@ -44,8 +44,8 @@ final class ProfessionsMapper
     {
         return new Profession(
             $this->langText($crawler->children('name')),
-            $this->parseCombs($crawler),
-            $this->parseProfessionNot($crawler),
+            $this->parseTypes($crawler),
+            $this->parseTypesNot($crawler),
             $this->parseValueSystem($crawler),
             $this->parseProfessionDescription($crawler));
     }
@@ -82,16 +82,25 @@ final class ProfessionsMapper
         return $description;
     }
 
-    private function parseCombs(Crawler $crawler): Types
+    private function parseTypes(Crawler $crawler): Types
     {
         $combs = [];
         $crawler->children('combs > comb')->each(function (Crawler $comb) use (&$combs) {
-            $combs[] = new TypesCombination(explode(",", trim($comb->attr('comb'))));
+            $typesWithValues = explode(",", trim($comb->attr('comb')));
+
+            $types = [];
+            foreach ($typesWithValues as $pair) {
+                $pair = explode(':', $pair);
+                $types[] = $pair[0];
+            }
+
+            $combs[] = new TypesCombination($types);
         });
+
         return new Types($combs);
     }
 
-    private function parseProfessionNot(Crawler $crawler): TypesCombination
+    private function parseTypesNot(Crawler $crawler): TypesCombination
     {
         $arr = [];
         $not = $crawler->attr('not');
@@ -100,6 +109,7 @@ final class ProfessionsMapper
                 $arr[] = trim($word);
             }
         }
+
         return new TypesCombination($arr);
     }
 
