@@ -201,7 +201,7 @@
         </item>
         <item id="12" group="natural-interest">
             <name>
-                <ru>Нравится ли вам хотя бы один из этих предметов в школе: химия, биология?</ru>
+                <ru>Нравился ли вам хотя бы один из этих предметов в школе: химия, биология?</ru>
                 <en>Do you enjoy at least one of these subjects at school: Chemistry, Biology?</en>
             </name>
             <options>
@@ -570,8 +570,8 @@
         </item>
         <item id="121" group="tech-skills">
             <name>
-                <ru>Вам легко даётся физика?</ru>
-                <en>Do you find physics and physics concepts easy to understand?</en>
+                <ru>Вам легко давалась физика?</ru>
+                <en>Did you find physics and physics concepts easy to understand?</en>
             </name>
             <options>
                 <option value="1">
@@ -590,8 +590,8 @@
             -->
         <item id="122" group="tech-skills">
             <name>
-                <ru>Вам легко даются геометрия или черчение?</ru>
-                <en>Do you find geometry and scientific drawing easy?</en>
+                <ru>Легко ли вам давались геометрия или черчение?</ru>
+                <en>Did you find geometry and scientific drawing easy?</en>
             </name>
             <options>
                 <option value="1">
@@ -1063,8 +1063,8 @@
         </item>
         <item id="312" group="body-interest">
             <name>
-                <ru>Какой предмет в школе ваш самый любимый?</ru>
-                <en>What is your favourite subject at school?</en>
+                <ru>Какой предмет в школе был ваш самый любимый?</ru>
+                <en>What was your favourite subject at school?</en>
             </name>
             <options>
                 <option value="0">
@@ -2384,17 +2384,17 @@
         </item>
         <item id="912" group="com-interest">
             <name>
-                <ru>Когда мою работу недооценили или несправедливо занизили отметку:</ru>
-                <en>When my work has been wrongly assessed, judged or unfairly marked:</en>
+                <ru>Когда вашу работу недооценили или несправедливо занизили отметку:</ru>
+                <en>When your work has been wrongly assessed, judged or unfairly marked:</en>
             </name>
             <options>
                 <option value="0">
-                    <ru>Я промолчу</ru>
-                    <en>I’ll stay quiet</en>
+                    <ru>Вы промолчите</ru>
+                    <en>You will stay quiet</en>
                 </option>
                 <option value="1">
-                    <ru>Я подойду к начальнику/учителю и постараюсь прояснить ситуацию</ru>
-                    <en>I will go to my boss or teacher and try to clarify the situation</en>
+                    <ru>Вы подойдёте к начальнику/учителю и постараетесь прояснить ситуацию</ru>
+                    <en>You will go to your boss or teacher and try to clarify the situation</en>
                 </option>
             </options>
         </item>
