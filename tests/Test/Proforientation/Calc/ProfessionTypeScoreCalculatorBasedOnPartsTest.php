@@ -19,7 +19,7 @@ final class ProfessionTypeScoreCalculatorBasedOnPartsTest extends KernelTestCase
         $professionTypesNot = new TypesCombination([]);
 
         $calculator = new ProfessionTypeScoreCalculatorBasedOnParts($userTypes);
-        self::assertEquals(100, $calculator->calculate($professionTypes, $professionTypesNot));
+        self::assertEquals(100, $calculator->calculate($professionTypes, $professionTypesNot)->value());
     }
 
     public function testThatTwoHighestTypesProduceMaximumScore()
@@ -29,7 +29,7 @@ final class ProfessionTypeScoreCalculatorBasedOnPartsTest extends KernelTestCase
         $professionTypesNot = new TypesCombination([]);
 
         $calculator = new ProfessionTypeScoreCalculatorBasedOnParts($userTypes);
-        self::assertEquals(100, $calculator->calculate($professionTypes, $professionTypesNot));
+        self::assertEquals(100, $calculator->calculate($professionTypes, $professionTypesNot)->value());
     }
 
     public function testThatOneLowerTypeProducesLowerScore()
@@ -39,7 +39,7 @@ final class ProfessionTypeScoreCalculatorBasedOnPartsTest extends KernelTestCase
         $professionTypesNot = new TypesCombination([]);
 
         $calculator = new ProfessionTypeScoreCalculatorBasedOnParts($userTypes);
-        self::assertEquals(75, round($calculator->calculate($professionTypes, $professionTypesNot)));
+        self::assertEquals(75, round($calculator->calculate($professionTypes, $professionTypesNot)->value()));
     }
 
     public function testThatTwoLowerTypeProduceLowerScore()
@@ -49,7 +49,7 @@ final class ProfessionTypeScoreCalculatorBasedOnPartsTest extends KernelTestCase
         $professionTypesNot = new TypesCombination([]);
 
         $calculator = new ProfessionTypeScoreCalculatorBasedOnParts($userTypes);
-        self::assertEquals(50, round($calculator->calculate($professionTypes, $professionTypesNot)));
+        self::assertEquals(50, round($calculator->calculate($professionTypes, $professionTypesNot)->value()));
     }
 
     public function testThatVeryLowTypeProduceMinimumScore()
@@ -59,7 +59,7 @@ final class ProfessionTypeScoreCalculatorBasedOnPartsTest extends KernelTestCase
         $professionTypesNot = new TypesCombination([]);
 
         $calculator = new ProfessionTypeScoreCalculatorBasedOnParts($userTypes);
-        self::assertEquals(0, round($calculator->calculate($professionTypes, $professionTypesNot)));
+        self::assertEquals(0, round($calculator->calculate($professionTypes, $professionTypesNot)->value()));
     }
 
     public function testThatHigherTypeTakesOverLowExpectations()
@@ -69,7 +69,7 @@ final class ProfessionTypeScoreCalculatorBasedOnPartsTest extends KernelTestCase
         $professionTypesNot = new TypesCombination([]);
 
         $calculator = new ProfessionTypeScoreCalculatorBasedOnParts($userTypes);
-        self::assertEquals(100, round($calculator->calculate($professionTypes, $professionTypesNot)));
+        self::assertEquals(100, round($calculator->calculate($professionTypes, $professionTypesNot)->value()));
     }
 
     // не уверен, но возможно более низкие ожидания должны приводить так же к более низкому очку, хотя... может наоборот?
@@ -80,6 +80,6 @@ final class ProfessionTypeScoreCalculatorBasedOnPartsTest extends KernelTestCase
         $professionTypesNot = new TypesCombination([]);
 
         $calculator = new ProfessionTypeScoreCalculatorBasedOnParts($userTypes);
-        self::assertEquals(100, round($calculator->calculate($professionTypes, $professionTypesNot)));
+        self::assertEquals(100, round($calculator->calculate($professionTypes, $professionTypesNot)->value()));
     }
 }

@@ -24,9 +24,11 @@ class Profession implements JsonSerializable
 
     private ValueSystem $systemValues;
 
-    private int $rating = 0;
+    private float $rating = 0;
 
     private float $valueScore = 0;
+
+    private array $log = [];
 
     public function __construct(string $name, Types $types, TypesCombination $typesNot, ValueSystem $valueSystem, $description = [])
     {
@@ -59,18 +61,18 @@ class Profession implements JsonSerializable
 
     /**
      * todo add ProfessionScore: {values, types}
-     * @return int
+     * @return float
      */
-    public function getRating(): int
+    public function getRating(): float
     {
         return $this->rating;
     }
 
     /**
      * todo add ProfessionScore: {values, types}
-     * @param int $rating
+     * @param float $rating
      */
-    public function setRating(int $rating): void
+    public function setRating(float $rating): void
     {
 //        foreach ($this->description as $i => $description) {
 //            $this->description[$i]['name'] .= ' (' . $rating . ')';
@@ -95,6 +97,16 @@ class Profession implements JsonSerializable
     public function getValueScore(): float
     {
         return $this->valueScore;
+    }
+
+    public function addLog(array $log): void
+    {
+        $this->log[] = $log;
+    }
+
+    public function getLog(): array
+    {
+        return $this->log;
     }
 
     public function __toString(): string

@@ -6,10 +6,9 @@ namespace App\Test\Proforientation\Calc;
 
 use App\Test\Proforientation\Types;
 use App\Test\Proforientation\TypesCombination;
+use App\Tests\Test\Proforientation\Calc\ProfessionTypeScoreCalculatorBasedOnPartsTest;
 
 /**
- * todo test
- *
  * ## Принципы
  * 1. Нельзя проставить профессиям силу типа по двум причинам:
  *  а) может оказаться ситуация, когда человек в принципе имеет малую силу ко всему - допустим ниже 50%.
@@ -37,6 +36,7 @@ use App\Test\Proforientation\TypesCombination;
  * Дальше уже сравниваем доли простым делением. Получается что-то типа коэффициента совпадения.
  * Дальше коэффициент умножаем на силу. Потому что сила тоже важна - это фактор хотения/умения - высокий или низкий сами о себе много говорят.
  *
+ * @see ProfessionTypeScoreCalculatorBasedOnPartsTest
  */
 final class ProfessionTypeScoreCalculatorBasedOnParts
 {
@@ -47,17 +47,17 @@ final class ProfessionTypeScoreCalculatorBasedOnParts
         $this->userTypes = $userTypes;
     }
 
-    public function calculate(Types $types, TypesCombination $not): float
+    public function calculate(Types $types, TypesCombination $not): Score
     {
-        $max = 0;
+        $max = new Score(0);
         foreach ($types->combinations() as $comb) {
-            $rating = $this->scoreCombination($comb, $not);
-            if ($rating > $max) {
-                $max = $rating;
+            $score = $this->scoreCombination($comb, $not);
+            if ($score->value() > $max->value()) {
+                $max = $score;
             }
         }
 
-        return (float)$max;
+        return $max;
     }
 
     /**
@@ -66,14 +66,19 @@ final class ProfessionTypeScoreCalculatorBasedOnParts
      * пригождается, чтобы отсечь профессии, не требовательные к сложным навыками, когда человек их набрал.
      * Например, слесарь - только body, а человек набрал и body и human и it. Если в профессии указано not="human",
      * то рейтинг будет 0
-     * @return float
+     * @return Score
      */
-    private function scoreCombination(TypesCombination $types, TypesCombination $not): float
+    private function scoreCombination(TypesCombination $types, TypesCombination $not): Score
     {
-//        // если набранный тип указан в $not, профессия не подходит
-        foreach (array_keys($this->userTypes) as $typeScored) {
-            if (in_array($typeScored, $not->values())) {
-                return 0;
+        $log = [];
+
+        $log['need'] = $types->values();
+
+        // если набранный тип указан в $not, профессия не подходит
+        $top = array_slice($this->userTypes, 0, 4);
+        foreach (array_keys($top) as $type) {
+            if (in_array($type, $not->values())) {
+                return new Score(0);
             }
         }
 
@@ -93,9 +98,8 @@ final class ProfessionTypeScoreCalculatorBasedOnParts
 //            $score += $userTypes[$name];
 //            $diff = $profTypeValue - $value;
 //            if ($diff < 0) {
-//                $score += $diff;
+//                $score -= $diff * $diff;
 //            }
-//            $k1 = '';
 
             // во сколько раз требуемая доля больше набранной (от 0 до небольшого числа)
             // надо 100, набрали 50 - значит 2.
@@ -104,9 +108,22 @@ final class ProfessionTypeScoreCalculatorBasedOnParts
             // ... подумать, как сделать, чтобы значения меньше 1 увеличивало прогрессию. или не надо?
             $k2 = $userTypes[$name] * $k1;
             $score += $k2;
+
+            $log[$name] = ['k1' => round($k1, 4), 'k2' => round($k2)];
+
+//            if ($value == 0) {
+//                $k1 = 0;
+//            } else {
+//                $k1 = $value / $profTypeValue;
+//            }
+//            $log[$name] = ['part' => $value, 'k1' => $k1];
+//
+//            $score += $k1;
         }
 
-        return round($score / count($userTypeParts), 5);
+        $value = (float)round($score / count($userTypeParts), 5);
+
+        return new Score($value, ['types' => $log]);
     }
 
     /**

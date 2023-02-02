@@ -159,13 +159,12 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
      */
     private static function scoreProfessions(array $professions, array $userTypes): void
     {
-        $calculator = new ProfessionTypeScoreCalculatorBasedOnParts($userTypes);
+//        $calculator = new ProfessionTypeScoreCalculatorBasedOnParts($userTypes);
+        $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes);
         foreach ($professions as $i => $profession) {
             $score = $calculator->calculate($profession->types(), $profession->typesNot());
-            $profession->setRating((int)$score);
+            $profession->setRating($score->value());
         }
-
-        // todo подумать, как отдельно влиять на очки профессии для art: музыка/дизайн (есть вопросы про музыку/дизайн)
     }
 
     /**

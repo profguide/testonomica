@@ -37,7 +37,7 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypes
         $this->userTypes = (new TopTypesCalculator)->calc($userTypes);
     }
 
-    public function calculate(Types $types, TypesCombination $not): float
+    public function calculate(Types $types, TypesCombination $not): Score
     {
         $max = 0;
         foreach ($types->combinations() as $comb) {
@@ -47,7 +47,7 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypes
             }
         }
 
-        return (float)$max;
+        return new Score((float)$max);
     }
 
     /**

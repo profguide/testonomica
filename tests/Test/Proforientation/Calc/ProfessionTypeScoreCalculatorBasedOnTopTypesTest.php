@@ -18,7 +18,7 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypesTest extends KernelTestC
         $professionTypesNot = new TypesCombination([]);
 
         $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes);
-        self::assertEquals(0, $calculator->calculate($professionTypes, $professionTypesNot));
+        self::assertEquals(0, $calculator->calculate($professionTypes, $professionTypesNot)->value());
     }
 
     public function testCombinationMatch()
@@ -28,7 +28,7 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypesTest extends KernelTestC
         $professionTypesNot = new TypesCombination([]);
 
         $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes);
-        self::assertEquals(120, $calculator->calculate($professionTypes, $professionTypesNot));
+        self::assertEquals(120, $calculator->calculate($professionTypes, $professionTypesNot)->value());
     }
 
     public function testCombinationMatchGetBestScore()
@@ -41,6 +41,6 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypesTest extends KernelTestC
         $professionTypesNot = new TypesCombination([]);
 
         $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes);
-        self::assertEquals(120, $calculator->calculate($professionTypes, $professionTypesNot));
+        self::assertEquals(120, $calculator->calculate($professionTypes, $professionTypesNot)->value());
     }
 }
