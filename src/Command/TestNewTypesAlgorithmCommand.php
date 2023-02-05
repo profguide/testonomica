@@ -142,6 +142,22 @@ final class TestNewTypesAlgorithmCommand extends Command
         'body' => 0.0
     ];
 
+    // Катя 2
+    const ARTUR = [
+        'art' => 86.0,
+        'com' => 77.0,
+        'boss' => 75.0,
+        'craft' => 50.0,
+        'human' => 23.0,
+        'it' => 15.0,
+        'tech' => 10.0,
+        'math' => 5.0,
+        'natural' => 5.0,
+        'hoz' => 5.0,
+        'war' => 5.0,
+        'body' => 0.0
+    ];
+
     private function professions(): array
     {
         $xml = $this->kernel->getProjectDir() . '/xml/proftest/professions.xml';
@@ -158,7 +174,7 @@ final class TestNewTypesAlgorithmCommand extends Command
     {
         // SETUP
         $userTypes = self::GUY;
-        $professionsToHighlight = ['Маркетолог', 'Психолог', 'Предприниматель'];
+        $professionsToHighlight = ['Маркетолог', 'Психолог', 'Предприниматель', 'Парикмахер'];
         $limit = 0;
 
         $professions = $this->professions();
@@ -216,7 +232,7 @@ final class TestNewTypesAlgorithmCommand extends Command
                 $text = $gray->apply($text);
             }
 
-//            $text .= self::printProfessionTypes($profession);
+            $text .= self::printProfessionTypes($profession);
 
             echo $text . PHP_EOL;
 

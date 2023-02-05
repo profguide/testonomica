@@ -70,10 +70,6 @@ final class ProfessionTypeScoreCalculatorBasedOnParts
      */
     private function scoreCombination(TypesCombination $types, TypesCombination $not): Score
     {
-        $log = [];
-
-        $log['need'] = $types->values();
-
         // если набранный тип указан в $not, профессия не подходит
         $top = array_slice($this->userTypes, 0, 4);
         foreach (array_keys($top) as $type) {
@@ -82,7 +78,7 @@ final class ProfessionTypeScoreCalculatorBasedOnParts
             }
         }
 
-        // оставим только те типы пользователя, которые есть в комбинации
+        // отфильтруем типы пользователя: только которые есть в профессии
         $userTypes = array_filter($this->userTypes, function ($name) use ($types) {
             return array_key_exists($name, $types->values());
         }, ARRAY_FILTER_USE_KEY);
@@ -91,39 +87,49 @@ final class ProfessionTypeScoreCalculatorBasedOnParts
         // это понадобится, чтобы сравнивать доли с долями
         $userTypeParts = self::toParts($userTypes);
 
-        $score = 0;
-        foreach ($userTypeParts as $name => $value) {
-            $profTypeValue = $types->values()[$name];
+        $sum = 0;
 
-//            $score += $userTypes[$name];
+//        foreach ($userTypeParts as $name => $value) {
+//            $profTypeValue = $types->values()[$name];
+//
+//            $sum += $userTypes[$name];
 //            $diff = $profTypeValue - $value;
 //            if ($diff < 0) {
-//                $score -= $diff * $diff;
+//                $sum -= $diff * $diff;
 //            }
+//        }
 
-            // во сколько раз требуемая доля больше набранной (от 0 до небольшого числа)
-            // надо 100, набрали 50 - значит 2.
-            $k1 = $value == 0 ? 0 : ($profTypeValue / $value);
-            // объективно - высокий процент умножаем на пока не постигнутый головой k1
-            // ... подумать, как сделать, чтобы значения меньше 1 увеличивало прогрессию. или не надо?
-            $k2 = $userTypes[$name] * $k1;
-            $score += $k2;
+        foreach ($userTypeParts as $name => $userTypePart) {
+            $profTypePart = $types->values()[$name];
+            $userAbsoluteValue = $userTypes[$name];
 
-            $log[$name] = ['k1' => round($k1, 4), 'k2' => round($k2)];
+            // расчитаем отношение требуемой доли к набранной (надо 100, набрали 50 - значит 2)
+            if ($userTypePart > 0) {
+                $partRatio = $profTypePart / $userTypePart;
+//                if ($partRatio > 1) {
+//                    $partRatio = 1;
+//                }
+            } else {
+                $partRatio = 0;
+            }
 
-//            if ($value == 0) {
-//                $k1 = 0;
-//            } else {
-//                $k1 = $value / $profTypeValue;
-//            }
-//            $log[$name] = ['part' => $value, 'k1' => $k1];
-//
-//            $score += $k1;
+            // умножим получившийся коэффицинт на набранный процент.
+            $a1 = $partRatio * $userAbsoluteValue;
+            $sum += $a1;
         }
 
-        $value = (float)round($score / count($userTypeParts), 5);
+        //  надбавка за сложность
+        if (count($types->values()) > 1) {
+            $sum += count($types->values()) * 10; // 10 / 20 / 30 / 40 / 50
+            $max = count($types->values()) * 100; // сумма не может быть больше, чем n*100
+            if ($sum > $max) {
+                $sum = $max;
+            }
+        }
 
-        return new Score($value, ['types' => $log]);
+        $score = $sum / count($types->values());
+
+        return new Score(round($score, 2), $types->values());
     }
 
     /**
