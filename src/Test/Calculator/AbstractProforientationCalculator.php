@@ -132,6 +132,7 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
         return [
             'professions' => $professions,
             'types_descriptions' => $this->typesDescriptions($userTypes),
+            'types' => $avgUserTypes
         ];
     }
 
