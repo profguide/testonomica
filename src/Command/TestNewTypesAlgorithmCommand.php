@@ -6,7 +6,7 @@ namespace App\Command;
 
 use App\Kernel;
 use App\Test\Helper\ProfessionsMapper;
-use App\Test\Proforientation\Calc\ProfessionTypeScoreCalculatorBasedOnParts;
+use App\Test\Proforientation\Calc\ProfessionsPercentCalculator;
 use App\Test\Proforientation\Calc\ProfessionTypeScoreCalculatorBasedOnTopTypes;
 use App\Test\Proforientation\Profession;
 use Symfony\Component\Console\Color;
@@ -43,6 +43,40 @@ final class TestNewTypesAlgorithmCommand extends Command
         'hoz' => 11,
         'craft' => 8,
         'body' => 0,
+    ];
+
+
+    const GUY_3 = [
+        'craft' => 100.0,
+        'art' => 100.0,
+        'boss' => 100.0,
+        'human' => 89.0,
+        'math' => 78.0,
+        'com' => 72.0,
+        'tech' => 67.0,
+        'war' => 67.0,
+        'body' => 58.0,
+        'it' => 58.0,
+        'hoz' => 33.0,
+        'natural' => 21.0,
+    ];
+
+    // Результат недовольного клиента.
+    // ему казаны профессии, которые совсем не подходят ему по результатам второго теста
+    // Выходило Фрезеровщик, Столяр, Химик, Инженер-разработчик оборудования, Океанолог, Наладчик оборудования, Кузнец, Сантехник, Слесарь, Электрик (электромонтер), Пчеловод, Автомеханик, Сварщик, Хирург, Ветеринар
+    const GUY_4 = [
+        'craft' => 92.0,
+        'natural' => 81.0,
+        'tech' => 81.0,
+        'math' => 67.0,
+        'art' => 67.0,
+        'hoz' => 67.0,
+        'com' => 56.0,
+        'body' => 50.0,
+        'it' => 50.0,
+        'human' => 40.0,
+        'boss' => 22.0,
+        'war' => 11.0,
     ];
 
     // Мои результаты
@@ -173,7 +207,7 @@ final class TestNewTypesAlgorithmCommand extends Command
     private function testTheory()
     {
         // SETUP
-        $userTypes = self::GUY;
+        $userTypes = self::KATE_2;
         $professionsToHighlight = ['Маркетолог', 'Психолог', 'Предприниматель', 'Парикмахер'];
         $limit = 0;
 
@@ -191,11 +225,13 @@ final class TestNewTypesAlgorithmCommand extends Command
     {
 //        $calculator = new ProfessionTypeScoreCalculatorBasedOnParts($userTypes);
         $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes);
-        foreach ($professions as $i => $profession) {
+        foreach ($professions as $profession) {
             $score = $calculator->calculate($profession->types(), $profession->typesNot());
-            $professions[$i]->setRating($score->value());
-            $professions[$i]->addLog($score->log());
+            $profession->setRating($score->value());
+            $profession->addLog($score->log());
         }
+
+        (new ProfessionsPercentCalculator())->calculate($professions);
     }
 
     private function sort(array &$professions)
@@ -214,7 +250,6 @@ final class TestNewTypesAlgorithmCommand extends Command
     private static function print(array $userTypes, array $professions, int $limit = 0, array $namesToHighlight = [])
     {
         $red = new Color('red', '', ['bold']);
-        $top = new Color('', '');
         $gray = new Color('#ccc', '');
 
         echo self::printUserTypes($userTypes);

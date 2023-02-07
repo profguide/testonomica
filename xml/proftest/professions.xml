@@ -192,8 +192,8 @@ l * 100
             <!--            <comb comb="human,art"/>-->
             <!--            <comb comb="art"/>-->
             <comb comb="human:33,art:34,com:33"/>
-            <comb comb="human:50,art:50"/>
-            <comb comb="art:100"/>
+            <comb comb="art:50,com:50"/>
+            <!--            <comb comb="art:100"/>-->
         </combs>
         <values>
             <value value="art,intel,difference,people,promotion,result"/>
@@ -233,7 +233,8 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art"/>-->
-            <comb comb="art:100"/>
+            <comb comb="art:80,tech:20"/>
+            <!--            <comb comb="art:100"/>-->
             <!--            <comb comb="art:50,body:30,tech:20"/>-->
             <!--            <comb comb="art:70,body:30"/>-->
         </combs>
@@ -724,10 +725,9 @@ l * 100
             <!--            <comb comb="com,boss,art"/>-->
             <!--            <comb comb="com,boss"/>-->
             <!--            <comb comb="boss,art"/>-->
-            <comb comb="com:34,boss:33,art:33"/>
+            <comb comb="com:40,boss:40,art:20"/>
             <comb comb="com:50,boss:50"/>
-            <comb comb="boss:50,art:50"/>
-            <!--            <comb comb="com:40,boss:40,human:20"/>-->
+            <!--            <comb comb="boss:50,art:50"/>-->
         </combs>
         <values>
             <value value="self-employ,travel,intel,salary,free-time,difference,people,art,light-work"/>
@@ -1232,7 +1232,7 @@ l * 100
             <!--            <comb comb="com,boss"/>-->
             <comb comb="art:45,hoz:20,com:20,boss:15"/>
             <comb comb="art:33,com:33,boss:34"/>
-            <comb comb="art:50,boss:50"/>
+            <comb comb="art:20,boss:80"/>
             <!--            <comb comb="boss:45,hoz:20,com:20,human:15"/>-->
         </combs>
         <values>
@@ -1435,7 +1435,8 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural,war"/>-->
-            <comb comb="natural:50,tech:50"/>
+            <comb comb="natural:45,tech:45,war:10"/>
+            <!--            <comb comb="natural:50,tech:50"/>-->
         </combs>
         <values>
             <value value="gov,benefit,outdoor,promotion,intel"/>
@@ -2166,6 +2167,7 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural"/>-->
+            <comb comb="natural:70,math:30"/>
             <comb comb="natural:100"/>
             <!--            <comb comb="natural:80,math:20"/>-->
         </combs>
@@ -2953,7 +2955,6 @@ l * 100
             <!--            <comb comb="tech,math,natural"/>-->
             <!--            <comb comb="tech,math"/>-->
             <!--            <comb comb="tech,war"/> &lt;!&ndash;разработчик военного оборудования&ndash;&gt;-->
-            <comb comb="tech:34,math:33,natural:33"/>
             <comb comb="tech:50,math:50"/>
         </combs>
         <values>
@@ -3812,7 +3813,7 @@ l * 100
             <!--            <comb comb="natural,craft,tech"/>-->
             <!--            <comb comb="natural,craft"/>-->
             <comb comb="natural:34,com:33,craft:33"/>
-            <comb comb="natural:75,craft:25"/>
+            <comb comb="natural:50,craft:50"/>
         </combs>
         <values>
             <value value="people,intel,result,benefit,indoor,hands,body,high-society"/>
@@ -4601,7 +4602,7 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="human,com"/>-->
-            <comb comb="human:30,com:70"/>
+            <comb comb="human:50,com:50"/>
         </combs>
         <values>
             <value value="people,body,travel,outdoor,publicity,intel,benefit,free-time,self-employ"/>
@@ -5096,7 +5097,7 @@ l * 100
             <en>Securities specialists, investment consultants</en>
         </name>
         <combs>
-<!--            <comb comb="math"/>-->
+            <!--            <comb comb="math"/>-->
             <comb comb="math:80,com:20"/>
             <comb comb="math:100"/>
         </combs>
@@ -5607,7 +5608,7 @@ l * 100
             </kind>
         </description>
     </profession>
-    <profession>
+    <profession not="boss">
         <name>
             <ru>Историк</ru>
             <en>Historian</en>
@@ -5644,13 +5645,13 @@ l * 100
             </kind>
         </description>
     </profession>
-    <profession is="introvert">
+    <profession not="com" is="introvert">
         <name>
             <ru>Архивариус, библиотекарь</ru>
             <en>Librarian, Archivist</en>
         </name>
         <combs>
-<!--            <comb comb="human"/>-->
+            <!--            <comb comb="human"/>-->
             <comb comb="human:100"/>
         </combs>
         <values>
@@ -5839,7 +5840,7 @@ l * 100
             <en>Financial broker</en>
         </name>
         <combs>
-<!--            <comb comb="boss,math"/>-->
+            <!--            <comb comb="boss,math"/>-->
             <comb comb="boss:50,math:50"/>
         </combs>
         <values>
@@ -5873,11 +5874,43 @@ l * 100
         </description>
     </profession>
 
+
+    <!--    <profession>-->
+    <!--        <name>-->
+    <!--            <ru>???</ru>-->
+    <!--            <en>???</en>-->
+    <!--        </name>-->
+    <!--        <combs>-->
+    <!--            <comb comb="craft:25,art:25,boss:25,human:25"/>-->
+    <!--        </combs>-->
+    <!--        <values>-->
+    <!--            <value value="people,indoor,result,safe,difference,promotion"/>-->
+    <!--        </values>-->
+    <!--        <description>-->
+    <!--            <kind>-->
+    <!--                <name>-->
+    <!--                    <ru>???</ru>-->
+    <!--                    <en>???-->
+    <!--                    </en>-->
+    <!--                </name>-->
+    <!--                <pic>???</pic>-->
+    <!--                <link>???</link>-->
+    <!--                <text>-->
+    <!--                    <ru>-->
+    <!--                        ???-->
+    <!--                    </ru>-->
+    <!--                    <en>???</en>-->
+    <!--                </text>-->
+    <!--            </kind>-->
+    <!--        </description>-->
+    <!--    </profession>-->
+
+
     <!--
         TODO добавить:
             Но помнить сперва, что нужно стремиться к объединению похожих профессий в одну.
             Например, спелеолог - подотряд геологов. Значит нужен только геолог, а в нём написать, что он может быть спелеологом.
-            - SCRAM-мастер
+            - SCRAM-мастер (может быть подотрядом для менеджер ИТ проекта или продакт менеджера)
             - Тьютор
             - Продюсер образовательных проектов
             - UX-исследователь
@@ -5885,7 +5918,6 @@ l * 100
             - Копирайтер
             - Фотограф
             - (профессии из нетологии/яндекс.практикум/гикбрейнс)
-            - Каскадёр
             - Блогер
             - Сценарист
             - Наративный дизайнер
@@ -5893,176 +5925,26 @@ l * 100
             - Проектировщик инженерных систем здания
             - Флайт-менеджер
             - Авиадиспетчер
-            - Список ниже тоже
+            - Каскадёр
+            - Клоун
+            - Мастер кукол
+            - Зоолог
+            - Ботаник
+            - Садовник
+            - Сметчик
+            - Spa-терапевт
+            - Маляр
+            - Печник
+            - Священнослужитель
+            - Грумер
+            - Бармен, Бариста
+            - Инструктор по туризму
+            - Менеджер проектов (Менеджер инженерных проектов, Менеджер строительных проектов)
+            - Аудитор
+            - Аналитик финансовых рынков
+            - SEO-специалист
+            - SMM
+            - Проводник вагонов
+            - Девопс-инженер
     -->
-
-    <!--<profession>-->
-    <!--<name><ru>Каскадёр</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="body"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Клоун</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="body,art,com"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Мастер кукол</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="art,craft"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Зоолог</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="natural"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Ботаник</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="natural"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Садовник</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="natural,body,craft"/>-->
-    <!--<comb comb="body,craft"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Сметчик</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="math"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Spa-терапевт</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="body,com"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Маляр</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="craft,body"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Плотник</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="craft,body"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Печник</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="craft,body"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Священнослужитель</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="human,com"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Грумер</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="craft,body"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Бармен</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="craft,com"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Бариста</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="craft,com"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Инструктор по туризму</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="body,com"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Менеджер проектов</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="com,math"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Менеджер инженерных проектов</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="com,math,tech"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Менеджер строительных проектов</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="com,math,tech"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Аудитор</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="math"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Аналитик финансовых рынков</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="math"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Менеджер IT-проекта</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="it,com,math"/>-->
-    <!--<comb comb="it,com"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>SEO-специалист</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="math,com,it"/>-->
-    <!--<comb comb="math,com"/>-->
-    <!--<comb comb="math"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>SMM</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="human,it,com"/>-->
-    <!--<comb comb="human,it"/>-->
-    <!--<comb comb="human"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Проводник вагонов</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="com"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Девопс-инженер</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="tech,math"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
-    <!--<profession>-->
-    <!--<name><ru>Гостиничный менеджер</ru><en></en></name>-->
-    <!--<combs>-->
-    <!--<comb comb="hoz,com"/>-->
-    <!--<comb comb="hoz"/>-->
-    <!--</combs>-->
-    <!--</profession>-->
 </professions>

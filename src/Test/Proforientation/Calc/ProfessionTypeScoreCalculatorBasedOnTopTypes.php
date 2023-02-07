@@ -39,6 +39,11 @@ use App\Tests\Test\Proforientation\Calc\ProfessionTypeScoreCalculatorBasedOnTopT
  * Это такая проблема, когда простая комбинация оказывается выше, чем сложная, потому что никто не набирает все типы на 100%.
  * Система надбавок компенсирует строгость фильтра.
  *
+ * Думаю, что дальше нужно попробовать сделать алгоритм основанный на системе отклонений от нормы, когда значение типа - это норма.
+ * Психолог - {com: 50, human: 50, natural: 30} - com и human нужно средне, а natural необязательно столько.
+ * Это не пропорция, не треуемая сила, а процент отклонения. Надо подумать ещё.
+ * Всё на 50%. Лишь только тем профессиям, где показатель нужен реально больше - мы увеличим слегка - как тонкий способ манипуляции.
+ *
  * @see ProfessionTypeScoreCalculatorBasedOnTopTypesTest
  */
 final class ProfessionTypeScoreCalculatorBasedOnTopTypes
@@ -66,20 +71,20 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypes
         return $max;
     }
 
-    private function scoreCombination(TypesCombination $types, TypesCombination $not): float
+    private function scoreCombination(TypesCombination $types, TypesCombination $not): Score
     {
         // если не набраны все требуемые типы, то это не подходит
         $keysTypesScored = array_keys($this->userTypes);
         foreach ($types->values() as $name => $value) {
             if (!in_array($name, $keysTypesScored)) {
-                return 0;
+                return new Score(0);
             }
         }
 
         // если набранный тип указан в $not, профессия не подходит
         foreach (array_keys($this->userTypes) as $typeScored) {
             if (in_array($typeScored, $not->values())) {
-                return 0;
+                return new Score(0);
             }
         }
 
@@ -92,7 +97,7 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypes
         }
 
         // среднее арифметическое
-        return $sum;
+        return new Score($sum, $types->values());
     }
 
     /**
@@ -148,17 +153,10 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypes
         }
 
         //  надбавка за сложность
-        if (count($types->values()) > 1) {
-            $sum += count($types->values()) * 10; // 10 / 20 / 30 / 40 / 50
-            $max = count($types->values()) * 100; // сумма не может быть больше, чем n*100
-            if ($sum > $max) {
-                $sum = $max;
-            }
-        }
+        $award = ComplexTypeAwardCalculator::calculate($types);
+        $sum += $award;
 
-        // среднее арифметическое
         $score = $sum / count($types->values());
-
-        return new Score(round($score, 2), $types->values());
+        return new Score(round($score, 2), [$types->values(), 'award' => $award]);
     }
 }

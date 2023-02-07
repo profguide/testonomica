@@ -6,9 +6,21 @@ namespace App\Test\Proforientation\Calc;
 
 use App\Test\Proforientation\Types;
 use App\Test\Proforientation\TypesCombination;
-use App\Tests\Test\Proforientation\Calc\ProfessionTypeScoreCalculatorBasedOnPartsTest;
+
+//use App\Tests\Test\Proforientation\Calc\ProfessionTypeScoreCalculatorBasedOnPartsTest;
 
 /**
+ * 6 февраля 2023
+ * Всё же идея основанная на пропорциях - неправильная.
+ * Потому что мы указаываем в профессии как надо, а человек может иногда набирать чуть больше или меньше math, и пропорция
+ * целиком всё меняет. И потом - что такое пропорция скилов? Разумно ли вообще такое допущение?
+ * Скорее всего нужно по прежнему использовать идею прямого подсчёта очков + надбавка за отклоление от нормы + надбавка за сложность комбинации.
+ * Например:
+ * Психолог: {com: 50, natural: 50, human: 50} - профессия требует обычной силы (надбавки не будет)
+ * Математик: {math: 75} - нужно больше математики, чем бухгалтеру. Если челове набрал больше, чем 75, то будет небольшая надбавка
+ * А если меньше, то будет небольшая убавка.
+ *
+ * 28 января 2023
  * ## Принципы
  * 1. Нельзя проставить профессиям силу типа по двум причинам:
  *  а) может оказаться ситуация, когда человек в принципе имеет малую силу ко всему - допустим ниже 50%.
@@ -56,7 +68,6 @@ final class ProfessionTypeScoreCalculatorBasedOnParts
                 $max = $score;
             }
         }
-
         return $max;
     }
 
@@ -106,9 +117,9 @@ final class ProfessionTypeScoreCalculatorBasedOnParts
             // расчитаем отношение требуемой доли к набранной (надо 100, набрали 50 - значит 2)
             if ($userTypePart > 0) {
                 $partRatio = $profTypePart / $userTypePart;
-//                if ($partRatio > 1) {
-//                    $partRatio = 1;
-//                }
+                if ($partRatio > 1) {
+                    $partRatio = 1;
+                }
             } else {
                 $partRatio = 0;
             }
@@ -119,17 +130,11 @@ final class ProfessionTypeScoreCalculatorBasedOnParts
         }
 
         //  надбавка за сложность
-        if (count($types->values()) > 1) {
-            $sum += count($types->values()) * 10; // 10 / 20 / 30 / 40 / 50
-            $max = count($types->values()) * 100; // сумма не может быть больше, чем n*100
-            if ($sum > $max) {
-                $sum = $max;
-            }
-        }
+        $award = ComplexTypeAwardCalculator::calculate($types);
+        $sum += $award;
 
         $score = $sum / count($types->values());
-
-        return new Score(round($score, 2), $types->values());
+        return new Score(round($score, 2), [$types->values(), 'award' => $award]);
     }
 
     /**

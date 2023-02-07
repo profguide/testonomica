@@ -1,5 +1,8 @@
 <?php
 
+// В настоящий момент калькулятор признан неэффективным и не используется.
+
+/*
 declare(strict_types=1);
 
 namespace App\Tests\Test\Proforientation\Calc;
@@ -83,3 +86,4 @@ final class ProfessionTypeScoreCalculatorBasedOnPartsTest extends KernelTestCase
         self::assertEquals(100, round($calculator->calculate($professionTypes, $professionTypesNot)->value()));
     }
 }
+*/

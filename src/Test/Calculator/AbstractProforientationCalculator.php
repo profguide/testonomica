@@ -12,7 +12,7 @@ use App\Test\AbstractCalculator;
 use App\Test\AnswersHolder;
 use App\Test\Helper\ProfessionsMapper;
 use App\Test\Proforientation\Calc\CalculationTypesValues;
-use App\Test\Proforientation\Calc\ProfessionTypeScoreCalculatorBasedOnParts;
+use App\Test\Proforientation\Calc\ProfessionsPercentCalculator;
 use App\Test\Proforientation\Calc\ProfessionTypeScoreCalculatorBasedOnTopTypes;
 use App\Test\Proforientation\Calc\UserTypesCalculator;
 use App\Test\Proforientation\Mapper\ConfigMapper;
@@ -161,10 +161,12 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
     {
 //        $calculator = new ProfessionTypeScoreCalculatorBasedOnParts($userTypes);
         $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes);
-        foreach ($professions as $i => $profession) {
+        foreach ($professions as $profession) {
             $score = $calculator->calculate($profession->types(), $profession->typesNot());
             $profession->setRating($score->value());
         }
+
+        (new ProfessionsPercentCalculator())->calculate($professions);
     }
 
     /**

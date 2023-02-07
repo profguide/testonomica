@@ -14,7 +14,7 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypesTest extends KernelTestC
     public function testIfCombinationNotMatchThenScoreZero()
     {
         $userTypes = ['art' => 60, 'it' => 60];
-        $professionTypes = new Types([new TypesCombination(['art', 'math'])]);
+        $professionTypes = new Types([new TypesCombination(['art' => 50, 'math' => 50])]);
         $professionTypesNot = new TypesCombination([]);
 
         $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes);
@@ -23,24 +23,27 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypesTest extends KernelTestC
 
     public function testCombinationMatch()
     {
-        $userTypes = ['art' => 60, 'math' => 60, 'it' => 10];
+        $userTypes = ['art' => 100, 'math' => 100, 'it' => 100];
         $professionTypes = new Types([new TypesCombination(['art' => 50, 'math' => 50])]);
         $professionTypesNot = new TypesCombination([]);
 
         $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes);
-        self::assertEquals(120, $calculator->calculate($professionTypes, $professionTypesNot)->value());
+        // (100 + 100 + complexAward) / 2 = 107.5
+        self::assertEquals(107.5, $calculator->calculate($professionTypes, $professionTypesNot)->value());
     }
 
     public function testCombinationMatchGetBestScore()
     {
-        $userTypes = ['art' => 60, 'math' => 60, 'it' => 10, 'boss' => 50];
+        $userTypes = ['art' => 100, 'math' => 100, 'boss' => 100, 'it' => 50];
         $professionTypes = new Types([
-            new TypesCombination(['art' => 50, 'math' => 50]),
-            new TypesCombination(['it' => 50, 'boss' => 50])
+            new TypesCombination(['art' => 50, 'math' => 50]), // << the best
+            new TypesCombination(['boss' => 50, 'it' => 50])
         ]);
         $professionTypesNot = new TypesCombination([]);
 
         $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes);
-        self::assertEquals(120, $calculator->calculate($professionTypes, $professionTypesNot)->value());
+        // (100 + 100 + complexAward) / 2 = 107.5
+        // косвенно узнали, что выбрана комбинация, где все по 100.
+        self::assertEquals(107.5, $calculator->calculate($professionTypes, $professionTypesNot)->value());
     }
 }
