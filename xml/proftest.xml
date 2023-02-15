@@ -1517,7 +1517,7 @@
         </item>
         <item id="521" group="it-skills">
             <name>
-                <ru>Вы могли бы сидеть за компьютером целыми днями?</ru>
+                <ru>Вы могли бы сидеть за компьютером большую часть рабочего дня?</ru>
                 <en>Could you sit in front of a computer all day?</en>
             </name>
             <options>
@@ -1545,8 +1545,13 @@
                     <ru>Не ворон</ru>
                     <en>Not Ravens</en>
                 </option>
+                <option value="0">
+                    <ru>Не знаю</ru>
+                    <en>I don't know</en>
+                </option>
             </options>
         </item>
+        <!-- todo упросить. зачем IT такие сложные задачи.  -->
         <item id="523" group="it-skills">
             <name>
                 <ru>Один господин, показывая своему другу фотографию мальчика, говорит:

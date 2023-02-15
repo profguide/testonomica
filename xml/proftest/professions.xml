@@ -157,7 +157,7 @@ l * 100
             <comb comb="body:33,art:33,com:34"/>
         </combs>
         <values>
-            <value value="art,publicity,difference,people,hands"/>
+            <value value="art,publicity,difference,people,body"/>
         </values>
         <description>
             <kind>
@@ -951,7 +951,6 @@ l * 100
             <comb comb="human:50,math:50"/> <!--маркетолог-исследователь-->
             <comb comb="human:33,boss:33,com:34"/> <!--маркетолог брендов-->
             <comb comb="boss:50,com:50"/> <!--маркетолог брендов-->
-            <comb comb="math:100"/> <!--маркетолог-исследователь-->
             <!--            <comb comb="boss:20,human:20,math:20,com:40"/>-->
         </combs>
         <values>
@@ -1078,8 +1077,7 @@ l * 100
         <combs>
             <!--            <comb comb="com,math"/>-->
             <!--            <comb comb="math"/>-->
-            <comb comb="com:50,math:50"/>
-            <comb comb="math:100"/>
+            <comb comb="com:40,math:40,art:20"/>
             <!--            <comb comb="boss:20,com:60,math:20"/>-->
         </combs>
         <values>

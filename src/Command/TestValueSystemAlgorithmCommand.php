@@ -7,6 +7,7 @@ namespace App\Command;
 use App\Kernel;
 use App\Test\Helper\ProfessionsMapper;
 use App\Test\Helper\ProfessionValueSystemRelevanceCalculator;
+use App\Test\Proforientation\Calc\ProfessionsPercentCalculator;
 use App\Test\Proforientation\Profession;
 use Symfony\Component\Console\Color;
 use Symfony\Component\Console\Command\Command;
@@ -15,6 +16,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 final class TestValueSystemAlgorithmCommand extends Command
 {
+    // не менять
     const VALUES = ['salary', 'big-company', 'prestige', 'travel', 'promotion', 'self-employ', 'people', 'work-alone', 'gov', 'benefit', 'art', 'indoor', 'outdoor', 'difference', 'publicity', 'safe', 'result', 'intel', 'hands', 'free-time', 'high-society', 'light-work'];
 
     protected static $defaultName = 'app:value-algo';
@@ -52,7 +54,116 @@ final class TestValueSystemAlgorithmCommand extends Command
 
     private function testTheory()
     {
-        $userValues = ['big-company', 'safe', 'light-work', 'free-time', 'high-society', 'indoor', 'result', 'art', 'intel', 'benefit', 'difference', 'work-alone', 'people', 'publicity', 'hands', 'body', 'gov', 'travel', 'promotion', 'outdoor', 'self-employ', 'salary', 'prestige'];
+        // проблема видимо в том, что везде разное количество. так? как это может влиять?
+
+//        // Военный: gov,body,people,travel,difference,outdoor,promotion
+//        $userValues = [
+//            'gov', // <<
+//            'body', // <<
+//            'people', // <<
+//            'travel', // <<
+//            'difference', // <<
+//            'outdoor', // <<
+//            'promotion', // <<
+//            'art', // не военнослужащий
+//            'publicity', // не военнослужащий
+//            'safe', // не военнослужащий
+//            'work-alone', // не военнослужащий
+//            'hands',// не военнослужащий
+//            'intel',// не военнослужащий
+//            'benefit',// не военнослужащий
+//            'big-company',// не военнослужащий
+//            'light-work',// не военнослужащий
+//            'free-time',// не военнослужащий
+//            'high-society',// не военнослужащий
+//            'indoor',// не военнослужащий
+//            'result',// не военнослужащий
+//            'self-employ', // не военнослужащий
+//            'salary', // не военнослужащий
+//            'prestige' // не военнослужащий
+//        ];
+
+//        // Стилист-имиджмейкер: people,travel,result,body,art,free-time,light-work,difference,indoor
+//        $userValues = [
+//            'people',
+//            'travel',
+//            'result',
+//            'body',
+//            'art',
+//            'free-time',
+//            'light-work',
+//            'difference',
+//            'indoor',
+//            'gov',
+//            'outdoor',
+//            'promotion',
+//            'publicity',
+//            'safe',
+//            'work-alone',
+//            'hands',
+//            'intel',
+//            'benefit',
+//            'big-company',
+//            'high-society',
+//            'self-employ',
+//            'salary',
+//            'prestige'
+//        ];
+
+//        // актёр art,publicity,difference,people,hands
+//        $userValues = [
+//            'art',
+//            'publicity',
+//            'difference',
+//            'people',
+//            'body',
+//            'safe',
+//            'free-time',
+//            'travel',
+//            'result',
+//            'hands',
+//            'light-work',
+//            'indoor',
+//            'gov',
+//            'outdoor',
+//            'promotion',
+//            'work-alone',
+//            'intel',
+//            'benefit',
+//            'big-company',
+//            'high-society',
+//            'self-employ',
+//            'salary',
+//            'prestige'
+//        ];
+
+        $userValues = [
+            'gov',
+            'big-company',
+            'light-work',
+            'safe',
+            'indoor',
+            'result',
+            'art',
+            'hands',
+            'intel',
+            'travel',
+            'free-time',
+            'difference',
+            'body',
+            'work-alone',
+            'outdoor',
+            'promotion',
+            'benefit',
+            'people',
+            'publicity',
+            'high-society',
+            'self-employ',
+            'salary',
+            'prestige'
+        ];
+
+
 //        $userValues = ['salary', 'big-company', 'prestige', 'travel', 'promotion', 'self-employ', 'people', 'work-alone', 'gov', 'benefit', 'art', 'indoor', 'outdoor', 'difference', 'publicity', 'safe', 'result', 'intel', 'hands', 'free-time', 'high-society', 'light-work'];
 //        $userValues = ['people'];
 //        $userValues = ['art', 'people', 'intel', 'difference', 'promotion', 'result', 'travel', 'safe', 'promotion', 'free-time'];
@@ -71,12 +182,16 @@ final class TestValueSystemAlgorithmCommand extends Command
      * @param Profession[] $professions
      * @param array $valuesComb
      */
-    private static function calculate(array &$professions, array $valuesComb): void
+    private static function calculate(array $professions, array $valuesComb): void
     {
         $calculator = new ProfessionValueSystemRelevanceCalculator(self::VALUES, $valuesComb);
-        foreach ($professions as &$profession) {
-            $profession->setValueScore($calculator->calculate($profession->valueSystem()));
+        foreach ($professions as $profession) {
+            $score = $calculator->calculatePercent($profession->valueSystem());
+            $profession->setRating($score->value());
+            $profession->addLog($score->log());
         }
+
+        (new ProfessionsPercentCalculator())->calculate($professions);
     }
 
     /**
@@ -85,7 +200,7 @@ final class TestValueSystemAlgorithmCommand extends Command
     private static function sortByScore(array &$professions): void
     {
         usort($professions, function (Profession $a, Profession $b) {
-            return $b->getValueScore() - $a->getValueScore();
+            return $b->getRating() - $a->getRating();
         });
     }
 
@@ -99,12 +214,21 @@ final class TestValueSystemAlgorithmCommand extends Command
         echo $color->apply('=== Таблица результатов ===') . PHP_EOL . PHP_EOL;
 
         foreach ($professions as $index => $profession) {
-            echo ++$index . ') ' . ($profession->getValueScore()) . ' - ' . $profession->name() . PHP_EOL;
+            echo ++$index . ') ' . ($profession->getRating()) . ' - ' . $profession->name();
+            echo self::profLog($profession);
+            echo PHP_EOL;
+
             if ($index === 15) {
                 echo '---' . PHP_EOL;
             }
         }
 
         echo PHP_EOL . '===' . PHP_EOL;
+    }
+
+    private static function profLog(Profession $profession): string
+    {
+        $gray = new Color('#ccc', '');
+        return $gray->apply(json_encode($profession->getLog()));
     }
 }

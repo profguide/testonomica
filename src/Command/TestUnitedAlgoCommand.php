@@ -7,6 +7,7 @@ namespace App\Command;
 use App\Kernel;
 use App\Test\Helper\ProfessionsMapper;
 use App\Test\Helper\ProfessionValueSystemRelevanceCalculator;
+use App\Test\Proforientation\Calc\ProfessionsPercentCalculator;
 use App\Test\Proforientation\Calc\ProfessionTypeScoreCalculatorBasedOnParts;
 use App\Test\Proforientation\Profession;
 use Symfony\Component\Console\Color;
@@ -26,9 +27,10 @@ final class TestUnitedAlgoCommand extends Command
         $this->kernel = $kernel;
     }
 
-    const VALUES = ['salary', 'big-company', 'prestige', 'travel', 'promotion', 'self-employ', 'people', 'work-alone', 'gov', 'benefit', 'art', 'indoor', 'outdoor', 'difference', 'publicity', 'safe', 'result', 'intel', 'hands', 'free-time', 'high-society', 'light-work'];
+    const ALL_VALUES = ['salary', 'big-company', 'prestige', 'travel', 'promotion', 'self-employ', 'people', 'work-alone', 'gov', 'benefit', 'art', 'indoor', 'outdoor', 'difference', 'publicity', 'safe', 'result', 'intel', 'hands', 'free-time', 'high-society', 'light-work'];
 
-    const GUY = [
+
+    const GUY_TYPES = [
         'math' => 100,
         'com' => 92,
         'it' => 67,
@@ -43,6 +45,32 @@ final class TestUnitedAlgoCommand extends Command
         'body' => 0,
     ];
 
+    const GUY_VALUES = [
+        'gov',
+        'big-company',
+        'light-work',
+        'safe',
+        'indoor',
+        'result',
+        'art',
+        'hands',
+        'intel',
+        'travel',
+        'free-time',
+        'difference',
+        'body',
+        'work-alone',
+        'outdoor',
+        'promotion',
+        'benefit',
+        'people',
+        'publicity',
+        'high-society',
+        'self-employ',
+        'salary',
+        'prestige'
+    ];
+
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->testTheory();
@@ -51,8 +79,8 @@ final class TestUnitedAlgoCommand extends Command
 
     private function testTheory()
     {
-        $userValues = ['travel', 'hands', 'people', 'result', 'benefit', 'indoor', 'body', 'publicity', 'big-company', 'safe', 'light-work', 'free-time', 'intel', 'high-society', 'work-alone', 'art', 'difference', 'gov', 'promotion', 'outdoor', 'self-employ', 'salary', 'prestige'];
-        $userTypes = self::GUY;
+        $userValues = self::GUY_VALUES;
+        $userTypes = self::GUY_TYPES;
 
         $professions = $this->professions();
 
@@ -68,17 +96,62 @@ final class TestUnitedAlgoCommand extends Command
      */
     private static function calculate(array $professions, array $userValues, array $userTypes)
     {
-        $valueCalculator = new ProfessionValueSystemRelevanceCalculator(self::VALUES, $userValues);
-        $typesCalculator = new ProfessionTypeScoreCalculatorBasedOnParts($userTypes);
+        $typeMap = [];
+        self::calculateTypes($professions, $userTypes);
+        foreach ($professions as $profession) {
+            $typeMap[$profession->name()] = $profession->getRating();
+        }
 
-        // todo совместный калькулятор
-        foreach ($professions as &$profession) {
-            $valueScore = $valueCalculator->calculatePercent($profession->valueSystem());
-            $typesScore = $typesCalculator->calculate($profession->types(), $profession->typesNot());
+        $valueMap = [];
+        self::calculateValues($professions, $userValues);
+        foreach ($professions as $profession) {
+            $valueMap[$profession->name()] = $profession->getRating();
+        }
 
-            $profession->setRating($valueScore);
+        // todo прогоняем массив, соединяем, сохраняем в профессию
+
+        foreach ($professions as $profession) {
+            $typePercent = $typeMap[$profession->name()];
+            $valuePercent = $valueMap[$profession->name()];
+
+            $totalScore = ($typePercent + $valuePercent) / 2;
+
+            $profession->setRating($totalScore);
         }
     }
+
+    /**
+     * @param Profession[] $professions
+     * @param array $userTypes
+     */
+    private static function calculateTypes(array $professions, array $userTypes)
+    {
+        $typesCalculator = new ProfessionTypeScoreCalculatorBasedOnParts($userTypes);
+        foreach ($professions as $profession) {
+            $score = $typesCalculator->calculate($profession->types(), $profession->typesNot());
+            $profession->setRating($score->value());
+            $profession->addLog(['types' => $score->log()]);
+        }
+
+        (new ProfessionsPercentCalculator())->calculate($professions);
+    }
+
+    /**
+     * @param Profession[] $professions
+     * @param array $userValues
+     */
+    private static function calculateValues(array $professions, array $userValues)
+    {
+        $valueCalculator = new ProfessionValueSystemRelevanceCalculator(self::ALL_VALUES, $userValues);
+        foreach ($professions as $profession) {
+            $score = $valueCalculator->calculatePercent($profession->valueSystem());
+            $profession->setRating($score->value());
+            $profession->addLog(['values' => $score]);
+        }
+
+        (new ProfessionsPercentCalculator())->calculate($professions);
+    }
+
 
     /**
      * @param Profession[] $professions
@@ -100,13 +173,22 @@ final class TestUnitedAlgoCommand extends Command
         echo $color->apply('=== Таблица результатов ===') . PHP_EOL . PHP_EOL;
 
         foreach ($professions as $index => $profession) {
-            echo ++$index . ') ' . ($profession->getRating()) . ' - ' . $profession->name() . PHP_EOL;
+            echo ++$index . ') ' . ($profession->getRating()) . ' - ' . $profession->name();
+            echo self::profLog($profession);
+            echo PHP_EOL;
+
             if ($index === 15) {
                 echo '---' . PHP_EOL;
             }
         }
 
         echo PHP_EOL . '===' . PHP_EOL;
+    }
+
+    private static function profLog(Profession $profession): string
+    {
+        $gray = new Color('#ccc', '');
+        return $gray->apply(json_encode($profession->getLog()));
     }
 
     private function professions(): array
