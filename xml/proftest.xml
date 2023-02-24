@@ -26,7 +26,7 @@
         </item>
         <item id="2" group="natural-force">
             <name>
-                <ru>Вы когда-нибудь проводили опыты с химией? Например: создавали смеси, вещества, проводили над ними
+                <ru>Вы когда-нибудь создавали смеси, вещества, проводили над ними
                     опыты, поджигали, взрывали и тому подобное.
                 </ru>
                 <en>Have you got any experience with carrying out chemistry experiments?
@@ -69,7 +69,8 @@
         </item>
         <item id="4" group="natural-force">
             <name>
-                <ru>Химии или биологии вы посвящаете больше своего внимания, чем другим предметам в школе?</ru>
+                <ru>Химии или биологии вы посвящали/посвящаете больше своего внимания, чем другим предметам в школе?
+                </ru>
                 <en>Do you devote most of your time to Chemistry and Biology over any other subjects at school?</en>
             </name>
             <options>
@@ -500,8 +501,8 @@
         <!-- Технарь: Интересы -->
         <item id="110" group="tech-interest">
             <name>
-                <ru>Вам было бы интересно сделать прозрачным реальный дом и посмотреть
-                    как там всё устроено: от подвала до лифтов, от лестниц до крыши?
+                <ru>Вам интересно исследовать, как устроены здания и различные инженерные системы, такие как лифты,
+                    лестницы и т.д.?
                 </ru>
                 <en>Do you like the idea of making a house completely transparent and being able to see how everything
                     is made up, from the basement to the lifts, the stairs and the roof?
@@ -689,7 +690,7 @@
         <!-- Гуманитарий: Усилия -->
         <item id="200" group="human-force">
             <name>
-                <ru>Вы уже писали статьи, фанфики, роман?</ru>
+                <ru>Вы когда-либо писали статьи, фанфики или романы?</ru>
                 <en>Have you ever written articles, fanfiction or even a novel?</en>
             </name>
             <options>
@@ -721,7 +722,7 @@
         </item>
         <item id="202" group="human-force">
             <name>
-                <ru>Вы участвовали в олимпиадах по истории, обществознанию, русскому языку или литературе?</ru>
+                <ru>Вы успешно участвовали в олимпиадах по истории, обществознанию, русскому языку или литературе?</ru>
                 <en>Have you ever participated in Olympiads in History, Social Studies or literature?</en>
             </name>
             <options>
@@ -1221,7 +1222,7 @@
         </item>
         <item id="402" group="math-force">
             <name>
-                <ru>Вы участвовали в олимпиадах по математике?</ru>
+                <ru>Вы успешно участвовали в олимпиадах по математике?</ru>
                 <en>Have you ever taken part in a Maths Olympiad?</en>
             </name>
             <options>
@@ -1531,6 +1532,25 @@
                 </option>
             </options>
         </item>
+        <!--        Этот вопрос на интеллект, они никогда не стоял. Мы придумали, но не добавили. Потому что хотели для хзяйственника, а получилось, что вопрос на интеллект в сущности -->
+        <!--        <item id="823" group="hoz-skills">-->
+        <!--            <name>-->
+        <!--                <ru>Перед вами гора бытовых предметов: игрушки, посуда, одежда, книги, сувениры, лекарства. Сможете ли вы достаточно быстро рассортировать их по коробкам?</ru>-->
+        <!--                <en>When you’re planning a trip or a hike or a vacation, you always know what you do and don’t need, you-->
+        <!--                    never overpack and you never forget anything important?-->
+        <!--                </en>-->
+        <!--            </name>-->
+        <!--            <options>-->
+        <!--                <option value="1">-->
+        <!--                    <ru>Да, я легко справляюсь с такой задачей</ru>-->
+        <!--                    <en>Yes, that’s me</en>-->
+        <!--                </option>-->
+        <!--                <option value="0">-->
+        <!--                    <ru>Нет, я теряюсь и долго с этим вожусь</ru>-->
+        <!--                    <en>No, I’ll definitely forget something</en>-->
+        <!--                </option>-->
+        <!--            </options>-->
+        <!--        </item>-->
         <item id="522" group="it-skills">
             <name>
                 <ru>Кого на свете больше?</ru>
@@ -1619,16 +1639,11 @@
         </item>
         <item id="601" group="craft-force">
             <name>
-                <ru>Стремитесь ли вы делать что-то из этого в свободное время?</ru>
+                <ru>Стремитесь ли вы рукодельничать (например, стричь, готовить, шить, работать по дереву и т.д.) в
+                    свободное время?
+                </ru>
                 <en>Do you aspire to do any of the following in your free time?</en>
             </name>
-            <text>
-                <ru>Готовить, стричь, шить, стрелять, делать массаж, обрабатывать раны,
-                    собирать компьютеры, работать по дереву, металлу, камню и т.д?
-                </ru>
-                <en>Cook, mow, sew, shoot, massage, treat wounds, assemble computers, work with wood, metal or stone?
-                </en>
-            </text>
             <options>
                 <option value="1">
                     <ru>Да</ru>
@@ -1730,7 +1745,7 @@
         <!-- Ремесленник: Способности -->
         <item id="620" group="craft-skills">
             <name>
-                <ru>Слышали ли вы положительные отзывы о том, что вы сделали руками?</ru>
+                <ru>Хорошо ли у вас получается то, что вы делаете руками?</ru>
                 <en>Have you ever had positive reviews about things you’ve made with you own hands?</en>
             </name>
             <options>
@@ -2288,8 +2303,7 @@
         <!-- Коммуникатор: Усилия -->
         <item id="900" group="com-force">
             <name>
-                <ru>Когда возникают конфликтные ситуации, берёте ли вы
-                    на себя труд примирить конфликтующие стороны?
+                <ru>Берёте ли вы на себя инициативу по примирению конфликта?
                 </ru>
                 <en>When conflicts arise, do you take the time to try and reconcile the conflicting parties?</en>
             </name>
@@ -2349,8 +2363,7 @@
         <!-- Коммуникатор: Интересы -->
         <item id="910" group="com-interest">
             <name>
-                <ru>Нравится ли вам, общаясь с кем-то, подмечать интонации и язык тела, чтобы составить картину о
-                    собеседнике?
+                <ru>Нравится ли вам анализировать язык тела и интонации собеседника во время общения?
                 </ru>
                 <en>When you communicate with someone do you take note of intonation and body language to form a better
                     picture of who you’re talking to?
@@ -2554,7 +2567,7 @@
         <!-- Предприниматель: Интересы -->
         <item id="1010" group="boss-interest">
             <name>
-                <ru>Какой сценарий вы бы предпочли для себя?</ru>
+                <ru>Что бы вы предпочли для себя?</ru>
                 <en>Which scenario would you prefer?</en>
             </name>
             <options>
