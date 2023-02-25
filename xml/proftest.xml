@@ -24,7 +24,7 @@
                 </option>
             </options>
         </item>
-        <item id="2" group="natural-force">
+        <item id="2" group="natural-force" qtype="easy">
             <name>
                 <ru>Вы когда-нибудь создавали смеси, вещества, проводили над ними
                     опыты, поджигали, взрывали и тому подобное.
@@ -105,7 +105,7 @@
                 </option>
             </options>
         </item>
-        <item id="6" group="natural-force">
+        <item id="6" group="natural-force" qtype="easy">
             <name>
                 <ru>Читаете ли вы в свободное время про химические вещества и опыты с ними?</ru>
                 <en>Do you read about chemistry and chemical substances and attempt experiments in your free time?</en>
@@ -159,7 +159,7 @@
             </options>
         </item>
         -->
-        <item id="10" group="natural-interest">
+        <item id="10" group="natural-interest" qtype="easy">
             <name>
                 <ru>Хотели ли бы ежедневно работать с каким-нибудь из этих объектов природы: человеческое тело, мозг,
                     тело
@@ -437,9 +437,9 @@
         -->
 
         <!-- Технарь: Усилия -->
-        <item id="100" group="tech-force">
+        <item id="100" group="tech-force" qtype="interesting">
             <name>
-                <ru>Вы с удовольствием занимались разбором или ремонтом техники дома?</ru>
+                <ru>Вы с удовольствием занимаетесь разбором или ремонтом техники дома?</ru>
                 <en>Do you enjoy dismantling and re-building appliances at home?</en>
             </name>
             <options>
@@ -453,11 +453,10 @@
                 </option>
             </options>
         </item>
-        <item id="101" group="tech-force">
+        <item id="101" group="tech-force" qtype="easy">
             <name>
                 <ru>Занимались ли вы в техническом кружке или в кружке по информационным технологиями, на факультативе
-                    по
-                    физике и т.п.?
+                    по физике и т.п.?
                 </ru>
                 <en>Have you ever taken technical modules, information technology modules or physics as part of your
                     studies?
@@ -499,7 +498,7 @@
             </options>
         </item>
         <!-- Технарь: Интересы -->
-        <item id="110" group="tech-interest">
+        <item id="110" group="tech-interest" qtype="easy">
             <name>
                 <ru>Вам интересно исследовать, как устроены здания и различные инженерные системы, такие как лифты,
                     лестницы и т.д.?
@@ -519,7 +518,7 @@
                 </option>
             </options>
         </item>
-        <item id="111" group="tech-interest">
+        <item id="111" group="tech-interest" qtype="easy">
             <name>
                 <ru>Доставляет ли вам удовольствие красивое и логичное решение математической задачи?</ru>
                 <en>Do you get real enjoyment from a pleasing and logical solution to a mathematical problem?</en>
@@ -535,7 +534,7 @@
                 </option>
             </options>
         </item>
-        <item id="112" group="tech-interest">
+        <item id="112" group="tech-interest" qtype="easy">
             <name>
                 <ru>Вам бы хотелось строить настоящие механизмы, приборы или здания?</ru>
                 <en>Would you like to build real devices, instruments or structures?</en>
@@ -552,7 +551,7 @@
             </options>
         </item>
         <!-- Технарь: Умения -->
-        <item id="120" group="tech-skills">
+        <item id="120" group="tech-skills" qtype="easy">
             <name>
                 <ru>Есть ли у вас интуитивное понимание работы каких-нибудь приборов: механических или электрических?
                 </ru>
@@ -569,7 +568,7 @@
                 </option>
             </options>
         </item>
-        <item id="121" group="tech-skills">
+        <item id="121" group="tech-skills" qtype="easy">
             <name>
                 <ru>Вам легко давалась физика?</ru>
                 <en>Did you find physics and physics concepts easy to understand?</en>
@@ -589,7 +588,7 @@
             Вот одна: показать треугольник, провести высоту и спросить что это и
             дать 10 вариантов на выбор (высота правильно).
             -->
-        <item id="122" group="tech-skills">
+        <item id="122" group="tech-skills" qtype="easy">
             <name>
                 <ru>Легко ли вам давались геометрия или черчение?</ru>
                 <en>Did you find geometry and scientific drawing easy?</en>
@@ -688,7 +687,7 @@
         -->
 
         <!-- Гуманитарий: Усилия -->
-        <item id="200" group="human-force">
+        <item id="200" group="human-force" qtype="interesting">
             <name>
                 <ru>Вы когда-либо писали статьи, фанфики или романы?</ru>
                 <en>Have you ever written articles, fanfiction or even a novel?</en>
@@ -720,7 +719,7 @@
                 </option>
             </options>
         </item>
-        <item id="202" group="human-force">
+        <item id="202" group="human-force" qtype="easy">
             <name>
                 <ru>Вы успешно участвовали в олимпиадах по истории, обществознанию, русскому языку или литературе?</ru>
                 <en>Have you ever participated in Olympiads in History, Social Studies or literature?</en>
@@ -753,7 +752,7 @@
                 </option>
             </options>
         </item>
-        <item id="204" group="human-force">
+        <item id="204" group="human-force" qtype="easy">
             <name>
                 <ru>Вы легко запоминаете сведения из книг и статей по истории и искусствам?
                 </ru>
@@ -771,7 +770,7 @@
             </options>
         </item>
         <!-- Гуманитарий: Интересы -->
-        <item id="210" group="human-interest">
+        <item id="210" group="human-interest" qtype="easy">
             <name>
                 <ru>Вы любите читать биографии интересных людей?</ru>
                 <en>Do you enjoy reading biographies of interesting people?</en>
@@ -803,7 +802,7 @@
                 </option>
             </options>
         </item>
-        <item id="212" group="human-interest">
+        <item id="212" group="human-interest" qtype="easy">
             <name>
                 <ru>Вам интересно узнавать о процессах, происходящих в обществе?
                     Например, что приводит к революциям и войнам.
@@ -823,7 +822,7 @@
                 </option>
             </options>
         </item>
-        <item id="213" group="human-interest">
+        <item id="213" group="human-interest" qtype="easy">
             <name>
                 <ru>Вы не понимаете людей, которым нравится вникать в туманные философские рассуждения?</ru>
                 <en>You can’t understand people who show an interest in vague philosophical concepts and reasoning?</en>
@@ -839,7 +838,7 @@
                 </option>
             </options>
         </item>
-        <item id="214" group="human-interest">
+        <item id="214" group="human-interest" qtype="easy">
             <name>
                 <ru>Вы любите участвовать в серьезных дискуссиях на общественные темы и обсуждать разные точки зрения?
                 </ru>
@@ -858,7 +857,7 @@
                 </option>
             </options>
         </item>
-        <item id="215" group="human-interest">
+        <item id="215" group="human-interest" qtype="easy">
             <name>
                 <ru>Вам интересно вникать в причины человеческих поступков?</ru>
                 <en>Are you interested in really understanding the causes of certain human actions?</en>
@@ -875,7 +874,7 @@
             </options>
         </item>
         <!-- Гуманитарий: Способности -->
-        <item id="220" group="human-skills">
+        <item id="220" group="human-skills" qtype="easy">
             <name>
                 <ru>Вам легко рифмовать на любую тему?</ru>
                 <en>Is it easy for you to rhyme in on any given topic?</en>
@@ -907,7 +906,7 @@
                 </option>
             </options>
         </item>
-        <item id="222" group="human-skills">
+        <item id="222" group="human-skills" qtype="easy">
             <name>
                 <ru>У вас отличная память на тексты?</ru>
                 <en>Do you have an excellent textual memory?</en>
@@ -926,7 +925,7 @@
 
         <!-- Телесник -->
         <!-- Телесник: Усилия -->
-        <item id="300" group="body-force">
+        <item id="300" group="body-force" qtype="easy">
             <name>
                 <ru>Что из этого вы делаете систематически и с удовольствием?</ru>
                 <en>Which of the following do often do and enjoy doing?</en>
@@ -958,7 +957,7 @@
                 </option>
             </options>
         </item>
-        <item id="301" group="body-force">
+        <item id="301" group="body-force" qtype="easy">
             <name>
                 <ru>Занимались ли вы всерьёз физическими упражнениями, спортом, танцами?</ru>
                 <en>Have you ever done any physical exercise, sports or dancing to quite a high level?</en>
@@ -990,7 +989,7 @@
                     </options>
                 </item>-->
         <!-- Телесник: Интересы -->
-        <item id="310" group="body-interest">
+        <item id="310" group="body-interest" qtype="easy">
             <name>
                 <ru>Ожидая своей очереди в парикмахерской, вы взяли из стопки журнал.
                     Какой раздел вы бы открыли в первую очередь?
@@ -1026,7 +1025,7 @@
                 </option>
             </options>
         </item>
-        <item id="311" group="body-interest">
+        <item id="311" group="body-interest" qtype="easy">
             <name>
                 <ru>Если бы вы решили связать вашу жизнь со спортом, то что бы вы согласились делать?</ru>
                 <en>If you decided to include sport in your life, what might you look to do?</en>
@@ -1062,7 +1061,7 @@
                 </option>
             </options>
         </item>
-        <item id="312" group="body-interest">
+        <item id="312" group="body-interest" qtype="easy">
             <name>
                 <ru>Какой предмет в школе был ваш самый любимый?</ru>
                 <en>What was your favourite subject at school?</en>
@@ -1106,7 +1105,7 @@
                 </option>
             </options>
         </item>
-        <item id="313" group="body-interest">
+        <item id="313" group="body-interest" qtype="easy">
             <name>
                 <ru>От чего вы получаете наибольшее удовольствие?</ru>
                 <en>What do you enjoy the most?</en>
@@ -1149,7 +1148,7 @@
                 </option>
             </options>
         </item>
-        <item id="321" group="body-skills">
+        <item id="321" group="body-skills" qtype="easy">
             <name>
                 <ru>У вас есть разряды, медали в спорте или в танцах?</ru>
                 <en>Do you have awards or medals in sports or dancing?</en>
@@ -1200,7 +1199,7 @@
                 </option>
             </options>
         </item>
-        <item id="401" group="math-force">
+        <item id="401" group="math-force" qtype="easy">
             <name>
                 <ru>Каждый раз, когда возникает необходимость
                     рассчитать расстояние, количество, сумму, вы с энтузиазмом берётесь за дело?
@@ -1220,7 +1219,7 @@
                 </option>
             </options>
         </item>
-        <item id="402" group="math-force">
+        <item id="402" group="math-force" qtype="easy">
             <name>
                 <ru>Вы успешно участвовали в олимпиадах по математике?</ru>
                 <en>Have you ever taken part in a Maths Olympiad?</en>
@@ -1237,7 +1236,7 @@
             </options>
         </item>
         <!-- Числа и таблицы: Интересы-->
-        <item id="410" group="math-interest">
+        <item id="410" group="math-interest" qtype="easy">
             <name>
                 <ru>Вы любите скрупулёзно составлять таблицы и заполнять их данными?</ru>
                 <en>Do you enjoy meticulously creating tables and filling them with data?</en>
@@ -1269,7 +1268,7 @@
                 </option>
             </options>
         </item>
-        <item id="412" group="math-interest">
+        <item id="412" group="math-interest" qtype="easy">
             <name>
                 <ru>Хотели ли бы вы, чтобы в вашей работе было много места вычислениям?</ru>
                 <en>Would you be happy to have lots of computing and calculating in your work?</en>
@@ -1286,7 +1285,7 @@
             </options>
         </item>
         <!-- Числа и таблицы: Умения-->
-        <item id="420" group="math-skills">
+        <item id="420" group="math-skills" qtype="easy">
             <name>
                 <ru>Легко ли вы замечаете ошибки в вычислениях?</ru>
                 <en>Do you quickly and easily notice errors in calculations?</en>
@@ -1302,7 +1301,7 @@
                 </option>
             </options>
         </item>
-        <item id="421" group="math-skills">
+        <item id="421" group="math-skills" qtype="easy">
             <name>
                 <ru>Легко ли вы запоминаете числовые данные?</ru>
                 <en>Do you remember numbers easily?</en>
@@ -1389,7 +1388,7 @@
         хочется придумать и делать приложения,
         -->
         <!-- Компьютерщик: Усилия -->
-        <item id="500" group="it-force">
+        <item id="500" group="it-force" qtype="easy">
             <name>
                 <ru>Вы уже пробовали программировать?</ru>
                 <en>Have you ever tried programming?</en>
@@ -1432,7 +1431,7 @@
         <!-- + tech-force#102 (lego) -->
 
         <!-- Компьютерщик: Интересы -->
-        <item id="510" group="it-interest">
+        <item id="510" group="it-interest" qtype="easy">
             <name>
                 <ru>Получаете ли вы удовольствие от разбора компьютерных программ,
                     их файлов в попытке узнать, как они устроены и как работают?
@@ -1452,7 +1451,7 @@
                 </option>
             </options>
         </item>
-        <item id="511" group="it-interest">
+        <item id="511" group="it-interest" qtype="easy">
             <!--<name><ru>Интересно ли вам создавать, разрабатывать какие-либо системы?</ru><en></en></name>-->
             <name>
                 <ru>Когда вы скачиваете и устанавливаете программы, вы точно знаете, куда конкретно они установились
@@ -1473,7 +1472,7 @@
                 </option>
             </options>
         </item>
-        <item id="512" group="it-interest">
+        <item id="512" group="it-interest" qtype="easy">
             <name>
                 <ru>Вам нравится ломать голову над логическими задачами?</ru>
                 <en>Do you enjoy pondering over logic puzzles?</en>
@@ -1516,7 +1515,7 @@
                 </option>
             </options>
         </item>
-        <item id="521" group="it-skills">
+        <item id="521" group="it-skills" qtype="easy">
             <name>
                 <ru>Вы могли бы сидеть за компьютером большую часть рабочего дня?</ru>
                 <en>Could you sit in front of a computer all day?</en>
@@ -1608,7 +1607,7 @@
 
         <!-- Ремесленник -->
         <!-- Ремесленник: Усилия -->
-        <item id="600" group="craft-force">
+        <item id="600" group="craft-force" qtype="easy">
             <name>
                 <ru>Делаете ли вы что-то из этого вполне прилично?</ru>
                 <en>Are you able to do any of the following to a decent standard?
@@ -1663,7 +1662,7 @@
              </options>
          </item>-->
         <!-- Ремесленник: Интересы -->
-        <item id="610" group="craft-interest">
+        <item id="610" group="craft-interest" qtype="easy">
             <name>
                 <ru>Вам нравится больше работать руками, чем вычислять, сочинять и читать тексты?</ru>
                 <en>Do you prefer to work with your hands rather than calculating problems or creating and reading
@@ -1724,7 +1723,7 @@
                 </option>
             </options>
         </item>
-        <item id="613" group="craft-interest">
+        <item id="613" group="craft-interest" qtype="easy">
             <name>
                 <ru>Хотели бы, чтобы в вашей работе много места было не только для умственных, но и для ручных
                     действий?
@@ -1743,7 +1742,7 @@
             </options>
         </item>
         <!-- Ремесленник: Способности -->
-        <item id="620" group="craft-skills">
+        <item id="620" group="craft-skills" qtype="easy">
             <name>
                 <ru>Хорошо ли у вас получается то, что вы делаете руками?</ru>
                 <en>Have you ever had positive reviews about things you’ve made with you own hands?</en>
@@ -1759,7 +1758,7 @@
                 </option>
             </options>
         </item>
-        <item id="621" group="craft-skills">
+        <item id="621" group="craft-skills" qtype="easy">
             <name>
                 <ru>Говорили ли вам, что у вас золотые руки?</ru>
                 <en>Have you ever been told you can turn your hand to making anything?</en>
@@ -1833,7 +1832,7 @@
                 </option>
             </options>
         </item>
-        <item id="701" group="art-force">
+        <item id="701" group="art-force" qtype="easy">
             <name>
                 <ru>Случалось ли вам увлечённо без сна и еды работать над своим творческим
                     продуктом (песня, фильм, рисунок, рассказ и т.д.)?
@@ -1853,7 +1852,7 @@
                 </option>
             </options>
         </item>
-        <item id="702" group="art-force">
+        <item id="702" group="art-force" qtype="easy">
             <name>
                 <ru>Были ли у вас случаи, когда вы старались довести
                     до совершенства своё произведение, зная наверняка,
@@ -1875,7 +1874,7 @@
             </options>
         </item>
         <!-- Художник: Интересы -->
-        <item id="710" group="art-interest">
+        <item id="710" group="art-interest" qtype="easy">
             <name>
                 <ru>Если бы в компании возникла идея поставить спектакль, то вы бы выбрали для себя:</ru>
                 <en>If your company decided to put on a performance, which role would you choose?</en>
@@ -1972,7 +1971,7 @@
             </options>
         </item>
         <!-- Художник: Способности -->
-        <item id="720" group="art-skills">
+        <item id="720" group="art-skills" qtype="easy">
             <name>
                 <ru>Вы легко импровизируете (в музыке, в рисовании, в актёрстве, в сочинении стихов и т.д.)?</ru>
                 <en>Do you improvise easily (in regards to music, drawing, acting, writing poetry etc)?</en>
@@ -2125,7 +2124,7 @@
                 </option>
             </options>
         </item>
-        <item id="802" group="hoz-force">
+        <item id="802" group="hoz-force" qtype="interesting">
             <name>
                 <ru>Вы часто с удовольствием систематизируете и упорядочиваете ваши вещи?</ru>
                 <en>Do you enjoy creating systems and organizing your things?</en>
@@ -2142,7 +2141,7 @@
             </options>
         </item>
         <!-- Хозяйственник: Интересы -->
-        <item id="810" group="hoz-interest">
+        <item id="810" group="hoz-interest" qtype="interesting">
             <name>
                 <ru>Нравится ли вам создавать уют и комфорт для гостей?</ru>
                 <en>Do you like to create a sense of coziness and comfort for your guests?</en>
@@ -2158,7 +2157,7 @@
                 </option>
             </options>
         </item>
-        <item id="811" group="hoz-interest">
+        <item id="811" group="hoz-interest" qtype="easy">
             <name>
                 <ru>Интересно ли вам смотреть видео и читать книги об уборке и о том, как вести домашнее хозяйство?
                 </ru>
@@ -2192,7 +2191,7 @@
             </options>
         </item>
         <!-- Хозяйственник: Способности -->
-        <item id="820" group="hoz-skills">
+        <item id="820" group="hoz-skills" qtype="interesting">
             <name>
                 <ru>Вы склонны экономить и накапливать деньги?</ru>
                 <en>Do you try to cut back and save money?</en>
@@ -2208,7 +2207,7 @@
                 </option>
             </options>
         </item>
-        <item id="821" group="hoz-skills">
+        <item id="821" group="hoz-skills" qtype="interesting">
             <name>
                 <ru>Вы всегда помните, где и какие предметы лежат у вас дома?</ru>
                 <en>Do you always remember exactly what is in your house and where everything is?</en>
@@ -2301,7 +2300,7 @@
        -->
 
         <!-- Коммуникатор: Усилия -->
-        <item id="900" group="com-force">
+        <item id="900" group="com-force" qtype="interesting">
             <name>
                 <ru>Берёте ли вы на себя инициативу по примирению конфликта?
                 </ru>
@@ -2361,7 +2360,7 @@
             </options>
         </item>
         <!-- Коммуникатор: Интересы -->
-        <item id="910" group="com-interest">
+        <item id="910" group="com-interest" qtype="top">
             <name>
                 <ru>Нравится ли вам анализировать язык тела и интонации собеседника во время общения?
                 </ru>
@@ -2380,7 +2379,7 @@
                 </option>
             </options>
         </item>
-        <item id="911" group="com-interest">
+        <item id="911" group="com-interest" qtype="easy">
             <name>
                 <ru>Если вас взволновало какое-то событие, фильм, книга, то вы обычно делитесь с кем-либо своими
                     чувствами и мыслями?
@@ -2437,7 +2436,7 @@
             </options>
         </item>
         <!-- Коммуникатор: Способности -->
-        <item id="920" group="com-skills">
+        <item id="920" group="com-skills" qtype="easy">
             <name>
                 <ru>Насколько вам трудно позвонить по телефону незнакомому человеку и что-то выяснить?</ru>
                 <en>How difficult is it for you to call a stranger on the phone to ascertain certain information?</en>
@@ -2469,7 +2468,7 @@
                 </option>
             </options>
         </item>
-        <item id="922" group="com-skills">
+        <item id="922" group="com-skills" qtype="interesting">
             <name>
                 <ru>Легко ли вы вливаетесь в новый коллектив?</ru>
                 <en>Is it easy for you to assimilate into a new team?</en>
@@ -2485,7 +2484,7 @@
                 </option>
             </options>
         </item>
-        <item id="923" group="com-skills">
+        <item id="923" group="com-skills" qtype="easy">
             <name>
                 <ru>Трудно ли вам попросить вернуть долг, указать знакомому человеку на его ошибку?</ru>
                 <en>Is it difficult for you to ask for something back, or to point out to a friend they’ve made a
@@ -2506,7 +2505,7 @@
 
         <!-- Предприниматель -->
         <!-- Предприниматель: Усилия -->
-        <item id="1000" group="boss-force">
+        <item id="1000" group="boss-force" qtype="easy">
             <name>
                 <ru>Пытались ли вы когда-нибудь заработать деньги по своей инициативе?
                     Пример: купили дешевле, а продали дороже, сделали кому-то сайт и т.п.
@@ -2530,7 +2529,7 @@
                 </option>
             </options>
         </item>
-        <item id="1001" group="boss-force">
+        <item id="1001" group="boss-force" qtype="interesting">
             <name>
                 <ru>Читаете ли вы статьи, книги, сайты о маркетинге и продажах?</ru>
                 <en>Do you read articles, books or websites about marketing and sales?</en>
@@ -2565,7 +2564,7 @@
             </options>
         </item>
         <!-- Предприниматель: Интересы -->
-        <item id="1010" group="boss-interest">
+        <item id="1010" group="boss-interest" qtype="easy">
             <name>
                 <ru>Что бы вы предпочли для себя?</ru>
                 <en>Which scenario would you prefer?</en>
@@ -2593,7 +2592,7 @@
                 </option>
             </options>
         </item>
-        <item id="1011" group="boss-interest">
+        <item id="1011" group="boss-interest" qtype="easy">
             <name>
                 <ru>Вы постоянно изобретаете способы как вам заработать денег?</ru>
                 <en>Are you constantly coming up with new ways to makes money?</en>
@@ -2717,7 +2716,7 @@
         </item>
 
         <!-- Вояка -->
-        <item id="1100" group="war-force">
+        <item id="1100" group="war-force" qtype="easy">
             <name>
                 <ru>Принимали ли вы участие в школьной или уличной драке?</ru>
                 <en>Have you ever been involved in a fight at school or on the street?</en>
@@ -2737,7 +2736,7 @@
                 </option>
             </options>
         </item>
-        <item id="1101" group="war-force">
+        <item id="1101" group="war-force" qtype="easy">
             <name>
                 <ru>Что вы чувствуете во время конфликта, способного перерасти в драку?</ru>
                 <en>How do you feel during a conflict that looks like it could escalate into a fight?</en>
@@ -2755,7 +2754,7 @@
                 </option>
             </options>
         </item>
-        <item id="1102" group="war-force">
+        <item id="1102" group="war-force" qtype="easy">
             <name>
                 <ru>Занимались ли вы когда-нибудь боевыми искусствами? Например, борьбой, боксом, ММА и т.д.?</ru>
                 <en>Have you ever done martial arts such as wrestling, boxing or MMA?</en>
@@ -2775,7 +2774,7 @@
                 </option>
             </options>
         </item>
-        <item id="1110" group="war-interest">
+        <item id="1110" group="war-interest" qtype="easy">
             <name>
                 <ru>Хотели бы вы в своей работе использовать оружие и/или военную технику?</ru>
                 <en>Would you be willing to use weapons and/or military equipment in your work?</en>
@@ -2791,7 +2790,7 @@
                 </option>
             </options>
         </item>
-        <item id="1111" group="war-interest">
+        <item id="1111" group="war-interest" qtype="easy">
             <name>
                 <ru>Представьте, что вы пожарный, входите в горящее здание.
                     Ничего не видно из-за дыма, дышать нечем, очень сильный жар.
@@ -2813,10 +2812,10 @@
                 </option>
             </options>
         </item>
-        <item id="1112" group="war-interest">
+        <item id="1112" group="war-interest" qtype="easy">
             <name>
-                <ru>Хотели бы вы работать, подвергая свою жизнь настоящей опасности,
-                    например, на поле боя, где вы можете погибнуть или покалечиться?
+                <ru>Хотели бы вы работать в профессии, которая связана с высоким уровнем риска для вашей жизни или
+                    здоровья?
                 </ru>
                 <en>Would you be willing to work in an area that puts your life in real danger, for example on a
                     battlefield where you can be killed or injured?
@@ -2854,6 +2853,10 @@
                     <en>I am generally healthy but have a few problems. For example, my vision is not 100%, I’ve had
                         previous injuries or chronic diseases
                     </en>
+                </option>
+                <option value="0">
+                    <ru>Я нездоров</ru>
+                    <en>I am unhealthy</en>
                 </option>
             </options>
         </item>
