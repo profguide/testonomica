@@ -1,0 +1,156 @@
+{# {% extends('tests/result.html.twig') %} #}
+
+{% block result %}
+    <link href="https://www.profguide.io/build/proftest_report.css" rel="stylesheet">
+
+    {# {% set debug = app.request.get('debug') == 1 ? 1 : 0 %} #}
+
+    <div class="page">
+        <div class="result_test">
+            <div class="mw">
+                <div class="cont">
+                    <div class="left_side"><h1 class="h1">Результат тестирования</h1></div>
+
+                    <div class="right_side">
+                        <div class="line">
+                            <img class="icon" src="https://www.profguide.io/images/proftest/info.png" alt="info">
+                            <p>
+                                Полученные результаты основаны на принципах, которые разрабатывались в Профгиде
+                                в течение <b>18 лет</b> практикующими специалистами по выбору профессии. В исследовании
+                                принимали участие <b>10 000 человек.</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="professions">
+            <div class="mw">
+                <div class="m_title">
+                    <h2 class="h2">
+                        Профессии
+                    </h2>
+                </div>
+
+                <div class="cont">
+                    {% for profession in professions %}
+                        {% if profession.description|length == 0 %}
+                            <div class="profession_list">
+                            <div class="profession_list_title">
+                                <h4 class="h4">
+                                    {{ profession.name }}
+                                </h4>
+                            </div>
+                        {% endif %}
+
+                        {% for kind in profession.description %}
+                            <div class="profession">
+                                <div class="left_side">
+                                    <div class="img">
+                                        {% if kind.pic is defined %}
+                                            <img src="{{ kind.pic }}" alt=""/>
+                                        {% else %}
+                                            <img src="https://www.profguide.io/images/system/noimage_1000.png"
+                                                 alt="Нет изображения">
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="right_side">
+                                    <div class="num">
+                                        <span>{{ loop.parent.loop.index }}{% if profession.description|length > 1 %}.{{ loop.index + 1 }}{% endif %}</span>
+                                    </div>
+                                    <div class="title">
+                                        <h5 class="h5">{{ kind.name }}</h5>
+                                    </div>
+                                    <div>{{ kind.text }}</div>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                        {% if profession.description|length == 0 %}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="interests_abilities">
+            <div class="mw">
+                <div class="cont">
+                    <div class="top_cont">
+                        <div class="m_title">
+                            <h2 class="h2">
+                                Профессиональные типы
+                            </h2>
+                        </div>
+                        <p>Интересы выражаются в том, что именно вы читаете, смотрите, любите делать и
+                            делаете. Способности в выражаются в том, что вы делаете хорошо и успешно, но еще не
+                            профессионально, уже сейчас.</p>
+                    </div>
+
+                    <div class="center_cont">
+                        {% for type in types_descriptions %}
+                            <div class="line">
+
+                                <div class="line__name">
+                                    {{ type.name }}
+                                </div>
+
+                                <div class="line__descriptions">
+                                    <div class="description">
+                                        <div class="description__header">
+                                            <div class="description__title">Интересы</div>
+                                            <div class="description__grade">
+                                                <div class="description__level">
+                                                    <span class="{{ (type.interest.absolute >= 0) ? 'active' : '' }}"></span>
+                                                    <span class="{{ (type.interest.absolute >= 1) ? 'active' : '' }}"></span>
+                                                    <span class="{{ (type.interest.absolute == 2) ? 'active' : '' }}"></span>
+                                                </div>
+                                                {% if type.interest.absolute == 0 %}
+                                                    Низкий показатель
+                                                {% elseif type.interest.absolute == 1 %}
+                                                    Средний показатель
+                                                {% elseif type.interest.absolute == 2 %}
+                                                    Высокий показатель
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="description__text">
+                                            {{ type.interest.text }}
+                                        </div>
+                                    </div>
+
+                                    <div class="description">
+                                        <div class="description__header">
+                                            <div class="description__title">Способности</div>
+                                            <div class="description__grade">
+                                                <div class="description__level">
+                                                    <span class="{{ (type.skills.absolute >= 0) ? 'active' : '' }}"></span>
+                                                    <span class="{{ (type.skills.absolute >= 1) ? 'active' : '' }}"></span>
+                                                    <span class="{{ (type.skills.absolute == 2) ? 'active' : '' }}"></span>
+                                                </div>
+                                                {% if type.skills.absolute == 0 %}
+                                                    Низкий показатель
+                                                {% elseif type.skills.absolute == 1 %}
+                                                    Средний показатель
+                                                {% elseif type.skills.absolute == 2 %}
+                                                    Высокий показатель
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        <div class="description__text">
+                                            {{ type.skills.text }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock result %}
