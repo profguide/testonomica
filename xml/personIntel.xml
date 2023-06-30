@@ -2424,11 +2424,11 @@
     <en>Which of the five images below differs the most from the rest?</en>
 </name>
 <options>
-    <option value="0" img="https://testonomica.com/static/img/4/g_2_4.svg"/>
-    <option value="0" img="https://testonomica.com/static/img/4/g_3_3.svg"/>
-    <option value="0" img="https://testonomica.com/static/img/4/g_2_1.svg"/>
-    <option value="1" img="https://testonomica.com/static/img/4/g_2_5.svg" correct="true"/>
-    <option value="0" img="https://testonomica.com/static/img/4/g_2_6.svg"/>
+    <option value="0" img="https://testonomica.com/images/tests/4/g_2_4.svg"/>
+    <option value="0" img="https://testonomica.com/images/tests/4/g_3_3.svg"/>
+    <option value="0" img="https://testonomica.com/images/tests/4/g_2_1.svg"/>
+    <option value="1" img="https://testonomica.com/images/tests/4/g_2_5.svg" correct="true"/>
+    <option value="0" img="https://testonomica.com/images/tests/4/g_2_6.svg"/>
 </options>
 </item>
 <item id="514" group="iq-math" method="TEXT">
@@ -2643,7 +2643,7 @@
         construct a square. Enter a numbers of two dots that have to be connected.
     </en>
 </name>
-<img>https://testonomica.com/static/img/4/g_1_1.svg</img>
+<img>https://testonomica.com/images/tests/4/g_1_1.svg</img>
 <fields>
     <field type="number" placeholder="Введите число" placeholder-en="Enter a number" correct="2" />
     <field type="number" placeholder="Введите число" placeholder-en="Enter a number" correct="13"/>
@@ -2711,11 +2711,11 @@
     <en>Three of the five shapes have to be joined together in order to construct an isosceles trapezoid.</en>
 </name>
 <options>
-    <option value="1" img="https://testonomica.com/static/img/4/g_4_1.svg" correct="true"/>
-    <option value="2" img="https://testonomica.com/static/img/4/g_4_2.svg" correct="true"/>
-    <option value="3" img="https://testonomica.com/static/img/4/g_4_3.svg"/>
-    <option value="4" img="https://testonomica.com/static/img/4/g_4_4.svg" correct="true"/>
-    <option value="5" img="https://testonomica.com/static/img/4/g_4_5.svg"/>
+    <option value="1" img="https://testonomica.com/images/tests/4/g_4_1.svg" correct="true"/>
+    <option value="2" img="https://testonomica.com/images/tests/4/g_4_2.svg" correct="true"/>
+    <option value="3" img="https://testonomica.com/images/tests/4/g_4_3.svg"/>
+    <option value="4" img="https://testonomica.com/images/tests/4/g_4_4.svg" correct="true"/>
+    <option value="5" img="https://testonomica.com/images/tests/4/g_4_5.svg"/>
 </options>
 </item>
 <item id="526" group="iq-math" method="TEXT">
@@ -2931,11 +2931,11 @@
     <en>Which of the shapes differs the most from the rest?</en>
 </name>
 <options>
-    <option value="1" img="https://testonomica.com/static/img/4/g_2_4.svg"/>
-    <option value="2" img="https://testonomica.com/static/img/4/g_3_3.svg"/>
-    <option value="3" img="https://testonomica.com/static/img/4/g_2_1.svg" correct="true"/>
-    <option value="4" img="https://testonomica.com/static/img/4/g_2_5.svg"/>
-    <option value="5" img="https://testonomica.com/static/img/4/g_3_5.svg"/>
+    <option value="1" img="https://testonomica.com/images/tests/4/g_2_4.svg"/>
+    <option value="2" img="https://testonomica.com/images/tests/4/g_3_3.svg"/>
+    <option value="3" img="https://testonomica.com/images/tests/4/g_2_1.svg" correct="true"/>
+    <option value="4" img="https://testonomica.com/images/tests/4/g_2_5.svg"/>
+    <option value="5" img="https://testonomica.com/images/tests/4/g_3_5.svg"/>
 </options>
 </item>
         <!-- Абстрактное мышление -->
