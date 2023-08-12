@@ -36,7 +36,11 @@ class AnalysisRenderer
         $output .= $this->renderScale($analysis, $resultData);
         $output .= $this->renderVariant($analysis, $resultData);
         if ($analysis->getText()) {
-            $output .= '<div class="result-block-row__text">' . $analysis->getText() . '</div>';
+            $text = $analysis->getText();
+            if (str_starts_with($text, '%config.')) {
+                $text = $this->getConfigValue($text);
+            }
+            $output .= '<div class="result-block-row__text">' . $text . '</div>';
         }
         if (strlen($output) > 0) {
             return '<div class="result-block-row">' . $output . '</div>';
@@ -139,5 +143,10 @@ class AnalysisRenderer
             $value = $value[$varLevel];
         }
         return $value;
+    }
+
+    private function getConfigValue(string $text): string
+    {
+        // todo get from config file
     }
 }

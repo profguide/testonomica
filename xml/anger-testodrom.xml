@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>
+                <ru>Бывает, что вас охватывает приступ сильного раздражения, с которым вы не сразу можете справиться?
+                </ru>
+                <en>Do you sometimes experience episodes of intense irritation that you can't immediately cope with?
+                </en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="2">
+            <name>
+                <ru>Поведение некоторых людей вас буквально бесит, выводит из себя?</ru>
+                <en>Do the actions of some people literally annoy and upset you?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="3">
+            <name>
+                <ru>Демонстрируя недовольство, вы выходите из комнаты, сильно хлопнув дверью?</ru>
+                <en>When showing dissatisfaction, do you leave the room by slamming the door?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="4">
+            <name>
+                <ru>Случается, что от возмущения словами собеседника вы бросаете трубку посреди телефонного разговора?
+                </ru>
+                <en>Does it happen that you hang up the phone in the middle of a conversation out of frustration with
+                    the other person's words?
+                </en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="5">
+            <name>
+                <ru>Бывает, что вы начинаете кричать на своего собеседника, который с вами не согласен?</ru>
+                <en>Do you sometimes start shouting at someone who disagrees with you?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="6">
+            <name>
+                <ru>Разозлившись, вы можете сказать собеседнику нечто очень обидное?</ru>
+                <en>When angered, do you say hurtful things to the other person?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="7">
+            <name>
+                <ru>Под влиянием гнева вы совершаете поступки, о которых потом сильно жалеете?</ru>
+                <en>Under the influence of anger, do you commit actions that you later deeply regret?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="8">
+            <name>
+                <ru>Бывает, что вы ощущаете такую злость, что в глазах темнеет?</ru>
+                <en>Is there a time when you feel such intense anger that your vision becomes blurred?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="9">
+            <name>
+                <ru>Случается, что разозлившись по какому-либо поводу, вы долго не можете заснуть?</ru>
+                <en>Do you sometimes find it difficult to fall asleep after getting angry about something?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="10">
+            <name>
+                <ru>Вы легко «заводитесь», выходите из себя?</ru>
+                <en>Do you easily get worked up and lose your temper?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="11">
+            <name>
+                <ru>Случается, что вы впадаете в ярость из-за мелких, казалось бы, неурядиц и неприятностей?</ru>
+                <en>Is it possible for you to fly into a rage over minor inconveniences and annoyances?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="12">
+            <name>
+                <ru>Разозлившись, вы долго не можете восстановить душевное равновесие?</ru>
+                <en>When angry, do you find it hard to regain emotional balance for a long time?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="13">
+            <name>
+                <ru>Случается, что вы нарушаете нормы вежливости при общении с человеком, который вызывает у вас сильное
+                    раздражение?
+                </ru>
+                <en>Do you sometimes disregard politeness when communicating with someone who irritates you?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="14">
+            <name>
+                <ru>Вас называют человеком, которому не хватает хладнокровия?</ru>
+                <en>Are you referred to as someone who lacks composure?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="15">
+            <name>
+                <ru>Рассердившись, вы чувствуете, что кровь приливает к голове, сердце начинает биться сильнее?</ru>
+                <en>When angered, do you feel blood rushing to your head and your heart beating faster?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="16">
+            <name>
+                <ru>Бывает, что вы не можете удержаться от резких, недопустимых в обществе проявлений недовольства?</ru>
+                <en>Do you sometimes find it hard to refrain from expressing strong dissatisfaction in social
+                    situations?
+                </en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="17">
+            <name>
+                <ru>Бывает, что вас упрекают в несдержанности?</ru>
+                <en>Do people ever accuse you of lacking self-control?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="18">
+            <name>
+                <ru>Бывает, что вам хочется кого-то ударить?</ru>
+                <en>Do you sometimes feel the urge to hit someone?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="19">
+            <name>
+                <ru>Вы испытывает огорчение тем, как вели себя, проявляя недовольство кем-либо или чем-либо?</ru>
+                <en>Do you feel disappointed in yourself for expressing dissatisfaction with someone or something?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+
+        <item id="20">
+            <name>
+                <ru>Ваше настроение улучшается после того, как вы изливаете наружу свою злость?</ru>
+                <en>Does your mood improve after venting your anger outwardly?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
