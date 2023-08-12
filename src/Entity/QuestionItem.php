@@ -81,7 +81,7 @@ class QuestionItem
         string $value,
         string $text,
         string $img = null,
-        bool $isCorrect = false): QuestionItem
+        bool   $isCorrect = false): QuestionItem
     {
         $entity = new QuestionItem();
         $entity->value = $value;
@@ -258,21 +258,21 @@ class QuestionItem
 //    }
     public function serialize()
     {
-        // TODO: Implement serialize() method.
+        throw new \RuntimeException('Stub QuestionItem:serialize()');
     }
 
     public function unserialize(string $data)
     {
-        // TODO: Implement unserialize() method.
+        throw new \RuntimeException('Stub QuestionItem:unserialize()');
     }
 
     public function __serialize(): array
     {
-        // TODO: Implement __serialize() method.
+        throw new \RuntimeException('Stub QuestionItem:__serialize()');
     }
 
     public function __unserialize(array $data): void
     {
-        // TODO: Implement __unserialize() method.
+        throw new \RuntimeException('Stub QuestionItem:__unserialize()');
     }
 }
