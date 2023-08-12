@@ -35,7 +35,7 @@ class PartnerApiControllerTest extends WebTestCase
     /**@var ProviderRepository */
     private $providerRepository;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->client = static::createClient();
         /**@var ProviderRepository $providerRepository */
