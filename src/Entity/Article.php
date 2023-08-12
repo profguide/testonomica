@@ -5,14 +5,11 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
  * @ORM\Table(indexes={@ORM\Index(columns={"slug"})})
  * @ORM\HasLifecycleCallbacks
- * @Vich\Uploadable
  * @author: adavydov
  * @since: 24.02.2021
  */
@@ -128,9 +125,6 @@ class Article
      */
     private $img = null;
 
-    /**
-     * @Vich\UploadableField(mapping="thumbnails", fileNameProperty="img")
-     */
     private ?File $imgFile = null;
 
     /**
@@ -138,9 +132,6 @@ class Article
      */
     private ?string $imgWide = null;
 
-    /**
-     * @Vich\UploadableField(mapping="thumbnails", fileNameProperty="imgWide")
-     */
     private ?File $imgWideFile = null;
 
     /**
