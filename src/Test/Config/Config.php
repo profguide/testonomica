@@ -22,14 +22,14 @@ final class Config
      */
     public function get(string $key): string
     {
-        $key = ltrim($key, '%config.');
-        $key = rtrim($key, '%');
-        $keys = explode('.', $key);
+        $_key = ltrim($key, '%config.');
+        $_key = rtrim($_key, '%');
+        $keys = explode('.', $_key);
 
         $value = $this->data;
-        foreach ($keys as $key) {
-            if (isset($value[$key])) {
-                $value = $value[$key];
+        foreach ($keys as $_key) {
+            if (isset($value[$_key])) {
+                $value = $value[$_key];
             } else {
                 throw new \RuntimeException("Cant find value \"$key\" in config.");
             }

@@ -12,6 +12,7 @@ use App\Entity\Result;
 use App\Entity\Test;
 use App\Repository\TestRepositoryInterface;
 use App\Service\ResultService;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class ResultServiceTest extends KernelTestCase
@@ -22,11 +23,14 @@ class ResultServiceTest extends KernelTestCase
     /**@var Test */
     private $test;
 
+    /**
+     * @throws Exception
+     */
     public function setUp(): void
     {
         self::bootKernel();
-        $this->service = self::$container->get(ResultService::class);
-        $testRepository = self::$container->get(TestRepositoryInterface::class);
+        $this->service = self::getContainer()->get(ResultService::class);
+        $testRepository = self::getContainer()->get(TestRepositoryInterface::class);
         $this->test = $testRepository->findOneBySlug(TestFixture::TEST_1_SLUG);
     }
 
