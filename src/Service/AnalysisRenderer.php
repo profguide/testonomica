@@ -147,6 +147,6 @@ class AnalysisRenderer
 
     private function getConfigValue(string $text): string
     {
-        // todo get from config file
+        throw new \RuntimeException('Stub AnalysisRenderer::getConfigValue()');
     }
 }
