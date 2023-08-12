@@ -15,7 +15,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  * @author: adavydov
  * @since: 09.04.2021
  */
-class QuestionItem implements \Serializable
+class QuestionItem
 {
     /**
      * @ORM\Id()
@@ -263,8 +263,18 @@ class QuestionItem implements \Serializable
         // TODO: Implement serialize() method.
     }
 
-    public function unserialize($serialized)
+    public function unserialize(string $data)
     {
         // TODO: Implement unserialize() method.
+    }
+
+    public function __serialize(): array
+    {
+        // TODO: Implement __serialize() method.
+    }
+
+    public function __unserialize(array $data): void
+    {
+        // TODO: Implement __unserialize() method.
     }
 }

@@ -10,7 +10,7 @@ namespace App\Repository;
 use App\Entity\Answer;
 use App\Entity\Test;
 use App\Test\AnswersSerializer;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 // todo удалить после переезда хранилища во фронт
 class AnswerRepository
@@ -20,15 +20,14 @@ class AnswerRepository
     /**@var Answer[] */
     private $data;
 
-    /**@var SessionInterface */
-    private $session;
+    private $requestStack;
 
     /**@var AnswersSerializer */
     private $serializer;
 
-    public function __construct(SessionInterface $session, AnswersSerializer $serializer)
+    public function __construct(RequestStack $requestStack, AnswersSerializer $serializer)
     {
-        $this->session = $session;
+        $this->requestStack = $requestStack;
         $this->serializer = $serializer;
     }
 
@@ -68,8 +67,7 @@ class AnswerRepository
         if ($this->data != null) {
             return $this->data;
         }
-        $stringData = $this->session->get(self::sessionTestKey($test));
-        $parsedData = null;
+        $stringData = $this->requestStack->getSession()->get(self::sessionTestKey($test));
         if ($stringData == null) {
             $parsedData = [];
         } else {
@@ -87,7 +85,7 @@ class AnswerRepository
     {
         $this->data = $data;
         $serializedData = $this->serializer->serialize($data);
-        $this->session->set(self::sessionTestKey($test), $serializedData);
+        $this->requestStack->getSession()->set(self::sessionTestKey($test), $serializedData);
     }
 
     private static function sessionTestKey(Test $test)
