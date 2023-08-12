@@ -4,7 +4,7 @@
  * @since: 12.11.2020
  */
 
-namespace App\Tests\Service;
+namespace App\Tests\Repository;
 
 
 use App\DataFixtures\ProviderFixture;

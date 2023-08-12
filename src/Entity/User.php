@@ -12,7 +12,6 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @UniqueEntity(fields="email", message="Email already taken")
- * @method string getUserIdentifier()
  */
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -119,6 +118,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getUserIdentifier(): string
+    {
+        return $this->id;
     }
 
     public function __call($name, $arguments)
