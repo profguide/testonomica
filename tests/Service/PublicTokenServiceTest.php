@@ -33,7 +33,7 @@ class PublicTokenServiceTest extends KernelTestCase
     /**@var Provider */
     private $provider;
 
-    public function setUp()
+    public function setUp(): void
     {
         self::bootKernel();
         $this->service = self::$container->get(PublicTokenService::class);

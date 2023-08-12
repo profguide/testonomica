@@ -19,6 +19,7 @@ use App\Repository\PaymentRepository;
 use App\Repository\ProviderPaymentRepository;
 use App\Repository\ProviderRepository;
 use App\Repository\ServiceRepository;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class PaymentRepositoryTest extends KernelTestCase
@@ -35,14 +36,16 @@ class PaymentRepositoryTest extends KernelTestCase
     /**@var Provider */
     private $provider;
 
+    /**
+     * @throws Exception
+     */
     public function setUp(): void
     {
         self::bootKernel();
-        $this->paymentRepository = self::$container->get(PaymentRepository::class);
-        $this->providerPaymentRepository = self::$container->get(ProviderPaymentRepository::class);
-        $this->serviceRepository = self::$container->get(ServiceRepository::class);
-        /**@var ProviderRepository $providerRepo */
-        $providerRepo = self::$container->get(ProviderRepository::class);
+        $this->paymentRepository = static::getContainer()->get(PaymentRepository::class);
+        $this->providerPaymentRepository = static::getContainer()->get(ProviderPaymentRepository::class);
+        $this->serviceRepository = static::getContainer()->get(ServiceRepository::class);
+        $providerRepo = static::getContainer()->get(ProviderRepository::class);
         $this->provider = $providerRepo->findBySlug(ProviderFixture::TESTOMETRIKA);
     }
 

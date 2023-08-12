@@ -22,7 +22,7 @@ class ResultServiceTest extends KernelTestCase
     /**@var Test */
     private $test;
 
-    public function setUp()
+    public function setUp(): void
     {
         self::bootKernel();
         $this->service = self::$container->get(ResultService::class);

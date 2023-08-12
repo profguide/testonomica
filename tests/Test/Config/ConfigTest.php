@@ -23,6 +23,9 @@ final class ConfigTest extends KernelTestCase
 
     public function testErrorNotFound()
     {
+        $config = new Config([]);
 
+        self::expectExceptionMessage('"Cant find value "min.text" in config."');
+        self::assertEquals('Текст', $config->get('%config.min.text%'));
     }
 }

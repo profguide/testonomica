@@ -12,12 +12,11 @@ use App\Entity\Answer;
 use App\Entity\Result;
 use App\Entity\Test;
 use App\Repository\TestRepositoryInterface;
-use App\Service\AnswerService;
 use App\Service\ResultService;
 use App\Test\AnswersSerializer;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Symfony\Component\DomCrawler\Crawler;
 
 class TestControllerTest extends WebTestCase
 {
@@ -26,9 +25,6 @@ class TestControllerTest extends WebTestCase
 
     /**@var ResultService */
     private $resultService;
-
-    /**@var AnswerService */
-    private $answerService;
 
     /**@var AnswersSerializer */
     private $serializer;
@@ -39,13 +35,15 @@ class TestControllerTest extends WebTestCase
     /**@var Test */
     private $test;
 
-    protected function setUp()
+    /**
+     * @throws Exception
+     */
+    protected function setUp(): void
     {
         $this->client = static::createClient();
-        $this->testRepository = self::$container->get(TestRepositoryInterface::class);
-        $this->resultService = self::$container->get(ResultService::class);
-        $this->answerService = self::$container->get(AnswerService::class);
-        $this->serializer = self::$container->get(AnswersSerializer::class);
+        $this->testRepository = static::getContainer()->get(TestRepositoryInterface::class);
+        $this->resultService = static::getContainer()->get(ResultService::class);
+        $this->serializer = static::getContainer()->get(AnswersSerializer::class);
         $this->test = $this->testRepository->findOneBySlug(TestFixture::TEST_1_SLUG);
     }
 
