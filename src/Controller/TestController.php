@@ -25,22 +25,18 @@ class TestController extends AbstractController
 
     private ResultService $resultService;
 
-    private AnswerService $answerService;
-
     private CalculatorService $calculatorService;
 
     private ResultRenderer $resultRenderer;
 
     public function __construct(
         TestService $testService,
-        AnswerService $answerService,
         ResultService $resultService,
         CalculatorService $calculatorService,
         ResultRenderer $resultRenderer
     )
     {
         $this->testService = $testService;
-        $this->answerService = $answerService;
         $this->resultService = $resultService;
         $this->calculatorService = $calculatorService;
         $this->resultRenderer = $resultRenderer;

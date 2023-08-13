@@ -1,20 +1,23 @@
 <?php
 
-namespace App\Service;
+namespace App\Test\Analyzer;
 
 use App\Entity\Analysis;
 use App\Entity\AnalysisCondition;
 use App\Entity\Test;
 use App\Repository\AnalysisRepository;
+use App\Test\Config\Config;
+use App\Test\Config\ConfigParser;
+use App\Test\Config\ConfigXmlFetcher;
 use Doctrine\Common\Collections\Collection;
 
 class AnalysisRenderer
 {
-    private AnalysisRepository $analysisRepository;
-
-    public function __construct(AnalysisRepository $blockRepository)
+    public function __construct(
+        private readonly AnalysisRepository $analysisRepository,
+        private readonly ConfigParser       $configParser,
+        private readonly ConfigXmlFetcher   $configXmlFetcher)
     {
-        $this->analysisRepository = $blockRepository;
     }
 
     public function render(Test $test, array $resultData): string
@@ -36,11 +39,7 @@ class AnalysisRenderer
         $output .= $this->renderScale($analysis, $resultData);
         $output .= $this->renderVariant($analysis, $resultData);
         if ($analysis->getText()) {
-            $text = $analysis->getText();
-            if (str_starts_with($text, '%config.')) {
-                $text = $this->getConfigValue($text);
-            }
-            $output .= '<div class="result-block-row__text">' . $text . '</div>';
+            $output .= '<div class="result-block-row__text">' . $analysis->getText() . '</div>';
         }
         if (strlen($output) > 0) {
             return '<div class="result-block-row">' . $output . '</div>';
@@ -78,7 +77,11 @@ class AnalysisRenderer
     {
         foreach ($analysis->getBlocks() as $block) {
             if ($this->conditionsPass($block->getConditions(), $resultData)) {
-                return '<div class="result-block-row__variant">' . $block->getText() . '</div>';
+                $text = $block->getText();
+                if (str_starts_with($text, '%config.')) {
+                    $text = $this->getTextFromConfig($text, $analysis->getTest());
+                }
+                return '<div class="result-block-row__variant">' . $text . '</div>';
             }
         }
         return null;
@@ -145,8 +148,15 @@ class AnalysisRenderer
         return $value;
     }
 
-    private function getConfigValue(string $text): string
+    private ?Config $config = null;
+
+    private function getTextFromConfig(string $text, Test $test): string
     {
-        throw new \RuntimeException('Stub AnalysisRenderer::getConfigValue()');
+        if (!$this->config) {
+            $crawler = $this->configXmlFetcher->fetchByTest($test);
+            $this->config = $this->configParser->parse($crawler);
+        }
+
+        return $this->config->get($text);
     }
 }

@@ -36,11 +36,11 @@ class CalculatorService
     const CALCULATORS_NAMESPACE = '\App\Test\Calculator\\';
 
     public function __construct(
-        AnswersSerializer $serializer,
+        AnswersSerializer         $serializer,
         SourceRepositoryInterface $sourceRepository,
-        TestRepositoryInterface $testRepository,
-        KernelInterface $kernel,
-        Locale $locale)
+        TestRepositoryInterface   $testRepository,
+        KernelInterface           $kernel,
+        Locale                    $locale)
     {
         $this->serializer = $serializer;
         $this->sourceRepository = $sourceRepository;

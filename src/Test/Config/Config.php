@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace App\Test\Config;
 
+use App\Tests\Test\Config\ConfigTest;
+
 /**
- * Value-object, contains translated text from config.xml
+ * Value-object, stores nested array and helps to get to a value by chain.
+ * It was specially developed for tests config.xml
+ *
+ * @see ConfigTest
  */
 final class Config
 {
@@ -18,7 +23,6 @@ final class Config
 
     /**
      * @param string $key format: %config.min.text%
-     * @return void
      */
     public function get(string $key): string
     {
