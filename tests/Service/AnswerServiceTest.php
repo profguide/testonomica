@@ -33,6 +33,12 @@ class AnswerServiceTest extends KernelTestCase
     public function setUp(): void
     {
         self::bootKernel();
+
+        $requestStack = self::getContainer()->get(RequestStack::class);
+        $request = new Request();
+        $request->setSession(new Session(new MockArraySessionStorage()));
+        $requestStack->push($request);
+
         $this->answerService = self::getContainer()->get(AnswerService::class);
         $testRepository = self::getContainer()->get(TestRepositoryInterface::class);
         $this->test = $testRepository->findOneBySlug(TestFixture::TEST_1_SLUG);

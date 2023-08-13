@@ -10,15 +10,15 @@ use App\Test\Helper\ProfessionValueSystemRelevanceCalculator;
 use App\Test\Proforientation\Calc\ProfessionsPercentCalculator;
 use App\Test\Proforientation\Calc\ProfessionTypeScoreCalculatorBasedOnParts;
 use App\Test\Proforientation\Profession;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Color;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
+#[AsCommand(name: 'app:united-algo')]
 final class TestUnitedAlgoCommand extends Command
 {
-    protected static $defaultName = 'app:united-algo';
-
     private Kernel $kernel;
 
     public function __construct(Kernel $kernel, string $name = null)

@@ -9,6 +9,7 @@ use App\Test\Helper\ProfessionsMapper;
 use App\Test\Proforientation\Calc\ProfessionsPercentCalculator;
 use App\Test\Proforientation\Calc\ProfessionTypeScoreCalculatorBasedOnTopTypes;
 use App\Test\Proforientation\Profession;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Color;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -17,10 +18,9 @@ use Symfony\Component\Console\Output\OutputInterface;
 /**
  * Проверяем гипотезу: типы - это доли.
  */
+#[AsCommand(name: 'app:types-algo')]
 final class TestNewTypesAlgorithmCommand extends Command
 {
-    protected static $defaultName = 'app:types-algo';
-
     private Kernel $kernel;
 
     public function __construct(Kernel $kernel, string $name = null)
