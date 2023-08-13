@@ -25,7 +25,7 @@
 <header class="header" id="testonomica_header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="{{ path('main') }}">WowTests!</a>
+            <a class="navbar-brand" href="{{ path('main') }}" style="font-weight: 800; letter-spacing: 1px">Тестодром</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -37,6 +37,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ path('articles.index') }}">Статьи</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ app.user ? path('app_logout') : path('app_login') }}">{{ app.user ? "Выйти (" ~ app.user.email ~ ")" : 'Войти' }}</a>
                     </li>
                 </ul>
 {#                <form class="d-flex">#}
