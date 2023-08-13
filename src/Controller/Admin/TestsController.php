@@ -8,11 +8,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-final class MainController extends AbstractController
+final class TestsController extends AbstractController
 {
-    #[Route('/admin/', name: 'admin')]
+    #[Route('/admin/tests', name: 'admin.tests')]
     public function main(): Response
     {
-        return $this->render('admin/main.html.twig');
+        return $this->render('admin/tests/main.html.twig');
     }
 }

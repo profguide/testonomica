@@ -10,6 +10,7 @@ use App\Repository\TestRepository;
 use App\Service\CalculatorService;
 use App\Service\ResultService;
 use App\Service\TestSourceService;
+use App\Test\Progress\ProgressConverter;
 use App\Test\ResultRenderer;
 use App\Test\ViewFormat;
 use Symfony\Component\HttpFoundation\Request;
@@ -33,11 +34,11 @@ class TestResultRestController extends AbstractRestController implements AccessT
     private ResultRenderer $resultRenderer;
 
     public function __construct(
-        TestRepository $tests,
+        TestRepository    $tests,
         TestSourceService $questions,
-        ResultService $resultService,
+        ResultService     $resultService,
         CalculatorService $calculatorService,
-        ResultRenderer $resultRenderer)
+        ResultRenderer    $resultRenderer)
     {
         $this->tests = $tests;
         $this->questions = $questions;
@@ -59,7 +60,7 @@ class TestResultRestController extends AbstractRestController implements AccessT
     public function save(int $testId, Request $request): Response
     {
         $test = $this->getTest($testId);
-        $progress = $this->getRequestJsonParameter($request, 'progress');
+        $progress = (new ProgressConverter())->convert($request->get('progress'));
         $answers = [];
         foreach ($progress as $qId => $values) {
             $answers[$qId] = self::createAnswer($qId, $values);

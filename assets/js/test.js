@@ -1,5 +1,6 @@
 import $ from "jquery";
 
+// todo это я так понимаю старое и неиспользуемое
 class TestContext {
     constructor(count, progress, showAnswer, textOnRight, textOnWrong) {
         this.answers = [];

@@ -4,6 +4,8 @@
         "@symfony/webpack-encore": "^1.8.1",
         "core-js": "^3.0.0",
         "regenerator-runtime": "^0.13.2",
+        "ts-loader": "^9.0.0",
+        "typescript": "^5.1.6",
         "webpack-notifier": "^1.6.0"
     },
     "license": "UNLICENSED",

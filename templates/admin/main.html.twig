@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Панель управления{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Панель управления</li>
+            </ol>
+        </nav>
+
+        <h1>Панель управления</h1>
+
+        <a href="{{ path('admin.tests') }}" class="btn btn-link">Тесты</a><br>
+        <a href="{{ path('admin.tests_catalogs') }}" class="btn btn-link">Каталоги тестов</a>
+    </div>
+{% endblock %}

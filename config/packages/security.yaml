@@ -47,7 +47,7 @@ security:
   access_control:
     #    - { path: ^/tests/cli, roles: IS_AUTHENTICATED_ANONYMOUSLY }
     #    - { path: ^/tests/cli, roles: PUBLIC_ACCESS }
-    - { path: ^/login, roles: PUBLIC_ACCESS }
+    # - { path: ^/login, roles: PUBLIC_ACCESS }
     # - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
     - { path: ^/admin, roles: ROLE_ADMIN }
     # - { path: ^/profile, roles: ROLE_USER }
