@@ -14,7 +14,7 @@
         <h1>Тесты</h1>
 
         <div>
-            Всего тестов: {{ pagination.getTotalItemCount }}
+            Всего: {{ pagination.getTotalItemCount }}
         </div>
 
         <table class="table table-striped">
@@ -39,7 +39,7 @@
                     <td>{% include "_components/bool.html.twig" with {'value': test.activeEn} %}</td>
                     <td>{% include "_components/grid_action.html.twig" with {
                             'browse': path('tests.view', {slug: test.slug}),
-                            'edit': path('admin.tests_edit', {id: test.id})
+                            'edit': path('admin.tests.edit', {id: test.id})
                         } %}</td>
                 </tr>
             {% endfor %}
