@@ -10,5 +10,5 @@ import './styles/app.scss';
 import './styles/test.scss';
 
 import './js/test.js'
-import 'popper.js'
-import 'bootstrap'
+// import 'popper.js'
+// import 'bootstrap'

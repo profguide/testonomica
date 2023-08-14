@@ -12,7 +12,22 @@
 
         <h1>Панель управления</h1>
 
-        <a href="{{ path('admin.tests') }}" class="btn btn-link">Тесты</a><br>
-        <a href="{{ path('admin.tests_catalogs') }}" class="btn btn-link">Каталоги тестов</a>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('admin.tests') }}">Тесты</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ path('admin.tests_catalogs') }}" class="nav-link">Каталоги тестов</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Статьи</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Каталоги статей</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Пользователи</a>
+            </li>
+        </ul>
     </div>
 {% endblock %}

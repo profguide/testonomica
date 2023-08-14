@@ -7,11 +7,46 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ path('admin') }}">Панель управления</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Тесты</li>
+                <li class="breadcrumb-item active">Тесты</li>
             </ol>
         </nav>
 
         <h1>Тесты</h1>
 
+        <div>
+            Всего тестов: {{ pagination.getTotalItemCount }}
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ knp_pagination_sortable(pagination, 'Id', 't.id') }}</th>
+                <th{% if pagination.isSorted('t.name') %} class="sorted"{% endif %}>
+                    {{ knp_pagination_sortable(pagination, 'Название', 't.name') }}
+                </th>
+                <th>Каталог</th>
+                <th>RU</th>
+                <th>EN</th>
+                <th>Действие</th>
+            </tr>
+            </thead>
+            {% for test in pagination %}
+                <tr>
+                    <td>{{ test.id }}</td>
+                    <td>{{ test.name }}</td>
+                    <td>{{ test.catalog }}</td>
+                    <td>{% include "_components/bool.html.twig" with {'value': test.active} %}</td>
+                    <td>{% include "_components/bool.html.twig" with {'value': test.activeEn} %}</td>
+                    <td>{% include "_components/grid_action.html.twig" with {
+                            'browse': path('tests.view', {slug: test.slug}),
+                            'edit': path('admin.tests_edit', {id: test.id})
+                        } %}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
     </div>
 {% endblock %}
