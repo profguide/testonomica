@@ -3,7 +3,7 @@
     <scenarios>
         <!-- Минимальный уровень -->
         <scenario>
-            <scale percentVar="SCALE" label="Уровень агрессии"/>
+            <scale percentVar="SCALE" label="Уровень гневливости"/>
             <conditions>
                 <condition var="SUM" operator="меньше_или_равно" value="25"/>
             </conditions>
@@ -31,7 +31,7 @@
 
         <!-- Средний уровень -->
         <scenario>
-            <scale percentVar="SCALE" label="Уровень агрессии"/>
+            <scale percentVar="SCALE" label="Уровень гневливости"/>
             <conditions>
                 <condition var="SUM" operator="больше" value="25"/>
                 <condition var="SUM" operator="меньше_или_равно" value="45"/>
@@ -66,7 +66,7 @@
 
         <!-- Максимальный уровень -->
         <scenario>
-            <scale percentVar="SCALE" label="Уровень агрессии"/>
+            <scale percentVar="SCALE" label="Уровень гневливости"/>
             <conditions>
                 <condition var="SUM" operator="больше" value="45"/>
             </conditions>
