@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <scenario>
+            <scale percentVar="SCALE" label="Правильных ответов"/>
+            <conditions>
+                <condition var="SUM" operator="меньше_или_равно" value="6"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>
+                        Ваши знания о необычных и абсурдных законах США ниже среднего. Тем не менее, вам удалось верно
+                        ответить на некоторые вопросы!
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        Your knowledge of unusual and absurd US laws is below average. Nevertheless, you managed to
+                        answer some questions correctly!
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <scenario>
+            <scale percentVar="SCALE" label="Правильных ответов"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="7"/>
+                <condition var="SUM" operator="меньше_или_равно" value="11"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>
+                        У вас средние знания о необычных и абсурдных законах США.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        You have average knowledge of unusual and absurd US laws.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Максимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" label="Правильных ответов"/>
+            <conditions>
+                <condition var="SUM" operator="больше_или_равно" value="12"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>
+                        У вас отличные знания о необычных и абсурдных законах США!
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        You have excellent knowledge of the unusual and absurd laws of the USA!
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>
