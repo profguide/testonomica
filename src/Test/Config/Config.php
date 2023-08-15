@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Test\Config;
 
+use App\Test\Config\Struct\Scale\Scale;
 use App\Test\Config\Struct\Scenario;
 use App\Tests\Test\Config\ConfigTest;
 

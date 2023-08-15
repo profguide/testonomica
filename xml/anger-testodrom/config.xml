@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <config>
-    <scale type="common" label="Уровень агрессии"/>
     <scenarios>
         <!-- Минимальный уровень -->
         <scenario>
+            <scale percentVar="SCALE" label="Уровень агрессии"/>
             <conditions>
-                <condition var="sum" operator="меньше_или_равно" value="20"/>
+                <condition var="SUM" operator="меньше_или_равно" value="25"/>
             </conditions>
             <text>
                 <ru>
@@ -31,9 +31,10 @@
 
         <!-- Средний уровень -->
         <scenario>
+            <scale percentVar="SCALE" label="Уровень агрессии"/>
             <conditions>
-                <condition var="sum" operator="больше" value="20"/>
-                <condition var="sum" operator="меньше_или_равно" value="40"/>
+                <condition var="SUM" operator="больше" value="25"/>
+                <condition var="SUM" operator="меньше_или_равно" value="45"/>
             </conditions>
             <text>
                 <ru>
@@ -65,9 +66,9 @@
 
         <!-- Максимальный уровень -->
         <scenario>
+            <scale percentVar="SCALE" label="Уровень агрессии"/>
             <conditions>
-                <condition var="sum" operator="больше" value="40"/>
-                <condition var="sum" operator="меньше_или_равно" value="60"/>
+                <condition var="SUM" operator="больше" value="45"/>
             </conditions>
             <text>
                 <ru>

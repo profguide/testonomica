@@ -4,18 +4,9 @@ declare(strict_types=1);
 
 namespace App\Test\Config\Struct\Condition;
 
-enum Variable: string
+final readonly class Variable
 {
-    case SUM = 'sum';
-
-    case SCALE = 'scale';
-
-    public static function fromString(string $value): Variable
+    public function __construct(public string $value)
     {
-        return match ($value) {
-            'sum' => Variable::SUM,
-            'scale' => Variable::SCALE,
-            default => throw new \DomainException("Unsupported variable \"$value\".")
-        };
     }
 }

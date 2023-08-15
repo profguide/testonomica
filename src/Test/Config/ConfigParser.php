@@ -8,6 +8,7 @@ use App\Subscriber\Locale;
 use App\Test\Config\Exception\ConfigXmlParsingException;
 use App\Test\Config\Struct\Condition\Operator;
 use App\Test\Config\Struct\Condition\Variable;
+use App\Test\Config\Struct\Scale\Scale;
 use App\Test\Config\Struct\Scenario;
 use App\Tests\Test\Config\ConfigParserTest;
 use Symfony\Component\DomCrawler\Crawler;
@@ -123,7 +124,7 @@ final readonly class ConfigParser
             }
             $conditions = [];
             $conditionNodes->each(function (Crawler $condition) use (&$conditions) {
-                $var = Variable::fromString($condition->attr('var'));
+                $var = new Variable($condition->attr('var'));
                 $operator = Operator::fromValue($condition->attr('operator'));
                 $value = $condition->attr('value');
                 $conditions[] = new Struct\Condition\Condition($var, $operator, $value);
@@ -136,7 +137,9 @@ final readonly class ConfigParser
             }
             $text = $textNode->html();
 
-            $scenarios[] = new Scenario($conditions, $text);
+            $scale = $this->parseScale($crawler);
+
+            $scenarios[] = new Scenario($conditions, $text, $scale);
         }
 
         if (count($scenarios) === 0) {
@@ -144,5 +147,24 @@ final readonly class ConfigParser
         }
 
         return $scenarios;
+    }
+
+    private function parseScale(Crawler $crawler): ?Scale
+    {
+        // --------------------
+        // scale :label :var :max
+        // --------------------
+
+        $scaleNode = $crawler->filter('scale');
+        if ($scaleNode->count() == 0) {
+            return null;
+        }
+
+        $label = $scaleNode->attr('label');
+        $percentVar = $scaleNode->attr('percentVar');
+        $showVar = $scaleNode->attr('showVar');
+        $maxVal = (int)$scaleNode->attr('maxVal');
+
+        return new Scale($percentVar, $showVar, $maxVal, $label);
     }
 }

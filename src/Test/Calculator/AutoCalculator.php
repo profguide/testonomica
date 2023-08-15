@@ -29,7 +29,7 @@ class AutoCalculator extends AbstractCalculator
         $sum = AnswersUtil::sum($this->questionsHolder, $this->answersHolder);
 
         // Процент набранных числовых значений от максимальной суммы, которую можно набрать в тесте
-        $percentage = $maxSum > 0 ? $sum * 100 / $maxSum : 0;
+        $percentage = round($maxSum > 0 ? $sum * 100 / $maxSum : 0);
 
         // Мапа вида ['no' => ['sum' => 2, 'percentage' => 50], 'yes' => ['sum' => 1, 'percentage' => 25], ...]
         // Процент для каждого значения считается от максимальной суммы, которую можно набрать

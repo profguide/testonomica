@@ -53,7 +53,7 @@ final class ConfigParserTest extends KernelTestCase
             <scenarios>
                 <scenario>
                     <conditions>
-                        <condition var="sum" operator="<=" value="20"></condition>
+                        <condition var="sum" operator="меньше_или_равно" value="20"></condition>
                     </conditions>
                     <text>
                         <ru><p>Хорошо!</p></ru>

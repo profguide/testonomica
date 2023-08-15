@@ -2,12 +2,12 @@
 
 namespace App\Test\Analyzer;
 
-use App\Entity\Analysis;
 use App\Entity\Test;
 use App\Test\Config\ConfigParser;
 use App\Test\Config\ConfigXmlFetcher;
 use App\Test\Config\Struct\Condition\Condition;
 use App\Test\Config\Struct\Condition\Operator;
+use App\Test\Config\Struct\Scale\Scale;
 use App\Test\Config\Struct\Scenario;
 
 class AnalysisRenderer
@@ -59,13 +59,46 @@ class AnalysisRenderer
     {
         $output = '';
 
-        // todo print scale (if set)
-
         if ($this->conditionsPass($scenario->conditions, $resultData)) {
-            $output .= '<div class="result-block-row__variant">' . $scenario->text . '</div>';
+            $text = "";
+            if ($scenario->scale) {
+                $text .= '<div class="result-block-row__progress">' .
+                    $this->renderScale($scenario->scale, $resultData) . '</div>';
+            }
+            $text .= '<div class="result-block-row__variant">' . $scenario->text . '</div>';
+
+            $output .= '<div class="result-block-row">' . $text . '</div>';
         }
 
         return $output;
+    }
+
+    private function renderScale(Scale $scale, array $resultData): ?string
+    {
+        $percentage = self::namedVariableValue($resultData, $scale->percentVar);
+        if ($percentage == null) {
+            throw new \RuntimeException('Result data does not have {$scale->var}.');
+        }
+
+        if ($scale->showVar) {
+            $valueToShow = self::namedVariableValue($resultData, $scale->showVar);
+            $maxValue = $scale->showMaxVal;
+            $text = $valueToShow . ' из ' . $maxValue;
+        } else {
+            $text = $percentage . '%';
+        }
+
+        if ($scale->label) {
+            $text = $scale->label . ': ' . $text;
+        }
+
+        return '<div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: ' . $percentage . '%;"
+                         aria-valuenow="' . $percentage . '"
+                         aria-valuemin="0"
+                         aria-valuemax="100">' . $text . '
+                    </div>
+                </div>';
     }
 
 //    private function renderAnalysis(Analysis $analysis, array $resultData): ?string
@@ -144,7 +177,7 @@ class AnalysisRenderer
     private function conditionPass(Condition $condition, array $resultData): bool
     {
         // нет переменной - не удовлетворяет
-        $naturalValue = self::namedVariableValue($resultData, $condition->varName->name);
+        $naturalValue = self::namedVariableValue($resultData, $condition->varName->value);
         if (!$naturalValue) {
             return false;
         }
