@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller\Admin;
 
-use App\Domain\Test\TestSearchForm;
+use App\Domain\Test\AdminTestSearchForm;
 use App\Entity\Test;
 use App\Form\TestType;
 use App\Repository\TestRepository;
@@ -17,7 +17,7 @@ use Symfony\Component\Routing\Annotation\Route;
 final class TestsController extends AbstractController
 {
     public function __construct(
-        private readonly TestSearchForm         $testSearchForm,
+        private readonly AdminTestSearchForm    $testSearchForm,
         private readonly TestRepository         $tests,
         private readonly EntityManagerInterface $em)
     {

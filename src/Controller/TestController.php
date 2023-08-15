@@ -2,9 +2,9 @@
 
 namespace App\Controller;
 
+use App\Domain\Test\TestSearchForm;
 use App\Entity\Result;
 use App\Entity\Test;
-use App\Service\AnswerService;
 use App\Service\CalculatorService;
 use App\Service\ResultService;
 use App\Service\TestService;
@@ -21,25 +21,14 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class TestController extends AbstractController
 {
-    private TestService $testService;
-
-    private ResultService $resultService;
-
-    private CalculatorService $calculatorService;
-
-    private ResultRenderer $resultRenderer;
-
     public function __construct(
-        TestService $testService,
-        ResultService $resultService,
-        CalculatorService $calculatorService,
-        ResultRenderer $resultRenderer
+        private readonly TestSearchForm    $testSearchForm,
+        private readonly TestService       $testService,
+        private readonly ResultService     $resultService,
+        private readonly CalculatorService $calculatorService,
+        private readonly ResultRenderer    $resultRenderer
     )
     {
-        $this->testService = $testService;
-        $this->resultService = $resultService;
-        $this->calculatorService = $calculatorService;
-        $this->resultRenderer = $resultRenderer;
     }
 
     /**
@@ -53,13 +42,13 @@ class TestController extends AbstractController
 
     /**
      * @Route("/", name="index")
+     * @param Request $request
      * @return Response
      */
-    public function index(): Response
+    public function index(Request $request): Response
     {
-        $tests = $this->testService->findAllActiveList();
         return $this->render('tests/index.html.twig', [
-            'tests' => $tests,
+            'pagination' => $this->testSearchForm->search($request)
         ]);
     }
 

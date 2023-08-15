@@ -18,4 +18,10 @@ final readonly class ConfigXmlFetcher
         $filename = $this->xmlLocator->resolveByTest($test);
         return new Crawler(file_get_contents($filename));
     }
+
+    public function exist(Test $test): bool
+    {
+        $filename = $this->xmlLocator->resolveByTest($test);
+        return file_exists($filename);
+    }
 }

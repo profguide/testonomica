@@ -20,6 +20,10 @@ class AnalysisRenderer
 
     public function render(Test $test, array $resultData): ?string
     {
+        if (!$this->configXmlFetcher->exist($test)) {
+            return null;
+        }
+
         $crawler = $this->configXmlFetcher->fetchByTest($test);
         $config = $this->configParser->parse($crawler);
 
