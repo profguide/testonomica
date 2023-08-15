@@ -6,6 +6,9 @@ namespace App\Test\Config;
 
 use App\Subscriber\Locale;
 use App\Test\Config\Exception\ConfigXmlParsingException;
+use App\Test\Config\Struct\Condition\Operator;
+use App\Test\Config\Struct\Condition\Variable;
+use App\Test\Config\Struct\Scenario;
 use App\Tests\Test\Config\ConfigParserTest;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -34,13 +37,19 @@ final readonly class ConfigParser
 
     public function parse(Crawler $crawler): Config
     {
-        return new Config($this->xmlToArray($crawler));
+        $scenarios = $this->parseScenarios($crawler);
+        $texts = $this->parseTexts($crawler);
+
+        return new Config($scenarios, $texts);
     }
 
-    private function xmlToArray(Crawler $crawler): array
+    private function parseTexts(Crawler $crawler): array
     {
-        // Получаем корневой элемент Crawler
-        $rootNode = $crawler->filter(':root');
+        $rootNode = $crawler->children('texts');
+
+        if ($rootNode->count() == 0) {
+            return [];
+        }
 
         // Рекурсивная функция для обработки узлов
         $processNode = function ($node) use (&$processNode) {
@@ -80,5 +89,60 @@ final readonly class ConfigParser
 
         // Преобразование корневого элемента в многомерный массив
         return $processNode($rootNode->getNode(0));
+    }
+
+    private function parseScenarios(Crawler $crawler): array
+    {
+        // --------------------
+        // scenarios
+        //    scenario
+        //       conditions
+        //          condition
+        //       texts
+        //          ru
+        //          en
+        // --------------------
+
+        $scenariosNode = $crawler->filter('scenarios');
+        if ($scenariosNode->count() == 0) {
+            return [];
+        }
+
+        $scenarios = [];
+
+        foreach ($scenariosNode->children() as $scenarioNode) {
+            if ($scenarioNode->nodeName !== 'scenario') {
+                throw new ConfigXmlParsingException("Unexpected node \"$scenarioNode->nodeName\", scenario expected.");
+            }
+            $scenarioNode = new Crawler($scenarioNode);
+
+            // conditions
+            $conditionNodes = $scenarioNode->filter('conditions > condition');
+            if ($conditionNodes->count() === 0) {
+                throw new ConfigXmlParsingException("Scenario does not contain \"condition\" nodes.");
+            }
+            $conditions = [];
+            $conditionNodes->each(function (Crawler $condition) use (&$conditions) {
+                $var = Variable::fromString($condition->attr('var'));
+                $operator = Operator::fromValue($condition->attr('operator'));
+                $value = $condition->attr('value');
+                $conditions[] = new Struct\Condition\Condition($var, $operator, $value);
+            });
+
+            // text
+            $textNode = $scenarioNode->filter('text > ' . $this->locale->getValue());
+            if ($textNode->count() === 0) {
+                throw new ConfigXmlParsingException("Scenario does not contain \"text\" node.");
+            }
+            $text = $textNode->html();
+
+            $scenarios[] = new Scenario($conditions, $text);
+        }
+
+        if (count($scenarios) === 0) {
+            throw new ConfigXmlParsingException("No scenarios at scenario node.");
+        }
+
+        return $scenarios;
     }
 }

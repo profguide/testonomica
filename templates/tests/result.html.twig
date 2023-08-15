@@ -4,7 +4,10 @@
 
 {% block body %}
     <div class="container">
-        <h1>Результат</h1>
+        <h1>{{ test.name }}</h1>
+
+        <p class="lead">Результат тестирования</p>
+
         {{ result|raw }}
 
         <div class="test__result_actions">

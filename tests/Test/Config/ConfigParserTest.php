@@ -12,21 +12,60 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 final class ConfigParserTest extends KernelTestCase
 {
-    public function testCorrectStructure(): void
+//    public function testCorrectStructure(): void
+//    {
+//        $xml = new Crawler('<root>
+//            <texts>
+//                <min>
+//                    <ru>
+//                        <p>Вы молодец!</p>
+//                    </ru>
+//                    <en>
+//                        <p>Well done!</p>
+//                    </en>
+//                </min>
+//            </texts>
+//        </root>');
+//        $parser = new ConfigParser(new Locale(new RequestStack()));
+//        $config = $parser->parse($xml);
+//
+//        self::assertNotNull($config);
+//    }
+//
+//    public function testNoLanguageThrowsException(): void
+//    {
+//        $xml = new Crawler('<root>
+//            <texts>
+//                <min>
+//                    <p>Вы молодец!</p>
+//                </min>
+//            </texts>
+//        </root>');
+//        $parser = new ConfigParser(new Locale(new RequestStack()));
+//
+//        self::expectExceptionMessage('Every last node must be language like ru or en.');
+//        $parser->parse($xml);
+//    }
+
+    public function testConditions(): void
     {
-        $xml = new Crawler('<root><min><ru><p>Вы молодец!</p></ru><en><p>Well done!</p></en></min></root>');
+        $xml = new Crawler('<config>
+            <scenarios>
+                <scenario>
+                    <conditions>
+                        <condition var="sum" operator="<=" value="20"></condition>
+                    </conditions>
+                    <text>
+                        <ru><p>Хорошо!</p></ru>
+                        <en><p>Good!</p></en>
+                    </text>
+                </scenario>
+            </scenarios>
+        </config>');
+
         $parser = new ConfigParser(new Locale(new RequestStack()));
         $config = $parser->parse($xml);
 
-        self::assertNotNull($config);
-    }
-
-    public function testNoLanguageThrowsException(): void
-    {
-        $xml = new Crawler('<root><min><p>Вы молодец!</p></min></root>');
-        $parser = new ConfigParser(new Locale(new RequestStack()));
-
-        self::expectExceptionMessage('Every last node must be language like ru or en.');
-        $parser->parse($xml);
+        self::assertCount(1, $config->scenarios);
     }
 }

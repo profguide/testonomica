@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Test\Config;
 
+use App\Test\Config\Struct\Scenario;
 use App\Tests\Test\Config\ConfigTest;
 
 /**
@@ -14,11 +15,12 @@ use App\Tests\Test\Config\ConfigTest;
  */
 final class Config
 {
-    private array $data;
-
-    public function __construct(array $data)
+    /**
+     * @param Scenario[] $scenarios
+     * @param array $data
+     */
+    public function __construct(public array $scenarios, private array $data)
     {
-        $this->data = $data;
     }
 
     /**
