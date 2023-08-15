@@ -11,7 +11,7 @@ use App\Entity\Result;
 use App\Entity\Test;
 use App\Repository\ResultRepository;
 use App\Test\AnswersSerializer;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Uid\Uuid;
 
 class ResultService
@@ -20,17 +20,17 @@ class ResultService
 
     private ResultRepository $repository;
 
-    private SessionInterface $session;
+    private RequestStack $requestStack;
 
     private AnswersSerializer $serializer;
 
     public function __construct(
-        SessionInterface $session,
-        ResultRepository $repository,
+        RequestStack      $requestStack,
+        ResultRepository  $repository,
         AnswersSerializer $serializer)
     {
         $this->repository = $repository;
-        $this->session = $session;
+        $this->requestStack = $requestStack;
         $this->serializer = $serializer;
     }
 
@@ -46,23 +46,23 @@ class ResultService
 
     public function saveSessionResult(Result $result): void
     {
-        $resultsString = $this->session->get(self::SESSION_RESULT_NAME, "{}");
+        $resultsString = $this->requestStack->getSession()->get(self::SESSION_RESULT_NAME, "{}");
         $resultsArray = json_decode($resultsString, true);
         $resultsArray[$result->getTest()->getId()] = $result->getUuid();
-        $this->session->set(self::SESSION_RESULT_NAME, json_encode($resultsArray));
+        $this->requestStack->getSession()->set(self::SESSION_RESULT_NAME, json_encode($resultsArray));
     }
 
     public function clearSessionResult(Test $test)
     {
-        $resultsString = $this->session->get(self::SESSION_RESULT_NAME, "{}");
+        $resultsString = $this->requestStack->getSession()->get(self::SESSION_RESULT_NAME, "{}");
         $resultsArray = json_decode($resultsString, true);
         $resultsArray[$test->getId()] = null;
-        $this->session->set(self::SESSION_RESULT_NAME, json_encode($resultsArray));
+        $this->requestStack->getSession()->set(self::SESSION_RESULT_NAME, json_encode($resultsArray));
     }
 
     public function getSessionResult(Test $test): ?Result
     {
-        $resultsString = $this->session->get(self::SESSION_RESULT_NAME, "{}");
+        $resultsString = $this->requestStack->getSession()->get(self::SESSION_RESULT_NAME, "{}");
         $resultsArray = json_decode($resultsString, true);
         if (!empty($resultsArray[$test->getId()])) {
             $uuid = $resultsArray[$test->getId()];

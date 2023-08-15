@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ path('admin') }}">Панель управления</a></li>
+                <li class="breadcrumb-item"><a href="{{ path('admin.tests') }}">Тесты</a></li>
+                <li class="breadcrumb-item active">{{ title }}</li>
+            </ol>
+        </nav>
+
+        <h1>{{ title }}</h1>
+
+        {{ form_errors(form) }}
+
+        {{ form_start(form) }}
+        <div class="row">
+            <div class="col">{{ form_row(form.name, {label: 'Название RU'}) }}</div>
+            <div class="col">{{ form_row(form.nameEn, {label: 'Название EN'}) }}</div>
+        </div>
+        <div class="row">
+            <div class="col">{{ form_row(form.description, {label: 'Описание RU'}) }}</div>
+            <div class="col">{{ form_row(form.descriptionEn, {label: 'Описание EN'}) }}</div>
+        </div>
+        <div class="row">
+            <div class="col">{{ form_row(form.annotation, {label: 'Описание в списке RU'}) }}</div>
+            <div class="col">{{ form_row(form.annotationEn, {label: 'Описание в списке EN'}) }}</div>
+        </div>
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

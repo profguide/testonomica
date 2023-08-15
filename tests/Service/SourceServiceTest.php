@@ -11,6 +11,7 @@ use App\Entity\Test;
 use App\Repository\TestRepositoryInterface;
 use App\Service\TestSourceService;
 use App\Test\TestItemNotFoundException;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class SourceServiceTest extends KernelTestCase
@@ -21,11 +22,14 @@ class SourceServiceTest extends KernelTestCase
     /**@var Test */
     private $test;
 
-    public function setUp()
+    /**
+     * @throws Exception
+     */
+    public function setUp(): void
     {
         self::bootKernel();
-        $this->service = self::$container->get(TestSourceService::class);
-        $testRepository = self::$container->get(TestRepositoryInterface::class);
+        $this->service = self::getContainer()->get(TestSourceService::class);
+        $testRepository = self::getContainer()->get(TestRepositoryInterface::class);
         $this->test = $testRepository->findOneBySlug(TestFixture::TEST_1_SLUG);
     }
 

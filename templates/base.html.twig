@@ -3,15 +3,22 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="X-Frame-Options" content="sameorigin">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="true" name="HandheldFriendly"/>
     <meta content="width" name="MobileOptimized"/>
     {% if block("description") is not empty %}
-    <meta name="description" content="{% block description %}{% endblock %}">
+        <meta name="description" content="{% block description %}{% endblock %}">
     {% endif %}
     <title>{% block title %}{% endblock %}</title>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W8CLW33');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W8CLW33');</script>
     <!-- End Google Tag Manager -->
     {% block stylesheets %}
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -20,12 +27,16 @@
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8CLW33" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8CLW33" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+</noscript>
 <!-- End Google Tag Manager (noscript) -->
 <header class="header" id="testonomica_header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="{{ path('main') }}">WowTests!</a>
+            <a class="navbar-brand" href="{{ path('main') }}"
+               style="font-weight: 800; letter-spacing: 1px">Тестодром</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,19 +46,27 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ path('tests.index') }}">Тесты</a>
                     </li>
+{#                    <li class="nav-item">#}
+{#                        <a class="nav-link active" href="{{ path('articles.index') }}">Статьи</a>#}
+{#                    </li>#}
+                </ul>
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0 ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ path('articles.index') }}">Статьи</a>
+                        <a class="nav-link active"
+                           href="{{ app.user ? path('app_logout') : path('app_login') }}">{{ app.user ? "Выйти (" ~ app.user.email ~ ")" : 'Войти' }}</a>
                     </li>
                 </ul>
-{#                <form class="d-flex">#}
-{#                    <input class="form-control mr-2" type="search" placeholder="Тесты, типы">#}
-{#                    <button class="btn btn-outline-light" type="submit">Поиск</button>#}
-{#                </form>#}
+                {#                <form class="d-flex"> #}
+                {#                    <input class="form-control mr-2" type="search" placeholder="Тесты, типы"> #}
+                {#                    <button class="btn btn-outline-light" type="submit">Поиск</button> #}
+                {#                </form> #}
             </div>
         </div>
     </nav>
 </header>
-{% include 'flash.html.twig' %}
+<div class="container">
+    {% include 'flash.html.twig' %}
+</div>
 {% block body %}{% endblock %}
 <br/><br/>
 {% block javascripts %}

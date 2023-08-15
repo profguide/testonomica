@@ -8,7 +8,6 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Serializer\Annotation\Ignore;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\QuestionRepository"))
@@ -98,7 +97,6 @@ class Question
     private $img = null;
 
     /**
-     * @Vich\UploadableField(mapping="thumbnails", fileNameProperty="img")
      * @Ignore
      */
     private ?File $imgFile = null;

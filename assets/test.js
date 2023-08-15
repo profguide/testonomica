@@ -3,6 +3,8 @@ import {INIT_AUTO} from 'testonomica_api/src/const'
 import ProgressStorage from "testonomica_api/src/service/storage/ProgressStorage";
 import ProgressFirebaseStorage from "testonomica_api/src/service/storage/ProgressFirebaseStorage";
 import 'testonomica_api/src/style.scss';
+import {NO_MORE_QUESTIONS_EVENT} from "../../testonomica_api/src/events";
+import Api from "./js/api";
 
 const tag = document.getElementById('testonomica_app');
 const config = parseConfigFromTag(tag);
@@ -20,6 +22,15 @@ if (isCookieEnabled()) {
 }
 
 window.testonomica = new Testonomica(storage, config.getTestId(), config.getHost(), config.getToken());
+window.testonomica.addEventListener(NO_MORE_QUESTIONS_EVENT, function () {
+    const api = new Api(config.getTestId());
+    storage.getAnswers()
+        .then(progress => api.saveProgress(progress))
+        .then(key => {
+            storage.clear();
+            window.location.href = `/tests/result/${key}/`;
+        });
+});
 if (config.getInit() === INIT_AUTO) {
     window.testonomica.createApp(tag, config);
 }

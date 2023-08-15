@@ -3,7 +3,7 @@
 namespace App\Test;
 
 use App\Entity\Test;
-use App\Service\AnalysisRenderer;
+use App\Test\Analyzer\AnalysisRenderer;
 use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
 use Knp\Snappy\Pdf;
 use Symfony\Component\HttpFoundation\JsonResponse;

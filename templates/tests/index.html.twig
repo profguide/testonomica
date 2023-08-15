@@ -4,26 +4,28 @@
 
 {% block body %}
     <div class="container">
-        <h1>Тесты онлайн</h1>
-        {# <div class="row"> #}
-        <table class="table table-striped">
-            <thead>
-            <tr>
-                <td>Название</td>
-            </tr>
-            </thead>
-            <tbody>
-            {% for test in tests %}
-                {# <article class="col-lg-3 col-12 test-in-list"> #}
-                <tr>
-                    <td>
-                        <a href="{{ path('tests.view', {slug: test.slug}) }}">{{ test.name(app.request.locale)|e }}</a>
-                    </td>
-                </tr>
-                {# </article> #}
+        <h1 class="mb-4">Тесты онлайн</h1>
+
+        <div class="row">
+            {% for test in pagination %}
+                <div class="col-md-4 test-in-list">
+                    <div class="test-in-list__inner">
+                        <a href="{{ path('tests.view', {slug: test.slug}) }}" class="test-in-list__link"></a>
+                        <div class="test-in-list__top">
+                            <h6 class="test-in-list__category">{{ test.catalog }}</h6>
+                            <div class="test-in-list__duration">{{ test.duration }} минут</div>
+                        </div>
+                        <a href="{{ path('tests.view', {slug: test.slug}) }}" class="test-in-list__title">
+                            <h3>{{ test.name(app.request.locale)|e }}</h3>
+                        </a>
+                        <div class="test-in-list__annotation">{{ test.annotation(app.request.locale)|raw }}</div>
+                    </div>
+                </div>
             {% endfor %}
-            {# </div> #}
-            </tbody>
-        </table>
+        </div>
+
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
     </div>
 {% endblock %}

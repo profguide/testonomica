@@ -8,22 +8,14 @@ use App\Kernel;
 use DOMDocument;
 use DOMNode;
 use DOMNodeList;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
+#[AsCommand(name: 'app:sort-proftest')]
 final class SortProftestCommand extends Command
 {
-    protected static $defaultName = 'app:sort-proftest';
-
-    private Kernel $kernel;
-
-    public function __construct(Kernel $kernel, string $name = null)
-    {
-        parent::__construct($name);
-        $this->kernel = $kernel;
-    }
-
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->sort();

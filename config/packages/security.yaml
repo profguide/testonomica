@@ -1,5 +1,4 @@
 security:
-  enable_authenticator_manager: true
   # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
   password_hashers:
     # auto hasher with default options for the User class (and children)
@@ -24,9 +23,16 @@ security:
       # anonymous: true
       lazy: true
       provider: app_user_provider
-      custom_authenticator: App\Security\UserAuthenticator
+      custom_authenticator:
+        - App\Security\LoginFormAuthenticator
       logout:
         path: app_logout
+
+      remember_me:
+        secret: '%kernel.secret%'
+        lifetime: 604800
+        path: /
+        always_remember_me: true
         # where to redirect after logout
         # target: app_any_route
 
@@ -41,7 +47,7 @@ security:
   access_control:
     #    - { path: ^/tests/cli, roles: IS_AUTHENTICATED_ANONYMOUSLY }
     #    - { path: ^/tests/cli, roles: PUBLIC_ACCESS }
-    - { path: ^/login, roles: PUBLIC_ACCESS }
+    # - { path: ^/login, roles: PUBLIC_ACCESS }
     # - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
     - { path: ^/admin, roles: ROLE_ADMIN }
     # - { path: ^/profile, roles: ROLE_USER }

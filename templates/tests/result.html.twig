@@ -3,8 +3,11 @@
 {% block title %}{{ test.name }}{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <h1>Результат</h1>
+    <div class="container-xl">
+        <h1>{{ test.name }}</h1>
+
+        <p class="lead">Ваши результаты</p>
+
         {{ result|raw }}
 
         <div class="test__result_actions">

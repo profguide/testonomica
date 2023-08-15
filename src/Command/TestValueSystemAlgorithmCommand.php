@@ -9,17 +9,17 @@ use App\Test\Helper\ProfessionsMapper;
 use App\Test\Helper\ProfessionValueSystemRelevanceCalculator;
 use App\Test\Proforientation\Calc\ProfessionsPercentCalculator;
 use App\Test\Proforientation\Profession;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Color;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
+#[AsCommand(name: 'app:value-algo')]
 final class TestValueSystemAlgorithmCommand extends Command
 {
     // не менять
     const VALUES = ['salary', 'big-company', 'prestige', 'travel', 'promotion', 'self-employ', 'people', 'work-alone', 'gov', 'benefit', 'art', 'indoor', 'outdoor', 'difference', 'publicity', 'safe', 'result', 'intel', 'hands', 'free-time', 'high-society', 'light-work'];
-
-    protected static $defaultName = 'app:value-algo';
 
     private Kernel $kernel;
 

@@ -7,12 +7,10 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArticleCatalogRepository")
  * @ORM\Table(indexes={@ORM\Index(columns={"slug"})})
- * @Vich\Uploadable
  * @author: adavydov
  * @since: 24.02.2021
  */

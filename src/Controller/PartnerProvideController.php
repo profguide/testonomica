@@ -11,7 +11,6 @@ use App\Entity\Access;
 use App\Entity\ProviderPayment;
 use App\Payment\Robokassa;
 use App\Service\AccessService;
-use App\Service\PaymentService;
 use App\Service\ProviderUserPaymentService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -28,24 +27,11 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class PartnerProvideController extends AbstractController
 {
-    private PaymentService $paymentService;
-
-    private ProviderUserPaymentService $providerUserPaymentService;
-
-    private AccessService $accessService;
-
-    private Robokassa $robokassa;
-
     public function __construct(
-        PaymentService $paymentService,
-        ProviderUserPaymentService $providerUserPaymentService,
-        AccessService $accessService,
-        Robokassa $robokassa)
+        private readonly ProviderUserPaymentService $providerUserPaymentService,
+        private readonly AccessService              $accessService,
+        private readonly Robokassa                  $robokassa)
     {
-        $this->paymentService = $paymentService;
-        $this->providerUserPaymentService = $providerUserPaymentService;
-        $this->accessService = $accessService;
-        $this->robokassa = $robokassa;
     }
 
     /**

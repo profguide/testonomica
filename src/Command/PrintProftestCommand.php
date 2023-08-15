@@ -8,16 +8,16 @@ use App\Entity\Question;
 use App\Kernel;
 use App\Subscriber\Locale;
 use App\Test\QuestionXmlMapper;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\DomCrawler\Crawler;
 use Symfony\Component\HttpFoundation\RequestStack;
 
+#[AsCommand(name: 'app:print-proftest')]
 final class PrintProftestCommand extends Command
 {
-    protected static $defaultName = 'app:print-proftest';
-
     private Kernel $kernel;
 
     public function __construct(Kernel $kernel, string $name = null)

@@ -6,23 +6,20 @@ use App\Entity\Question;
 use App\Entity\Test;
 use App\Subscriber\Locale;
 use App\Test\QuestionXmlMapper;
+use App\Test\Quiz\QuizXmlFetcher;
 use App\Test\TestItemNotFoundException;
 use DOMElement;
 use Symfony\Component\DomCrawler\Crawler;
-use Symfony\Component\HttpKernel\KernelInterface;
 
 class XmlSourceRepository implements SourceRepositoryInterface
 {
-    private KernelInterface $kernel;
-
     private Locale $locale;
 
     // for request cache
     private static array $xml = [];
 
-    public function __construct(KernelInterface $kernel, Locale $locale)
+    public function __construct(private readonly QuizXmlFetcher $quizXmlFetcher, Locale $locale)
     {
-        $this->kernel = $kernel;
         $this->locale = $locale;
     }
 
@@ -113,10 +110,7 @@ class XmlSourceRepository implements SourceRepositoryInterface
     private function getXml(Test $test): Crawler
     {
         if (empty(self::$xml[$test->getId()])) {
-            $name = $test->getXmlFilename() ?? $test->getId(); // TestXmlFileNameResolver?
-            $filename = $this->kernel->getProjectDir() . "/xml/{$name}.xml";
-            $fileContent = file_get_contents($filename);
-            self::$xml[$test->getId()] = new Crawler($fileContent);
+            self::$xml[$test->getId()] = $this->quizXmlFetcher->fetchByTest($test);
         }
         return self::$xml[$test->getId()];
     }

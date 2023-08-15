@@ -20,6 +20,7 @@ use App\Repository\ProviderRepository;
 use App\Repository\ServiceRepository;
 use App\Service\ProviderUserPaymentService;
 use App\Service\PublicTokenService;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class PublicTokenServiceTest extends KernelTestCase
@@ -33,13 +34,16 @@ class PublicTokenServiceTest extends KernelTestCase
     /**@var Provider */
     private $provider;
 
-    public function setUp()
+    /**
+     * @throws Exception
+     */
+    public function setUp(): void
     {
         self::bootKernel();
-        $this->service = self::$container->get(PublicTokenService::class);
-        $this->serviceRepository = self::$container->get(ServiceRepository::class);
+        $this->service = self::getContainer()->get(PublicTokenService::class);
+        $this->serviceRepository = self::getContainer()->get(ServiceRepository::class);
         /**@var ProviderRepository $providerRepo */
-        $providerRepo = self::$container->get(ProviderRepository::class);
+        $providerRepo = self::getContainer()->get(ProviderRepository::class);
         $this->provider = $providerRepo->findBySlug(ProviderFixture::TESTOMETRIKA);
     }
 

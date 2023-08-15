@@ -12,9 +12,11 @@ use App\Entity\Answer;
 use App\Entity\Test;
 use App\Repository\TestRepositoryInterface;
 use App\Service\AnswerService;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Session\Session;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpFoundation\Session\Storage\MockArraySessionStorage;
 
 class AnswerServiceTest extends KernelTestCase
@@ -25,13 +27,18 @@ class AnswerServiceTest extends KernelTestCase
     /**@var Test */
     private $test;
 
-    /**@var SessionInterface */
-    private $session;
-
-    public function setUp()
+    /**
+     * @throws Exception
+     */
+    public function setUp(): void
     {
         self::bootKernel();
-        $this->session = new Session(new MockArraySessionStorage());
+
+        $requestStack = self::getContainer()->get(RequestStack::class);
+        $request = new Request();
+        $request->setSession(new Session(new MockArraySessionStorage()));
+        $requestStack->push($request);
+
         $this->answerService = self::getContainer()->get(AnswerService::class);
         $testRepository = self::getContainer()->get(TestRepositoryInterface::class);
         $this->test = $testRepository->findOneBySlug(TestFixture::TEST_1_SLUG);

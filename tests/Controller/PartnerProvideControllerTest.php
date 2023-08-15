@@ -13,6 +13,7 @@ use App\Entity\Payment;
 use App\Repository\AccessRepository;
 use App\Repository\ProviderPaymentRepository;
 use App\Repository\ProviderRepository;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\BrowserKit\Cookie;
@@ -31,6 +32,9 @@ class PartnerProvideControllerTest extends WebTestCase
     /**@var ProviderRepository */
     private $providerRepository;
 
+    /**
+     * @throws Exception
+     */
     protected function setUp(): void
     {
         $this->client = static::createClient();
@@ -111,38 +115,38 @@ class PartnerProvideControllerTest extends WebTestCase
     }
 
 
-    private function assertProvideIsDeniedByToken(string $token)
+    private function assertProvideIsDeniedByToken(string $token): void
     {
         $this->requestProvide(['token' => $token]);
         $this->assertEquals(403, $this->client->getResponse()->getStatusCode());
     }
 
-    private function assertProvideIsRedirectingByToken(string $token)
+    private function assertProvideIsRedirectingByToken(string $token): void
     {
         $this->requestProvide(['token' => $token]);
         $this->assertEquals(302, $this->client->getResponse()->getStatusCode());
     }
 
-    private function assertCookie(string $name, string $token)
+    private function assertCookie(string $name, string $token): void
     {
         $cookies = $this->client->getResponse()->headers->getCookies();
         $this->assertEquals($name, $cookies[0]->getName());
         $this->assertEquals($token, $cookies[0]->getValue());
     }
 
-    private function makeAccessUsed()
+    private function makeAccessUsed(): void
     {
         $access = $this->accessRepository->findOneByToken(AccessFixture::TOKEN);
         $access->setUsed();
         $this->accessRepository->save($access);
     }
 
-    private function setAccessCookie(string $token)
+    private function setAccessCookie(string $token): void
     {
         $this->client->getCookieJar()->set(new Cookie('access', $token));
     }
 
-    private function requestProvide(array $requestParams)
+    private function requestProvide(array $requestParams): void
     {
         $this->client->request('POST', "/partner/provide/", $requestParams);
     }

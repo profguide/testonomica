@@ -6,7 +6,6 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Serializer\Annotation\Ignore;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\QuestionItemRepository"))
@@ -15,7 +14,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  * @author: adavydov
  * @since: 09.04.2021
  */
-class QuestionItem implements \Serializable
+class QuestionItem
 {
     /**
      * @ORM\Id()
@@ -74,7 +73,6 @@ class QuestionItem implements \Serializable
     private $img = null;
 
     /**
-     * @Vich\UploadableField(mapping="thumbnails", fileNameProperty="img")
      * @Ignore
      */
     private ?File $imgFile = null;
@@ -83,7 +81,7 @@ class QuestionItem implements \Serializable
         string $value,
         string $text,
         string $img = null,
-        bool $isCorrect = false): QuestionItem
+        bool   $isCorrect = false): QuestionItem
     {
         $entity = new QuestionItem();
         $entity->value = $value;
@@ -260,11 +258,21 @@ class QuestionItem implements \Serializable
 //    }
     public function serialize()
     {
-        // TODO: Implement serialize() method.
+        throw new \RuntimeException('Stub QuestionItem:serialize()');
     }
 
-    public function unserialize($serialized)
+    public function unserialize(string $data)
     {
-        // TODO: Implement unserialize() method.
+        throw new \RuntimeException('Stub QuestionItem:unserialize()');
+    }
+
+    public function __serialize(): array
+    {
+        throw new \RuntimeException('Stub QuestionItem:__serialize()');
+    }
+
+    public function __unserialize(array $data): void
+    {
+        throw new \RuntimeException('Stub QuestionItem:__unserialize()');
     }
 }

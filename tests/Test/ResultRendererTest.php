@@ -53,6 +53,6 @@ class ResultRendererTest extends KernelTestCase
 
         $data = [];
         $result = $this->renderer->render($this->test, $data, new ViewFormat(ViewFormat::HTML));
-        self::assertContains('This is a test result', $result->getContent());
+        self::assertStringContainsString('This is a test result', $result->getContent());
     }
 }

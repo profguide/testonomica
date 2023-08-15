@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <!-- Минимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" label="Уровень агрессии"/>
+            <conditions>
+                <condition var="SUM" operator="меньше_или_равно" value="25"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>
+                        У вас низкий уровень гневливости. Вы достаточно сдержанны, спокойны и хладнокровны, не
+                        позволяете вашему недовольству управлять вашим поведением. Вы редко проявляете свой гнев вовне,
+                        стараетесь не задевать людей и не «ломать стулья», даже когда сильно чем-либо недовольны. Вас
+                        нельзя назвать вспыльчивым, несдержанным человеком. Все хорошо, нет поводов для беспокойства.
+                        Уровень гневливости практически не влияет на вашу адаптацию к социуму.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        You have a low level of irritability. You are quite composed, calm, and collected, not allowing
+                        your dissatisfaction to control your behavior. You rarely show your anger outwardly, strive not
+                        to offend people or "break chairs," even when you are strongly dissatisfied with something. You
+                        cannot be described as impulsive or unrestrained. Everything is good, there's no need to worry.
+                        Your level of irritability hardly affects your adaptation to society.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Средний уровень -->
+        <scenario>
+            <scale percentVar="SCALE" label="Уровень агрессии"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="25"/>
+                <condition var="SUM" operator="меньше_или_равно" value="45"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>
+                        У вас средний уровень гневливости, типичный для большинства людей. Вы не склонны гневаться
+                        часто, по поводу и без повода. В большинстве ситуаций вы не выплескиваете свой гнев наружу,
+                        управляете своей злостью и раздражением. В некоторых ситуациях вам все же не удается держать
+                        свой гнев в узде. Вероятно, это происходит тогда, когда повод для недовольства бывает довольно
+                        сильным, и тогда ваш гнев все же вырывается наружу. Возможно, стоит обратить внимание на те
+                        конкретные ситуации, в которых это происходит. Это поможет вам контролировать свою умеренную
+                        гневливость, которая иногда дает себя знать. Лучше, если вы владеете собой, а не ваш гнев
+                        владеет вами.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        You have a moderate level of irritability, which is typical for most people. You are not prone
+                        to getting angry often, whether there's a reason or not. In most situations, you don't outwardly
+                        express your anger and manage your frustration and irritation. However, there are instances
+                        where you struggle to keep your anger in check. This likely happens when the cause for
+                        dissatisfaction is quite strong, and your anger still manages to show itself. It might be
+                        helpful to pay attention to those specific situations in which this occurs. This will assist you
+                        in controlling your moderate irritability, which occasionally makes itself known. It's better if
+                        you maintain control over yourself rather than letting your anger control you.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Максимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" label="Уровень агрессии"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="45"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>
+                        У вас высокий уровень гневливости. Гнев вспыхивает часто и легко, охватывает вас, как пожар. В
+                        эти моменты вы плохо владеете собой, делаете и говорите то, о чем потом сильно сожалеете. Вам
+                        трудно справиться с желанием выказать свое недовольство, проявить свою злость и раздражение.
+                        Высокий уровень гневливости становится помехой в жизни, то и дело разрушает ваши отношения с
+                        людьми, порождает конфликты и проблемы, которые зачастую трудно разрешить. Получая эмоциональную
+                        разрядку при выплесках гнева, вы теряете больше, чем приобретаете. Постарайтесь лучше управлять
+                        своим гневом. Возможно, имеет смысл обратиться за консультацией к специалисту-психологу, который
+                        поможет вам научиться управлять своим гневом и поставить его под контроль.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        You have a high level of irritability. Anger flares up frequently and easily, engulfing you like
+                        a fire. In these moments, you struggle to maintain self-control, saying and doing things that
+                        you later deeply regret. It's difficult for you to manage the urge to express your
+                        dissatisfaction, display your anger, and irritation. A high level of irritability becomes a
+                        hindrance in your life, repeatedly undermining your relationships with others and giving rise to
+                        conflicts and issues that are often challenging to resolve.
+                    </p>
+                    <p>
+                        While seeking emotional release through bursts of anger, you end up losing more than you gain.
+                        It's important to work on better managing your anger. It might be worth considering seeking
+                        guidance from a psychologist who can help you learn to control and regulate your anger.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>
