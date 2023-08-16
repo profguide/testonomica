@@ -5,7 +5,7 @@
         <scenario>
             <scale percentVar="SCALE" label="Уровень гневливости"/>
             <conditions>
-                <condition var="SUM" operator="меньше_или_равно" value="25"/>
+                <condition var="SUM" operator="меньше_или_равно" value="30"/>
             </conditions>
             <text>
                 <ru>
@@ -33,8 +33,8 @@
         <scenario>
             <scale percentVar="SCALE" label="Уровень гневливости"/>
             <conditions>
-                <condition var="SUM" operator="больше" value="25"/>
-                <condition var="SUM" operator="меньше_или_равно" value="45"/>
+                <condition var="SUM" operator="больше" value="30"/>
+                <condition var="SUM" operator="меньше_или_равно" value="50"/>
             </conditions>
             <text>
                 <ru>
@@ -68,7 +68,7 @@
         <scenario>
             <scale percentVar="SCALE" label="Уровень гневливости"/>
             <conditions>
-                <condition var="SUM" operator="больше" value="45"/>
+                <condition var="SUM" operator="больше" value="50"/>
             </conditions>
             <text>
                 <ru>

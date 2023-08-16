@@ -121,7 +121,7 @@ class Test
     /**
      * @ORM\Column(type="boolean")
      */
-    private bool $isXmlSource = false;
+    private bool $isXmlSource = true;
 
     /**
      * @ORM\Column(type="string", length=20, nullable=true)

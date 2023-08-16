@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <!-- Минимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" label="Уровень обидчивости"/>
+            <conditions>
+                <condition var="SUM" operator="меньше_или_равно" value="30"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>У вас низкий уровень обидчивости. Вы не склонны создавать проблему из ничего, достаточно легко
+                        прощаете обидчика, не застреваете бесконечно на негативных эмоциях, вызванных словами или
+                        действиями других людей. Подшучивания или критика, будь то справедливая или безосновательная, не
+                        наносят ущерба вашей самооценке. Да, иногда вы обижаетесь, но не тратите впустую время своей
+                        жизни на пережевывание мнимых или даже реальных обид. Мир кажется вам вполне доброжелательным, а
+                        люди приветливыми и вовсе не злонамеренными.
+                    </p>
+                </ru>
+                <en>
+                    <p>You have a low level of sensitivity to offense. You are not inclined to create problems out of
+                        nothing, you forgive offenders quite easily, and you don't get stuck endlessly on negative
+                        emotions triggered by the words or actions of others. Jokes or criticism, whether fair or
+                        baseless, don't harm your self-esteem. Yes, there are times when you feel hurt, but you don't
+                        waste your life dwelling on perceived or even real offenses. The world seems fairly friendly to
+                        you, and people appear welcoming and not at all malicious.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Средний уровень -->
+        <scenario>
+            <scale percentVar="SCALE" label="Уровень обидчивости"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="30"/>
+                <condition var="SUM" operator="меньше_или_равно" value="50"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>У вас средний уровень обидчивости. Бывает, что нанесенная обида не дает вам покоя, мешает спать,
+                        нарушает ваше эмоциональное равновесие. Иногда негативные эмоции поглощают вас, мысли об обиде
+                        неостановимо вертятся в голове. Однако это преходящие, не самые типичные для вас состояния, в
+                        целом вы умеете справиться с подавленным настроением от обиды, забыть о ней и простить обидчика.
+                    </p>
+
+                    <p>Постарайтесь подумать о том, что именно вас обижает чаще всего, есть ли основания всерьез
+                        обижаться в таких ситуациях и нельзя ли реагировать иначе. Это поможет вам понизить уровень
+                        своей обидчивости, которая иногда все же остро проявляется (особенно если ваши показатели ближе
+                        к 50 баллам). Уменьшение обидчивости привнесет в вашу жизнь больше радости, легкости и улучшит
+                        ваше взаимодействие с миром.
+                    </p>
+                </ru>
+                <en>
+                    <p>You have a moderate level of sensitivity to offense. There are times when a perceived offense
+                        disturbs your peace, interferes with your sleep, and disrupts your emotional equilibrium.
+                        Occasionally, negative emotions consume you, and thoughts of the offense persistently circle in
+                        your mind. However, these are passing states and not the most typical for you. Overall, you are
+                        capable of dealing with the suppressed mood from an offense, moving on from it, and forgiving
+                        the offender.
+                    </p>
+                    <p>Try to reflect on what specifically tends to offend you most frequently. Are there legitimate
+                        reasons to take these situations so seriously, and could you react differently? This might help
+                        you reduce your sensitivity to offense, which sometimes surfaces acutely (especially if your
+                        scores are closer to 50 points). Decreasing your sensitivity to offense will bring more joy and
+                        ease into your life and improve your interactions with the world.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Максимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" label="Уровень обидчивости"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="50"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>У вас высокий уровень обидчивости. Это может создавать проблемы с настроением, засыпанием, мешать
+                        общению даже с самыми близкими людьми, блокировать ваши контакты с окружением. Люди могут
+                        избегать общения с вами, чтобы не попадать в ситуации, когда вы обижаетесь по поводу и без
+                        повода, ведь это не так уж просто выносить. Вы расходуете на обиду огромное количество своей
+                        психологической энергии, неэффективно ее растрачивая. Вы зачастую поглощены бесконечными мыслями
+                        о нанесенной обиде, о том, что к вам несправедливы, вас не ценят и не замечают, не берут в
+                        расчет вашу тонкую душевную организацию. Так ли это на самом деле, действительно ли люди такие
+                        нечуткие и часто несправедливы к вам? Похоже, ваша обидчивость нуждается в коррекции, весьма
+                        желательно ее понизить. Возможно, побороть вашу повышенную обидчивость поможет консультация
+                        грамотного специалиста-психолога.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        You have a high level of sensitivity to offense. This can lead to mood problems, difficulty
+                        falling asleep, and hinder communication even with those closest to you, blocking your
+                        interactions with the world around you. People might avoid engaging with you to steer clear of
+                        situations where you take offense, whether justified or not, as it can be quite challenging to
+                        navigate. You expend a significant amount of your psychological energy on feeling hurt, which is
+                        often unproductive. You often find yourself consumed by endless thoughts about the offense,
+                        believing that you are treated unfairly, undervalued, and unnoticed, and that others don't
+                        consider your delicate emotional state. Is this really the case? Are people truly as insensitive
+                        and often unjust towards you as you perceive? It seems that your sensitivity to offense could
+                        benefit from adjustment; lowering it would be highly advisable. Perhaps seeking the guidance of
+                        a skilled psychologist could help you address and manage your heightened sensitivity to offense.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>

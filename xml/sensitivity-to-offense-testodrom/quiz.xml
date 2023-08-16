@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>
+                <ru>Вас называют обидчивым человеком?</ru>
+                <en>Are you called a sensitive person?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="2">
+            <name>
+                <ru>Случается, что вы без конца вспоминаете обидевшие вас слова?</ru>
+                <en>Do you find yourself constantly recalling hurtful words?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="3">
+            <name>
+                <ru>Бывает, что вам трудно простить нанесенную вам обиду?</ru>
+                <en>Is it difficult for you to forgive a perceived offense?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>
+                <ru>Вам кажется, что люди обижают вас без всякой на то причины?</ru>
+                <en>Do you feel that people offend you without any reason?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="5">
+            <name>
+                <ru>Вам с трудом засыпаете, вспоминая нечто обидевшее вас?</ru>
+                <en>Do you have trouble falling asleep while remembering something that hurt you?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="6">
+            <name>
+                <ru>Вас задевают слова или ситуации, которые других оставляют равнодушными?</ru>
+                <en>Do words or situations that leave others indifferent affect you?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>
+                <ru>Другие люди воспринимают вас как чувствительного, ранимого человеком?</ru>
+                <en>Do others perceive you as a sensitive and vulnerable person?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>
+                <ru>Вы обижаетесь, если к вам не проявляют повышенного внимания?</ru>
+                <en>Do you feel hurt if you're not given extra attention?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>
+                <ru>Случается, что люди проявляют несправедливость по отношению к вам?</ru>
+                <en>Do you experience situations where people treat you unfairly?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="10">
+            <name>
+                <ru>Вы обижаетесь, если к вашему мнению не прислушиваются?</ru>
+                <en>Do you get upset if your opinions are not listened to?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="11">
+            <name>
+                <ru>Бывает, что у вас мгновенно портится настроение?</ru>
+                <en>Does your mood sometimes instantly sour?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>
+                <ru>Бывает, что мелкие недоразумения порождают у вас жгучую обиду?</ru>
+                <en>Do minor misunderstandings sometimes result in deep hurt for you?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>
+                <ru>Вас раздражает, когда над вами подшучивают?</ru>
+                <en>Does it irritate you when people make fun of you?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="14">
+            <name>
+                <ru>Вы переживаете из-за того, что другие считают «комариным укусом»?</ru>
+                <en>Do you feel upset because others consider your concerns to be "mosquito bites"?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>
+                <ru>Вас тяготит мысль, что вас недостаточно уважают?</ru>
+                <en>Do you feel burdened by the thought that you're not respected enough?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>
+                <ru>Бывает, что вам становится обидно до слез, а другие этого не замечают?</ru>
+                <en>Are there times when you feel hurt to the point of tears, yet others don't notice?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>
+                <ru>Бывает, что вас томит непроходящее желание отомстить обидчику?</ru>
+                <en>Do you sometimes feel a lingering desire to seek revenge on someone who offended you?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="18">
+            <name>
+                <ru>Вы замыкаетесь в себе, когда вас чем-то обидели на дружеской вечеринке?</ru>
+                <en>Do you withdraw into yourself when you've been hurt at a social gathering?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="19">
+            <name>
+                <ru>Вы подолгу анализируете свои слова, чувства, эмоции?</ru>
+                <en>Do you frequently analyze your words, feelings, and emotions?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+        <item id="20">
+            <name>
+                <ru>Бывает, что вас незаслуженно критикуют?</ru>
+                <en>Do you experience instances where you're unfairly criticized?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
