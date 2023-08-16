@@ -50,9 +50,9 @@ class TestType extends AbstractType
                 'label' => 'Виден в списке'
             ])
             // todo check if it exist - just let them know
-            ->add('calculator', null, [
+            ->add('calculatorName', null, [
                 'label' => 'Калькулятор (имя файла)',
-                'help' => 'Например, "Proftest" будет интерпретировано как ProftestCalculator'
+                'help' => 'Например, "Proftest" будет интерпретировано как ProftestCalculator. Если пусто, то будет использован автоматический калькулятор.'
             ])
             ->add('save', SubmitType::class, [
                 'row_attr' => ['style' => 'padding-top: 15px']]);

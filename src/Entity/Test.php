@@ -314,19 +314,6 @@ class Test
         $this->xmlFilename = $xmlFilename;
     }
 
-    public function getCalculator(): ?string
-    {
-        return $this->calculator;
-    }
-
-    public function setCalculator(?string $calculator): void
-    {
-        if (!in_array($calculator, [self::CALCULATOR_AUTO])) {
-            throw new \InvalidArgumentException("Invalid calculator");
-        }
-        $this->calculator = $calculator;
-    }
-
     public function getCalculatorName(): ?string
     {
         return $this->calculatorName;

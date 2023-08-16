@@ -13,6 +13,10 @@
 
         <h1>Тесты</h1>
 
+        <div class="mb-4">
+            <a href="{{ path('admin.tests.create') }}" class="btn btn-sm btn-primary">Добавить тест</a>
+        </div>
+
         <div>
             Всего: {{ pagination.getTotalItemCount }}
         </div>
