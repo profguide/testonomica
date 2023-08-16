@@ -25,7 +25,7 @@
         <scenario>
             <scale percentVar="SCALE" label="Правильных ответов"/>
             <conditions>
-                <condition var="SUM" operator="больше" value="7"/>
+                <condition var="SUM" operator="больше" value="6"/>
                 <condition var="SUM" operator="меньше_или_равно" value="11"/>
             </conditions>
             <text>
@@ -46,7 +46,7 @@
         <scenario>
             <scale percentVar="SCALE" label="Правильных ответов"/>
             <conditions>
-                <condition var="SUM" operator="больше_или_равно" value="12"/>
+                <condition var="SUM" operator="больше" value="11"/>
             </conditions>
             <text>
                 <ru>
