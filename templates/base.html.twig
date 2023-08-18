@@ -36,7 +36,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="{{ path('main') }}"
-               style="font-weight: 800; letter-spacing: 1px">Тестодром</a>
+               style="font-weight: 800; letter-spacing: 1px">{% trans %}Тестодром{% endtrans %}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,22 +44,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ path('tests.index') }}">Тесты</a>
+                        <a class="nav-link active" href="{{ path('tests.index') }}">{% trans %}Тесты{% endtrans %}</a>
                     </li>
-{#                    <li class="nav-item">#}
-{#                        <a class="nav-link active" href="{{ path('articles.index') }}">Статьи</a>#}
-{#                    </li>#}
                 </ul>
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0 ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active"
-                           href="{{ app.user ? path('app_logout') : path('app_login') }}">{{ app.user ? "Выйти (" ~ app.user.email ~ ")" : 'Войти' }}</a>
+                           href="{{ app.user ? path('app_logout') : path('app_login') }}">{{ app.user ? "Выйти (" ~ app.user.email ~ ")" : 'Войти'|trans }}</a>
                     </li>
                 </ul>
-                {#                <form class="d-flex"> #}
-                {#                    <input class="form-control mr-2" type="search" placeholder="Тесты, типы"> #}
-                {#                    <button class="btn btn-outline-light" type="submit">Поиск</button> #}
-                {#                </form> #}
             </div>
         </div>
     </nav>

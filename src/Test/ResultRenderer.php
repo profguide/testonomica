@@ -4,25 +4,23 @@ namespace App\Test;
 
 use App\Entity\Test;
 use App\Test\Analyzer\AnalysisRenderer;
+use App\Test\Config\ConfigParser;
+use App\Test\Config\ConfigXmlFetcher;
 use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
 use Knp\Snappy\Pdf;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
 
-class ResultRenderer
+readonly class ResultRenderer
 {
-    private Environment $twig;
-
-    private Pdf $pdf;
-
-    private AnalysisRenderer $analysisRenderer;
-
-    public function __construct(Environment $twig, Pdf $pdf, AnalysisRenderer $analysisRenderer)
+    public function __construct(
+        private Environment      $twig,
+        private Pdf              $pdf,
+        private AnalysisRenderer $analysisRenderer,
+        private ConfigParser     $configParser,
+        private ConfigXmlFetcher $configXmlFetcher)
     {
-        $this->twig = $twig;
-        $this->pdf = $pdf;
-        $this->analysisRenderer = $analysisRenderer;
     }
 
     /**
@@ -73,8 +71,13 @@ class ResultRenderer
 
     private function html(Test $test, array $data): string
     {
-        // templated from the db
         $resultBlocksOutput = $this->analysisRenderer->render($test, $data);
+
+        $configVariables = $this->getConfigVariables($test);
+        if (!empty($configVariables)) {
+            $data['config'] = $configVariables;
+        }
+
         if (!empty($resultBlocksOutput) || $test->hasResultView()) {
             $template = $resultBlocksOutput . $test->getResultView();
             $template = $this->twig->createTemplate($template);
@@ -82,5 +85,17 @@ class ResultRenderer
         } else {
             return $this->twig->render('tests/result/' . ResultUtil::resolveViewName($test) . '.html.twig', $data);
         }
+    }
+
+    private function getConfigVariables(Test $test): array
+    {
+        if (!$this->configXmlFetcher->exist($test)) {
+            return [];
+        }
+
+        $crawler = $this->configXmlFetcher->fetchByTest($test);
+        $config = $this->configParser->parse($crawler);
+
+        return $config->getAllVariables();
     }
 }

@@ -262,7 +262,7 @@ class Question
         $this->textEn = $textEn;
     }
 
-    public function getVariety(): string
+    public function getVariety(): ?string
     {
         return $this->variety;
     }

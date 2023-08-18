@@ -4,7 +4,7 @@
 
 {% block body %}
     <div class="container">
-        <h1 class="mb-4">Тесты онлайн</h1>
+        <h1 class="mb-4">{% trans %}Тесты онлайн{% endtrans %}</h1>
 
         <div class="row">
             {% for test in pagination %}
@@ -12,8 +12,8 @@
                     <div class="test-in-list__inner">
                         <a href="{{ path('tests.view', {slug: test.slug}) }}" class="test-in-list__link"></a>
                         <div class="test-in-list__top">
-                            <h6 class="test-in-list__category">{{ test.catalog }}</h6>
-                            <div class="test-in-list__duration">{{ test.duration }} минут</div>
+                            <h6 class="test-in-list__category">{{ test.catalog.name(app.request.locale) }}</h6>
+                            <div class="test-in-list__duration">{{ test.duration }} {% trans %}минут{% endtrans %}</div>
                         </div>
                         <a href="{{ path('tests.view', {slug: test.slug}) }}" class="test-in-list__title">
                             <h3>{{ test.name(app.request.locale)|e }}</h3>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <texts>
+        <graph>
+            <radicalists>
+                <ru>Сталин, Гитлер,<br/>Ким Чен Ын<br/>приблизительно<br/>здесь
+                </ru>
+                <en>Stalin, Hitler,<br/>Kim Jong Un<br/>approximately<br/>here
+                </en>
+            </radicalists>
+            <economicLeft>
+                <ru>
+                    Левые<br/>экономические<br/>взгляды
+                </ru>
+                <en>
+                    Left-wing<br/>economic<br/>views
+                </en>
+            </economicLeft>
+            <economicRight>
+                <ru>
+                    Правые<br/>экономические<br/>взгляды
+                </ru>
+                <en>
+                    Right-wing<br/>economic<br/>views
+                </en>
+            </economicRight>
+            <authority>
+                <ru>
+                    Авторитаризм
+                </ru>
+                <en>
+                    Authoritarianism
+                </en>
+            </authority>
+            <liberty>
+                <ru>
+                    Либертаризм
+                </ru>
+                <en>
+                    Libertarianism
+                </en>
+            </liberty>
+        </graph>
+        <description>
+            <ru>
+                <p>По результатам теста ваша позиция обозначается точкой в пространстве политических ориентаций.
+                    Напомним, какие оси представлены в этом условном политическом пространстве.
+                </p>
+                <p>Ось личных, индивидуальных свобод – два полюса:</p>
+                <ul>
+                    <li>
+                        <b>Либертаризм.</b>
+                        Главное – личная, индивидуальная свобода, права человека. Это либертарианство, оно же
+                        либертаризм. В крайнем проявлении – анархизм, полное отрицание роли государства. [Слова
+                        «либертарианство», «либертарианский» пришли из английского языка. Мы употребляем более короткие
+                        слова-синонимы «либертаризм», «либертарный» (исходно – из французского).]
+                    </li>
+                    <li>
+                        <b>Авторитаризм.</b>
+                        Главное – роль и задачи государства, которые важнее личных, индивидуальных свобод. Это
+                        авторитаризм. В крайнем проявлении – тоталитаризм, приверженность тотальному контролю
+                        государства над личностью.
+                    </li>
+                </ul>
+                <p>Ось экономических свобод – два полюса:</p>
+                <ul>
+                    <li>
+                        <b>Правые экономические взгляды.</b>
+                        Главное – экономическая свобода, индивидуальные усилия, свободный рынок, государство вмешивается
+                        минимально и не имеет монополии на экономическое управление. В крайнем проявлении – отрицание
+                        роли государства в регуляции экономики, анархо-капитализм.
+                    </li>
+                    <li>
+                        <b>Левые экономические взгляды.</b>
+                        Государству отводится роль главного регулятора и распорядителя экономических процессов. Оно
+                        имеет право и должно вмешиваться в экономику. В крайнем проявлении – отсутствие экономической
+                        свободы, жесткая плановая государственная экономика.
+                    </li>
+                </ul>
+                <p>Группы людей, попадающих в разные квадранты в пространстве политических координат, принято обозначать
+                    так:
+                </p>
+                <ul>
+                    <li>авторитарные левые (или левые авторитаристы), в английской традиции authoritarian left (AL)</li>
+                    <li>авторитарные правые (или правые авторитаристы), authoritarian right (AR)</li>
+                    <li>либертарные левые (или левые либертаристы), libertarian left (LL)</li>
+                    <li>либертарные правые (или правые либертаристы), libertarian right (LR)</li>
+                </ul>
+                <p>На графике размещены четыре квадранта в пространстве политических координат и обозначение некоторых
+                    идеологий в этом пространстве. Синим и зеленым цветом выделены крайне выраженные, радикальные
+                    политические ориентации.
+                </p>
+                <h5 class="mt-4 mb-4">Итак, кто вы? Левых или правых экономических взглядов, сторонник авторитаризма или
+                    либертаризма?</h5>
+            </ru>
+            <en>
+                <p>Based on the test results, your position is indicated by a point in the space of political
+                    orientations. Let's recap which axes are represented in this hypothetical political space.
+                </p>
+                <p>The axis of personal and individual freedoms has two poles:</p>
+                <ul>
+                    <li>
+                        <b>Libertarianism.</b>
+                        The main focus is on personal, individual freedom and human rights. This is libertarianism. In
+                        its extreme manifestation, it leads to anarchism, which completely rejects the role of the
+                        state.
+                    </li>
+                    <li>
+                        <b>Authoritarianism.</b>
+                        The main emphasis is on the role and tasks of the state, which take precedence over personal and
+                        individual freedoms. This is authoritarianism. In its extreme manifestation, it leads to
+                        totalitarianism, with a strong commitment to total state control over individuals.
+                    </li>
+                </ul>
+                <p>The axis of economic freedoms has two poles:</p>
+                <ul>
+                    <li>
+                        <b>Right-wing economic views:</b>
+                        The main focus is on economic freedom, individual efforts, a free market, and minimal state
+                        intervention without a monopoly on economic control. In its extreme manifestation, it leads to
+                        the denial of the state's role in regulating the economy, known as anarcho-capitalism.
+                    </li>
+                    <li>
+                        <b>Left-wing economic views:</b>
+                        The state plays a central role as the main regulator and allocator of economic processes. It has
+                        the right and duty to intervene in the economy. In its extreme manifestation, it leads to a lack
+                        of economic freedom and a rigid planned state economy.
+                    </li>
+                </ul>
+                <p>Groups of people falling into different quadrants in the political coordinate space are commonly
+                    denoted as follows:
+                </p>
+                <ul>
+                    <li>Authoritarian Left (AL)</li>
+                    <li>Authoritarian Right (AR)</li>
+                    <li>Libertarian Left (LL)</li>
+                    <li>Libertarian Right (LR)</li>
+                </ul>
+                <p>On the graph, four quadrants are positioned in the political coordinate space, along with labels for
+                    certain ideologies within this space. The extreme, radical political orientations are highlighted in
+                    blue and green colors.
+                </p>
+                <h5 class="mt-4 mb-4">So, who are you? Left or right in economic views, a supporter of authoritarianism or libertarianism?</h5>
+            </en>
+        </description>
+        <economic>
+            <one>
+                <ru>
+                    <p>
+                        <b>Левые экономические взгляды.</b>
+                        Вы сторонник государственного планирования и регулирования экономики. При
+                        минимальных баллах, возможно, вплоть до максимально жесткого вмешательства государства в
+                        экономическую жизнь.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        <b>Left-wing economic views.</b>
+                        You support state planning and regulation of the economy. With minimal scores, it's possible to
+                        endorse even the most extensive state intervention in economic affairs.
+                    </p>
+                </en>
+            </one>
+            <two>
+                <ru>
+                    <p>
+                        <b>Центризм экономических взглядов с уклоном в левое крыло.</b>
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        <b>Centrism with a leaning towards left-wing economic views.</b>
+                    </p>
+                </en>
+            </two>
+            <three>
+                <ru>
+                    <p>
+                        <b>Центризм экономических взглядов с уклоном в правое крыло.</b>
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        <b>Centrism with a leaning towards right-wing economic views.</b>
+                    </p>
+                </en>
+            </three>
+            <four>
+                <ru>
+                    <p>
+                        <b>Правые экономические взгляды.</b>
+                        Вы сторонник экономической свободы и минимального вмешательства государства
+                        в экономику. При максимальных баллах – возможно, вплоть до полного обнуления роли государства в
+                        экономических
+                        процессах.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        <b>Right-wing economic views.</b>
+                        You support economic freedom and minimal state intervention in the economy. With maximum scores,
+                        it's possible to even advocate for the complete elimination of the state's role in economic
+                        processes.
+                    </p>
+                </en>
+            </four>
+        </economic>
+        <freedom>
+            <one>
+                <ru>
+                    <p>
+                        <b>Либертарная политическая ориентация.</b>
+                        Вы сторонник личных свобод и соблюдения прав человека, которые не
+                        должны ущемляться ради государственных интересов. Подчиняться власти и закону не всегда
+                        обязательно. При минимальных баллах по тесту, возможно, склоняетесь к анархизму, который видит в
+                        государстве лишь источник зла.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        <b>Libertarian political orientation.</b>
+                        You are a supporter of personal freedoms and the protection of human rights that should not be
+                        infringed upon for the sake of state interests. Obeying authority and the law is not always
+                        obligatory. With minimal scores on the test, you may lean towards anarchism, which views the
+                        state as a source of evil.
+                    </p>
+                </en>
+            </one>
+            <two>
+                <ru>
+                    <p><b>Центризм со склонностью поддерживать либертарные политические установки</b>.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        <b>Centrism with a tendency to support libertarian political principles.</b>
+                    </p>
+                </en>
+            </two>
+            <three>
+                <ru>
+                    <p><b>Центризм со склонностью поддерживать авторитарные политические установки</b>.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        <b>Centrism with a tendency to support authoritarian political principles.</b>
+                    </p>
+                </en>
+            </three>
+            <four>
+                <ru>
+                    <p>
+                        <b>Авторитарная политическая ориентация.</b>
+                        Вы сторонник преобладания государственных интересов в противовес личным свободам и правам
+                        человека. Власть и закон необходимы – они основа порядка. При максимальных баллах по тесту,
+                        возможно, склоняетесь к идеологии тотального контроля над личностью во всех ее проявлениях.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        <b>Authoritarian political orientation.</b>
+                        You are a supporter of the predominance of state interests over personal freedoms and human
+                        rights. Authority and law are necessary - they form the basis of order. With maximum scores on
+                        the test, you may lean towards an ideology of total control over individuals in all aspects.
+                    </p>
+                </en>
+            </four>
+        </freedom>
+    </texts>
+</config>

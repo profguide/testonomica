@@ -36,6 +36,7 @@ final readonly class ConfigParser
     {
     }
 
+    // todo cache
     public function parse(Crawler $crawler): Config
     {
         $scenarios = $this->parseScenarios($crawler);
@@ -65,9 +66,14 @@ final readonly class ConfigParser
             foreach ($node->childNodes as $childNode) {
                 if ($childNode->nodeType === XML_ELEMENT_NODE) {
                     $name = $childNode->nodeName;
-                    if ($name === $this->locale->getValue()) {
-                        $data = trim((new Crawler($childNode))->html());
-                        break; // needed language found, no reason for continuing loop
+                    // проверим имя тега, если оно является языковым, например en.
+                    if (in_array($name, Locale::LOCALES)) {
+                        // проверим имя тега является ли он текущей локалью
+                        if ($name === $this->locale->getValue()) {
+                            // дальше вглубь не идём, берём весь внутренний текст
+                            $data = trim((new Crawler($childNode))->html());
+                            break; // needed language found, no reason for continuing loop
+                        }
                     } else {
                         if ((new Crawler($childNode))->children()->count() === 0) {
                             throw new ConfigXmlParsingException('Every last node must be language like ru or en.');

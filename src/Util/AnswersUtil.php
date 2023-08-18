@@ -53,6 +53,15 @@ class AnswersUtil
         return $sum;
     }
 
+    public static function maxInGroup(QuestionsHolder $questionsHolder, string $groupName): int
+    {
+        $sum = 0;
+        foreach ($questionsHolder->group($groupName) as $question) {
+            $sum += $question->maxValue();
+        }
+        return $sum;
+    }
+
     /**
      * Counts the maximum sum of repeated values.
      * todo phpunit

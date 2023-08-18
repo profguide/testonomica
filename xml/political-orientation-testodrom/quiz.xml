@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--todo картинку в тест добавить с графиком!-->
+<quiz>
+    <items>
+        <item id="1" group="economic">
+            <name>
+                <ru>Максимальные цены на товары должно устанавливать государство</ru>
+                <en>The government should set maximum prices for goods.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="3">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="2" group="freedom">
+            <name>
+                <ru>Каждой стране необходим официальный государственный язык</ru>
+                <en>Every country needs an official state language.</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="3" group="economic">
+            <name>
+                <ru>Налоги должны быть добровольными, а не устанавливаться государством</ru>
+                <en>Taxes should be voluntary and not imposed by the state.</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="4" group="freedom">
+            <name>
+                <ru>Цензура в средствах массовой информации необходима для сохранения традиционных ценностей</ru>
+                <en>Censorship in mass media is necessary to preserve traditional values.</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="5" group="economic">
+            <name>
+                <ru>Богатства земных недр должны принадлежать государству, ими не должны распоряжаться частные компании</ru>
+                <en>Natural resources should belong to the state and not be controlled by private companies.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="3">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="6" group="freedom">
+            <name>
+                <ru>В государственной армии должны служить только добровольцы-контрактники</ru>
+                <en>Only volunteer contract soldiers should serve in the state's military.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="3">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="7" group="economic">
+            <name>
+                <ru>Богатые должны платить более высокие налоги, чем бедные</ru>
+                <en>The wealthy should pay higher taxes than the poor.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="3">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="8" group="freedom">
+            <name>
+                <ru>Необходимо законодательно запретить смену пола по личному желанию человека</ru>
+                <en>Changing one's gender by personal preference should be legally prohibited.</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="9" group="economic">
+            <name>
+                <ru>Государство должно обладать монополией на железные дороги</ru>
+                <en>The state should have a monopoly on railways.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="3">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="10" group="freedom">
+            <name>
+                <ru>Наилучший способ принимать важные для страны, города или региона решения – всеобщее прямое голосование на референдуме, как принято в Швейцарии</ru>
+                <en>The best way to make important decisions for the country, city, or region is through general direct voting in referendums, as practiced in Switzerland.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="3">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="11" group="economic">
+            <name>
+                <ru>Капитализм – наихудшая экономическая система, основанная на эксплуатации одних людей другими</ru>
+                <en>Capitalism is the worst economic system, based on the exploitation of one person by another.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="3">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="12" group="freedom">
+            <name>
+                <ru>Полицию должны заменить частные структуры по обеспечению безопасности граждан</ru>
+                <en>Police should be replaced by private security structures to ensure citizens' safety.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="3">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="13" group="economic">
+            <name>
+                <ru>Человек должен самостоятельно копить средства для жизни на пенсии</ru>
+                <en>Individuals should save for their retirement independently.</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="14" group="freedom">
+            <name>
+                <ru>Человек должен иметь законное право на эвтаназию (добровольный уход из жизни)</ru>
+                <en>Individuals should have a lawful right to euthanasia (voluntary end of life).</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="3">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="15" group="economic">
+            <name>
+                <ru>В нашей стране нужно отменить результаты приватизации, проведенной после распада СССР</ru>
+                <en>The results of privatization carried out after the dissolution of the USSR should be revoked in our country.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="3">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="16" group="freedom">
+            <name>
+                <ru>Права некоторых меньшинств в обществе следует ограничивать, потому что они несут угрозу традиционным ценностям (например, сторонники нетрадиционных религий, феминизма, пацифизма, узаконивания марихуаны, ЛГБТ-движения, иммигранты из стран третьего мира или иные «потенциально опасные» группы)</ru>
+                <en>The rights of certain minorities in society should be restricted because they pose a threat to traditional values (e.g., supporters of non-traditional religions, feminism, pacifism, marijuana legalization, LGBT movement, immigrants from third-world countries, or other "potentially dangerous" groups).</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="17" group="economic">
+            <name>
+                <ru>Государство обязано обеспечивать всех бесплатным жильем</ru>
+                <en>The state must provide everyone with free housing.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="3">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="18" group="freedom">
+            <name>
+                <ru>В вузах и колледжах должны быть квоты для абитуриентов из национальных меньшинств</ru>
+                <en>Quotas for applicants from national minorities should be implemented in universities and colleges.</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="19" group="economic">
+            <name>
+                <ru>Безработный, который отказался от предложенного рабочего места, должен сразу лишаться пособия по безработице</ru>
+                <en>An unemployed person who declines a job offer should immediately lose unemployment benefits.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="3">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="20" group="freedom">
+            <name>
+                <ru>Конституция должна определять государственную религию страны</ru>
+                <en>The constitution should define the state religion of the country.</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее да</ru>
+                    <en>Somewhat yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>Somewhat no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>

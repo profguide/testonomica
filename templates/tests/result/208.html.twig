@@ -1,0 +1,191 @@
+<style>
+    #graph-wrapper {
+        position: relative;
+        width: 600px;
+        height: 600px;
+    }
+
+    @media (max-width: 600px) {
+        #graph-wrapper {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    #graph-text-radical-example {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: -1px;
+        line-height: 1;
+        opacity: 0.6;
+        border: 1px solid #969696;
+        padding: 15px;
+    }
+
+    #graph-text-economic-left {
+        color: #616161;
+        position: absolute;
+        top: 40%;
+        left: 20px;
+        transform: translate(0, -50%);
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        line-height: 1;
+    }
+
+    #graph-text-economic-right {
+        color: #616161;
+        position: absolute;
+        top: 40%;
+        right: 20px;
+        transform: translate(0, -50%);
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        line-height: 1;
+        text-align: right;
+    }
+
+    #graph-text-authority {
+        color: #616161;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        line-height: 1;
+    }
+
+    #graph-text-liberty {
+        color: #616161;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: -1px;
+        line-height: 1;
+    }
+</style>
+
+<section id="graph-wrapper" class="mb-4">
+    <canvas id="result-canvas" style="border: 1px solid #adadad"></canvas>
+    <div id="graph-text-radical-example">{{ config.graph.radicalists|raw }}</div>
+    <div id="graph-text-economic-left">{{ config.graph.economicLeft|raw }}</div>
+    <div id="graph-text-economic-right">{{ config.graph.economicRight|raw }}</div>
+    <div id="graph-text-authority">{{ config.graph.authority|raw }}</div>
+    <div id="graph-text-liberty">{{ config.graph.liberty|raw }}</div>
+</section>
+
+{{ config.description|raw }}
+
+{% if (GROUPS.economic.SUM <= 5) %}
+    {{ config.economic.one|raw }}
+{% elseif (GROUPS.economic.SUM <= 15) %}
+    {{ config.economic.two|raw }}
+{% elseif (GROUPS.economic.SUM <= 25) %}
+    {{ config.economic.three|raw }}
+{% else %}
+    {{ config.economic.four|raw }}
+{% endif %}
+
+{% if (GROUPS.freedom.SUM <= 5) %}
+    {{ config.freedom.one|raw }}
+{% elseif (GROUPS.freedom.SUM <= 15) %}
+    {{ config.freedom.two|raw }}
+{% elseif (GROUPS.freedom.SUM <= 25) %}
+    {{ config.freedom.three|raw }}
+{% else %}
+    {{ config.freedom.four|raw }}
+{% endif %}
+
+<script>
+    // draw line with arrow
+    function axis(context, fromX, fromY, toX, toY) {
+        const headLength = 10; // length of head in pixels
+        const dx = toX - fromX;
+        const dy = toY - fromY;
+        const angle = Math.atan2(dy, dx);
+        context.moveTo(fromX, fromY);
+        context.lineTo(toX, toY);
+        context.lineTo(toX - headLength * Math.cos(angle - Math.PI / 6), toY - headLength * Math.sin(angle - Math.PI / 6));
+        context.moveTo(toX, toY);
+        context.lineTo(toX - headLength * Math.cos(angle + Math.PI / 6), toY - headLength * Math.sin(angle + Math.PI / 6));
+    }
+
+    const draw = function () {
+        const canvas = document.getElementById("result-canvas");
+
+        const ctx = canvas.getContext("2d");
+
+        // top left cvadrant
+        ctx.fillStyle = '#eaf0dc';
+        ctx.fillRect(0, 0, canvas.width / 2, canvas.height / 2);
+
+        // top right cvadrant
+        ctx.fillStyle = '#d5e3b9';
+        ctx.fillRect(canvas.width / 2, 0, canvas.width, canvas.height / 2,);
+
+        // bottom left cvadrant
+        ctx.fillStyle = '#b7cce4';
+        ctx.fillRect(0, canvas.height / 2, canvas.width / 2, canvas.height);
+
+        // bottom right cvadrant
+        ctx.fillStyle = '#dbe4f1';
+        ctx.fillRect(canvas.width / 2, canvas.height / 2, canvas.width / 2, canvas.height);
+
+        ctx.globalAlpha = 1;
+
+        // axes
+        axis(ctx, 0, canvas.height / 2, canvas.width, canvas.height / 2);
+        axis(ctx, canvas.width, canvas.height / 2, 0, canvas.height / 2);
+        axis(ctx, canvas.width / 2, 0, canvas.width / 2, canvas.height);
+        axis(ctx, canvas.width / 2, canvas.height, canvas.width / 2, 0);
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        // temperate zone
+        ctx.beginPath();
+        ctx.setLineDash([5]);
+        ctx.strokeStyle = '#646464';
+        // ctx.strokeRect(canvas.width / 4, canvas.height / 4, canvas.width / 2, canvas.height / 2);
+        ctx.arc(canvas.width / 2, canvas.height / 2, canvas.width / 4, 0, 2 * Math.PI, false);
+        ctx.stroke();
+
+        ctx.setLineDash([0]);
+
+        // draw user dot
+        const userDotWidth = parseFloat({{ GROUPS.economic.SCALE / 100 }}) * canvas.width; // from left
+        const userDotHeight = canvas.height - parseFloat({{ GROUPS.freedom.SCALE / 100 }}) * canvas.height; // from bottom
+        ctx.beginPath();
+        ctx.strokeStyle = '#727272';
+        ctx.fillStyle = '#ffce00';
+        // ctx.arc(userDotWidth, userDotHeight, 10, 0, 2 * Math.PI, false);
+        ctx.arc(userDotWidth, userDotHeight, 7, 0, 2 * Math.PI, false);
+        ctx.fill();
+        ctx.lineWidth = 1;
+        ctx.stroke();
+    }
+
+    window.addEventListener('load', function () {
+        const canvas = document.getElementById('result-canvas');
+        const windowWidth = window.innerWidth;
+        if (windowWidth > 600) {
+            canvas.width = 600;
+            canvas.height = 600;
+        } else {
+            canvas.width = windowWidth - 30;
+            canvas.height = windowWidth - 30;
+        }
+        draw();
+    });
+</script>

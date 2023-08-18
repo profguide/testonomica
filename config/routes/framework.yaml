@@ -1,4 +1,11 @@
+controllers:
+  resource: '../../src/Controller/'
+  type: annotation
+  prefix:
+    ru: '' # don't prefix URLs for Russian, the default locale
+    en: '/en'
+
 when@dev:
-    _errors:
-        resource: '@FrameworkBundle/Resources/config/routing/errors.xml'
-        prefix: /_error
+  _errors:
+    resource: '@FrameworkBundle/Resources/config/routing/errors.xml'
+    prefix: /_error

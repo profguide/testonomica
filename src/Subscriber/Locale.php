@@ -9,6 +9,10 @@ use Symfony\Component\HttpFoundation\RequestStack;
 // todo move to another namespace
 class Locale
 {
+    const LOCALES = [
+        'ru', 'en'
+    ];
+
     private string $value;
 
     public function __construct(RequestStack $requestStack)

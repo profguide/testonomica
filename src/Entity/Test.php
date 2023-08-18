@@ -251,9 +251,14 @@ class Test
         $this->descriptionEn = $descriptionEn;
     }
 
-    public function getAnnotation(): ?string
+    public function getAnnotation(?string $locale = 'ru'): ?string
     {
-        return $this->annotation;
+        if ($locale === 'ru') {
+            return $this->annotation;
+        } elseif ($locale === 'en') {
+            return $this->annotationEn ?? $this->annotation;
+        }
+        throw new \DomainException("Unsupported locale $locale.");
     }
 
     public function setAnnotation($annotation): void

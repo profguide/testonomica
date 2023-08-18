@@ -48,12 +48,25 @@ class AutoCalculator extends AbstractCalculator
         // подходит для тестов, где есть "неправильные" или "ложные" значения, как в тесте на эмпатические способности
         $nonNegativeValuesSum = AnswersUtil::sumValuesInDoubleMap($repeatedNonNegativeValuesPercentageWithValues);
 
+        // Groups
+        $groups = [];
+        $groupsSums = AnswersUtil::sumByGroups($this->questionsHolder, $this->answersHolder);
+        foreach ($groupsSums as $groupName => $groupSum) {
+            $groupMaxSum = AnswersUtil::maxInGroup($this->questionsHolder, $groupName);
+            $groups[$groupName] = [
+                'SUM' => $groupSum,
+                'SCALE' => round($groupMaxSum > 0 ? $groupSum * 100 / $groupMaxSum : 0), // процент от максимума внутри группы
+                'SCALE_OF_ALL' => 'TODO', // процент от всех
+            ];
+        }
+
         return [
             'SUM' => $sum,
             'SCALE' => $percentage,
             'VALUES' => $integerValuesPercentageWithValues,
             'REPEATS' => $stringValuesPercentageWithValues,
             'NON_NEGATIVE_ANSWER_VALUES_SUM' => $nonNegativeValuesSum,
+            'GROUPS' => $groups,
         ];
     }
 }

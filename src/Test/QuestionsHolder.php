@@ -27,7 +27,10 @@ class QuestionsHolder
         $groups = [];
         /**@var Question $question */
         foreach ($this->questions as $question) {
-            $groups[$question->getVariety()][] = $question;
+            $name = $question->getVariety();
+            if ($name) {
+                $groups[$name][] = $question;
+            }
         }
         $this->byGroups = $groups;
         return $this->byGroups;

@@ -1,24 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ test.name }}{% endblock %}
+{% block title %}{{ test.name(app.request.locale) }}{% endblock %}
 
 {% block body %}
     <div class="container-xl">
-        <h1>{{ test.name }}</h1>
+        <h1>{{ test.name(app.request.locale) }}</h1>
 
-        <p class="lead">Ваши результаты</p>
+        <p class="lead">{% trans %}Ваши результаты{% endtrans %}</p>
 
         {{ result|raw }}
 
         <div class="test__result_actions">
             <div class="mb-4">
-                <div style="font-weight: bold">Постоянная ссылка на результат</div>
-                <div><a href="{{ path('tests.result', {'uuid': uuid}) }}" target="_blank">Постоянная ссылка на результат</a></div>
+                <div><a href="{{ path('tests.result', {'uuid': uuid}) }}" target="_blank">{% trans %}Постоянная ссылка на результат{% endtrans %}</a></div>
             </div>
             <div class="card-group">
                 <div class="card">
                     <div class="card-body">
-                        <a href="{{ path('tests.view', {'slug': test.slug}) }}" class="btn btn-light">Пройти тест ещё раз</a>
+                        <a href="{{ path('tests.view', {'slug': test.slug}) }}" class="btn btn-light">{% trans %}Пройти тест ещё раз{% endtrans %}</a>
                     </div>
                 </div>
             </div>

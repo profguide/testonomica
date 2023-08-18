@@ -5,6 +5,7 @@ import ProgressFirebaseStorage from "testonomica_api/src/service/storage/Progres
 import 'testonomica_api/src/style.scss';
 import {NO_MORE_QUESTIONS_EVENT} from "../../testonomica_api/src/events";
 import Api from "./js/api";
+import {localeUrl} from "./js/util";
 
 const tag = document.getElementById('testonomica_app');
 const config = parseConfigFromTag(tag);
@@ -28,7 +29,7 @@ window.testonomica.addEventListener(NO_MORE_QUESTIONS_EVENT, function () {
         .then(progress => api.saveProgress(progress))
         .then(key => {
             storage.clear();
-            window.location.href = `/tests/result/${key}/`;
+            window.location.href = localeUrl(`/tests/result/${key}/`);
         });
 });
 if (config.getInit() === INIT_AUTO) {
