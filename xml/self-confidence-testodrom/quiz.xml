@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>
+                <ru>У меня энергичная походка</ru>
+                <en>I have an energetic gait</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="2">
+            <name>
+                <ru>Если я берусь за дело, никакие трудности меня не остановят</ru>
+                <en>When I take on a task, no difficulties can stop me</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="3">
+            <name>
+                <ru>Я прислушиваюсь к советам, но поступаю так, как я считаю нужным</ru>
+                <en>I listen to advice, but I do what I consider necessary</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>
+                <ru>Я легко учусь всему, что требует от меня жизнь</ru>
+                <en>I easily learn everything that life requires of me</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="5">
+            <name>
+                <ru>Я вызываю у людей симпатию</ru>
+                <en>I make a favorable impression on people</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="6">
+            <name>
+                <ru>Я быстро принимаю решения</ru>
+                <en>I make decisions quickly</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>
+                <ru>Я чувствую себя комфортно в обществе даже незнакомых людей</ru>
+                <en>I feel comfortable in the company of even unfamiliar people</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>
+                <ru>Я с удовольствием могу пошутить над собой</ru>
+                <en>I can easily make jokes about myself</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>
+                <ru>Я не теряюсь ни в какой ситуации</ru>
+                <en>I don't get lost in any situation</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="10">
+            <name>
+                <ru>Я спокойно переношу критику</ru>
+                <en>I handle criticism calmly</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="11">
+            <name>
+                <ru>Я умею использовать свои достоинства «на полную катушку»</ru>
+                <en>I know how to fully utilize my strengths</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>
+                <ru>Ко мне часто обращаются на улице с просьбой показать дорогу</ru>
+                <en>People often ask me for directions on the street</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>
+                <ru>Я редко ошибаюсь, принимая важные решения</ru>
+                <en>I rarely make mistakes when making important decisions</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="14">
+            <name>
+                <ru>Я никогда не останусь на обочине жизни</ru>
+                <en>I will never stay on the sidelines of life</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>
+                <ru>Я могу найти подход практически к любому человеку</ru>
+                <en>I can find an approach to almost anyone</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>
+                <ru>Мой интеллект выше среднего</ru>
+                <en>My intelligence is above average</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>
+                <ru>На групповых фотографиях мое лицо обычно – в центре снимка</ru>
+                <en>In group photos, my face is usually in the center</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="18">
+            <name>
+                <ru>У меня часто спрашивают совета по самым разным поводам</ru>
+                <en>People often ask me for advice on various occasions</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="19">
+            <name>
+                <ru>Мне несложно принести извинения другому человеку</ru>
+                <en>It's not difficult for me to apologize to another person</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="20">
+            <name>
+                <ru>Благодаря моим способностям у меня всегда будет достойное место в жизни</ru>
+                <en>Thanks to my abilities, I will always have a worthy place in life</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Rather yes</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>Rather no</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>

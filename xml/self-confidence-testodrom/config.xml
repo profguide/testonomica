@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <!-- Минимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" label-ru="Уверенность в себе" label-en="Self-confidence"/>
+            <conditions>
+                <condition var="SUM" operator="меньше_или_равно" value="30"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>
+                        <h3>Крайне низкий уровень уверенности в себе</h3>
+                        <p>Вы недостаточно уверены в себе, своих силах, знаниях, способностях, умении поддерживать
+                            эффективные контакты с окружающими. Вас иногда или даже постоянно охватывают непреодолимые
+                            сомнения в том, что вы справитесь с задачами, которые предъявляет вам жизнь. Вы зачастую
+                            боитесь принимать решения и действовать. Неуверенность в себе мешает вам быть успешным
+                            человеком и достигать намеченных целей.
+                        </p>
+                        <h4>Рекомендации</h4>
+                        <p>Чтобы понять причину ваших сомнений в себе, рекомендуем обратиться к
+                            специалисту-психологу за консультацией. Вы сможете лучше понять себя и определить способы,
+                            которые помогут обретению уверенности в себе.
+                        </p>
+                    </p>
+                </ru>
+                <en>
+                    <h3>Extremely Low Level of Self-Confidence</h3>
+                    <p>You lack sufficient self-confidence in yourself, your strengths, knowledge, abilities, and your
+                        capacity to maintain effective relationships with others. You are sometimes or even constantly
+                        overcome by overwhelming doubts about your ability to handle the challenges that life presents
+                        to you. You often fear making decisions and taking action. Your lack of self-confidence hinders
+                        you from being a successful individual and achieving your goals.
+                    </p>
+                    <h4>Recommendations</h4>
+                    <p>To understand the reasons behind your self-doubt, we recommend seeking guidance from a
+                        psychologist. This will help you better understand yourself and identify methods that can assist
+                        you in building self-confidence.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+        <scenario>
+            <scale percentVar="SCALE" label-ru="Уверенность в себе" label-en="Self-confidence"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="30"/>
+                <condition var="SUM" operator="меньше_или_равно" value="40"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>
+                        <h3>Пониженный уровень уверенности в себе</h3>
+                        <p>Вы недостаточно уверены в себе, своих силах, знаниях, способностях, умении поддерживать
+                            эффективные контакты с окружающими. Вас иногда или даже постоянно охватывают непреодолимые
+                            сомнения в том, что вы справитесь с задачами, которые предъявляет вам жизнь. Вы зачастую
+                            боитесь принимать решения и действовать. Неуверенность в себе мешает вам быть успешным
+                            человеком и достигать намеченных целей.
+                        </p>
+                        <h4>Рекомендации</h4>
+                        <p>Чтобы понять причину ваших сомнений в себе, рекомендуем обратиться к
+                            специалисту-психологу за консультацией. Вы сможете лучше понять себя и определить способы,
+                            которые помогут обретению уверенности в себе.
+                        </p>
+                    </p>
+                </ru>
+                <en>
+                    <h3>Low Level of Self-Confidence</h3>
+                    <p>You lack sufficient self-confidence in yourself, your strengths, knowledge, abilities, and your
+                        capacity to maintain effective relationships with others. You are sometimes or even constantly
+                        overcome by overwhelming doubts about your ability to handle the challenges that life presents
+                        to you. You often fear making decisions and taking action. Your lack of self-confidence hinders
+                        you from being a successful individual and achieving your goals.
+                    </p>
+                    <h4>Recommendations</h4>
+                    <p>To understand the reasons behind your self-doubt, we recommend seeking guidance from a
+                        psychologist. This will help you better understand yourself and identify methods that can assist
+                        you in building self-confidence.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Средний уровень -->
+        <scenario>
+            <scale percentVar="SCALE" label-ru="Уверенность в себе" label-en="Self-confidence"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="40"/>
+                <condition var="SUM" operator="меньше_или_равно" value="50"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>Средний уровень уверенности в себе</h3>
+                    <p>
+                        Вы достаточно уверенный в себе человек, цените свои достоинства и умеете ими пользоваться,
+                        поддерживаете эффективные контакты с окружающими, полагаетесь на свое умение разрешать проблемы
+                        и понимаете, где границы ваших возможностей достичь успеха. Вы спокойно движетесь к своим целям,
+                        полагая, что у вас для этого достаточно сил и способностей.
+                    </p>
+                    <h3>Рекомендации</h3>
+                    <p>Все хорошо. Продолжайте верить в себя, цените себя, хвалите себя и развивайте свои
+                        сильные стороны. Но будьте внимательны, старайтесь не утратить такой ценный ресурс, как
+                        адекватная вера в себя.
+                    </p>
+                </ru>
+                <en>
+                    <h3>Moderate Level of Self-Confidence</h3>
+                    <p>You are a fairly self-confident individual who values your strengths and knows how to use them.
+                        You maintain effective relationships with others and rely on your problem-solving abilities. You
+                        understand the boundaries of your capabilities to achieve success. You move steadily towards
+                        your goals, believing that you have the strength and abilities required.
+                    </p>
+                    <h4>Recommendations</h4>
+                    <p>Everything is going well. Continue to believe in yourself, value yourself, praise yourself, and
+                        develop your strengths. However, be attentive and strive not to lose such a valuable resource as
+                        reasonable self-belief.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+        <scenario>
+            <scale percentVar="SCALE" label-ru="Уверенность в себе" label-en="Self-confidence"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="50"/>
+                <condition var="SUM" operator="меньше_или_равно" value="60"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>Повышенный уровень уверенности в себе</h3>
+                    <p>
+                        Вы достаточно уверенный в себе человек, цените свои достоинства и умеете ими пользоваться,
+                        поддерживаете эффективные контакты с окружающими, полагаетесь на свое умение разрешать проблемы
+                        и понимаете, где границы ваших возможностей достичь успеха. Вы спокойно движетесь к своим целям,
+                        полагая, что у вас для этого достаточно сил и способностей.
+                    </p>
+                    <h3>Рекомендации</h3>
+                    <p>Все хорошо. Продолжайте верить в себя, цените себя, хвалите себя и развивайте свои
+                        сильные стороны. Но будьте внимательны, старайтесь не утратить такой ценный ресурс, как
+                        адекватная вера в себя.
+                    </p>
+                </ru>
+                <en>
+                    <h3>Elevated Level of Self-Confidence</h3>
+                    <p>You are a fairly self-confident individual who values your strengths and knows how to use them.
+                        You maintain effective relationships with others and rely on your problem-solving abilities. You
+                        understand the boundaries of your capabilities to achieve success. You move steadily towards
+                        your goals, believing that you have the strength and abilities required.
+                    </p>
+                    <h4>Recommendations</h4>
+                    <p>Everything is going well. Continue to believe in yourself, value yourself, praise yourself, and
+                        develop your strengths. However, be attentive and strive not to lose such a valuable resource as
+                        reasonable self-belief.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+        <scenario>
+            <scale percentVar="SCALE" label-ru="Уверенность в себе" label-en="Self-confidence"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="60"/>
+                <condition var="SUM" operator="меньше_или_равно" value="70"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>Высокий уровень уверенности в себе</h3>
+                    <p>
+                        Вы достаточно уверенный в себе человек, цените свои достоинства и умеете ими пользоваться,
+                        поддерживаете эффективные контакты с окружающими, полагаетесь на свое умение разрешать проблемы
+                        и понимаете, где границы ваших возможностей достичь успеха. Вы спокойно движетесь к своим целям,
+                        полагая, что у вас для этого достаточно сил и способностей.
+                    </p>
+                    <h3>Рекомендации</h3>
+                    <p>Все хорошо. Продолжайте верить в себя, цените себя, хвалите себя и развивайте свои
+                        сильные стороны. Но будьте внимательны, старайтесь не утратить такой ценный ресурс, как
+                        адекватная вера в себя.
+                    </p>
+                </ru>
+                <en>
+                    <h3>High Level of Self-Confidence</h3>
+                    <p>You are a fairly self-confident individual who values your strengths and knows how to use them.
+                        You maintain effective relationships with others and rely on your problem-solving abilities. You
+                        understand the boundaries of your capabilities to achieve success. You move steadily towards
+                        your goals, believing that you have the strength and abilities required.
+                    </p>
+                    <h4>Recommendations</h4>
+                    <p>Everything is going well. Continue to believe in yourself, value yourself, praise yourself, and
+                        develop your strengths. However, be attentive and strive not to lose such a valuable resource as
+                        reasonable self-belief.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Максимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" label-ru="Уверенность в себе" label-en="Self-confidence"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="70"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>Крайне высокий уровень уверенности в себе</h3>
+                    <p>
+                        Ваша уверенность в себе граничит с самоуверенностью. Вы то и дело переоцениваете свои силы и
+                        возможности, считаете свои достоинства непревзойденными, а решения непогрешимыми. Чрезмерно
+                        высокая самооценка может мешать принятию правильных решений и нарушать ваши отношения с
+                        окружающими.
+                    </p>
+                    <h3>Рекомендации</h3>
+                    <p>Возможно, ваше представление о себе не вполне адекватно. Рекомендуем обратиться к
+                        специалисту-психологу, который поможет более точно понять, является ли ваша уверенность в себе
+                        чрезмерной и нуждается ли в корректировке.
+                    </p>
+                </ru>
+                <en>
+                    <h3>Extremely High Level of Self-Confidence</h3>
+                    <p>Your self-confidence borders on overconfidence. You often overestimate your abilities and
+                        possibilities, considering your strengths unsurpassed and your decisions infallible. Excessive
+                        self-esteem can hinder making the right decisions and disrupt your relationships with others.
+                    </p>
+                    <h3>Recommendations</h3>
+                    <p>Perhaps your self-perception is not entirely accurate. We recommend seeking advice from a
+                        professional psychologist who can help you better understand whether your self-confidence is
+                        excessive and in need of adjustment.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>
