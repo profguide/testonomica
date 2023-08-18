@@ -3,6 +3,13 @@
 {% block title %}{{ test.name }}{% endblock %}
 
 {% block body %}
+    {% if (app.user and 'ROLE_ADMIN' in app.user.roles) %}
+        <div style="position: fixed; top: 3rem; right: 60px;">
+            <div class="container">
+                <a href="{{ path('admin.tests.edit', {id: test.id}) }}" class="btn btn-sm btn-secondary">Изменить</a>
+            </div>
+        </div>
+    {% endif %}
     {% block stylesheets %}
         {{ parent() }}
         {{ encore_entry_link_tags('test') }}
@@ -34,7 +41,7 @@
     </style>
     <div id="testonomica_app"
          data-test="{{ test.id }}"
-{#         data-token="SOME_PUBLIC_TOKEN" #}
+            {#         data-token="SOME_PUBLIC_TOKEN" #}
          data-init="auto"
          data-host="{{ host }}">
     </div>
