@@ -37,7 +37,7 @@ class TestType extends AbstractType
             ->add('annotation')
             ->add('annotationEn')
             ->add('duration', IntegerType::class, [
-                'attr' => array('style' => 'width: 50px'),
+                'attr' => array('style' => 'width: 70px'),
                 'label' => 'Продолжительность в минутах'
             ])
             ->add('active', null, [

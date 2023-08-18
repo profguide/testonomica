@@ -19,7 +19,7 @@ final readonly class TestSearchForm
 
     public function search(Request $request): PaginationInterface
     {
-        $query = $this->em->createQuery("SELECT t FROM App:Test t WHERE t.inList = 1");
+        $query = $this->em->createQuery("SELECT t FROM App:Test t WHERE t.inList = 1 ORDER BY t.id DESC");
 
         return $this->paginator->paginate(
             $query, /* query NOT result */
