@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>
+                <ru>Какое у вас обычно настроение, когда идете на работу?</ru>
+                <en>What is your usual mood when you go to work?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Приподнятое</ru>
+                    <en>Upbeat</en>
+                </option>
+                <option value="2">
+                    <ru>Ровное, обычное</ru>
+                    <en>Neutral, normal</en>
+                </option>
+                <option value="3">
+                    <ru>Подавленное</ru>
+                    <en>Depressed</en>
+                </option>
+            </options>
+        </item>
+        <item id="2">
+            <name>
+                <ru>Как вы относитесь к коллегам, с которыми постоянно пересекаетесь по работе?</ru>
+                <en>How do you feel about colleagues whom you constantly interact with at work?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Мы одна команда, мне приятно с ними общаться</ru>
+                    <en>We are one team, I enjoy communicating with them</en>
+                </option>
+                <option value="2">
+                    <ru>Почти не обращаю на них внимания</ru>
+                    <en>I hardly pay attention to them</en>
+                </option>
+                <option value="3">
+                    <ru>Вынужденно общаюсь, они меня раздражают</ru>
+                    <en>I interact with them reluctantly, they annoy me</en>
+                </option>
+            </options>
+        </item>
+        <item id="3">
+            <name>
+                <ru>Вы следите за новшествами в своей профессии?</ru>
+                <en>Do you keep up with innovations in your profession?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Меня это мало интересует</ru>
+                    <en>I'm not very interested in that</en>
+                </option>
+                <option value="2">
+                    <ru>Время от времени</ru>
+                    <en>From time to time</en>
+                </option>
+                <option value="1">
+                    <ru>Да, постоянно</ru>
+                    <en>Yes, constantly</en>
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>
+                <ru>Вам удается за выходные справиться с усталостью от работы?</ru>
+                <en>Are you able to recover from work-related fatigue over the weekends?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Нет, усталость не проходит</ru>
+                    <en>No, the fatigue doesn't go away</en>
+                </option>
+                <option value="2">
+                    <ru>Обычно удается</ru>
+                    <en>It usually works</en>
+                </option>
+                <option value="1">
+                    <ru>Всегда удается, усталость уходит</ru>
+                    <en>It always works, the fatigue goes away</en>
+                </option>
+            </options>
+        </item>
+        <item id="5">
+            <name>
+                <ru>Вам поручают на работе найти решение неожиданно возникшей проблемы?</ru>
+                <en>Are you often assigned to find a solution to unexpectedly arisen problems at work?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да, часто</ru>
+                    <en>Yes, often</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="3">
+                    <ru>Нет, это делают другие</ru>
+                    <en>No, others handle it</en>
+                </option>
+            </options>
+        </item>
+        <item id="6">
+            <name>
+                <ru>Вы сильно переживаете, если случаются неудачи в работе?</ru>
+                <en>Do you feel deeply upset when there are failures at work?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="2">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="3">
+                    <ru>Мне все равно</ru>
+                    <en>I don't really care</en>
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>
+                <ru>Вы получаете удовлетворение от своей работы?</ru>
+                <en>Do you feel satisfaction from your work?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Нет, моя работа мне безумно надоела</ru>
+                    <en>No, I'm incredibly bored with my job</en>
+                </option>
+                <option value="2">
+                    <ru>Пожалуй, да</ru>
+                    <en>Perhaps, yes</en>
+                </option>
+                <option value="1">
+                    <ru>Да, я люблю свою работу</ru>
+                    <en>Yes, I love my job</en>
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>
+                <ru>Вы осваиваете новые профессиональные навыки?</ru>
+                <en>Are you acquiring new professional skills?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да, постоянно</ru>
+                    <en>Yes, constantly</en>
+                </option>
+                <option value="2">
+                    <ru>Да, но только если без этого не обойтись</ru>
+                    <en>Yes, but only if necessary</en>
+                </option>
+                <option value="3">
+                    <ru>Стараюсь не тратить на это время</ru>
+                    <en>I try not to waste time on it</en>
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>
+                <ru>Вы занимались бы по-прежнему своей нынешней работой, если бы вдруг стали миллионером?</ru>
+                <en>Would you continue with your current job if you suddenly became a millionaire?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да, обязательно</ru>
+                    <en>Yes, definitely</en>
+                </option>
+                <option value="2">
+                    <ru>Точно не могу сказать</ru>
+                    <en>I can't say for sure</en>
+                </option>
+                <option value="3">
+                    <ru>Нет, не вижу в этом смысла</ru>
+                    <en>No, I don't see the point</en>
+                </option>
+            </options>
+        </item>
+        <item id="10">
+            <name>
+                <ru>В конце отпуска вы чувствуете, что соскучились по своей работе?</ru>
+                <en>At the end of a vacation, do you feel like you've missed your work?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="2">
+                    <ru>Когда как</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="3">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="11">
+            <name>
+                <ru>Вам хочется кардинально поменять профессию?</ru>
+                <en>Do you want to radically change your profession?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Да, очень</ru>
+                    <en>Yes, very much</en>
+                </option>
+                <option value="2">
+                    <ru>Изредка бывает</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="1">
+                    <ru>Нет, никогда</ru>
+                    <en>No, never</en>
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>
+                <ru>Какое состояние для вас является обычным на рабочем месте?</ru>
+                <en>What state is typical for you at the workplace?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Бодрость, желание как можно больше успеть</ru>
+                    <en>Vigor, desire to accomplish as much as possible</en>
+                </option>
+                <option value="2">
+                    <ru>Ровное рабочее настроение</ru>
+                    <en>Stable work mood</en>
+                </option>
+                <option value="3">
+                    <ru>Скука, усталость</ru>
+                    <en>Boredom, fatigue</en>
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>
+                <ru>Вы хотели бы, чтобы ваши дети получили такую же профессию, как ваша?</ru>
+                <en>Would you like your children to have the same profession as yours?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="2">
+                    <ru>Не знаю</ru>
+                    <en>I don't know</en>
+                </option>
+                <option value="3">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="14">
+            <name>
+                <ru>Вам хочется бросить свою работу?</ru>
+                <en>Do you want to quit your job?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Нет, никогда</ru>
+                    <en>No, never</en>
+                </option>
+                <option value="2">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="3">
+                    <ru>Да, каждодневно</ru>
+                    <en>Yes, every day</en>
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>
+                <ru>Как проходит для вас рабочий день?</ru>
+                <en>How does your workday go?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Мне кажется, он никогда не закончится</ru>
+                    <en>It feels like it will never end</en>
+                </option>
+                <option value="2">
+                    <ru>Идет планомерно до конца рабочего времени</ru>
+                    <en>It goes according to plan until the end of the working hours</en>
+                </option>
+                <option value="1">
+                    <ru>Время пролетает быстро, незаметно</ru>
+                    <en>Time flies by quickly, unnoticed</en>
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>
+                <ru>Как вы оцениваете свои профессиональные перспективы?</ru>
+                <en>How do you assess your professional prospects?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Не вижу поводов для оптимизма</ru>
+                    <en>I don't see reasons for optimism</en>
+                </option>
+                <option value="2">
+                    <ru>Не заглядываю далеко, живу сегодняшним днем</ru>
+                    <en>I don't look far ahead, I live for today</en>
+                </option>
+                <option value="1">
+                    <ru>Вижу интересные возможности в будущем</ru>
+                    <en>I see interesting opportunities in the future</en>
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>
+                <ru>Вы по собственной инициативе делитесь с младшими коллегами своим профессиональным опытом?</ru>
+                <en>Do you voluntarily share your professional experience with younger colleagues?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Не трачу на это время</ru>
+                    <en>I don't bother with it</en>
+                </option>
+                <option value="2">
+                    <ru>Иногда</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="1">
+                    <ru>Да, как правило</ru>
+                    <en>Yes, usually</en>
+                </option>
+            </options>
+        </item>
+        <item id="18">
+            <name>
+                <ru>После рабочего дня вы избегаете разговоров о работе?</ru>
+                <en>Do you avoid talking about work after the workday?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Стараюсь не говорить о работе</ru>
+                    <en>I try not to talk about work</en>
+                </option>
+                <option value="2">
+                    <ru>Не уклоняюсь от разговоров о работе</ru>
+                    <en>I don't shy away from work-related conversations</en>
+                </option>
+                <option value="1">
+                    <ru>С удовольствием говорю о работе</ru>
+                    <en>I enjoy talking about work</en>
+                </option>
+            </options>
+        </item>
+        <item id="19">
+            <name>
+                <ru>Вы стараетесь быть в курсе перспективных планов развития вашего предприятия, вашей организации?</ru>
+                <en>Do you make an effort to stay informed about the prospective development plans of your company or
+                    organization?
+                </en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Не вижу в этом смысла</ru>
+                    <en>I don't see the point</en>
+                </option>
+                <option value="2">
+                    <ru>Специально за этим не слежу</ru>
+                    <en>I don't actively follow them</en>
+                </option>
+                <option value="1">
+                    <ru>Да, это важно для меня</ru>
+                    <en>Yes, it's important to me</en>
+                </option>
+            </options>
+        </item>
+        <item id="20">
+            <name>
+                <ru>Как вы воспринимаете свою профессиональную деятельность?</ru>
+                <en>How do you perceive your professional activity?</en>
+            </name>
+            <options>
+                <option value="3">
+                    <ru>Бегаю по кругу, как белка в колесе</ru>
+                    <en>I feel like I'm running in circles, like a squirrel on a wheel</en>
+                </option>
+                <option value="2">
+                    <ru>Двигаюсь вперед по расписанию, как исправный поезд</ru>
+                    <en>I'm moving forward according to a schedule, like a well-functioning train</en>
+                </option>
+                <option value="1">
+                    <ru>Лечу на горных лыжах, захватывает дух</ru>
+                    <en>I'm skiing down a mountain, it takes my breath away</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>

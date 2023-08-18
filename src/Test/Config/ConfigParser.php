@@ -166,7 +166,11 @@ final readonly class ConfigParser
             return null;
         }
 
-        $label = $scaleNode->attr('label');
+        if ($this->locale->getValue() === 'en') {
+            $label = $scaleNode->attr('label-en');
+        } else {
+            $label = $scaleNode->attr('label-ru');
+        }
         $percentVar = $scaleNode->attr('percentVar');
         $showVar = $scaleNode->attr('showVar');
         $maxVal = (int)$scaleNode->attr('maxVal');

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <!-- Минимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" label-ru="Уровень выгорания" label-en="Level of burnout"/>
+            <conditions>
+                <condition var="SUM" operator="меньше_или_равно" value="30"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>Низкий уровень профессионального выгорания.</h3>
+                    <p>
+                        Вам далеко до стадии профессионального выгорания. Ваша работа вам интересна и приносит вам
+                        удовлетворение. У вас достаточно энтузиазма, сил и желания справляться с профессиональными
+                        задачами, вы цените своих коллег. Вы готовы профессионально совершенствоваться, проявлять
+                        инициативу, интересуетесь будущим вашей организации, ожидаете успехов в собственном
+                        профессиональном развитии и возможного карьерного роста.
+                    </p>
+                </ru>
+                <en>
+                    <h3>Low level of professional burnout.</h3>
+                    <p>
+                        You are far from the stage of professional burnout. You find your work interesting and
+                        satisfying. You have enough enthusiasm, energy, and willingness to tackle professional tasks,
+                        and you value your colleagues. You are ready to improve professionally, show initiative, are
+                        interested in the future of your organization, and expect success in your own professional
+                        development and potential career advancement.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Средний уровень -->
+        <scenario>
+            <scale percentVar="SCALE" label-ru="Уровень выгорания" label-en="Level of burnout"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="30"/>
+                <condition var="SUM" operator="меньше_или_равно" value="50"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>Средний уровень профессионального выгорания.</h3>
+                    <p>
+                        Все нормально, пока ярких признаков профессионального выгорания нет. Работа, даже если вы
+                        воспринимаете ее как вынужденную необходимость, вполне вас устраивает, достаточно привлекательна
+                        и удовлетворяет вас. Вы готовы работать планомерно и с отдачей, энергии для этого хватает.
+                        Однако следует проявлять внимание к своему состоянию, следить, не появятся ли признаки
+                        хронической усталости, безразличия и утраты интереса к работе. Старайтесь по возможности
+                        полноценно отдыхать, переключаться, избегать на работе стрессов и неурядиц.
+                    </p>
+                </ru>
+                <en>
+                    <h3>Medium level of professional burnout.</h3>
+                    <p>
+                        Everything is fine as long as there are no strong signs of professional burnout. Your work, even
+                        if you perceive it as a necessary obligation, suits you quite well, is sufficiently appealing
+                        and satisfying. You are willing to work systematically and with dedication, and you have enough
+                        energy for it. However, you should pay attention to your condition and be mindful of any signs
+                        of chronic fatigue, indifference, or loss of interest in work. Try to take breaks, switch off,
+                        avoid stress at work, and mishaps whenever possible.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Максимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" label-ru="Уровень выгорания" label-en="Level of burnout"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="50"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>Высокий уровень профессионального выгорания</h3>
+                    <p>
+                        Вы находитесь в состоянии профессионального выгорания. Работа стала вам безразлична или даже
+                        отвратительна, отношения с коллегами разладились, мысли о работе неприятны и вызывают негативные
+                        эмоции. Хроническая усталость, упадок сил, вялость, апатия, руки опускаются. У вас все время
+                        плохое настроение, гложут мысли о работе, от проблем не удается отключиться и после рабочего
+                        дня. Вам трудно расслабиться, хорошо выспаться, сохранять бодрость и высокую работоспособность.
+                        Ваша работа становится токсичной для вас и может нанести ущерб вашей личности, отношению с
+                        окружающими и даже физическому здоровью (возможны проблемы с сердечно-сосудистой системой, ЖКТ,
+                        сном, одышка и т.п.). Насторожитесь, подумайте о том, не сменить ли вам место работы или даже
+                        профессию.
+                    </p>
+                </ru>
+                <en>
+                    <h3>High level of professional burnout</h3>
+                    <p>
+                        You are experiencing a state of professional burnout. Work has become indifferent or even
+                        repulsive to you, relationships with colleagues have deteriorated, thoughts about work are
+                        unpleasant and evoke negative emotions. Chronic fatigue, loss of energy, lethargy, apathy – you
+                        feel drained. You have a persistent bad mood, work-related thoughts are constantly on your mind,
+                        and you find it difficult to disconnect from work-related problems even after the workday is
+                        over. Relaxation, good sleep, maintaining alertness, and high productivity are challenging for
+                        you. Your work has become toxic to you and may harm your personality, relationships with others,
+                        and even your physical health (possible issues with the cardiovascular system, digestive system,
+                        sleep, shortness of breath, etc.). Be cautious, consider whether it's time to change your job or
+                        even your profession.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>

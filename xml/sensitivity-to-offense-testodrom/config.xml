@@ -3,7 +3,7 @@
     <scenarios>
         <!-- Минимальный уровень -->
         <scenario>
-            <scale percentVar="SCALE" label="Уровень обидчивости"/>
+            <scale percentVar="SCALE" label-ru="Уровень обидчивости" label-en="Level of sensitivity"/>
             <conditions>
                 <condition var="SUM" operator="меньше_или_равно" value="30"/>
             </conditions>
@@ -31,7 +31,7 @@
 
         <!-- Средний уровень -->
         <scenario>
-            <scale percentVar="SCALE" label="Уровень обидчивости"/>
+            <scale percentVar="SCALE" label-ru="Уровень обидчивости" label-en="Level of sensitivity"/>
             <conditions>
                 <condition var="SUM" operator="больше" value="30"/>
                 <condition var="SUM" operator="меньше_или_равно" value="50"/>
@@ -71,7 +71,7 @@
 
         <!-- Максимальный уровень -->
         <scenario>
-            <scale percentVar="SCALE" label="Уровень обидчивости"/>
+            <scale percentVar="SCALE" label-ru="Уровень обидчивости" label-en="Level of sensitivity"/>
             <conditions>
                 <condition var="SUM" operator="больше" value="50"/>
             </conditions>
