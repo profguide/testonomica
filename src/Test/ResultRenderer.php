@@ -11,15 +11,19 @@ use Knp\Snappy\Pdf;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
 readonly class ResultRenderer
 {
     public function __construct(
-        private Environment      $twig,
-        private Pdf              $pdf,
-        private AnalysisRenderer $analysisRenderer,
-        private ConfigParser     $configParser,
-        private ConfigXmlFetcher $configXmlFetcher)
+        private Environment          $twig,
+        private Pdf                  $pdf,
+        private AnalysisRenderer     $analysisRenderer,
+        private ConfigParser         $configParser,
+        private ConfigXmlFetcher     $configXmlFetcher,
+        private TestViewNameResolver $viewNameResolver)
     {
     }
 
@@ -69,6 +73,11 @@ readonly class ResultRenderer
         return new PdfResponse($pdf, $name);
     }
 
+    /**
+     * @throws SyntaxError
+     * @throws RuntimeError
+     * @throws LoaderError
+     */
     private function html(Test $test, array $data): string
     {
         $resultBlocksOutput = $this->analysisRenderer->render($test, $data);
@@ -83,7 +92,7 @@ readonly class ResultRenderer
             $template = $this->twig->createTemplate($template);
             return $template->render($data);
         } else {
-            return $this->twig->render('tests/result/' . ResultUtil::resolveViewName($test) . '.html.twig', $data);
+            return $this->twig->render($this->viewNameResolver->resolveByTest($test), $data);
         }
     }
 

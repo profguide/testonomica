@@ -32,9 +32,4 @@ class ResultUtil
         // than self::SINGLE_RESULT_DEPTH, which is complex result
         return json_decode($result->getData(), true, self::SINGLE_RESULT_DEPTH) == false;
     }
-
-    public static function resolveViewName(Test $test)
-    {
-        return $test->getXmlFilename() ?? $test->getId();
-    }
 }
