@@ -18,7 +18,7 @@ final readonly class AdminTestSearchForm
 
     public function search(Request $request): PaginationInterface
     {
-        $query = $this->em->createQuery("SELECT t FROM App:Test t");
+        $query = $this->em->createQuery("SELECT t FROM App:Test t ORDER BY t.id");
 
         return $this->paginator->paginate(
             $query, /* query NOT result */
