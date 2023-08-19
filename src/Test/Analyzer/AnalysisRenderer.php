@@ -81,7 +81,7 @@ class AnalysisRenderer
     {
         $percentage = self::namedVariableValue($resultData, $scale->percentVar);
         if ($percentage == null) {
-            throw new \RuntimeException('Result data does not have {$scale->var}.');
+            throw new \RuntimeException("Result data does not have \"{$scale->percentVar}\".");
         }
 
         if ($scale->showVar) {

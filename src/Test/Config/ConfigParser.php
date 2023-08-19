@@ -125,9 +125,9 @@ final readonly class ConfigParser
 
             // conditions
             $conditionNodes = $scenarioNode->filter('conditions > condition');
-            if ($conditionNodes->count() === 0) {
-                throw new ConfigXmlParsingException("Scenario does not contain \"condition\" nodes.");
-            }
+//            if ($conditionNodes->count() === 0) {
+//                throw new ConfigXmlParsingException("Scenario does not contain \"condition\" nodes.");
+//            }
             $conditions = [];
             $conditionNodes->each(function (Crawler $condition) use (&$conditions) {
                 $var = new Variable($condition->attr('var'));
@@ -143,7 +143,7 @@ final readonly class ConfigParser
             }
             $text = $textNode->html();
 
-            $scale = $this->parseScale($crawler);
+            $scale = $this->parseScale($scenarioNode);
 
             $scenarios[] = new Scenario($conditions, $text, $scale);
         }

@@ -1,0 +1,151 @@
+{# {% extends('tests/result.html.twig') %} #}
+
+{% block result %}
+    {% if index_aggression %}
+        <p><b>Индекс агрессивности:</b></p>
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ index_aggression.percentage }}%;"
+                 aria-valuenow="{{ index_aggression.percentage }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ index_aggression.sum }} {% trans %}из{% endtrans %} {{ index_aggression.max }}
+            </div>
+        </div>
+        <br>
+    {% endif %}
+
+    {% if index_hostile %}
+        <p><b>Индекс враждебности:</b></p>
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ index_hostile.percentage }}%;"
+                 aria-valuenow="{{ index_hostile.percentage }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ index_hostile.sum }} {% trans %}из{% endtrans %} {{ index_hostile.max }}
+            </div>
+        </div>
+        <br>
+    {% endif %}
+
+    {% if fiz %}
+        <p><b>Физическая агрессия:</b></p>
+        <p>Использование физической силы против другого лица.</p>
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ fiz.percentage }}%;"
+                 aria-valuenow="{{ fiz.percentage }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ fiz.sum }} {% trans %}из{% endtrans %} {{ fiz.max }}
+            </div>
+        </div>
+        <br>
+    {% endif %}
+
+    {% if verb %}
+        <p><b>Вербальная агрессия:</b></p>
+        <p>Выражение негативных чувств как через форму (ссора, крик, визг), так и через содержание словесных обращений к
+            другим лицам (угроза, проклятия, ругань).</p>
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ verb.percentage }}%;"
+                 aria-valuenow="{{ verb.percentage }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ verb.sum }} {% trans %}из{% endtrans %} {{ verb.max }}
+            </div>
+        </div>
+        <br>
+    {% endif %}
+
+    {% if kosv %}
+        <p><b>Косвенная агрессия:</b></p>
+        <p>Использование окольным путем направленных против других лиц сплетен, шуток и проявление ненаправленных,
+            неупорядоченных, взрывов ярости (в крике, топании ногами и т. п.).</p>
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ kosv.percentage }}%;"
+                 aria-valuenow="{{ kosv.percentage }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ kosv.sum }} {% trans %}из{% endtrans %} {{ kosv.max }}
+            </div>
+        </div>
+        <br>
+    {% endif %}
+
+    {% if negativ %}
+        <p><b>Негативизм:</b></p>
+        <p>Оппозиционная форма поведения, направленная обычно против авторитета и руководства, которая может нарастать
+            от
+            пассивного сопротивления до активных действий против требований, правил, законов.</p>
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ negativ.percentage }}%;"
+                 aria-valuenow="{{ negativ.percentage }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ negativ.sum }} {% trans %}из{% endtrans %} {{ negativ.max }}
+            </div>
+        </div>
+    {% endif %}
+
+    <br>
+
+    {% if razdraj %}
+        <p><b>Раздражение:</b></p>
+        <p>Склонность к раздражению, готовность при малейшем возбуждении излиться во вспыльчивости, резкости,
+            грубости.</p>
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ razdraj.percentage }}%;"
+                 aria-valuenow="{{ razdraj.percentage }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ razdraj.sum }} {% trans %}из{% endtrans %} {{ razdraj.max }}
+            </div>
+        </div>
+        <br>
+    {% endif %}
+
+    {% if podozr %}
+        <p><b>Подозрительность:</b></p>
+        <p>Склонность к недоверию и осторожному отношению к людям, проистекающим из убеждения, что окружающие намерены
+            причинить вред.</p>
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ podozr.percentage }}%;"
+                 aria-valuenow="{{ podozr.percentage }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ podozr.sum }} {% trans %}из{% endtrans %} {{ podozr.max }}
+            </div>
+        </div>
+        <br>
+    {% endif %}
+
+    {% if obida %}
+        <p><b>Обида:</b></p>
+        <p>Проявления зависти и ненависти к окружающим, обусловленные чувством гнева, недовольства кем-то именно или
+            всем
+            миром за действительные или мнимые страдания.</p>
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ obida.percentage }}%;"
+                 aria-valuenow="{{ obida.percentage }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ obida.sum }} {% trans %}из{% endtrans %} {{ obida.max }}
+            </div>
+        </div>
+        <br>
+    {% endif %}
+
+    {% if vina %}
+        <p><b>Аутоагрессия или чувство вины:</b></p>
+        <p>Отношение и действия по отношению к себе и окружающим, проистекающие из возможного убеждения самого
+            обследуемого
+            в том, что он является плохим человеком, поступает нехорошо: вредно, злобно или бессовестно.</p>
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: {{ vina.percentage }}%;"
+                 aria-valuenow="{{ vina.percentage }}"
+                 aria-valuemin="0"
+                 aria-valuemax="100">{{ vina.sum }} {% trans %}из{% endtrans %} {{ vina.max }}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
