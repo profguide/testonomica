@@ -11,7 +11,14 @@
     {% endif %}
     <title>{% block title %}{% endblock %}</title>
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-W8CLW33');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W8CLW33');</script>
     <!-- End Google Tag Manager -->
     {% block stylesheets %}
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -25,7 +32,8 @@
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8CLW33" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8CLW33" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 <header class="header" id="testonomica_header">
@@ -44,6 +52,11 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0 ms-auto">
+                    {% if (app.user and 'ROLE_ADMIN' in app.user.roles) %}
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{{ path('admin') }}">Dashboard</a>
+                        </li>
+                    {% endif %}
                     <li class="nav-item">
                         <a class="nav-link active"
                            href="{{ app.user ? path('app_logout') : path('app_login') }}">{{ app.user ? 'Выйти'|trans ~ " (" ~ app.user.email ~ ")" : 'Войти'|trans }}</a>
