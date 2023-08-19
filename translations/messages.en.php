@@ -5,6 +5,10 @@ return [
     'Тесты онлайн' => 'Online tests',
     'Перейти к тестам!' => 'Go to the tests!',
     'Войти' => 'Login',
+    'Выйти' => 'Log out',
+
+    'Бесплатные тесты: психологические, IQ, образовательные, на эрудицию' => 'Free tests: psychological, IQ, educational, knowledge-based',
+    'Пройдите бесплатные тесты для ценных инсайтов о себе! Раскройте ваш характер, IQ, эмоции и даже уровень депрессии.' => 'Take free tests for valuable insights about yourself! Uncover your personality, IQ, emotions, and even your level of depression.',
 
     'Ваши результаты' => 'Your results',
     'минут' => 'minutes',

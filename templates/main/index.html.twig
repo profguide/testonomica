@@ -1,12 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Пройти тесты онлайн{% endblock %}
+{% block title %}{% trans %}Бесплатные тесты: психологические, IQ, образовательные, на эрудицию{% endtrans %}{% endblock %}
+{% block description %}{% trans %}Пройдите бесплатные тесты для ценных инсайтов о себе! Раскройте ваш характер, IQ, эмоции и даже уровень депрессии.{% endtrans %}{% endblock %}
 
 {% block body %}
     <div class="container">
-        <p>Тестодром &mdash; это много бесплатных  тестов: серьезных психологических, профориентационных, тестов на эрудицию и развлекательных тестов.</p>
-        <p>С помощью Тестодрома вы хорошо и с пользой для себя проведете время, получите материал для размышления о себе.
-            К Тестодрому вы сможете обращаться в любое время. Тестодром ваш помощник.</p>
+        {% if (app.request.locale == 'en') %}
+            <p>Testodrom is a platform with a variety of free tests: serious psychological assessments, career
+                orientation tests, tests of knowledge and trivia, as well as entertaining quizzes.</p>
+            <p>With the help of Testodrom, you can spend your time effectively and meaningfully, gaining insights for
+                self-reflection. You can access Testodrom anytime you want. Testodrom is here to assist you.</p>
+        {% else %}
+            <p>Тестодром &mdash; это много бесплатных тестов: серьезных психологических, профориентационных, тестов на
+                эрудицию и развлекательных тестов.</p>
+            <p>С помощью Тестодрома вы хорошо и с пользой для себя проведете время, получите материал для размышления о
+                себе.
+                К Тестодрому вы сможете обращаться в любое время. Тестодром ваш помощник.</p>
+        {% endif %}
         <br/>
         <a class="btn btn-primary" href="{{ path('tests.index') }}">{% trans %}Перейти к тестам!{% endtrans %}</a>
     </div>

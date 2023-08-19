@@ -11,25 +11,21 @@
     {% endif %}
     <title>{% block title %}{% endblock %}</title>
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-W8CLW33');</script>
+    <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-W8CLW33');</script>
     <!-- End Google Tag Manager -->
     {% block stylesheets %}
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8CLW33" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8CLW33" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 <header class="header" id="testonomica_header">
@@ -50,7 +46,7 @@
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0 ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active"
-                           href="{{ app.user ? path('app_logout') : path('app_login') }}">{{ app.user ? "Выйти (" ~ app.user.email ~ ")" : 'Войти'|trans }}</a>
+                           href="{{ app.user ? path('app_logout') : path('app_login') }}">{{ app.user ? 'Выйти'|trans ~ " (" ~ app.user.email ~ ")" : 'Войти'|trans }}</a>
                     </li>
                     <li class="nav-item">
                         <div class="dropdown">
