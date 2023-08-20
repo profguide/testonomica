@@ -11,43 +11,40 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Uid\Uuid;
 
 /**
- * @ORM\Entity
- * @ORM\Table(indexes={@ORM\Index(columns={"token"})})
- * @ORM\HasLifecycleCallbacks()
  * @author: adavydov
  * @since: 9.11.2020
  */
+#[ORM\Table]
+#[ORM\Index(columns: ['token'])]
+#[ORM\Entity]
+#[ORM\HasLifecycleCallbacks]
 class Access implements TokenableInterface
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
      * @var int
      */
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
     /**
      * @var Service
-     * @ORM\ManyToOne(targetEntity="Service")
-     * @ORM\JoinColumn(name="service_id", nullable=false)
      */
+    #[ORM\ManyToOne(targetEntity: 'Service')]
+    #[ORM\JoinColumn(name: 'service_id', nullable: false)]
     private $service;
 
     /**
-     * @ORM\Column(type="string", length=36)
      * @var string
      */
+    #[ORM\Column(type: 'string', length: 36)]
     private $token;
 
-    /**
-     * @ORM\Column(type="datetime", name="created_at")
-     */
+    #[ORM\Column(type: 'datetime', name: 'created_at')]
     private $createdAt;
 
-    /**
-     * @ORM\Column(type="datetime", name="used_at", nullable=true)
-     */
+    #[ORM\Column(type: 'datetime', name: 'used_at', nullable: true)]
     private $usedAt;
 
     public function getToken(): string
@@ -55,9 +52,7 @@ class Access implements TokenableInterface
         return $this->token;
     }
 
-    /**
-     * @ORM\PrePersist
-     */
+    #[ORM\PrePersist]
     public function prePersist()
     {
         $this->createdAt = new \DateTime();

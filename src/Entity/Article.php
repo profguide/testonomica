@@ -7,129 +7,88 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
- * @ORM\Table(indexes={@ORM\Index(columns={"slug"})})
- * @ORM\HasLifecycleCallbacks
  * @author: adavydov
  * @since: 24.02.2021
  */
+#[ORM\Table]
+#[ORM\Index(columns: ['slug'])]
+#[ORM\Entity(repositoryClass: 'App\Repository\ArticleRepository')]
+#[ORM\HasLifecycleCallbacks]
 class Article
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
      * @var int
      */
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="ArticleCatalog", inversedBy="articles")
-     * @ORM\JoinColumn(name="catalog_id")
-     */
+    #[ORM\ManyToOne(targetEntity: 'ArticleCatalog', inversedBy: 'articles')]
+    #[ORM\JoinColumn(name: 'catalog_id')]
     private $catalog;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
+    #[ORM\Column(type: 'string', length: 255)]
     private string $slug;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
+    #[ORM\Column(type: 'string', length: 255)]
     private string $name;
 
-    /**
-     * @ORM\Column(type="string", length=255, name="name_en")
-     */
+    #[ORM\Column(type: 'string', length: 255, name: 'name_en')]
     private string $nameEn;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private string $subtitle;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true, name="subtitle_en")
-     */
+    #[ORM\Column(type: 'string', length: 255, nullable: true, name: 'subtitle_en')]
     private string $subtitleEn;
 
-    /**
-     * @ORM\Column(type="text", nullable=true, length=500)
-     */
+    #[ORM\Column(type: 'text', nullable: true, length: 500)]
     private ?string $annotation = null;
 
-    /**
-     * @ORM\Column(type="text", length=500, nullable=true, name="annotation_en")
-     */
+    #[ORM\Column(type: 'text', length: 500, nullable: true, name: 'annotation_en')]
     private ?string $annotation_en = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
+    #[ORM\Column(type: 'string', length: 255)]
     private string $metaTitle;
 
-    /**
-     * @ORM\Column(type="string", length=255, name="meta_title_en")
-     */
+    #[ORM\Column(type: 'string', length: 255, name: 'meta_title_en')]
     private string $metaTitleEn;
 
-    /**
-     * @ORM\Column(type="text", length=355)
-     */
+    #[ORM\Column(type: 'text', length: 355)]
     private string $metaDescription;
 
-    /**
-     * @ORM\Column(type="text", length=355, name="meta_description_en")
-     */
+    #[ORM\Column(type: 'text', length: 355, name: 'meta_description_en')]
     private string $metaDescriptionEn;
 
-    /**
-     * @ORM\Column(type="text")
-     */
+    #[ORM\Column(type: 'text')]
     private string $content;
 
-    /**
-     * @ORM\Column(type="text", name="content_en")
-     */
+    #[ORM\Column(type: 'text', name: 'content_en')]
     private string $contentEn;
 
-    /**
-     * @ORM\OneToOne(targetEntity="Test")
-     * @ORM\JoinColumn(name="test_id", nullable=true)
-     */
+    #[ORM\OneToOne(targetEntity: 'Test')]
+    #[ORM\JoinColumn(name: 'test_id', nullable: true)]
     private Test $test;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
+    #[ORM\Column(type: 'boolean')]
     private bool $active = true;
 
-    /**
-     * @ORM\Column(type="boolean", name="active_en")
-     */
+    #[ORM\Column(type: 'boolean', name: 'active_en')]
     private bool $activeEn = false;
 
-    /**
-     * @ORM\Column(type="datetime", name="created_at")
-     */
+    #[ORM\Column(type: 'datetime', name: 'created_at')]
     private \DateTime $createdAt;
 
-    /**
-     * @ORM\Column(type="datetime", name="updated_at")
-     */
+    #[ORM\Column(type: 'datetime', name: 'updated_at')]
     private \DateTime $updatedAt;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $img = null;
 
     private ?File $imgFile = null;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private ?string $imgWide = null;
 
     private ?File $imgWideFile = null;
@@ -523,10 +482,8 @@ class Article
         $this->updatedAt = new \DateTime('now');
     }
 
-    /**
-     * @ORM\PrePersist
-     * @ORM\PreUpdate
-     */
+    #[ORM\PrePersist]
+    #[ORM\PreUpdate]
     public function updatedTimestamps(): void
     {
         $this->setUpdatedAt(new \DateTime('now'));

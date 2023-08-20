@@ -15,59 +15,46 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Когда понадобится ввести услуги, такие как конкретные тесты и наборы тестов, для этого
  * можно сделать отдельные структуры данных, которые будут связаны с Payment, но не наоборот
- * @ORM\Entity
- * @ORM\Table
- * @ORM\HasLifecycleCallbacks()
  * @author: adavydov
  * @since: 9.11.2020
  */
+#[ORM\Table]
+#[ORM\Entity]
+#[ORM\HasLifecycleCallbacks]
 class Payment
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
      * @var int
      */
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
     /**
      * @var Service
-     * @ORM\ManyToOne(targetEntity="Service")
-     * @ORM\JoinColumn(name="service_id", nullable=false)
      */
+    #[ORM\ManyToOne(targetEntity: 'Service')]
+    #[ORM\JoinColumn(name: 'service_id', nullable: false)]
     private $service;
 
     /**
      * @var PaymentStatus
-     * @ORM\OneToMany(targetEntity="PaymentStatus", mappedBy="payment", cascade={"persist"})
-     * @ORM\JoinColumn(name="payment_id")
      */
+    #[ORM\OneToMany(targetEntity: 'PaymentStatus', mappedBy: 'payment', cascade: ['persist'])]
+    #[ORM\JoinColumn(name: 'payment_id')]
     private $statuses;
 
-    /**
-     * @ORM\Column(type="integer", nullable=false)
-     */
+    #[ORM\Column(type: 'integer', nullable: false)]
     private $sum;
 
-    /**
-     * @ORM\Column(type="string", nullable=true)
-     * This field might be used in case when there is no other way
-     * how to set and then restore a route after returning from a payment service.
-     * Af course it is always bad idea to store rotes in orders.
-     * But Robokassa did not left other options: either storing crc or back route.
-     * Crc - is a particular part of robokassa. It's yet better to store back routes.
-     */
+    #[ORM\Column(type: 'string', nullable: true)]
     private ?string $backRoute = null;
 
-    /**
-     * @ORM\Column(type="boolean", nullable=false, options={"default" = 0})
-     */
+    #[ORM\Column(type: 'boolean', nullable: false, options: ['default' => 0])]
     private bool $testMode = false;
 
-    /**
-     * @ORM\Column(type="datetime", name="created_at", nullable=false)
-     */
+    #[ORM\Column(type: 'datetime', name: 'created_at', nullable: false)]
     private $createdAt;
 
     public function __construct()
@@ -142,9 +129,7 @@ class Payment
         return $this->service;
     }
 
-    /**
-     * @ORM\PrePersist
-     */
+    #[ORM\PrePersist]
     public function prePersist()
     {
         $this->createdAt = new \DateTime();

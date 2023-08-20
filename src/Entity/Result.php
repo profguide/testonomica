@@ -9,45 +9,46 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ResultRepository")
- * @ORM\Table(indexes={@ORM\Index(columns={"uuid"})})
- * @ORM\HasLifecycleCallbacks()
  * @author: adavydov
  * @since: 20.10.2020
  */
+#[ORM\Table]
+#[ORM\Index(columns: ['uuid'])]
+#[ORM\Entity(repositoryClass: 'App\Repository\ResultRepository')]
+#[ORM\HasLifecycleCallbacks]
 class Result
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
      * @var int
      */
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
     /**
      * @var Test
-     * @ORM\ManyToOne(targetEntity="Test")
-     * @ORM\JoinColumn(name="test_id")
      */
+    #[ORM\ManyToOne(targetEntity: 'Test')]
+    #[ORM\JoinColumn(name: 'test_id')]
     private $test;
 
     /**
-     * @ORM\Column(type="string", length=36)
      * @var string
      */
+    #[ORM\Column(type: 'string', length: 36)]
     private $uuid;
 
     /**
-     * @ORM\Column(type="text")
      * @var string
      */
+    #[ORM\Column(type: 'text')]
     private $data;
 
     /**
-     * @ORM\Column(type="datetime", name="created_at")
      * @var
      */
+    #[ORM\Column(type: 'datetime', name: 'created_at')]
     private $createdAt;
 
     /**
@@ -122,9 +123,7 @@ class Result
         $this->createdAt = $createdAt;
     }
 
-    /**
-     * @ORM\PrePersist
-     */
+    #[ORM\PrePersist]
     public function setCreatedAtValue()
     {
         $this->createdAt = new \DateTime();

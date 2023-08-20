@@ -9,37 +9,37 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
- * @ORM\Table
  * @author: adavydov
  * @since: 9.11.2020
  */
+#[ORM\Table]
+#[ORM\Entity]
 class Provider
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
      * @var int
      */
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=20)
      * @var string
      */
+    #[ORM\Column(type: 'string', length: 20)]
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=20)
      * @var string
      */
+    #[ORM\Column(type: 'string', length: 20)]
     private $slug;
 
     /**
-     * @ORM\Column(type="string", length=32)
      * @var string
      */
+    #[ORM\Column(type: 'string', length: 32)]
     private $token;
 
     /**

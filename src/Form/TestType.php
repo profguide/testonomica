@@ -49,15 +49,6 @@ class TestType extends AbstractType
             ->add('inList', null, [
                 'label' => 'Виден в списке'
             ])
-//            ->add('calculatorName', null, [
-//                'label' => 'Имя калькулятора',
-//                'help' => 'Например, "Proftest" будет интерпретировано как ProftestCalculator. Если пусто, то будет использован автоматический калькулятор.'
-//            ])
-//            ->add('xmlFilename', null, [
-//                'label' => 'Имя источника вопросов XML и шаблона вывода результата HTML',
-//                'help' => 'Например, "proftest". Если пусто, то будет использовано значение из "Адрес URL"'
-//            ])
-            // todo validate no dash, first low
             ->add('sourceName', null, [
                 'attr' => [
                     'placeholder' => 'Например, proftest',

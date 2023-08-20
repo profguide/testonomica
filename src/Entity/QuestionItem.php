@@ -7,69 +7,60 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Serializer\Annotation\Ignore;
 
-/**
- * @ORM\Entity(repositoryClass="App\Repository\QuestionItemRepository"))
- * @ORM\Table(indexes={@ORM\Index(columns={"question"})})
- * @ORM\HasLifecycleCallbacks
- * @author: adavydov
- * @since: 09.04.2021
- */
+#[ORM\Entity(repositoryClass: 'App\Repository\QuestionItemRepository')]
 class QuestionItem
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
      * @var int
      */
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Question", inversedBy="items")
-     * @ORM\JoinColumn(name="question")
      * @Ignore
      */
+    #[ORM\ManyToOne(targetEntity: 'App\Entity\Question', inversedBy: 'items')]
+    #[ORM\JoinColumn(name: 'question')]
     private Question $question;
 
     /**
-     * @ORM\Column(type="string")
      * @var string
      */
+    #[ORM\Column(type: 'string')]
     private $value;
 
     /**
-     * @ORM\Column(type="boolean")
      * @var boolean
      * @Ignore
      */
+    #[ORM\Column(type: 'boolean')]
     private $correct;
 
     // todo correctValue
     // todo getCorrect(): string
     // todo setCorrect(string $value): void
-
     /**
-     * @ORM\Column(type="text")
      * @var string
      */
+    #[ORM\Column(type: 'text')]
     private $text;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
      * @var string
      * @Ignore
      */
+    #[ORM\Column(type: 'text', nullable: true)]
     private $textEn;
 
     /**
-     * @ORM\Column(type="datetime", name="updated_at")
      * @Ignore
      */
+    #[ORM\Column(type: 'datetime', name: 'updated_at')]
     private \DateTime $updatedAt;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $img = null;
 
     /**
@@ -235,10 +226,8 @@ class QuestionItem
         $this->imgFile = $imgFile;
     }
 
-    /**
-     * @ORM\PrePersist
-     * @ORM\PreUpdate
-     */
+    #[ORM\PrePersist]
+    #[ORM\PreUpdate]
     public function updatedTimestamps(): void
     {
         $this->setUpdatedAt(new \DateTime('now'));

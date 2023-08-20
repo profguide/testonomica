@@ -9,60 +9,47 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ArticleCatalogRepository")
- * @ORM\Table(indexes={@ORM\Index(columns={"slug"})})
  * @author: adavydov
  * @since: 24.02.2021
  */
+#[ORM\Table]
+#[ORM\Index(columns: ['slug'])]
+#[ORM\Entity(repositoryClass: 'App\Repository\ArticleCatalogRepository')]
 class ArticleCatalog
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
      * @var int
      */
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
+    #[ORM\Column(type: 'string', length: 255)]
     private string $slug;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
+    #[ORM\Column(type: 'string', length: 255)]
     private string $name;
 
-    /**
-     * @ORM\Column(type="string", length=255, name="name_en")
-     */
+    #[ORM\Column(type: 'string', length: 255, name: 'name_en')]
     private string $nameEn;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
+    #[ORM\Column(type: 'string', length: 255)]
     private string $metaTitle;
 
-    /**
-     * @ORM\Column(type="string", length=255, name="meta_title_en")
-     */
+    #[ORM\Column(type: 'string', length: 255, name: 'meta_title_en')]
     private string $metaTitleEn;
 
-    /**
-     * @ORM\Column(type="text", length=355)
-     */
+    #[ORM\Column(type: 'text', length: 355)]
     private string $metaDescription;
 
-    /**
-     * @ORM\Column(type="text", length=355, name="meta_description_en")
-     */
+    #[ORM\Column(type: 'text', length: 355, name: 'meta_description_en')]
     private string $metaDescriptionEn;
 
     /**
      * @var ArrayCollection
-     * @ORM\OneToMany(targetEntity="Article", mappedBy="catalog")
      */
+    #[ORM\OneToMany(targetEntity: 'Article', mappedBy: 'catalog')]
     private $articles;
 
     public function __construct()

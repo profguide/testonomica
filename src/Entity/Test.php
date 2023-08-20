@@ -10,141 +10,83 @@ use Doctrine\ORM\PersistentCollection;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
 
-/**
- * @ORM\Entity(repositoryClass="App\Repository\TestRepository"))
- * @ORM\Table(indexes={@ORM\Index(columns={"slug"})})
- * @UniqueEntity("slug")
- * @author: adavydov
- * @since: 20.10.2020
- */
+#[ORM\Entity(repositoryClass: 'App\Repository\TestRepository')]
+#[ORM\Index(columns: ['slug'])]
+#[UniqueEntity('slug')]
 class Test
 {
-    const CALCULATOR_AUTO = 'auto';
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
+    private ?int $id = null;
 
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     * @var int
-     */
-    private $id;
+    #[ORM\ManyToOne(targetEntity: Category::class, inversedBy: 'tests')]
+    #[ORM\JoinColumn(name: 'catalog_id')]
+    private ?Category $catalog = null;
 
-    /**
-     * @var Category
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="tests")
-     * @ORM\JoinColumn(name="catalog_id")
-     */
-    private $catalog;
+    #[ORM\ManyToMany(targetEntity: \App\Entity\Service::class, mappedBy: 'tests')]
+    private Collection $services;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Service", mappedBy="tests")
-     */
-    private $services;
+    #[ORM\OneToMany(mappedBy: 'test', targetEntity: \App\Entity\Question::class, cascade: ['all'], orphanRemoval: true)]
+    private Collection $questions;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Question", mappedBy="test", cascade={"all"}, orphanRemoval=true)
-     */
-    private $questions;
+    #[ORM\ManyToMany(targetEntity: \App\Entity\Author::class, inversedBy: 'tests')]
+    private Collection $authors;
 
-    /**
-     * @ORM\Column(type="string", length=50, unique=true)
-     * @Assert\NotBlank
-     * @var string
-     */
-    private $slug;
+    #[ORM\Column(type: 'string', length: 50, unique: true)]
+    #[Assert\NotBlank]
+    private ?string $slug = null;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     * @var string
-     */
-    private $name;
+    #[ORM\Column(type: 'string', length: 255)]
+    private ?string $name = null;
 
-    /**
-     * @ORM\Column(type="string", length=255, name="name_en", nullable=true)
-     * @var string
-     */
-    private $nameEn;
+    #[ORM\Column(name: 'name_en', type: 'string', length: 255, nullable: true)]
+    private ?string $nameEn = null;
 
-    /**
-     * @ORM\Column(type="text")
-     * @var string
-     */
-    private $description;
+    #[ORM\Column(type: 'text')]
+    private ?string $description = null;
 
-    /**
-     * @ORM\Column(type="text", name="description_en", nullable=true)
-     * @var string
-     */
-    private $descriptionEn;
+    #[ORM\Column(name: 'description_en', type: 'text', nullable: true)]
+    private ?string $descriptionEn = null;
 
-    /**
-     * @ORM\Column(type="text")
-     * @var string
-     */
-    private $annotation;
+    #[ORM\Column(type: 'text')]
+    private ?string $annotation = null;
 
-    /**
-     * @ORM\Column(type="text", name="annotation_en", nullable=true)
-     * @var string
-     */
-    private $annotationEn;
+    #[ORM\Column(name: 'annotation_en', type: 'text', nullable: true)]
+    private ?string $annotationEn = null;
 
-    /**
-     * @ORM\Column(type="smallint")
-     * @var int
-     */
-    private $duration;
+    #[ORM\Column(type: 'smallint')]
+    private ?int $duration = null;
 
-    /**
-     * @ORM\Column(type="boolean")
-     * @var boolean
-     */
-    private $active = true;
+    #[ORM\Column(type: 'boolean')]
+    private bool $active = true;
 
-    /**
-     * @ORM\Column(type="boolean", name="active_en")
-     * @var boolean
-     */
-    private $activeEn = false;
+    #[ORM\Column(name: 'active_en', type: 'boolean')]
+    private bool $activeEn = false;
 
-    /**
-     * @ORM\Column(type="boolean", name="in_list")
-     * @var boolean
-     */
+    #[ORM\Column(name: 'in_list', type: 'boolean')]
     private bool $inList = true;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
+    #[ORM\Column(type: 'boolean')]
     private bool $isXmlSource = true;
 
-    /**
-     * @ORM\Column(type="string", length=50, nullable=true)
-     * @var string|null
-     */
+    #[ORM\Column(type: 'string', length: 50, nullable: true)]
     private ?string $xmlFilename = null;
 
-    /**
-     * Custom calculator name
-     * @ORM\Column(type="string", length=50, nullable=true)
-     */
+    #[ORM\Column(type: 'string', length: 50, nullable: true)]
     private ?string $calculatorName = null;
 
-    /**
-     * @ORM\Column(type="string", length=50, nullable=true)
-     * @App\Validator\SourceName
-     */
+    #[ORM\Column(type: 'string', length: 50, nullable: true)]
     private ?string $sourceName = null;
 
-    /**
-     * @ORM\Column(type="text", nullable=true)
-     */
+    #[ORM\Column(type: 'text', nullable: true)]
     private ?string $resultView = null;
 
     public function __construct()
     {
         $this->questions = new ArrayCollection();
         $this->services = new ArrayCollection();
+        $this->authors = new ArrayCollection();
     }
 
     public static function initDefault(): Test
@@ -155,7 +97,7 @@ class Test
         return $test;
     }
 
-    public function getId()
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -291,7 +233,7 @@ class Test
         if (!in_array($active, [0, 1])) {
             throw new \InvalidArgumentException("Поле active может быть только в значении 0 и 1");
         }
-        $this->active = $active;
+        $this->active = $active == 1;
     }
 
     public function isActiveEn(): bool
@@ -301,7 +243,7 @@ class Test
 
     public function setActiveEn(int $activeEn): void
     {
-        $this->activeEn = $activeEn;
+        $this->activeEn = $activeEn == 1;
     }
 
     public function isXmlSource(): bool
@@ -393,6 +335,36 @@ class Test
     public function removeQuestion(Question $question)
     {
         $this->questions->removeElement($question);
+    }
+
+    public function setAuthors(Collection $authors): void
+    {
+        $this->authors = $authors;
+    }
+
+    public function addAuthor(Author $author): self
+    {
+        if (!$this->authors->contains($author)) {
+            $this->authors[] = $author;
+            $author->addTest($this);
+        }
+        return $this;
+    }
+
+    public function removeAuthor(Author $author): self
+    {
+        if ($this->authors->removeElement($author)) {
+            $author->removeTest($this);
+        }
+        return $this;
+    }
+
+    /**
+     * @return Collection<Author>
+     */
+    public function getAuthors(): Collection
+    {
+        return $this->authors;
     }
 
     public function isInList(): bool

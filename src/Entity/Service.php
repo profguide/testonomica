@@ -10,47 +10,43 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
- * @ORM\Table
  * @author: adavydov
  * @since: 9.11.2020
  */
+#[ORM\Table]
+#[ORM\Entity]
 class Service
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
      * @var int
      */
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
     /**
-     * @ORM\Column(type="string", nullable=false)
      * @var string
      */
+    #[ORM\Column(type: 'string', nullable: false)]
     private $name;
 
     /**
-     * @ORM\Column(type="string", nullable=false)
      * @var string
      */
+    #[ORM\Column(type: 'string', nullable: false)]
     private $slug;
 
     /**
-     * @ORM\Column(type="text", nullable=false)
      * @var string
      */
+    #[ORM\Column(type: 'text', nullable: false)]
     private $description;
 
-    /**
-     * @ORM\Column(type="integer", nullable=false)
-     */
+    #[ORM\Column(type: 'integer', nullable: false)]
     private $sum;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Test", inversedBy="services")
-     */
+    #[ORM\ManyToMany(targetEntity: 'App\Entity\Test', inversedBy: 'services')]
     private $tests;
 
     public function __construct(string $name, int $sum, string $slug, string $description)

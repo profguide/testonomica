@@ -10,12 +10,12 @@ use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
- * @ORM\Table
- * @ORM\HasLifecycleCallbacks()
  * @author: adavydov
  * @since: 9.11.2020
  */
+#[ORM\Table]
+#[ORM\Entity]
+#[ORM\HasLifecycleCallbacks]
 class PaymentStatus
 {
     const STATUS_PENDING = 0;
@@ -23,29 +23,27 @@ class PaymentStatus
     const STATUS_FAILED = 2;
 
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
      * @var int
      */
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
     /**
      * @var Payment
-     * @ORM\ManyToOne(targetEntity="Payment")
-     * @ORM\JoinColumn(name="payment_id")
      */
+    #[ORM\ManyToOne(targetEntity: 'Payment')]
+    #[ORM\JoinColumn(name: 'payment_id')]
     private $payment;
 
     /**
-     * @ORM\Column(type="smallint", length=1)
      * @var integer
      */
+    #[ORM\Column(type: 'smallint', length: 1)]
     private $status;
 
-    /**
-     * @ORM\Column(type="datetime", name="created_at")
-     */
+    #[ORM\Column(type: 'datetime', name: 'created_at')]
     private $createdAt;
 
     /**
@@ -110,9 +108,7 @@ class PaymentStatus
         return $this->createdAt;
     }
 
-    /**
-     * @ORM\PrePersist
-     */
+    #[ORM\PrePersist]
     public function prePersist()
     {
         $this->createdAt = new \DateTime();

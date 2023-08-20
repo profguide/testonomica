@@ -8,43 +8,44 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\CategoryRepository")
- * @ORM\Table(indexes={@ORM\Index(columns={"slug"})})
  * @author: adavydov
  * @since: 20.10.2020
  */
+#[ORM\Table]
+#[ORM\Index(columns: ['slug'])]
+#[ORM\Entity(repositoryClass: 'App\Repository\CategoryRepository')]
 class Category
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
      * @var int
      */
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
      * @var string
      */
+    #[ORM\Column(type: 'string', length: 255)]
     private $slug;
 
     /**
-     * @ORM\Column(type="string", length=255)
      * @var string
      */
+    #[ORM\Column(type: 'string', length: 255)]
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255, name="name_en")
      * @var string
      */
+    #[ORM\Column(type: 'string', length: 255, name: 'name_en')]
     private $nameEn;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
      * @var string
      */
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $pic;
 
     /**
@@ -53,21 +54,21 @@ class Category
     private $picFile;
 
     /**
-     * @ORM\Column(type="boolean")
      * @var boolean
      */
+    #[ORM\Column(type: 'boolean')]
     private $active;
 
     /**
-     * @ORM\Column(type="datetime", name="updated_at")
      * @var
      */
+    #[ORM\Column(type: 'datetime', name: 'updated_at')]
     private $updatedAt;
 
     /**
      * @var ArrayCollection
-     * @ORM\OneToMany(targetEntity="Test", mappedBy="catalog")
      */
+    #[ORM\OneToMany(targetEntity: 'Test', mappedBy: 'catalog')]
     private $tests;
 
     public function __construct()

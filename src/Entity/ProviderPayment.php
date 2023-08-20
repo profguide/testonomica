@@ -11,63 +11,62 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Uid\Uuid;
 
 /**
- * @ORM\Entity
- * @ORM\Table(indexes={
- *     @ORM\Index(columns={"token"}),
- *     @ORM\Index(columns={"provider_id", "user"}),
- * })
- * @ORM\HasLifecycleCallbacks()
  * @author: adavydov
  * @since: 9.11.2020
  */
+#[ORM\Table]
+#[ORM\Index(columns: ['token'])]
+#[ORM\Index(columns: ['provider_id', 'user'])]
+#[ORM\Entity]
+#[ORM\HasLifecycleCallbacks]
 class ProviderPayment implements TokenableInterface
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
      * @var int
      */
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
     /**
      * @var Payment
-     * @ORM\OneToOne(targetEntity="Payment")
-     * @ORM\JoinColumn(name="payment_id", nullable=false)
      */
+    #[ORM\OneToOne(targetEntity: 'Payment')]
+    #[ORM\JoinColumn(name: 'payment_id', nullable: false)]
     private $payment;
 
     /**
-     * @ORM\Column(type="string", length=36, nullable=false)
      * @var string
      */
+    #[ORM\Column(type: 'string', length: 36, nullable: false)]
     private $token;
 
     /**
      * @var Provider
-     * @ORM\ManyToOne(targetEntity="Provider")
-     * @ORM\JoinColumn(name="provider_id", nullable=false)
      */
+    #[ORM\ManyToOne(targetEntity: 'Provider')]
+    #[ORM\JoinColumn(name: 'provider_id', nullable: false)]
     private $provider;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=false)
      * @var string
      */
+    #[ORM\Column(type: 'string', length: 255, nullable: false)]
     private $user;
 
     /**
      * Indicates whether the first access was granted after payment.
-     * @ORM\Column(type="boolean", nullable=false)
      * @var boolean
      */
+    #[ORM\Column(type: 'boolean', nullable: false)]
     private bool $grantedAccess = false;
 
     /**
      * Payments might be local or external. external - provider is supposed to provide payment on their own.
-     * @ORM\Column(type="integer", length=1, nullable=false, options={"default": 0})
      * @var int
      */
+    #[ORM\Column(type: 'integer', length: 1, nullable: false, options: ['default' => 0])]
     private $type = PaymentType::DEFAULT;
 
     public function getId(): int

@@ -9,13 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Serializer\Annotation\Ignore;
 
-/**
- * @ORM\Entity(repositoryClass="App\Repository\QuestionRepository"))
- * @ORM\Table(indexes={@ORM\Index(columns={"test"})})
- * @ORM\HasLifecycleCallbacks
- * @author: adavydov
- * @since: 09.04.2021
- */
+#[ORM\Entity(repositoryClass: 'App\Repository\QuestionRepository')]
 class Question
 {
     // классический вопрос - один возможный вариант радиокнопка
@@ -30,70 +24,64 @@ class Question
     const TYPE_GRADIENT = 'gradient';
 
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
      * @var int
      */
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Test", inversedBy="questions")
-     * @ORM\JoinColumn(name="test")
      * @Ignore
      */
+    #[ORM\ManyToOne(targetEntity: 'Test', inversedBy: 'questions')]
+    #[ORM\JoinColumn(name: 'test')]
     private Test $test;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\QuestionItem", mappedBy="question", cascade={"all"}, orphanRemoval=true)
-     */
+    #[ORM\OneToMany(targetEntity: 'App\Entity\QuestionItem', mappedBy: 'question', cascade: ['all'], orphanRemoval: true)]
     private Collection $items;
 
     /**
-     * @ORM\Column(type="string")
      * @var string
      */
+    #[ORM\Column(type: 'string')]
     private string $type = self::TYPE_OPTION;
 
     /**
-     * @ORM\Column(type="string", length=255)
      * @var string
      */
+    #[ORM\Column(type: 'string', length: 255)]
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
      * @Ignore
      */
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private ?string $nameEn = null;
 
-    /**
-     * @ORM\Column(type="text", nullable=true)
-     */
+    #[ORM\Column(type: 'text', nullable: true)]
     private ?string $text = null;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
      * @Ignore
      */
+    #[ORM\Column(type: 'text', nullable: true)]
     private ?string $textEn = null;
 
     /**
      * Ex-group
-     * @ORM\Column(type="string", nullable=true)
      * @Ignore
      */
+    #[ORM\Column(type: 'string', nullable: true)]
     private ?string $variety = null;
 
     /**
-     * @ORM\Column(type="datetime", name="updated_at")
      * @Ignore
      */
+    #[ORM\Column(type: 'datetime', name: 'updated_at')]
     private \DateTime $updatedAt;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $img = null;
 
     /**
@@ -107,57 +95,45 @@ class Question
      */
     private $count;
 
-    /**
-     * @ORM\Column(type="integer", options={"default": 0})
-     * Диапазон сгенерированных ответов.
-     * Может быть сспользовано в вопросах типа gradient.
-     */
+    #[ORM\Column(type: 'integer', options: ['default' => 0])]
     private int $gradient = 0;
 
-    /**
-     * @ORM\Column(type="integer", options={"default": 0})
-     */
+    #[ORM\Column(type: 'integer', options: ['default' => 0])]
     private int $timer = 0;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
      * @var string
      */
+    #[ORM\Column(type: 'text', nullable: true)]
     private $wrong;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
      * @var string
      * @Ignore
      */
+    #[ORM\Column(type: 'text', nullable: true)]
     private $wrongEn;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
      * @var string
      */
+    #[ORM\Column(type: 'text', nullable: true)]
     private $correct;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
      * @var string
      * @Ignore
      */
+    #[ORM\Column(type: 'text', nullable: true)]
     private $correctEn;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
+    #[ORM\Column(type: 'boolean')]
     private $enabledBack = true;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
+    #[ORM\Column(type: 'boolean')]
     private $enabledForward = false;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
+    #[ORM\Column(type: 'boolean')]
     private $showAnswer = false;
 
     public function __toString(): string
@@ -402,10 +378,8 @@ class Question
         $this->showAnswer = $showAnswer;
     }
 
-    /**
-     * @ORM\PrePersist
-     * @ORM\PreUpdate
-     */
+    #[ORM\PrePersist]
+    #[ORM\PreUpdate]
     public function updatedTimestamps(): void
     {
         $this->setUpdatedAt(new \DateTime('now'));
