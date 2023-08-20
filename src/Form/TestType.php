@@ -49,10 +49,18 @@ class TestType extends AbstractType
             ->add('inList', null, [
                 'label' => 'Виден в списке'
             ])
-            // todo check if it exist - just let them know
             ->add('calculatorName', null, [
-                'label' => 'Калькулятор (имя файла)',
+                'label' => 'Имя калькулятора',
                 'help' => 'Например, "Proftest" будет интерпретировано как ProftestCalculator. Если пусто, то будет использован автоматический калькулятор.'
+            ])
+            ->add('xmlFilename', null, [
+                'label' => 'Имя источника вопросов XML и шаблона вывода результата HTML',
+                'help' => 'Например, "proftest". Если пусто, то будет использовано значение из "Адрес URL"'
+            ])
+            // todo validate no dash, first low
+            ->add('sourceName', null, [
+                'label' => 'Имя источника',
+                'help' => 'Например, "proftest". Если пусто, то будет использовано значение из "Адрес URL"'
             ])
             ->add('save', SubmitType::class, [
                 'row_attr' => ['style' => 'padding-top: 15px']]);

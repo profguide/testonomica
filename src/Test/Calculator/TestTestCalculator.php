@@ -14,7 +14,7 @@ use App\Test\AbstractCalculator;
  * Class TestCalculator
  * @package App\Test\Calculator
  */
-class TestCalculator extends AbstractCalculator
+class TestTestCalculator extends AbstractCalculator
 {
     function calculate(): array
     {

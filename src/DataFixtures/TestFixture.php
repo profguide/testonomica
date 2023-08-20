@@ -40,8 +40,7 @@ class TestFixture extends Fixture implements DependentFixtureInterface
         $test->setActiveEn(1);
         $test->setDuration(5);
         $test->setIsXmlSource(true); // <<
-        $test->setXmlFilename('test'); // << %kernel.project_dir%/xml/test.xml
-        $test->setCalculatorName('test'); // << \App\Test\Calculator\TestCalculator
+        $test->setSourceName('testTest');
         $manager->persist($test);
         $manager->flush();
         $this->addReference(self::TEST_1, $test);
@@ -77,8 +76,9 @@ class TestFixture extends Fixture implements DependentFixtureInterface
         $test->setActiveEn(1);
         $test->setDuration(60);
         $test->setIsXmlSource(true);
-        $test->setXmlFilename('proforientationTeen');
-        $test->setCalculatorName('proforientationTeen');
+//        $test->setXmlFilename('proforientationTeen');
+//        $test->setCalculatorName('proforientationTeen');
+        $test->setSourceName('proftest');
         $manager->persist($test);
         $manager->flush();
 
@@ -97,8 +97,9 @@ class TestFixture extends Fixture implements DependentFixtureInterface
         $test->setActiveEn(1);
         $test->setDuration(60);
         $test->setIsXmlSource(true);
-        $test->setXmlFilename('proforientationAdult');
-        $test->setCalculatorName('proforientationAdult');
+//        $test->setXmlFilename('proforientationAdult');
+//        $test->setCalculatorName('proforientationAdult');
+        $test->setSourceName('proftest');
         $manager->persist($test);
         $manager->flush();
 
@@ -115,8 +116,9 @@ class TestFixture extends Fixture implements DependentFixtureInterface
         $test->setActiveEn(1);
         $test->setDuration(45);
         $test->setIsXmlSource(true);
-        $test->setXmlFilename('personIntel');
-        $test->setCalculatorName('personIntel');
+//        $test->setXmlFilename('personIntel');
+//        $test->setCalculatorName('personIntel');
+        $test->setSourceName('personIntel');
         $manager->persist($test);
         $manager->flush();
 
@@ -135,8 +137,9 @@ class TestFixture extends Fixture implements DependentFixtureInterface
         $test->setActiveEn(1);
         $test->setDuration(120);
         $test->setIsXmlSource(true);
-        $test->setXmlFilename('testComplex');
-        $test->setCalculatorName('testComplex');
+//        $test->setXmlFilename('testComplex');
+//        $test->setCalculatorName('testComplex');
+        $test->setSourceName('testComplex');
         $manager->persist($test);
         $manager->flush();
 

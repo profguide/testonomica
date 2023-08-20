@@ -6,7 +6,7 @@
 
 namespace App\Test\Calculator;
 
-class ProforientationTeenCalculator extends AbstractProforientationCalculator
+class ProftestCalculator extends AbstractProforientationCalculator
 {
 
 }

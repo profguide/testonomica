@@ -47,12 +47,7 @@ class Test
     private $questions;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Analysis", mappedBy="test", cascade={"all"}, orphanRemoval=true)
-     */
-    private $analyses;
-
-    /**
-     * @ORM\Column(type="string", length=255, unique=true)
+     * @ORM\Column(type="string", length=50, unique=true)
      * @Assert\NotBlank
      * @var string
      */
@@ -124,21 +119,22 @@ class Test
     private bool $isXmlSource = true;
 
     /**
-     * @ORM\Column(type="string", length=20, nullable=true)
+     * @ORM\Column(type="string", length=50, nullable=true)
      * @var string|null
      */
     private ?string $xmlFilename = null;
 
     /**
-     * @ORM\Column(type="string", length=20, nullable=true)
+     * Custom calculator name
+     * @ORM\Column(type="string", length=50, nullable=true)
      */
-    private ?string $calculator = self::CALCULATOR_AUTO;
+    private ?string $calculatorName = null;
 
     /**
      * Custom calculator name
-     * @ORM\Column(type="string", length=20, nullable=true)
+     * @ORM\Column(type="string", length=50, nullable=true)
      */
-    private ?string $calculatorName = null;
+    private ?string $sourceName = null;
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -149,7 +145,6 @@ class Test
     {
         $this->questions = new ArrayCollection();
         $this->services = new ArrayCollection();
-        $this->analyses = new ArrayCollection();
     }
 
     public static function initDefault(): Test
@@ -309,6 +304,16 @@ class Test
         $this->activeEn = $activeEn;
     }
 
+    public function isXmlSource(): bool
+    {
+        return $this->isXmlSource;
+    }
+
+    public function setIsXmlSource(bool $isXmlSource): void
+    {
+        $this->isXmlSource = $isXmlSource;
+    }
+
     public function getXmlFilename(): ?string
     {
         return $this->xmlFilename;
@@ -327,6 +332,16 @@ class Test
     public function setCalculatorName(?string $calculatorName): void
     {
         $this->calculatorName = $calculatorName;
+    }
+
+    public function getSourceName(): ?string
+    {
+        return $this->sourceName;
+    }
+
+    public function setSourceName(string $value): void
+    {
+        $this->sourceName = $value;
     }
 
     public function getActive(): ?bool
@@ -380,32 +395,6 @@ class Test
         $this->questions->removeElement($question);
     }
 
-
-    public function setAnalyses(Collection $analyses): void
-    {
-        $this->analyses = $analyses;
-    }
-
-    /**
-     * @return Collection<Question>
-     */
-    public function getAnalyses()
-    {
-        return $this->analyses;
-    }
-
-    public function addAnalysis(Analysis $analysis): Test
-    {
-        $analysis->setTest($this);
-        $this->analyses->add($analysis);
-        return $this;
-    }
-
-    public function removeAnalysis(Analysis $analysis)
-    {
-        $this->analyses->removeElement($analysis);
-    }
-
     public function isInList(): bool
     {
         return $this->inList;
@@ -414,16 +403,6 @@ class Test
     public function setInList(bool $inList): void
     {
         $this->inList = $inList;
-    }
-
-    public function isXmlSource(): bool
-    {
-        return $this->isXmlSource;
-    }
-
-    public function setIsXmlSource(bool $isXmlSource): void
-    {
-        $this->isXmlSource = $isXmlSource;
     }
 
     public function hasResultView(): bool

@@ -10,7 +10,7 @@ namespace App\Test\Calculator;
 use App\Test\AbstractCalculator;
 use App\Util\AnswersUtil;
 
-class Test158Calculator extends AbstractCalculator
+class AggressivenessBassDarkyCalculator extends AbstractCalculator
 {
     public function calculate(): array
     {

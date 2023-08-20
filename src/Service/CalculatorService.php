@@ -17,36 +17,21 @@ use App\Test\AbstractComplexCalculator;
 use App\Test\AnswersHolder;
 use App\Test\AnswersSerializer;
 use App\Test\CalculatorInterface;
+use App\Test\CalculatorNameResolver;
 use App\Test\QuestionsHolder;
 use App\Test\ResultUtil;
 use Symfony\Component\HttpKernel\KernelInterface;
 
-class CalculatorService
+readonly class CalculatorService
 {
-    private AnswersSerializer $serializer;
-
-    private SourceRepositoryInterface $sourceRepository;
-
-    private TestRepositoryInterface $testRepository;
-
-    private KernelInterface $kernel;
-
-    private string $locale;
-
-    const CALCULATORS_NAMESPACE = '\App\Test\Calculator\\';
-
     public function __construct(
-        AnswersSerializer         $serializer,
-        SourceRepositoryInterface $sourceRepository,
-        TestRepositoryInterface   $testRepository,
-        KernelInterface           $kernel,
-        Locale                    $locale)
+        private CalculatorNameResolver    $calculatorNameResolver,
+        private AnswersSerializer         $serializer,
+        private SourceRepositoryInterface $sourceRepository,
+        private TestRepositoryInterface   $testRepository,
+        private KernelInterface           $kernel,
+        private Locale                    $locale)
     {
-        $this->serializer = $serializer;
-        $this->sourceRepository = $sourceRepository;
-        $this->testRepository = $testRepository;
-        $this->kernel = $kernel;
-        $this->locale = $locale->getValue();
     }
 
     public function calculate(Result $result): array
@@ -84,20 +69,12 @@ class CalculatorService
             new AnswersHolder($this->serializer->deserialize($result->getData())),
             new QuestionsHolder($this->sourceRepository->getAllQuestions($result->getTest())),
             $this->kernel,
-            $this->locale);
+            $this->locale->getValue());
     }
 
     private function calculatorName(Result $result): string
     {
-        $test = $result->getTest();
-        // todo determine if it is auto
-        // Можно так
-        // Выбор калькулятора из списка, где Auto стоит первым.
-        // Если не устраивает, то вписываем своё: Test131Calculator, ProforientationTeenCalculator
-        // То есть имеем два поля: calculator (на выбор) и customCalculator (альтернативный)
-        $name = $test->getCalculatorName() ?? 'Auto';
-//        $name = $test->getCalculatorName() ?? 'Test' . $test->getId();
-        return self::CALCULATORS_NAMESPACE . ucfirst($name) . 'Calculator';
+        return $this->calculatorNameResolver->resolveByTest($result->getTest());
     }
 
     private function loadTest(int $testId): Test

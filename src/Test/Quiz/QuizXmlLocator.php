@@ -15,12 +15,21 @@ final readonly class QuizXmlLocator
 
     public function resolveByTest(Test $test): string
     {
-        // try new way first
+        // sourceName-based
+        if ($test->getSourceName()) {
+            $location = $this->kernel->getProjectDir() . "/xml/{$test->getSourceName()}/quiz.xml";
+            if (file_exists($location)) {
+                return $location;
+            }
+        }
+
+        // alias-based
         $location = $this->kernel->getProjectDir() . "/xml/{$test->getSlug()}/quiz.xml";
         if (file_exists($location)) {
             return $location;
         }
 
+        // deprecated way, it is non-flexible, because it makes to keep ids
         $name = $test->getXmlFilename() ?? $test->getId();
         return $this->kernel->getProjectDir() . "/xml/$name.xml";
     }
