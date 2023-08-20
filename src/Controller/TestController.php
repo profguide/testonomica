@@ -95,7 +95,7 @@ class TestController extends AbstractController
     {
         $test = $this->testService->findBySlug($slug);
         if (!$test || !$test->isActive()) {
-            self::createNotFoundException();
+            throw self::createNotFoundException();
         }
         return $test;
     }
@@ -104,7 +104,7 @@ class TestController extends AbstractController
     {
         $result = $this->resultService->findByUuid($uuid);
         if (!$result) {
-            self::createNotFoundException();
+            throw self::createNotFoundException();
         }
         return $result;
     }
