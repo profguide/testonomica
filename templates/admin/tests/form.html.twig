@@ -30,6 +30,21 @@
             <div class="col">{{ form_row(form.annotationEn, {label: 'Описание в списке EN'}) }}</div>
         </div>
 
+        Я не понимаю как оно должно выглядеть.
+        Как в курсах - "добавить профессию" - выбираешь из списка и добавляется.
+        Либо как в статьях - теги.
+
+{#        <h3>Авторы</h3>#}
+{#        <ul class="authors"#}
+{#            data-index="{{ form.authors|length > 0 ? form.authors|last.vars.name + 1 : 0 }}"#}
+{#            data-prototype="{{ form_widget(form.authors.vars.prototype)|e('html_attr') }}">#}
+{#            {% for author in form.authors %}#}
+{#                <li>{{ form_row(author.name) }}</li>#}
+{#            {% endfor %}#}
+{#        </ul>#}
+{#        <button type="button" class="add_item_link" data-collection-holder-class="authors">+ Добавить автора</button>#}
+
+
         {{ form_end(form) }}
     </div>
 {% endblock %}

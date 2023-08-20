@@ -31,10 +31,10 @@ final class Author
     #[ORM\Column(length: 100, nullable: false)]
     private ?string $nameEn = null;
 
-    #[ORM\Column(type: 'text')]
+    #[ORM\Column(type: 'text', nullable: true)]
     private ?string $about = null;
 
-    #[ORM\Column(type: 'text')]
+    #[ORM\Column(type: 'text', nullable: true)]
     private ?string $aboutEn = null;
 
     public function getId(): ?int

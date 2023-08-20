@@ -2,8 +2,10 @@
 
 namespace App\Form;
 
+use App\Entity\Author;
 use App\Entity\Test;
 use App\Service\CategoryService;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -56,6 +58,40 @@ class TestType extends AbstractType
                 'label' => 'Имя источника (вопросы, конфиг, калькулятор, шаблон)',
                 'help' => 'Если пусто, то будет последовательная попытка найти ресурс по адресу URL (xml, view), затем по ID (xml, view, calculator), и затем Auto.',
             ])
+            ->add('authors', EntityType::class, [
+                'class' => Author::class,
+                'multiple' => true,
+                'expanded' => false,
+                'by_reference' => false,
+                'choice_label' => 'name',
+            ])
+//            ->add('authors', ChoiceType::class, [
+//                'choices' => [
+//                    'In Stock' => true,
+//                    'Out of Stock' => false,
+//                ],
+//            ])
+//            ->add('authors', CollectionType::class, [
+//                'entry_type' => TestAuthorType::class,
+//                'entry_options' => ['label' => false],
+//                'allow_add' => true,
+//                'allow_delete' => true,
+////                'allow_add' => true,
+////                'class' => Author::class,
+////                'choice_label' => 'name',
+////                'required' => true,
+////                'expanded' => true,
+////                'multiple' => true,
+//            ])
+//            ->add('authors', CollectionType::class, [
+//                'entry_type' => TestAuthorType::class,
+//                'allow_add' => true,
+////                'class' => Author::class,
+////                'choice_label' => 'name',
+////                'required' => true,
+////                'expanded' => true,
+////                'multiple' => true,
+//            ])
             ->add('save', SubmitType::class, [
                 'row_attr' => ['style' => 'padding-top: 15px']]);
         //            ->add('catalog')
