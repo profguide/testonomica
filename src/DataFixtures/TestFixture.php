@@ -13,16 +13,14 @@ class TestFixture extends Fixture implements DependentFixtureInterface
     const TEST_1 = 'test_1';
     const TEST_2 = 'test_2';
     const TEST_3 = 'test_3';
-    const TEST_4 = 'test_4';
     const TEST_5 = 'test_5';
     const TEST_6 = 'test_6'; // complex
 
     const TEST_1_SLUG = 'test_1'; // xml-based
     const TEST_2_SLUG = 'test_2'; // db-based
-    const TEST_3_SLUG = 'test_3';
-    const TEST_4_SLUG = 'test_4';
-    const TEST_5_SLUG = 'test_5';
-    const TEST_6_SLUG = 'test_6';
+    const TEST_3_SLUG = 'test_3'; // профтест
+    const TEST_5_SLUG = 'test_5'; // личность и структура
+    const TEST_6_SLUG = 'test_6'; // complex
 
     public function load(ObjectManager $manager)
     {
@@ -67,41 +65,20 @@ class TestFixture extends Fixture implements DependentFixtureInterface
         $category = $this->getReference(CategoryFixture::CATEGORY_PSYCHOLOGICAL_REFERENCE);
         $test = new Test();
         $test->setCatalog($category);
-        $test->setName('Тест на профориентацию для подростков');
-        $test->setNameEn('Proforientation child');
+        $test->setName('Профтест');
+        $test->setNameEn('Career Guidance Test');
         $test->setSlug(self::TEST_3_SLUG);
-        $test->setDescription('Some description');
-        $test->setAnnotation('Some annotation');
+        $test->setDescription('Профтест разработан в центре профориентации ПрофГид');
+        $test->setAnnotation('Career Guidance Test has been developed at the career guidance center ProfGuide.');
         $test->setActive(1);
         $test->setActiveEn(1);
-        $test->setDuration(60);
+        $test->setDuration(30);
         $test->setIsXmlSource(true);
-//        $test->setXmlFilename('proforientationTeen');
-//        $test->setCalculatorName('proforientationTeen');
         $test->setSourceName('proftest');
         $manager->persist($test);
         $manager->flush();
 
         $this->addReference(self::TEST_3, $test);
-
-        /**@var Category $category */
-        $category = $this->getReference(CategoryFixture::CATEGORY_PSYCHOLOGICAL_REFERENCE);
-        $test = new Test();
-        $test->setCatalog($category);
-        $test->setName('Тест на профориентацию для взрослых');
-        $test->setNameEn('Proforientation test adult');
-        $test->setSlug(self::TEST_4_SLUG);
-        $test->setDescription('Some description');
-        $test->setAnnotation('Some annotation');
-        $test->setActive(1);
-        $test->setActiveEn(1);
-        $test->setDuration(60);
-        $test->setIsXmlSource(true);
-//        $test->setXmlFilename('proforientationAdult');
-//        $test->setCalculatorName('proforientationAdult');
-        $test->setSourceName('proftest');
-        $manager->persist($test);
-        $manager->flush();
 
         /**@var Category $category */
         $category = $this->getReference(CategoryFixture::CATEGORY_PSYCHOLOGICAL_REFERENCE);
@@ -116,8 +93,6 @@ class TestFixture extends Fixture implements DependentFixtureInterface
         $test->setActiveEn(1);
         $test->setDuration(45);
         $test->setIsXmlSource(true);
-//        $test->setXmlFilename('personIntel');
-//        $test->setCalculatorName('personIntel');
         $test->setSourceName('personIntel');
         $manager->persist($test);
         $manager->flush();

@@ -63,7 +63,7 @@ class TestType extends AbstractType
                     'placeholder' => 'Например, proftest',
                 ],
                 'label' => 'Имя источника (вопросы, конфиг, калькулятор, шаблон)',
-                'help' => 'Если пусто, то будет последовательная попытка найти ресурс по адресу URL, затем по ID, и затем Auto.',
+                'help' => 'Если пусто, то будет последовательная попытка найти ресурс по адресу URL (xml, view), затем по ID (xml, view, calculator), и затем Auto.',
             ])
             ->add('save', SubmitType::class, [
                 'row_attr' => ['style' => 'padding-top: 15px']]);

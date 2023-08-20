@@ -131,8 +131,8 @@ class Test
     private ?string $calculatorName = null;
 
     /**
-     * Custom calculator name
      * @ORM\Column(type="string", length=50, nullable=true)
+     * @App\Validator\SourceName
      */
     private ?string $sourceName = null;
 
@@ -339,7 +339,7 @@ class Test
         return $this->sourceName;
     }
 
-    public function setSourceName(string $value): void
+    public function setSourceName(?string $value): void
     {
         $this->sourceName = $value;
     }
