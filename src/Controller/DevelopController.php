@@ -847,7 +847,7 @@ class DevelopController extends AbstractController
      * For development
      * @Route("/table/", name=".table")
      */
-    public function table()
+    public function table(): \Symfony\Component\HttpFoundation\Response
     {
         $professions = $this->loadProfessions();
 

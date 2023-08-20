@@ -200,7 +200,7 @@ class PartnerApiControllerTest extends WebTestCase
     private function requestToken(array $requestParams): string
     {
         $this->client->request('POST', "/partner/api/token/", $requestParams);
-        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertEquals(\Symfony\Component\HttpFoundation\Response::HTTP_OK, $this->client->getResponse()->getStatusCode());
         return $this->parseToken($this->client->getResponse()->getContent());
     }
 
