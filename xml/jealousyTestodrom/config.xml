@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <!-- Минимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Уровень ревновости"
+                   label-en="Jealousy level"/>
+            <conditions>
+                <condition var="SUM" operator="меньше_или_равно" value="10"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас низкий уровень ревнивости</h3>
+                    <p>
+                        Вы не стремитесь контролировать партнера, вы уверены в нем и
+                        его чувствах. Вам не нужна постоянная демонстрация вашей значимости для другого, вам достаточно
+                        собственной уверенности в себе. Вы строите отношения с партнером, доверяя ему и уважая его право
+                        на свободу. Ревность не играет разрушительной роли в ваших отношениях с близкими людьми. Вы – не
+                        ревнивец.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a low level of jealousy</h3>
+                    <p>
+                        You don't strive to control your partner; you trust them and
+                        their feelings. You don't require constant demonstrations of your significance to others; your
+                        self-confidence is enough for you. You build your relationship with your partner based on trust
+                        and respect for their freedom. Jealousy doesn't play a destructive role in your relationships
+                        with loved ones. You are not a jealous person.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Средний уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Уровень ревновости"
+                   label-en="Jealousy level"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="10"/>
+                <condition var="SUM" operator="меньше_или_равно" value="30"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас средний уровень ревнивости</h3>
+                    <p>
+                        То и дело случаются вспышки ревности, однако назвать вас
+                        неисправимым ревнивцем нельзя. В чем причина ревности? Возможно, вас провоцируют. Возможно, вам
+                        не хватает уверенности в себе и вы нуждаетесь в «присвоении» и контроле партнера, постоянно
+                        ищете подтверждений, что вы для него значимый человек. Чем выше балл по тесту, тем чаще вы
+                        испытываете уколы ревности, тем выше вероятность испытать на себе ее разрушительную силу, тем
+                        больше шансов вспышками ревности разрушить важные для вас отношения. Рекомендуем задуматься, в
+                        чем именно причина вашей ревнивости, особенно если ваш показатель превышает 20 баллов.
+                        Постарайтесь обратиться к грамотному специалисту-психологу для консультации. Это поможет вам
+                        стать гармоничнее и улучшить отношения со значимыми для вас людьми.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a moderate level of jealousy</h3>
+                    <p>
+                        There are occasional bursts of jealousy, but you can't be
+                        labeled as irreversibly jealous. What's causing your jealousy? Perhaps you're being provoked.
+                        Maybe you lack self-assurance and need to "own" and control your partner, constantly seeking
+                        validation that you're significant to them. The higher your score on the test, the more often
+                        you experience pangs of jealousy, the higher the likelihood of experiencing its destructive
+                        force, and the more chances there are that jealousy will ruin relationships important to you. We
+                        recommend reflecting on the root cause of your jealousy, especially if your score exceeds 20
+                        points. Consider seeking advice from a competent psychologist for consultation. This can help
+                        you become more harmonious and improve your relationships with those who are important to you.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Максимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Уровень ревновости"
+                   label-en="Jealousy level"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="30"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>Вы хронический, ярый ревнивец, у вас высокий уровень ревнивости</h3>
+                    <p>
+                        Вы нуждаетесь в том, чтобы
+                        постоянно контролировать партнера, знать о нем все, даже самое тайное, отслеживать каждую минуту
+                        его жизни, ограничивать его общение с другими людьми. В противном случае вы начинаете
+                        сомневаться и в партнере, в его любви и привязанности, и в самом себе, в собственной ценности
+                        для близкого человека. Вам необходимы постоянные подтверждения, что вы нужны и важны другому,
+                        без этого вы страдаете и грустите либо гневаетесь и раздражаетесь. Возможно, вы не
+                        ограничиваетесь только вербальной (словесной) агрессией, выражая недовольство поведением
+                        партнера, но прибегаете иногда и к физической агрессии, насилию. Ревность порождает бесконечные
+                        конфликты и создает угрозу вашим отношениям с близкими людьми и вашей личности в целом.
+                        Рекомендуем вам поработать со своей ревнивостью, понять ее причины и поискать способы от нее
+                        избавиться. Желательно обратиться к специалисту-психологу за грамотной консультацией.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You are a chronic, intense jealous person with a high level of jealousy</h3>
+                    <p>
+                        You constantly need to
+                        control your partner, know everything about them, even their deepest secrets, monitor every
+                        moment of their life, and limit their interactions with others. Otherwise, you start doubting
+                        your partner, their love and attachment, and even your own value to them. You require constant
+                        validation that you are needed and important to them; without it, you suffer and become sad, or
+                        you become angry and irritated. Perhaps you don't limit yourself to just verbal aggression,
+                        expressing dissatisfaction with your partner's behavior, but occasionally resort to physical
+                        aggression and violence.
+                    </p>
+                    <p>Jealousy spawns endless conflicts and poses a threat to your relationships with loved ones and
+                        your overall well-being. We recommend working on your jealousy, understanding its causes, and
+                        seeking ways to overcome it. It's advisable to consult a qualified psychologist for guidance.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>

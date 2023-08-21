@@ -173,7 +173,7 @@ final readonly class ConfigParser
         }
         $percentVar = $scaleNode->attr('percentVar');
         $showVar = $scaleNode->attr('showVar');
-        $maxVal = (int)$scaleNode->attr('maxVal');
+        $maxVal = (int)$scaleNode->attr('showMaxVal');
 
         return new Scale($percentVar, $showVar, $maxVal, $label);
     }

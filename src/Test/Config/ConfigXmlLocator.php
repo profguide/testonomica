@@ -15,6 +15,12 @@ final readonly class ConfigXmlLocator
 
     public function resolveByTest(Test $test): string
     {
+        if ($test->getSourceName()) {
+            $location = $this->kernel->getProjectDir() . "/xml/{$test->getSourceName()}/config.xml";
+            if (file_exists($location)) {
+                return $location;
+            }
+        }
         return $this->kernel->getProjectDir() . "/xml/{$test->getSlug()}/config.xml";
     }
 }

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+Этот тест меня навёл на мысль, что можно сделать вопросы и ответы зависящими от ответов, данных ранее.
+Первый вопрос - пол. Дальше в зависимости от пола задавать правильную формулировку.
+Например, так:
+<item id="sex">...</item>
+<item id="1">
+    <name>
+        <ru>
+            <opt cond="q_sex:woman">Если он задерживается без предупреждения, я извожусь от подозрений</opt>
+            <opt cond="q_sex:man">Если она задерживается без предупреждения, я извожусь от подозрений</opt>
+        </ru>
+    </name>
+</item>
+Можно не ограничиваться только формулировой, а ещё и сами вопросы одбирать. Но неясно, как потом считать такое в AutoCalculator.
+Не станет ли это головной болью. Если два вопроса имеют один id, то можно, но иметь один id на двоих - плохая идея. Очень.
+Можно добавить поле kind, с одним значением на двоих, например, 1. Но что если в будущем понадобится сделать тест,
+в котором в зависимости от условий, вопросы будут совсем про разное и даже их количество будет разным.
+<item id="1" cond="q_sex:woman">
+    <name>
+        <ru>
+            Если он задерживается без предупреждения, я извожусь от подозрений
+        </ru>
+    </name>
+</item>
+-->
+<quiz>
+    <items>
+        <item id="1">
+            <name>
+                <ru>У близких людей не может быть никаких тайн друг от друга</ru>
+                <en>Close people cannot have any secrets from each other</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="2">
+            <name>
+                <ru>Если он(а) задерживается без предупреждения, я извожусь от подозрений</ru>
+                <en>If they delay without warning, I torment myself with suspicions</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="3">
+            <name>
+                <ru>Если он(а) забывает выполнить мою просьбу, значит, он(а) мало думает обо мне</ru>
+                <en>If they forget to fulfill my request, it means they don't think much of me</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>
+                <ru>Я проверяю его(её) телефон, чтобы знать, с кем он(а) общается</ru>
+                <en>I check their phone to know who they're communicating with</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="5">
+            <name>
+                <ru>Если он(а) скрывает от меня некоторые свои знакомства, значит, есть, что скрывать</ru>
+                <en>If they hide some of their acquaintances from me, there must be something to hide</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="6">
+            <name>
+                <ru>Мне кажется, он(а) то и дело говорит мне неправду о том, как провёл(провела) день</ru>
+                <en>It seems like they're constantly telling me lies about how they spent their day</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>
+                <ru>Если он(а) возвращается после вечеринки очень поздно, я не могу удержаться от обвинений</ru>
+                <en>If they come back very late after a party, I can't help but accuse them</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>
+                <ru>Когда он(а) в шутку флиртует с друзьями, меня одолевают мучительные сомнения в том, что это
+                    действительно шутка
+                </ru>
+                <en>When they playfully flirt with friends, agonizing doubts arise in me whether it's really a joke</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>
+                <ru>Если он(а) начинает сильнее обычного ухаживать за собой, меня это сильно настораживает</ru>
+                <en>If they start taking care of themselves more than usual, it greatly alarms me</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="10">
+            <name>
+                <ru>Я готов(а) нанять детектива, лишь бы точно знать, изменяет он(а) мне или нет</ru>
+                <en>I'm ready to hire a detective just to know for sure whether they're cheating on me or not</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="11">
+            <name>
+                <ru>Когда он(а) уходит на вечеринку без меня, я места себе не нахожу, представляя его(её)
+                    окруженным(окружённой) поклонницами(поклонниками)
+                </ru>
+                <en>When they go to a party without me, I can't help but imagine them surrounded by admirers</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>
+                <ru>Мне трудно удержаться от агрессивных нападок, когда мне кажется, что он(а) заигрывает с другими</ru>
+                <en>It's hard for me to restrain aggressive impulses when I think they're flirting with others</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>
+                <ru>Когда он(а) шушукается по телефону, мне неудержимо хочется подслушать, о чем он(а) секретничает</ru>
+                <en>When they whisper on the phone, I can't resist the urge to eavesdrop on what they're whispering
+                    about
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="14">
+            <name>
+                <ru>Я не могу заснуть от мыслей о возможной измене</ru>
+                <en>I can't fall asleep due to thoughts of possible infidelity</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>
+                <ru>Иногда мне хочется пойти следом за ней(ним) и проверить, куда он(а) ходит и чем занимается</ru>
+                <en>Sometimes I feel like following them to see where they're going and what they're doing</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>
+                <ru>Меня просто трясет, когда мне кажется, что он(а) от меня что-то скрывает</ru>
+                <en>I get shaken up when I think they're hiding something from me</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>
+                <ru>Если он(а) забывает поздравить меня с важным событием, я начинаю думать, что он(а) меня не любит
+                </ru>
+                <en>If they forget to congratulate me on an important event, I start thinking they don't care about me
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="18">
+            <name>
+                <ru>У нас вспыхивают ссоры, когда я вижу, что он(а) принимает ухаживания посторонних</ru>
+                <en>We have arguments when I see them receiving attention from others</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="19">
+            <name>
+                <ru>Он(а) не должна ездить в отпуск без меня</ru>
+                <en>They shouldn't go on vacation without me</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="20">
+            <name>
+                <ru>Мне хочется любым способом выпытать правду, если он(а) отказывается рассказать, кто ему(ей) звонил
+                </ru>
+                <en>I want to find out the truth by any means if they refuse to tell me who called them</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Согласен(на)</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Отчасти согласен(на)</ru>
+                    <en>Partially agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен(на)</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
+
+
