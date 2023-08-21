@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <!-- Минимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Индекс рисковости" label-en="Risk index"/>
+            <conditions>
+                <condition var="SUM" operator="меньше_или_равно" value="10"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас низкий уровень склонности к физическому риску</h3>
+                    <p>
+                        Вы стараетесь избегать любых ситуаций,
+                        которые могут причинить вам телесный ущерб, привести к тому, что вы поранитесь, заболеете,
+                        потеряетесь в незнакомом месте, столкнетесь с насилием. Вероятно, вам не стоит работать там, где
+                        высока вероятность физического риска (пожарники, полицейские, спасатели, врачи, электрики,
+                        высотники и т.п.). Зато в обыденной жизни вы обеспечиваете себе низкую вероятность травм и
+                        подобных неприятных происшествий.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a low level of tendency toward physical risk</h3>
+                    <p>
+                        You strive to avoid any situations that
+                        could cause you physical harm, lead to injuries, illnesses, getting lost in unfamiliar places,
+                        or encountering violence. It's likely not advisable for you to work in occupations with a high
+                        likelihood of physical risk (such as firefighters, police officers, rescuers, doctors,
+                        electricians, climbers, etc.). However, in your everyday life, you ensure a low probability of
+                        injuries and similar unpleasant incidents.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Средний уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Индекс рисковости" label-en="Risk index"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="10"/>
+                <condition var="SUM" operator="меньше_или_равно" value="30"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас средний уровень склонности к физическому риску</h3>
+                    <p>
+                        При необходимости вы можете рискнуть и «порезаться», но это не значит, что вы бездумно
+                        подвергаете себя физической опасности. Вы готовы рискнуть своим физическим благополучием
+                        прицельно, ради успеха, выгоды, конкретной намеченной цели. Нельзя сказать, что вы человек,
+                        который постоянно ходит с забинтованной ногой, в синяках и порезах, которого постоянно
+                        разыскивают в незнакомом лесу и лечат от болезней, которых можно было избежать. В целом все
+                        нормально.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a moderate level of tendency toward physical risk</h3>
+                    <p>
+                        When necessary, you are willing to take calculated risks and "get scratched," but it doesn't
+                        mean you recklessly expose yourself to physical danger. You're willing to risk your physical
+                        well-being purposefully for success, benefit, or specific targeted goals. It can't be said that
+                        you're someone who constantly walks around with a bandaged leg, bruises, and cuts, always
+                        getting lost in unfamiliar woods and being treated for illnesses that could have been avoided.
+                        Overall, everything is normal.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Максимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Индекс рисковости" label-en="Risk index"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="30"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас высокий уровень склонности к физическому риску</h3>
+                    <p>
+                        Вы либо не придаете особого значения своей
+                        физической безопасности, либо не задумываетесь о возможных угрозах, либо не совсем верно
+                        оцениваете уровень возможного ущерба. Не называют ли вас «ходячим несчастьем»? Постарайтесь
+                        задуматься, почему вы часто получаете «шрамы» и можете ли вы стать внимательнее к потенциальным
+                        физическим угрозам. Возможно, вам нравится ощущение физической опасности, которое вас заставляет
+                        снова и снова «превышать скорость»? В этом случае изменить себя вряд ли получится, но
+                        внимательнее к своей безопасности можно стать. Возможно, вам стоит обратиться за консультацией к
+                        специалисту-психологу.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a high level of tendency toward physical risk</h3>
+                    <p>
+                        You either don't give much importance to
+                        your physical safety, don't think about potential threats, or don't accurately assess the level
+                        of possible harm. Are you sometimes referred to as a "walking disaster"? Try to reflect on why
+                        you often end up with "scars" and whether you can become more attentive to potential physical
+                        risks. Perhaps you enjoy the sensation of physical danger, which makes you repeatedly "push the
+                        limits"? In that case, changing yourself might be difficult, but becoming more mindful of your
+                        safety is possible. It might be worth seeking advice from a psychologist for guidance.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>

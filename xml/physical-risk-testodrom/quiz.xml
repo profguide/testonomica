@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>
+                <ru>Вы моете фрукты кипяченой водой?</ru>
+                <en>Do you wash fruits with boiling water?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Я иногда вообще не мою фрукты</ru>
+                    <en>I sometimes don't wash fruits at all</en>
+                </option>
+                <option value="1">
+                    <ru>Нет, мою обычной водой</ru>
+                    <en>No, I wash them with regular water</en>
+                </option>
+                <option value="0">
+                    <ru>Да, мою только кипяченой водой</ru>
+                    <en>Yes, I wash them only with boiling water</en>
+                </option>
+            </options>
+        </item>
+        <item id="2">
+            <name>
+                <ru>Вы пристегиваетесь ремнем, если едете на заднем сиденье автомобиля?</ru>
+                <en>Do you fasten your seatbelt when riding in the back seat of a car?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="3">
+            <name>
+                <ru>Как вы реагируете на инструктаж пассажиров перед вылетом самолета?</ru>
+                <en>How do you react to the passenger briefing before a flight?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Обычно не вслушиваюсь</ru>
+                    <en>Usually I don't pay much attention</en>
+                </option>
+                <option value="1">
+                    <ru>Слушаю вполуха</ru>
+                    <en>I listen halfheartedly</en>
+                </option>
+                <option value="0">
+                    <ru>Внимательно слушаю, смотрю и стараюсь запомнить</ru>
+                    <en>I listen attentively, watch, and try to remember</en>
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>
+                <ru>Как вы поступаете обычно, если на пути встретился неширокий, но бурный ручей?</ru>
+                <en>What do you usually do if you encounter a narrow but swift stream on your way?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Тут же перехожу вброд или перепрыгиваю через него</ru>
+                    <en>I immediately ford it or jump over it</en>
+                </option>
+                <option value="1">
+                    <ru>Ищу поблизости четко обозначенный брод</ru>
+                    <en>I look for a clearly marked ford nearby</en>
+                </option>
+                <option value="0">
+                    <ru>Предпочитаю сделать крюк и найти мостик или обходной путь</ru>
+                    <en>I prefer to detour and find a bridge or alternative path</en>
+                </option>
+            </options>
+        </item>
+        <item id="5">
+            <name>
+                <ru>Где вы предпочитаете купаться на природе?</ru>
+                <en>Where do you prefer to swim in nature?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>В любом месте, которое кажется мне подходящим</ru>
+                    <en>In any place that seems suitable to me</en>
+                </option>
+                <option value="1">
+                    <ru>В любом хорошо знакомом месте, даже без оборудованного пляжа</ru>
+                    <en>In any well-known place, even without a designated beach</en>
+                </option>
+                <option value="0">
+                    <ru>Только в специальном месте, приспособленном для купания</ru>
+                    <en>Only in a designated area suitable for swimming</en>
+                </option>
+            </options>
+        </item>
+        <item id="6">
+            <name>
+                <ru>Вы заплываете далеко от берега, «за буйки», когда плаваете на открытой воде?</ru>
+                <en>Do you swim far from the shore, "beyond the buoys," when swimming in open water?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Почти всегда</ru>
+                    <en>Almost always</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Никогда</ru>
+                    <en>Never</en>
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>
+                <ru>Случается, что вы гуляете в одиночку по незнакомому лесу?</ru>
+                <en>Do you sometimes walk alone in an unfamiliar forest?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, люблю бродить по лесу в одиночку</ru>
+                    <en>Yes, I enjoy wandering alone in the forest</en>
+                </option>
+                <option value="1">
+                    <ru>Да, но только если нет компании</ru>
+                    <en>Yes, but only if there is no company</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, никогда</ru>
+                    <en>No, never</en>
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>
+                <ru>Если у вас дома заискрила розетка, как вы обычно поступаете?</ru>
+                <en>If a socket sparks at your home, what do you usually do?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Продолжаю пользоваться этой розеткой, пока совсем не сломается</ru>
+                    <en>I keep using the socket until it's completely broken</en>
+                </option>
+                <option value="1">
+                    <ru>Самостоятельно чиню розетку</ru>
+                    <en>I fix the socket myself</en>
+                </option>
+                <option value="0">
+                    <ru>Немедленно вызываю мастера-электрика</ru>
+                    <en>I immediately call an electrician</en>
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>
+                <ru>Если в вас вопьется (или впивался ранее) клещ, как вы поступите (или уже поступали)?</ru>
+                <en>If a tick embeds itself in you (or has already done so), what will you do (or have done)?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Удалю клеща самостоятельно и забуду о нем</ru>
+                    <en>I will remove the tick myself and forget about it</en>
+                </option>
+                <option value="1">
+                    <ru>Удалю клеща самостоятельно и отнесу на анализ</ru>
+                    <en>I will remove the tick myself and take it for analysis</en>
+                </option>
+                <option value="0">
+                    <ru>Обращусь в поликлинику</ru>
+                    <en>I will seek medical help at the clinic</en>
+                </option>
+            </options>
+        </item>
+        <item id="10">
+            <name>
+                <ru>Вы надеваете защитные перчатки при работе с бытовой химией (очистители, растворители и т.п.)?</ru>
+                <en>Do you wear protective gloves when working with household chemicals (cleaners, solvents, etc.)?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Практически никогда</ru>
+                    <en>Almost never</en>
+                </option>
+                <option value="1">
+                    <ru>Редко</ru>
+                    <en>Rarely</en>
+                </option>
+                <option value="0">
+                    <ru>Да, всегда</ru>
+                    <en>Yes, always</en>
+                </option>
+            </options>
+        </item>
+        <item id="11">
+            <name>
+                <ru>Вы носили медицинскую маску в общественных местах в разгар ковидной эпидемии?</ru>
+                <en>Did you wear a medical mask in public places during the height of the COVID epidemic?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Нет, не считаю это обязательным</ru>
+                    <en>No, I don't consider it necessary</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Всегда, обязательно</ru>
+                    <en>Always, without fail</en>
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>
+                <ru>Что вы делаете, если случайно поранитесь, а в ранку попадет земля?</ru>
+                <en>What do you do if you accidentally injure yourself and dirt gets into the wound?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Промываю водой, при необходимости бинтую, этого достаточно</ru>
+                    <en>I rinse with water, if necessary, I bandage it; that's enough</en>
+                </option>
+                <option value="1">
+                    <ru>Промываю, дезинфицирую и бинтую рану в домашних условиях</ru>
+                    <en>I rinse, disinfect, and bandage the wound at home</en>
+                </option>
+                <option value="0">
+                    <ru>Обязательно обращаюсь к медикам</ru>
+                    <en>I definitely seek medical attention</en>
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>
+                <ru>Вы соблюдаете назначенный постельный режим, если заболели гриппом?</ru>
+                <en>Do you follow the prescribed bed rest when you have the flu?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Нет, обхожусь без этого</ru>
+                    <en>No, I manage without it</en>
+                </option>
+                <option value="1">
+                    <ru>Соблюдаю, только если сильная слабость</ru>
+                    <en>I follow it only if I'm very weak</en>
+                </option>
+                <option value="0">
+                    <ru>Да, строго соблюдаю</ru>
+                    <en>Yes, I strictly follow it</en>
+                </option>
+            </options>
+        </item>
+        <item id="14">
+            <name>
+                <ru>Вы читаете инструкции к новым, незнакомым приборам?</ru>
+                <en>Do you read the instructions for new, unfamiliar devices?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Нет, полагаюсь на свои знания и интуицию</ru>
+                    <en>No, I rely on my knowledge and intuition</en>
+                </option>
+                <option value="1">
+                    <ru>Только самое главное</ru>
+                    <en>Only the most important parts</en>
+                </option>
+                <option value="0">
+                    <ru>Да, внимательно от начала до конца</ru>
+                    <en>Yes, I read them thoroughly from start to finish</en>
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>
+                <ru>Вы опасаетесь выходить на улицу при грозе с сильным ветром, громом и молнией?</ru>
+                <en>Do you hesitate to go outside during a thunderstorm with strong wind, thunder, and lightning?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Нет, не опасаюсь, в этом нет ничего особенного</ru>
+                    <en>No, I'm not afraid, there's nothing special about it</en>
+                </option>
+                <option value="1">
+                    <ru>Выхожу только при острой необходимости</ru>
+                    <en>I go out only if absolutely necessary</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, никогда не выхожу</ru>
+                    <en>No, I never go out</en>
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>
+                <ru>Если вам предлагают попробовать новую, незнакомую еду, о которой вы почти ничего не знаете, как вы
+                    поступаете?
+                </ru>
+                <en>If you're offered to try new, unfamiliar food that you know almost nothing about, what do you do?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Пробую с большим интересом</ru>
+                    <en>I try it with great curiosity</en>
+                </option>
+                <option value="1">
+                    <ru>Сначала советуюсь со знающими людьми</ru>
+                    <en>I first consult with knowledgeable people</en>
+                </option>
+                <option value="0">
+                    <ru>Отказываюсь от такого предложения</ru>
+                    <en>I decline such an offer</en>
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>
+                <ru>Как вы обычно поступаете, если сомневаетесь, что выключили газ под кастрюлькой, уходя из дома?</ru>
+                <en>What do you usually do if you're unsure whether you turned off the gas under a pot before leaving
+                    home?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Оставляю все как есть до своего возвращения</ru>
+                    <en>I leave everything as is until I return</en>
+                </option>
+                <option value="1">
+                    <ru>Стараюсь «вызвонить» соседа, который сможет все проверить</ru>
+                    <en>I try to "call" a neighbor who can check everything</en>
+                </option>
+                <option value="0">
+                    <ru>Обязательно возвращаюсь, чтобы проверить</ru>
+                    <en>I definitely return to check</en>
+                </option>
+            </options>
+        </item>
+        <item id="18">
+            <name>
+                <ru>Как вы относитесь к альпинистам, которые совершают восхождения на крутые горные вершины?</ru>
+                <en>What is your attitude towards mountaineers who climb steep mountain peaks?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Я сам/а занимаюсь горным альпинизмом</ru>
+                    <en>I myself engage in mountain climbing</en>
+                </option>
+                <option value="1">
+                    <ru>Уважаю таких альпинистов, но это не мое</ru>
+                    <en>I respect such mountaineers, but it's not for me</en>
+                </option>
+                <option value="0">
+                    <ru>Считаю таких людей не вполне адекватными</ru>
+                    <en>I consider such people not entirely reasonable</en>
+                </option>
+            </options>
+        </item>
+        <item id="19">
+            <name>
+                <ru>Вы пытаетесь унять драку хорошо знакомых вам людей?</ru>
+                <en>Do you try to break up a fight between people you know well?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Пытаюсь разнять, оттащить дерущихся друг от друга</ru>
+                    <en>I try to separate them, pull them apart</en>
+                </option>
+                <option value="1">
+                    <ru>Стараюсь унять дерущихся разговорами</ru>
+                    <en>I try to calm them down with words</en>
+                </option>
+                <option value="0">
+                    <ru>Никогда не вмешиваюсь в драки</ru>
+                    <en>I never get involved in fights</en>
+                </option>
+            </options>
+        </item>
+        <item id="20">
+            <name>
+                <ru>Вам нравится аттракцион «американские горки»?</ru>
+                <en>Do you like the roller coaster attraction?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, нравится, по возможности катаюсь</ru>
+                    <en>Yes, I like it and ride whenever possible</en>
+                </option>
+                <option value="1">
+                    <ru>Раз попробовал/а прокатиться, больше не буду</ru>
+                    <en>Tried it once, won't ride it again</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, и даже пробовать не хочется</ru>
+                    <en>No, and don't even want to try</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
+
+
