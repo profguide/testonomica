@@ -7,15 +7,15 @@
                 <en>Are you called a sensitive person?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -27,15 +27,15 @@
                 <en>Do you find yourself constantly recalling hurtful words?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -47,15 +47,15 @@
                 <en>Is it difficult for you to forgive a perceived offense?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -67,15 +67,15 @@
                 <en>Do you feel that people offend you without any reason?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -87,15 +87,15 @@
                 <en>Do you have trouble falling asleep while remembering something that hurt you?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -107,15 +107,15 @@
                 <en>Do words or situations that leave others indifferent affect you?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -127,15 +127,15 @@
                 <en>Do others perceive you as a sensitive and vulnerable person?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -147,15 +147,15 @@
                 <en>Do you feel hurt if you're not given extra attention?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -167,15 +167,15 @@
                 <en>Do you experience situations where people treat you unfairly?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -187,15 +187,15 @@
                 <en>Do you get upset if your opinions are not listened to?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -207,15 +207,15 @@
                 <en>Does your mood sometimes instantly sour?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -227,15 +227,15 @@
                 <en>Do minor misunderstandings sometimes result in deep hurt for you?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -247,15 +247,15 @@
                 <en>Does it irritate you when people make fun of you?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -267,15 +267,15 @@
                 <en>Do you feel upset because others consider your concerns to be "mosquito bites"?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -287,15 +287,15 @@
                 <en>Do you feel burdened by the thought that you're not respected enough?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -307,15 +307,15 @@
                 <en>Are there times when you feel hurt to the point of tears, yet others don't notice?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -327,15 +327,15 @@
                 <en>Do you sometimes feel a lingering desire to seek revenge on someone who offended you?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -347,15 +347,15 @@
                 <en>Do you withdraw into yourself when you've been hurt at a social gathering?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -367,15 +367,15 @@
                 <en>Do you frequently analyze your words, feelings, and emotions?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
@@ -387,15 +387,15 @@
                 <en>Do you experience instances where you're unfairly criticized?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Часто</ru>
                     <en>Often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Редко</ru>
                     <en>Rarely</en>
                 </option>
