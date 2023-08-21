@@ -63,7 +63,9 @@ class TestType extends AbstractType
                 'multiple' => true,
                 'expanded' => false,
                 'by_reference' => false,
+                'required' => false,
                 'choice_label' => 'name',
+                'label' => 'Авторы'
             ])
 //            ->add('authors', ChoiceType::class, [
 //                'choices' => [

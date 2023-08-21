@@ -56,7 +56,7 @@ final class TestsController extends AbstractController
     #[Route('/admin/tests/edit?id={id}', name: 'admin.tests.edit')]
     public function edit(int $id, Request $request): Response
     {
-        $test = $this->tests->findOneById($id) ?? $this->createNotFoundException();
+        $test = $this->tests->findOneById($id) ?? throw $this->createNotFoundException();
 
         $form = $this->createForm(TestType::class, $test);
         $form->handleRequest($request);
