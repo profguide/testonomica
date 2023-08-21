@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>
+                <ru>Случалось ли, что вам не возвращали деньги, которые вы одолжили?</ru>
+                <en>Has it ever happened that money you lent was not returned?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, несколько раз не возвращали</ru>
+                    <en>Yes, it has happened several times</en>
+                </option>
+                <option value="1">
+                    <ru>Такое было один раз</ru>
+                    <en>It happened once</en>
+                </option>
+                <option value="0">
+                    <ru>Никогда</ru>
+                    <en>Never</en>
+                </option>
+            </options>
+        </item>
+        <item id="2">
+            <name>
+                <ru>Вы точно знаете, сколько у вас денег «в кошельке» (наличными, на карте)?</ru>
+                <en>Do you know exactly how much money you have in your wallet (cash, on your card)?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Обычно нет</ru>
+                    <en>Usually not</en>
+                </option>
+                <option value="1">
+                    <ru>Знаю приблизительно</ru>
+                    <en>I know approximately</en>
+                </option>
+                <option value="0">
+                    <ru>Да, всегда точно знаю</ru>
+                    <en>Yes, I always know exactly</en>
+                </option>
+            </options>
+        </item>
+        <item id="3">
+            <name>
+                <ru>Вы совершаете спонтанно покупки, на которые денег в вашем текущем бюджете не предусмотрено?</ru>
+                <en>Do you make spontaneous purchases that aren't budgeted in your current budget?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>То и дело случается</ru>
+                    <en>It happens from time to time</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+                <option value="0">
+                    <ru>Никогда</ru>
+                    <en>Never</en>
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>
+                <ru>Вы готовы взять в банке кредит на значительную сумму, не зная точно, из каких средств будете
+                    отдавать?
+                </ru>
+                <en>Are you willing to take a significant loan from a bank without knowing exactly how you'll repay
+                    it?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, уже приходилось так поступать</ru>
+                    <en>Yes, I've had to do that before</en>
+                </option>
+                <option value="1">
+                    <ru>Да, но пока такого со мной не случалось</ru>
+                    <en>Yes, but I haven't been in such a situation yet</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="5">
+            <name>
+                <ru>Вы вкладывали деньги в финансовые организации (банки, фонды и т.п.), которые впоследствии
+                    разорились?
+                </ru>
+                <en>Have you invested money in financial organizations (banks, funds, etc.) that later went bankrupt?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, и деньги пропали</ru>
+                    <en>Yes, and the money was lost</en>
+                </option>
+                <option value="1">
+                    <ru>Да, но деньги удалось спасти</ru>
+                    <en>Yes, but the money was saved</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, никогда</ru>
+                    <en>No, never</en>
+                </option>
+            </options>
+        </item>
+        <item id="6">
+            <name>
+                <ru>Вам случалось попадать в ловушку телефонных мошенников, понеся потери пусть и на самую
+                    незначительную сумму?
+                </ru>
+                <en>Have you fallen victim to telephone scammers, incurring losses even if it's a small amount?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, несколько раз</ru>
+                    <en>Yes, several times</en>
+                </option>
+                <option value="1">
+                    <ru>Да, единожды</ru>
+                    <en>Yes, once</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, никогда</ru>
+                    <en>No, never</en>
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>
+                <ru>Насколько подробно вы читаете договор с банком, организацией по продаже товаров, оказанию услуг?
+                </ru>
+                <en>How thoroughly do you read contracts with banks, organizations for selling goods, or providing
+                    services?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Доверяю составителям и подписываю, практически не вчитываясь</ru>
+                    <en>I trust the creators and sign without closely reading</en>
+                </option>
+                <option value="1">
+                    <ru>Читаю бегло, просматриваю основные пункты</ru>
+                    <en>I read quickly, scan the main points</en>
+                </option>
+                <option value="0">
+                    <ru>Читаю полностью, включая примечания мелким шрифтом</ru>
+                    <en>I read it thoroughly, including fine print notes</en>
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>
+                <ru>Вы выясняете условия возврата товара при оформлении покупки (в офлайн-магазине, при заказе через
+                    интернет)?
+                </ru>
+                <en>Do you inquire about the return conditions when making a purchase (in a physical store, when
+                    ordering online)?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Обычно не выясняю</ru>
+                    <en>I usually don't inquire</en>
+                </option>
+                <option value="1">
+                    <ru>Да, в некоторых случаях (например, дорогая покупка)</ru>
+                    <en>Yes, in some cases (e.g. expensive purchase)</en>
+                </option>
+                <option value="0">
+                    <ru>Да, обязательно</ru>
+                    <en>Yes, always</en>
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>
+                <ru>Вы ведете учет своих расходов?</ru>
+                <en>Do you keep track of your expenses?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Нет, не трачу на это время</ru>
+                    <en>No, I don't spend time on that</en>
+                </option>
+                <option value="1">
+                    <ru>Стараюсь, но не всегда получается</ru>
+                    <en>I try, but it doesn't always work out</en>
+                </option>
+                <option value="0">
+                    <ru>Да, регулярно</ru>
+                    <en>Yes, regularly</en>
+                </option>
+            </options>
+        </item>
+        <item id="10">
+            <name>
+                <ru>Вы умеете отличить подлинную денежную купюру номиналом в 5 тысяч рублей от фальшивой?</ru>
+                <en>Can you distinguish a genuine banknote with a denomination of 5,000 rubles from a counterfeit one?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Нет, не знаю основных признаков подлинности купюр</ru>
+                    <en>No, I don't know the basic authenticity features of banknotes</en>
+                </option>
+                <option value="1">
+                    <ru>Да, но только в случае явной подделки, знаю один-два признака подлинности</ru>
+                    <en>Yes, but only in the case of obvious forgery, I know one or two authenticity features</en>
+                </option>
+                <option value="0">
+                    <ru>Да, легко</ru>
+                    <en>Yes, easily</en>
+                </option>
+            </options>
+        </item>
+        <item id="11">
+            <name>
+                <ru>Вы покупаете лотерейные билеты (спортлото, мгновенные, иные)?</ru>
+                <en>Do you buy lottery tickets (sports lottery, instant tickets, etc.)?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, часто</ru>
+                    <en>Yes, often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Никогда</ru>
+                    <en>Never</en>
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>
+                <ru>Бывает ли, что вы превышаете лимит своих месячных расходов?</ru>
+                <en>Do you sometimes exceed your monthly spending limit?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, частенько</ru>
+                    <en>Yes, quite often</en>
+                </option>
+                <option value="1">
+                    <ru>В порядке исключения</ru>
+                    <en>On rare occasions</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, никогда</ru>
+                    <en>No, never</en>
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>
+                <ru>Как вы обычно поступаете, если не хватает денег на дорогую покупку, отпуск, ремонт?</ru>
+                <en>What do you usually do if you don't have enough money for a big purchase, vacation, or repair?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Стараюсь занять денег (взять в долг, оформить кредит)</ru>
+                    <en>I try to borrow money (take a loan, get credit)</en>
+                </option>
+                <option value="1">
+                    <ru>Когда как – либо повременю, либо займу денег</ru>
+                    <en>It depends – either I'll delay the expense or borrow money</en>
+                </option>
+                <option value="0">
+                    <ru>Откладываю траты, стараюсь накопить денег</ru>
+                    <en>I postpone the expenses, try to save money</en>
+                </option>
+            </options>
+        </item>
+        <item id="14">
+            <name>
+                <ru>Вы уточняете сроки и условия гарантии на товар, который покупаете?</ru>
+                <en>Do you inquire about the warranty period and conditions for the products you buy?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Не обращаю на это внимание</ru>
+                    <en>I don't pay attention to it</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Да, всегда</ru>
+                    <en>Yes, always</en>
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>
+                <ru>Случалось ли, что у вас крали кошелек/бумажник с деньгами, банковскими картами?</ru>
+                <en>Have you ever had your wallet or purse stolen with money and bank cards?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, к сожалению, неоднократно</ru>
+                    <en>Yes, unfortunately, multiple times</en>
+                </option>
+                <option value="1">
+                    <ru>Да, один-два раза в жизни</ru>
+                    <en>Yes, once or twice in my life</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, никогда</ru>
+                    <en>No, never</en>
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>
+                <ru>Вам нравится спорить на деньги?</ru>
+                <en>Do you enjoy arguing over money?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, это увлекательно</ru>
+                    <en>Yes, it's exciting</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка, под настроение</ru>
+                    <en>Occasionally, when in the mood</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, это бессмысленное занятие</ru>
+                    <en>No, it's a pointless activity</en>
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>
+                <ru>Вы сохраняете чеки при покупке одежды, обуви, бытовой техники и тому подобного?</ru>
+                <en>Do you keep receipts when buying clothes, shoes, appliances, and similar items?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Практически сразу выбрасываю</ru>
+                    <en>I almost immediately throw them away</en>
+                </option>
+                <option value="1">
+                    <ru>Только на очень крупные покупки</ru>
+                    <en>Only for very significant purchases</en>
+                </option>
+                <option value="0">
+                    <ru>Да, обязательно</ru>
+                    <en>Yes, definitely</en>
+                </option>
+            </options>
+        </item>
+        <item id="18">
+            <name>
+                <ru>Представьте, что у вас есть значительная сумма денег, которые вы хотите положить в банк. Какой вид
+                    вложений из всех возможных вариантов вы предпочтете:
+                </ru>
+                <en>Imagine you have a significant amount of money that you want to deposit in a bank. Which type of
+                    investment would you prefer from all the possible options:
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Вклад под наиболее высокие проценты в любом банке</ru>
+                    <en>Deposit with the highest interest rates in any bank</en>
+                </option>
+                <option value="1">
+                    <ru>Не знаю</ru>
+                    <en>I don't know</en>
+                </option>
+                <option value="0">
+                    <ru>Вклад под невысокие проценты в одном из крупнейших банков</ru>
+                    <en>Deposit with lower interest rates in one of the largest banks</en>
+                </option>
+            </options>
+        </item>
+        <item id="19">
+            <name>
+                <ru>Как вы относитесь к страхованию своего жилья?</ru>
+                <en>How do you feel about insuring your home?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Не вижу в этом необходимости</ru>
+                    <en>I don't see the necessity for it</en>
+                </option>
+                <option value="1">
+                    <ru>Не думаю об этом</ru>
+                    <en>I don't think about it</en>
+                </option>
+                <option value="0">
+                    <ru>Страхую, считаю необходимым</ru>
+                    <en>I insure it, I consider it necessary</en>
+                </option>
+            </options>
+        </item>
+        <item id="20">
+            <name>
+                <ru>У вас есть хотя бы маленькая «заначка» – финансовая подушка безопасности на экстренный случай?</ru>
+                <en>Do you have at least a small emergency fund – a financial safety cushion for unexpected
+                    situations?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Нет, не слежу за этим</ru>
+                    <en>No, I don't keep track of this</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда есть – накапливаю и трачу, потом все повторяется</ru>
+                    <en>Sometimes I have it – I accumulate and spend, then it repeats</en>
+                </option>
+                <option value="0">
+                    <ru>Да, стараюсь, чтобы была всегда</ru>
+                    <en>Yes, I try to have it at all times</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
+
+

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <!-- Минимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Индекс рисковости" label-en="Risk index"/>
+            <conditions>
+                <condition var="SUM" operator="меньше_или_равно" value="10"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас низкий уровень склонности к финансовому риску</h3>
+                    <p>
+                        Вы достаточно осторожно обращаетесь с финансами, стараетесь взвешивать возможные риски и
+                        просчитывать последствия. Вы можете быть успешны в профессии, требующей осмотрительности,
+                        спокойной расчетливости, умения прогнозировать и правильно оценивать соотношение выигрышей и
+                        потерь (бухгалтер, экономист, брокер, финансовый консультант). В обыденной жизни вы аккуратно
+                        обращаетесь с финансами и обычно обходитесь без ущерба своему материальному благополучию.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a low level of tendency toward financial risk</h3>
+                    <p>
+                        You handle finances fairly cautiously, strive to weigh potential risks, and calculate
+                        consequences. You could be successful in a profession that requires prudence, calm calculation,
+                        the ability to forecast, and accurate assessment of the balance between gains and losses (such
+                        as an accountant, economist, broker, financial consultant). In your everyday life, you handle
+                        finances carefully and usually manage to avoid harming your financial well-being.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Средний уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Индекс рисковости" label-en="Risk index"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="10"/>
+                <condition var="SUM" operator="меньше_или_равно" value="30"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас средний уровень склонности к финансовому риску</h3>
+                    <p>
+                        Вы контролируете финансовые риски и при необходимости или по желанию можете рискнуть ради
+                        возможного выигрыша. Можете увлечься и проиграть, но это разовые события, в порядке исключения.
+                        Как правило, при угрозе большого проигрыша от риска вы уклоняетесь. Лучший в мире главный
+                        бухгалтер из вас вряд ли получится, но в целом у вас адекватный уровень финансовой рисковости,
+                        не идеальный, но и особых проблем не доставляет.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a moderate level of tendency toward financial risk</h3>
+                    <p>
+                        You control financial risks and can take calculated risks for potential gains when necessary or
+                        desired. You might occasionally get carried away and lose, but these are isolated events and
+                        exceptions. Generally, when faced with the threat of significant loss from a risk, you tend to
+                        avoid it. While you may not become the world's best chief accountant, you have an adequate level
+                        of financial risk-taking. It's not ideal, but it doesn't cause significant problems either.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Максимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Индекс рисковости" label-en="Risk index"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="30"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас высокий уровень склонности к финансовому риску</h3>
+                    <p>
+                        Похоже, вы постоянно попадает впросак и несете финансовые потери. Причины могут быть разными –
+                        банальная небрежность и неорганизованность, недостаточное внимание к текущей ситуации, неумение
+                        прогнозировать развитие событий, пренебрежение к возможным потерям, любовь к острым ощущениям.
+                        Как более точно понять причины? Если высокая финансовая рисковость приносит вам много неудобств
+                        и вы хотите что-то изменить, рекомендуем обратиться к специалисту-психологу.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a high level of tendency toward financial risk</h3>
+                    <p>
+                        It seems that you consistently find yourself in unfavorable situations and experience financial
+                        losses. The reasons can vary – from simple carelessness and disorganization to insufficient
+                        attention to the current situation, inability to predict developments, disregard for potential
+                        losses, or a love for thrills. How can you better understand the reasons? If your high financial
+                        risk-taking is causing you a lot of inconvenience and you want to make a change, it's
+                        recommended to seek advice from a psychologist.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>
