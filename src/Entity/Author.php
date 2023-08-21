@@ -12,7 +12,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 #[ORM\Entity(repositoryClass: AuthorRepository::class)]
 #[ORM\Index(columns: ['slug'])]
 #[UniqueEntity('slug')]
-final class Author
+class Author
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
