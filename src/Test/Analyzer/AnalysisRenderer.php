@@ -182,7 +182,7 @@ class AnalysisRenderer
     {
         // нет переменной - не удовлетворяет
         $naturalValue = self::namedVariableValue($resultData, $condition->varName->value);
-        if (!$naturalValue) {
+        if ($naturalValue === null) {
             return false;
         }
         return $this->compare(value: (int)$naturalValue, referentValue: $condition->value, comparison: $condition->operator);
