@@ -5,7 +5,7 @@
         <scenario>
             <scale percentVar="SCALE" label-ru="Уровень выгорания" label-en="Level of burnout"/>
             <conditions>
-                <condition var="SUM" operator="меньше_или_равно" value="30"/>
+                <condition var="SUM" operator="меньше_или_равно" value="10"/>
             </conditions>
             <text>
                 <ru>
@@ -35,8 +35,8 @@
         <scenario>
             <scale percentVar="SCALE" label-ru="Уровень выгорания" label-en="Level of burnout"/>
             <conditions>
-                <condition var="SUM" operator="больше" value="30"/>
-                <condition var="SUM" operator="меньше_или_равно" value="50"/>
+                <condition var="SUM" operator="больше" value="10"/>
+                <condition var="SUM" operator="меньше_или_равно" value="30"/>
             </conditions>
             <text>
                 <ru>
@@ -68,7 +68,7 @@
         <scenario>
             <scale percentVar="SCALE" label-ru="Уровень выгорания" label-en="Level of burnout"/>
             <conditions>
-                <condition var="SUM" operator="больше" value="50"/>
+                <condition var="SUM" operator="больше" value="30"/>
             </conditions>
             <text>
                 <ru>

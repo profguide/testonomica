@@ -7,15 +7,15 @@
                 <en>What is your usual mood when you go to work?</en>
             </name>
             <options>
-                <option value="1">
+                <option value="0">
                     <ru>Приподнятое</ru>
                     <en>Upbeat</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Ровное, обычное</ru>
                     <en>Neutral, normal</en>
                 </option>
-                <option value="3">
+                <option value="2">
                     <ru>Подавленное</ru>
                     <en>Depressed</en>
                 </option>
@@ -27,15 +27,15 @@
                 <en>How do you feel about colleagues whom you constantly interact with at work?</en>
             </name>
             <options>
-                <option value="1">
+                <option value="0">
                     <ru>Мы одна команда, мне приятно с ними общаться</ru>
                     <en>We are one team, I enjoy communicating with them</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Почти не обращаю на них внимания</ru>
                     <en>I hardly pay attention to them</en>
                 </option>
-                <option value="3">
+                <option value="2">
                     <ru>Вынужденно общаюсь, они меня раздражают</ru>
                     <en>I interact with them reluctantly, they annoy me</en>
                 </option>
@@ -47,15 +47,15 @@
                 <en>Do you keep up with innovations in your profession?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Меня это мало интересует</ru>
                     <en>I'm not very interested in that</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Время от времени</ru>
                     <en>From time to time</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Да, постоянно</ru>
                     <en>Yes, constantly</en>
                 </option>
@@ -67,15 +67,15 @@
                 <en>Are you able to recover from work-related fatigue over the weekends?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Нет, усталость не проходит</ru>
                     <en>No, the fatigue doesn't go away</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Обычно удается</ru>
                     <en>It usually works</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Всегда удается, усталость уходит</ru>
                     <en>It always works, the fatigue goes away</en>
                 </option>
@@ -87,15 +87,15 @@
                 <en>Are you often assigned to find a solution to unexpectedly arisen problems at work?</en>
             </name>
             <options>
-                <option value="1">
+                <option value="0">
                     <ru>Да, часто</ru>
                     <en>Yes, often</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="3">
+                <option value="2">
                     <ru>Нет, это делают другие</ru>
                     <en>No, others handle it</en>
                 </option>
@@ -107,15 +107,15 @@
                 <en>Do you feel deeply upset when there are failures at work?</en>
             </name>
             <options>
-                <option value="1">
+                <option value="0">
                     <ru>Да</ru>
                     <en>Yes</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Нет</ru>
                     <en>No</en>
                 </option>
-                <option value="3">
+                <option value="2">
                     <ru>Мне все равно</ru>
                     <en>I don't really care</en>
                 </option>
@@ -127,15 +127,15 @@
                 <en>Do you feel satisfaction from your work?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Нет, моя работа мне безумно надоела</ru>
                     <en>No, I'm incredibly bored with my job</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Пожалуй, да</ru>
                     <en>Perhaps, yes</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Да, я люблю свою работу</ru>
                     <en>Yes, I love my job</en>
                 </option>
@@ -147,15 +147,15 @@
                 <en>Are you acquiring new professional skills?</en>
             </name>
             <options>
-                <option value="1">
+                <option value="0">
                     <ru>Да, постоянно</ru>
                     <en>Yes, constantly</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Да, но только если без этого не обойтись</ru>
                     <en>Yes, but only if necessary</en>
                 </option>
-                <option value="3">
+                <option value="2">
                     <ru>Стараюсь не тратить на это время</ru>
                     <en>I try not to waste time on it</en>
                 </option>
@@ -167,15 +167,15 @@
                 <en>Would you continue with your current job if you suddenly became a millionaire?</en>
             </name>
             <options>
-                <option value="1">
+                <option value="0">
                     <ru>Да, обязательно</ru>
                     <en>Yes, definitely</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Точно не могу сказать</ru>
                     <en>I can't say for sure</en>
                 </option>
-                <option value="3">
+                <option value="2">
                     <ru>Нет, не вижу в этом смысла</ru>
                     <en>No, I don't see the point</en>
                 </option>
@@ -187,15 +187,15 @@
                 <en>At the end of a vacation, do you feel like you've missed your work?</en>
             </name>
             <options>
-                <option value="1">
+                <option value="0">
                     <ru>Да</ru>
                     <en>Yes</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Когда как</ru>
                     <en>Sometimes</en>
                 </option>
-                <option value="3">
+                <option value="2">
                     <ru>Нет</ru>
                     <en>No</en>
                 </option>
@@ -207,15 +207,15 @@
                 <en>Do you want to radically change your profession?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Да, очень</ru>
                     <en>Yes, very much</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Изредка бывает</ru>
                     <en>Occasionally</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Нет, никогда</ru>
                     <en>No, never</en>
                 </option>
@@ -227,15 +227,15 @@
                 <en>What state is typical for you at the workplace?</en>
             </name>
             <options>
-                <option value="1">
+                <option value="0">
                     <ru>Бодрость, желание как можно больше успеть</ru>
                     <en>Vigor, desire to accomplish as much as possible</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Ровное рабочее настроение</ru>
                     <en>Stable work mood</en>
                 </option>
-                <option value="3">
+                <option value="2">
                     <ru>Скука, усталость</ru>
                     <en>Boredom, fatigue</en>
                 </option>
@@ -247,15 +247,15 @@
                 <en>Would you like your children to have the same profession as yours?</en>
             </name>
             <options>
-                <option value="1">
+                <option value="0">
                     <ru>Да</ru>
                     <en>Yes</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Не знаю</ru>
                     <en>I don't know</en>
                 </option>
-                <option value="3">
+                <option value="2">
                     <ru>Нет</ru>
                     <en>No</en>
                 </option>
@@ -267,15 +267,15 @@
                 <en>Do you want to quit your job?</en>
             </name>
             <options>
-                <option value="1">
+                <option value="0">
                     <ru>Нет, никогда</ru>
                     <en>No, never</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Изредка</ru>
                     <en>Occasionally</en>
                 </option>
-                <option value="3">
+                <option value="2">
                     <ru>Да, каждодневно</ru>
                     <en>Yes, every day</en>
                 </option>
@@ -287,15 +287,15 @@
                 <en>How does your workday go?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Мне кажется, он никогда не закончится</ru>
                     <en>It feels like it will never end</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Идет планомерно до конца рабочего времени</ru>
                     <en>It goes according to plan until the end of the working hours</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Время пролетает быстро, незаметно</ru>
                     <en>Time flies by quickly, unnoticed</en>
                 </option>
@@ -307,15 +307,15 @@
                 <en>How do you assess your professional prospects?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Не вижу поводов для оптимизма</ru>
                     <en>I don't see reasons for optimism</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Не заглядываю далеко, живу сегодняшним днем</ru>
                     <en>I don't look far ahead, I live for today</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Вижу интересные возможности в будущем</ru>
                     <en>I see interesting opportunities in the future</en>
                 </option>
@@ -327,15 +327,15 @@
                 <en>Do you voluntarily share your professional experience with younger colleagues?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Не трачу на это время</ru>
                     <en>I don't bother with it</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Иногда</ru>
                     <en>Occasionally</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Да, как правило</ru>
                     <en>Yes, usually</en>
                 </option>
@@ -347,15 +347,15 @@
                 <en>Do you avoid talking about work after the workday?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Стараюсь не говорить о работе</ru>
                     <en>I try not to talk about work</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Не уклоняюсь от разговоров о работе</ru>
                     <en>I don't shy away from work-related conversations</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>С удовольствием говорю о работе</ru>
                     <en>I enjoy talking about work</en>
                 </option>
@@ -369,15 +369,15 @@
                 </en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Не вижу в этом смысла</ru>
                     <en>I don't see the point</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Специально за этим не слежу</ru>
                     <en>I don't actively follow them</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Да, это важно для меня</ru>
                     <en>Yes, it's important to me</en>
                 </option>
@@ -389,15 +389,15 @@
                 <en>How do you perceive your professional activity?</en>
             </name>
             <options>
-                <option value="3">
+                <option value="2">
                     <ru>Бегаю по кругу, как белка в колесе</ru>
                     <en>I feel like I'm running in circles, like a squirrel on a wheel</en>
                 </option>
-                <option value="2">
+                <option value="1">
                     <ru>Двигаюсь вперед по расписанию, как исправный поезд</ru>
                     <en>I'm moving forward according to a schedule, like a well-functioning train</en>
                 </option>
-                <option value="1">
+                <option value="0">
                     <ru>Лечу на горных лыжах, захватывает дух</ru>
                     <en>I'm skiing down a mountain, it takes my breath away</en>
                 </option>
