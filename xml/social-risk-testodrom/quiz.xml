@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>
+                <ru>Вы заводите знакомства на улице, в кафе, в парке?</ru>
+                <en>Do you make acquaintances on the street, in cafes, in the park?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, без проблем</ru>
+                    <en>Yes, without any problem</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+                <option value="0">
+                    <ru>Никогда</ru>
+                    <en>Never</en>
+                </option>
+            </options>
+        </item>
+        <item id="2">
+            <name>
+                <ru>Вы готовы бросить нелюбимую работу, еще не подыскав новое место работы?</ru>
+                <en>Are you willing to quit a job you don't like without having found a new job yet?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, и такое уже случалось</ru>
+                    <en>Yes, I have done that before</en>
+                </option>
+                <option value="1">
+                    <ru>Да, но пока такого со мной не было</ru>
+                    <en>Yes, but it hasn't happened to me yet</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, обязательно сначала подыщу новое место работы</ru>
+                    <en>No, I will definitely find a new job first</en>
+                </option>
+            </options>
+        </item>
+        <item id="3">
+            <name>
+                <ru>Как вы обычно поступаете, если не согласны с мнением руководителя, начальника?</ru>
+                <en>What do you usually do if you disagree with the opinion of your supervisor or manager?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Публично отстаиваю свое мнение</ru>
+                    <en>I publicly defend my opinion</en>
+                </option>
+                <option value="1">
+                    <ru>Высказываю свое несогласие только наедине с начальником</ru>
+                    <en>I express my disagreement only privately with the supervisor</en>
+                </option>
+                <option value="0">
+                    <ru>Оставляю свое мнение при себе</ru>
+                    <en>I keep my opinion to myself</en>
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>
+                <ru>Вы оплачиваете вовремя квартплату, административные штрафы?</ru>
+                <en>Do you pay your utility bills and administrative fines on time?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Чаще всего плачу с опозданием</ru>
+                    <en>I often pay with delays</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка плачу с задержкой</ru>
+                    <en>I occasionally pay with delays</en>
+                </option>
+                <option value="0">
+                    <ru>Всегда плачу вовремя</ru>
+                    <en>I always pay on time</en>
+                </option>
+            </options>
+        </item>
+        <item id="5">
+            <name>
+                <ru>Вы списывали во время экзаменов в школе, колледже, институте?</ru>
+                <en>Have you cheated during exams in school, college, or university?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Бывало частенько</ru>
+                    <en>Yes, quite often</en>
+                </option>
+                <option value="1">
+                    <ru>В порядке исключения</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Никогда</ru>
+                    <en>Never</en>
+                </option>
+            </options>
+        </item>
+        <item id="6">
+            <name>
+                <ru>Вы покупаете невозвратные билеты на самолет, поезд?</ru>
+                <en>Do you buy non-refundable tickets for flights, trains?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Всегда стараюсь покупать невозвратные, они дешевле</ru>
+                    <en>Always prefer to buy non-refundable tickets, they are cheaper</en>
+                </option>
+                <option value="1">
+                    <ru>Только если нет другого выбора</ru>
+                    <en>Only if there is no other option</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, покупаю такие билеты, которые можно вернуть</ru>
+                    <en>No, I buy tickets that can be refunded</en>
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>
+                <ru>Вы когда-нибудь опаздывали на самолет, поезд, вступительный экзамен?</ru>
+                <en>Have you ever been late for a flight, train, entrance exam?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Многократно</ru>
+                    <en>Multiple times</en>
+                </option>
+                <option value="1">
+                    <ru>В исключительных случаях</ru>
+                    <en>In exceptional cases</en>
+                </option>
+                <option value="0">
+                    <ru>Никогда</ru>
+                    <en>Never</en>
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>
+                <ru>Вы когда-нибудь давали пощечину другому человеку?</ru>
+                <en>Have you ever slapped another person?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, неоднократно</ru>
+                    <en>Yes, multiple times</en>
+                </option>
+                <option value="1">
+                    <ru>Один-два раза за всю жизнь</ru>
+                    <en>One or two times in my life</en>
+                </option>
+                <option value="0">
+                    <ru>Никогда</ru>
+                    <en>Never</en>
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>
+                <ru>Вы прогуливали уроки в школе или лекции в колледже, институте?</ru>
+                <en>Have you ever skipped classes in school or lectures in college or university?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Довольно часто</ru>
+                    <en>Quite often</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+                <option value="0">
+                    <ru>Никогда</ru>
+                    <en>Never</en>
+                </option>
+            </options>
+        </item>
+        <item id="10">
+            <name>
+                <ru>Вы делаете замечания неадекватным людям в транспорте, общественном месте (грубят, матерятся,
+                    задирают окружающих)?
+                </ru>
+                <en>Do you reprimand inappropriate individuals in public transport or public places (using rude
+                    language, swearing, bothering others)?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Практически всегда, когда сталкиваюсь с подобным</ru>
+                    <en>Almost always, when I encounter such behavior</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда, если это задевает меня лично</ru>
+                    <en>Sometimes, if it personally affects me</en>
+                </option>
+                <option value="0">
+                    <ru>Никогда</ru>
+                    <en>Never</en>
+                </option>
+            </options>
+        </item>
+        <item id="11">
+            <name>
+                <ru>Вы доверяете друзьям свои мечты, тайные планы?</ru>
+                <en>Do you confide your dreams and secret plans to your friends?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Обычно да</ru>
+                    <en>Usually yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда не могу от этого удержаться</ru>
+                    <en>Sometimes I can't resist doing that</en>
+                </option>
+                <option value="0">
+                    <ru>Стараюсь этим не делиться</ru>
+                    <en>I try not to share such things</en>
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>
+                <ru>Вы высказываете претензии человеку, который, по вашему мнению, поступил неправильно?</ru>
+                <en>Do you express grievances to a person who, in your opinion, has acted wrongly?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, считаю это необходимым</ru>
+                    <en>Yes, I consider it necessary</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка, когда такой человек выводит меня из себя</ru>
+                    <en>Occasionally, when such a person gets on my nerves</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, воздерживаюсь от таких высказываний</ru>
+                    <en>No, I refrain from making such statements</en>
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>
+                <ru>Считают ли вас робким человеком?</ru>
+                <en>Do people consider you a timid person?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Пожалуй, нет</ru>
+                    <en>Probably not</en>
+                </option>
+                <option value="1">
+                    <ru>Не знаю</ru>
+                    <en>I don't know</en>
+                </option>
+                <option value="0">
+                    <ru>Пожалуй, да</ru>
+                    <en>Probably yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="14">
+            <name>
+                <ru>Вы готовы отправиться в туристическую поездку, в поход с незнакомой компанией?</ru>
+                <en>Are you ready to go on a tourist trip or hike with an unfamiliar group?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, без проблем</ru>
+                    <en>Yes, no problem</en>
+                </option>
+                <option value="1">
+                    <ru>Только если нет других вариантов</ru>
+                    <en>Only if there are no other options</en>
+                </option>
+                <option value="0">
+                    <ru>Избегаю подобных ситуаций</ru>
+                    <en>Avoid such situations</en>
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>
+                <ru>Вы рассказываете друзьям о своих взаимоотношениях с близкими?</ru>
+                <en>Do you tell your friends about your relationships with loved ones?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, как правило</ru>
+                    <en>Yes, usually</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Никогда</ru>
+                    <en>Never</en>
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>
+                <ru>Насколько строго вы следуете намеченным планам?</ru>
+                <en>How strictly do you follow your planned activities?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Легко меняю свои планы, ведь это только наметки</ru>
+                    <en>I easily change my plans, as they're just rough outlines</en>
+                </option>
+                <option value="1">
+                    <ru>Стараюсь по возможности сделать все намеченное</ru>
+                    <en>I try to do everything I plan whenever possible</en>
+                </option>
+                <option value="0">
+                    <ru>Выполняю всё без отклонений от плана</ru>
+                    <en>I carry out everything without deviating from the plan</en>
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>
+                <ru>Вы суеверны?</ru>
+                <en>Are you superstitious?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Совершенно нет</ru>
+                    <en>Not at all</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, но некоторые приметы не игнорирую (например, говорю «тьфу-тьфу-тьфу», чтобы не
+                        спугнуть удачу)
+                    </ru>
+                    <en>Not really, but I don't completely ignore some omens (for example, I say "knock on wood" to
+                        avoid jinxing myself)
+                    </en>
+                </option>
+                <option value="0">
+                    <ru>Пожалуй, да (обращаю внимание на приметы, совершаю действия «на удачу» и т.п.)</ru>
+                    <en>Yes, I am (pay attention to omens, perform actions "for luck," etc.)</en>
+                </option>
+            </options>
+        </item>
+        <item id="18">
+            <name>
+                <ru>Вы умеете отказывать, говорить «нет», когда просьба вас очень обременяет?</ru>
+                <en>Can you refuse, say "no," when the request is very burdensome for you?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, умею сделать это спокойно и без напряжения</ru>
+                    <en>Yes, I can do it calmly and without tension</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко мне это удается</ru>
+                    <en>Very rarely can I manage to do it</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, обычно не получается отказать</ru>
+                    <en>No, I usually can't refuse</en>
+                </option>
+            </options>
+        </item>
+        <item id="19">
+            <name>
+                <ru>Вас считают непредсказуемым человеком?</ru>
+                <en>Do people consider you unpredictable?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Пожалуй, да</ru>
+                    <en>Perhaps yes</en>
+                </option>
+                <option value="1">
+                    <ru>Не знаю</ru>
+                    <en>I don't know</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, не считают</ru>
+                    <en>No, they don't consider me unpredictable</en>
+                </option>
+            </options>
+        </item>
+        <item id="20">
+            <name>
+                <ru>Случается ли, что вас называют безалаберным человеком?</ru>
+                <en>Do people call you a careless person?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>То и дело</ru>
+                    <en>From time to time</en>
+                </option>
+                <option value="1">
+                    <ru>Очень редко</ru>
+                    <en>Very rarely</en>
+                </option>
+                <option value="0">
+                    <ru>Никогда</ru>
+                    <en>Never</en>
+                </option>
+            </options>
+        </item>
+        <item id="21">
+            <name>
+                <ru>Если вас просят выступить публично...</ru>
+                <en>If you are asked to speak in public...</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Беру слово и выступаю</ru>
+                    <en>I take the floor and speak</en>
+                </option>
+                <option value="1">
+                    <ru>Уклоняюсь всеми силами – выступаю, если не получается отказаться</ru>
+                    <en>I avoid it as much as possible, but speak if I can't refuse</en>
+                </option>
+                <option value="0">
+                    <ru>Отказываюсь выступать без подготовки</ru>
+                    <en>Refuse to speak without preparation</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
+
+

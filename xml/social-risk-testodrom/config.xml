@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <!-- Минимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="42" label-ru="Индекс рисковости" label-en="Risk index"/>
+            <conditions>
+                <condition var="SUM" operator="меньше_или_равно" value="11"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас низкий уровень склонности к социальному риску</h3>
+                    <p>
+                        Вы ведете себя в социуме предусмотрительно, спокойно. Обычно избегаете конфликтов, напряженности
+                        в отношениях с разными людьми, как близкими, так и посторонними. Стараетесь вовремя выполнять
+                        социальные обязательства, совершать предписанные действия (вроде внесения квартплаты). Вы можете
+                        быть успешны в профессии, связанной с разными формами социального взаимодействия – учитель,
+                        социальный работник, продавец, юрист... Ваша обыденная жизнь обычно отлажена и предсказуема.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a low level of social risk-taking tendency</h3>
+                    <p>
+                        You behave in social situations prudently and calmly. You typically avoid conflicts and tension
+                        in relationships with various people, both close ones and strangers. You strive to fulfill
+                        social obligations on time and carry out prescribed actions (like paying bills). You could be
+                        successful in a profession involving various forms of social interaction, such as a teacher,
+                        social worker, salesperson, lawyer, and more. Your everyday life is usually well-organized and
+                        predictable.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Средний уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="42" label-ru="Индекс рисковости" label-en="Risk index"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="11"/>
+                <condition var="SUM" operator="меньше_или_равно" value="31"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас средний уровень склонности к социальному риску</h3>
+                    <p>
+                        Обычная история – человек старается вести себя «правильно», но не всегда получается. Иногда это
+                        случайность, иногда – результат импульсивности, или неумения понимать других, предсказывать
+                        последствия своих поступков. Иногда сто́ит притормозить, прежде чем действовать, и оценить, не
+                        будут ли потери слишком высоки. Несмотря на определенные шероховатости, вы вполне нормально
+                        взаимодействуете с социумом.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a moderate level of social risk-taking tendency</h3>
+                    <p>
+                        Your behavior follows a typical pattern – you try to act "correctly," but it doesn't always work
+                        out. Sometimes it's a matter of chance, and other times it's the result of impulsiveness or a
+                        lack of understanding others and predicting the consequences of your actions. There are times
+                        when it's worth slowing down before acting and evaluating whether the potential losses are too
+                        high. Despite occasional rough patches, you interact with society quite adequately.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Максимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="42" label-ru="Индекс рисковости" label-en="Risk index"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="31"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас высокий уровень склонности к социальному риску, выше среднего</h3>
+                    <p>
+                        Это может негативно влиять на ваши отношения с людьми, на вашу позицию и перспективы на работе,
+                        на устроенность и спокойное течение вашей обыденной жизни. Причины? Иногда люди так
+                        самоутверждаются – проявляют самоуверенность вместо скрытой неуверенности в себе, иногда
+                        неспособны точно прогнозировать последствия своих действий (бездействий), иногда ищут
+                        приключений на свою голову. Причин много. Чтобы лучше понять себя и при необходимости внести
+                        коррективы в свое поведение, рекомендуем обратиться за консультацией к специалисту-психологу.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a high level of social risk-taking tendency, above average</h3>
+                    <p>
+                        This can have a negative impact on your relationships with people, your position and prospects
+                        at work, as well as the stability and smooth flow of your everyday life. The reasons for this
+                        might vary – sometimes people overcompensate by displaying overconfidence instead of hidden
+                        self-doubt, sometimes they struggle to accurately predict the consequences of their actions (or
+                        inactions), and at times they seek out adventures that can lead to unfavorable outcomes. There
+                        can be many factors at play. In order to better understand yourself and potentially make
+                        adjustments to your behavior, it's recommended to seek consultation with a psychological
+                        specialist.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>
