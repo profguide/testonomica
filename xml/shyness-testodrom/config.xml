@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <!-- Минимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Уровень застенчивости"
+                   label-en="Shyness level"/>
+            <conditions>
+                <condition var="SUM" operator="меньше_или_равно" value="10"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас низкий уровень застенчивости</h3>
+                    <p>
+                        Вы вполне уверены в себе, своих силах и способностях, считаете себя симпатичным и
+                        привлекательным в общении человеком. Вас трудно смутить даже в незнакомой ситуации, вы не
+                        теряетесь и часто находитесь в центре внимания. Отлично, только не переборщите с уверенностью в
+                        себе, она не должна превращаться в самоуверенность.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a low level of shyness</h3>
+                    <p>
+                        You are quite confident in yourself, your strengths, and abilities. You consider yourself an
+                        affable and engaging communicator. It's challenging to fluster you even in unfamiliar
+                        situations; you remain composed and often find yourself at the center of attention. Well done,
+                        just be cautious not to overdo your self-assuredness; it shouldn't transform into
+                        overconfidence.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Средний уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Уровень застенчивости"
+                   label-en="Shyness level"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="10"/>
+                <condition var="SUM" operator="меньше_или_равно" value="30"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас средний уровень застенчивости, характерный для большинства людей</h3>
+                    <p>
+                        В некоторых ситуациях вы смущаетесь, иногда стараетесь стушеваться, сделаться незаметным, что-то
+                        вызывает у вас желание уйти, убежать, стать невидимкой. Как правило, это вполне адекватное
+                        поведение – реакция, которая помогает вам справиться с происходящим. Возможно, стоит подумать о
+                        том, чтобы иногда держаться более уверенно и спокойно. Постарайтесь думать о себе, как хорошем,
+                        приятном и достойном уважения человеке. Мелкие огрехи и недостатки не должны лишать вас
+                        уверенности в себе.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a moderate level of shyness, which is typical for most people</h3>
+                    <p>
+                        In certain situations, you might feel embarrassed or self-conscious. Sometimes, you try to blend
+                        into the background, and there are instances when you feel the urge to withdraw, escape, or
+                        become invisible. Generally, this behavior is quite reasonable – a response that helps you cope
+                        with what's happening. Perhaps it's worth considering occasionally holding yourself with more
+                        confidence and composure. Try to think of yourself as a good, pleasant, and deserving-of-respect
+                        person. Minor imperfections and shortcomings shouldn't undermine your self-assurance.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Максимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Уровень застенчивости"
+                   label-en="Shyness level"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="30"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас высокий уровень застенчивости</h3>
+                    <p>
+                        Это может мешать вам жить так, как вам бы того хотелось. Такой уровень застенчивости может
+                        перекрывать продвижение по службе – вам трудно просить о повышении в должности или зарплате, вы
+                        стесняетесь даже изредка подчеркнуть свои достоинства, сказать о своих достижениях.
+                        Застенчивость может блокировать ваши контакты с людьми, мешать развитию тесных, устойчивых
+                        отношений. Трудно быть застенчивым и радоваться жизни. Постарайтесь поверить в себя и научиться
+                        представать перед людьми в образе уверенного, привлекательного человека – и постепенно вы таким
+                        и станете. Для этого может понадобиться помощь психолога, который вас проконсультирует и поможет
+                        выработать стратегию понижения вашей высокой застенчивости.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a high level of shyness</h3>
+                    <p>
+                        This can hinder you from living the way you would like to. Such a high level of shyness could
+                        impede career advancement – it might be difficult for you to ask for promotions or raises, and
+                        you might hesitate to occasionally highlight your strengths or share your achievements. Shyness
+                        can obstruct your interactions with people and hinder the development of close, stable
+                        relationships. It's challenging to be shy and enjoy life to the fullest. Try to believe in
+                        yourself and learn to present yourself as a confident and appealing individual – over time, you
+                        will become such a person. This might require the assistance of a psychologist who can provide
+                        guidance and help you develop a strategy for overcoming your high level of shyness.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>

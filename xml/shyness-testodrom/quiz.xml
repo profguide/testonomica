@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>
+                <ru>Вы краснеете в неловкой ситуации?</ru>
+                <en>Do you blush in awkward situations?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="2">
+            <name>
+                <ru>Как правило, вы сбиваетесь с мысли, когда вас перебивают?</ru>
+                <en>Do you usually lose your train of thought when you're interrupted?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="3">
+            <name>
+                <ru>Вы сильно волнуетесь перед публичным выступлением?</ru>
+                <en>Do you get very nervous before a public speaking engagement?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>
+                <ru>Вы смущаетесь, оказавшись в центре внимания, например, когда на вас все смотрят?</ru>
+                <en>Do you feel embarrassed when you are in the spotlight, for example, when everyone is looking at
+                    you?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="5">
+            <name>
+                <ru>Вам трудно поддерживать беседу с малознакомым человеком?</ru>
+                <en>Do you find it difficult to maintain a conversation with someone you don't know well?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="6">
+            <name>
+                <ru>Вы стараетесь не смотреть прямо в глаза собеседнику?</ru>
+                <en>Do you try not to look directly into the eyes of your conversation partner?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>
+                <ru>Обычно на собраниях, лекциях, разных мероприятиях вы стараетесь занять место не на виду (в слабо
+                    освещенном уголке, в последнем ряду)?
+                </ru>
+                <en>Do you usually try to take a less noticeable place (in a dimly lit corner, in the back row) at
+                    meetings, lectures, and various events?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>
+                <ru>Где чаще всего можно найти вас на коллективной фотографии?</ru>
+                <en>Where can you usually be found in a group photo?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>В заднем ряду, с краю, сбоку</ru>
+                    <en>In the back row, at the edge, on the side</en>
+                </option>
+                <option value="1">
+                    <ru>В самых разных местах</ru>
+                    <en>In various places</en>
+                </option>
+                <option value="0">
+                    <ru>В первом ряду, чаще по центру</ru>
+                    <en>In the front row, often in the center</en>
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>
+                <ru>Вы тот человек, которому зачастую не хватает стула за праздничным столом?</ru>
+                <en>Are you the person who often finds themselves without a chair at the festive table?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="10">
+            <name>
+                <ru>Бывает, что во время беседы от волнения у вас дрожат руки?</ru>
+                <en>Do you sometimes experience shaky hands due to nervousness during a conversation?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="11">
+            <name>
+                <ru>Вас нервирует работа, которая требует телефонных переговоров с незнакомыми людьми?</ru>
+                <en>Does a job that requires phone conversations with unfamiliar people make you nervous?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>
+                <ru>Вам трудно дать понять другому человеку, что он вам симпатичен?</ru>
+                <en>Is it difficult for you to let another person know that you find them attractive?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>
+                <ru>Вас называют ранимым, слишком чувствительным человеком?</ru>
+                <en>Do people describe you as being sensitive and easily hurt?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="14">
+            <name>
+                <ru>Вы испытываете напряжение, оказавшись в незнакомой компании?</ru>
+                <en>Do you feel tense when you are in an unfamiliar company?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>
+                <ru>Вам кажется, что люди посмеиваются над вами у вас за спиной?</ru>
+                <en>Do you feel like people are laughing at you behind your back?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>
+                <ru>Вам трудно рассказать о своей проблеме, даже когда вы нуждаетесь в помощи?</ru>
+                <en>Do you find it difficult to talk about your problems, even when you need help?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>
+                <ru>Вас затрудняет необходимость заявить, что вы недовольны обслуживанием (в магазине, в кафе, в поезде,
+                    гостинице)?
+                </ru>
+                <en>Do you find it difficult to express dissatisfaction with service (in a store, cafe, train, hotel)?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="18">
+            <name>
+                <ru>Вас гложут мысли о том, что думают о вас окружающие?</ru>
+                <en>Do you often worry about what others think of you?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="19">
+            <name>
+                <ru>Вы чувствуете себя неотъемлемой, органической частью коллектива (на работе, в школе, институте)?
+                </ru>
+                <en>Do you feel like an integral, organic part of the group (at work, school, college)?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="20">
+            <name>
+                <ru>Практически все замечают тот момент, когда вы появляетесь на работе, на занятиях, на тусовке?</ru>
+                <en>Do almost everyone notice when you arrive at work, classes, or a party?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Иногда</ru>
+                    <en>Sometimes</en>
+                </option>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
+
+
