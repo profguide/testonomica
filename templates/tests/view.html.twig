@@ -18,6 +18,11 @@
         <h1 class="tnc-welcome__title">{{ test.name(app.request.locale) }}</h1>
         <div class="tnc-welcome__duration">{{ test.duration }} {% trans %}минут{% endtrans %}</div>
         <div class="tnc-welcome__description">{{ test.description(app.request.locale)|raw }}</div>
+        {% if (test.authors|length > 0) %}
+            <div class="tnc-welcome__authors">{{ test.authors|length == 1 ? 'Автор теста:'|trans : 'Авторы теста:'|trans }}
+                {% for author in test.authors %}{{ author.name(app.request.locale)|raw }}{{ not loop.last ? ', ' }}{{ loop.last ? '.' }}{% endfor %}
+            </div>
+        {% endif %}
         <div class="tnc-welcome__loading stage"></div>
     </section>
     <style>

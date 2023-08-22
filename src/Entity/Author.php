@@ -57,9 +57,14 @@ class Author
         $this->slug = $slug;
     }
 
-    public function getName(): ?string
+    public function getName(?string $locale = 'ru'): ?string
     {
-        return $this->name;
+        if ($locale === 'ru') {
+            return $this->name;
+        } elseif ($locale === 'en') {
+            return $this->descriptionEn ?? $this->nameEn;
+        }
+        throw new \DomainException("Unsupported locale $locale.");
     }
 
     public function setName(?string $name): void
