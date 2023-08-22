@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <!-- Минимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Уровень импульсивности"
+                   label-en="Impulsivity level"/>
+            <conditions>
+                <condition var="SUM" operator="меньше_или_равно" value="10"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас низкий уровень импульсивности</h3>
+                    <p>
+                        Вы не склонны действовать поспешно, принимать невзвешенные решения, высказываться необдуманно.
+                        Вас можно считать человеком, который взвешивает последствия, прежде чем совершать поступить тем
+                        или иным образом.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a low level of impulsivity</h3>
+                    <p>
+                        You are not inclined to act hastily, make uninformed decisions, or speak thoughtlessly. You can
+                        be considered someone who weighs the consequences before taking actions in one way or another.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Средний уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Уровень импульсивности"
+                   label-en="Impulsivity level"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="10"/>
+                <condition var="SUM" operator="меньше_или_равно" value="30"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас средний уровень импульсивности</h3>
+                    <p>
+                        Это довольно типичная ситуация. Иногда вы можете поддаться влиянию минуты, настроения, уговоров.
+                        Однако, как правило, вы действуете, обдумав свои поступки, решения и высказывания. Такой уровень
+                        импульсивности может иногда создавать локальные проблемы, но в целом разрушительного действия на
+                        вашу жизнь не оказывает.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a moderate level of impulsivity</h3>
+                    <p>
+                        This is quite typical. Occasionally, you might succumb to the influence of the moment, mood, or
+                        persuasion. However, as a rule, you act after considering your actions, decisions, and
+                        statements. This level of impulsivity might create minor issues at times, but overall, it
+                        doesn't have a destructive impact on your life.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Максимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Уровень импульсивности"
+                   label-en="Impulsivity level"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="30"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>У вас высокий уровень импульсивности</h3>
+                    <p>
+                        То и дело вы совершаете действия, о которых потом приходится сожалеть. Вы можете принять
+                        решение, не продумав последствия, можете совершить действие, которое принесет вам вред, можете
+                        неуместно высказаться, задев другого своими словами. Такое импульсивное поведение может
+                        негативно сказываться на вашей карьере, на отношениях с близкими и коллегами. Постарайтесь
+                        управлять своей импульсивностью, избегайте действовать прежде, чем подумаете, не торопитесь
+                        немедленно высказываться, когда слова просятся на язык. Возможно, вам стоит проконсультироваться
+                        со специалистом-психологом, который поможет справиться с вашей высокой импульсивностью.
+                    </p>
+                </ru>
+                <en>
+                    <h3>You have a high level of impulsivity</h3>
+                    <p>
+                        You frequently engage in actions that you later regret. You might make decisions without
+                        considering the consequences, perform actions that harm you, or speak inappropriately, hurting
+                        others with your words. Such impulsive behavior can have negative effects on your career and
+                        relationships with loved ones and colleagues. Try to manage your impulsivity, avoid acting
+                        before thinking, and refrain from speaking immediately when words are on the tip of your tongue.
+                        It might be beneficial for you to consult with a psychologist who can assist you in dealing with
+                        your high impulsivity.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>

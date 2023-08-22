@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>
+                <ru>Вам приходится сожалеть о своих поступках?</ru>
+                <en>Do you find yourself regretting your actions?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="2">
+            <name>
+                <ru>Бывает, что вы говорите лишнее, оно будто само собой слетает с языка?</ru>
+                <en>Do you sometimes say unnecessary things that seem to slip out on their own?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="3">
+            <name>
+                <ru>Вы тут же покидаете дружескую вечеринку, если, по вашему мнению, кто-то проявляет к вам
+                    неуважительное отношение?
+                </ru>
+                <en>Do you immediately leave a friendly party if you believe someone is showing disrespectful attitude
+                    towards you?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>
+                <ru>Бывает, что вы покупаете вещи, которые в данный момент совершенно не собирались покупать?</ru>
+                <en>Do you sometimes buy things that you had no intention of buying at the moment?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="5">
+            <name>
+                <ru>Бывает, что ваши решения кажутся вам впоследствии необдуманными?</ru>
+                <en>Do your decisions sometimes seem thoughtless to you afterward?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="6">
+            <name>
+                <ru>Случается, что ваши шутки находят неуместными?</ru>
+                <en>Do your jokes sometimes come across as inappropriate?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>
+                <ru>Вы расходуете больше денег, чем планировали?</ru>
+                <en>Do you often spend more money than you planned?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>
+                <ru>Бывает, что вы вдруг делаете то, чего сами от себя не ожидали?</ru>
+                <en>Do you sometimes do things that you didn't expect from yourself?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>
+                <ru>Вам сложно выносить монотонные занятия, рутинную работу?</ru>
+                <en>Do you find it difficult to endure monotonous tasks and routine work?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="10">
+            <name>
+                <ru>Вы разрываете полностью отношения с людьми из-за незначительных ссор?</ru>
+                <en>Do you completely cut off relationships with people over minor disagreements?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="11">
+            <name>
+                <ru>Вы меняете свои планы на текущий день спонтанно, под влиянием настроения?</ru>
+                <en>Do you spontaneously change your plans for the day under the influence of your mood?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>
+                <ru>Вас называют порывистым человеком?</ru>
+                <en>Do people describe you as impulsive?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>
+                <ru>Вам случалось менять место работы без особых на то причин?</ru>
+                <en>Have you changed jobs without any specific reasons?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, и не раз</ru>
+                    <en>Yes, multiple times</en>
+                </option>
+                <option value="1">
+                    <ru>Однажды</ru>
+                    <en>Once</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="14">
+            <name>
+                <ru>Бывает, что вы удивляете людей своими неожиданными поступками?</ru>
+                <en>Do you surprise people with your unexpected actions?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>
+                <ru>Вы можете практически перед отъездом передумать и поехать в отпуск совсем не туда, куда
+                    собирались?
+                </ru>
+                <en>Can you almost change your mind before a trip and go on vacation to a completely different place
+                    than planned?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>
+                <ru>Бывает, что вы совершаете покупки в интернете, забывая сначала проверить надежность сайта?</ru>
+                <en>Do you sometimes make online purchases, forgetting to first check the reliability of the website?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>
+                <ru>Вы быстро заводите дружеские отношения с новыми знакомыми?</ru>
+                <en>Do you quickly establish friendly relationships with new acquaintances?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="18">
+            <name>
+                <ru>Вы готовы сорваться с места, отложив все срочные дела, чтобы поехать на неожиданную встречу с
+                    друзьями?
+                </ru>
+                <en>Are you ready to drop everything and postpone urgent matters to go for an impromptu meeting with
+                    friends?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="19">
+            <name>
+                <ru>Вам трудно дается ожидание?</ru>
+                <en>Do you find waiting difficult?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="20">
+            <name>
+                <ru>Бывает, что вы загораетесь новым делом и так же быстро его бросаете?</ru>
+                <en>Do you sometimes get excited about a new task and then abandon it just as quickly?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Зачастую</ru>
+                    <en>Often</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
+
+
