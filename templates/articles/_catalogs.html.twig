@@ -1,8 +1,8 @@
-<ul class="list-group list-group-flush">
+<ul class="list-group">
     {% for cat in catalogs %}
         <li class="list-group-item d-flex justify-content-between align-items-center {% if catalog is defined and catalog == cat %}active{% endif %}">
-            <a class="{% if catalog is defined and catalog == cat %}text-white{% endif %}" href="{{ path('articles.catalog', {slug: cat.slug}) }}">{{ cat.name }}</a>
-            <span class="badge badge-primary badge-pill">{{ cat.articles.count }}</span>
+            <a class="{% if catalog is defined and catalog == cat %}text-white{% endif %}" href="{{ path('articles.catalog', {slug: cat.slug}) }}">{{ cat.name(app.request.locale) }}</a>
+            <span class="badge text-primary">{{ cat.articles.count }}</span>
         </li>
     {% endfor %}
 </ul>

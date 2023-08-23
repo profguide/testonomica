@@ -1,23 +1,25 @@
-<div class="card-deck">
+<div class="article-cards row">
     {% for article in articles %}
-        {% set link = path('articles.view', {catalogSlug: article.catalog.slug, slug: article.slug}) %}
-        <div class="card">
-            <a href="{{ link }}">
-                <img class="card-img" src="{{ asset(thumbnails(article.img)) }}" alt="{{ article.name|e }}"/>
-            </a>
-            <div class="card-body">
-                <a href="{{ link }}" class="card-title text-dark"><h4>{{ article.name|e }}</h4></a>
-                <div>
-                    <span class="text-muted mr-2">
-                        <span class="material-icons">date_range</span>
-                        <time>{{ article.createdAt|date("d.m.Y H:i") }}</time>
-                    </span>
-                    <a href="{{ path('articles.catalog', {slug: article.catalog.slug}) }}"
-                       class="text-muted">{{ article.catalog.name }}</a>
+        {% set link = path('articles.view', {slug: article.slug}) %}
+        <div class="col-sm-12 col-lg-4">
+            <div class="article-card card">
+                <a href="{{ link }}" class="article-card__wrapping-link"></a>
+                <img class="article-card__img card-img" src="{{ vich_uploader_asset(article, 'imgFile') }}"
+                     alt="{{ article.name(app.request.locale)|e }}"/>
+                <div class="article-card__body card-body">
+                    <a href="{{ link }}" class="article-card__title"><h2>{{ article.name(app.request.locale)|e }}</h2></a>
+                    <div class="article-card__about">
+                        <div class="article-card__catalog">{{ article.catalog.name(app.request.locale) }}</div>
+                        {#                        <a href="{{ path('articles.catalog', {slug: article.catalog.slug}) }}" #}
+                        {#                           class="article-card__catalog">{{ article.catalog.name }}</a> #}
+                        <div class="article-card__date-block">
+                            <span class="material-icons">date_range</span>
+                            <time class="article-card__date">{{ article.createdAt|date('date.format'|trans) }}</time>
+                        </div>
+                    </div>
                 </div>
-                <p class="card-text">{{ article.annotation|raw }}</p>
-                <a href="{{ link }}" class="btn-link">Читать далее<span class="material-icons">navigate_next</span></a>
             </div>
         </div>
+
     {% endfor %}
 </div>

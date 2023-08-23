@@ -69,7 +69,7 @@ class Article
 
     #[ORM\OneToOne(targetEntity: 'Test')]
     #[ORM\JoinColumn(name: 'test_id', nullable: true)]
-    private Test $test;
+    private ?Test $test = null;
 
     #[ORM\Column(type: 'boolean')]
     private bool $active = true;
@@ -146,282 +146,206 @@ class Article
         return $this->id;
     }
 
-
-    /**
-     * @param int $id
-     */
     public function setId(int $id): void
     {
         $this->id = $id;
     }
 
-    /**
-     * @return ArticleCatalog
-     */
     public function getCatalog(): ?ArticleCatalog
     {
         return $this->catalog;
     }
 
-    /**
-     * @param ArticleCatalog $catalog
-     */
     public function setCatalog(ArticleCatalog $catalog): void
     {
         $this->catalog = $catalog;
     }
 
-    /**
-     * @return string
-     */
     public function getSlug(): string
     {
         return $this->slug;
     }
 
-    /**
-     * @param string $slug
-     */
     public function setSlug(string $slug): void
     {
         $this->slug = $slug;
     }
 
-    /**
-     * @return string
-     */
-    public function getName(): string
+    public function getName(?string $locale = 'ru'): string
     {
-        return $this->name;
+        if ($locale === 'ru') {
+            return $this->name;
+        } elseif ($locale === 'en') {
+            return $this->nameEn ?? $this->name;
+        }
+        throw new \DomainException("Unsupported locale $locale.");
     }
 
-    /**
-     * @param string $name
-     */
     public function setName(string $name): void
     {
         $this->name = $name;
     }
 
-    /**
-     * @return string
-     */
     public function getNameEn(): string
     {
         return $this->nameEn;
     }
 
-    /**
-     * @param string $nameEn
-     */
     public function setNameEn(string $nameEn): void
     {
         $this->nameEn = $nameEn;
     }
 
-    /**
-     * @return string
-     */
-    public function getSubtitle(): string
+    public function getSubtitle(?string $locale = 'ru'): string
     {
-        return $this->subtitle;
+        if ($locale === 'ru') {
+            return $this->subtitle;
+        } elseif ($locale === 'en') {
+            return $this->subtitleEn ?? $this->subtitle;
+        }
+        throw new \DomainException("Unsupported locale $locale.");
     }
 
-    /**
-     * @param string $subtitle
-     */
     public function setSubtitle(string $subtitle): void
     {
         $this->subtitle = $subtitle;
     }
 
-    /**
-     * @return string
-     */
     public function getSubtitleEn(): string
     {
         return $this->subtitleEn;
     }
 
-    /**
-     * @param string $subtitleEn
-     */
     public function setSubtitleEn(string $subtitleEn): void
     {
         $this->subtitleEn = $subtitleEn;
     }
 
-    /**
-     * @return string
-     */
-    public function getMetaTitle(): string
+    public function getMetaTitle(?string $locale = 'ru'): string
     {
-        return $this->metaTitle;
+        if ($locale === 'ru') {
+            return $this->metaTitle;
+        } elseif ($locale === 'en') {
+            return $this->metaTitleEn ?? $this->metaTitle;
+        }
+        throw new \DomainException("Unsupported locale $locale.");
     }
 
-    /**
-     * @param string $metaTitle
-     */
     public function setMetaTitle(string $metaTitle): void
     {
         $this->metaTitle = $metaTitle;
     }
 
-    /**
-     * @return string
-     */
     public function getMetaTitleEn(): string
     {
         return $this->metaTitleEn;
     }
 
-    /**
-     * @param string $metaTitleEn
-     */
     public function setMetaTitleEn(string $metaTitleEn): void
     {
         $this->metaTitleEn = $metaTitleEn;
     }
 
-    /**
-     * @return string
-     */
-    public function getMetaDescription(): string
+    public function getMetaDescription(?string $locale = 'ru'): string
     {
-        return $this->metaDescription;
+        if ($locale === 'ru') {
+            return $this->metaDescription;
+        } elseif ($locale === 'en') {
+            return $this->metaDescriptionEn ?? $this->metaDescription;
+        }
+        throw new \DomainException("Unsupported locale $locale.");
     }
 
-    /**
-     * @param string $metaDescription
-     */
     public function setMetaDescription(string $metaDescription): void
     {
         $this->metaDescription = $metaDescription;
     }
 
-    /**
-     * @return string
-     */
     public function getMetaDescriptionEn(): string
     {
         return $this->metaDescriptionEn;
     }
 
-    /**
-     * @param string $metaDescriptionEn
-     */
     public function setMetaDescriptionEn(string $metaDescriptionEn): void
     {
         $this->metaDescriptionEn = $metaDescriptionEn;
     }
 
-    /**
-     * @return string
-     */
-    public function getAnnotation(): ?string
+    public function getAnnotation(?string $locale = 'ru'): ?string
     {
-        return $this->annotation;
+        if ($locale === 'ru') {
+            return $this->annotation;
+        } elseif ($locale === 'en') {
+            return $this->annotation_en ?? $this->annotation;
+        }
+        throw new \DomainException("Unsupported locale $locale.");
     }
 
-    /**
-     * @param string $annotation
-     */
     public function setAnnotation(string $annotation): void
     {
         $this->annotation = $annotation;
     }
 
-    /**
-     * @return string
-     */
     public function getAnnotationEn(): ?string
     {
         return $this->annotation_en;
     }
 
-    /**
-     * @param string $annotation_en
-     */
     public function setAnnotationEn(string $annotation_en): void
     {
         $this->annotation_en = $annotation_en;
     }
 
-    /**
-     * @return string
-     */
-    public function getContent(): string
+    public function getContent(?string $locale = 'ru'): string
     {
-        return $this->content;
+        if ($locale === 'ru') {
+            return $this->content;
+        } elseif ($locale === 'en') {
+            return $this->contentEn ?? $this->content;
+        }
+        throw new \DomainException("Unsupported locale $locale.");
     }
 
-    /**
-     * @param string $content
-     */
     public function setContent(string $content): void
     {
         $this->content = $content;
     }
 
-    /**
-     * @return string
-     */
     public function getContentEn(): string
     {
         return $this->contentEn;
     }
 
-    /**
-     * @param string $contentEn
-     */
     public function setContentEn(string $contentEn): void
     {
         $this->contentEn = $contentEn;
     }
 
-    /**
-     * @return Test
-     */
-    public function getTest(): Test
+    public function getTest(): ?Test
     {
         return $this->test;
     }
 
-    /**
-     * @param Test $test
-     */
-    public function setTest(Test $test): void
+    public function setTest(?Test $test): void
     {
         $this->test = $test;
     }
 
-    /**
-     * @return bool
-     */
     public function isActive(): bool
     {
         return $this->active;
     }
 
-    /**
-     * @param bool $active
-     */
     public function setActive(bool $active): void
     {
         $this->active = $active;
     }
 
-    /**
-     * @return bool
-     */
     public function isActiveEn(): bool
     {
         return $this->activeEn;
     }
 
-    /**
-     * @param bool $activeEn
-     */
     public function setActiveEn(bool $activeEn): void
     {
         $this->activeEn = $activeEn;

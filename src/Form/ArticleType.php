@@ -6,6 +6,7 @@ namespace App\Form;
 
 use App\Entity\Article;
 use App\Repository\ArticleCatalogRepository;
+use App\Repository\TestRepository;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -16,7 +17,7 @@ use Vich\UploaderBundle\Form\Type\VichImageType;
 
 final class ArticleType extends AbstractType
 {
-    public function __construct(private readonly ArticleCatalogRepository $catalogs)
+    public function __construct(private readonly ArticleCatalogRepository $catalogs, private readonly TestRepository $tests)
     {
     }
 
@@ -40,7 +41,15 @@ final class ArticleType extends AbstractType
                 'attr' => array('style' => 'width: 300px'),
             ])
             ->add('catalog', ChoiceType::class, [
+                'label' => 'Каталог',
                 'choices' => $this->catalogs->findAll(),
+                'choice_value' => 'id',
+                'choice_label' => 'name',
+                'attr' => array('style' => 'width: 300px'),
+            ])
+            ->add('test', ChoiceType::class, [
+                'label' => 'Тест',
+                'choices' => $this->tests->findAll(),
                 'choice_value' => 'id',
                 'choice_label' => 'name',
                 'attr' => array('style' => 'width: 300px'),

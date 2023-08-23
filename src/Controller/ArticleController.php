@@ -3,11 +3,13 @@
 
 namespace App\Controller;
 
+use App\Domain\Article\ArticlesSearchForm;
 use App\Entity\Article;
 use App\Entity\ArticleCatalog;
 use App\Repository\ArticleCatalogRepository;
 use App\Repository\ArticleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -18,15 +20,11 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class ArticleController extends AbstractController
 {
-    private ArticleRepository $articleRepository;
-
-    private ArticleCatalogRepository $articleCatalogRepository;
-
-
-    public function __construct(ArticleRepository $articleRepository, ArticleCatalogRepository $articleCatalogRepository)
+    public function __construct(
+        private readonly ArticleRepository $articleRepository,
+        private readonly ArticlesSearchForm $articlesSearchForm,
+        private readonly ArticleCatalogRepository $articleCatalogRepository)
     {
-        $this->articleRepository = $articleRepository;
-        $this->articleCatalogRepository = $articleCatalogRepository;
     }
 
     /**
@@ -34,10 +32,10 @@ class ArticleController extends AbstractController
      * todo подгрузка, т.е. пейджинг
      * @return Response
      */
-    public function main(): Response
+    public function main(Request $request): Response
     {
         return $this->render('articles/main.html.twig', [
-            'articles' => $this->articleRepository->findAll(),
+            'articles' => $this->articlesSearchForm->search($request),
             'catalogs' => $this->articleCatalogRepository->findAll(),
         ]);
     }
@@ -52,48 +50,31 @@ class ArticleController extends AbstractController
         $catalog = $this->loadCatalog($slug);
         return $this->render('articles/catalog.html.twig', [
             'catalog' => $catalog,
-            'articles' => $this->loadArticlesByCatalog($catalog),
+            'articles' => [], // todo
             'catalogs' => $this->articleCatalogRepository->findAll(),
         ]);
     }
 
     /**
      * @Route("/{slug}/", name="view")
-     * @param string $catalogSlug
      * @param string $slug
      * @return Response
      */
-    public function view(string $catalogSlug, string $slug): Response
+    public function view(string $slug): Response
     {
         return $this->render('articles/view.html.twig', [
-            'article' => $this->loadArticle($catalogSlug, $slug),
+            'article' => $this->loadArticle($slug),
             'catalogs' => $this->articleCatalogRepository->findAll(),
         ]);
     }
 
-    private function loadArticle(string $catalog, string $slug): Article
+    private function loadArticle(string $slug): Article
     {
-        $article = $this->articleRepository->findBySlug($slug);
-        if ($article == null) {
-            throw self::createNotFoundException();
-        }
-        if ($article->getCatalog()->getSlug() != $catalog) {
-            throw self::createNotFoundException();
-        }
-        return $article;
+        return $this->articleRepository->findBySlug($slug) ?? throw self::createNotFoundException();
     }
 
     private function loadCatalog(string $slug): ArticleCatalog
     {
-        $catalog = $this->articleCatalogRepository->findBySlug($slug);
-        if ($catalog == null) {
-            throw self::createNotFoundException();
-        }
-        return $catalog;
-    }
-
-    private function loadArticlesByCatalog(ArticleCatalog $catalog)
-    {
-        return $this->articleRepository->findBy(['catalog' => $catalog]);
+        return $this->articleCatalogRepository->findBySlug($slug) ?? throw self::createNotFoundException();
     }
 }

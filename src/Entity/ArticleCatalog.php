@@ -80,13 +80,14 @@ class ArticleCatalog
     {
         $this->slug = $slug;
     }
-
-    /**
-     * @return string
-     */
-    public function getName(): string
+    public function getName(?string $locale = 'ru'): string
     {
-        return $this->name;
+        if ($locale === 'ru') {
+            return $this->name;
+        } elseif ($locale === 'en') {
+            return $this->nameEn ?? $this->name;
+        }
+        throw new \DomainException("Unsupported locale $locale.");
     }
 
     /**

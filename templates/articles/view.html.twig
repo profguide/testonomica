@@ -1,28 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ article.metaTitle }}{% endblock %}
-{% block description %}{{ article.metaDescription }}{% endblock %}
+{% block title %}{{ article.metaTitle(app.request.locale) }}{% endblock %}
+{% block description %}{{ article.metaDescription(app.request.locale) }}{% endblock %}
 
 {% block body %}
     <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ path('articles.index') }}">{{ 'Статьи'|trans }}</a></li>
+                <li class="breadcrumb-item"><a href="{{ path('articles.catalog', { slug: article.catalog.slug}) }}">{{ article.catalog.name(app.request.locale) }}</a></li>
+            </ol>
+        </nav>
+
         <div class="row">
-            <div class="col-9">
-                <h1>{{ article.name }}</h1>
-                <div class="mb-4">
-                    <a href="{{ path('tests.view', {categorySlug: article.test.catalog.slug, slug: article.test.slug}) }}"
-                       class="btn btn-outline-primary">Пройти тест</a>
+            <div class="col-sm-12 col-md-7">
+                <h1>{{ article.name(app.request.locale) }}</h1>
+                <p>{{ article.subtitle(app.request.locale) }}</p>
+                <small class="mt-3 mb-3 text-muted d-flex">
+                    <span>{{ 'Автор статьи:'|trans }} <a href="/">{{ 'Тестодром'|trans }}</a></span>,
+                    <time class="ms-2">{{ article.createdAt|date('date.format'|trans) }}</time>
+                </small>
+                <div class="mt-4 mb-3">
+                    <img src="{{ vich_uploader_asset(article, 'imgWideFile') }}" alt="{{ article.name(app.request.locale) }}" class="w-100 rounded-4"/>
                 </div>
+                {% if (article.test) %}
+                    <div class="mt-3 mb-3">
+                        <a href="{{ path('tests.view', {slug: article.test.slug}) }}"
+                           class="btn btn-outline-primary">{{ 'Пройти тест'|trans }}</a>
+                    </div>
+                {% endif %}
                 <div>
-                    {{ article.content|raw }}
+                    {{ article.content(app.request.locale)|raw }}
                 </div>
-                <div class="mt-4">
-                    <a href="{{ path('tests.view', {categorySlug: article.test.catalog.slug, slug: article.test.slug}) }}"
-                       class="btn btn-outline-primary">Пройти тест</a>
-                </div>
-            </div>
-            <div class="col">
-                <h6>Категории</h6>
-                {% include "/articles/_catalogs.html.twig" with {'catalogs': catalogs} %}
+                {% if (article.test) %}
+                    <div class="mt-4">
+                        <a href="{{ path('tests.view', {slug: article.test.slug}) }}"
+                           class="btn btn-outline-primary">{{ 'Пройти тест'|trans }}</a>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>

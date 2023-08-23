@@ -50,6 +50,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ path('tests.index') }}">{% trans %}Тесты{% endtrans %}</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ path('articles.index') }}">{% trans %}Статьи{% endtrans %}</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0 ms-auto">
                     {% if (app.user and 'ROLE_ADMIN' in app.user.roles) %}
