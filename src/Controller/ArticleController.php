@@ -43,7 +43,7 @@ class ArticleController extends AbstractController
     }
 
     /**
-     * @Route("/{slug}/", name="catalog")
+     * @Route("/catalog/{slug}/", name="catalog")
      * @param string $slug
      * @return Response
      */
@@ -58,7 +58,7 @@ class ArticleController extends AbstractController
     }
 
     /**
-     * @Route("/{catalogSlug}/{slug}/", name="view")
+     * @Route("/{slug}/", name="view")
      * @param string $catalogSlug
      * @param string $slug
      * @return Response

@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ path('admin') }}">Панель управления</a></li>
+                <li class="breadcrumb-item"><a href="{{ path('admin.articles') }}">Статьи</a></li>
+                <li class="breadcrumb-item active">{{ title }}</li>
+            </ol>
+        </nav>
+
+        <h1 class="mb-4">{{ title }}</h1>
+
+        {{ form_errors(form) }}
+
+        {{ form_start(form) }}
+        <div class="row">
+            <div class="col">{{ form_row(form.name, {label: 'Название RU'}) }}</div>
+            <div class="col">{{ form_row(form.nameEn, {label: 'Название EN'}) }}</div>
+        </div>
+        <div class="row">
+            <div class="col">{{ form_row(form.subtitle, {label: 'Подзаголовок RU'}) }}</div>
+            <div class="col">{{ form_row(form.subtitleEn, {label: 'Подзаголовок EN'}) }}</div>
+        </div>
+        <div class="row">
+            <div class="col">{{ form_row(form.content, {label: 'Контент RU'}) }}</div>
+            <div class="col">{{ form_row(form.contentEn, {label: 'Контент EN'}) }}</div>
+        </div>
+        <div class="row">
+            <div class="col">{{ form_row(form.annotation, {label: 'Описание в списке RU'}) }}</div>
+            <div class="col">{{ form_row(form.annotationEn, {label: 'Описание в списке EN'}) }}</div>
+        </div>
+        <div class="row">
+            <div class="col">{{ form_row(form.metaTitle, {label: 'Meta title RU'}) }}</div>
+            <div class="col">{{ form_row(form.metaTitleEn, {label: 'Meta title EN'}) }}</div>
+        </div>
+        <div class="row">
+            <div class="col">{{ form_row(form.metaDescription, {label: 'Meta description RU'}) }}</div>
+            <div class="col">{{ form_row(form.metaDescriptionEn, {label: 'Meta description EN'}) }}</div>
+        </div>
+        <div class="row">
+            <div class="col">{{ form_row(form.active) }}</div>
+            <div class="col">{{ form_row(form.activeEn) }}</div>
+        </div>
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

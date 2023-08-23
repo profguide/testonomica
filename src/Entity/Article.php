@@ -16,9 +16,6 @@ use Symfony\Component\HttpFoundation\File\File;
 #[ORM\HasLifecycleCallbacks]
 class Article
 {
-    /**
-     * @var int
-     */
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
@@ -34,25 +31,25 @@ class Article
     #[ORM\Column(type: 'string', length: 255)]
     private string $name;
 
-    #[ORM\Column(type: 'string', length: 255, name: 'name_en')]
+    #[ORM\Column(name: 'name_en', type: 'string', length: 255)]
     private string $nameEn;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private string $subtitle;
 
-    #[ORM\Column(type: 'string', length: 255, nullable: true, name: 'subtitle_en')]
+    #[ORM\Column(name: 'subtitle_en', type: 'string', length: 255, nullable: true)]
     private string $subtitleEn;
 
-    #[ORM\Column(type: 'text', nullable: true, length: 500)]
+    #[ORM\Column(type: 'text', length: 500, nullable: true)]
     private ?string $annotation = null;
 
-    #[ORM\Column(type: 'text', length: 500, nullable: true, name: 'annotation_en')]
+    #[ORM\Column(name: 'annotation_en', type: 'text', length: 500, nullable: true)]
     private ?string $annotation_en = null;
 
     #[ORM\Column(type: 'string', length: 255)]
     private string $metaTitle;
 
-    #[ORM\Column(type: 'string', length: 255, name: 'meta_title_en')]
+    #[ORM\Column(name: 'meta_title_en', type: 'string', length: 255)]
     private string $metaTitleEn;
 
     #[ORM\Column(type: 'text', length: 355)]
@@ -162,9 +159,6 @@ class Article
             $this->updatedAt = new \DateTime('now');
         }
     }
-
-
-
 
 
     /**
