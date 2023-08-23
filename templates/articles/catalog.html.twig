@@ -10,7 +10,7 @@
                 <h1>{{ catalog.name(app.request.locale) }}</h1>
                 {% include "/articles/_articles.html.twig" with {'articles': articles} %}
             </div>
-            <div class="col">
+            <div class="col mt-4 mt-lg-0">
                 <h6>{{ 'Категории'|trans }}</h6>
                 {% include "/articles/_catalogs.html.twig" with {'catalogs': catalogs} %}
             </div>

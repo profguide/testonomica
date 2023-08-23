@@ -11,14 +11,7 @@
     {% endif %}
     <title>{% block title %}{% endblock %}</title>
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-            var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-W8CLW33');</script>
+    <script>(function (w, d, s, l, i) {w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-W8CLW33');</script>
     <!-- End Google Tag Manager -->
     {% block stylesheets %}
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -32,26 +25,26 @@
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8CLW33" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8CLW33" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 <header class="header" id="testonomica_header">
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg bg-light">
         <div class="container">
             <a class="navbar-brand" href="{{ path('main') }}"
                style="font-weight: 800; letter-spacing: 1px">{% trans %}Тестодром{% endtrans %}</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ path('tests.index') }}">{% trans %}Тесты{% endtrans %}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ path('articles.index') }}">{% trans %}Статьи{% endtrans %}</a>
+                        <a class="nav-link active"
+                           href="{{ path('articles.index') }}">{% trans %}Статьи{% endtrans %}</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0 ms-auto">
@@ -64,20 +57,17 @@
                         <a class="nav-link active"
                            href="{{ app.user ? path('app_logout') : path('app_login') }}">{{ app.user ? 'Выйти'|trans ~ " (" ~ app.user.email ~ ")" : 'Войти'|trans }}</a>
                     </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                {% if (app.request.locale == 'en') %}En{% else %}Ru{% endif %}
-                            </button>
-                            <ul class="dropdown-menu">
-                                {% if (app.request.locale == 'en') %}
-                                    <li><a class="dropdown-item" href="/">Ru</a></li>
-                                {% else %}
-                                    <li><a class="dropdown-item" href="/en/">En</a></li>
-                                {% endif %}
-                            </ul>
-                        </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {% if (app.request.locale == 'en') %}En{% else %}Ru{% endif %}
+                        </a>
+                        <ul class="dropdown-menu" style="min-width: auto">
+                            {% if (app.request.locale == 'en') %}
+                                <li><a class="dropdown-item" href="/">Ru</a></li>
+                            {% else %}
+                                <li><a class="dropdown-item" href="/en/">En</a></li>
+                            {% endif %}
+                        </ul>
                     </li>
                 </ul>
             </div>
