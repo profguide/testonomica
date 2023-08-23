@@ -82,9 +82,14 @@ class Author
         $this->nameEn = $nameEn;
     }
 
-    public function getAbout(): ?string
+    public function getAbout(?string $locale = 'ru'): ?string
     {
-        return $this->about;
+        if ($locale === 'ru') {
+            return $this->about;
+        } elseif ($locale === 'en') {
+            return $this->aboutEn ?? $this->about;
+        }
+        throw new \DomainException("Unsupported locale $locale.");
     }
 
     public function setAbout(?string $about): void

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% trans %}Тесты, автором которых является{% endtrans %} {{ author.name(app.request.locale) }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="mb-4">{% trans %}Тесты, автором которых является{% endtrans %} {{ author.name(app.request.locale) }}</h1>
+
+        {{ author.about(app.request.locale)|raw }}
+
+        <div class="row">
+            {% for test in pagination %}
+                <div class="col-md-4 test-in-list">
+                    <div class="test-in-list__inner">
+                        <a href="{{ path('tests.view', {slug: test.slug}) }}" class="test-in-list__link"></a>
+                        <div class="test-in-list__top">
+                            <h6 class="test-in-list__category">{{ test.catalog.name(app.request.locale) }}</h6>
+                            <div class="test-in-list__duration">{{ test.duration }} {% trans %}минут{% endtrans %}</div>
+                        </div>
+                        <a href="{{ path('tests.view', {slug: test.slug}) }}" class="test-in-list__title">
+                            <h3>{{ test.name(app.request.locale)|e }}</h3>
+                        </a>
+                        <div class="test-in-list__annotation">{{ test.annotation(app.request.locale)|raw }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    </div>
+{% endblock %}

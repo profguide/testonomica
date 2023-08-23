@@ -1,15 +1,13 @@
 {# templates/bundles/TwigBundle/Exception/error404.html.twig #}
 {% extends 'base.html.twig' %}
 
-{% block title %}Ошибка 404{% endblock %}
+{% block title %}404{% endblock %}
 
 {% block body %}
     <div class="container">
-        <h1>Ошибка 404. Нет такой страницы</h1>
-        <p>Пожалуйста, свяжитесь с нами, если Вы считаете, что это наша ошибка.</p>
-        <br/>
-        <a href="/">Главная</a>
-        <a href="/tests/">Тесты</a>
-        <a href="/articles/">Статьи</a>
+        <h1>404</h1>
+        <p>{{ trans }}Запрашиваемая страница не найдена{{ endtrans }}.<br/>
+            <a href="{{ path('main') }}">{{ trans }}Вернуться на главную{{ endtrans }}</a>
+        </p>
     </div>
 {% endblock %}

@@ -27,7 +27,7 @@ class TestInfoRestController extends AbstractTestRestController
 
         $authors = [];
         foreach ($test->getAuthors() as $author) {
-            $authors[] = ['name' => $author->getName($locale), 'url' => '#'];
+            $authors[] = ['name' => $author->getName($locale), 'url' => $this->generateUrl('tests.author', ['slug' => $author->getSlug()])];
         }
         return $this->json([
             'name' => $test->getName($locale),

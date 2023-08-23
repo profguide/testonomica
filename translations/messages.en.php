@@ -13,13 +13,16 @@ return [
     // Дата
     'date.format' => 'M d, Y',
 
-    // Главная
+    // Страницы
+    'Запрашиваемая страница не найдена' => 'The requested page was not found',
+    'Вернуться на главную' => 'Go back to the main page',
     'Бесплатные тесты: психологические, IQ, образовательные, на эрудицию' => 'Free tests: psychological, IQ, educational, knowledge-based',
     'Пройдите бесплатные тесты для ценных инсайтов о себе! Раскройте ваш характер, IQ, эмоции и даже уровень депрессии.' => 'Take free tests for valuable insights about yourself! Uncover your personality, IQ, emotions, and even your level of depression.',
 
     // Тесты
     'Авторы теста:' => 'Test authors:',
     'Автор теста:' => 'Test author:',
+    'Тесты, автором которых является' => 'Test authored by',
 
     // Результаты
     'Ваши результаты' => 'Your results',

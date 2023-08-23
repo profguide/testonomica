@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row">
             <div class="col-9">
-                <h1>{{ catalog.name(app.request.locale) }}</h1>
+                <h1 class="mb-4">{{ catalog.name(app.request.locale) }}</h1>
                 {% include "/articles/_articles.html.twig" with {'articles': articles} %}
             </div>
             <div class="col mt-4 mt-lg-0">

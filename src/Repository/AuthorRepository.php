@@ -25,4 +25,9 @@ final class AuthorRepository extends ServiceEntityRepository
         $this->em->flush();
         return $entity;
     }
+
+    public function findOneBySlug(string $slug): ?Author
+    {
+        return $this->findOneBy(['slug' => $slug]);
+    }
 }

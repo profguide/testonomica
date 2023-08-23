@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Domain\Test;
 
 
-use App\Entity\Test;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\Pagination\PaginationInterface;
 use Knp\Component\Pager\PaginatorInterface;
@@ -17,12 +16,22 @@ final readonly class TestSearchForm
     {
     }
 
-    public function search(Request $request): PaginationInterface
+    public function search(Request $request, array $params = []): PaginationInterface
     {
-        $query = $this->em->createQuery("SELECT t FROM App:Test t WHERE t.inList = 1 ORDER BY t.id DESC");
+        $query = $this->em->createQueryBuilder()
+            ->select('t')
+            ->from('App:Test', 't')
+            ->where('t.inList = 1')
+            ->orderBy('t.id', 'DESC');
+
+        if (isset($params['author'])) {
+            $query->leftJoin('t.authors', 'a');
+            $query->andWhere('a.id=:authorId');
+            $query->setParameter(':authorId', $params['author']->getId());
+        }
 
         return $this->paginator->paginate(
-            $query, /* query NOT result */
+            $query->getQuery(), /* query NOT result */
             $request->query->getInt('page', 1), /*page number*/
             30 /*limit per page*/
         );
