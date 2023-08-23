@@ -57,29 +57,21 @@ class ArticleCatalog
         $this->articles = new ArrayCollection();
     }
 
-    /**
-     * @return int
-     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
     public function getSlug(): string
     {
         return $this->slug;
     }
 
-    /**
-     * @param string $slug
-     */
     public function setSlug(string $slug): void
     {
         $this->slug = $slug;
     }
+
     public function getName(?string $locale = 'ru'): string
     {
         if ($locale === 'ru') {
@@ -90,97 +82,71 @@ class ArticleCatalog
         throw new \DomainException("Unsupported locale $locale.");
     }
 
-    /**
-     * @param string $name
-     */
     public function setName(string $name): void
     {
         $this->name = $name;
     }
 
-    /**
-     * @return string
-     */
     public function getNameEn(): string
     {
         return $this->nameEn;
     }
 
-    /**
-     * @param string $nameEn
-     */
     public function setNameEn(string $nameEn): void
     {
         $this->nameEn = $nameEn;
     }
 
-    /**
-     * @return string
-     */
-    public function getMetaTitle(): string
+    public function getMetaTitle(?string $locale = 'ru'): string
     {
-        return $this->metaTitle;
+        if ($locale === 'ru') {
+            return $this->metaTitle;
+        } elseif ($locale === 'en') {
+            return $this->metaTitleEn ?? $this->metaTitle;
+        }
+        throw new \DomainException("Unsupported locale $locale.");
     }
 
-    /**
-     * @param string $metaTitle
-     */
     public function setMetaTitle(string $metaTitle): void
     {
         $this->metaTitle = $metaTitle;
     }
 
-    /**
-     * @return string
-     */
     public function getMetaTitleEn(): string
     {
         return $this->metaTitleEn;
     }
 
-    /**
-     * @param string $metaTitleEn
-     */
     public function setMetaTitleEn(string $metaTitleEn): void
     {
         $this->metaTitleEn = $metaTitleEn;
     }
 
-    /**
-     * @return string
-     */
-    public function getMetaDescription(): string
+    public function getMetaDescription(?string $locale = 'ru'): string
     {
-        return $this->metaDescription;
+        if ($locale === 'ru') {
+            return $this->metaDescription;
+        } elseif ($locale === 'en') {
+            return $this->metaDescriptionEn ?? $this->metaDescription;
+        }
+        throw new \DomainException("Unsupported locale $locale.");
     }
 
-    /**
-     * @param string $metaDescription
-     */
     public function setMetaDescription(string $metaDescription): void
     {
         $this->metaDescription = $metaDescription;
     }
 
-    /**
-     * @return string
-     */
     public function getMetaDescriptionEn(): string
     {
         return $this->metaDescriptionEn;
     }
 
-    /**
-     * @param string $metaDescriptionEn
-     */
     public function setMetaDescriptionEn(string $metaDescriptionEn): void
     {
         $this->metaDescriptionEn = $metaDescriptionEn;
     }
 
-    /**
-     * @return Collection|Article[]
-     */
     public function getArticles(): Collection
     {
         return $this->articles;

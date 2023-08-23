@@ -21,15 +21,15 @@ use Symfony\Component\Routing\Annotation\Route;
 class ArticleController extends AbstractController
 {
     public function __construct(
-        private readonly ArticleRepository $articleRepository,
-        private readonly ArticlesSearchForm $articlesSearchForm,
+        private readonly ArticleRepository        $articleRepository,
+        private readonly ArticlesSearchForm       $articlesSearchForm,
         private readonly ArticleCatalogRepository $articleCatalogRepository)
     {
     }
 
     /**
      * @Route("/", name="index")
-     * todo подгрузка, т.е. пейджинг
+     * @param Request $request
      * @return Response
      */
     public function main(Request $request): Response
@@ -45,12 +45,12 @@ class ArticleController extends AbstractController
      * @param string $slug
      * @return Response
      */
-    public function catalog(string $slug): Response
+    public function catalog(Request $request, string $slug): Response
     {
         $catalog = $this->loadCatalog($slug);
         return $this->render('articles/catalog.html.twig', [
             'catalog' => $catalog,
-            'articles' => [], // todo
+            'articles' => $this->articlesSearchForm->search($request),
             'catalogs' => $this->articleCatalogRepository->findAll(),
         ]);
     }
