@@ -5,6 +5,8 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation\Uploadable;
+use Vich\UploaderBundle\Mapping\Annotation\UploadableField;
 
 /**
  * @author: adavydov
@@ -14,6 +16,7 @@ use Symfony\Component\HttpFoundation\File\File;
 #[ORM\Index(columns: ['slug'])]
 #[ORM\Entity(repositoryClass: 'App\Repository\ArticleRepository')]
 #[ORM\HasLifecycleCallbacks]
+#[Uploadable]
 class Article
 {
     #[ORM\Id]
@@ -55,13 +58,13 @@ class Article
     #[ORM\Column(type: 'text', length: 355)]
     private string $metaDescription;
 
-    #[ORM\Column(type: 'text', length: 355, name: 'meta_description_en')]
+    #[ORM\Column(name: 'meta_description_en', type: 'text', length: 355)]
     private string $metaDescriptionEn;
 
     #[ORM\Column(type: 'text')]
     private string $content;
 
-    #[ORM\Column(type: 'text', name: 'content_en')]
+    #[ORM\Column(name: 'content_en', type: 'text')]
     private string $contentEn;
 
     #[ORM\OneToOne(targetEntity: 'Test')]
@@ -71,53 +74,43 @@ class Article
     #[ORM\Column(type: 'boolean')]
     private bool $active = true;
 
-    #[ORM\Column(type: 'boolean', name: 'active_en')]
+    #[ORM\Column(name: 'active_en', type: 'boolean')]
     private bool $activeEn = false;
 
-    #[ORM\Column(type: 'datetime', name: 'created_at')]
+    #[ORM\Column(name: 'created_at', type: 'datetime')]
     private \DateTime $createdAt;
 
-    #[ORM\Column(type: 'datetime', name: 'updated_at')]
+    #[ORM\Column(name: 'updated_at', type: 'datetime')]
     private \DateTime $updatedAt;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $img = null;
+    private ?string $img = null;
 
+    #[UploadableField(mapping: 'articles', fileNameProperty: 'img')]
     private ?File $imgFile = null;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private ?string $imgWide = null;
 
+    #[UploadableField(mapping: 'articles', fileNameProperty: 'imgWide')]
     private ?File $imgWideFile = null;
 
-    /**
-     * @return string
-     */
     public function getImg(): ?string
     {
         return $this->img;
     }
 
-    /**
-     * @param string $img
-     */
     public function setImg(?string $img): void
     {
         $this->img = $img;
     }
 
-    /**
-     * @return File
-     */
-    public function getImgFile()
+    public function getImgFile(): ?File
     {
         return $this->imgFile;
     }
 
-    /**
-     * @param File $imgFile
-     */
-    public function setImgFile($imgFile)
+    public function setImgFile(?File $imgFile): void
     {
         $this->imgFile = $imgFile;
         if ($imgFile) {
@@ -125,34 +118,22 @@ class Article
         }
     }
 
-    /**
-     * @return string
-     */
     public function getImgWide(): ?string
     {
         return $this->imgWide;
     }
 
-    /**
-     * @param string $imgWide
-     */
-    public function setImgWide(string $imgWide): void
+    public function setImgWide(?string $imgWide): void
     {
         $this->imgWide = $imgWide;
     }
 
-    /**
-     * @return File
-     */
-    public function getImgWideFile()
+    public function getImgWideFile(): ?File
     {
         return $this->imgWideFile;
     }
 
-    /**
-     * @param File $imgWideFile
-     */
-    public function setImgWideFile($imgWideFile): void
+    public function setImgWideFile(?File $imgWideFile): void
     {
         $this->imgWideFile = $imgWideFile;
         if ($imgWideFile) {
@@ -160,10 +141,6 @@ class Article
         }
     }
 
-
-    /**
-     * @return int
-     */
     public function getId(): ?int
     {
         return $this->id;

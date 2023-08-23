@@ -12,6 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 final class ArticleType extends AbstractType
 {
@@ -42,6 +43,7 @@ final class ArticleType extends AbstractType
                 'choices' => $this->catalogs->findAll(),
                 'choice_value' => 'id',
                 'choice_label' => 'name',
+                'attr' => array('style' => 'width: 300px'),
             ])
             ->add('active', ChoiceType::class, [
                 'label' => 'Доступность RU',
@@ -59,10 +61,20 @@ final class ArticleType extends AbstractType
                     'Включено по ссылке' => 2,
                 ],
             ])
-            ->add('imgWide', null, [
+            ->add('imgWideFile', VichImageType::class, [
+                'required' => false,
+                'download_label' => false,
+                'row_attr' => [
+                    'class' => 'vich-uploader-wrapper'
+                ],
                 'label' => 'Широкая картинка в статье'
             ])
-            ->add('img', null, [
+            ->add('imgFile', VichImageType::class, [
+                'required' => false,
+                'download_label' => false,
+                'row_attr' => [
+                    'class' => 'vich-uploader-wrapper'
+                ],
                 'label' => 'Маленькая картинка для списка'
             ])
             ->add('save', SubmitType::class, [

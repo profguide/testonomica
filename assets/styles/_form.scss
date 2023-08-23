@@ -1,3 +1,27 @@
 .form-label {
   font-weight: 600;
 }
+
+// custom class via 'row_attr' => ['class' => 'vich-uploader-wrapper']
+.vich-uploader-wrapper {
+  padding: 5px 15px 15px 15px;
+  background: #f9f9f9;
+
+  .col-form-label {
+    font-weight: 600;
+  }
+}
+
+.vich-image {
+  img {
+    max-width: 300px;
+  }
+
+  input[type=file] {
+    width: 300px;
+  }
+
+  .form-check {
+    margin-top: 10px;
+  }
+}
