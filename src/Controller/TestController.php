@@ -36,7 +36,8 @@ class TestController extends AbstractController
     public function index(Request $request): Response
     {
         return $this->render('tests/index.html.twig', [
-            'pagination' => $this->testSearchForm->search($request)
+            'pagination' => $this->testSearchForm->search($request),
+            'allowed_locales' => ['ru', 'en']
         ]);
     }
 
@@ -46,7 +47,8 @@ class TestController extends AbstractController
         $author = $this->authors->findOneBySlug($slug) ?? throw self::createNotFoundException();
         return $this->render('tests/author.html.twig', [
             'author' => $author,
-            'pagination' => $this->testSearchForm->search($request, ['author' => $author])
+            'pagination' => $this->testSearchForm->search($request, ['author' => $author]),
+            'allowed_locales' => ['ru', 'en']
         ]);
     }
 
@@ -57,7 +59,11 @@ class TestController extends AbstractController
         return $this->render('tests/view.html.twig', [
             'test' => $test,
             'category' => $test->getCatalog(),
-            'host' => self::host($request)
+            'host' => self::host($request),
+            'allowed_locales' => [
+                $test->isActive('ru') ? 'ru' : null,
+                $test->isActive('en') ? 'en' : null,
+            ]
         ]);
     }
 
@@ -108,27 +114,4 @@ class TestController extends AbstractController
     {
         return $request->getScheme() . '://' . $request->getHttpHost();
     }
-
-//    private function assertAccess(Test $test, Request $request)
-//    {
-////        if ($this->getParameter('kernel.environment') === 'dev') {
-////            return;
-////        }
-//        // Определим является ли тест платным
-//        // Надо создать Service (пакет), ServiceTests (тесты в пакете) и Access (доступ к пакету (добавить поле service_id))
-//        if ($test->getSlug() !== 'proforientation-v2') {
-//            return;
-//        }
-//        // Из куки получать Access, находить Service по access.getService() и смотреть service.hasTest($test)
-//        $token = $this->accessService->getCookie($request);
-//        if ($token) {
-//            $access = $this->accessService->findOneByToken($token);
-//            if ($access) {
-//                $access->setUsed();
-//                $this->accessService->save($access);
-//                return;
-//            }
-//        }
-//        throw new AccessDeniedHttpException();
-//    }
 }

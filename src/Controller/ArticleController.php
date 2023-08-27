@@ -39,11 +39,13 @@ class ArticleController extends AbstractController
         return $this->render('articles/main.html.twig', [
             'articles' => $this->articlesSearchForm->search($request),
             'catalogs' => $this->articleCatalogRepository->findAll(),
+            'allowed_locales' => ['ru', 'en']
         ]);
     }
 
     /**
      * @Route("/catalog/{slug}/", name="catalog")
+     * @param Request $request
      * @param string $slug
      * @return Response
      */
@@ -54,6 +56,7 @@ class ArticleController extends AbstractController
             'catalog' => $catalog,
             'articles' => $this->articlesSearchForm->search($request),
             'catalogs' => $this->articleCatalogRepository->findAll(),
+            'allowed_locales' => ['ru', 'en']
         ]);
     }
 
@@ -64,9 +67,14 @@ class ArticleController extends AbstractController
      */
     public function view(string $slug): Response
     {
+        $article = $this->loadArticle($slug);
         return $this->render('articles/view.html.twig', [
-            'article' => $this->loadArticle($slug),
+            'article' => $article,
             'catalogs' => $this->articleCatalogRepository->findAll(),
+            'allowed_locales' => [
+                $article->isActive('ru') ? 'ru' : null,
+                $article->isActive('en') ? 'en' : null,
+            ]
         ]);
     }
 
