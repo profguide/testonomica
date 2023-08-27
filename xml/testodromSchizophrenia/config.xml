@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <!-- Минимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="30" label-ru="Уровень риска" label-en="Risk level"/>
+            <conditions>
+                <condition var="SUM" operator="меньше_или_равно" value="10"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>Ориентировочно низкий риск наличия шизофрении</h3>
+                </ru>
+                <en>
+                    <h3>Approximately low risk of having schizophrenia</h3>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Средний уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="30" label-ru="Уровень риска" label-en="Risk level"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="10"/>
+                <condition var="SUM" operator="меньше_или_равно" value="20"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>Ориентировочно средний риск наличия шизофрении</h3>
+                </ru>
+                <en>
+                    <h3>Approximately moderate risk of having schizophrenia</h3>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Максимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="30" label-ru="Уровень риска" label-en="Risk level"/>
+            <conditions>
+                <condition var="SUM" operator="больше" value="20"/>
+            </conditions>
+            <text>
+                <ru>
+                    <h3>Ориентировочно высокий риск наличия шизофрении</h3>
+                </ru>
+                <en>
+                    <h3>Approximately high risk of having schizophrenia</h3>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>

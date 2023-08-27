@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>
+                <ru>Меня мало интересуют окружающие люди</ru>
+                <en>I'm not very interested in people around me</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="2">
+            <name>
+                <ru>Мне трудно дается концентрация внимания</ru>
+                <en>I find it difficult to concentrate my attention</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="3">
+            <name>
+                <ru>Меня часто охватывает апатия, когда ничего не хочется делать</ru>
+                <en>I often experience apathy when I don't want to do anything</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>
+                <ru>Я стараюсь не допускать других в свой внутренний мир</ru>
+                <en>I try to keep others out of my inner world</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="5">
+            <name>
+                <ru>Мне не нравится работать с большими объемами информации</ru>
+                <en>I dislike working with large amounts of information</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="6">
+            <name>
+                <ru>Я чувствую себя эмоционально опустошенным</ru>
+                <en>I often feel emotionally empty</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>
+                <ru>Меня нередко называют грубым, раздражительным</ru>
+                <en>I'm often called rude and irritable</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>
+                <ru>Мне стало труднее находить решение проблем, чем раньше</ru>
+                <en>It has become harder for me to solve problems than before</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>
+                <ru>Часто окружающие не понимают ход моих рассуждений</ru>
+                <en>Others often don't understand the course of my thoughts</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="10">
+            <name>
+                <ru>Бывает, поток мыслей захватывает меня помимо воли</ru>
+                <en>Sometimes, a stream of thoughts captures me involuntarily</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="11">
+            <name>
+                <ru>Мне хочется отгородиться от мира</ru>
+                <en>I want to shut myself off from the world</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>
+                <ru>Обо мне иногда говорят, что я странно, нелепо себя веду</ru>
+                <en>People sometimes say that I behave strangely or absurdly</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>
+                <ru>Бывает, меня охватывает неостановимое желание двигаться, перемещаться</ru>
+                <en>Sometimes, an unstoppable urge to move and travel comes over me</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="14">
+            <name>
+                <ru>Мне случалось надолго уходить из дома без особой причины</ru>
+                <en>I've sometimes left home for a long time without a specific reason</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>
+                <ru>Я почти всегда чувствую себя подавленным</ru>
+                <en>I almost always feel down</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>
+                <ru>Иногда мне трудно провести грань между собственными яркими образами и реальными событиями</ru>
+                <en>Sometimes, I find it hard to distinguish between vivid images in my mind and real events</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>
+                <ru>Бывает, меня охватывает сильное возбуждение, с которым трудно справиться</ru>
+                <en>I sometimes experience strong excitement that's difficult to control</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="18">
+            <name>
+                <ru>Я страдаю бессонницей, с трудом засыпаю, часто просыпаюсь во время сна</ru>
+                <en>I suffer from insomnia, struggle to fall asleep, and often wake up during the night</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="19">
+            <name>
+                <ru>Иногда я думаю, что самоубийство – хороший выход</ru>
+                <en>Sometimes, I think that suicide is a good way out</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="20">
+            <name>
+                <ru>Мое будущее не вызывает у меня ничего, кроме пессимизма</ru>
+                <en>My future evokes nothing but pessimism in me</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="21">
+            <name>
+                <ru>Иногда мое настроение вдруг надолго улучшается</ru>
+                <en>Occasionally, my mood suddenly improves for a long time</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="22">
+            <name>
+                <ru>Размышляя, я часто перескакиваю с одной мысли на другую</ru>
+                <en>While reflecting, I often jump from one thought to another</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="23">
+            <name>
+                <ru>То и дело тоскливая грусть у меня сменяется радостью и весельем</ru>
+                <en>Periods of melancholic sadness often shift to joy and cheerfulness</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="24">
+            <name>
+                <ru>Иногда мне трудно справиться с желаниями, которые осуждаются обществом (злоупотребление алкоголем,
+                    наркотиками, беспорядочный секс)
+                </ru>
+                <en>Sometimes, I struggle with desires that are condemned by society (alcohol, drugs, promiscuous sex)
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="25">
+            <name>
+                <ru>Над моими планами нередко посмеиваются, считая их невыполнимыми</ru>
+                <en>People often mock my plans, deeming them unachievable</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="26">
+            <name>
+                <ru>Мне кажется, что люди вокруг враждебно настроены против меня</ru>
+                <en>I feel that people around me are hostile towards me</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="27">
+            <name>
+                <ru>Мне трудно сосредоточиться на теме разговора</ru>
+                <en>It's difficult for me to focus on the topic of conversation</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="28">
+            <name>
+                <ru>Иногда я слышу голоса «внутри себя»</ru>
+                <en>Sometimes, I hear voices "inside me"</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="29">
+            <name>
+                <ru>Другие люди не понимают моих страхов и тревог</ru>
+                <en>Other people don't understand my fears and anxieties</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="30">
+            <name>
+                <ru>Я не считаю себя ценным членом общества</ru>
+                <en>I don't consider myself a valuable member of society</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
+
+
