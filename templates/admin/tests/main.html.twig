@@ -40,7 +40,7 @@
                     <td>{{ test.id }}</td>
                     <td>{{ test.name }}</td>
                     <td>{{ test.catalog }}</td>
-                    <td>{{ test.moderatorComment }}</td>
+                    <td class="text-muted" style="max-width:200px; font-size: 80%" data-bs-toggle="tooltip" data-bs-title="{{ test.moderatorComment|raw }}">{{ test.moderatorComment|length > 100 ? test.moderatorComment|slice(0, 100) ~ '...' : test.moderatorComment}}</td>
                     <td>{% include "_components/bool.html.twig" with {'value': test.active} %}</td>
                     <td>{% include "_components/bool.html.twig" with {'value': test.activeEn} %}</td>
                     <td>{% include "_components/grid_action.html.twig" with {
@@ -55,4 +55,10 @@
             {{ knp_pagination_render(pagination) }}
         </div>
     </div>
+{% endblock %}
+{% block javascripts %}
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    </script>
 {% endblock %}

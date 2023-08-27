@@ -69,6 +69,7 @@ class TestType extends AbstractType
                 'label' => 'Авторы'
             ])
             ->add('moderatorComment', TextareaType::class, [
+                'required'   => false,
                 'label' => 'Комментарии модератора',
             ])
 //            ->add('authors', ChoiceType::class, [
