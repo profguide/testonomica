@@ -4,6 +4,9 @@
 {% block description %}{{ article.metaDescription(app.request.locale) }}{% endblock %}
 
 {% block body %}
+    {% include "_components/edit_button.html.twig" with {
+        'link': path('admin.articles.edit', {id: article.id}),
+    } %}
     <div class="container">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
