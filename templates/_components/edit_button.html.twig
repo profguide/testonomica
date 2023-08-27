@@ -1,5 +1,5 @@
 {% if (app.user and 'ROLE_ADMIN' in app.user.roles) %}
-    <div style="position: fixed; top: 12px; right: 15px;">
+    <div style="position: fixed; z-index: 99; top: 12px; right: 15px;">
         <div class="container">
             <a href="{{ link }}" class="btn btn-sm btn-light">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
