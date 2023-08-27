@@ -29,6 +29,7 @@
                     {{ knp_pagination_sortable(pagination, 'Название', 't.name') }}
                 </th>
                 <th>Каталог</th>
+                <th>Комментарий</th>
                 <th>RU</th>
                 <th>EN</th>
                 <th>Действие</th>
@@ -39,6 +40,7 @@
                     <td>{{ test.id }}</td>
                     <td>{{ test.name }}</td>
                     <td>{{ test.catalog }}</td>
+                    <td>{{ test.moderatorComment }}</td>
                     <td>{% include "_components/bool.html.twig" with {'value': test.active} %}</td>
                     <td>{% include "_components/bool.html.twig" with {'value': test.activeEn} %}</td>
                     <td>{% include "_components/grid_action.html.twig" with {

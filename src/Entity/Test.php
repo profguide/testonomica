@@ -83,6 +83,9 @@ class Test
     #[ORM\Column(type: 'text', nullable: true)]
     private ?string $resultView = null;
 
+    #[ORM\Column(type: 'text', nullable: true)]
+    private ?string $moderatorComment = null;
+
     public function __construct()
     {
         $this->questions = new ArrayCollection();
@@ -402,5 +405,15 @@ class Test
     {
         $testServices = $this->getServices();
         return $testServices->count() === 0;
+    }
+
+    public function getModeratorComment(): ?string
+    {
+        return $this->moderatorComment;
+    }
+
+    public function setModeratorComment(?string $moderatorComment): void
+    {
+        $this->moderatorComment = $moderatorComment;
     }
 }
