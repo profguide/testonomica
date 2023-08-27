@@ -227,9 +227,14 @@ class Test
         $this->duration = $duration;
     }
 
-    public function isActive(): bool
+    public function isActive(?string $locale = 'ru'): bool
     {
-        return $this->active == 1;
+        if ($locale === 'ru') {
+            return $this->active;
+        } elseif ($locale === 'en') {
+            return $this->activeEn;
+        }
+        throw new \DomainException("Unsupported locale $locale.");
     }
 
     public function setActive(int $active): void

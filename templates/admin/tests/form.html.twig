@@ -5,7 +5,7 @@
 {% block body %}
     <div class="container">
         {% include "_components/browse_button.html.twig" with {
-            'ru': path('tests.view', {slug: form.vars.value.slug}),
+            'ru': path('tests.view', {slug: form.vars.value.slug, _locale: 'ru'}),
             'en': path('tests.view', {slug: form.vars.value.slug, _locale: 'en'}),
         } %}
 

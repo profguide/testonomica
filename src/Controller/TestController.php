@@ -9,6 +9,7 @@ use App\Repository\AuthorRepository;
 use App\Service\CalculatorService;
 use App\Service\ResultService;
 use App\Service\TestService;
+use App\Subscriber\Locale;
 use App\Test\ResultRenderer;
 use App\Test\TestStatus;
 use App\Test\ViewFormat;
@@ -26,6 +27,7 @@ class TestController extends AbstractController
         private readonly CalculatorService $calculatorService,
         private readonly ResultRenderer    $resultRenderer,
         private readonly AuthorRepository  $authors,
+        private readonly Locale            $locale,
     )
     {
     }
@@ -86,8 +88,8 @@ class TestController extends AbstractController
 
     private function getTest(string $slug): Test
     {
-        $test = $this->testService->findBySlug($slug);
-        if (!$test || !$test->isActive()) {
+        $test = $this->testService->findBySlug($slug) ?? throw self::createNotFoundException();
+        if (!$test->isActive($this->locale->getValue())) {
             throw self::createNotFoundException();
         }
         return $test;

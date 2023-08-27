@@ -8,6 +8,7 @@ use App\Entity\Article;
 use App\Entity\ArticleCatalog;
 use App\Repository\ArticleCatalogRepository;
 use App\Repository\ArticleRepository;
+use App\Subscriber\Locale;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -23,7 +24,8 @@ class ArticleController extends AbstractController
     public function __construct(
         private readonly ArticleRepository        $articleRepository,
         private readonly ArticlesSearchForm       $articlesSearchForm,
-        private readonly ArticleCatalogRepository $articleCatalogRepository)
+        private readonly ArticleCatalogRepository $articleCatalogRepository,
+        private readonly Locale                   $locale)
     {
     }
 
@@ -70,7 +72,11 @@ class ArticleController extends AbstractController
 
     private function loadArticle(string $slug): Article
     {
-        return $this->articleRepository->findBySlug($slug) ?? throw self::createNotFoundException();
+        $article = $this->articleRepository->findBySlug($slug) ?? throw self::createNotFoundException();
+        if (!$article->isActive($this->locale->getValue())) {
+            throw self::createNotFoundException();
+        }
+        return $article;
     }
 
     private function loadCatalog(string $slug): ArticleCatalog

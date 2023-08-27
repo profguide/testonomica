@@ -331,9 +331,14 @@ class Article
         $this->test = $test;
     }
 
-    public function isActive(): bool
+    public function isActive(?string $locale = 'ru'): bool
     {
-        return $this->active;
+        if ($locale === 'ru') {
+            return $this->active;
+        } elseif ($locale === 'en') {
+            return $this->activeEn ?? $this->active;
+        }
+        throw new \DomainException("Unsupported locale $locale.");
     }
 
     public function setActive(bool $active): void
