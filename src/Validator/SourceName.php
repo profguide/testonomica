@@ -6,9 +6,7 @@ namespace App\Validator;
 
 use Symfony\Component\Validator\Constraint;
 
-/**
- * @Annotation
- */
+#[\Attribute]
 class SourceName extends Constraint
 {
 }

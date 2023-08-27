@@ -9,6 +9,9 @@ use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 use Symfony\Component\Validator\Exception\UnexpectedValueException;
 
+/**
+ * @see SourceName
+ */
 class SourceNameValidator extends ConstraintValidator
 {
     public function validate(mixed $value, Constraint $constraint): void

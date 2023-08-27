@@ -77,6 +77,7 @@ class Test
     private ?string $calculatorName = null;
 
     #[ORM\Column(type: 'string', length: 50, nullable: true)]
+    #[\App\Validator\SourceName]
     private ?string $sourceName = null;
 
     #[ORM\Column(type: 'text', nullable: true)]
