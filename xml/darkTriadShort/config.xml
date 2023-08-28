@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <!-- Макиавеллизм -->
+        <scenario>
+            <scale percentVar="GROUPS.mac.SCALE" label-ru="Шкала макиавеллизма" label-en="Machiavellianism scale"/>
+            <name>
+                <ru>Макиавеллизм</ru>
+                <en>Machiavellianism</en>
+            </name>
+            <text>
+                <ru>
+                    <p>
+                        Шкала макиавеллизма измеряет склонность к стратегическому и хитрому поведению, характерному для
+                        приверженцев подхода, описанного итальянским политическим философом Никколо Макиавелли. На
+                        нормальном уровне, это может проявляться как умение принимать решения на основе логики и
+                        прагматизма, даже если это требует некоторой дипломатичности или скрытности. Однако на
+                        экстремальных значениях макиавеллизма, это поведение может стать чрезмерно манипулятивным и
+                        жестоким. Люди с высоким уровнем макиавеллизма (выше 60%) могут быть склонны использовать других
+                        в своих целях и игнорировать моральные ограничения.
+                    </p>
+                </ru>
+                <en>
+                    <p>The Machiavellianism scale measures the tendency towards strategic and cunning behavior,
+                        characteristic of those who adhere to the approach described by the Italian political
+                        philosopher Niccolò Machiavelli. At a normal level, this can manifest as the ability to make
+                        decisions based on logic and pragmatism, even if it requires some diplomacy or discretion.
+                        However, at extreme levels of Machiavellianism, this behavior can become excessively
+                        manipulative and cruel. Individuals with a high level of Machiavellianism (above 60%) may be
+                        inclined to use others for their own purposes and ignore moral constraints.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Нарциссизм -->
+        <scenario>
+            <scale percentVar="GROUPS.nar.SCALE" label-ru="Шкала нарциссизма" label-en="Narcissism scale"/>
+            <name>
+                <ru>Нарциссизм</ru>
+                <en>Narcissism</en>
+            </name>
+            <text>
+                <ru>
+                    <p>
+                        Нарциссизм оценивает степень самолюбия и стремления к вниманию со стороны других. На умеренных
+                        уровнях, небольшой нарциссизм может быть положительным источником мотивации и уверенности в
+                        себе. Однако в экстремальных случаях, нарциссизм может привести к чрезмерной самолюбованию,
+                        недостатку эмпатии и завышенным ожиданиям от окружающих. Высокий уровень нарциссизма (выше 55%)
+                        может привести к манипулятивному поведению ради поддержания своего имиджа и недостатку интереса
+                        к потребностям и чувствам других людей.
+                    </p>
+                </ru>
+                <en>
+                    <p>Narcissism assesses the degree of self-love and the desire for attention from others. At moderate
+                        levels, a certain amount of narcissism can be a positive source of motivation and
+                        self-confidence. However, in extreme cases, narcissism can lead to excessive self-love, lack of
+                        empathy, and inflated expectations from others. A high level of narcissism (above 55%) can
+                        result in manipulative behavior to maintain one's image and a lack of interest in the needs and
+                        feelings of others.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Психопатия -->
+        <scenario>
+            <scale percentVar="GROUPS.psi.SCALE" label-ru="Шкала психопатии" label-en="Psychopathy scale"/>
+            <name>
+                <ru>Психопатия</ru>
+                <en>Psychopathy</en>
+            </name>
+            <text>
+                <ru>
+                    <p>
+                        Шкала психопатии оценивает тенденцию к бесчувственности, недостатку эмоциональной реакции и
+                        склонности к антисоциальному поведению. На низком уровне, это может означать уверенность и
+                        способность поддерживать хладнокровие в стрессовых ситуациях. Однако высокий уровень психопатии
+                        (выше 62%) может выражаться в безжалостности, склонности к нарушению норм и правил, а также в
+                        манипулятивности без чувства вины. Экстремальная психопатия может вести к серьезным
+                        антисоциальным и криминальным проявлениям.
+                    </p>
+                    <p>
+                        Важно помнить, что эти шкалы являются инструментами для измерения определенных черт личности и
+                        не должны рассматриваться в изоляции от других аспектов человека. Люди могут иметь различные
+                        комбинации этих черт, и их интерпретация требует всестороннего подхода.
+                    </p>
+                </ru>
+                <en>
+                    <p>The psychopathy scale evaluates the tendency towards callousness, lack of emotional
+                        responsiveness, and a propensity for antisocial behavior. At a low level, this can indicate
+                        confidence and the ability to remain calm in stressful situations. However, a high level of
+                        psychopathy (above 62%) can manifest as ruthlessness, a tendency to violate norms and rules, as
+                        well as manipulation without a sense of guilt. Extreme psychopathy can lead to serious
+                        antisocial and criminal behaviors.
+                    </p>
+                    <p>It's important to remember that these scales are tools for measuring specific personality traits
+                        and should not be considered in isolation from other aspects of a person. Individuals can have
+                        various combinations of these traits, and their interpretation requires a comprehensive
+                        approach.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>

@@ -136,6 +136,10 @@ final readonly class ConfigParser
                 $conditions[] = new Struct\Condition\Condition($var, $operator, $value);
             });
 
+            // name
+            $nameNode = $scenarioNode->filter('name > ' . $this->locale->getValue());
+            $name = $nameNode->count() > 0 ? $nameNode->html() : null;
+
             // text
             $textNode = $scenarioNode->filter('text > ' . $this->locale->getValue());
             if ($textNode->count() === 0) {
@@ -145,7 +149,7 @@ final readonly class ConfigParser
 
             $scale = $this->parseScale($scenarioNode);
 
-            $scenarios[] = new Scenario($conditions, $text, $scale);
+            $scenarios[] = new Scenario($conditions, $name, $text, $scale);
         }
 
         if (count($scenarios) === 0) {

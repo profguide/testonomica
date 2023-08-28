@@ -1,6 +1,8 @@
 {% if form.vars.value.id %}
     <div style="text-align: right; margin-bottom: -50px">
-        <a href="{{ ru }}" class="btn btn-sm btn-light">Просмотр RU</a>
-        <a href="{{ en }}" class="btn btn-sm btn-light">Просмотр EN</a>
+        <a href="{{ path(pathName, {slug: form.vars.value.slug, _locale: 'ru'}) }}" class="btn btn-sm btn-light">Просмотр
+            RU</a>
+        <a href="{{ path(pathName, {slug: form.vars.value.slug, _locale: 'en'}) }}" class="btn btn-sm btn-light">Просмотр
+            EN</a>
     </div>
 {% endif %}

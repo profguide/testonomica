@@ -61,6 +61,8 @@ class AutoCalculator extends AbstractCalculator
         }
 
         // todo добавить в VALUES значения, которые ни разу не были выбраны
+//        dd($groups);
+
 
         return [
             'SUM' => $sum,

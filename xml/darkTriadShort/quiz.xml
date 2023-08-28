@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1" group="mac">
+            <name>
+                <ru>Раскрывать свои секреты - глупо</ru>
+                <en>Revealing one's secrets is foolish</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="2" group="nar">
+            <name>
+                <ru>Окружающие считают меня прирождённым лидером</ru>
+                <en>Others consider me a natural leader</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="3" group="psi">
+            <name>
+                <ru>Мне нравится доставлять неприятности тем, кто главнее меня</ru>
+                <en>I enjoy causing trouble for those who are more important than me</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="4" group="mac">
+            <name>
+                <ru>Люди не будут хорошо работать, пока их не заставишь</ru>
+                <en>People won't work well unless you make them</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="5" group="nar">
+            <name>
+                <ru>Я ненавижу быть в центре внимания</ru>
+                <en>I hate being in the spotlight</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="6" group="psi">
+            <name>
+                <ru>Я избегаю опасных ситуаций</ru>
+                <en>I avoid dangerous situations</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="7" group="mac">
+            <name>
+                <ru>Нужно делать всё, чтобы влиятельные люди были на твоей стороне</ru>
+                <en>Everything should be done to get influential people on your side</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="8" group="nar">
+            <name>
+                <ru>В компаниях без меня, как правило, скучно и неинтересно</ru>
+                <en>Without me, companies are usually boring and uninteresting</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="9" group="psi">
+            <name>
+                <ru>Счёты надо сводить быстро и беспощадно</ru>
+                <en>Scores should be settled quickly and ruthlessly</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="10" group="mac">
+            <name>
+                <ru>Следует избегать открытого конфликта с окружающими – они могут быть полезны в будущем</ru>
+                <en>Open conflict with others should be avoided - they might be useful in the future</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="11" group="nar">
+            <name>
+                <ru>Я знаю, что я особенный(ая), потому что мне об этом постоянно говорят</ru>
+                <en>I know I'm special because people constantly tell me so</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="12" group="psi">
+            <name>
+                <ru>Окружающие часто говорят, что я неуправляем(а)</ru>
+                <en>Others often say I'm uncontrollable</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="13" group="mac">
+            <name>
+                <ru>Полезно знать о других что-то, что можно использовать против них</ru>
+                <en>It's useful to know something about others that can be used against them</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="14" group="nar">
+            <name>
+                <ru>Мне нравится знакомиться с влиятельными людьми</ru>
+                <en>I like getting to know influential people</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="15" group="psi">
+            <name>
+                <ru>Честно говоря, я могу вести себя непорядочно по отношению к другим</ru>
+                <en>Frankly speaking, I can behave unfairly towards others</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="16" group="mac">
+            <name>
+                <ru>Чтобы свести счёты, надо не торопиться и дождаться подходящего момента</ru>
+                <en>To settle scores, you shouldn't rush and should wait for the right moment</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="17" group="nar">
+            <name>
+                <ru>Я смущаюсь, когда мне говорят комплименты</ru>
+                <en>I feel embarrassed when I receive compliments</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="18" group="psi">
+            <name>
+                <ru>Кто меня заденет, тот пожалеет об этом</ru>
+                <en>Whoever crosses me will regret it</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="19" group="mac">
+            <name>
+                <ru>Некоторые вещи о себе надо скрывать от других</ru>
+                <en>Some things about myself should be hidden from others</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="20" group="nar">
+            <name>
+                <ru>Бывает, меня сравнивают со знаменитыми людьми</ru>
+                <en>Sometimes, people compare me to famous individuals</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="21" group="psi">
+            <name>
+                <ru>У меня никогда не было проблем с законом</ru>
+                <en>I've never had problems with the law</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="22" group="mac">
+            <name>
+                <ru>Прежде чем что-то делать, надо убедиться, что результаты будут выгодны именно тебе, а не кому-то
+                    другому
+                </ru>
+                <en>Before doing something, you should make sure the results will benefit you specifically, not someone
+                    else
+                </en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="23" group="nar">
+            <name>
+                <ru>Я обычный человек</ru>
+                <en>I'm just an ordinary person</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="24" group="psi">
+            <name>
+                <ru>Мне нравится подкалывать неудачников</ru>
+                <en>I enjoy teasing losers</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="25" group="mac">
+            <name>
+                <ru>Почти всеми людьми можно манипулировать</ru>
+                <en>Almost everyone can be manipulated</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="26" group="nar">
+            <name>
+                <ru>Я требую, чтобы ко мне относились с уважением, которого я, несомненно, заслуживаю</ru>
+                <en>I demand to be treated with the respect that I undoubtedly deserve</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="27" group="psi">
+            <name>
+                <ru>Я скажу всё, что угодно, чтобы получить то, что я хочу</ru>
+                <en>I'll say anything to get what I want</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет, чем да</ru>
+                    <en>Rather no than yes</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Undecided</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да, чем нет</ru>
+                    <en>Rather yes than no</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>

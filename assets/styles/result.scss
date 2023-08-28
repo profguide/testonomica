@@ -1,6 +1,10 @@
 .result-block-row {
   padding: 0.5rem 0;
 
+  &__name {
+    margin-bottom: 1rem;
+  }
+
   &__progress {
     padding-bottom: 1rem;
   }

@@ -65,6 +65,9 @@ class AnalysisRenderer
 
         if ($this->conditionsPass($scenario->conditions, $resultData)) {
             $text = "";
+            if ($scenario->name) {
+                $text .= '<h3 class="result-block-row__name">' . $scenario->name . '</h3>';
+            }
             if ($scenario->scale) {
                 $text .= '<div class="result-block-row__progress">' .
                     $this->renderScale($scenario->scale, $resultData) . '</div>';
