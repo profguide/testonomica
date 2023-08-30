@@ -10,11 +10,11 @@ use App\Test\Config\Struct\Condition\Operator;
 use App\Test\Config\Struct\Scale\Scale;
 use App\Test\Config\Struct\Scenario;
 
-class AnalysisRenderer
+readonly class AnalysisRenderer
 {
     public function __construct(
-        private readonly ConfigParser     $configParser,
-        private readonly ConfigXmlFetcher $configXmlFetcher)
+        private ConfigParser     $configParser,
+        private ConfigXmlFetcher $configXmlFetcher)
     {
     }
 
@@ -38,7 +38,10 @@ class AnalysisRenderer
             throw new \RuntimeException("None of the scenarios fit the result.");
         }
 
-        // todo outro (config->get('outro'))
+        $outro = $config->get('%config.outro%', false);
+        if ($outro) {
+            $output .= $outro;
+        }
 
         return $output;
 

@@ -26,9 +26,9 @@ final class Config
     /**
      * @param string $key format: %config.min.text%
      */
-    public function get(string $key): string
+    public function get(string $key, bool $required = true): ?string
     {
-        $_key = ltrim($key, '%config.');
+        $_key = str_replace('%config.', '', $key);
         $_key = rtrim($_key, '%');
         $keys = explode('.', $_key);
 
@@ -37,7 +37,10 @@ final class Config
             if (isset($value[$_key])) {
                 $value = $value[$_key];
             } else {
-                throw new \RuntimeException("Cant find value \"$key\" in config.");
+                if ($required) {
+                    throw new \RuntimeException("Cant find value \"$key\" in config.");
+                }
+                return null;
             }
         }
 

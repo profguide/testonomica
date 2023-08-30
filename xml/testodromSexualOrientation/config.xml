@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <texts>
+        <outro>
+            <ru>
+                <p>Показатели по каждой шкале варьируют в пределах от 0 до 20 баллов.
+                    Чем больше баллов получено по шкале, тем больше выражено свойство – гетеросексуальность,
+                    гомосексуальность, бисексуальность, асексуальность. Нулевые показатели говорят об отсутствии данного
+                    свойства. Показатели асексуальности следует рассматривать в сочетании с другими шкалами.
+                </p>
+
+                <h3>Шкала гетеросексуальности</h3>
+                <p>Что означают высокие показатели (15–20 баллов) по шкале гетеросексуальности? Вы гетеросексуал,
+                    ориентированный на отношения с людьми противоположного пола, другие виды сексуальных отношений
+                    вас не привлекают. Возможно, показатели гомо- или бисексуальности при этом ненулевые (1–5
+                    баллов). Это нормально, может говорить о том, что вы проявляли сексуальное любопытство и
+                    вступали иногда в единичные либо случайные отношения с людьми одного с вами пола. Показатели в
+                    11–14 баллов говорят о том, что обычно вы ведете себя как гетеросексуал, однако не исключена
+                    скрытая тенденция к нетрадиционным сексуальным предпочтениям. Показатели в 10 баллов и ниже
+                    говорят либо о неявно выраженной (неосознанной или подавленной) нетрадиционной сексуальной
+                    ориентации, либо о том, что вы в определенной степени асексуальны, не испытываете выраженного
+                    сексуального влечения к кому бы то ни было.
+                </p>
+
+                <h3>Шкалы гомосексуальности и бисексуальности</h3>
+                <p>
+                    Чем выше показатели по шкалам гомосексуальности или бисексуальности, тем больше вероятность, что
+                    ваша сексуальная ориентация отличается от традиционной, то есть гетеросексуальной ориентации.
+                    Высокие показатели гомосексуальности или бисексуальности говорят о том, что у вас сильно (15–20
+                    баллов) или достаточно явно (11–14 баллов) выражена нетрадиционная сексуальная ориентация. Не очень
+                    высокие, но ненулевые (6–10 баллов) показатели могут означать, что вы подавляете свои сексуальные
+                    желания, стараетесь их скрывать от окружающих или даже от самого себя, демонстрируя
+                    гетеросексуальное поведение. Другой вариант – ваши сексуальные предпочтения со временем начинают
+                    постепенно проявляться. Возможно, имеет смысл проанализировать свои сексуальные предпочтения и
+                    принять новые решения. Результаты в 1–5 баллов по шкалам нетрадиционной сексуальной ориентации могут
+                    означать случайный сексуальный опыт (см. выше). Низкие показатели по шкалам гомо- и бисексуальности
+                    могут также означать асексуальность, сниженное либидо, отсутствие выраженных сексуальных желаний.
+                </p>
+            </ru>
+            <en>
+                <p>Scores on each scale range from 0 to 20 points. The higher the score on a scale, the more pronounced
+                    the corresponding trait – heterosexuality, homosexuality, bisexuality, or asexuality. A score of 0
+                    indicates the absence of that particular trait. Asexuality scores should be considered in
+                    conjunction with other scales.
+                </p>
+
+                <h3>Heterosexuality scale</h3>
+                <p>What do high scores (15-20 points) on the heterosexuality scale mean? You are a heterosexual
+                    individual, oriented towards relationships with individuals of the opposite sex; other forms of
+                    sexual relationships do not attract you. It's possible that there are nonzero scores (1-5
+                    points) on indicators of homo- or bisexuality. This is normal and may indicate that you have
+                    shown sexual curiosity and occasionally engaged in individual or occasional relationships with
+                    individuals of the same sex. Scores in the range of 11-14 points suggest that you usually behave
+                    as a heterosexual, but a latent tendency towards non-traditional sexual preferences cannot be
+                    ruled out. Scores of 10 points or lower indicate either implicitly expressed (unconscious or
+                    suppressed) non-traditional sexual orientation or a certain degree of asexuality, where you
+                    don't experience pronounced sexual attraction towards anyone.
+                </p>
+
+                <h3>Homosexuality and bisexuality scales</h3>
+                <p>The higher the scores on the homosexuality or bisexuality scales, the more likely it is that your
+                    sexual orientation differs from the traditional, i.e., heterosexual orientation. High scores on
+                    homosexuality or bisexuality indicate a strongly (15-20 points) or moderately (11-14 points)
+                    expressed non-traditional sexual orientation. Not very high but non-zero scores (6-10 points) may
+                    suggest that you suppress your sexual desires, try to hide them from others or even from yourself,
+                    exhibiting heterosexual behavior. Another possibility is that your sexual preferences gradually
+                    start to manifest over time. It may be worth analyzing your sexual preferences and making new
+                    decisions. Scores of 1-5 points on the scales of non-traditional sexual orientation may indicate
+                    occasional sexual experiences (see above). Low scores on the homosexuality and bisexuality scales
+                    can also indicate asexuality, decreased libido, or a lack of pronounced sexual desires.
+                </p>
+            </en>
+        </outro>
+    </texts>
+    <scenarios>
+        <!-- Гетеросексуальность -->
+        <scenario>
+            <scale percentVar="hetero.percentage" showVar="hetero.sum" showMaxVal="20"
+                   label-ru="Гетеросексуальность"
+                   label-en="Heterosexuality"/>
+            <text>
+                <ru></ru>
+                <en></en>
+            </text>
+        </scenario>
+
+        <!-- Гомосексуальность -->
+        <scenario>
+            <scale percentVar="homo.percentage" showVar="homo.sum" showMaxVal="20"
+                   label-ru="Гомосексуальность"
+                   label-en="Homosexuality"/>
+            <text>
+                <ru></ru>
+                <en></en>
+            </text>
+        </scenario>
+
+        <!-- Бисексуальность -->
+        <scenario>
+            <scale percentVar="bi.percentage" showVar="bi.sum" showMaxVal="20"
+                   label-ru="Бисексуальность"
+                   label-en="Bisexuality"/>
+            <text>
+                <ru></ru>
+                <en></en>
+            </text>
+        </scenario>
+
+        <!-- Асексуальность -->
+        <scenario>
+            <scale percentVar="asexual.percentage" showVar="asexual.sum" showMaxVal="20"
+                   label-ru="Асексуальность"
+                   label-en="Asexuality"/>
+            <text>
+                <ru></ru>
+                <en></en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>
