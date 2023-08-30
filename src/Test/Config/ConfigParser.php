@@ -142,10 +142,7 @@ final readonly class ConfigParser
 
             // text
             $textNode = $scenarioNode->filter('text > ' . $this->locale->getValue());
-            if ($textNode->count() === 0) {
-                throw new ConfigXmlParsingException("Scenario does not contain \"text\" node.");
-            }
-            $text = $textNode->html();
+            $text = $textNode->count() > 0 ? $textNode->html() : null;
 
             $scale = $this->parseScale($scenarioNode);
 

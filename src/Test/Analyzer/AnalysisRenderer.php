@@ -102,11 +102,11 @@ readonly class AnalysisRenderer
             $text = $scale->label . ': ' . $text;
         }
 
-        return '<div class="progress">
+        return '<div class="progress__text">' . $text . '</div><div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: ' . $percentage . '%;"
                          aria-valuenow="' . $percentage . '"
                          aria-valuemin="0"
-                         aria-valuemax="100">' . $text . '
+                         aria-valuemax="100">
                     </div>
                 </div>';
     }

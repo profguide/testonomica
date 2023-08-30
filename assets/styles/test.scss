@@ -3,13 +3,16 @@
 .my-node-enter {
   opacity: 0;
 }
+
 .my-node-enter-active {
   opacity: 1;
   transition: opacity 500ms;
 }
+
 .my-node-exit {
   opacity: 1;
 }
+
 .my-node-exit-active {
   opacity: 0;
   transition: opacity 500ms;
@@ -62,5 +65,19 @@
     margin-top: 2rem;
     height: 50px;
     width: 175px;
+  }
+}
+
+// override api
+.tnc {
+  .tnc-q-progress-bar {
+
+    &__line-wrapper {
+      background: #f0f0ff;
+    }
+
+    &__line {
+      background: #5c5fef;
+    }
   }
 }
