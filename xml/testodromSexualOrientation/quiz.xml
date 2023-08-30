@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>
+                <ru>Вам приятны телесные контакты с другими людьми?</ru>
+                <en>Do you enjoy physical contact with other people?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>Да, с людьми противоположного пола</ru>
+                    <en>Yes, with people of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>Да, с людьми одного со мной пола</ru>
+                    <en>Yes, with people of the same sex as me</en>
+                </option>
+                <option value="bi">
+                    <ru>Да, с людьми и противоположного, и одного со мной пола</ru>
+                    <en>Yes, with people of both the opposite and the same sex as me</en>
+                </option>
+                <option value="asexual">
+                    <ru>Телесные контакты мне безразличны</ru>
+                    <en>I am indifferent to physical contact</en>
+                </option>
+            </options>
+        </item>
+        <item id="2">
+            <name>
+                <ru>У вас бывают эротические фантазии?</ru>
+                <en>Do you have erotic fantasies?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>Да, с участием персонажей противоположного пола</ru>
+                    <en>Yes, involving characters of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>Да, с участием персонажей одного со мной пола</ru>
+                    <en>Yes, involving characters of the same sex as me</en>
+                </option>
+                <option value="bi">
+                    <ru>Да, с участием персонажей и противоположного, и одного со мной пола</ru>
+                    <en>Yes, involving characters of both the opposite and the same sex as me</en>
+                </option>
+                <option value="asexual">
+                    <ru>У меня не бывает эротических фантазий</ru>
+                    <en>I don't have erotic fantasies</en>
+                </option>
+            </options>
+        </item>
+        <item id="3">
+            <name>
+                <ru>У вас есть или были ранее устойчивые сексуальные отношения?</ru>
+                <en>Do you have or have you had stable sexual relationships?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>Да, с людьми противоположного пола</ru>
+                    <en>Yes, with people of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>Да, с людьми одного со мной пола</ru>
+                    <en>Yes, with people of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>Да, с людьми и противоположного, и одного со мной пола</ru>
+                    <en>Yes, with people of both the opposite and the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>У меня нет опыта таких отношений</ru>
+                    <en>I have no experience of such relationships</en>
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>
+                <ru>Вам снятся сексуально окрашенные сны?</ru>
+                <en>Do you have sexually themed dreams?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>Да, с персонажами противоположного пола</ru>
+                    <en>Yes, with characters of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>Да, с персонажами одного со мной пола</ru>
+                    <en>Yes, with characters of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>Да, с персонажами и противоположного, и одного со мной пола</ru>
+                    <en>Yes, with characters of both the opposite and the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>У меня не бывает эротических снов</ru>
+                    <en>I do not have erotic dreams</en>
+                </option>
+            </options>
+        </item>
+        <item id="5">
+            <name>
+                <ru>С кем у вас наилучшим образом складываются интимные отношения?</ru>
+                <en>With whom do you have the best intimate relationships?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>С людьми противоположного пола</ru>
+                    <en>With people of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>С людьми одного со мной пола</ru>
+                    <en>With people of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>С людьми и противоположного, и одного со мной пола</ru>
+                    <en>With people of both the opposite and the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>У меня нет опыта интимных отношений</ru>
+                    <en>I have no experience of intimate relationships</en>
+                </option>
+            </options>
+        </item>
+        <item id="6">
+            <name>
+                <ru>Люди дают вам понять, что вы сексуально привлекательны?</ru>
+                <en>Do people indicate that you are sexually attractive?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>Да, обычно это люди противоположного пола</ru>
+                    <en>Yes, usually people of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>Да, обычно это люди одного со мной пола</ru>
+                    <en>Yes, usually people of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>Да, это люди и противоположного, и одного со мной пола</ru>
+                    <en>Yes, it's people of both the opposite and the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>Не знаю, что ответить</ru>
+                    <en>I don't know what to answer</en>
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>
+                <ru>Сексуальная близость с кем вас возбуждает?</ru>
+                <en>Sexual intimacy with whom arouses you?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>С людьми противоположного пола</ru>
+                    <en>With people of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>С людьми одного со мной пола</ru>
+                    <en>With people of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>С людьми и противоположного, и одного со мной пола</ru>
+                    <en>With people of both the opposite and the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>Сексуальная близость меня не возбуждает</ru>
+                    <en>Sexual intimacy does not arouse me</en>
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>
+                <ru>Вы мечтаете о романтических отношениях?</ru>
+                <en>Do you dream of romantic relationships?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>Да, с человеком противоположного пола</ru>
+                    <en>Yes, with a person of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>Да, с человеком одного со мной пола</ru>
+                    <en>Yes, with a person of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>Да, с любым человеком – или противоположного, или одного со мной пола</ru>
+                    <en>Yes, with any person – either of the opposite or the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>У меня нет тяги к романтическим отношениям</ru>
+                    <en>I have no inclination towards romantic relationships</en>
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>
+                <ru>Физическая близость вызывает у вас эйфорию?</ru>
+                <en>Does physical intimacy cause euphoria for you?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>Да, с людьми противоположного пола</ru>
+                    <en>Yes, with people of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>Да, с людьми одного со мной пола</ru>
+                    <en>Yes, with people of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>Да, с людьми и противоположного, и одного со мной пола</ru>
+                    <en>Yes, with people of both the opposite and the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>Я не испытываю эйфории при физической близости</ru>
+                    <en>I don't experience euphoria with physical intimacy</en>
+                </option>
+            </options>
+        </item>
+        <item id="10">
+            <name>
+                <ru>Кто вам обычно делает (или делал ранее) откровенно сексуальные предложения?</ru>
+                <en>Who usually makes (or has made in the past) explicit sexual propositions to you?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>Люди противоположного пола</ru>
+                    <en>People of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>Люди одного со мной пола</ru>
+                    <en>People of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>Люди и противоположного, и одного со мной пола</ru>
+                    <en>People of both the opposite and the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>Не знаю, не обращаю на это внимания</ru>
+                    <en>I don't know, I don't pay attention to it</en>
+                </option>
+            </options>
+        </item>
+        <item id="11">
+            <name>
+                <ru>На кого из симпатичных людей вокруг вы обращаете в основном свое внимание?</ru>
+                <en>Who among the attractive people around do you mainly pay attention to?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>На людей противоположного пола</ru>
+                    <en>To people of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>На людей одного со мной пола</ru>
+                    <en>To people of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>На людей и противоположного, и одного со мной пола</ru>
+                    <en>To people of both the opposite and the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>Мало замечаю, кто вокруг симпатичный, а кто нет</ru>
+                    <en>I don't notice much who around is attractive and who is not</en>
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>
+                <ru>Вы когда-нибудь сильно влюблялись?</ru>
+                <en>Have you ever been deeply in love?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>Да, в человека противоположного пола</ru>
+                    <en>Yes, in a person of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>Да, в человека одного со мной пола</ru>
+                    <en>Yes, in a person of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>Да, в людей и противоположного, и одного со мной пола</ru>
+                    <en>Yes, in people of both the opposite and the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>У меня нет опыта сильной влюбленности</ru>
+                    <en>I have no experience of being deeply in love</en>
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>
+                <ru>Бывает так, что вы не можете заснуть от сексуального возбуждения?</ru>
+                <en>Do you ever find it difficult to fall asleep due to sexual arousal?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>Да, представляя контакт с человеком противоположного пола</ru>
+                    <en>Yes, imagining contact with a person of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>Да, представляя контакт с человеком одного со мной пола</ru>
+                    <en>Yes, imagining contact with a person of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>Да, представляя контакт с человеком либо противоположного, либо одного со мной пола</ru>
+                    <en>Yes, imagining contact with a person of either the opposite or the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>У меня не бывает такого сильного сексуального возбуждения</ru>
+                    <en>I do not experience such strong sexual arousal</en>
+                </option>
+            </options>
+        </item>
+        <item id="14">
+            <name>
+                <ru>Какие эротические изображения (фото, картины, скульптуры) вызывают у вас сексуальное желание?</ru>
+                <en>Which erotic images (photos, paintings, sculptures) arouse sexual desire in you?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>Изображения эротического контакта людей противоположного пола</ru>
+                    <en>Images of erotic contact between people of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>Изображения эротического контакта людей одного со мной пола</ru>
+                    <en>Images of erotic contact between people of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>Изображения эротического контакта людей и противоположного, и одного со мной пола</ru>
+                    <en>Images of erotic contact between people of both the opposite and the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>Изображения эротического контакта не вызывают у меня сексуального желания</ru>
+                    <en>Images of erotic contact do not arouse sexual desire in me</en>
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>
+                <ru>Вы обычно замечаете сексуально привлекательных людей?</ru>
+                <en>Do you usually notice sexually attractive people?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>Да, людей противоположного пола</ru>
+                    <en>Yes, people of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>Да, людей одного со мной пола</ru>
+                    <en>Yes, people of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>Да, людей и противоположного, и одного со мной пола</ru>
+                    <en>Yes, people of both the opposite and the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>Не обращаю внимания на сексапильность окружающих</ru>
+                    <en>I don't pay attention to the sex appeal of those around me</en>
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>
+                <ru>Вам приятны поцелуи?</ru>
+                <en>Do you enjoy kissing?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>Да, с людьми противоположного пола</ru>
+                    <en>Yes, with people of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>Да, с людьми одного со мной пола</ru>
+                    <en>Yes, with people of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>Да, с людьми и противоположного, и одного со мной пола</ru>
+                    <en>Yes, with people of both the opposite and the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>Мне это безразлично</ru>
+                    <en>I am indifferent to it</en>
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>
+                <ru>Вам хотелось бы попробовать новые, необычные для вас виды секса?</ru>
+                <en>Would you like to try new and unusual types of sex?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>Да, с человеком противоположного пола</ru>
+                    <en>Yes, with a person of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>Да, с человеком одного со мной пола</ru>
+                    <en>Yes, with a person of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>Да, с человеком противоположного или одного со мной пола</ru>
+                    <en>Yes, with a person of either the opposite or the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>Мне это неинтересно</ru>
+                    <en>I am not interested in this</en>
+                </option>
+            </options>
+        </item>
+        <item id="18">
+            <name>
+                <ru>Вы хотели бы посетить клуб, где собираются для общения люди нетрадиционной сексуальной ориентации?
+                </ru>
+                <en>Would you like to visit a club where people with non-traditional sexual orientations gather to
+                    socialize?
+                </en>
+            </name>
+            <options>
+                <option value="no">
+                    <ru>Меня это ничуть не интересует</ru>
+                    <en>I am not interested in this at all</en>
+                </option>
+                <option value="yes">
+                    <ru>Да, мне это интересно</ru>
+                    <en>Yes, I am interested in this</en>
+                </option>
+            </options>
+        </item>
+        <item id="19">
+            <name>
+                <ru>Секс доставляет вам радость?</ru>
+                <en>Does sex bring you joy?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>Да, с людьми противоположного пола</ru>
+                    <en>Yes, with people of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>Да, с людьми одного со мной пола</ru>
+                    <en>Yes, with people of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>Да, с людьми и противоположного, и одного со мной пола</ru>
+                    <en>Yes, with people of both the opposite and the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>Легко обхожусь без секса</ru>
+                    <en>I can easily do without sex</en>
+                </option>
+            </options>
+        </item>
+        <item id="20">
+            <name>
+                <ru>Вы одобряете проведение парадов представителей ЛГБТ-сообщества?</ru>
+                <en>Do you approve of the parades of LGBTQ+ community members?</en>
+            </name>
+            <options>
+                <option value="no">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="yes">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="yes-no">
+                    <ru>Мне это безразлично</ru>
+                    <en>I am indifferent to it</en>
+                </option>
+            </options>
+        </item>
+        <item id="21">
+            <name>
+                <ru>Вы можете ответить на флирт, сексуальные заигрывания со стороны незнакомых людей?</ru>
+                <en>Can you respond to flirting, sexual advances from strangers?</en>
+            </name>
+            <options>
+                <option value="hetero">
+                    <ru>Да, если это люди противоположного пола</ru>
+                    <en>Yes, if it's people of the opposite sex</en>
+                </option>
+                <option value="homo">
+                    <ru>Да, если это люди одного со мной пола</ru>
+                    <en>Yes, if it's people of the same sex</en>
+                </option>
+                <option value="bi">
+                    <ru>Да, включая людей и противоположного, и одного со мной пола</ru>
+                    <en>Yes, including people of both the opposite and the same sex</en>
+                </option>
+                <option value="asexual">
+                    <ru>Не обращаю на это внимания</ru>
+                    <en>I don't pay attention to it</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
+
+
