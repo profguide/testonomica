@@ -17,9 +17,12 @@
             <conditions>
                 <condition var="SUM" operator="меньше_или_равно" value="10"/>
             </conditions>
+            <name>
+                <ru>У вас низкий уровень ревнивости</ru>
+                <en>You have a low level of jealousy</en>
+            </name>
             <text>
                 <ru>
-                    <h3>У вас низкий уровень ревнивости</h3>
                     <p>
                         Вы не стремитесь контролировать партнера, вы уверены в нем и
                         его чувствах. Вам не нужна постоянная демонстрация вашей значимости для другого, вам достаточно
@@ -29,7 +32,6 @@
                     </p>
                 </ru>
                 <en>
-                    <h3>You have a low level of jealousy</h3>
                     <p>
                         You don't strive to control your partner; you trust them and
                         their feelings. You don't require constant demonstrations of your significance to others; your
@@ -58,9 +60,12 @@
                 <condition var="SUM" operator="больше" value="10"/>
                 <condition var="SUM" operator="меньше_или_равно" value="30"/>
             </conditions>
+            <name>
+                <ru>У вас средний уровень ревнивости</ru>
+                <en>You have a moderate level of jealousy</en>
+            </name>
             <text>
                 <ru>
-                    <h3>У вас средний уровень ревнивости</h3>
                     <p>
                         То и дело случаются вспышки ревности, однако назвать вас
                         неисправимым ревнивцем нельзя. В чем причина ревности? Возможно, вас провоцируют. Возможно, вам
@@ -74,7 +79,6 @@
                     </p>
                 </ru>
                 <en>
-                    <h3>You have a moderate level of jealousy</h3>
                     <p>
                         There are occasional bursts of jealousy, but you can't be
                         labeled as irreversibly jealous. What's causing your jealousy? Perhaps you're being provoked.
@@ -106,9 +110,12 @@
             <conditions>
                 <condition var="SUM" operator="больше" value="30"/>
             </conditions>
+            <name>
+                <ru>Вы хронический, ярый ревнивец, у вас высокий уровень ревнивости</ru>
+                <en>You are a chronic, intense jealous person with a high level of jealousy</en>
+            </name>
             <text>
                 <ru>
-                    <h3>Вы хронический, ярый ревнивец, у вас высокий уровень ревнивости</h3>
                     <p>
                         Вы нуждаетесь в том, чтобы
                         постоянно контролировать партнера, знать о нем все, даже самое тайное, отслеживать каждую минуту
@@ -124,7 +131,6 @@
                     </p>
                 </ru>
                 <en>
-                    <h3>You are a chronic, intense jealous person with a high level of jealousy</h3>
                     <p>
                         You constantly need to
                         control your partner, know everything about them, even their deepest secrets, monitor every
