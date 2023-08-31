@@ -2,7 +2,12 @@
 <config>
     <scenarios>
         <scenario>
-            <scale percentVar="SCALE" label-ru="Правильных ответов" label-en="Correct answers"/>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Правильных ответов</ru>
+                    <en>Correct answers</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="меньше_или_равно" value="6"/>
             </conditions>
@@ -23,7 +28,12 @@
         </scenario>
 
         <scenario>
-            <scale percentVar="SCALE" label-ru="Правильных ответов" label-en="Correct answers"/>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Правильных ответов</ru>
+                    <en>Correct answers</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="6"/>
                 <condition var="SUM" operator="меньше_или_равно" value="11"/>
@@ -44,7 +54,12 @@
 
         <!-- Максимальный уровень -->
         <scenario>
-            <scale percentVar="SCALE" label-ru="Правильных ответов" label-en="Correct answers"/>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Правильных ответов</ru>
+                    <en>Correct answers</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="11"/>
             </conditions>

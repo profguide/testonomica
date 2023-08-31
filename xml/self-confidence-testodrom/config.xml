@@ -3,7 +3,12 @@
     <scenarios>
         <!-- Минимальный уровень -->
         <scenario>
-            <scale percentVar="SCALE" label-ru="Уверенность в себе" label-en="Self-confidence"/>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Уверенность в себе</ru>
+                    <en>Self-confidence</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="меньше_или_равно" value="30"/>
             </conditions>
@@ -41,7 +46,12 @@
             </text>
         </scenario>
         <scenario>
-            <scale percentVar="SCALE" label-ru="Уверенность в себе" label-en="Self-confidence"/>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Уверенность в себе</ru>
+                    <en>Self-confidence</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="30"/>
                 <condition var="SUM" operator="меньше_или_равно" value="40"/>
@@ -82,7 +92,12 @@
 
         <!-- Средний уровень -->
         <scenario>
-            <scale percentVar="SCALE" label-ru="Уверенность в себе" label-en="Self-confidence"/>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Уверенность в себе</ru>
+                    <en>Self-confidence</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="40"/>
                 <condition var="SUM" operator="меньше_или_равно" value="50"/>
@@ -118,7 +133,12 @@
             </text>
         </scenario>
         <scenario>
-            <scale percentVar="SCALE" label-ru="Уверенность в себе" label-en="Self-confidence"/>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Уверенность в себе</ru>
+                    <en>Self-confidence</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="50"/>
                 <condition var="SUM" operator="меньше_или_равно" value="60"/>
@@ -154,7 +174,12 @@
             </text>
         </scenario>
         <scenario>
-            <scale percentVar="SCALE" label-ru="Уверенность в себе" label-en="Self-confidence"/>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Уверенность в себе</ru>
+                    <en>Self-confidence</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="60"/>
                 <condition var="SUM" operator="меньше_или_равно" value="70"/>
@@ -192,7 +217,12 @@
 
         <!-- Максимальный уровень -->
         <scenario>
-            <scale percentVar="SCALE" label-ru="Уверенность в себе" label-en="Self-confidence"/>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Уверенность в себе</ru>
+                    <en>Self-confidence</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="70"/>
             </conditions>

@@ -3,7 +3,12 @@
     <scenarios>
         <!-- Макиавеллизм -->
         <scenario>
-            <scale percentVar="GROUPS.mac.SCALE" label-ru="Шкала макиавеллизма" label-en="Machiavellianism scale"/>
+            <scale percentVar="GROUPS.mac.SCALE">
+                <label>
+                    <ru>Шкала макиавеллизма</ru>
+                    <en>Machiavellianism scale</en>
+                </label>
+            </scale>
             <name>
                 <ru>Макиавеллизм</ru>
                 <en>Machiavellianism</en>
@@ -35,7 +40,12 @@
 
         <!-- Нарциссизм -->
         <scenario>
-            <scale percentVar="GROUPS.nar.SCALE" label-ru="Шкала нарциссизма" label-en="Narcissism scale"/>
+            <scale percentVar="GROUPS.nar.SCALE">
+                <label>
+                    <ru>Шкала нарциссизма</ru>
+                    <en>Narcissism scale</en>
+                </label>
+            </scale>
             <name>
                 <ru>Нарциссизм</ru>
                 <en>Narcissism</en>
@@ -65,7 +75,12 @@
 
         <!-- Психопатия -->
         <scenario>
-            <scale percentVar="GROUPS.psi.SCALE" label-ru="Шкала психопатии" label-en="Psychopathy scale"/>
+            <scale percentVar="GROUPS.psi.SCALE">
+                <label>
+                    <ru>Шкала психопатии</ru>
+                    <en>Psychopathy scale</en>
+                </label>
+            </scale>
             <name>
                 <ru>Психопатия</ru>
                 <en>Psychopathy</en>

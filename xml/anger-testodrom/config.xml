@@ -3,7 +3,12 @@
     <scenarios>
         <!-- Минимальный уровень -->
         <scenario>
-            <scale percentVar="SCALE" label-ru="Уровень гневливости" label-en="Level of irritability"/>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Уровень гневливости</ru>
+                    <en>Level of irritability</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="меньше_или_равно" value="10"/>
             </conditions>
@@ -31,7 +36,12 @@
 
         <!-- Средний уровень -->
         <scenario>
-            <scale percentVar="SCALE" label-ru="Уровень гневливости" label-en="Level of irritability"/>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Уровень гневливости</ru>
+                    <en>Level of irritability</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="10"/>
                 <condition var="SUM" operator="меньше_или_равно" value="30"/>
@@ -66,7 +76,12 @@
 
         <!-- Максимальный уровень -->
         <scenario>
-            <scale percentVar="SCALE" label-ru="Уровень гневливости" label-en="Level of irritability"/>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Уровень гневливости</ru>
+                    <en>Level of irritability</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="30"/>
             </conditions>

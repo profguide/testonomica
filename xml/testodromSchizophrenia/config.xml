@@ -3,7 +3,12 @@
     <scenarios>
         <!-- Минимальный уровень -->
         <scenario>
-            <scale percentVar="SCALE" showVar="SUM" showMaxVal="30" label-ru="Уровень риска" label-en="Risk level"/>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="30">
+                <label>
+                    <ru>Уровень риска</ru>
+                    <en>Risk level</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="меньше_или_равно" value="10"/>
             </conditions>
@@ -19,7 +24,12 @@
 
         <!-- Средний уровень -->
         <scenario>
-            <scale percentVar="SCALE" showVar="SUM" showMaxVal="30" label-ru="Уровень риска" label-en="Risk level"/>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="30">
+                <label>
+                    <ru>Уровень риска</ru>
+                    <en>Risk level</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="10"/>
                 <condition var="SUM" operator="меньше_или_равно" value="20"/>
@@ -36,7 +46,12 @@
 
         <!-- Максимальный уровень -->
         <scenario>
-            <scale percentVar="SCALE" showVar="SUM" showMaxVal="30" label-ru="Уровень риска" label-en="Risk level"/>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="30">
+                <label>
+                    <ru>Уровень риска</ru>
+                    <en>Risk level</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="20"/>
             </conditions>

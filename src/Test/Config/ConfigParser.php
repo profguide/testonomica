@@ -156,26 +156,25 @@ final readonly class ConfigParser
         return $scenarios;
     }
 
-    private function parseScale(Crawler $crawler): ?Scale
+    private function parseScale(Crawler $scenario): ?Scale
     {
         // --------------------
         // scale :label :var :max
         // --------------------
 
-        $scaleNode = $crawler->filter('scale');
+        $scaleNode = $scenario->filter('scale');
         if ($scaleNode->count() == 0) {
             return null;
         }
 
-        if ($this->locale->getValue() === 'en') {
-            $label = $scaleNode->attr('label-en');
-        } else {
-            $label = $scaleNode->attr('label-ru');
+        $labelNode = $scaleNode->filter('label ' . $this->locale->getValue());
+        if ($labelNode->count() > 0) {
+            $label = $labelNode->text();
         }
         $percentVar = $scaleNode->attr('percentVar');
         $showVar = $scaleNode->attr('showVar');
         $maxVal = (int)$scaleNode->attr('showMaxVal');
 
-        return new Scale($percentVar, $showVar, $maxVal, $label);
+        return new Scale($percentVar, $showVar, $maxVal, $label ?? null);
     }
 }

@@ -75,26 +75,42 @@
     <scenarios>
         <!-- Гетеросексуальность -->
         <scenario>
-            <scale percentVar="hetero.percentage" showVar="hetero.sum" showMaxVal="20" label-ru="Гетеросексуальность"
-                   label-en="Heterosexuality"/>
+            <scale percentVar="hetero.percentage" showVar="hetero.sum" showMaxVal="20">
+                <label>
+                    <ru>Гетеросексуальность</ru>
+                    <en>Heterosexuality</en>
+                </label>
+            </scale>
         </scenario>
 
         <!-- Гомосексуальность -->
         <scenario>
-            <scale percentVar="homo.percentage" showVar="homo.sum" showMaxVal="20" label-ru="Гомосексуальность"
-                   label-en="Homosexuality"/>
+            <scale percentVar="homo.percentage" showVar="homo.sum" showMaxVal="20">
+                <label>
+                    <ru>Гомосексуальность</ru>
+                    <en>Homosexuality</en>
+                </label>
+            </scale>
         </scenario>
 
         <!-- Бисексуальность -->
         <scenario>
-            <scale percentVar="bi.percentage" showVar="bi.sum" showMaxVal="20" label-ru="Бисексуальность"
-                   label-en="Bisexuality"/>
+            <scale percentVar="bi.percentage" showVar="bi.sum" showMaxVal="20">
+                <label>
+                    <ru>Бисексуальность</ru>
+                    <en>Bisexuality</en>
+                </label>
+            </scale>
         </scenario>
 
         <!-- Асексуальность -->
         <scenario>
-            <scale percentVar="asexual.percentage" showVar="asexual.sum" showMaxVal="20" label-ru="Асексуальность"
-                   label-en="Asexuality"/>
+            <scale percentVar="asexual.percentage" showVar="asexual.sum" showMaxVal="20">
+                <label>
+                    <ru>Асексуальность</ru>
+                    <en>Asexuality</en>
+                </label>
+            </scale>
         </scenario>
     </scenarios>
 </config>

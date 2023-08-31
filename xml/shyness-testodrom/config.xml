@@ -3,8 +3,12 @@
     <scenarios>
         <!-- Минимальный уровень -->
         <scenario>
-            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Уровень застенчивости"
-                   label-en="Shyness level"/>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40">
+                <label>
+                    <ru>Уровень застенчивости</ru>
+                    <en>Shyness level</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="меньше_или_равно" value="10"/>
             </conditions>
@@ -33,8 +37,12 @@
 
         <!-- Средний уровень -->
         <scenario>
-            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Уровень застенчивости"
-                   label-en="Shyness level"/>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40">
+                <label>
+                    <ru>Уровень застенчивости</ru>
+                    <en>Shyness level</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="10"/>
                 <condition var="SUM" operator="меньше_или_равно" value="30"/>
@@ -67,8 +75,12 @@
 
         <!-- Максимальный уровень -->
         <scenario>
-            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40" label-ru="Уровень застенчивости"
-                   label-en="Shyness level"/>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40">
+                <label>
+                    <ru>Уровень застенчивости</ru>
+                    <en>Shyness level</en>
+                </label>
+            </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="30"/>
             </conditions>
