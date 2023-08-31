@@ -8,6 +8,11 @@
                     <ru>Уровень ревновости</ru>
                     <en>Jealousy level</en>
                 </label>
+                <levels>
+                    <level up="25" color="success"/>
+                    <level up="75" color="warning"/>
+                    <level up="100" color="danger"/>
+                </levels>
             </scale>
             <conditions>
                 <condition var="SUM" operator="меньше_или_равно" value="10"/>
@@ -43,6 +48,11 @@
                     <ru>Уровень ревновости</ru>
                     <en>Jealousy level</en>
                 </label>
+                <levels>
+                    <level up="25" color="success"/>
+                    <level up="75" color="warning"/>
+                    <level up="100" color="danger"/>
+                </levels>
             </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="10"/>
@@ -87,6 +97,11 @@
                     <ru>Уровень ревновости</ru>
                     <en>Jealousy level</en>
                 </label>
+                <levels>
+                    <level up="25" color="success"/>
+                    <level up="75" color="warning"/>
+                    <level up="100" color="danger"/>
+                </levels>
             </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="30"/>
