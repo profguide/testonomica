@@ -8,6 +8,8 @@ use App\Subscriber\Locale;
 use App\Test\Config\Exception\ConfigXmlParsingException;
 use App\Test\Config\Struct\Condition\Operator;
 use App\Test\Config\Struct\Condition\Variable;
+use App\Test\Config\Struct\Scale\Level;
+use App\Test\Config\Struct\Scale\Levels;
 use App\Test\Config\Struct\Scale\Scale;
 use App\Test\Config\Struct\Scenario;
 use App\Tests\Test\Config\ConfigParserTest;
@@ -167,14 +169,28 @@ final readonly class ConfigParser
             return null;
         }
 
-        $labelNode = $scaleNode->filter('label ' . $this->locale->getValue());
-        if ($labelNode->count() > 0) {
-            $label = $labelNode->text();
-        }
         $percentVar = $scaleNode->attr('percentVar');
         $showVar = $scaleNode->attr('showVar');
         $maxVal = (int)$scaleNode->attr('showMaxVal');
 
-        return new Scale($percentVar, $showVar, $maxVal, $label ?? null);
+        $labelNode = $scaleNode->filter('label ' . $this->locale->getValue());
+        if ($labelNode->count() > 0) {
+            $label = $labelNode->text();
+        }
+
+        $levelNodes = $scaleNode->filter('levels level');
+        if ($levelNodes->count() > 0) {
+            $levelsArray = [];
+            $levelNodes->each(function (Crawler $levelNode) use (&$levelsArray) {
+                $upTo = $levelNode->attr('up');
+                $color = $levelNode->attr('color');
+
+                $levelsArray[] = new Level((int)$upTo, $color);
+            });
+
+            $levels = new Levels($levelsArray);
+        }
+
+        return new Scale($percentVar, $showVar, $maxVal, $label ?? null, $levels ?? null);
     }
 }

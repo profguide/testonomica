@@ -102,8 +102,18 @@ readonly class AnalysisRenderer
             $text = $scale->label . ': ' . $text;
         }
 
+        $color = 'primary'; // default color
+        if ($scale->levels) {
+            foreach ($scale->levels->levels as $level) {
+                if ($level->upTo >= (int)$percentage) {
+                    $color = $level->color;
+                    break;
+                }
+            }
+        }
+
         return '<div class="progress__text">' . $text . '</div><div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: ' . $percentage . '%;"
+                    <div class="progress-bar progress-bar-striped bg-' . $color . '" role="progressbar" style="width: ' . $percentage . '%;"
                          aria-valuenow="' . $percentage . '"
                          aria-valuemin="0"
                          aria-valuemax="100">

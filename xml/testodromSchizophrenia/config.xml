@@ -8,6 +8,11 @@
                     <ru>Уровень риска</ru>
                     <en>Risk level</en>
                 </label>
+                <levels>
+                    <level up="50" color="success"/>
+                    <level up="75" color="warning"/>
+                    <level up="100" color="danger"/>
+                </levels>
             </scale>
             <conditions>
                 <condition var="SUM" operator="меньше_или_равно" value="10"/>
@@ -29,6 +34,11 @@
                     <ru>Уровень риска</ru>
                     <en>Risk level</en>
                 </label>
+                <levels>
+                    <level up="50" color="success"/>
+                    <level up="75" color="warning"/>
+                    <level up="100" color="danger"/>
+                </levels>
             </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="10"/>
@@ -51,6 +61,11 @@
                     <ru>Уровень риска</ru>
                     <en>Risk level</en>
                 </label>
+                <levels>
+                    <level up="50" color="success"/>
+                    <level up="75" color="warning"/>
+                    <level up="100" color="danger"/>
+                </levels>
             </scale>
             <conditions>
                 <condition var="SUM" operator="больше" value="20"/>

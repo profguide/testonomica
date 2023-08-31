@@ -30,7 +30,8 @@ final readonly class Scale
         public string  $percentVar,
         public ?string $showVar,
         public ?int    $showMaxVal,
-        public ?string $label)
+        public ?string $label,
+        public ?Levels $levels)
     {
     }
 }
