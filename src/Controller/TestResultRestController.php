@@ -60,7 +60,15 @@ class TestResultRestController extends AbstractRestController implements AccessT
     public function save(int $testId, Request $request): Response
     {
         $test = $this->getTest($testId);
-        $progress = (new ProgressConverter())->convert($request->get('progress'));
+
+        // old style legacy for widget v 2.0.4
+        $json = json_decode($request->getContent(), true);
+        if (!empty($json['progress'])) {
+            $progress = $json['progress'];
+        } else {
+            // new way
+            $progress = (new ProgressConverter())->convert($request->get('progress'));
+        }
         $answers = [];
         foreach ($progress as $qId => $values) {
             $answers[$qId] = self::createAnswer($qId, $values);
