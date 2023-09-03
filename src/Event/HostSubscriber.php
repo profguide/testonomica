@@ -39,7 +39,8 @@ class HostSubscriber implements EventSubscriberInterface
                 'pg',
                 'chooseyourcareer.ru',
                 'career.local',
-                'studika.ru'
+                'studika.ru',
+                'proverili.ru'
             ])) {
                 throw new AccessDeniedHttpException("Unknown host $host.");
             }
