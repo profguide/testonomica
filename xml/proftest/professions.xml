@@ -932,26 +932,13 @@ l * 100
     </profession>
     <profession>
         <name>
-            <ru>Маркетолог</ru>
-            <en>Marketer</en>
+            <ru>Маркетолог брендов</ru>
+            <en>Brand marketer</en>
         </name>
-        <text>
-            <ru>
-                Виды: маркетолог брендов, маркетолог-исследователь, маркетолог-аналитик, трейд-маркетолог
-            </ru>
-            <en>Types: brand marketer, research marketer, market analyst, trade marketer</en>
-        </text>
         <combs>
-            <!--            <comb comb="boss,human,math"/> &lt;!&ndash;маркетолог-исследователь&ndash;&gt;-->
-            <!--            <comb comb="human,math"/> &lt;!&ndash;маркетолог-исследователь&ndash;&gt;-->
-            <!--            <comb comb="human,boss,com"/> &lt;!&ndash;маркетолог брендов&ndash;&gt;-->
-            <!--            <comb comb="boss,com"/> &lt;!&ndash;маркетолог брендов&ndash;&gt;-->
-            <!--            <comb comb="math"/> &lt;!&ndash;маркетолог-исследователь&ndash;&gt;-->
-            <comb comb="boss:33,human:34,math:33"/> <!--маркетолог-исследователь-->
-            <comb comb="human:50,math:50"/> <!--маркетолог-исследователь-->
-            <comb comb="human:33,boss:33,com:34"/> <!--маркетолог брендов-->
-            <comb comb="boss:50,com:50"/> <!--маркетолог брендов-->
-            <!--            <comb comb="boss:20,human:20,math:20,com:40"/>-->
+            <comb comb="boss:25,com:25,human:25,math:25"/>
+            <comb comb="human:34,math:33,com:33"/>
+            <comb comb="human:50,math:50"/>
         </combs>
         <values>
             <value value="intel,difference,salary,benefit,result,promotion,people,big-company,indoor"/>
@@ -968,18 +955,30 @@ l * 100
                     <ru>
                         Бренд-маркетолог — это специалист, который занимается продвижением торговых марок (ТМ). Он
                         использует маркетинговые инструменты для того, чтобы повысить привлекательность товаров и бренда
-                        для
-                        покупателей. Обучают на факультетах маркетинга или менеджмента со специальностью маркетинг
-                        (сдают
-                        профильную математику, обществознание и русский язык, иногда иностранный язык). Коды
-                        специальностей:
-                        38.03.02, 42.03.01.
+                        для покупателей. Обучают на факультетах маркетинга или менеджмента со специальностью маркетинг
+                        (сдают профильную математику, обществознание и русский язык, иногда иностранный язык). Коды
+                        специальностей: 38.03.02, 42.03.01.
                     </ru>
                     <en>Brand marketers promote brands (TMs). They use marketing tools to make products and brands more
                         appealing to customers.
                     </en>
                 </text>
             </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Маркетолог-аналитик</ru>
+            <en>Marketing analysts</en>
+        </name>
+        <combs>
+            <comb comb="boss:25,human:25,math:25"/>
+            <comb comb="human:50,math:50"/>
+        </combs>
+        <values>
+            <value value="intel,difference,salary,benefit,result,promotion,people,big-company,indoor"/>
+        </values>
+        <description>
             <kind>
                 <name>
                     <ru>Маркетолог-аналитик</ru>
@@ -990,13 +989,10 @@ l * 100
                 <text>
                     <ru>
                         Маркетолог-аналитик — вид маркетолога, который собирает и анализирует информацию о рынке товаров
-                        и
-                        услуг, конкурентах и поведении потребителей, успешность маркетинговой стратегии
-                        компании-заказчика.
-                        Готовят маркетологов в вузах (код специальности 27.03.03, 01.03.04, 38.03.02), при поступлении
-                        сдают
-                        русский язык,
-                        математику и обществознание, иногда английский язык).
+                        и услуг, конкурентах и поведении потребителей, успешность маркетинговой стратегии
+                        компании-заказчика. Готовят маркетологов в вузах (код специальности 27.03.03, 01.03.04,
+                        38.03.02), при поступлении сдают русский язык, математику и обществознание, иногда английский
+                        язык).
                     </ru>
                     <en>Marketing analysts are marketers who collect and analyze information about the market for goods
                         and services, competitors and consumer behavior, and the marketing strategy of the client
@@ -1004,6 +1000,22 @@ l * 100
                     </en>
                 </text>
             </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Трейд-маркетолог</ru>
+            <en>Trade marketers</en>
+        </name>
+        <combs>
+            <comb comb="boss:25,com:25,human:25,math:25"/>
+            <comb comb="human:34,math:33,com:33"/>
+            <comb comb="human:50,math:50"/>
+        </combs>
+        <values>
+            <value value="intel,difference,salary,benefit,result,promotion,people,big-company,indoor"/>
+        </values>
+        <description>
             <kind>
                 <name>
                     <ru>Трейд-маркетолог</ru>
@@ -1015,13 +1027,10 @@ l * 100
                     <ru>
                         Трейд-маркетолог — это специалист, который занимается продвижением разных групп товаров
                         непосредственно в торговых точках. Он проводит обучающую работу с персоналом магазинов,
-                        принимает
-                        участие в создании рекламных материалов. Выучиться можно на факультете маркетинга (сдают
-                        профильную
-                        математику, обществознание и русский язык, иногда и английский), а также на факультете
-                        менеджмента
-                        (сдают профильную математику, обществознание и русский язык). Коды специальности: 38.03.06,
-                        38.03.02, 42.03.01.
+                        принимает участие в создании рекламных материалов. Выучиться можно на факультете маркетинга
+                        (сдают профильную математику, обществознание и русский язык, иногда и английский), а также на
+                        факультете менеджмента (сдают профильную математику, обществознание и русский язык). Коды
+                        специальности: 38.03.06, 38.03.02, 42.03.01.
                     </ru>
                     <en>Trade marketers are specialists who promote different groups of goods directly in retail
                         outlets. They train store personnel and help create promotional materials.
@@ -1412,7 +1421,7 @@ l * 100
                     <ru>Полицейский</ru>
                     <en>Police officer</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/5/28ecdoRFh7.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/47/DWjHARsk1l.webp</pic>
                 <link>https://www.profguide.io/professions/policeman.html</link>
                 <text>
                     <ru>
@@ -2510,7 +2519,7 @@ l * 100
                     <ru>Физик-теоретик</ru>
                     <en>Theoretical physicists</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/24/36-iuU03-p.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/49/E5NCs2GPvT.webp</pic>
                 <text>
                     <ru>
                         Ученый, научный сотрудник Университета или Физического института (НИИ). Изучает с помощью
@@ -2740,7 +2749,7 @@ l * 100
                     <ru>Флорист</ru>
                     <en>Florist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/24/z7MmlC6VVR.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/6/5nqa2ebTsH.jpg</pic>
                 <text>
                     <ru>
                         Создает цветочные композиции, букеты из живых и засушенных цветов, цветами и композициями из
@@ -3664,7 +3673,7 @@ l * 100
                     <ru>Фермер</ru>
                     <en>Farmer</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/24/Z908wjaeOh.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/48/yTP3JLACrC.webp</pic>
                 <text>
                     <ru>
                         Владелец или профессиональный работник сельскохозяйственного предприятия - животноводства (в
@@ -3784,7 +3793,7 @@ l * 100
                     <ru>Врач</ru>
                     <en>Doctor</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/24/uTO_19D2F1.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/8/1ynvoEcn4j.jpg</pic>
                 <text>
                     <ru>
                         Врач - это специалист с законченным высшим медицинским образованием, всегда специализирующийся
@@ -4038,7 +4047,7 @@ l * 100
                     <ru>Тренер ЛФК</ru>
                     <en>Physical Therapy Coach</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/24/R6-EyS5IBI.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/46/T_suBJr0Om.jpg</pic>
                 <text>
                     <ru>
                         Он же реабилитолог. Помогает взрослым и детям скомпенсировать костно-мышечные нарушения,
@@ -4903,7 +4912,7 @@ l * 100
                     <ru>Специалист по страхованию финансовых рисков</ru>
                     <en>Financial risk insurance specialists</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/24/QQVyTJrvSn.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/19/e6joNtjLSy.jpg</pic>
                 <text>
                     <ru>
                         Разрабатывает методологические и нормативные документы по страхованию ипотеки, страхованию
@@ -5267,6 +5276,7 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="math,com"/>-->
+            <comb comb="math:34,com:33,it:33"/>
             <comb comb="math:50,com:50"/>
         </combs>
         <values>
@@ -5304,7 +5314,8 @@ l * 100
             <!--            <comb comb="it,com,math"/>-->
             <!--            <comb comb="it,com"/>-->
             <!--            <comb comb="com,math"/>-->
-            <comb comb="com:50,math:30,human:20"/>
+            <comb comb="com:25,math:25,human:25,art:25"/>
+            <comb comb="com:50,math:25,human:25"/>
             <comb comb="it:50,com:50"/>
             <comb comb="com:50,math:50"/>
         </combs>
