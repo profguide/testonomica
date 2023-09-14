@@ -26,7 +26,7 @@ final class SortProftestCommand extends Command
     {
         // загрузка XML-файла
         $doc = new DOMDocument();
-        $doc->load('xml/proftest.xml');
+        $doc->load('xml/proftest/proftest_source.xml');
 
         // получение списка вопросов
         $questions = $doc->getElementsByTagName('item');
@@ -45,7 +45,7 @@ final class SortProftestCommand extends Command
             $items->appendChild($newDoc->importNode($question, true));
         }
         $newDoc->formatOutput = true;
-        $newDoc->save('xml/proftest_easy_sort.xml');
+        $newDoc->save('xml/proftest/quiz.xml');
     }
 
     private function sortQuestions(DOMNodeList $questions): array
