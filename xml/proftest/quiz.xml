@@ -85,59 +85,6 @@
                 </option>
             </options>
         </item>
-    <item id="922" group="com-skills" qtype="interesting">
-            <name>
-                <ru>Легко ли вы вливаетесь в новый коллектив?</ru>
-                <en>Is it easy for you to assimilate into a new team?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да, это для меня не является стрессом</ru>
-                    <en>Yes, it’s not particularly stressful for me</en>
-                </option>
-                <option value="0">
-                    <ru>Трудно</ru>
-                    <en>No, I find this difficult</en>
-                </option>
-            </options>
-        </item>
-    <item id="900" group="com-force" qtype="interesting">
-            <name>
-                <ru>Берёте ли вы на себя инициативу по примирению конфликта?
-                </ru>
-                <en>When conflicts arise, do you take the time to try and reconcile the conflicting parties?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да, я это делаю эффективно</ru>
-                    <en>Yes, I’m good at doing this</en>
-                </option>
-                <option value="0">
-                    <ru>Нет, пусть разбираются сами</ru>
-                    <en>No, I let them figure it out themselves</en>
-                </option>
-                <option value="0">
-                    <ru>Ко мне и не обращались за такой помощью</ru>
-                    <en>They didn’t ask for my help and this isn’t my problem</en>
-                </option>
-            </options>
-        </item>
-    <item id="1001" group="boss-force" qtype="interesting">
-            <name>
-                <ru>Читаете ли вы статьи, книги, сайты о маркетинге и продажах?</ru>
-                <en>Do you read articles, books or websites about marketing and sales?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
     <item id="820" group="hoz-skills" qtype="interesting">
             <name>
                 <ru>Вы склонны экономить и накапливать деньги?</ru>
@@ -170,14 +117,64 @@
                 </option>
             </options>
         </item>
-    <item id="511" group="it-interest" qtype="easy">
-            <!--<name><ru>Интересно ли вам создавать, разрабатывать какие-либо системы?</ru><en></en></name>-->
+    <item id="900" group="com-force" qtype="interesting">
             <name>
-                <ru>Когда вы скачиваете и устанавливаете программы, вы точно знаете, куда конкретно они установились
-                    и почему они попадают именно сюда?
+                <ru>Берёте ли вы на себя инициативу по примирению конфликта?
                 </ru>
-                <en>When you download and install programmes do you know where there are installed and why they end up
-                    here?
+                <en>When conflicts arise, do you take the time to try and reconcile the conflicting parties?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да, я это делаю эффективно</ru>
+                    <en>Yes, I’m good at doing this</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, пусть разбираются сами</ru>
+                    <en>No, I let them figure it out themselves</en>
+                </option>
+                <option value="0">
+                    <ru>Ко мне и не обращались за такой помощью</ru>
+                    <en>They didn’t ask for my help and this isn’t my problem</en>
+                </option>
+            </options>
+        </item>
+    <item id="922" group="com-skills" qtype="interesting">
+            <name>
+                <ru>Легко ли вы вливаетесь в новый коллектив?</ru>
+                <en>Is it easy for you to assimilate into a new team?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да, это для меня не является стрессом</ru>
+                    <en>Yes, it’s not particularly stressful for me</en>
+                </option>
+                <option value="0">
+                    <ru>Трудно</ru>
+                    <en>No, I find this difficult</en>
+                </option>
+            </options>
+        </item>
+    <item id="1001" group="boss-force" qtype="interesting">
+            <name>
+                <ru>Читаете ли вы статьи, книги, сайты о маркетинге и продажах?</ru>
+                <en>Do you read articles, books or websites about marketing and sales?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="2" group="natural-force" qtype="easy">
+            <name>
+                <ru>Вы любили создавать смеси, вещества, проводить над ними опыты, поджигать, взрывать и тому подобное?
+                </ru>
+                <en>Did you enjoy creating mixtures, experimenting with substances, igniting, detonating, and the like?
                 </en>
             </name>
             <options>
@@ -191,26 +188,10 @@
                 </option>
             </options>
         </item>
-    <item id="920" group="com-skills" qtype="easy">
+    <item id="6" group="natural-force" qtype="easy">
             <name>
-                <ru>Насколько вам трудно позвонить по телефону незнакомому человеку и что-то выяснить?</ru>
-                <en>How difficult is it for you to call a stranger on the phone to ascertain certain information?</en>
-            </name>
-            <options>
-                <option value="0">
-                    <ru>Трудно, и я стараюсь отложить этот разговор</ru>
-                    <en>I find this type of thing hard and would try and put it off</en>
-                </option>
-                <option value="1">
-                    <ru>Совсем не трудно, мне это даже нравится</ru>
-                    <en>Not difficult for me, I enjoy it</en>
-                </option>
-            </options>
-        </item>
-    <item id="421" group="math-skills" qtype="easy">
-            <name>
-                <ru>Легко ли вы запоминаете числовые данные?</ru>
-                <en>Do you remember numbers easily?</en>
+                <ru>Читаете ли вы в свободное время про химические вещества и опыты с ними?</ru>
+                <en>Do you read about chemistry and chemical substances and attempt experiments in your free time?</en>
             </name>
             <options>
                 <option value="1">
@@ -223,10 +204,540 @@
                 </option>
             </options>
         </item>
-    <item id="420" group="math-skills" qtype="easy">
+    <item id="10" group="natural-interest" qtype="easy">
             <name>
-                <ru>Легко ли вы замечаете ошибки в вычислениях?</ru>
-                <en>Do you quickly and easily notice errors in calculations?</en>
+                <ru>Хотели ли бы ежедневно работать с каким-нибудь из этих объектов природы: человеческое тело, мозг,
+                    тело
+                    животных, растения, земля, вода, космос?
+                </ru>
+                <en>Would you be willing to work with any of the following: the human body, the brain, animals, plants,
+                    soil, water, space?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="101" group="tech-force" qtype="easy">
+            <name>
+                <ru>Занимались ли вы в техническом кружке или в кружке по информационным технологиями, на факультативе
+                    по физике и т.п.?
+                </ru>
+                <en>Have you ever taken technical modules, information technology modules or physics as part of your
+                    studies?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да, и мне понравилось это дело</ru>
+                    <en>Yes, and I enjoyed it</en>
+                </option>
+                <option value="0">
+                    <ru>Да, но мне не понравилось это дело</ru>
+                    <en>Yes, but I didn’t enjoy it</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="110" group="tech-interest" qtype="easy">
+            <name>
+                <ru>Вам интересно исследовать, как устроены здания и различные инженерные системы, такие как лифты,
+                    лестницы и т.д.?
+                </ru>
+                <en>Do you like the idea of making a house completely transparent and being able to see how everything
+                    is made up, from the basement to the lifts, the stairs and the roof?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="111" group="tech-interest" qtype="easy">
+            <name>
+                <ru>Доставляет ли вам удовольствие красивое и логичное решение математической задачи?</ru>
+                <en>Do you get real enjoyment from a pleasing and logical solution to a mathematical problem?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="112" group="tech-interest" qtype="easy">
+            <name>
+                <ru>Вам бы хотелось строить настоящие механизмы, приборы или здания?</ru>
+                <en>Would you like to build real devices, instruments or structures?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="120" group="tech-skills" qtype="easy">
+            <name>
+                <ru>Есть ли у вас интуитивное понимание работы каких-нибудь приборов: механических или электрических?
+                </ru>
+                <en>Do you feel like you have an intuitive understanding of mechanical or electrical devices?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="121" group="tech-skills" qtype="easy">
+            <name>
+                <ru>Вам легко давалась физика?</ru>
+                <en>Did you find physics and physics concepts easy to understand?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="122" group="tech-skills" qtype="easy">
+            <name>
+                <ru>Легко ли вам давались геометрия или черчение?</ru>
+                <en>Did you find geometry and scientific drawing easy?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="202" group="human-force" qtype="easy">
+            <name>
+                <ru>Вы успешно участвовали в олимпиадах по истории, обществознанию, русскому языку или литературе?</ru>
+                <en>Have you ever participated in Olympiads in History, Social Studies or literature?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="204" group="human-force" qtype="easy">
+            <name>
+                <ru>Вы легко запоминаете сведения из книг и статей по истории и искусствам?
+                </ru>
+                <en>Do you find it easy to memorise information from books and articles on History and the Arts?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="210" group="human-interest" qtype="easy">
+            <name>
+                <ru>Вы любите читать биографии интересных людей?</ru>
+                <en>Do you enjoy reading biographies of interesting people?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="212" group="human-interest" qtype="easy">
+            <name>
+                <ru>Вам интересно узнавать о процессах, происходящих в обществе?
+                    Например, что приводит к революциям и войнам.
+                </ru>
+                <en>Are you interested in certain processes that occur within society, for example the events that lead
+                    to revolutions and wars?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да, мне это интересно</ru>
+                    <en>Yes, I am interested</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="213" group="human-interest" qtype="easy">
+            <name>
+                <ru>Вы не понимаете людей, которым нравится вникать в туманные философские рассуждения?</ru>
+                <en>You can’t understand people who show an interest in vague philosophical concepts and reasoning?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да, я не понимаю таких людей</ru>
+                    <en>Yes, I can’t understand these people</en>
+                </option>
+                <option value="1">
+                    <ru>Нет, я прекрасно понимаю таких людей</ru>
+                    <en>No, I resonate with these people well</en>
+                </option>
+            </options>
+        </item>
+    <item id="214" group="human-interest" qtype="easy">
+            <name>
+                <ru>Вы любите участвовать в серьезных дискуссиях на общественные темы и обсуждать разные точки зрения?
+                </ru>
+                <en>Do you enjoy participating in serious discussions on social topics and discussing different points
+                    of view?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="215" group="human-interest" qtype="easy">
+            <name>
+                <ru>Вам интересно вникать в причины человеческих поступков?</ru>
+                <en>Are you interested in really understanding the causes of certain human actions?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="220" group="human-skills" qtype="easy">
+            <name>
+                <ru>Вам легко рифмовать на любую тему?</ru>
+                <en>Is it easy for you to rhyme in on any given topic?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="222" group="human-skills" qtype="easy">
+            <name>
+                <ru>У вас отличная память на тексты?</ru>
+                <en>Do you have an excellent textual memory?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="300" group="body-force" qtype="easy">
+            <name>
+                <ru>Что из этого вы делаете систематически и с удовольствием?</ru>
+                <en>Which of the following do often do and enjoy doing?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>массаж другим людям</ru>
+                    <en>Massage other people</en>
+                </option>
+                <option value="1">
+                    <ru>плаваете</ru>
+                    <en>Swimming</en>
+                </option>
+                <option value="1">
+                    <ru>танцуете</ru>
+                    <en>Dancing</en>
+                </option>
+                <option value="1">
+                    <ru>бегаете</ru>
+                    <en>Running</en>
+                </option>
+                <option value="1">
+                    <ru>качаете мышцы</ru>
+                    <en>Lifting weights</en>
+                </option>
+                <option value="0">
+                    <ru>ничего из этого</ru>
+                    <en>None of the above</en>
+                </option>
+            </options>
+        </item>
+    <item id="301" group="body-force" qtype="easy">
+            <name>
+                <ru>Занимались ли вы всерьёз физическими упражнениями, спортом, танцами?</ru>
+                <en>Have you ever done any physical exercise, sports or dancing to quite a high level?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да, я это делаю систематически и с удовольствием</ru>
+                    <en>Yes, often, and I enjoy it a lot</en>
+                </option>
+                <option value="0">
+                    <ru>Да, я это делаю потому, что меня заставляют родители</ru>
+                    <en>Yes, I do it because my parents make me</en>
+                </option>
+                <option value="0">
+                    <ru>Я танцую или занимаюсь спортом на уроках физкультуры, как и все</ru>
+                    <en>I dance or do sports in PE like everyone else</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, ничем таким я не занимался</ru>
+                    <en>No, nothing like the above</en>
+                </option>
+            </options>
+        </item>
+    <item id="310" group="body-interest" qtype="easy">
+            <name>
+                <ru>Ожидая своей очереди в парикмахерской, вы взяли из стопки журнал.
+                    Какой раздел вы бы открыли в первую очередь?
+                </ru>
+                <en>You’re waiting in line at a hairdresser and you pick up a magazine from the pile. Which section do
+                    you flick to first?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Спорт, здоровый образ жизни, здоровое питание</ru>
+                    <en>Sports, health and healthy eating</en>
+                </option>
+                <option value="0">
+                    <ru>Медицина</ru>
+                    <en>Medicine</en>
+                </option>
+                <option value="0">
+                    <ru>Красота, мода</ru>
+                    <en>Beauty and fashion</en>
+                </option>
+                <option value="0">
+                    <ru>Психология</ru>
+                    <en>Psychology</en>
+                </option>
+                <option value="0">
+                    <ru>Политика</ru>
+                    <en>Politics</en>
+                </option>
+                <option value="0">
+                    <ru>Культура</ru>
+                    <en>Culture</en>
+                </option>
+            </options>
+        </item>
+    <item id="311" group="body-interest" qtype="easy">
+            <name>
+                <ru>Если бы вы решили связать вашу жизнь со спортом, то что бы вы согласились делать?</ru>
+                <en>If you decided to include sport in your life, what might you look to do?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Быть спортсменом, принимать участие в соревнованиях</ru>
+                    <en>Become an athlete and take part in sports competitions</en>
+                </option>
+                <option value="0">
+                    <ru>Писать о спорте</ru>
+                    <en>Write about sports</en>
+                </option>
+                <option value="0">
+                    <ru>Тренировать спортсменов</ru>
+                    <en>Train athletes</en>
+                </option>
+                <option value="0">
+                    <ru>Лечить спортсменов</ru>
+                    <en>Treat athletes</en>
+                </option>
+                <option value="0">
+                    <ru>Организовывать спортивные соревнования</ru>
+                    <en>Organise competitions</en>
+                </option>
+                <option value="0">
+                    <ru>Торговать спортивными товарами</ru>
+                    <en>Trade and sell sports goods</en>
+                </option>
+                <option value="0">
+                    <ru>Ничего</ru>
+                    <en>Nothing like the above</en>
+                </option>
+            </options>
+        </item>
+    <item id="312" group="body-interest" qtype="easy">
+            <name>
+                <ru>Какой предмет в школе был ваш самый любимый?</ru>
+                <en>What was your favourite subject at school?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Математика</ru>
+                    <en>Maths</en>
+                </option>
+                <option value="0">
+                    <ru>Русский язык, литература</ru>
+                    <en>Literature</en>
+                </option>
+                <option value="1">
+                    <ru>Физкультура</ru>
+                    <en>PE</en>
+                </option>
+                <option value="0">
+                    <ru>История, обществознание</ru>
+                    <en>History and Social Studies</en>
+                </option>
+                <option value="0">
+                    <ru>Химия</ru>
+                    <en>Chemistry</en>
+                </option>
+                <option value="0">
+                    <ru>Физика</ru>
+                    <en>Physics</en>
+                </option>
+                <option value="0">
+                    <ru>Языки</ru>
+                    <en>Languages</en>
+                </option>
+                <option value="0">
+                    <ru>Биология</ru>
+                    <en>Biology</en>
+                </option>
+                <option value="0">
+                    <ru>География</ru>
+                    <en>Geography</en>
+                </option>
+            </options>
+        </item>
+    <item id="313" group="body-interest" qtype="easy">
+            <name>
+                <ru>От чего вы получаете наибольшее удовольствие?</ru>
+                <en>What do you enjoy the most?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Танцы</ru>
+                    <en>Dancing</en>
+                </option>
+                <option value="1">
+                    <ru>Спорт</ru>
+                    <en>Sport</en>
+                </option>
+                <option value="0">
+                    <ru>Чтение книг</ru>
+                    <en>Reading</en>
+                </option>
+                <option value="0">
+                    <ru>Решение математических задач</ru>
+                    <en>Solving mathematical problems</en>
+                </option>
+            </options>
+        </item>
+    <item id="321" group="body-skills" qtype="easy">
+            <name>
+                <ru>У вас есть разряды, медали в спорте или в танцах?</ru>
+                <en>Do you have awards or medals in sports or dancing?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="401" group="math-force" qtype="easy">
+            <name>
+                <ru>Каждый раз, когда возникает необходимость
+                    рассчитать расстояние, количество, сумму, вы с энтузиазмом берётесь за дело?
+                </ru>
+                <en>Every time a distance, quantity or amount needs calculating, you’re always the first to jump at the
+                    opportunity?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="402" group="math-force" qtype="easy">
+            <name>
+                <ru>Вы успешно участвовали в олимпиадах по математике?</ru>
+                <en>Have you ever taken part in a Maths Olympiad?</en>
             </name>
             <options>
                 <option value="1">
@@ -271,10 +782,10 @@
                 </option>
             </options>
         </item>
-    <item id="402" group="math-force" qtype="easy">
+    <item id="420" group="math-skills" qtype="easy">
             <name>
-                <ru>Вы успешно участвовали в олимпиадах по математике?</ru>
-                <en>Have you ever taken part in a Maths Olympiad?</en>
+                <ru>Легко ли вы замечаете ошибки в вычислениях?</ru>
+                <en>Do you quickly and easily notice errors in calculations?</en>
             </name>
             <options>
                 <option value="1">
@@ -287,108 +798,10 @@
                 </option>
             </options>
         </item>
-    <item id="401" group="math-force" qtype="easy">
+    <item id="421" group="math-skills" qtype="easy">
             <name>
-                <ru>Каждый раз, когда возникает необходимость
-                    рассчитать расстояние, количество, сумму, вы с энтузиазмом берётесь за дело?
-                </ru>
-                <en>Every time a distance, quantity or amount needs calculating, you’re always the first to jump at the
-                    opportunity?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="321" group="body-skills" qtype="easy">
-            <name>
-                <ru>У вас есть разряды, медали в спорте или в танцах?</ru>
-                <en>Do you have awards or medals in sports or dancing?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="923" group="com-skills" qtype="easy">
-            <name>
-                <ru>Трудно ли вам попросить вернуть долг, указать знакомому человеку на его ошибку?</ru>
-                <en>Is it difficult for you to ask for something back, or to point out to a friend they’ve made a
-                    mistake?
-                </en>
-            </name>
-            <options>
-                <option value="0">
-                    <ru>Да, я долго готовлюсь к этому разговору и всё равно мне неловко</ru>
-                    <en>Yes, I’d think this conversation over and over in my head and still feel embarrassed</en>
-                </option>
-                <option value="1">
-                    <ru>Я легко нахожу нужные слова, это для меня не проблема</ru>
-                    <en>I find it easy to find the right words, it’s never a problem for me</en>
-                </option>
-            </options>
-        </item>
-    <item id="313" group="body-interest" qtype="easy">
-            <name>
-                <ru>От чего вы получаете наибольшее удовольствие?</ru>
-                <en>What do you enjoy the most?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Танцы</ru>
-                    <en>Dancing</en>
-                </option>
-                <option value="1">
-                    <ru>Спорт</ru>
-                    <en>Sport</en>
-                </option>
-                <option value="0">
-                    <ru>Чтение книг</ru>
-                    <en>Reading</en>
-                </option>
-                <option value="0">
-                    <ru>Решение математических задач</ru>
-                    <en>Solving mathematical problems</en>
-                </option>
-            </options>
-        </item>
-    <item id="911" group="com-interest" qtype="easy">
-            <name>
-                <ru>Если вас взволновало какое-то событие, фильм, книга, то вы обычно делитесь с кем-либо своими
-                    чувствами и мыслями?
-                </ru>
-                <en>If you’re excited about an event, film or a book do you immediately want to share your thoughts and
-                    feelings with someone?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="512" group="it-interest" qtype="easy">
-            <name>
-                <ru>Вам нравится ломать голову над логическими задачами?</ru>
-                <en>Do you enjoy pondering over logic puzzles?</en>
+                <ru>Легко ли вы запоминаете числовые данные?</ru>
+                <en>Do you remember numbers easily?</en>
             </name>
             <options>
                 <option value="1">
@@ -441,14 +854,14 @@
                 </option>
             </options>
         </item>
-    <item id="2" group="natural-force" qtype="easy">
+    <item id="511" group="it-interest" qtype="easy">
+            <!--<name><ru>Интересно ли вам создавать, разрабатывать какие-либо системы?</ru><en></en></name>-->
             <name>
-                <ru>Вы когда-нибудь создавали смеси, вещества, проводили над ними
-                    опыты, поджигали, взрывали и тому подобное.
+                <ru>Когда вы скачиваете и устанавливаете программы, вы точно знаете, куда конкретно они установились
+                    и почему они попадают именно сюда?
                 </ru>
-                <en>Have you got any experience with carrying out chemistry experiments?
-                    For example, have you ever mixed substances together, experimented with them, lit them on fire or
-                    blown them up?
+                <en>When you download and install programmes do you know where there are installed and why they end up
+                    here?
                 </en>
             </name>
             <options>
@@ -462,39 +875,19 @@
                 </option>
             </options>
         </item>
-    <item id="310" group="body-interest" qtype="easy">
+    <item id="512" group="it-interest" qtype="easy">
             <name>
-                <ru>Ожидая своей очереди в парикмахерской, вы взяли из стопки журнал.
-                    Какой раздел вы бы открыли в первую очередь?
-                </ru>
-                <en>You’re waiting in line at a hairdresser and you pick up a magazine from the pile. Which section do
-                    you flick to first?
-                </en>
+                <ru>Вам нравится ломать голову над логическими задачами?</ru>
+                <en>Do you enjoy pondering over logic puzzles?</en>
             </name>
             <options>
                 <option value="1">
-                    <ru>Спорт, здоровый образ жизни, здоровое питание</ru>
-                    <en>Sports, health and healthy eating</en>
+                    <ru>Да</ru>
+                    <en>Yes</en>
                 </option>
                 <option value="0">
-                    <ru>Медицина</ru>
-                    <en>Medicine</en>
-                </option>
-                <option value="0">
-                    <ru>Красота, мода</ru>
-                    <en>Beauty and fashion</en>
-                </option>
-                <option value="0">
-                    <ru>Психология</ru>
-                    <en>Psychology</en>
-                </option>
-                <option value="0">
-                    <ru>Политика</ru>
-                    <en>Politics</en>
-                </option>
-                <option value="0">
-                    <ru>Культура</ru>
-                    <en>Culture</en>
+                    <ru>Нет</ru>
+                    <en>No</en>
                 </option>
             </options>
         </item>
@@ -611,23 +1004,6 @@
                 </option>
             </options>
         </item>
-    <item id="811" group="hoz-interest" qtype="easy">
-            <name>
-                <ru>Интересно ли вам смотреть видео и читать книги об уборке и о том, как вести домашнее хозяйство?
-                </ru>
-                <en>Are you interested in watching videos and reading books about cleaning and housekeeping?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да, с большим удовольствием</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
     <item id="701" group="art-force" qtype="easy">
             <name>
                 <ru>Случалось ли вам увлечённо без сна и еды работать над своим творческим
@@ -725,107 +1101,142 @@
                 </option>
             </options>
         </item>
-    <item id="312" group="body-interest" qtype="easy">
+    <item id="811" group="hoz-interest" qtype="easy">
             <name>
-                <ru>Какой предмет в школе был ваш самый любимый?</ru>
-                <en>What was your favourite subject at school?</en>
+                <ru>Интересно ли вам смотреть видео и читать книги об уборке и о том, как вести домашнее хозяйство?
+                </ru>
+                <en>Are you interested in watching videos and reading books about cleaning and housekeeping?</en>
             </name>
             <options>
-                <option value="0">
-                    <ru>Математика</ru>
-                    <en>Maths</en>
-                </option>
-                <option value="0">
-                    <ru>Русский язык, литература</ru>
-                    <en>Literature</en>
-                </option>
                 <option value="1">
-                    <ru>Физкультура</ru>
-                    <en>PE</en>
+                    <ru>Да, с большим удовольствием</ru>
+                    <en>Yes</en>
                 </option>
                 <option value="0">
-                    <ru>История, обществознание</ru>
-                    <en>History and Social Studies</en>
-                </option>
-                <option value="0">
-                    <ru>Химия</ru>
-                    <en>Chemistry</en>
-                </option>
-                <option value="0">
-                    <ru>Физика</ru>
-                    <en>Physics</en>
-                </option>
-                <option value="0">
-                    <ru>Языки</ru>
-                    <en>Languages</en>
-                </option>
-                <option value="0">
-                    <ru>Биология</ru>
-                    <en>Biology</en>
-                </option>
-                <option value="0">
-                    <ru>География</ru>
-                    <en>Geography</en>
+                    <ru>Нет</ru>
+                    <en>No</en>
                 </option>
             </options>
         </item>
-    <item id="311" group="body-interest" qtype="easy">
+    <item id="911" group="com-interest" qtype="easy">
             <name>
-                <ru>Если бы вы решили связать вашу жизнь со спортом, то что бы вы согласились делать?</ru>
-                <en>If you decided to include sport in your life, what might you look to do?</en>
+                <ru>Если вас взволновало какое-то событие, фильм, книга, то вы обычно делитесь с кем-либо своими
+                    чувствами и мыслями?
+                </ru>
+                <en>If you’re excited about an event, film or a book do you immediately want to share your thoughts and
+                    feelings with someone?
+                </en>
             </name>
             <options>
                 <option value="1">
-                    <ru>Быть спортсменом, принимать участие в соревнованиях</ru>
-                    <en>Become an athlete and take part in sports competitions</en>
+                    <ru>Да</ru>
+                    <en>Yes</en>
                 </option>
                 <option value="0">
-                    <ru>Писать о спорте</ru>
-                    <en>Write about sports</en>
-                </option>
-                <option value="0">
-                    <ru>Тренировать спортсменов</ru>
-                    <en>Train athletes</en>
-                </option>
-                <option value="0">
-                    <ru>Лечить спортсменов</ru>
-                    <en>Treat athletes</en>
-                </option>
-                <option value="0">
-                    <ru>Организовывать спортивные соревнования</ru>
-                    <en>Organise competitions</en>
-                </option>
-                <option value="0">
-                    <ru>Торговать спортивными товарами</ru>
-                    <en>Trade and sell sports goods</en>
-                </option>
-                <option value="0">
-                    <ru>Ничего</ru>
-                    <en>Nothing like the above</en>
+                    <ru>Нет</ru>
+                    <en>No</en>
                 </option>
             </options>
         </item>
-    <item id="301" group="body-force" qtype="easy">
+    <item id="920" group="com-skills" qtype="easy">
             <name>
-                <ru>Занимались ли вы всерьёз физическими упражнениями, спортом, танцами?</ru>
-                <en>Have you ever done any physical exercise, sports or dancing to quite a high level?</en>
+                <ru>Насколько вам трудно позвонить по телефону незнакомому человеку и что-то выяснить?</ru>
+                <en>How difficult is it for you to call a stranger on the phone to ascertain certain information?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Трудно, и я стараюсь отложить этот разговор</ru>
+                    <en>I find this type of thing hard and would try and put it off</en>
+                </option>
+                <option value="1">
+                    <ru>Совсем не трудно, мне это даже нравится</ru>
+                    <en>Not difficult for me, I enjoy it</en>
+                </option>
+            </options>
+        </item>
+    <item id="923" group="com-skills" qtype="easy">
+            <name>
+                <ru>Трудно ли вам попросить вернуть долг, указать знакомому человеку на его ошибку?</ru>
+                <en>Is it difficult for you to ask for something back, or to point out to a friend they’ve made a
+                    mistake?
+                </en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да, я долго готовлюсь к этому разговору и всё равно мне неловко</ru>
+                    <en>Yes, I’d think this conversation over and over in my head and still feel embarrassed</en>
+                </option>
+                <option value="1">
+                    <ru>Я легко нахожу нужные слова, это для меня не проблема</ru>
+                    <en>I find it easy to find the right words, it’s never a problem for me</en>
+                </option>
+            </options>
+        </item>
+    <item id="1000" group="boss-force" qtype="easy">
+            <name>
+                <ru>Пытались ли вы когда-нибудь заработать деньги по своей инициативе?
+                    Пример: купили дешевле, а продали дороже, сделали кому-то сайт и т.п.
+                </ru>
+                <en>Have you ever tried to take your own initiative to make money? For example, bought cheap and sold
+                    for profit, made someone a website etc?
+                </en>
             </name>
             <options>
                 <option value="1">
-                    <ru>Да, я это делаю систематически и с удовольствием</ru>
-                    <en>Yes, often, and I enjoy it a lot</en>
+                    <ru>Да, у меня это хорошо получается</ru>
+                    <en>Yes, I’m good at this sort of thing</en>
                 </option>
                 <option value="0">
-                    <ru>Да, я это делаю потому, что меня заставляют родители</ru>
-                    <en>Yes, I do it because my parents make me</en>
+                    <ru>Да, я пробовал, но мне не понравилось</ru>
+                    <en>I’ve tried but it didn’t work for me</en>
                 </option>
                 <option value="0">
-                    <ru>Я танцую или занимаюсь спортом на уроках физкультуры, как и все</ru>
-                    <en>I dance or do sports in PE like everyone else</en>
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="1010" group="boss-interest" qtype="easy">
+            <name>
+                <ru>Что бы вы предпочли для себя?</ru>
+                <en>Which scenario would you prefer?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Получить хорошую работу, стать специалистом, но не стремиться быть начальником
+                    </ru>
+                    <en>Get a good job and become a specialist with no ambition to be the boss</en>
                 </option>
                 <option value="0">
-                    <ru>Нет, ничем таким я не занимался</ru>
-                    <en>No, nothing like the above</en>
+                    <ru>Получить хорошую работу, продвинуться по службе, стать
+                        большим боссом, прилично зарабатывать
+                    </ru>
+                    <en>Get a good job, get promoted, become the boss and earn good money</en>
+                </option>
+                <option value="1">
+                    <ru>Работать на себя, быть свободным от начальства,
+                        но работать больше других в надежде зарабатывать всё больше и больше
+                        в условиях конкуренции и сильных финансовых рисков
+                    </ru>
+                    <en>Work for yourself, be free from any authority but work more than others in the hope of earning
+                        more in a competitive environment with high financial risks
+                    </en>
+                </option>
+            </options>
+        </item>
+    <item id="1011" group="boss-interest" qtype="easy">
+            <name>
+                <ru>Вы постоянно изобретаете способы как вам заработать денег?</ru>
+                <en>Are you constantly coming up with new ways to makes money?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
                 </option>
             </options>
         </item>
@@ -849,131 +1260,6 @@
                 </option>
             </options>
         </item>
-    <item id="121" group="tech-skills" qtype="easy">
-            <name>
-                <ru>Вам легко давалась физика?</ru>
-                <en>Did you find physics and physics concepts easy to understand?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="120" group="tech-skills" qtype="easy">
-            <name>
-                <ru>Есть ли у вас интуитивное понимание работы каких-нибудь приборов: механических или электрических?
-                </ru>
-                <en>Do you feel like you have an intuitive understanding of mechanical or electrical devices?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="300" group="body-force" qtype="easy">
-            <name>
-                <ru>Что из этого вы делаете систематически и с удовольствием?</ru>
-                <en>Which of the following do often do and enjoy doing?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>массаж другим людям</ru>
-                    <en>Massage other people</en>
-                </option>
-                <option value="1">
-                    <ru>плаваете</ru>
-                    <en>Swimming</en>
-                </option>
-                <option value="1">
-                    <ru>танцуете</ru>
-                    <en>Dancing</en>
-                </option>
-                <option value="1">
-                    <ru>бегаете</ru>
-                    <en>Running</en>
-                </option>
-                <option value="1">
-                    <ru>качаете мышцы</ru>
-                    <en>Lifting weights</en>
-                </option>
-                <option value="0">
-                    <ru>ничего из этого</ru>
-                    <en>None of the above</en>
-                </option>
-            </options>
-        </item>
-    <item id="111" group="tech-interest" qtype="easy">
-            <name>
-                <ru>Доставляет ли вам удовольствие красивое и логичное решение математической задачи?</ru>
-                <en>Do you get real enjoyment from a pleasing and logical solution to a mathematical problem?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="110" group="tech-interest" qtype="easy">
-            <name>
-                <ru>Вам интересно исследовать, как устроены здания и различные инженерные системы, такие как лифты,
-                    лестницы и т.д.?
-                </ru>
-                <en>Do you like the idea of making a house completely transparent and being able to see how everything
-                    is made up, from the basement to the lifts, the stairs and the roof?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="101" group="tech-force" qtype="easy">
-            <name>
-                <ru>Занимались ли вы в техническом кружке или в кружке по информационным технологиями, на факультативе
-                    по физике и т.п.?
-                </ru>
-                <en>Have you ever taken technical modules, information technology modules or physics as part of your
-                    studies?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да, и мне понравилось это дело</ru>
-                    <en>Yes, and I enjoyed it</en>
-                </option>
-                <option value="0">
-                    <ru>Да, но мне не понравилось это дело</ru>
-                    <en>Yes, but I didn’t enjoy it</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
     <item id="1101" group="war-force" qtype="easy">
             <name>
                 <ru>Что вы чувствуете во время конфликта, способного перерасти в драку?</ru>
@@ -989,22 +1275,6 @@
                     <en>This makes me uncomfortable and I always want to resolve the conflict peacefully and as quick as
                         possible.
                     </en>
-                </option>
-            </options>
-        </item>
-    <item id="1011" group="boss-interest" qtype="easy">
-            <name>
-                <ru>Вы постоянно изобретаете способы как вам заработать денег?</ru>
-                <en>Are you constantly coming up with new ways to makes money?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
                 </option>
             </options>
         </item>
@@ -1066,43 +1336,6 @@
                 </option>
             </options>
         </item>
-    <item id="10" group="natural-interest" qtype="easy">
-            <name>
-                <ru>Хотели ли бы ежедневно работать с каким-нибудь из этих объектов природы: человеческое тело, мозг,
-                    тело
-                    животных, растения, земля, вода, космос?
-                </ru>
-                <en>Would you be willing to work with any of the following: the human body, the brain, animals, plants,
-                    soil, water, space?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="6" group="natural-force" qtype="easy">
-            <name>
-                <ru>Читаете ли вы в свободное время про химические вещества и опыты с ними?</ru>
-                <en>Do you read about chemistry and chemical substances and attempt experiments in your free time?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
     <item id="1112" group="war-interest" qtype="easy">
             <name>
                 <ru>Хотели бы вы работать в профессии, которая связана с высоким уровнем риска для вашей жизни или
@@ -1123,148 +1356,24 @@
                 </option>
             </options>
         </item>
-    <item id="122" group="tech-skills" qtype="easy">
+    <item id="1" group="natural-force">
             <name>
-                <ru>Легко ли вам давались геометрия или черчение?</ru>
-                <en>Did you find geometry and scientific drawing easy?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="112" group="tech-interest" qtype="easy">
-            <name>
-                <ru>Вам бы хотелось строить настоящие механизмы, приборы или здания?</ru>
-                <en>Would you like to build real devices, instruments or structures?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="213" group="human-interest" qtype="easy">
-            <name>
-                <ru>Вы не понимаете людей, которым нравится вникать в туманные философские рассуждения?</ru>
-                <en>You can’t understand people who show an interest in vague philosophical concepts and reasoning?</en>
-            </name>
-            <options>
-                <option value="0">
-                    <ru>Да, я не понимаю таких людей</ru>
-                    <en>Yes, I can’t understand these people</en>
-                </option>
-                <option value="1">
-                    <ru>Нет, я прекрасно понимаю таких людей</ru>
-                    <en>No, I resonate with these people well</en>
-                </option>
-            </options>
-        </item>
-    <item id="1010" group="boss-interest" qtype="easy">
-            <name>
-                <ru>Что бы вы предпочли для себя?</ru>
-                <en>Which scenario would you prefer?</en>
-            </name>
-            <options>
-                <option value="0">
-                    <ru>Получить хорошую работу, стать специалистом, но не стремиться быть начальником
-                    </ru>
-                    <en>Get a good job and become a specialist with no ambition to be the boss</en>
-                </option>
-                <option value="0">
-                    <ru>Получить хорошую работу, продвинуться по службе, стать
-                        большим боссом, прилично зарабатывать
-                    </ru>
-                    <en>Get a good job, get promoted, become the boss and earn good money</en>
-                </option>
-                <option value="1">
-                    <ru>Работать на себя, быть свободным от начальства,
-                        но работать больше других в надежде зарабатывать всё больше и больше
-                        в условиях конкуренции и сильных финансовых рисков
-                    </ru>
-                    <en>Work for yourself, be free from any authority but work more than others in the hope of earning
-                        more in a competitive environment with high financial risks
-                    </en>
-                </option>
-            </options>
-        </item>
-    <item id="202" group="human-force" qtype="easy">
-            <name>
-                <ru>Вы успешно участвовали в олимпиадах по истории, обществознанию, русскому языку или литературе?</ru>
-                <en>Have you ever participated in Olympiads in History, Social Studies or literature?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="204" group="human-force" qtype="easy">
-            <name>
-                <ru>Вы легко запоминаете сведения из книг и статей по истории и искусствам?
+                <ru>Есть ли у вас опыт близкого взаимодействия с животными, растениями или людьми?
+                    Примеры: вы лечили или принимали участие в лечении и уходе за больным человеком, животным,
+                    растением.
                 </ru>
-                <en>Do you find it easy to memorise information from books and articles on History and the Arts?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="222" group="human-skills" qtype="easy">
-            <name>
-                <ru>У вас отличная память на тексты?</ru>
-                <en>Do you have an excellent textual memory?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="1000" group="boss-force" qtype="easy">
-            <name>
-                <ru>Пытались ли вы когда-нибудь заработать деньги по своей инициативе?
-                    Пример: купили дешевле, а продали дороже, сделали кому-то сайт и т.п.
-                </ru>
-                <en>Have you ever tried to take your own initiative to make money? For example, bought cheap and sold
-                    for profit, made someone a website etc?
+                <en>Do you have any experience of close interaction with animals, plants or people?
+                    For example, have you treated or cared for a sick person, animal or plant?
                 </en>
             </name>
             <options>
                 <option value="1">
-                    <ru>Да, у меня это хорошо получается</ru>
-                    <en>Yes, I’m good at this sort of thing</en>
+                    <ru>Да, с удовольствием</ru>
+                    <en>Yes, with pleasure</en>
                 </option>
                 <option value="0">
-                    <ru>Да, я пробовал, но мне не понравилось</ru>
-                    <en>I’ve tried but it didn’t work for me</en>
+                    <ru>Да, но без удовольствия, вынужденно</ru>
+                    <en>Yes, but not with pleasure, reluctantly.</en>
                 </option>
                 <option value="0">
                     <ru>Нет</ru>
@@ -1272,60 +1381,62 @@
                 </option>
             </options>
         </item>
-    <item id="210" group="human-interest" qtype="easy">
+    <item id="3" group="natural-force">
             <name>
-                <ru>Вы любите читать биографии интересных людей?</ru>
-                <en>Do you enjoy reading biographies of interesting people?</en>
+                <ru>Какое из этих мест вы посещаете чаще?</ru>
+                <en>Which of these places do you visit more often?</en>
             </name>
             <options>
                 <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
+                    <ru>Зоопарк</ru>
+                    <en>Zoo</en>
                 </option>
                 <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
+                    <ru>Театр</ru>
+                    <en>Theater</en>
                 </option>
-            </options>
-        </item>
-    <item id="220" group="human-skills" qtype="easy">
-            <name>
-                <ru>Вам легко рифмовать на любую тему?</ru>
-                <en>Is it easy for you to rhyme in on any given topic?</en>
-            </name>
-            <options>
                 <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
+                    <ru>Ботанический сад</ru>
+                    <en>Botanical garden</en>
                 </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="215" group="human-interest" qtype="easy">
-            <name>
-                <ru>Вам интересно вникать в причины человеческих поступков?</ru>
-                <en>Are you interested in really understanding the causes of certain human actions?</en>
-            </name>
-            <options>
                 <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
+                    <ru>Антропологический, зоологический музей</ru>
+                    <en>Anthropological and zoological museum</en>
                 </option>
                 <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
+                    <ru>Картинная галерея</ru>
+                    <en>Art gallery</en>
+                </option>
+                <option value="0">
+                    <ru>Никакое из этих мест</ru>
+                    <en>None of these places</en>
                 </option>
             </options>
         </item>
-    <item id="214" group="human-interest" qtype="easy">
+    <item id="4" group="natural-force">
             <name>
-                <ru>Вы любите участвовать в серьезных дискуссиях на общественные темы и обсуждать разные точки зрения?
+                <ru>Химии или биологии вы посвящали/посвящаете больше своего внимания, чем другим предметам в школе?
                 </ru>
-                <en>Do you enjoy participating in serious discussions on social topics and discussing different points
-                    of view?
+                <en>Do you devote most of your time to Chemistry and Biology over any other subjects at school?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="5" group="natural-force">
+            <name>
+                <ru>В свободное время вы углублённо читаете о животных, растениях, вирусах и бактериях, устройстве
+                    человека, его мозге и т.п.?
+                </ru>
+                <en>Do you read about animals, plants, viruses and bacteria, human physiology or the brain in your free
+                    time?
                 </en>
             </name>
             <options>
@@ -1339,46 +1450,14 @@
                 </option>
             </options>
         </item>
-    <item id="212" group="human-interest" qtype="easy">
+    <item id="11" group="natural-interest">
             <name>
-                <ru>Вам интересно узнавать о процессах, происходящих в обществе?
-                    Например, что приводит к революциям и войнам.
+                <ru>Было бы вам интересно ежедневно разрабатывать, анализировать химические вещества в лаборатории, на
+                    заводе (например, кремы, лекарства, горючее и т.п.)?
                 </ru>
-                <en>Are you interested in certain processes that occur within society, for example the events that lead
-                    to revolutions and wars?
+                <en>Would you be interested in developing and analyzing chemical substances on a daily basis, either in
+                    a lab or in a factory (for example, working with creams, medicines or even fuel?)
                 </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да, мне это интересно</ru>
-                    <en>Yes, I am interested</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="912" group="com-interest">
-            <name>
-                <ru>Когда вашу работу недооценили или несправедливо занизили отметку:</ru>
-                <en>When your work has been wrongly assessed, judged or unfairly marked:</en>
-            </name>
-            <options>
-                <option value="0">
-                    <ru>Вы промолчите</ru>
-                    <en>You will stay quiet</en>
-                </option>
-                <option value="1">
-                    <ru>Вы подойдёте к начальнику/учителю и постараетесь прояснить ситуацию</ru>
-                    <en>You will go to your boss or teacher and try to clarify the situation</en>
-                </option>
-            </options>
-        </item>
-    <item id="1121" group="war-skills">
-            <name>
-                <ru>Считаете ли вы себя храбрым человеком (способным не бояться или преодолевать страх)?</ru>
-                <en>Do you consider yourself to be brave (capable of not being afraid and overcoming fear)?</en>
             </name>
             <options>
                 <option value="1">
@@ -1391,31 +1470,701 @@
                 </option>
             </options>
         </item>
-    <item id="1120" group="war-skills">
+    <item id="12" group="natural-interest">
             <name>
-                <ru>Как вы оцениваете ваше здоровье?</ru>
-                <en>How do you rate your health?</en>
+                <ru>Нравился ли вам хотя бы один из этих предметов в школе: химия, биология?</ru>
+                <en>Do you enjoy at least one of these subjects at school: Chemistry, Biology?</en>
             </name>
             <options>
                 <option value="1">
-                    <ru>Я полностью здоров - у меня отличное зрение, нет переломов или серьёзных травм, нет
-                        хронических заболеваний
-                    </ru>
-                    <en>I am completely healthy- excellent vision, never had any fractures or serious injuries, no
-                        serious diseases
-                    </en>
+                    <ru>Да</ru>
+                    <en>Yes</en>
                 </option>
                 <option value="0">
-                    <ru>Я в целом здоров, но есть некоторые проблемы. Например, не 100% зрение, или есть
-                        переломы, или есть хронические заболевания
-                    </ru>
-                    <en>I am generally healthy but have a few problems. For example, my vision is not 100%, I’ve had
-                        previous injuries or chronic diseases
-                    </en>
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="13" group="natural-interest">
+            <name>
+                <ru>Согласились ли бы вы учиться биологии или химии всерьез несколько лет в вузе?</ru>
+                <en>Would you agree to study Biology or Chemistry at university for a few years?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
                 </option>
                 <option value="0">
-                    <ru>Я нездоров</ru>
-                    <en>I am unhealthy</en>
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="20" group="natural-skills">
+            <name>
+                <ru>Есть ли у вас успехи хотя бы в одном из этих предметов в школе: химия, биология?
+                </ru>
+                <en>Do you have good marks in Chemistry or Biology at school?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="21" group="natural-skills">
+            <name>
+                <ru>Зигота делится:</ru>
+                <en>The zygote divides by:</en>
+            </name>
+            <options>
+                <option value="1" correct="true">
+                    <ru>Митозом</ru>
+                    <en>Mitosis</en>
+                </option>
+                <option value="0">
+                    <ru>Мейозом</ru>
+                    <en>Meiosis</en>
+                </option>
+                <option value="0">
+                    <ru>Не знаю</ru>
+                    <en>Do not know</en>
+                </option>
+            </options>
+        </item>
+    <item id="22" group="natural-skills">
+            <name>
+                <ru>Как связаны гены и хромосомы?</ru>
+                <en>How are genes and chromosomes related?</en>
+            </name>
+            <options>
+                <option value="1" correct="true">
+                    <ru>Ген - это участок хромосомы</ru>
+                    <en>A gene is a segment of a chromosome</en>
+                </option>
+                <option value="0">
+                    <ru>Они связаны участком РНК</ru>
+                    <en>They are connected by a piece of RNA</en>
+                </option>
+                <option value="0">
+                    <ru>Они вместе являются частью белка</ru>
+                    <en>Together they make up a part of protein</en>
+                </option>
+                <option value="0">
+                    <ru>Ген состоит из РНК, а хромосомы из ДНК</ru>
+                    <en>A gene is made up of RNA and chromosomes are made up of DNA</en>
+                </option>
+                <option value="0">
+                    <ru>Не знаю</ru>
+                    <en>Do not know</en>
+                </option>
+            </options>
+        </item>
+    <item id="23" group="natural-skills">
+            <name>
+                <ru>Валентность - это:</ru>
+                <en>Valence is:</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>количество электронов на верхнем электронном уровне</ru>
+                    <en>The number of electrons in the upper electron shell?</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>способность атомов вступать в соединение с другими атомами</ru>
+                    <en>The ability of atoms to combine with other atoms?</en>
+                </option>
+                <option value="0">
+                    <ru>количество атомов в молекуле</ru>
+                    <en>The number of atoms in a molecule?</en>
+                </option>
+                <option value="0">
+                    <ru>молекулярная масса</ru>
+                    <en>Molecular mass?</en>
+                </option>
+                <option value="0">
+                    <ru>Не знаю</ru>
+                    <en>Do not know</en>
+                </option>
+            </options>
+        </item>
+    <item id="24" group="natural-skills">
+            <name>
+                <ru>Формула какой кислоты перед вами?</ru>
+                <en>What acid is shown by the formula in front of you?</en>
+            </name>
+            <img>
+                https://www.sigmaaldrich.com/content/dam/sigma-aldrich/structure6/163/mfcd00064589.eps/_jcr_content/renditions/mfcd00064589-medium.png
+            </img>
+            <options>
+                <option value="0">
+                    <ru>Соляная кислота</ru>
+                    <en>Hydrochloric acid</en>
+                </option>
+                <option value="0">
+                    <ru>Сероводородная</ru>
+                    <en>Hydrogen sulphide</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>Серная</ru>
+                    <en>Sulfuric acid</en>
+                </option>
+                <option value="0">
+                    <ru>Фосфорная</ru>
+                    <en>Phosphoric acid</en>
+                </option>
+                <option value="0">
+                    <ru>Не знаю</ru>
+                    <en>Do not know</en>
+                </option>
+            </options>
+        </item>
+    <item id="102" group="tech-force">
+            <name>
+                <ru>В детстве вы очень любили играть с конструктором Лего, Brio и подобными?</ru>
+                <en>Did you like to play with Lego or Brio blocks as a child?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да, мне особенно нравилось делать не по образцу, а что-то своё</ru>
+                    <en>Yes, I liked to come up with my own creations and ignore the instructions</en>
+                </option>
+                <option value="0">
+                    <ru>Да, я делал всё по образцу</ru>
+                    <en>Yes, I stuck to the instructions</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="123" group="tech-skills" method="TEXT">
+            <name>
+                <ru>Отец старше сына в 4 раза. Через 20 лет он станет старше сына в 2 раза.
+                    Сколько лет сейчас отцу?
+                </ru>
+                <en>A father is 4 times older than his son. In 20 years, he will be 2 times older than his son. How old
+                    is the father now?
+                </en>
+            </name>
+            <fields>
+                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter a number" correct="40"/>
+            </fields>
+        </item>
+    <item id="201" group="human-force">
+            <name>
+                <ru>Вы каждый день много читаете (не соцсети) и получаете удовольствие от чтения?</ru>
+                <en>Do you read every day (not including on social media) and do you enjoy reading?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="203" group="human-force">
+            <name>
+                <ru>Вы прочли несколько книг по истории, по искусствам?
+                </ru>
+                <en>Have you read books on History or the Arts?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="211" group="human-interest">
+            <name>
+                <ru>Вы согласны, что воспоминания реальных личностей - самое интересное чтение?</ru>
+                <en>Do you think that memoirs of real people are the most interesting types of books to read?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="221" group="human-skills">
+            <name>
+                <ru>Ваши школьные сочинения иногда признавали лучшими?</ru>
+                <en>Were your school essays often recognized as being the best?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="320" group="body-skills">
+            <name>
+                <ru>Вы ловчее, сильнее, выносливее большинства ваших одноклассников, друзей, братьев и сестёр?</ru>
+                <en>Are you more capable, stronger, and more resilient than many of your classmates, friends,
+                    siblings?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="400" group="math-force">
+            <name>
+                <ru>Вы заметили за собой, что не упускаете возможности что-то рассчитать,
+                    составить таблицу, найти закономерности?
+                </ru>
+                <en>Have you ever noticed for yourself that you never miss an opportunity to calculate things, create a
+                    table and find patterns?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="411" group="math-interest">
+            <name>
+                <ru>Испытываете ли вы удовольствие от измерений и вычислений?</ru>
+                <en>Do you enjoy measurements and calculations?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="422" group="math-skills">
+            <name>
+                <ru>Легко ли вам разобраться в значении неизвестной вам формулы?</ru>
+                <en>Is it easy for you to decipher the meaning of a formula that you’ve not seen before?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="423" group="math-skills" method="TEXT">
+            <name>
+                <ru>Телепередача была прервана тридцатисекундной рекламой 5 раз.
+                    Сколько процентов времени передачи было занято рекламой,
+                    если вся передача вместе с рекламой шла 50 минут?
+                </ru>
+                <en>A TV show is interrupted by a 30-second commercial 5 separate times. What percentage of the
+                    transmission time was taken up by adverts, if the entire program, including the ads, ran for 50
+                    minutes?
+                </en>
+            </name>
+            <fields>
+                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter a number" correct="5"/> <!-- 5 -->
+            </fields>
+        </item>
+    <item id="424" group="math-skills" method="TEXT">
+            <name>
+                <ru>На изготовление 500г сыра уходит 7,25 литра молока.
+                    Сколько кг сыра можно сделать из 145 литров
+                    молока?
+                </ru>
+                <en>It takes 7.25 litres of milk to make 500g of cheese. How many kg of cheese can be made from 145
+                    litres of milk?
+                </en>
+            </name>
+            <fields>
+                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter a number" correct="10"/> <!-- 10 -->
+            </fields>
+        </item>
+    <item id="425" group="math-skills" method="TEXT">
+            <name>
+                <ru>Один человек в 3 раза старше другого.
+                    Если разность в их возрасте составляет 32 года, какова сумма их возрастов.
+                </ru>
+                <en>One person is 3 times older than the other. If the difference in their ages is 32 years, what is the
+                    sum of their ages?
+                </en>
+            </name>
+            <fields>
+                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter a number" correct="64"/>
+            </fields>
+        </item>
+    <item id="501" group="it-force">
+            <name>
+                <ru>Вы смотрите, читаете про устройство операционных систем компьютера и самого компьютера?</ru>
+                <en>Do you watch videos or read about the design of computer systems or computers themselves?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да, с удовольствием</ru>
+                    <en>Yes, I enjoy it</en>
+                </option>
+                <option value="0">
+                    <ru>Пробовал, но мне не понравилось</ru>
+                    <en>Have before but didn’t enjoy</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="520" group="it-skills">
+            <name>
+                <ru>На день рождения к Винни Пуху пришли гости: Поросенок, Ослик Иа и Кролик.
+                    Поросенок пришёл раньше Кролика, но позже Ослика.
+                    Верно ли, что Ослик пришел раньше Кролика?
+                </ru>
+                <en>Piglet, Eeyore and Rabbit went to Winnie the Pooh’s birthday party. Piglet arrived before Rabbit,
+                    but after Eeyore.
+                    Is it true that Eeyore arrived before Rabbit?
+                </en>
+            </name>
+            <options>
+                <option value="1" correct="true">
+                    <ru>верно</ru>
+                    <en>True</en>
+                </option>
+                <option value="0">
+                    <ru>неверно</ru>
+                    <en>False</en>
+                </option>
+                <option value="0">
+                    <ru>неопределённо</ru>
+                    <en>Don’t know</en>
+                </option>
+            </options>
+        </item>
+    <item id="522" group="it-skills">
+            <name>
+                <ru>Кого на свете больше?</ru>
+                <en>Who are there more of in the world?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Не птиц</ru>
+                    <en>Not birds</en>
+                </option>
+                <option value="1">
+                    <ru>Не ворон</ru>
+                    <en>Not Ravens</en>
+                </option>
+                <option value="0">
+                    <ru>Не знаю</ru>
+                    <en>I don't know</en>
+                </option>
+            </options>
+        </item>
+    <item id="523" group="it-skills">
+            <name>
+                <ru>Один господин, показывая своему другу фотографию мальчика, говорит:
+                    "У меня нет ни сестер, ни братьев, но отец этого человека сын моего отца".
+                    Кто изображен на фотографии?
+                </ru>
+                <en>A man shows his friend a picture of a young boy and says: “I have no sisters or brothers, but this
+                    man’s father is my father’s son.” Who is in the photo?
+                </en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Дед господина</ru>
+                    <en>The man’s grandfather</en>
+                </option>
+                <option value="0">
+                    <ru>Отец господина</ru>
+                    <en>The man’s father</en>
+                </option>
+                <option value="0">
+                    <ru>Сам господин</ru>
+                    <en>The man himself</en>
+                </option>
+                <option value="1">
+                    <ru>Сын господина</ru>
+                    <en>The man’s son</en>
+                </option>
+                <option value="0">
+                    <ru>Внук господина</ru>
+                    <en>The man’s grandson</en>
+                </option>
+            </options>
+        </item>
+    <item id="601" group="craft-force">
+            <name>
+                <ru>Стремитесь ли вы рукодельничать (например, стричь, готовить, шить, работать по дереву и т.д.) в
+                    свободное время?
+                </ru>
+                <en>Do you aspire to do any of the following in your free time?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="611" group="craft-interest">
+            <name>
+                <ru>Побуждают ли вас к действиям видеоролики о том, как кто-то что-то создаёт руками?
+                    Например, шьет, готовит, выпиливает, стрижет, обрабатывает раны, чинит, реставрирует,
+                    делает ювелирные украшения и т.п.
+                </ru>
+                <en>Do videos of people making things with their hands inspire you to do something similar? For example,
+                    sewing, cooking, cutting, treating wounds, repairing, restoring, making jewelry?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="612" group="craft-interest">
+            <name>
+                <ru>Хотели бы вы учиться профессионально какому-нибудь из этих ремёсел?</ru>
+                <en>Do you have any interest in learning any of the following trades professionally?</en>
+            </name>
+            <text>
+                <ru>Шитьё, кулинария, парикмахерское дело, столярное и плотницкое дело, ювелирное дело, реставрация,
+                    массаж и т.п.
+                </ru>
+                <en>Sewing, cooking, hairdressing, joinery, carpentry, making jewelry, restoration or massage?</en>
+            </text>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="622" group="craft-skills">
+            <name>
+                <ru>Сколько бы вы ни старались что-то делать руками, ничего особенно хорошего не получается?</ru>
+                <en>No matter how much you try to make something with your own hands, nothing good ever comes from it?
+                </en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да, не получается</ru>
+                    <en>Yes, it never works</en>
+                </option>
+                <option value="1">
+                    <ru>Нет, кое-какими результатами я даже горжусь</ru>
+                    <en>No, I’m even quite proud of some of the results</en>
+                </option>
+            </options>
+        </item>
+    <item id="700" group="art-force">
+            <name>
+                <ru>Через неделю у важного для вас человека день рождения.
+                    Хочется преподнести своё собственное произведение (песню,
+                    поделку, картину, стихи и пр.). Ваши действия?
+                </ru>
+                <en>Someone important to you has a birthday in a week. You want to give something homemade (a song,
+                    something crafted, a painting, a poem etc). What do you do?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Заранее продумываю идеи, выразительные детали и дорабатываю
+                        до совершенства.
+                    </ru>
+                    <en>I’ll mull over the ideas and the finer details in advance and finalize everything to
+                        perfection.
+                    </en>
+                </option>
+                <option value="1">
+                    <ru>Всё придумаю и сделаю накануне.</ru>
+                    <en>I’ll figure everything out and do it the day before.</en>
+                </option>
+                <option value="1">
+                    <ru>Вечеринка вечером? Вот утром что-нибудь и придумаю.</ru>
+                    <en>There’s gonna be a party tomorrow? I’ll sort something out in the morning.</en>
+                </option>
+                <option value="1">
+                    <ru>Экспромт, только экспромт! На него спишу все несовершенства.</ru>
+                    <en>Impromptu every time! I can blame any shortcomings on this too!</en>
+                </option>
+                <option value="0">
+                    <ru>Сам ничего не умею. Лучше куплю подарок в магазине.</ru>
+                    <en>I can’t make anything myself. I’ll get a present from the shop.</en>
+                </option>
+            </options>
+        </item>
+    <item id="711" group="art-interest">
+            <name>
+                <ru>Получаете ли вы удовольствие от рисования, сочинения музыки, придумывания одежды,
+                    придумывания историй и т.д.?
+                </ru>
+                <en>Do you enjoy painting, composing music, designing clothes, making up stories?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="712" group="art-interest">
+            <name>
+                <ru>Если бы за всё платили одинаково, что бы вы выбрали
+                    делать каждый день с утра до вечера?
+                </ru>
+                <en>If money were not in the equation, what would you choose to do all day every day?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>придумывать одежду, образы</ru>
+                    <en>Design clothes and draw the designs</en>
+                </option>
+                <option value="1">
+                    <ru>рисовать</ru>
+                    <en>Draw</en>
+                </option>
+                <option value="1">
+                    <ru>делать компьютерный дизайн предметов, интерьеров, игр, рекламы, сайтов и т.п.</ru>
+                    <en>Computer design of objects, interiors, games, adverts or websites</en>
+                </option>
+                <option value="1">
+                    <ru>фотографировать и снимать видео</ru>
+                    <en>Do photography or videography</en>
+                </option>
+                <option value="1">
+                    <ru>придумывать сценарии, стихи, рассказы</ru>
+                    <en>Write scripts, poems, stories</en>
+                </option>
+                <option value="1">
+                    <ru>играть на музыкальных инструментах или петь</ru>
+                    <en>Play musical instruments or sing</en>
+                </option>
+                <option value="0">
+                    <ru>ничего из этого я бы не стал делать</ru>
+                    <en>None of the above</en>
+                </option>
+            </options>
+        </item>
+    <item id="721" group="art-skills">
+            <name>
+                <ru>Как часто вас хвалили за ваши произведения (рисунок, фотографию,
+                    песню, стихотворение, рассказ и т.д.)?
+                </ru>
+                <en>How often have you been praised for your work (drawing, photography, singing, poetry,
+                    story-writing)?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Часто</ru>
+                    <en>Often</en>
+                </option>
+                <option value="0">
+                    <ru>Редко</ru>
+                    <en>Seldom</en>
+                </option>
+                <option value="0">
+                    <ru>Никогда</ru>
+                    <en>Never</en>
+                </option>
+            </options>
+        </item>
+    <item id="722" group="art-skills">
+            <name>
+                <ru>Легко ли вы придумываете что-нибудь из этого: орнаменты и узоры, логотипы,
+                    идеи для костюма, истории, мелодии, идеи интерьера и т.д.?
+                </ru>
+                <en>Is it easy for you to come up with and design any of the following: ornaments and patterns, logos,
+                    costumes, story ideas, melodies or interior designs?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, мне такие вещи трудно придумывать</ru>
+                    <en>No, I find this kind of thing hard</en>
+                </option>
+            </options>
+        </item>
+    <item id="723" group="art-skills">
+            <name>
+                <ru>Хорошо ли вы делаете что-то из этого: рисуете, сочиняете музыку, придумываете
+                    сюжеты, снимаете видео?
+                </ru>
+                <en>Do you do any of the following well: drawing, composing music, coming up with stories, or making videos?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
                 </option>
             </options>
         </item>
@@ -1435,6 +2184,31 @@
                 </option>
             </options>
         </item>
+    <item id="801" group="hoz-force">
+            <name>
+                <ru>Замечаете ли вы неполадки в вашем подъезде, в школе, на работе,
+                    в квартире и принимаете ли меры, чтобы их устранить?
+                    Например, разбитое окно, сломанная розетка и т.д.
+                </ru>
+                <en>Do you notice certain things in your home, at school, at work that you try and sort or fix? For
+                    example, a broken window, broken socket?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да, замечаю и принимаю меры</ru>
+                    <en>Yes, I notice and try to take action</en>
+                </option>
+                <option value="0">
+                    <ru>Замечаю, но ничего не предпринимаю</ru>
+                    <en>I notice but don’t do anything</en>
+                </option>
+                <option value="0">
+                    <ru>Не замечаю и ничего не предпринимаю</ru>
+                    <en>I don’t notice so don’t do anything about them</en>
+                </option>
+            </options>
+        </item>
     <item id="812" group="hoz-interest">
             <name>
                 <ru>Если у вас растрепалась книга, отнесёте ли вы её на переплёт?</ru>
@@ -1448,6 +2222,172 @@
                 <option value="0">
                     <ru>Нет</ru>
                     <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="822" group="hoz-skills">
+            <name>
+                <ru>Когда вы планируете поездку, поход, отпуск, вы всегда знаете,
+                    что вам пригодится, а что нет, и никогда не берете лишнего и ничего важного не забываете?
+                </ru>
+                <en>When you’re planning a trip or a hike or a vacation, you always know what you do and don’t need, you
+                    never overpack and you never forget anything important?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да, это про меня</ru>
+                    <en>Yes, that’s me</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, я обязательно что-нибудь не учту</ru>
+                    <en>No, I’ll definitely forget something</en>
+                </option>
+            </options>
+        </item>
+    <item id="901" group="com-force">
+            <name>
+                <ru>Трудно ли вам выступать перед аудиторией, делая доклад или отвечая урок?</ru>
+                <en>Do you find it difficult to speak publicly in front of an audience, for example giving a speech or
+                    answering in a lesson?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Нет, мне это совсем не трудно</ru>
+                    <en>No, it’s not difficult for me</en>
+                </option>
+                <option value="0">
+                    <ru>Трудно, я очень волнуюсь и предпочитаю высказываться письменно</ru>
+                    <en>Yes it’s difficult, I get anxious and prefer writing to public speaking</en>
+                </option>
+            </options>
+        </item>
+    <item id="902" group="com-force">
+            <name>
+                <ru>Когда коллега/одноклассник просит вас объяснить непонятное по какому-то вопросу:</ru>
+                <en>When a colleague/classmate asks you to explain something they don’t understand:</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Вы с удовольствием берётесь объяснить и объясняете понятно</ru>
+                    <en>You’re happy to explain and it explain it clearly</en>
+                </option>
+                <option value="0">
+                    <ru>Вы объясняете, но от вашего объяснения не становится понятно</ru>
+                    <en>You explain, but struggle to keep your explanation clear and concise</en>
+                </option>
+                <option value="0">
+                    <ru>Вы отказываетесь, пусть объясняет кто-то другой</ru>
+                    <en>You refuse and let someone else explain</en>
+                </option>
+            </options>
+        </item>
+    <item id="912" group="com-interest">
+            <name>
+                <ru>Когда вашу работу недооценили или несправедливо занизили отметку:</ru>
+                <en>When your work has been wrongly assessed, judged or unfairly marked:</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Вы промолчите</ru>
+                    <en>You will stay quiet</en>
+                </option>
+                <option value="1">
+                    <ru>Вы подойдёте к начальнику/учителю и постараетесь прояснить ситуацию</ru>
+                    <en>You will go to your boss or teacher and try to clarify the situation</en>
+                </option>
+            </options>
+        </item>
+    <item id="913" group="com-interest">
+            <name>
+                <ru>Хотите ли вы, чтобы каждый день на работе вы что-то делали с людьми непосредственно?
+                    Например, лечили бы их, учили, организовывали и т.д.
+                </ru>
+                <en>Do you want to deal directly with people every day at work? For example, providing medical
+                    treatment, teaching, organizing or managing?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да, с удовольствием</ru>
+                    <en>Yes, I’d enjoy that</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, я бы не хотел напрямую иметь дела с людьми</ru>
+                    <en>No, I don’t want to be dealing with people every day</en>
+                </option>
+            </options>
+        </item>
+    <item id="921" group="com-skills">
+            <name>
+                <ru>Быстро ли вы устаёте от общения с людьми?</ru>
+                <en>Do you quickly get tired of interacting with people?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да, даже если этот разговор дружеский и длится не более часа</ru>
+                    <en>Yes, even if the conversation is easy and friendly and lasts less than an hour</en>
+                </option>
+                <option value="1">
+                    <ru>Нет, я готов общаться с людьми долго и не устаю от этого</ru>
+                    <en>No, I enjoy communicating with others for long periods of time and don’t get tired of it</en>
+                </option>
+            </options>
+        </item>
+    <item id="1002" group="boss-force">
+            <name>
+                <ru>Придумали ли вы схему заработка, которую не видели другие люди?</ru>
+                <en>Have you ever come up with a new and innovative scheme of earning money that others have never
+                    thought of?
+                </en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="1012" group="boss-interest">
+            <name>
+                <ru>Вдохновляют ли вас чьи-то рассказы о том, как бизнесмены
+                    зарабатывают деньги и как побеждают в конкурентной борьбе?
+                </ru>
+                <en>Are you inspired by stories of businessmen who earn top money and beat the competition?</en>
+            </name>
+            <options>
+                <option value="1">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    <item id="1020" group="boss-skills">
+            <name>
+                <ru>Для какой цели банкир создал банк?</ru>
+                <en>Why did bankers set up banks?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Для хранения денег и ценных бумаг своих клиентов</ru>
+                    <en>To hold money and offer security to clients</en>
+                </option>
+                <option value="1">
+                    <ru>Для личного обогащения</ru>
+                    <en>For personal enrichment</en>
+                </option>
+                <option value="0">
+                    <ru>Для служения государству</ru>
+                    <en>To serve the state</en>
                 </option>
             </options>
         </item>
@@ -1518,966 +2458,38 @@
                 </option>
             </options>
         </item>
-    <item id="913" group="com-interest">
+    <item id="1120" group="war-skills">
             <name>
-                <ru>Хотите ли вы, чтобы каждый день на работе вы что-то делали с людьми непосредственно?
-                    Например, лечили бы их, учили, организовывали и т.д.
-                </ru>
-                <en>Do you want to deal directly with people every day at work? For example, providing medical
-                    treatment, teaching, organizing or managing?
-                </en>
+                <ru>Как вы оцениваете ваше здоровье?</ru>
+                <en>How do you rate your health?</en>
             </name>
             <options>
                 <option value="1">
-                    <ru>Да, с удовольствием</ru>
-                    <en>Yes, I’d enjoy that</en>
-                </option>
-                <option value="0">
-                    <ru>Нет, я бы не хотел напрямую иметь дела с людьми</ru>
-                    <en>No, I don’t want to be dealing with people every day</en>
-                </option>
-            </options>
-        </item>
-    <item id="1020" group="boss-skills">
-            <name>
-                <ru>Для какой цели банкир создал банк?</ru>
-                <en>Why did bankers set up banks?</en>
-            </name>
-            <options>
-                <option value="0">
-                    <ru>Для хранения денег и ценных бумаг своих клиентов</ru>
-                    <en>To hold money and offer security to clients</en>
-                </option>
-                <option value="1">
-                    <ru>Для личного обогащения</ru>
-                    <en>For personal enrichment</en>
-                </option>
-                <option value="0">
-                    <ru>Для служения государству</ru>
-                    <en>To serve the state</en>
-                </option>
-            </options>
-        </item>
-    <item id="822" group="hoz-skills">
-            <name>
-                <ru>Когда вы планируете поездку, поход, отпуск, вы всегда знаете,
-                    что вам пригодится, а что нет, и никогда не берете лишнего и ничего важного не забываете?
-                </ru>
-                <en>When you’re planning a trip or a hike or a vacation, you always know what you do and don’t need, you
-                    never overpack and you never forget anything important?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да, это про меня</ru>
-                    <en>Yes, that’s me</en>
-                </option>
-                <option value="0">
-                    <ru>Нет, я обязательно что-нибудь не учту</ru>
-                    <en>No, I’ll definitely forget something</en>
-                </option>
-            </options>
-        </item>
-    <item id="1012" group="boss-interest">
-            <name>
-                <ru>Вдохновляют ли вас чьи-то рассказы о том, как бизнесмены
-                    зарабатывают деньги и как побеждают в конкурентной борьбе?
-                </ru>
-                <en>Are you inspired by stories of businessmen who earn top money and beat the competition?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="901" group="com-force">
-            <name>
-                <ru>Трудно ли вам выступать перед аудиторией, делая доклад или отвечая урок?</ru>
-                <en>Do you find it difficult to speak publicly in front of an audience, for example giving a speech or
-                    answering in a lesson?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Нет, мне это совсем не трудно</ru>
-                    <en>No, it’s not difficult for me</en>
-                </option>
-                <option value="0">
-                    <ru>Трудно, я очень волнуюсь и предпочитаю высказываться письменно</ru>
-                    <en>Yes it’s difficult, I get anxious and prefer writing to public speaking</en>
-                </option>
-            </options>
-        </item>
-    <item id="921" group="com-skills">
-            <name>
-                <ru>Быстро ли вы устаёте от общения с людьми?</ru>
-                <en>Do you quickly get tired of interacting with people?</en>
-            </name>
-            <options>
-                <option value="0">
-                    <ru>Да, даже если этот разговор дружеский и длится не более часа</ru>
-                    <en>Yes, even if the conversation is easy and friendly and lasts less than an hour</en>
-                </option>
-                <option value="1">
-                    <ru>Нет, я готов общаться с людьми долго и не устаю от этого</ru>
-                    <en>No, I enjoy communicating with others for long periods of time and don’t get tired of it</en>
-                </option>
-            </options>
-        </item>
-    <item id="902" group="com-force">
-            <name>
-                <ru>Когда коллега/одноклассник просит вас объяснить непонятное по какому-то вопросу:</ru>
-                <en>When a colleague/classmate asks you to explain something they don’t understand:</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Вы с удовольствием берётесь объяснить и объясняете понятно</ru>
-                    <en>You’re happy to explain and it explain it clearly</en>
-                </option>
-                <option value="0">
-                    <ru>Вы объясняете, но от вашего объяснения не становится понятно</ru>
-                    <en>You explain, but struggle to keep your explanation clear and concise</en>
-                </option>
-                <option value="0">
-                    <ru>Вы отказываетесь, пусть объясняет кто-то другой</ru>
-                    <en>You refuse and let someone else explain</en>
-                </option>
-            </options>
-        </item>
-    <item id="1002" group="boss-force">
-            <name>
-                <ru>Придумали ли вы схему заработка, которую не видели другие люди?</ru>
-                <en>Have you ever come up with a new and innovative scheme of earning money that others have never
-                    thought of?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="801" group="hoz-force">
-            <name>
-                <ru>Замечаете ли вы неполадки в вашем подъезде, в школе, на работе,
-                    в квартире и принимаете ли меры, чтобы их устранить?
-                    Например, разбитое окно, сломанная розетка и т.д.
-                </ru>
-                <en>Do you notice certain things in your home, at school, at work that you try and sort or fix? For
-                    example, a broken window, broken socket?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да, замечаю и принимаю меры</ru>
-                    <en>Yes, I notice and try to take action</en>
-                </option>
-                <option value="0">
-                    <ru>Замечаю, но ничего не предпринимаю</ru>
-                    <en>I notice but don’t do anything</en>
-                </option>
-                <option value="0">
-                    <ru>Не замечаю и ничего не предпринимаю</ru>
-                    <en>I don’t notice so don’t do anything about them</en>
-                </option>
-            </options>
-        </item>
-    <item id="1" group="natural-force">
-            <name>
-                <ru>Есть ли у вас опыт близкого взаимодействия с животными, растениями или людьми?
-                    Примеры: вы лечили или принимали участие в лечении и уходе за больным человеком, животным,
-                    растением.
-                </ru>
-                <en>Do you have any experience of close interaction with animals, plants or people?
-                    For example, have you treated or cared for a sick person, animal or plant?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="723" group="art-skills">
-            <name>
-                <ru>Хорошо ли вы делаете что-то из этого: рисуете, сочиняете музыку, придумываете
-                    интересные сюжеты, снимаете интересные видео?
-                </ru>
-                <en>Are you good at: drawing, composing music, coming up with stories, filming interesting videos?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="22" group="natural-skills">
-            <name>
-                <ru>Как связаны гены и хромосомы?</ru>
-                <en>How are genes and chromosomes related?</en>
-            </name>
-            <options>
-                <option value="1" correct="true">
-                    <ru>Ген - это участок хромосомы</ru>
-                    <en>A gene is a segment of a chromosome</en>
-                </option>
-                <option value="0">
-                    <ru>Они связаны участком РНК</ru>
-                    <en>They are connected by a piece of RNA</en>
-                </option>
-                <option value="0">
-                    <ru>Они вместе являются частью белка</ru>
-                    <en>Together they make up a part of protein</en>
-                </option>
-                <option value="0">
-                    <ru>Ген состоит из РНК, а хромосомы из ДНК</ru>
-                    <en>A gene is made up of RNA and chromosomes are made up of DNA</en>
-                </option>
-                <option value="0">
-                    <ru>Не знаю</ru>
-                    <en>Do not know</en>
-                </option>
-            </options>
-        </item>
-    <item id="211" group="human-interest">
-            <name>
-                <ru>Вы согласны, что воспоминания реальных личностей - самое интересное чтение?</ru>
-                <en>Do you think that memoirs of real people are the most interesting types of books to read?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="203" group="human-force">
-            <name>
-                <ru>Вы прочли несколько книг по истории, по искусствам?
-                </ru>
-                <en>Have you read books on History or the Arts?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="201" group="human-force">
-            <name>
-                <ru>Вы каждый день много читаете (не соцсети) и получаете удовольствие от чтения?</ru>
-                <en>Do you read every day (not including on social media) and do you enjoy reading?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="123" group="tech-skills" method="TEXT">
-            <name>
-                <ru>Отец старше сына в 4 раза. Через 20 лет он станет старше сына в 2 раза.
-                    Сколько лет сейчас отцу?
-                </ru>
-                <en>A father is 4 times older than his son. In 20 years, he will be 2 times older than his son. How old
-                    is the father now?
-                </en>
-            </name>
-            <fields>
-                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter a number" correct="40"/>
-            </fields>
-        </item>
-    <item id="102" group="tech-force">
-            <name>
-                <ru>В детстве вы очень любили играть с конструктором Лего, Brio и подобными?</ru>
-                <en>Did you like to play with Lego or Brio blocks as a child?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да, мне особенно нравилось делать не по образцу, а что-то своё</ru>
-                    <en>Yes, I liked to come up with my own creations and ignore the instructions</en>
-                </option>
-                <option value="0">
-                    <ru>Да, я делал всё по образцу</ru>
-                    <en>Yes, I stuck to the instructions</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="24" group="natural-skills">
-            <name>
-                <ru>Формула какой кислоты перед вами?</ru>
-                <en>What acid is shown by the formula in front of you?</en>
-            </name>
-            <img>
-                https://www.sigmaaldrich.com/content/dam/sigma-aldrich/structure6/163/mfcd00064589.eps/_jcr_content/renditions/mfcd00064589-medium.png
-            </img>
-            <options>
-                <option value="0">
-                    <ru>Соляная кислота</ru>
-                    <en>Hydrochloric acid</en>
-                </option>
-                <option value="0">
-                    <ru>Сероводородная</ru>
-                    <en>Hydrogen sulphide</en>
-                </option>
-                <option value="1" correct="true">
-                    <ru>Серная</ru>
-                    <en>Sulfuric acid</en>
-                </option>
-                <option value="0">
-                    <ru>Фосфорная</ru>
-                    <en>Phosphoric acid</en>
-                </option>
-                <option value="0">
-                    <ru>Не знаю</ru>
-                    <en>Do not know</en>
-                </option>
-            </options>
-        </item>
-    <item id="23" group="natural-skills">
-            <name>
-                <ru>Валентность - это:</ru>
-                <en>Valence is:</en>
-            </name>
-            <options>
-                <option value="0">
-                    <ru>количество электронов на верхнем электронном уровне</ru>
-                    <en>The number of electrons in the upper electron shell?</en>
-                </option>
-                <option value="1" correct="true">
-                    <ru>способность атомов вступать в соединение с другими атомами</ru>
-                    <en>The ability of atoms to combine with other atoms?</en>
-                </option>
-                <option value="0">
-                    <ru>количество атомов в молекуле</ru>
-                    <en>The number of atoms in a molecule?</en>
-                </option>
-                <option value="0">
-                    <ru>молекулярная масса</ru>
-                    <en>Molecular mass?</en>
-                </option>
-                <option value="0">
-                    <ru>Не знаю</ru>
-                    <en>Do not know</en>
-                </option>
-            </options>
-        </item>
-    <item id="21" group="natural-skills">
-            <name>
-                <ru>Зигота делится:</ru>
-                <en>The zygote divides by:</en>
-            </name>
-            <options>
-                <option value="1" correct="true">
-                    <ru>Митозом</ru>
-                    <en>Mitosis</en>
-                </option>
-                <option value="0">
-                    <ru>Мейозом</ru>
-                    <en>Meiosis</en>
-                </option>
-                <option value="0">
-                    <ru>Не знаю</ru>
-                    <en>Do not know</en>
-                </option>
-            </options>
-        </item>
-    <item id="320" group="body-skills">
-            <name>
-                <ru>Вы ловчее, сильнее, выносливее большинства ваших одноклассников, друзей, братьев и сестёр?</ru>
-                <en>Are you more capable, stronger, and more resilient than many of your classmates, friends,
-                    siblings?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="20" group="natural-skills">
-            <name>
-                <ru>Есть ли у вас успехи хотя бы в одном из этих предметов в школе: химия, биология?
-                </ru>
-                <en>Do you have good marks in Chemistry or Biology at school?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="13" group="natural-interest">
-            <name>
-                <ru>Согласились ли бы вы учиться биологии или химии всерьез несколько лет в вузе?</ru>
-                <en>Would you agree to study Biology or Chemistry at university for a few years?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="12" group="natural-interest">
-            <name>
-                <ru>Нравился ли вам хотя бы один из этих предметов в школе: химия, биология?</ru>
-                <en>Do you enjoy at least one of these subjects at school: Chemistry, Biology?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="11" group="natural-interest">
-            <name>
-                <ru>Было бы вам интересно ежедневно разрабатывать, анализировать химические вещества в лаборатории, на
-                    заводе (например, кремы, лекарства, горючее и т.п.)?
-                </ru>
-                <en>Would you be interested in developing and analyzing chemical substances on a daily basis, either in
-                    a lab or in a factory (for example, working with creams, medicines or even fuel?)
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="5" group="natural-force">
-            <name>
-                <ru>В свободное время вы углублённо читаете о животных, растениях, вирусах и бактериях, устройстве
-                    человека, его мозге и т.п.?
-                </ru>
-                <en>Do you read about animals, plants, viruses and bacteria, human physiology or the brain in your free
-                    time?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="4" group="natural-force">
-            <name>
-                <ru>Химии или биологии вы посвящали/посвящаете больше своего внимания, чем другим предметам в школе?
-                </ru>
-                <en>Do you devote most of your time to Chemistry and Biology over any other subjects at school?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="3" group="natural-force">
-            <name>
-                <ru>Стремились ли вы попасть в зоопарк, в зоологический музей, в ботанический сад, в лес или в
-                    лечебницу,
-                    чтобы ещё раз увидеть жизнь животных, растений, или увидеть как лечат людей и животных.
-                </ru>
-                <en>Have you frequently wanted to visit the zoo, zoological museum, botanical garden, forest or the
-                    hospital to see animal life, plants or medical treatment up close?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="221" group="human-skills">
-            <name>
-                <ru>Ваши школьные сочинения иногда признавали лучшими?</ru>
-                <en>Were your school essays often recognized as being the best?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="400" group="math-force">
-            <name>
-                <ru>Вы заметили за собой, что не упускаете возможности что-то рассчитать,
-                    составить таблицу, найти закономерности?
-                </ru>
-                <en>Have you ever noticed for yourself that you never miss an opportunity to calculate things, create a
-                    table and find patterns?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="722" group="art-skills">
-            <name>
-                <ru>Легко ли вы придумываете что-нибудь из этого: орнаменты и узоры, логотипы,
-                    идеи для костюма, истории, мелодии, идеи интерьера и т.д.?
-                </ru>
-                <en>Is it easy for you to come up with and design any of the following: ornaments and patterns, logos,
-                    costumes, story ideas, melodies or interior designs?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет, мне такие вещи трудно придумывать</ru>
-                    <en>No, I find this kind of thing hard</en>
-                </option>
-            </options>
-        </item>
-    <item id="601" group="craft-force">
-            <name>
-                <ru>Стремитесь ли вы рукодельничать (например, стричь, готовить, шить, работать по дереву и т.д.) в
-                    свободное время?
-                </ru>
-                <en>Do you aspire to do any of the following in your free time?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="721" group="art-skills">
-            <name>
-                <ru>Как часто вас хвалили за ваши произведения (рисунок, фотографию,
-                    песню, стихотворение, рассказ и т.д.)?
-                </ru>
-                <en>How often have you been praised for your work (drawing, photography, singing, poetry,
-                    story-writing)?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Часто</ru>
-                    <en>Often</en>
-                </option>
-                <option value="0">
-                    <ru>Редко</ru>
-                    <en>Seldom</en>
-                </option>
-                <option value="0">
-                    <ru>Никогда</ru>
-                    <en>Never</en>
-                </option>
-            </options>
-        </item>
-    <item id="712" group="art-interest">
-            <name>
-                <ru>Если бы за всё платили одинаково, что бы вы выбрали
-                    делать каждый день с утра до вечера?
-                </ru>
-                <en>If money were not in the equation, what would you choose to do all day every day?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>придумывать одежду, образы</ru>
-                    <en>Design clothes and draw the designs</en>
-                </option>
-                <option value="1">
-                    <ru>рисовать</ru>
-                    <en>Draw</en>
-                </option>
-                <option value="1">
-                    <ru>делать компьютерный дизайн предметов, интерьеров, игр, рекламы, сайтов и т.п.</ru>
-                    <en>Computer design of objects, interiors, games, adverts or websites</en>
-                </option>
-                <option value="1">
-                    <ru>фотографировать и снимать видео</ru>
-                    <en>Do photography or videography</en>
-                </option>
-                <option value="1">
-                    <ru>придумывать сценарии, стихи, рассказы</ru>
-                    <en>Write scripts, poems, stories</en>
-                </option>
-                <option value="1">
-                    <ru>играть на музыкальных инструментах или петь</ru>
-                    <en>Play musical instruments or sing</en>
-                </option>
-                <option value="0">
-                    <ru>ничего из этого я бы не стал делать</ru>
-                    <en>None of the above</en>
-                </option>
-            </options>
-        </item>
-    <item id="711" group="art-interest">
-            <name>
-                <ru>Получаете ли вы удовольствие от рисования, сочинения музыки, придумывания одежды,
-                    придумывания историй и т.д.?
-                </ru>
-                <en>Do you enjoy painting, composing music, designing clothes, making up stories?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="700" group="art-force">
-            <name>
-                <ru>Через неделю у важного для вас человека день рождения.
-                    Хочется преподнести своё собственное произведение (песню,
-                    поделку, картину, стихи и пр.). Ваши действия?
-                </ru>
-                <en>Someone important to you has a birthday in a week. You want to give something homemade (a song,
-                    something crafted, a painting, a poem etc). What do you do?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Заранее продумываю идеи, выразительные детали и дорабатываю
-                        до совершенства.
+                    <ru>Я полностью здоров - у меня отличное зрение, нет переломов или серьёзных травм, нет
+                        хронических заболеваний
                     </ru>
-                    <en>I’ll mull over the ideas and the finer details in advance and finalize everything to
-                        perfection.
+                    <en>I am completely healthy- excellent vision, never had any fractures or serious injuries, no
+                        serious diseases
                     </en>
                 </option>
-                <option value="1">
-                    <ru>Всё придумаю и сделаю накануне.</ru>
-                    <en>I’ll figure everything out and do it the day before.</en>
-                </option>
-                <option value="1">
-                    <ru>Вечеринка вечером? Вот утром что-нибудь и придумаю.</ru>
-                    <en>There’s gonna be a party tomorrow? I’ll sort something out in the morning.</en>
-                </option>
-                <option value="1">
-                    <ru>Экспромт, только экспромт! На него спишу все несовершенства.</ru>
-                    <en>Impromptu every time! I can blame any shortcomings on this too!</en>
+                <option value="0">
+                    <ru>Я в целом здоров, но есть некоторые проблемы. Например, не 100% зрение, или есть
+                        переломы, или есть хронические заболевания
+                    </ru>
+                    <en>I am generally healthy but have a few problems. For example, my vision is not 100%, I’ve had
+                        previous injuries or chronic diseases
+                    </en>
                 </option>
                 <option value="0">
-                    <ru>Сам ничего не умею. Лучше куплю подарок в магазине.</ru>
-                    <en>I can’t make anything myself. I’ll get a present from the shop.</en>
+                    <ru>Я нездоров</ru>
+                    <en>I am unhealthy</en>
                 </option>
             </options>
         </item>
-    <item id="622" group="craft-skills">
+    <item id="1121" group="war-skills">
             <name>
-                <ru>Сколько бы вы ни старались что-то делать руками, ничего особенно хорошего не получается?</ru>
-                <en>No matter how much you try to make something with your own hands, nothing good ever comes from it?
-                </en>
-            </name>
-            <options>
-                <option value="0">
-                    <ru>Да, не получается</ru>
-                    <en>Yes, it never works</en>
-                </option>
-                <option value="1">
-                    <ru>Нет, кое-какими результатами я даже горжусь</ru>
-                    <en>No, I’m even quite proud of some of the results</en>
-                </option>
-            </options>
-        </item>
-    <item id="612" group="craft-interest">
-            <name>
-                <ru>Хотели бы вы учиться профессионально какому-нибудь из этих ремёсел?</ru>
-                <en>Do you have any interest in learning any of the following trades professionally?</en>
-            </name>
-            <text>
-                <ru>Шитьё, кулинария, парикмахерское дело, столярное и плотницкое дело, ювелирное дело, реставрация,
-                    массаж и т.п.
-                </ru>
-                <en>Sewing, cooking, hairdressing, joinery, carpentry, making jewelry, restoration or massage?</en>
-            </text>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="611" group="craft-interest">
-            <name>
-                <ru>Побуждают ли вас к действиям видеоролики о том, как кто-то что-то создаёт руками?
-                    Например, шьет, готовит, выпиливает, стрижет, обрабатывает раны, чинит, реставрирует,
-                    делает ювелирные украшения и т.п.
-                </ru>
-                <en>Do videos of people making things with their hands inspire you to do something similar? For example,
-                    sewing, cooking, cutting, treating wounds, repairing, restoring, making jewelry?
-                </en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="523" group="it-skills">
-            <name>
-                <ru>Один господин, показывая своему другу фотографию мальчика, говорит:
-                    "У меня нет ни сестер, ни братьев, но отец этого человека сын моего отца".
-                    Кто изображен на фотографии?
-                </ru>
-                <en>A man shows his friend a picture of a young boy and says: “I have no sisters or brothers, but this
-                    man’s father is my father’s son.” Who is in the photo?
-                </en>
-            </name>
-            <options>
-                <option value="0">
-                    <ru>Дед господина</ru>
-                    <en>The man’s grandfather</en>
-                </option>
-                <option value="0">
-                    <ru>Отец господина</ru>
-                    <en>The man’s father</en>
-                </option>
-                <option value="0">
-                    <ru>Сам господин</ru>
-                    <en>The man himself</en>
-                </option>
-                <option value="1">
-                    <ru>Сын господина</ru>
-                    <en>The man’s son</en>
-                </option>
-                <option value="0">
-                    <ru>Внук господина</ru>
-                    <en>The man’s grandson</en>
-                </option>
-            </options>
-        </item>
-    <item id="411" group="math-interest">
-            <name>
-                <ru>Испытываете ли вы удовольствие от измерений и вычислений?</ru>
-                <en>Do you enjoy measurements and calculations?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="522" group="it-skills">
-            <name>
-                <ru>Кого на свете больше?</ru>
-                <en>Who are there more of in the world?</en>
-            </name>
-            <options>
-                <option value="0">
-                    <ru>Не птиц</ru>
-                    <en>Not birds</en>
-                </option>
-                <option value="1">
-                    <ru>Не ворон</ru>
-                    <en>Not Ravens</en>
-                </option>
-                <option value="0">
-                    <ru>Не знаю</ru>
-                    <en>I don't know</en>
-                </option>
-            </options>
-        </item>
-    <item id="520" group="it-skills">
-            <name>
-                <ru>На день рождения к Винни Пуху пришли гости: Поросенок, Ослик Иа и Кролик.
-                    Поросенок пришёл раньше Кролика, но позже Ослика.
-                    Верно ли, что Ослик пришел раньше Кролика?
-                </ru>
-                <en>Piglet, Eeyore and Rabbit went to Winnie the Pooh’s birthday party. Piglet arrived before Rabbit,
-                    but after Eeyore.
-                    Is it true that Eeyore arrived before Rabbit?
-                </en>
-            </name>
-            <options>
-                <option value="1" correct="true">
-                    <ru>верно</ru>
-                    <en>True</en>
-                </option>
-                <option value="0">
-                    <ru>неверно</ru>
-                    <en>False</en>
-                </option>
-                <option value="0">
-                    <ru>неопределённо</ru>
-                    <en>Don’t know</en>
-                </option>
-            </options>
-        </item>
-    <item id="501" group="it-force">
-            <name>
-                <ru>Вы смотрите, читаете про устройство операционных систем компьютера и самого компьютера?</ru>
-                <en>Do you watch videos or read about the design of computer systems or computers themselves?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да, с удовольствием</ru>
-                    <en>Yes, I enjoy it</en>
-                </option>
-                <option value="0">
-                    <ru>Пробовал, но мне не понравилось</ru>
-                    <en>Have before but didn’t enjoy</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-    <item id="425" group="math-skills" method="TEXT">
-            <name>
-                <ru>Один человек в 3 раза старше другого.
-                    Если разность в их возрасте составляет 32 года, какова сумма их возрастов.
-                </ru>
-                <en>One person is 3 times older than the other. If the difference in their ages is 32 years, what is the
-                    sum of their ages?
-                </en>
-            </name>
-            <fields>
-                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter a number" correct="64"/>
-            </fields>
-        </item>
-    <item id="424" group="math-skills" method="TEXT">
-            <name>
-                <ru>На изготовление 500г сыра уходит 7,25 литра молока.
-                    Сколько кг сыра можно сделать из 145 литров
-                    молока?
-                </ru>
-                <en>It takes 7.25 litres of milk to make 500g of cheese. How many kg of cheese can be made from 145
-                    litres of milk?
-                </en>
-            </name>
-            <fields>
-                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter a number" correct="10"/> <!-- 10 -->
-            </fields>
-        </item>
-    <item id="423" group="math-skills" method="TEXT">
-            <name>
-                <ru>Телепередача была прервана тридцатисекундной рекламой 5 раз.
-                    Сколько процентов времени передачи было занято рекламой,
-                    если вся передача вместе с рекламой шла 50 минут?
-                </ru>
-                <en>A TV show is interrupted by a 30-second commercial 5 separate times. What percentage of the
-                    transmission time was taken up by adverts, if the entire program, including the ads, ran for 50
-                    minutes?
-                </en>
-            </name>
-            <fields>
-                <field type="number" placeholder-ru="Введите число" placeholder-en="Enter a number" correct="5"/> <!-- 5 -->
-            </fields>
-        </item>
-    <item id="422" group="math-skills">
-            <name>
-                <ru>Легко ли вам разобраться в значении неизвестной вам формулы?</ru>
-                <en>Is it easy for you to decipher the meaning of a formula that you’ve not seen before?</en>
+                <ru>Считаете ли вы себя храбрым человеком (способным не бояться или преодолевать страх)?</ru>
+                <en>Do you consider yourself to be brave (capable of not being afraid and overcoming fear)?</en>
             </name>
             <options>
                 <option value="1">

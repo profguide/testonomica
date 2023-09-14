@@ -15,8 +15,12 @@
             </name>
             <options>
                 <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
+                    <ru>Да, с удовольствием</ru>
+                    <en>Yes, with pleasure</en>
+                </option>
+                <option value="0">
+                    <ru>Да, но без удовольствия, вынужденно</ru>
+                    <en>Yes, but not with pleasure, reluctantly.</en>
                 </option>
                 <option value="0">
                     <ru>Нет</ru>
@@ -26,12 +30,9 @@
         </item>
         <item id="2" group="natural-force" qtype="easy">
             <name>
-                <ru>Вы когда-нибудь создавали смеси, вещества, проводили над ними
-                    опыты, поджигали, взрывали и тому подобное.
+                <ru>Вы любили создавать смеси, вещества, проводить над ними опыты, поджигать, взрывать и тому подобное?
                 </ru>
-                <en>Have you got any experience with carrying out chemistry experiments?
-                    For example, have you ever mixed substances together, experimented with them, lit them on fire or
-                    blown them up?
+                <en>Did you enjoy creating mixtures, experimenting with substances, igniting, detonating, and the like?
                 </en>
             </name>
             <options>
@@ -48,22 +49,33 @@
         <!-- или/или -->
         <item id="3" group="natural-force">
             <name>
-                <ru>Стремились ли вы попасть в зоопарк, в зоологический музей, в ботанический сад, в лес или в
-                    лечебницу,
-                    чтобы ещё раз увидеть жизнь животных, растений, или увидеть как лечат людей и животных.
-                </ru>
-                <en>Have you frequently wanted to visit the zoo, zoological museum, botanical garden, forest or the
-                    hospital to see animal life, plants or medical treatment up close?
-                </en>
+                <ru>Какое из этих мест вы посещаете чаще?</ru>
+                <en>Which of these places do you visit more often?</en>
             </name>
             <options>
                 <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
+                    <ru>Зоопарк</ru>
+                    <en>Zoo</en>
                 </option>
                 <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
+                    <ru>Театр</ru>
+                    <en>Theater</en>
+                </option>
+                <option value="1">
+                    <ru>Ботанический сад</ru>
+                    <en>Botanical garden</en>
+                </option>
+                <option value="1">
+                    <ru>Антропологический, зоологический музей</ru>
+                    <en>Anthropological and zoological museum</en>
+                </option>
+                <option value="0">
+                    <ru>Картинная галерея</ru>
+                    <en>Art gallery</en>
+                </option>
+                <option value="0">
+                    <ru>Никакое из этих мест</ru>
+                    <en>None of these places</en>
                 </option>
             </options>
         </item>
@@ -1531,25 +1543,7 @@
                 </option>
             </options>
         </item>
-        <!--        Этот вопрос на интеллект, они никогда не стоял. Мы придумали, но не добавили. Потому что хотели для хзяйственника, а получилось, что вопрос на интеллект в сущности -->
-        <!--        <item id="823" group="hoz-skills">-->
-        <!--            <name>-->
-        <!--                <ru>Перед вами гора бытовых предметов: игрушки, посуда, одежда, книги, сувениры, лекарства. Сможете ли вы достаточно быстро рассортировать их по коробкам?</ru>-->
-        <!--                <en>When you’re planning a trip or a hike or a vacation, you always know what you do and don’t need, you-->
-        <!--                    never overpack and you never forget anything important?-->
-        <!--                </en>-->
-        <!--            </name>-->
-        <!--            <options>-->
-        <!--                <option value="1">-->
-        <!--                    <ru>Да, я легко справляюсь с такой задачей</ru>-->
-        <!--                    <en>Yes, that’s me</en>-->
-        <!--                </option>-->
-        <!--                <option value="0">-->
-        <!--                    <ru>Нет, я теряюсь и долго с этим вожусь</ru>-->
-        <!--                    <en>No, I’ll definitely forget something</en>-->
-        <!--                </option>-->
-        <!--            </options>-->
-        <!--        </item>-->
+
         <item id="522" group="it-skills">
             <name>
                 <ru>Кого на свете больше?</ru>
@@ -1604,6 +1598,26 @@
                 </option>
             </options>
         </item>
+
+        <!--        Этот вопрос на интеллект, они никогда не стоял. Мы придумали, но не добавили. Потому что хотели для хзяйственника, а получилось, что вопрос на интеллект в сущности -->
+        <!--        <item id="823" group="hoz-skills">-->
+        <!--            <name>-->
+        <!--                <ru>Перед вами гора бытовых предметов: игрушки, посуда, одежда, книги, сувениры, лекарства. Сможете ли вы достаточно быстро рассортировать их по коробкам?</ru>-->
+        <!--                <en>When you’re planning a trip or a hike or a vacation, you always know what you do and don’t need, you-->
+        <!--                    never overpack and you never forget anything important?-->
+        <!--                </en>-->
+        <!--            </name>-->
+        <!--            <options>-->
+        <!--                <option value="1">-->
+        <!--                    <ru>Да, я легко справляюсь с такой задачей</ru>-->
+        <!--                    <en>Yes, that’s me</en>-->
+        <!--                </option>-->
+        <!--                <option value="0">-->
+        <!--                    <ru>Нет, я теряюсь и долго с этим вожусь</ru>-->
+        <!--                    <en>No, I’ll definitely forget something</en>-->
+        <!--                </option>-->
+        <!--            </options>-->
+        <!--        </item>-->
 
         <!-- Ремесленник -->
         <!-- Ремесленник: Усилия -->
@@ -2035,9 +2049,9 @@
         <item id="723" group="art-skills">
             <name>
                 <ru>Хорошо ли вы делаете что-то из этого: рисуете, сочиняете музыку, придумываете
-                    интересные сюжеты, снимаете интересные видео?
+                    сюжеты, снимаете видео?
                 </ru>
-                <en>Are you good at: drawing, composing music, coming up with stories, filming interesting videos?</en>
+                <en>Do you do any of the following well: drawing, composing music, coming up with stories, or making videos?</en>
             </name>
             <options>
                 <option value="1">
