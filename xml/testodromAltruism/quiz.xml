@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>
+                <ru>Мне нравится говорить людям комплименты</ru>
+                <en>I like to give compliments to people</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="2">
+            <name>
+                <ru>Я не подаю милостыню</ru>
+                <en>I don't give charity</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="4">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="3">
+            <name>
+                <ru>Помогая кому-то, я рассчитываю, что и мне помогут, когда я буду в этом нуждаться</ru>
+                <en>When helping someone, I expect that they will help me when I need it</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="2">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="3">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>
+                <ru>Я стараюсь всегда помогать пожилым людям – в транспорте, в магазине, на уличном переходе</ru>
+                <en>I always try to help elderly people – on public transport, in stores, at pedestrian crossings</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="5">
+            <name>
+                <ru>Я не оказываю помощь в тех случаях, когда это может причинить мне какой-либо ущерб</ru>
+                <en>I do not provide assistance in cases where it may harm me in any way</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="4">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="6">
+            <name>
+                <ru>У меня есть знакомые, которых я опекаю, потому что они в житейских делах беспомощны</ru>
+                <en>I have acquaintances whom I take care of because they are helpless in everyday matters</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>
+                <ru>Если хороший знакомый просит одолжить денег, а у меня их нет, я стараюсь взять в долг у кого-нибудь
+                    третьего, чтобы помочь
+                </ru>
+                <en>If a close friend asks to borrow money, and I don't have it, I try to borrow from someone else to
+                    help
+                </en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>
+                <ru>Я раздражаюсь, когда ради чужих интересов приходится отодвигать в сторону собственные планы</ru>
+                <en>I get annoyed when I have to put my own plans aside for the sake of others' interests</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="4">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>
+                <ru>В ответ на чью-то просьбу я обычно говорю «да», даже не успев толком подумать</ru>
+                <en>In response to someone's request, I usually say "yes" without even having time to think</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="10">
+            <name>
+                <ru>Я сильно переживаю, если не удается помочь другу в трудной ситуации</ru>
+                <en>I feel deeply upset if I can't help a friend in a difficult situation</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="11">
+            <name>
+                <ru>Люди, требующие помощи от других, это просто корыстные манипуляторы</ru>
+                <en>People who ask for help from others are simply selfish manipulators</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="4">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>
+                <ru>Нельзя поступаться своими целями ради помощи ближнему</ru>
+                <en>You should not give up your own goals for the sake of helping others</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>
+                <ru>У меня приподнятое настроение, когда удается сделать доброе дело</ru>
+                <en>I feel uplifted when I manage to do a good deed</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="14">
+            <name>
+                <ru>Я бросаю все свои дела, когда человек рядом со мной нуждается в помощи</ru>
+                <en>I drop everything I'm doing when someone near me needs help</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>
+                <ru>Не бывает бескорыстных волонтеров, все они ищут какую-то выгоду</ru>
+                <en>There are no truly selfless volunteers; they are all looking for some benefit</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="4">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>
+                <ru>Меня восхищают пожарники, спасатели – все те, кто готов пожертвовать собой ради спасения чужой
+                    жизни
+                </ru>
+                <en>I admire firefighters, rescuers – all those who are willing to sacrifice themselves to save someone
+                    else's life
+                </en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>
+                <ru>Так называемые добрые люди – это люди недалекие и наивные</ru>
+                <en>So-called "kind people" are simple-minded and naive</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="4">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="18">
+            <name>
+                <ru>Меня гложет чувство вины, если уклоняюсь от возможности сделать доброе дело</ru>
+                <en>I feel guilty if I avoid the opportunity to do a good deed</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="19">
+            <name>
+                <ru>Я никогда не отказываю тем, кто обращается ко мне за помощью</ru>
+                <en>I never refuse those who turn to me for help</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="20">
+            <name>
+                <ru>Человек должен всегда самостоятельно справляться со своими проблемами</ru>
+                <en>A person should always handle their problems on their own</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="4">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
+
+

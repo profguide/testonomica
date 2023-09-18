@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <!-- Минимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="80">
+                <label>
+                    <ru>Ваш уровень альтруизма</ru>
+                    <en>Your level of altruism</en>
+                </label>
+                <levels>
+                    <level up="100" color="danger"/>
+                </levels>
+            </scale>
+            <conditions>
+                <condition var="SUM" operator="меньше_или_равно" value="20"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>
+                        Вас можно назвать скорее эгоистом, чем альтруистом. «Подумай сначала о себе, потом думай о
+                        других», так, возможно, звучит ваше кредо. Приносит ли такая позиция вам радость и
+                        удовлетворение?
+                    </p>
+                    <p>В некоторых случаях вы приходите на помощь тем, кто в этой помощи нуждается. Но
+                        при этом, возможно, вы рассчитываете на «отдачу», на ответную услугу и ответную поддержку в
+                        нужный момент. Это трудно назвать бескорыстием, хотя и такое поведение может приносить пользу
+                        другим людям.
+                    </p>
+                    <p>Вы не горите желанием жертвовать своим временем, силами, деньгами и другими
+                        ресурсами ради чужих интересов, хотя изредка это все же происходит. Людям сложно просить вас о
+                        чем-либо, вероятно, они даже избегают тесных отношений с вами. Постарайтесь задуматься, не
+                        мешает ли ваше безразличие к «посторонним» развитию и установлению прочных отношений с другими
+                        людьми.
+                    </p>
+                </ru>
+                <en>
+                    <p>You could be described as more of an egoist than an altruist. "Think of yourself first, then
+                        think of others" may be your motto. Does this position bring you joy and satisfaction?
+                    </p>
+                    <p>In some cases, you do come to the aid of those who need it. However, at the same time, you may
+                        expect "reciprocity," expecting a return favor or support when you need it. It's difficult to
+                        call this altruism, although such behavior can still benefit other people.
+                    </p>
+                    <p>You're not eager to
+                        sacrifice your time, energy, money, and other resources for the sake of others' interests,
+                        although it occasionally happens. People may find it difficult to ask you for anything, and they
+                        may even avoid close relationships with you. Try to reflect on whether your indifference to the
+                        "others" hinders personal growth and the establishment of strong relationships with other
+                        people.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Уровень выше минимального -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="80">
+                <label>
+                    <ru>Ваш уровень альтруизма</ru>
+                    <en>Your level of altruism</en>
+                </label>
+                <levels>
+                    <level up="100" color="warning"/>
+                </levels>
+            </scale>
+            <conditions>
+                <condition var="SUM" operator="больше" value="20"/>
+                <condition var="SUM" operator="меньше_или_равно" value="40"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>Ваш альтруизм – на уровне ниже среднего, хотя вовсе не самый низкий. Вы приходите на помощь
+                        людям, но далеко не всегда, зачастую на первом месте ваши собственные интересы, которыми вы не
+                        готовы пренебречь. На поддержку могут рассчитывать в основном лишь самые близкие вам люди.
+                    </p>
+                    <p>Броситесь ли вы на помощь человеку, который упал на улице, которому стало плохо в транспорте? Или
+                        пройдете мимо, рассчитывая на то, что обойдутся без вас? Постарайтесь сами себе ответить на этот
+                        вопрос. Возможно, голос эгоизма то и дело заглушает в вас голос альтруизма. Чей голос для вас
+                        важнее? Выбор всегда за вами.
+                    </p>
+                </ru>
+                <en>
+                    <p>Your altruism is below average, though not the lowest. You do come to the aid of people, but not
+                        always; often, your own interests take precedence, and you are not willing to disregard them.
+                        Mostly, only those closest to you can count on your support.
+                    </p>
+                    <p>Will you rush to help a person who has fallen on the street or feels unwell in public transport?
+                        Or will you walk by, hoping they'll manage without you? Try to answer this question for
+                        yourself. Perhaps the voice of egoism often drowns out the voice of altruism within you. Whose
+                        voice is more important to you? The choice is always yours.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Уровень ниже максимального -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="80">
+                <label>
+                    <ru>Ваш уровень альтруизма</ru>
+                    <en>Your level of altruism</en>
+                </label>
+                <levels>
+                    <level up="100" color="warning"/>
+                </levels>
+            </scale>
+            <conditions>
+                <condition var="SUM" operator="больше" value="40"/>
+                <condition var="SUM" operator="меньше_или_равно" value="60"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>У вас умеренно высокий уровень альтруизма – выше среднего, но не самый высокий. Это
+                        распространенный вариант, характерный для многих людей. Во многих случаях вы готовы оказать
+                        помощь и поддержку человеку, который в этом нуждается, особенно близкому человеку.
+                    </p>
+                    <p>Однако вам не чуждо стремление при этом сохранить порядок в своих делах, избежать ущерба своим
+                        целям и потребностям. Вам хотелось бы достигать определенного баланса между своими и чужими
+                        интересами, хотя это и не всегда удается. Помогать другим – важно для вас, но не настолько,
+                        чтобы немедленно бросать свои важные дела и мчаться на помощь другу.
+                    </p>
+                    <p>И все же во многих ситуациях вы готовы забыть о своих интересах, подумать в первую очередь о
+                        другом человеке и постараться ему помочь.
+                    </p>
+                </ru>
+                <en>
+                    <p>You have a moderately high level of altruism – above average but not the highest. This is a
+                        common variation, characteristic of many people. In many cases, you are willing to provide
+                        assistance and support to someone in need, especially to a close person.
+                    </p>
+                    <p>However, you are not immune to the desire to maintain order in your own affairs and avoid harm to
+                        your goals and needs in the process. You would like to strike a balance between your own
+                        interests and those of others, although this is not always achievable. Helping others is
+                        important to you, but not to the extent that you would immediately drop your important tasks and
+                        rush to help a friend.
+                    </p>
+                    <p>Nevertheless, in many situations, you are ready to set aside your interests, prioritize the other
+                        person, and try to help them.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Максимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="80">
+                <label>
+                    <ru>Ваш уровень альтруизма</ru>
+                    <en>Your level of altruism</en>
+                </label>
+                <levels>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <conditions>
+                <condition var="SUM" operator="больше" value="60"/>
+                <condition var="SUM" operator="меньше_или_равно" value="80"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>У вас высокий уровень альтруизма. Вы практически всегда готовы прийти на помощь, проявляете
+                        бескорыстие и заботу о других. Вы отзывчивый человек, к вам часто обращаются за поддержкой.
+                        Однако вы готовы помочь не только тогда, когда вас специально об этом просят, потому что
+                        внимательны к людям и понимаете их проблемы.
+                    </p>
+                    <p>Забота о других важна для вас, а добрые дела доставляют вам радость. Вы чувствуете себя не в
+                        своей тарелке, если не можете оказать поддержку тому, кто в ней нуждается. Вы готовы пренебречь
+                        своими интересами ради чужих, претерпеть неудобства, расходы и прочий ущерб ради того, чтобы не
+                        оставить без помощи того, кто в ней нуждается.
+                    </p>
+                    <p>Возможно, иногда этот ущерб слишком велик, но он искупается тем, что вам удается поддержать людей
+                        в трудную минуту, и это для вас главнее.
+                    </p>
+                </ru>
+                <en>
+                    <p>You have a high level of altruism. You are almost always ready to come to the aid of others,
+                        displaying selflessness and care. You are a compassionate person, and people often turn to you
+                        for support. However, you are willing to help not only when specifically asked because you are
+                        attentive to people and understand their problems.
+                    </p>
+                    <p>Caring for others is important to you, and performing acts of kindness brings you joy. You feel
+                        out of place when you cannot provide support to those in need. You are willing to put aside your
+                        own interests for the sake of others, endure inconveniences, expenses, and other sacrifices to
+                        ensure that those in need receive assistance.
+                    </p>
+                    <p>Perhaps, at times, these sacrifices may seem significant, but they are offset by the satisfaction
+                        you derive from helping people in their times of need, and that is what matters most to you.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+
+    <texts>
+        <instruction>
+            <ru>
+                <p>Пожалуйста, оцените степень своего согласия с каждым утверждением, которое увидите на экране.
+                    Выберите подходящий вариант ответа:
+                </p>
+                <ul>
+                    <li>Да</li>
+                    <li>Скорее да</li>
+                    <li>Затрудняюсь с ответом</li>
+                    <li>Скорее нет</li>
+                    <li>Нет</li>
+                </ul>
+                <p>Старайтесь избегать варианта «Затрудняюсь с ответом», отвечайте быстро и не задумываясь. Помните, что
+                    нет правильных и неправильных ответов, тест – это просто способ лучше понять себя.
+                </p>
+            </ru>
+            <en>
+                <p>Please evaluate your level of agreement with each statement you see on the screen. Choose the
+                    appropriate response:
+                </p>
+                <ul>
+                    <li>Yes</li>
+                    <li>More like yes</li>
+                    <li>I'm unsure</li>
+                    <li>More like no</li>
+                    <li>No</li>
+                </ul>
+                <p>Try to avoid the "I'm unsure" option, answer quickly without overthinking. Remember that there are no
+                    right or wrong answers; the test is just a way to better understand yourself.
+                </p>
+            </en>
+        </instruction>
+    </texts>
+</config>
