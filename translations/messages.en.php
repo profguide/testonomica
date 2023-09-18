@@ -6,7 +6,7 @@ return [
     'Тесты онлайн' => 'Online tests',
     'Статьи' => 'Articles',
     'Категории' => 'Categories',
-    'Перейти к тестам!' => 'Go to the tests!',
+    'Перейти к тестам' => 'Go to the tests',
     'Войти' => 'Login',
     'Выйти' => 'Log out',
 
