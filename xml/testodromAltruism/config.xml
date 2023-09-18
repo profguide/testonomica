@@ -191,39 +191,4 @@
             </text>
         </scenario>
     </scenarios>
-
-    <texts>
-        <instruction>
-            <ru>
-                <p>Пожалуйста, оцените степень своего согласия с каждым утверждением, которое увидите на экране.
-                    Выберите подходящий вариант ответа:
-                </p>
-                <ul>
-                    <li>Да</li>
-                    <li>Скорее да</li>
-                    <li>Затрудняюсь с ответом</li>
-                    <li>Скорее нет</li>
-                    <li>Нет</li>
-                </ul>
-                <p>Старайтесь избегать варианта «Затрудняюсь с ответом», отвечайте быстро и не задумываясь. Помните, что
-                    нет правильных и неправильных ответов, тест – это просто способ лучше понять себя.
-                </p>
-            </ru>
-            <en>
-                <p>Please evaluate your level of agreement with each statement you see on the screen. Choose the
-                    appropriate response:
-                </p>
-                <ul>
-                    <li>Yes</li>
-                    <li>More like yes</li>
-                    <li>I'm unsure</li>
-                    <li>More like no</li>
-                    <li>No</li>
-                </ul>
-                <p>Try to avoid the "I'm unsure" option, answer quickly without overthinking. Remember that there are no
-                    right or wrong answers; the test is just a way to better understand yourself.
-                </p>
-            </en>
-        </instruction>
-    </texts>
 </config>

@@ -26,4 +26,6 @@ interface SourceRepositoryInterface
     function getTotalCount(Test $test): int;
 
     function getQuestionNumber(Test $test, $id): int;
+
+    public function getInstruction(Test $test): ?string;
 }

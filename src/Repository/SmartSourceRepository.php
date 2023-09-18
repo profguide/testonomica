@@ -66,6 +66,11 @@ class SmartSourceRepository implements SourceRepositoryInterface
         return $this->getRepository($test)->getQuestionNumber($test, $id);
     }
 
+    public function getInstruction(Test $test): ?string
+    {
+        return $this->getRepository($test)->getInstruction($test);
+    }
+
     private function getRepository(Test $test): SourceRepositoryInterface
     {
         return $this->repositoryFactory->createSource($test);

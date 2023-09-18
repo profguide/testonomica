@@ -24,6 +24,7 @@ class TestInfoRestController extends AbstractTestRestController
         $locale = $request->getLocale();
         $test = $this->getTest($testId);
         $length = $this->questions->getTotalCount($test);
+        $instruction = $this->questions->getInstruction($test);
 
         $authors = [];
         foreach ($test->getAuthors() as $author) {
@@ -32,6 +33,7 @@ class TestInfoRestController extends AbstractTestRestController
         return $this->json([
             'name' => $test->getName($locale),
             'description' => $test->getDescription($locale),
+            'instruction' => $instruction,
             'authors' => $authors,
             'duration' => $test->getDuration(),
             'length' => $length,

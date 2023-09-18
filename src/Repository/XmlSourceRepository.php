@@ -13,6 +13,9 @@ use Symfony\Component\DomCrawler\Crawler;
 
 class XmlSourceRepository implements SourceRepositoryInterface
 {
+    private const INSTRUCTION_NODE_NAME = 'instruction';
+    private const QUESTIONS_NODE_NAME = 'items';
+
     private Locale $locale;
 
     // for request cache
@@ -88,9 +91,23 @@ class XmlSourceRepository implements SourceRepositoryInterface
         return $this->getItems($test)->count();
     }
 
+    public function getInstruction(Test $test): ?string
+    {
+        $instruction = $this->getXml($test)->children(self::INSTRUCTION_NODE_NAME);
+        if ($instruction->count() === 0) {
+            return null;
+        }
+
+        $localeNode = $instruction->children($this->locale->getValue());
+        if ($localeNode->count() === 0) {
+            return null;
+        }
+
+        return trim($localeNode->html());
+    }
+
     private function getItemPosition(Crawler $items, $id): int
     {
-        /**@var Crawler $items */
         for ($i = 0; $i < count($items); $i++) {
             /**@var DOMElement $node */
             $node = $items->getNode($i);
@@ -98,12 +115,13 @@ class XmlSourceRepository implements SourceRepositoryInterface
                 return $i;
             }
         }
+
         throw new TestItemNotFoundException();
     }
 
-    private function getItems(Test $test)
+    private function getItems(Test $test): Crawler
     {
-        $items = $this->getXml($test)->children();
+        $items = $this->getXml($test)->children(self::QUESTIONS_NODE_NAME);
         return $items->children();
     }
 

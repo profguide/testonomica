@@ -55,11 +55,16 @@ class TestSourceService
         return $this->repository->getQuestionNumber($test, $id);
     }
 
+    public function getInstruction(Test $test): ?string
+    {
+        return $this->repository->getInstruction($test);
+    }
+
     /***
      * @param Test $test
      * @param Answer[] $answers
      */
-    public function validateRawAnswers(Test $test, array $answers)
+    public function validateRawAnswers(Test $test, array $answers): void
     {
         if ($this->getTotalCount($test) != count($answers)) {
             throw new \LogicException('Not matching answers count.');

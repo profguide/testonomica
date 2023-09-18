@@ -369,6 +369,38 @@ prepayment и postpaid) нужно вести учёт сколько израс
 
 # Инструкция по занесению тестов
 
+## Описание
+
+Описание теста делается в панели администратора. Там заполняется название и описание теста, его продолжительность,
+видимость и настройки именования файлов.
+
+## Инструкция к тесту
+
+Инструкция заносится в файле quiz.xml:
+
+```xml
+
+<quiz>
+    <instruction>
+        <ru>
+            <p>Инструкция на русском языке</p>
+        </ru>
+        <en>
+            <p>Instruction on English</p>
+        </en>
+    </instruction>
+    <items>
+        <item>
+            ...
+        </item>
+    </items>
+</quiz>
+```
+
+## Опросник
+
+Опросник заносится в файле quiz.xml:
+
 ## Калькулятор
 
 Калькулятор работает с сырыми ответами, считает правильные ответы и составляет карту, подготовленную для отображения.
@@ -425,7 +457,17 @@ outro и intro к тексту (будет отбражён перед и пос
 
 <scenarios>
     <scenario>
-        <scale percentVar="SCALE" showVar="SUM" showMaxVal="20" label-ru="Застенчивость" label-en="Shyness"/>
+        <scale percentVar="SCALE" showVar="SUM" showMaxVal="80">
+            <label>
+                <ru>Ваш уровень альтруизма</ru>
+                <en>Your level of altruism</en>
+            </label>
+            <levels>
+                <level up="25" color="danger"/>
+                <level up="75" color="warning"/>
+                <level up="100" color="success"/>
+            </levels>
+        </scale>
     </scenario>
 </scenarios>
 ```

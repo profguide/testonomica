@@ -53,4 +53,10 @@ class DBSourceRepository implements SourceRepositoryInterface
     {
         return $this->questionRepository->countByTestId($test->getId());
     }
+
+    public function getInstruction(Test $test): ?string
+    {
+        // not supported yet
+        return null;
+    }
 }
