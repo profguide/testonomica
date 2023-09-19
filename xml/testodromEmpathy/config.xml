@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <!-- Минимальный уровень -->
+        <scenario>
+            <conditions>
+                <condition var="SUM" operator="меньше_или_равно" value="20"/>
+            </conditions>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="80">
+                <label>
+                    <ru>Ваш уровень эмпатии</ru>
+                    <en>Your level of empathy</en>
+                </label>
+                <levels>
+                    <level up="100" color="danger"/>
+                </levels>
+            </scale>
+            <text>
+                <ru>
+                    <p>У вас низкий уровень эмоциональной эмпатии. Чувства других людей для вас – закрытая книга, они вам чужды и непонятны.</p>
+                    <p>Обычно вы не обращаете внимания на чувства других людей, не замечаете их переживаний и волнений. Бог не наделил вас способностью к эмпатии, потому сфера человеческих эмоций вам не интересна и оставляет вас равнодушным.</p>
+                    <p>Возможно, вы не понимаете и собственных чувств и эмоций, плохо их различаете и не всегда понимаете их причины. Все это может мешать установлению тесных отношений с людьми.</p>
+                    <p>Скорее всего, окружающие не считают вас теплым, отзывчивым и дружелюбным человеком. Обычно вы сохраняете дистанцию между собой и всеми остальными, а иногда люди вызывают ваше раздражение своими «неуместными всплесками» живых эмоций.</p>
+                    <p>Вам больше подходят профессии, не связанные с плотным общением, те, что позволяют работать самостоятельно, а не в команде.</p>
+                </ru>
+                <en>
+                    <p>Your level of emotional empathy is low. The feelings of other people are like a closed book to you, unfamiliar and incomprehensible.</p>
+                    <p>Usually, you don't pay attention to the feelings of others, not noticing their emotions and anxieties. You haven't been endowed with the ability to empathize, so the realm of human emotions doesn't interest you and leaves you indifferent.</p>
+                    <p>Perhaps you also struggle to understand your own feelings and emotions, have difficulty distinguishing them, and don't always grasp their reasons. All of this can hinder the establishment of close relationships with people.</p>
+                    <p>Most likely, those around you don't consider you a warm, compassionate, or friendly person. You usually maintain a distance between yourself and others, and sometimes people irritate you with their "inappropriate bursts" of strong emotions.</p>
+                    <p>Professions that don't involve intense social interaction and allow you to work independently are probably more suitable for you than roles requiring teamwork.</p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Средний уровень -->
+        <scenario>
+            <conditions>
+                <condition var="SUM" operator="больше" value="20"/>
+                <condition var="SUM" operator="меньше_или_равно" value="60"/>
+            </conditions>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="80">
+                <label>
+                    <ru>Ваш уровень эмпатии</ru>
+                    <en>Your level of empathy</en>
+                </label>
+                <levels>
+                    <level up="60" color="warning"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <text>
+                <ru>
+                    <p>Уровень вашей эмпатии находится в области средних значений. Это наиболее распространенный вариант, статистическая норма. Вы неплохо понимаете людей, хотя их чувства и эмоции часто остаются для вас непонятными.</p>
+                    <p>Способность мгновенно проникать в душевное состояние другого человека включается лишь иногда, обычно вы присматриваетесь к поведению человека, анализируете его поступки и высказывания. В целом этого достаточно для нормального общения и поддержания хороших отношений.</p>
+                    <p>Эмпатия либо дается человеку, либо нет, ее сложно тренировать и развивать. Впрочем, если вы ощущаете потребность лучше чувствовать людей, воспринимать оттенки их состояния, можно «прокачать» способность к сопереживанию и сочувствию. Советы можно найти в руководствах по саморазвитию или получить у специалиста-психолога.</p>
+                </ru>
+                <en>
+                    <p>Your level of empathy falls within the average range. This is the most common scenario and considered statistically normal. You have a decent understanding of people, although their feelings and emotions often remain unclear to you.</p>
+                    <p>The ability to instantly tap into another person's emotional state only kicks in occasionally. Usually, you observe a person's behavior, analyze their actions and words. In general, this is sufficient for normal communication and maintaining good relationships.</p>
+                    <p>Empathy is either present in a person or not; it's challenging to train and develop. However, if you feel the need to better sense people, perceive nuances in their emotional state, you can "work on" your ability to empathize and sympathize. You can find advice on this in self-improvement guides or seek help from a psychologist.</p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Максимальный уровень -->
+        <scenario>
+            <conditions>
+                <condition var="SUM" operator="больше" value="60"/>
+                <condition var="SUM" operator="меньше_или_равно" value="80"/>
+            </conditions>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="80">
+                <label>
+                    <ru>Ваш уровень эмпатии</ru>
+                    <en>Your level of empathy</en>
+                </label>
+                <levels>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <text>
+                <ru>
+                    <p>У вас высокий уровень эмпатии. Вы восприимчивы и хорошо понимаете других людей, их состояние, настроение, переживания. Вы читаете чувства людей, даже не задумываясь, как вы это делаете, это происходит само собой. Чужие эмоции вызывают в вас мгновенный отклик, а иногда вы ощущаете чужие эмоции как свои собственные.</p>
+                    <p>Радость или горе, грусть или волнение, тоска или скука – все это вы видите и замечаете, вы неравнодушны и отзывчивы. Это хорошо помогает понимать людей и устанавливать с ними контакт. Быть эмпатичным полезно для некоторых профессионалов, которые много взаимодействуют с людьми – для медиков, педагогов, полицейских, социальных работников и многих других.</p>
+                    <p>Но быть эмпатом не всегда хорошо, есть и негативная сторона. Заражаясь чувствами и эмоциями других, вы тратите много своей психической энергии, это может истощать и опустошать. Вы можете сильно утомляться от общения – будто целый день «кирпичи грузили». Возможно, иногда имеет смысл дистанцироваться от людей, ставить внутренний барьер потоку чужих эмоций, это поможет вам сохранять душевное равновесие.</p>
+                    <p>Если у вас есть с этим проблемы, рекомендуем обратиться за консультацией к специалисту-психологу.</p>
+                </ru>
+                <en>
+                    <p>You have a high level of empathy. You are sensitive and understand other people well, their state, mood, and emotions. You read people's feelings, even without consciously thinking about how you do it; it happens naturally. Others' emotions trigger an instant response in you, and sometimes you feel other people's emotions as if they were your own.</p>
+                    <p>Joy or sorrow, sadness or excitement, melancholy or boredom - you see and notice all of this; you are not indifferent and responsive. This greatly helps in understanding people and connecting with them. Being empathetic is beneficial for some professionals who interact with people a lot - for doctors, educators, police officers, social workers, and many others.</p>
+                    <p>However, being an empath is not always easy; there is also a negative side. By absorbing the feelings and emotions of others, you spend a lot of your mental energy, which can be draining and exhausting. You can become very tired from social interactions - as if you've been "carrying bricks" all day. Perhaps, sometimes it makes sense to distance yourself from people, to set an internal barrier against the flow of others' emotions; this will help you maintain your emotional balance.</p>
+                    <p>If you have difficulties with this, we recommend seeking advice from a psychologist.</p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>

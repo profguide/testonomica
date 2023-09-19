@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <instruction>
+        <ru>
+            <p>Пожалуйста, оцените степень своего согласия с каждым утверждением, которое увидите на экране.
+                Выберите подходящий вариант ответа:
+            </p>
+            <ul>
+                <li>Да</li>
+                <li>Скорее да</li>
+                <li>Затрудняюсь с ответом</li>
+                <li>Скорее нет</li>
+                <li>Нет</li>
+            </ul>
+            <p>Старайтесь избегать варианта «Затрудняюсь с ответом», отвечайте быстро и не задумываясь. Помните, что
+                нет правильных и неправильных ответов, тест – это просто способ лучше понять себя.
+            </p>
+        </ru>
+        <en>
+            <p>Please evaluate your level of agreement with each statement you see on the screen. Choose the
+                appropriate response:
+            </p>
+            <ul>
+                <li>Yes</li>
+                <li>More like yes</li>
+                <li>I'm unsure</li>
+                <li>More like no</li>
+                <li>No</li>
+            </ul>
+            <p>Try to avoid the "I'm unsure" option, answer quickly without overthinking. Remember that there are no
+                right or wrong answers; the test is just a way to better understand yourself.
+            </p>
+        </en>
+    </instruction>
+
+    <items>
+        <item id="1">
+            <name>
+                <ru>Я сразу замечаю, когда человек лжет</ru>
+                <en>I immediately notice when someone is lying</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="2">
+            <name>
+                <ru>Меня считают чутким человеком</ru>
+                <en>People consider me a sensitive person</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="3">
+            <name>
+                <ru>Мне становится не по себе, когда я вижу человека в тяжелом горе</ru>
+                <en>I feel uneasy when I see someone in great sorrow</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>
+                <ru>Я всегда вижу, когда у кого-то «глаза на мокром месте»</ru>
+                <en>I always notice when someone has "teary eyes"</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="5">
+            <name>
+                <ru>Взглянув на человека, я безошибочно определяю, в каком он настроении </ru>
+                <en>By looking at a person, I can accurately determine their mood</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="6">
+            <name>
+                <ru>Слезы подступают к глазам, когда рядом плачет страдающий человек</ru>
+                <en>Tears well up in my eyes when someone suffering cries nearby</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>
+                <ru>Я без слов понимаю, какие чувства испытывает другой человек</ru>
+                <en>I understand without words what emotions another person is experiencing</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>
+                <ru>Обычно мне кажется, что я вижу другого человека насквозь</ru>
+                <en>Usually, it seems to me that I see right through another person</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>
+                <ru>Я чувствую, что человеку грустно, даже если он пытается это не показывать</ru>
+                <en>I sense when someone is sad, even if they try not to show it</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="10">
+            <name>
+                <ru>Меня охватывает веселье, когда рядом кто-то бурно радуется</ru>
+                <en>I feel joyful when someone nearby is exuberantly happy</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="11">
+            <name>
+                <ru>Я ощущаю малейшие перемены в эмоциях других людей</ru>
+                <en>I sense the slightest changes in the emotions of other people</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>
+                <ru>Я легко заражаюсь чужим настроением</ru>
+                <en>I easily catch the mood of others</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>
+                <ru>Я ощущаю переживания другого человека, как свои собственные</ru>
+                <en>I feel another person's emotions as if they were my own</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="14">
+            <name>
+                <ru>У меня мурашки по коже, когда вижу, что кто-то в ужасе</ru>
+                <en>I get goosebumps when I see that someone is terrified</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>
+                <ru>Мне легко прочесть чувства даже совершенно незнакомого человека</ru>
+                <en>I can easily read the feelings of even a completely unfamiliar person</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>
+                <ru>Я интуитивно понимаю, можно ли доверять данному человеку</ru>
+                <en>I intuitively understand whether I can trust a particular person</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>
+                <ru>Меня охватывает тоска рядом с тем, кто тоскует</ru>
+                <en>I feel melancholic when I'm with someone who is feeling down</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="18">
+            <name>
+                <ru>Я проникаюсь чувствами взволнованного человека так, будто нахожусь на его месте</ru>
+                <en>I empathize with the feelings of an excited person as if I were in their place</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="19">
+            <name>
+                <ru>Мне не составляет труда настроиться с другим человеком на одну волну</ru>
+                <en>It's effortless for me to tune in and connect with another person</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="20">
+            <name>
+                <ru>Я чувствую, что человека расстроен, даже если он ничего не говорит об этом</ru>
+                <en>I feel that a person is upset even if they don't say anything about it</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>More like yes</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>I'm unsure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>More like no</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
+
+
