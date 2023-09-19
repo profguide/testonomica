@@ -31,11 +31,14 @@ readonly class AnalysisRenderer
             return null;
         }
 
-        // todo intro (config->get('intro'))
-
         $output = $this->playScenarios($config->scenarios, $resultData);
         if (!$output) {
             throw new \RuntimeException("None of the scenarios fit the result.");
+        }
+
+        $intro = $config->get('%config.intro%', false);
+        if ($intro) {
+            $output = $intro . $output;
         }
 
         $outro = $config->get('%config.outro%', false);
