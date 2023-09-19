@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <texts>
+        <intro>
+            <ru>
+                <p>
+                    <i>Предварительное замечание.</i>
+                    Чем выше результаты по каждой шкале теста, тем более вероятно, что
+                    вам подходит работа менеджера по продажам. Высокие баллы по тесту означают, что вы можете быть
+                    успешны и эффективны в этой профессии.
+                </p>
+            </ru>
+            <en>
+                <p>
+                    <i>Preliminary Note.</i>
+                    The higher your scores on each scale of the test, the more likely it is that
+                    a sales manager role is suitable for you. High scores on the test indicate that you may be
+                    successful and effective in this profession.
+                </p>
+            </en>
+        </intro>
+    </texts>
+
+    <scenarios>
+        <!-- Общий результат по тесту -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="160">
+                <levels>
+                    <level up="40" color="danger"/>
+                    <level up="60" color="warning"/>
+                    <level up="80" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <ru>Общий результат по тесту</ru>
+                <en>Overall result on the test</en>
+            </name>
+            <text>
+                <ru>
+                    <p>Чем больше баллов вы набрали, тем выше шанс, что вы можете быть успешным продажником. Люди с
+                        высокими показателями по тесту в сравнении с теми, у кого низкие баллы по тесту, обладают
+                        набором качеств, которые позволяют им достигать высоких результатов в продажах. Какие это
+                        качества?
+                    </p>
+                </ru>
+                <en>
+                    <p>The more points you have scored, the higher the chance that you can be a successful salesperson.
+                        People with high scores on the test, compared to those with low scores on the test, possess a
+                        set of qualities that enable them to achieve high results in sales. What are these qualities?
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Уверенность в себе -->
+        <scenario>
+            <scale percentVar="GROUPS.confidence.SCALE" showVar="GROUPS.confidence.SUM" showMaxVal="48">
+                <levels>
+                    <level up="40" color="danger"/>
+                    <level up="60" color="warning"/>
+                    <level up="80" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <ru>Уверенность в себе</ru>
+                <en>Self-confidence</en>
+            </name>
+            <text>
+                <ru>
+                    <p>Люди с высокими баллами по этой шкале в целом уверены в себе. Это проявляется практически во всем
+                        – в том, как они действуют, общаются с другими, выстраивают отношения с коллегами на работе,
+                        выполняют профессиональные обязанности, строят свою карьеру, планируют свою жизнь.
+                    </p>
+                    <p>Важная составляющая общей уверенности в себе – адекватность поведения, умение предвидеть исход
+                        событий и прогнозировать поведение других людей. Уверенные в себе люди легко вызывают к себе
+                        симпатию, непринужденно устанавливают и поддерживают контакты с другими людьми.
+                    </p>
+                    <p>Уверенные в себе люди ставят себе амбициозные, но достижимые цели, считают, что могут справиться
+                        с любой задачей, разобраться практически с любой проблемой. Они уверены, что ход событий зависит
+                        в основном от них самих, от их умения и усилий, а не от случайности, везения или действий других
+                        людей – это свойство называется внутренним локусом контроля.
+                    </p>
+                </ru>
+                <en>
+                    <p>People with high scores on this scale generally have self-confidence. This manifests in almost
+                        everything they do – how they act, interact with others, build relationships with colleagues at
+                        work, fulfill professional duties, shape their careers, and plan their lives.
+                    </p>
+                    <p>An important component of overall self-confidence is behavioral adequacy, the ability to foresee
+                        outcomes and predict the behavior of other people. Self-confident individuals easily attract
+                        sympathy and effortlessly establish and maintain connections with others.
+                    </p>
+                    <p>Self-confident people set ambitious yet achievable goals for themselves, believe they can handle
+                        any task, and tackle practically any problem. They are confident that the course of events
+                        largely depends on themselves, their abilities, and efforts, rather than on chance, luck, or the
+                        actions of others – this trait is called an internal locus of control.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Демонстративная собранность -->
+        <scenario>
+            <scale percentVar="GROUPS.demonstrative.SCALE" showVar="GROUPS.demonstrative.SUM" showMaxVal="28">
+                <levels>
+                    <level up="40" color="danger"/>
+                    <level up="60" color="warning"/>
+                    <level up="80" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <ru>Демонстративная собранность</ru>
+                <en>Demonstrative concentration</en>
+            </name>
+            <text>
+                <ru>
+                    <p>Демонстративность заключается в том, что люди с высокими баллами по этой шкале создают для
+                        предъявления другим некий образ аккуратного, пунктуального, максимально собранного и
+                        организованного человека.
+                    </p>
+                    <p>В этот образ входят такие черты: умение доводить начатое дело до конца, выполнять обещанное,
+                        вовремя отвечать на письма, не опаздывать, содержать вещи и бумаги в порядке и даже общая
+                        аккуратность (выглаженная одежда, вычищенная обувь).
+                    </p>
+                    <p>Возможно, все обстоит именно так, а возможно, несколько иначе, неважно. Суть в том, что
+                        стремление и умение выглядеть в глазах других обязательным, ответственным и аккуратным помогает
+                        эффективным продажам.
+                    </p>
+                    <p>Люди с высокими показателями по этой шкале предпочитают вести себя так, чтобы вызывать одобрение
+                        окружающих, а отвечая на вопросы теста, давать социально желательные, одобряемые ответы. Такие
+                        люди стараются «играть по правилам», соответствовать принятым в конкретном сообществе нормам
+                        поведения, переживают, если допускают ошибки в своей работе. Они «на автопилоте» стремятся
+                        понравиться другим людям.
+                    </p>
+                </ru>
+                <en>
+                    <p>Demonstrativeness is about people with high scores on this scale creating a certain image of a
+                        neat, punctual, highly composed, and organized individual to present to others.
+                    </p>
+                    <p>This image includes traits such as the ability to complete what they start, fulfill promises,
+                        respond to messages promptly, avoid tardiness, and maintain order with their belongings and
+                        paperwork, even general tidiness (well-pressed clothing, clean shoes).
+                    </p>
+                    <p>Perhaps it's exactly like this, or maybe it's a bit different; it doesn't really matter. The
+                        essence is that the aspiration and ability to appear responsible, accountable, and tidy in the
+                        eyes of others contribute to effective sales.
+                    </p>
+                    <p>Individuals with high scores on this scale prefer to behave in a way that garners approval from
+                        those around them. When answering the test questions, they provide socially desirable and
+                        approved responses. Such individuals strive to "play by the rules," conforming to the norms of
+                        behavior accepted within a specific community, and they feel concerned if they make mistakes in
+                        their work. They are "autopiloting" their efforts to please other people.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Социальная смелость -->
+        <scenario>
+            <scale percentVar="GROUPS.courage.SCALE" showVar="GROUPS.courage.SUM" showMaxVal="28">
+                <levels>
+                    <level up="40" color="danger"/>
+                    <level up="60" color="warning"/>
+                    <level up="80" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <ru>Социальная смелость</ru>
+                <en>Social boldness</en>
+            </name>
+            <text>
+                <ru>
+                    <p>Люди с высокими баллами по этой шкале социально активны, постоянно проявляют инициативу и не боятся неудач. Они готовы принять на себя возможный риск, не уклоняются от вероятной опасности, даже идут ей навстречу.</p>
+                    <p>Такие люди предпочитают действовать, прилагать усилия для разрешения сложной ситуации. Они не ждут, пока все уладится само собой, считают пассивность плохой стратегией. При необходимости легко объединяются с другими, обращаясь за помощью и содействием.</p>
+                    <p>Активность сочетается с эмоциональной стабильностью – таких людей трудно вывести из себя, они не раздражительны, спокойны, уравновешенны, дружелюбны, легко приспосабливаются к ситуации и особенностям других людей. Предпочитают не судить о людях по первому впечатлению.</p>
+                    <p>Люди с высокими баллами по этой шкале готовы иногда отступить от предписанных норм, при этом не боятся последствий. Они не очень беспокоятся, залезая в долги, не испытывают угрызений совести, если случается прибегнуть к обману, не платить налоги. Поэтому окружающие не всегда считают их очень ответственными людьми.</p>
+                </ru>
+                <en>
+                    <p>People with high scores on this scale are socially active, constantly show initiative, and are not afraid of failure. They are willing to take on potential risks, do not shy away from possible dangers, and even confront them head-on.</p>
+                    <p>Such individuals prefer to take action and make efforts to resolve complex situations. They do not wait for things to resolve themselves and consider passivity a poor strategy. When necessary, they readily collaborate with others, seeking help and support.</p>
+                    <p>Their activity is combined with emotional stability – these individuals are difficult to provoke, they remain calm, balanced, friendly, and easily adapt to different situations and the characteristics of other people. They prefer not to judge people based on first impressions.</p>
+                    <p>People with high scores on this scale are sometimes willing to deviate from prescribed norms and are not afraid of the consequences. They do not worry much about getting into debt and do not experience guilt if they resort to deception or tax evasion. Therefore, others do not always consider them very responsible individuals.</p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Адекватная непосредственность -->
+        <scenario>
+            <scale percentVar="GROUPS.spontaneity.SCALE" showVar="GROUPS.spontaneity.SUM" showMaxVal="28">
+                <levels>
+                    <level up="40" color="danger"/>
+                    <level up="60" color="warning"/>
+                    <level up="80" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <ru>Адекватная непосредственность</ru>
+                <en>Adequate straightforwardness</en>
+            </name>
+            <text>
+                <ru>
+                    <p>Люди с высокими баллами по этой шкале достаточно непосредственны, спонтанны, с ними легко. Эмоциональная напряженность, закрытость – это не про них. Они незлопамятны, умеют наладить общение с самыми разными людьми, даже не самыми приятными. Им важно, чтобы люди к ним хорошо относились.</p>
+                    <p>Такие люди не избегают ситуаций, в которых могут выглядеть неловко, или новых ситуаций, когда неизвестно, как себя вести – уверены, что справятся, будут выглядеть нормально и вполне симпатично. В компании могут дурачиться, веселиться, шутить.</p>
+                    <p>Они открыты новому опыту, любят осваивать что-то ранее незнакомое. Жизнь без сюрпризов, по заранее составленному плану кажется им скучноватой. Однако любовь к неожиданностям не заходит так далеко, чтобы искать приключений на свою голову, их нельзя подбить на спор сделать все что угодно, у них есть «тормоза». Спонтанность сочетается с хорошим самоконтролем.</p>
+                    <p>Присущая таким людям внутренняя энергия находит выход в юморе,  любопытстве, умении быстро изменять свои планы и даже в том, что они быстро ходят. Работа продажником им подходит, соответствует их личным качествам, поэтому они ее и выбирают, даже если вовсе не уверены, что она их «озолотит».</p>
+                </ru>
+                <en>
+                    <p>People with high scores on this scale are quite direct, spontaneous, and easy to get along with. Emotional tension and reserved behavior are not typical for them. They are forgiving and skilled at communicating with a wide range of people, even those who may not be pleasant. It is important to them that others have a positive view of them.</p>
+                    <p>Such individuals do not avoid situations where they might appear awkward or new situations where they are unsure how to behave – they believe they can handle it, appear normal, and quite likable. In a group, they can be playful, have fun, and make jokes.</p>
+                    <p>They are open to new experiences and enjoy exploring the unknown. Life without surprises, following a pre-made plan, seems dull to them. However, their love for the unexpected does not go so far as to seek adventures on their own; they have their limits. Spontaneity is balanced with good self-control.</p>
+                    <p>Their inherent inner energy finds an outlet in humor, curiosity, the ability to quickly change their plans, and even in their fast pace. A sales job suits them and aligns with their personal qualities, which is why they choose it, even if they are not entirely sure it will bring them great success.</p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Отождествление с профессией -->
+        <scenario>
+            <scale percentVar="GROUPS.identification.SCALE" showVar="GROUPS.identification.SUM" showMaxVal="28">
+                <levels>
+                    <level up="40" color="danger"/>
+                    <level up="60" color="warning"/>
+                    <level up="80" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <ru>Отождествление с профессией</ru>
+                <en>Identification with the profession</en>
+            </name>
+            <text>
+                <ru>
+                    <p>Люди с высокими баллами по этой шкале идентифицируются со своей профессией, отождествляют себя с ней. Это важная часть их образа Я. Им нравится заниматься продажами, они погружаются в текущие рабочие задачи. В отпуске они скучают по работе, хотят, чтобы их дети избрали такую же профессию.</p>
+                    <p>Эти люди любят свою работу, при этом для них возможность зарабатывать – не единственный критерий выбора профессии. Для них характерно отсутствие цинизма в различных его проявлениях, в том числе в отношении к работе и к окружающим людям. Например, они не считают, что люди готовы поступать бесчестно ради собственной выгоды.</p>
+                    <p>Люди с высокими баллами по этой шкале предпочитают заранее планировать свои действия, но неожиданные изменения ситуации их не раздражают, не заставляют нервничать. Они готовы к любому, даже весьма неудобному режиму работы (ненормированный рабочий день, экстренные поездки, отсутствие выходных).</p>
+                    <p>Такие люди считают себя профессионалами в своем деле. Они не сомневаются, что справятся и с руководящей работой, и с работой в новом коллективе, и с работой в незнакомом месте (например, в новом регионе). Они не боятся столкнуться с новизной задач и отсутствием налаженных связей.</p>
+                </ru>
+                <en>
+                    <p>Individuals with high scores on this scale identify with their profession; they associate themselves with it. This is an important part of their self-image. They enjoy working in sales, immerse themselves in their current tasks, and miss their work during vacations. They want their children to choose the same profession.</p>
+                    <p>These individuals love their work, and for them, the opportunity to earn money is not the sole criterion for choosing a profession. They tend to lack cynicism in various aspects, including their attitude toward work and other people. For example, they do not believe that people are willing to act dishonestly for their own benefit.</p>
+                    <p>People with high scores on this scale prefer to plan their actions in advance, but unexpected changes in the situation do not irritate them or make them nervous. They are ready for any, even quite inconvenient, work schedule (irregular working hours, emergency trips, lack of days off).</p>
+                    <p>Such individuals consider themselves professionals in their field. They have no doubt that they can handle managerial tasks, work in a new team, or work in an unfamiliar place (such as a new region). They are not afraid of facing new challenges and the absence of established connections.</p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>

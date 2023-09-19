@@ -1,0 +1,1164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <instruction>
+        <ru>
+            <p>Пожалуйста, оцените степень своего согласия с каждым утверждением, которое увидите на экране.
+                Выберите подходящий вариант ответа:
+            </p>
+            <ul>
+                <li>Согласен</li>
+                <li>Скорее согласен</li>
+                <li>Затрудняюсь с ответом</li>
+                <li>Скорее не согласен</li>
+                <li>Не согласен</li>
+            </ul>
+            <p>Старайтесь избегать варианта «Затрудняюсь с ответом», отвечайте быстро и не задумываясь. Помните, что
+                нет правильных и неправильных ответов, тест – это просто способ лучше понять себя.
+            </p>
+        </ru>
+        <en>
+            <p>Please evaluate your level of agreement with each statement you see on the screen. Choose the
+                appropriate response:
+            </p>
+            <ul>
+                <li>Agree</li>
+                <li>Somewhat agree</li>
+                <li>Uncertain</li>
+                <li>Somewhat disagree</li>
+                <li>Disagree</li>
+            </ul>
+            <p>Try to avoid the "Uncertain" option, answer quickly without overthinking. Remember that there are no
+                right or wrong answers; the test is just a way to better understand yourself.
+            </p>
+        </en>
+    </instruction>
+
+    <items>
+        <item id="1" group="identification">
+            <name>
+                <ru>Мне легко приспособиться к любому режиму работы.</ru>
+                <en>I can easily adapt to any work schedule.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="2" group="demonstrative">
+            <name>
+                <ru>Другие люди часто неправильно истолковывают мои поступки.</ru>
+                <en>Other people often misinterpret my actions.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="4">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="3" group="spontaneity">
+            <name>
+                <ru>Я могу успешно работать с людьми, которые мне несимпатичны.</ru>
+                <en>I can work successfully with people I don't like.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="4" group="identification">
+            <name>
+                <ru>В случае необходимости я готов работать в выходные более одного раза в месяц.</ru>
+                <en>If necessary, I'm willing to work on weekends more than once a month.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="5" group="confidence">
+            <name>
+                <ru>Я могу предсказать, будет ли данный человек хорошим менеджером по продажам.</ru>
+                <en>I can predict whether a person would make a good sales manager.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="6" group="identification">
+            <name>
+                <ru>Я бы хотел, чтобы мой ребенок тоже выбрал профессию менеджера.</ru>
+                <en>I would like my child to choose the profession of a manager as well.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="7" group="courage">
+            <name>
+                <ru>Инициатива наказуема.</ru>
+                <en>Initiative should be punished.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="4">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="8" group="demonstrative">
+            <name>
+                <ru>Я никогда не теряю нужные бумаги.</ru>
+                <en>I never lose important documents.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="9" group="spontaneity">
+            <name>
+                <ru>Я испытываю неловкость, общаясь с ироничными, язвительными людьми.</ru>
+                <en>I feel awkward when interacting with sarcastic or mocking people.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="4">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="10" group="courage">
+            <name>
+                <ru>Мне нравятся задачи, не имеющие ясного и однозначного решения.</ru>
+                <en>I enjoy tasks that don't have a clear and straightforward solution.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="11" group="identification">
+            <name>
+                <ru>Большинство людей скорее поступит нечестно, чем согласится упустить свою выгоду.</ru>
+                <en>Most people would act dishonestly rather than forgo personal gain.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="4">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="12" group="spontaneity">
+            <name>
+                <ru>Я никогда не стану играть с незнакомым человеком в азартные игры.</ru>
+                <en>I would never gamble with a stranger.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="13" group="confidence">
+            <name>
+                <ru>Как правило, я легко завоевываю симпатии окружающих.</ru>
+                <en>I typically gain the favor of those around me.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="14" group="courage">
+            <name>
+                <ru>Если я плохого мнения о человеке, я не скрываю от него это.</ru>
+                <en>If I have a negative opinion of someone, I don't hide it from them.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="4">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="15" group="confidence">
+            <name>
+                <ru>Уверен, что я бы успешно справился с обязанностями коммерческого директора.</ru>
+                <en>I believe I could successfully handle the responsibilities of a commercial director.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="16" group="demonstrative">
+            <name>
+                <ru>Обычно я содержу свои вещи в полном порядке.</ru>
+                <en>I usually keep my things in order.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="17" group="confidence">
+            <name>
+                <ru>Я способен быстро принимать решения.</ru>
+                <en>I can make quick decisions.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="18" group="demonstrative">
+            <name>
+                <ru>Я всегда выполняю свои обещания, не считаясь с тем, удобно мне это или нет.</ru>
+                <en>I always keep my promises, regardless of my own convenience.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="19" group="identification">
+            <name>
+                <ru>В отпуске я скучаю по работе.</ru>
+                <en>I miss work while on vacation.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="20" group="confidence">
+            <name>
+                <ru>Я думаю, что могу справиться практически с любой проблемой.</ru>
+                <en>I think I can handle almost any problem.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="21" group="courage">
+            <name>
+                <ru>Если случается прибегнуть к обману, я испытываю угрызения совести.</ru>
+                <en>If I resort to deception, I feel guilty.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="4">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="22" group="demonstrative">
+            <name>
+                <ru>Я практически всегда довожу начатое дело до конца.</ru>
+                <en>I almost always finish what I start.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="23" group="confidence">
+            <name>
+                <ru>Большинство работников на предприятиях и в учреждениях старается прибрать к рукам все, что плохо
+                    лежит.
+                </ru>
+                <en>Most employees in companies and institutions try to take whatever they can get.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="24" group="courage">
+            <name>
+                <ru>Я скорее предпочту, чтобы люди относились ко мне недоброжелательно, чем презирали меня.</ru>
+                <en>I would rather have people be unfriendly toward me than despise me.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="4">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="25" group="spontaneity">
+            <name>
+                <ru>Я думаю, что, работая менеджером по продажам, смогу обеспечить моей семье высокий уровень жизни.
+                </ru>
+                <en>I believe that working as a sales manager would provide a high standard of living for my family.
+                </en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="4">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="26" group="confidence">
+            <name>
+                <ru>Если кто-то пытается вывести меня из себя, я не обращаю на него внимания.</ru>
+                <en>If someone tries to annoy me, I don't pay attention to them.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="27" group="spontaneity">
+            <name>
+                <ru>Мне нравится учиться чему-то новому.</ru>
+                <en>I enjoy learning something new.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="28" group="confidence">
+            <name>
+                <ru>Я могу наладить продажи любого товара.</ru>
+                <en>I can boost the sales of any product.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="29" group="demonstrative">
+            <name>
+                <ru>Мне трудно проснуться в назначенный час.</ru>
+                <en>It's difficult for me to wake up at a set time.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="4">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="30" group="confidence">
+            <name>
+                <ru>Мне нравится работа, где необходима высокая личная ответственность.</ru>
+                <en>I enjoy jobs that require high personal responsibility.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="31" group="spontaneity">
+            <name>
+                <ru>Я не люблю дурачиться на вечеринках, даже если другие это делают.</ru>
+                <en>I don't like to act foolish at parties, even if others do.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="4">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="32" group="identification">
+            <name>
+                <ru>Мне подходит любая работа, лишь бы за нее хорошо платили.</ru>
+                <en>I'm fine with any job as long as it pays well.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="4">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="33" group="demonstrative">
+            <name>
+                <ru>Я часто говорю раньше, чем подумаю.</ru>
+                <en>I often speak before thinking.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="4">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="34" group="confidence">
+            <name>
+                <ru>Я никогда не волнуюсь перед важными встречами.</ru>
+                <en>I never get nervous before important meetings.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="35" group="identification">
+            <name>
+                <ru>Мне нравится планировать свои действия заранее.</ru>
+                <en>I like to plan my actions in advance.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="36" group="spontaneity">
+            <name>
+                <ru>Я никогда не забываю обид.</ru>
+                <en>I never forget past offenses.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="4">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="37" group="courage">
+            <name>
+                <ru>Я скорее предпочту обойтись без чего-либо, чем буду просить об одолжении.</ru>
+                <en>I would rather do without something than ask for a favor.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="4">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="38" group="confidence">
+            <name>
+                <ru>Нужно заботиться о том, чтобы иметь «полезные знакомства».</ru>
+                <en>It's important to have "useful connections."</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="39" group="courage">
+            <name>
+                <ru>Я стараюсь не браться за дела, если высок риск неудачи.</ru>
+                <en>I try not to take on tasks if there's a high risk of failure.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="4">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="40" group="confidence">
+            <name>
+                <ru>На новом месте работы у меня быстро складываются дружеские отношения с коллегами.</ru>
+                <en>I quickly establish friendly relationships with colleagues at a new job.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее согласен</ru>
+                    <en>Somewhat agree</en>
+                </option>
+                <option value="2">
+                    <ru>Затрудняюсь с ответом</ru>
+                    <en>Uncertain</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее не согласен</ru>
+                    <en>Somewhat disagree</en>
+                </option>
+                <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
+
+
