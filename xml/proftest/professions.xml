@@ -1766,10 +1766,10 @@ l * 100
             <en>Translator/interpreter</en>
         </name>
         <combs>
-            <!--            <comb comb="human,com"/>-->
-            <!--            <comb comb="human"/>-->
             <comb comb="human:50,com:50"/>
             <comb comb="human:100"/>
+            <!--            <comb comb="human,com"/>-->
+            <!--            <comb comb="human"/>-->
         </combs>
         <values>
             <value value="intel,indoor,light-work,result,safe,work-alone,free-time"/>
@@ -1790,6 +1790,37 @@ l * 100
                     </ru>
                     <en>Translators/interpreters are professionals who translate written or spoken speech from one
                         language into another.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Преподаватель языков</ru>
+            <en>Language instructor</en>
+        </name>
+        <combs>
+            <comb comb="human:50,com:50"/>
+        </combs>
+        <values>
+            <value value="intel,indoor,light-work,result,safe,work-alone,free-time"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Преподаватель языков</ru>
+                    <en>Language instructor</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/5/jEcCaLqbJO.jpg</pic>
+                <link>https://www.profguide.io/professions/uchitel_inostrannogo_yazika.html</link>
+                <text>
+                    <ru>
+                        Учитель иностранного языка обучает школьников, студентов или взрослых, составляет учебные
+                        программы. (коды специальности: 44.03.01, 44.04.01, 44.03.05).
+                    </ru>
+                    <en>A foreign language teacher educates schoolchildren, students, or adults and develops educational
+                        programs.
                     </en>
                 </text>
             </kind>
