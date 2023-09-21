@@ -26,9 +26,9 @@ final readonly class TestSearchForm
             ->orderBy('t.id', 'DESC');
 
         if ($this->locale->getValue() === 'en') {
-            $builder->andWhere()->where('t.activeEn > 0');
+            $builder->andWhere('t.activeEn > 0');
         } else {
-            $builder->andWhere()->where('t.active > 0');
+            $builder->andWhere('t.active > 0');
         }
 
         if (isset($params['author'])) {

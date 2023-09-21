@@ -23,13 +23,13 @@ final class ArticlesSearchForm
         $builder->select('a');
         $builder->from('App:Article', 'a');
         if ($catalog) {
-            $builder->andWhere()->where('a.catalog=:catalog');
+            $builder->andWhere('a.catalog=:catalog');
             $builder->setParameter(':catalog', $catalog);
         }
         if ($this->locale->getValue() === 'en') {
-            $builder->andWhere()->where('a.activeEn > 0');
+            $builder->andWhere('a.activeEn > 0');
         } else {
-            $builder->andWhere()->where('a.active > 0');
+            $builder->andWhere('a.active > 0');
         }
         $builder->orderBy('a.id', 'DESC');
 
