@@ -1,5 +1,6 @@
 User-agent: *
+Disallow: *admin*
 Disallow: /tests/api/*
 Disallow: /tests/result/*
 
-Host: https://wowtests.com/
+Host: https://testonomica.com/
