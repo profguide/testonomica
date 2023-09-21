@@ -5,6 +5,11 @@
 
 {% block body %}
     <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ path('articles.index') }}">{{ 'Статьи'|trans }}</a></li>
+            </ol>
+        </nav>
         <div class="row">
             <div class="col-9">
                 <h1 class="mb-4">{{ catalog.name(app.request.locale) }}</h1>
