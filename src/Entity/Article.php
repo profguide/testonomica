@@ -22,26 +22,26 @@ class Article
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
-    private $id;
+    private ?int $id = null;
 
     #[ORM\ManyToOne(targetEntity: 'ArticleCatalog', inversedBy: 'articles')]
     #[ORM\JoinColumn(name: 'catalog_id')]
-    private $catalog;
+    private ?ArticleCatalog $catalog = null;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private string $slug;
+    private ?string $slug = null;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private string $name;
+    private ?string $name = null;
 
     #[ORM\Column(name: 'name_en', type: 'string', length: 255)]
-    private string $nameEn;
+    private ?string $nameEn = null;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private string $subtitle;
+    private ?string $subtitle = null;
 
     #[ORM\Column(name: 'subtitle_en', type: 'string', length: 255, nullable: true)]
-    private string $subtitleEn;
+    private ?string $subtitleEn = null;
 
     #[ORM\Column(type: 'text', length: 500, nullable: true)]
     private ?string $annotation = null;
@@ -50,22 +50,22 @@ class Article
     private ?string $annotation_en = null;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private string $metaTitle;
+    private ?string $metaTitle = null;
 
     #[ORM\Column(name: 'meta_title_en', type: 'string', length: 255)]
-    private string $metaTitleEn;
+    private ?string $metaTitleEn = null;
 
     #[ORM\Column(type: 'text', length: 355)]
-    private string $metaDescription;
+    private ?string $metaDescription = null;
 
     #[ORM\Column(name: 'meta_description_en', type: 'text', length: 355)]
-    private string $metaDescriptionEn;
+    private ?string $metaDescriptionEn = null;
 
     #[ORM\Column(type: 'text')]
-    private string $content;
+    private ?string $content = null;
 
     #[ORM\Column(name: 'content_en', type: 'text')]
-    private string $contentEn;
+    private ?string $contentEn = null;
 
     #[ORM\OneToOne(targetEntity: 'Test')]
     #[ORM\JoinColumn(name: 'test_id', nullable: true)]

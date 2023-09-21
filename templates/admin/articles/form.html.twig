@@ -4,10 +4,11 @@
 
 {% block body %}
     <div class="container">
-        {% include "_components/browse_button.html.twig" with {
-            'ru': path('articles.view', {slug: form.vars.value.slug, _locale: 'ru'}),
-            'en': path('articles.view', {slug: form.vars.value.slug, _locale: 'en'}),
-        } %}
+        {% if form.vars.value.id %}
+            {% include "_components/browse_button.html.twig" with {
+                'pathName': 'articles.view',
+            } %}
+        {% endif %}
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
