@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Domain\Article;
 
+use App\Entity\ArticleCatalog;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\Pagination\PaginationInterface;
 use Knp\Component\Pager\PaginatorInterface;
@@ -15,12 +16,19 @@ final class ArticlesSearchForm
     {
     }
 
-    public function search(Request $request): PaginationInterface
+    public function search(Request $request, ?ArticleCatalog $catalog): PaginationInterface
     {
-        $query = $this->em->createQuery("SELECT a FROM App:Article a ORDER BY a.id DESC");
+        $builder = $this->em->createQueryBuilder();
+        $builder->select('a');
+        $builder->from('App:Article', 'a');
+        if ($catalog) {
+            $builder->andWhere()->where('a.catalog=:catalog');
+            $builder->setParameter(':catalog', $catalog);
+        }
+        $builder->orderBy('a.id', 'DESC');
 
         return $this->paginator->paginate(
-            $query, /* query NOT result */
+            $builder->getQuery(), /* query NOT result */
             $request->query->getInt('page', 1), /*page number*/
             20 /*limit per page*/
         );

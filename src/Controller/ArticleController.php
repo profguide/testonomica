@@ -37,7 +37,7 @@ class ArticleController extends AbstractController
     public function main(Request $request): Response
     {
         return $this->render('articles/main.html.twig', [
-            'articles' => $this->articlesSearchForm->search($request),
+            'articles' => $this->articlesSearchForm->search($request, null),
             'catalogs' => $this->articleCatalogRepository->findAll(),
             'allowed_locales' => ['ru', 'en']
         ]);
@@ -54,7 +54,7 @@ class ArticleController extends AbstractController
         $catalog = $this->loadCatalog($slug);
         return $this->render('articles/catalog.html.twig', [
             'catalog' => $catalog,
-            'articles' => $this->articlesSearchForm->search($request),
+            'articles' => $this->articlesSearchForm->search($request, $catalog),
             'catalogs' => $this->articleCatalogRepository->findAll(),
             'allowed_locales' => ['ru', 'en']
         ]);
