@@ -39,7 +39,7 @@
         </item>
     <item id="200" group="human-force" qtype="interesting">
             <name>
-                <ru>Вы когда-либо писали статьи, фанфики или романы?</ru>
+                <ru>Вы когда-либо писали статьи, фанфики, романы и т.д.?</ru>
                 <en>Have you ever written articles, fanfiction or even a novel?</en>
             </name>
             <options>
@@ -368,9 +368,9 @@
         </item>
     <item id="204" group="human-force" qtype="easy">
             <name>
-                <ru>Вы легко запоминаете сведения из книг и статей по истории и искусствам?
+                <ru>Вы легко запоминаете сведения из книг и статей по истории или искусствам?
                 </ru>
-                <en>Do you find it easy to memorise information from books and articles on History and the Arts?</en>
+                <en>Do you find it easy to memorise information from books and articles on History or the Arts?</en>
             </name>
             <options>
                 <option value="1">
@@ -560,12 +560,9 @@
         </item>
     <item id="310" group="body-interest" qtype="easy">
             <name>
-                <ru>Ожидая своей очереди в парикмахерской, вы взяли из стопки журнал.
-                    Какой раздел вы бы открыли в первую очередь?
+                <ru>Вы в парикмахерской ждёте свой очереди. На столе лежат журналы разной направленности. Какой журнал вы бы взяли в первую очередь?
                 </ru>
-                <en>You’re waiting in line at a hairdresser and you pick up a magazine from the pile. Which section do
-                    you flick to first?
-                </en>
+                <en>In a hair salon, you are waiting for your turn. There are magazines of different types on the table. Which magazine would you choose first?</en>
             </name>
             <options>
                 <option value="1">
@@ -605,8 +602,8 @@
                     <en>Become an athlete and take part in sports competitions</en>
                 </option>
                 <option value="0">
-                    <ru>Писать о спорте</ru>
-                    <en>Write about sports</en>
+                    <ru>Писать о спорте, комментировать</ru>
+                    <en>Write about sports or commentate on competitions</en>
                 </option>
                 <option value="0">
                     <ru>Тренировать спортсменов</ru>
@@ -671,6 +668,14 @@
                 <option value="0">
                     <ru>География</ru>
                     <en>Geography</en>
+                </option>
+                <option value="0">
+                    <ru>ИЗО</ru>
+                    <en>Visual arts</en>
+                </option>
+                <option value="0">
+                    <ru>Технология (труды)</ru>
+                    <en>Labor</en>
                 </option>
             </options>
         </item>
