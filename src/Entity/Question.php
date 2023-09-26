@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Serializer\Annotation\Ignore;
 
 #[ORM\Entity(repositoryClass: 'App\Repository\QuestionRepository')]
+#[ORM\HasLifecycleCallbacks]
 class Question
 {
     // классический вопрос - один возможный вариант радиокнопка

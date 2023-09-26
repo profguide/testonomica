@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Serializer\Annotation\Ignore;
 
 #[ORM\Entity(repositoryClass: 'App\Repository\QuestionItemRepository')]
+#[ORM\HasLifecycleCallbacks]
 class QuestionItem
 {
     /**
