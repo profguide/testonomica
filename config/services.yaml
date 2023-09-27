@@ -27,15 +27,15 @@ services:
     resource: '../src/Controller/'
     tags: [ 'controller.service_arguments' ]
 
-#  # Locale for request
-#  App\Event\LocaleRequestListener:
-#    tags:
-#      - { name: kernel.event_listener, event: kernel.request }
+  #  # Locale for request
+  #  App\Event\LocaleRequestListener:
+  #    tags:
+  #      - { name: kernel.event_listener, event: kernel.request }
 
   # Locale as Service
   # add to nginx config: fastcgi_param lang "en";
-#  App\i18\Locale:
-#    arguments: [ "@=service('request_stack').getCurrentRequest().getLocale()" ]
+  #  App\i18\Locale:
+  #    arguments: [ "@=service('request_stack').getCurrentRequest().getLocale()" ]
 
   # add more service definitions when explicit configuration is needed
   # please note that last definitions always *replace* previous ones
@@ -48,6 +48,10 @@ services:
   App\Service\AnswerService:
     public: true
   App\Service\ResultService:
+    public: true
+  App\V2\Provider\Policy\Payment\Validator\PostpaidPaymentPolicyValidator:
+    public: true
+  App\V2\Provider\Policy\Payment\Validator\PrepaidPaymentPolicyValidator:
     public: true
 #  App\Subscriber\Locale:
 #    public: true
