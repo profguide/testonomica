@@ -6,7 +6,6 @@
 
 namespace App\Repository;
 
-
 use App\Entity\Provider;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -25,14 +24,11 @@ class ProviderRepository extends ServiceEntityRepository
     public function findBySlug(string $slug): ?Provider
     {
         /**@var Provider $provider */
-        $provider = $this->findOneBy(['slug' => $slug]);
-        return $provider;
+        return $this->findOneBy(['slug' => $slug]);
     }
 
     public function getByToken(string $token): ?Provider
     {
-        /**@var Provider $provider */
-        $provider = $this->findOneBy(['token' => $token]);
-        return $provider;
+        return $this->findOneBy(['token' => $token]);
     }
 }
