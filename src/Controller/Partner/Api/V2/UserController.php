@@ -7,6 +7,7 @@ namespace App\Controller\Partner\Api\V2;
 use App\Controller\AbstractRestController;
 use App\Entity\Provider;
 use App\Entity\ProviderUser;
+use App\Exception\ProviderNotFoundException;
 use App\Repository\ProviderRepository;
 use App\V2\Provider\Command\RegisterUser\RegisterProviderUser;
 use App\V2\Provider\Policy\Payment\Validator\Exception\PaymentPolicyValidationException;
@@ -16,10 +17,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\Messenger\Stamp\HandledStamp;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Security\Core\Exception\ProviderNotFoundException;
 
 final class UserController extends AbstractRestController
 {
+    const PARAM_CLIENT = 'client';
+    const PARAM_USER = 'user_id';
+
     public function __construct(private readonly ProviderRepository $providers)
     {
     }
@@ -53,23 +56,23 @@ final class UserController extends AbstractRestController
             /**@var ProviderUser $user */
             $user = $handledStamp->getResult();
             return $this->json(['user_key' => $user->getId()]);
-        } catch (BadRequestException $exception) {
-            return $this->json(['error' => ['message' => $exception->getMessage()]], 400);
-        } catch (ProviderNotFoundException $exception) {
-            return $this->json(['error' => ['message' => $exception->getMessage()]], 404);
-        } catch (PaymentPolicyValidationException $exception) {
-            return $this->json(['error' => ['message' => $exception->getMessage()]], 412);
-        } catch (\Exception $exception) {
-            return $this->json(['error' => ['message' => $exception->getMessage()]], 500);
+        } catch (BadRequestException $e) {
+            return $this->json(['error' => ['message' => $e->getMessage()]], 400);
+        } catch (ProviderNotFoundException $e) {
+            return $this->json(['error' => ['message' => $e->getMessage()]], 404);
+        } catch (PaymentPolicyValidationException $e) {
+            return $this->json(['error' => ['message' => $e->getMessage()]], 412);
+        } catch (\Exception $e) {
+            return $this->json(['error' => ['message' => $e->getMessage()]], 500);
         }
     }
 
     private function getClientFromRequest(Request $request): Provider
     {
-        $token = $request->get('client');
+        $token = $request->get(self::PARAM_CLIENT);
 
         if (!$token) {
-            throw new BadRequestException('The required "client" parameter is missing.');
+            throw new BadRequestException('The required "' . self::PARAM_CLIENT . '" parameter is missing.');
         }
 
         $client = $this->providers->getByToken($token);
@@ -82,14 +85,10 @@ final class UserController extends AbstractRestController
 
     private function getUserIdFromRequest(Request $request): string
     {
-        $id = $request->get('user_id');
+        $id = $request->get(self::PARAM_USER);
 
         if (!$id) {
-            throw new BadRequestException('The required "user_id" parameter is missing.');
-        }
-
-        if (empty($id)) {
-            throw new BadRequestException('The required "user_id" parameter is empty.');
+            throw new BadRequestException('The required "' . self::PARAM_USER . '" parameter is missing.');
         }
 
         return $id;
