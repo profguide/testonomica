@@ -28,6 +28,7 @@ final class UserController extends AbstractRestController
     }
 
     /**
+     * todo POST, тк создание позователя это пост, а не вопрос
      * Регистрирует пользователя провайдера и возвращает его идентификатор.
      * Повторно пользователь не создаётся.
      *
@@ -36,12 +37,9 @@ final class UserController extends AbstractRestController
      * - счётчик выданных доступов компании увеличится на 1 если создан новый пользователь.
      * - возвращён ID пользователя (UUID)
      *
-     * Example:
-     * ?client=partner_token&user_id=123123
-     *
-     * Параметры:
-     * - client - постоянный токен провайдера
-     * - user_id - идентификатор пользователя в системе компании
+     * Parameters:
+     * - @link self::PARAM_CLIENT - постоянный токен провайдера
+     * - @link self::PARAM_USER - идентификатор пользователя в системе компании
      */
     #[Route('/partner/api/v2/user/register')]
     public function register(Request $request, MessageBusInterface $bus): Response
