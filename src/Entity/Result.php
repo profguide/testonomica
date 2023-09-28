@@ -6,7 +6,10 @@
 
 namespace App\Entity;
 
+use App\Test\Progress\Progress;
+use App\Test\Progress\ProgressSerializer;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Uid\Uuid;
 
 /**
  * @author: adavydov
@@ -18,109 +21,85 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\HasLifecycleCallbacks]
 class Result
 {
-    /**
-     * @var int
-     */
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    /**
-     * @var Test
-     */
     #[ORM\ManyToOne(targetEntity: 'Test')]
     #[ORM\JoinColumn(name: 'test_id')]
     private $test;
 
-    /**
-     * @var string
-     */
     #[ORM\Column(type: 'string', length: 36)]
     private $uuid;
 
-    /**
-     * @var string
-     */
     #[ORM\Column(type: 'text')]
     private $data;
 
     /**
-     * @var
+     * Hash для поиска совпадений для анализа и пресекания повторного сохранения.
+     * Однако наверняка возможны совпадения у разных людей, поэтому поле не уникально.
+     * И пресекать повторное сохранение можно лишь для одного человека.
      */
+    #[ORM\Column(type: 'string', unique: false)]
+    private ?string $hash = null;
+
     #[ORM\Column(type: 'datetime', name: 'created_at')]
     private $createdAt;
 
-    /**
-     * @return int
-     */
     public function getId(): int
     {
         return $this->id;
     }
 
-    /**
-     * @return Test
-     */
     public function getTest(): Test
     {
         return $this->test;
     }
 
-    /**
-     * @param Test $test
-     */
     public function setTest(Test $test): void
     {
         $this->test = $test;
     }
 
-    /**
-     * @return string
-     */
     public function getUuid(): string
     {
         return $this->uuid;
     }
 
-    /**
-     * @param string $uuid
-     */
     public function setUuid(string $uuid): void
     {
         $this->uuid = $uuid;
     }
 
-    /**
-     * @return string
-     */
     public function getData(): string
     {
         return $this->data;
     }
 
-    /**
-     * @param string $data
-     */
     public function setData(string $data): void
     {
         $this->data = $data;
     }
 
-    /**
-     * @return mixed
-     */
     public function getCreatedAt()
     {
         return $this->createdAt;
     }
 
-    /**
-     * @param mixed $createdAt
-     */
     public function setCreatedAt($createdAt): void
     {
         $this->createdAt = $createdAt;
+    }
+
+    public function getHash(): ?string
+    {
+        return $this->hash;
+    }
+
+    public function setHash(string $hash): void
+    {
+        $this->hash = $hash;
     }
 
     #[ORM\PrePersist]
@@ -135,6 +114,22 @@ class Result
         $result->setTest($test);
         $result->setUuid($uuid);
         $result->setData($data);
+        return $result;
+    }
+
+    /*
+     * todo однажды
+     *  использовать ID с типом UUID вместо старого поля 'uuid', который не uuid вовсе.
+     *  и возвращать только ID всем и всегда. От старого поля 'uuid' полностью отойти (дать 3 года времени).
+     *  а пока при поиске результата валидировать UUID, и если это не UUID, то искать по старому полю 'uuid'
+     */
+    public static function createAutoKey(Test $test, Progress $progress, ProgressSerializer $serializer): Result
+    {
+        $result = new self();
+        $result->setTest($test);
+        $result->setUuid(Uuid::v4()->toBase58());
+        $result->setData($serializer->serialize($progress));
+        $result->setHash($progress->hashSum());
         return $result;
     }
 }

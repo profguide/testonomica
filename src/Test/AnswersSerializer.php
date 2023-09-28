@@ -8,8 +8,12 @@ namespace App\Test;
 
 
 use App\Entity\Answer;
+use App\Test\Progress\ProgressSerializer;
 
-// todo удалить после переезда хранилища во фронтенд
+/**
+ * @deprecated
+ * @see ProgressSerializer
+ */
 class AnswersSerializer
 {
     /**
