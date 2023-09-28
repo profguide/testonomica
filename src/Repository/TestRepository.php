@@ -45,16 +45,12 @@ class TestRepository extends ServiceEntityRepository implements TestRepositoryIn
 
     function findOneById(int $id): ?Test
     {
-        /**@var Test $test */
-        $test = parent::findOneBy(['id' => $id]);
-        return $test;
+        return parent::findOneBy(['id' => $id]);
     }
 
     function findOneBySlug(string $slug): ?Test
     {
-        /**@var Test $test */
-        $test = parent::findOneBy(['slug' => $slug]);
-        return $test;
+        return $this->findOneBy(['slug' => $slug]);
     }
 
     public function findAllByCatalog(int $id, $page, int $limit = 10): array

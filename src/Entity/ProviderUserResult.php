@@ -36,6 +36,16 @@ final class ProviderUserResult
         $this->createdAt = new \DateTime('now');
     }
 
+    public static function create(ProviderUser $user, Result $result, Test $test): self
+    {
+        $entity = new self();
+        $entity->user = $user;
+        $entity->result = $result;
+        $entity->test = $test;
+
+        return $entity;
+    }
+
     public function getUser(): ProviderUser
     {
         return $this->user;
