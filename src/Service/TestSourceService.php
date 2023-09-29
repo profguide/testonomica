@@ -2,11 +2,11 @@
 
 namespace App\Service;
 
-use App\Entity\Answer;
 use App\Entity\Question;
 use App\Entity\Test;
 use App\Exception\ProgressValidationException;
 use App\Repository\SourceRepositoryInterface;
+use App\Test\Progress\Progress;
 
 /**
  * @author: adavydov
@@ -63,14 +63,12 @@ class TestSourceService
 
     /***
      * @param Test $test
-     * @param Answer[] $answers
+     * @param Progress $progress
      */
-    public function validateRawAnswers(Test $test, array $answers): void
+    public function validateRawAnswers(Test $test, Progress $progress): void
     {
-        if ($this->getTotalCount($test) != count($answers)) {
+        if ($this->getTotalCount($test) != count($progress->answers)) {
             throw new ProgressValidationException('Not matching answers count.');
         }
-        // validate ids
-        // validate values?
     }
 }

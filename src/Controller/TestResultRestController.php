@@ -10,9 +10,9 @@ use App\Repository\TestRepository;
 use App\Service\CalculatorService;
 use App\Service\ResultService;
 use App\Service\TestSourceService;
-use App\Test\Progress\RawAnswersConverter;
 use App\Test\ResultRenderer;
 use App\Test\ViewFormat;
+use App\V2\Progress\RawAnswersToProgressConverter;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -63,18 +63,13 @@ class TestResultRestController extends AbstractRestController implements AccessT
 
         // old style legacy for widget v 2.0.4
         $json = json_decode($request->getContent(), true);
-        if (!empty($json['progress'])) {
-            $progress = $json['progress'];
-        } else {
-            // new way
-            $progress = (new RawAnswersConverter())->convert($request->get('progress'));
-        }
-        $answers = [];
-        foreach ($progress as $qId => $values) {
-            $answers[$qId] = self::createAnswer($qId, $values);
-        }
-        $this->questions->validateRawAnswers($test, $answers);
-        $result = $this->resultService->create($test, $answers);
+        $answers = !empty($json['progress']) ? $json['progress'] : $request->get('progress');
+
+        $rawAnswersToProgressConverter = new RawAnswersToProgressConverter();
+        $progress = $rawAnswersToProgressConverter->convert($answers);
+
+        $this->questions->validateRawAnswers($test, $progress);
+        $result = $this->resultService->create($test, $progress);
 
         return $this->json(['key' => $result->getUuid()]);
     }

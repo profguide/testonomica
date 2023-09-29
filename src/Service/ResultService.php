@@ -10,28 +10,19 @@ namespace App\Service;
 use App\Entity\Result;
 use App\Entity\Test;
 use App\Repository\ResultRepository;
-use App\Test\AnswersSerializer;
+use App\Test\Progress\Progress;
+use App\Test\Progress\ProgressSerializer;
 use Symfony\Component\HttpFoundation\RequestStack;
-use Symfony\Component\Uid\Uuid;
 
 class ResultService
 {
     private const SESSION_RESULT_NAME = 'results';
 
-    private ResultRepository $repository;
-
-    private RequestStack $requestStack;
-
-    private AnswersSerializer $serializer;
-
     public function __construct(
-        RequestStack      $requestStack,
-        ResultRepository  $repository,
-        AnswersSerializer $serializer)
+        private readonly RequestStack       $requestStack,
+        private readonly ResultRepository   $repository,
+        private readonly ProgressSerializer $progressSerializer)
     {
-        $this->repository = $repository;
-        $this->requestStack = $requestStack;
-        $this->serializer = $serializer;
     }
 
     public function save(Result $result): Result
@@ -71,9 +62,15 @@ class ResultService
         return null;
     }
 
-    public function create(Test $test, array $answers): Result
+    /**
+     * todo make Command
+     * @param Test $test
+     * @param Progress $progress
+     * @return Result
+     */
+    public function create(Test $test, Progress $progress): Result
     {
-        $result = Result::create($test, Uuid::v1()->toBase58(), $this->serializer->serialize($answers));
+        $result = Result::createAutoKey($test, $progress, $this->progressSerializer);
         return $this->save($result);
     }
 }

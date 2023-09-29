@@ -13,27 +13,23 @@ use App\Entity\Result;
 use App\Entity\Test;
 use App\Repository\TestRepositoryInterface;
 use App\Service\ResultService;
-use App\Test\AnswersSerializer;
+use App\Test\Progress\Progress;
+use App\Test\Progress\ProgressSerializer;
 use Exception;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class TestControllerTest extends WebTestCase
 {
-    /**@var TestRepositoryInterface */
-    private $testRepository;
+    private ?TestRepositoryInterface $testRepository;
 
-    /**@var ResultService */
-    private $resultService;
+    private ?ResultService $resultService;
 
-    /**@var AnswersSerializer */
-    private $serializer;
+    private ?ProgressSerializer $serializer;
 
-    /**@var KernelBrowser */
-    private $client;
+    private ?KernelBrowser $client;
 
-    /**@var Test */
-    private $test;
+    private ?Test $test;
 
     /**
      * @throws Exception
@@ -43,7 +39,7 @@ class TestControllerTest extends WebTestCase
         $this->client = static::createClient();
         $this->testRepository = static::getContainer()->get(TestRepositoryInterface::class);
         $this->resultService = static::getContainer()->get(ResultService::class);
-        $this->serializer = static::getContainer()->get(AnswersSerializer::class);
+        $this->serializer = static::getContainer()->get(ProgressSerializer::class);
         $this->test = $this->testRepository->findOneBySlug(TestFixture::TEST_1_SLUG);
     }
 
@@ -67,15 +63,11 @@ class TestControllerTest extends WebTestCase
 
     private function initResult(): Result
     {
-        $answer = new Answer("1", ["my-answer"]);
-        $serialized = $this->serializer->serialize([$answer]);
-        return Result::create(
-            $this->test,
-            '00000000-0000-0000-0000-000000000',
-            $serialized);
+        $progress = new Progress([new Answer("1", ["my-answer"])]);
+        return Result::createAutoKey($this->test, $progress, $this->serializer);
     }
 
-    private function requestView()
+    private function requestView(): void
     {
         $testSlug = $this->test->getSlug();
         $this->client->request('POST', "/tests/view/$testSlug/");

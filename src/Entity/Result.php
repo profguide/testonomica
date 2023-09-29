@@ -21,6 +21,7 @@ use Symfony\Component\Uid\Uuid;
 #[ORM\HasLifecycleCallbacks]
 class Result
 {
+    // todo change id to uuid (что делать со старыми?)
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
@@ -106,15 +107,6 @@ class Result
     public function setCreatedAtValue()
     {
         $this->createdAt = new \DateTime();
-    }
-
-    public static function create(Test $test, string $uuid, string $data): Result
-    {
-        $result = new self();
-        $result->setTest($test);
-        $result->setUuid($uuid);
-        $result->setData($data);
-        return $result;
     }
 
     /*

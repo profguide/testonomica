@@ -12,6 +12,7 @@ use Symfony\Component\Messenger\Attribute\AsMessageHandler;
 
 /**
  * @see SaveProgress
+ * todo test
  */
 #[AsMessageHandler]
 final readonly class SaveProgressHandler
@@ -26,9 +27,10 @@ final readonly class SaveProgressHandler
         $user = $command->user;
         $progress = $command->progress;
 
-        // to do change result:id to uuid and then use it
-
-        // todo validator
+        // todo Test Policy Validator
+        //  проверить разрешён ли пользовталелю доступ к тесту,
+        //  можно ли проходить два раза и тд - это всё регулируют политики тестов
+        //  в данный момент не используется потому что ни с кем нет договорённости на этот счёт (пока нет).
 
         $result = Result::createAutoKey($test, $progress, $this->progressSerializer);
         $this->entityManager->persist($result);
