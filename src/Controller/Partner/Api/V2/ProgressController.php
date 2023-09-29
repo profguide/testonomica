@@ -25,30 +25,29 @@ use Symfony\Component\Uid\Uuid;
 
 final class ProgressController extends AbstractRestController
 {
-    const PARAM_TEST = 'test';
-    const PARAM_USER = 'user_key';
-    const PARAM_PROGRESS = 'progress';
+    const REQUEST_PARAM_TEST = 'test';
+    const REQUEST_PARAM_USER = 'user_key';
+    const REQUEST_PARAM_PROGRESS = 'progress';
+    const RESPONSE_PARAM_RESULT_KEY = 'result_key';
 
     public function __construct(private readonly TestRepository $tests, private readonly ProviderUserRepository $users)
     {
     }
 
     /**
+     * todo test, замокать MessageBusInterface и проверить его аргумент. Интересует разбор параметров запроса.
      * todo POST тк отправка чего-либо - это POST
-     * Здесь происходит сохранение прогресса и выдача его ключа.
+     * Сохраняет прогресс и возвращает его ключ.
+     * Далее с этим ключом можно запросить результат.
      *
-     * Клиентский сайт передаёт: {USER_KEY}, slug теста, прогресс пользователя.
-     * 1. Просходит поиск Политики тестов.
-     * 2. Политика тестов проверяет возможность сохранить результат.
-     *    Если отказано, возвращаем код ошибки (создать код и сообщение).
-     *    Политика_Проверки использует в своей работе учётную таблицу
-     *    ManyToMany: USER_TOKEN & RESULT_KEY & TEST_ID для проверки.
-     * 3. Происходит сохранение прогресса.
-     * 4. Происходит запись в учётную таблицу ProviderUserResult: USER_KEY & RESULT_KEY & TEST_ID
+     * Результат:
+     * - сохранён прогресс
+     * - возвращён ключ прогресса
      *
-     * 5. Возвращается ключ сохранённого прогресса.
-     *
-     * Далее с этим ключом клиентский сайт может запрашивать результат многократно в любом формате
+     * Parameters:
+     * - @link self::REQUEST_PARAM_TEST - slug теста
+     * - @link self::REQUEST_PARAM_USER - ключ пользователя
+     * - @link self::REQUEST_PARAM_PROGRESS - список ответов
      */
     #[Route('/partner/api/v2/progress/save')]
     public function save(Request $request, MessageBusInterface $bus): Response
@@ -67,7 +66,7 @@ final class ProgressController extends AbstractRestController
             /**@var Result $result */
             $result = $handledStamp->getResult();
 
-            return $this->json(['result_key' => $result->getUuid()]);
+            return $this->json([self::RESPONSE_PARAM_RESULT_KEY => $result->getUuid()]);
         } catch (BadRequestException $e) {
             return $this->json(['error' => ['message' => $e->getMessage()]], 400);
         } catch (TestNotFoundException $e) {
@@ -90,15 +89,15 @@ final class ProgressController extends AbstractRestController
 
     private function getTestFromRequest(Request $request): Test
     {
-        $slug = $request->get(self::PARAM_TEST);
+        $slug = $request->get(self::REQUEST_PARAM_TEST);
 
         if (!$slug) {
-            throw new BadRequestException('The required "' . self::PARAM_TEST . '" parameter is missing.');
+            throw new BadRequestException('The required "' . self::REQUEST_PARAM_TEST . '" parameter is missing.');
         }
 
         $test = $this->tests->findOneBySlug($slug);
         if (!$test) {
-            throw new TestNotFoundException("Test not found with the provided value \"$slug\".");
+            throw new TestNotFoundException("Test not found with the provided \"" . self::REQUEST_PARAM_TEST . "\" value: \"$slug\".");
         }
 
         return $test;
@@ -106,14 +105,14 @@ final class ProgressController extends AbstractRestController
 
     private function getUserFromRequest(Request $request): ProviderUser
     {
-        $key = $request->get(self::PARAM_USER);
+        $key = $request->get(self::REQUEST_PARAM_USER);
 
         if (!$key) {
-            throw new BadRequestException('The required "' . self::PARAM_USER . '" parameter is missing.');
+            throw new BadRequestException('The required "' . self::REQUEST_PARAM_USER . '" parameter is missing.');
         }
 
         if (!Uuid::isValid($key)) {
-            throw new BadRequestException('Invalid "' . self::PARAM_USER . '", it should be correct uuid type.');
+            throw new BadRequestException('Invalid "' . self::REQUEST_PARAM_USER . '", it should be correct uuid type.');
         }
 
         $user = $this->users->find($key);
@@ -126,14 +125,14 @@ final class ProgressController extends AbstractRestController
 
     private function getAnswersFromRequest(Request $request): array
     {
-        $answers = $request->get(self::PARAM_PROGRESS);
+        $answers = $request->get(self::REQUEST_PARAM_PROGRESS);
 
         if (!$answers) {
-            throw new BadRequestException('The required "' . self::PARAM_PROGRESS . '" parameter is missing.');
+            throw new BadRequestException('The required "' . self::REQUEST_PARAM_PROGRESS . '" parameter is missing.');
         }
 
         if (!is_array($answers)) {
-            throw new BadRequestException('The "' . self::PARAM_PROGRESS . '" parameter must be in array format.');
+            throw new BadRequestException('The "' . self::REQUEST_PARAM_PROGRESS . '" parameter must be in array format.');
         }
 
         return $answers;

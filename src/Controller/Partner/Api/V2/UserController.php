@@ -20,14 +20,16 @@ use Symfony\Component\Routing\Annotation\Route;
 
 final class UserController extends AbstractRestController
 {
-    const PARAM_CLIENT = 'client';
-    const PARAM_USER = 'user_id';
+    const REQUEST_PARAM_CLIENT = 'client';
+    const REQUEST_PARAM_USER = 'user_id';
+    const RESPONSE_USER_KEY = 'user_key';
 
     public function __construct(private readonly ProviderRepository $providers)
     {
     }
 
     /**
+     * todo test, замокать MessageBusInterface и проверить его аргумент. Интересует разбор параметров запроса.
      * todo POST, тк создание позователя это пост, а не вопрос
      * Регистрирует пользователя провайдера и возвращает его идентификатор.
      * Повторно пользователь не создаётся.
@@ -38,8 +40,8 @@ final class UserController extends AbstractRestController
      * - возвращён ID пользователя (UUID)
      *
      * Parameters:
-     * - @link self::PARAM_CLIENT - постоянный токен провайдера
-     * - @link self::PARAM_USER - идентификатор пользователя в системе компании
+     * - @link self::REQUEST_PARAM_CLIENT - постоянный токен провайдера
+     * - @link self::REQUEST_PARAM_USER - идентификатор пользователя в системе компании
      */
     #[Route('/partner/api/v2/user/register')]
     public function register(Request $request, MessageBusInterface $bus): Response
@@ -53,7 +55,7 @@ final class UserController extends AbstractRestController
 
             /**@var ProviderUser $user */
             $user = $handledStamp->getResult();
-            return $this->json(['user_key' => $user->getId()]);
+            return $this->json([self::RESPONSE_USER_KEY => $user->getId()]);
         } catch (BadRequestException $e) {
             return $this->json(['error' => ['message' => $e->getMessage()]], 400);
         } catch (ProviderNotFoundException $e) {
@@ -67,10 +69,10 @@ final class UserController extends AbstractRestController
 
     private function getClientFromRequest(Request $request): Provider
     {
-        $token = $request->get(self::PARAM_CLIENT);
+        $token = $request->get(self::REQUEST_PARAM_CLIENT);
 
         if (!$token) {
-            throw new BadRequestException('The required "' . self::PARAM_CLIENT . '" parameter is missing.');
+            throw new BadRequestException('The required "' . self::REQUEST_PARAM_CLIENT . '" parameter is missing.');
         }
 
         $client = $this->providers->getByToken($token);
@@ -83,10 +85,10 @@ final class UserController extends AbstractRestController
 
     private function getUserIdFromRequest(Request $request): string
     {
-        $id = $request->get(self::PARAM_USER);
+        $id = $request->get(self::REQUEST_PARAM_USER);
 
         if (!$id) {
-            throw new BadRequestException('The required "' . self::PARAM_USER . '" parameter is missing.');
+            throw new BadRequestException('The required "' . self::REQUEST_PARAM_USER . '" parameter is missing.');
         }
 
         return $id;
