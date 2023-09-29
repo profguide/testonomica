@@ -12,9 +12,8 @@ use App\Exception\ProgressValidationException;
 use App\Exception\TestNotFoundException;
 use App\Repository\ProviderUserRepository;
 use App\Repository\TestRepository;
-use App\Test\Progress\Progress;
-use App\V2\Progress\Command\Build\BuildProgressFromRawData;
 use App\V2\Progress\Command\Save\SaveProgress;
+use App\V2\Progress\RawAnswersToProgressConverter;
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -59,11 +58,8 @@ final class ProgressController extends AbstractRestController
             $user = $this->getUserFromRequest($request);
             $answers = $this->getAnswersFromRequest($request);
 
-            // build Progress from raw data
-            $envelop = $bus->dispatch(new BuildProgressFromRawData($test, $answers));
-            $handledStamp = $envelop->last(HandledStamp::class);
-            /**@var Progress $progress */
-            $progress = $handledStamp->getResult();
+            $rawAnswersToProgressConverter = new RawAnswersToProgressConverter();
+            $progress = $rawAnswersToProgressConverter->convert($answers);
 
             // Save Progress
             $envelop = $bus->dispatch(new SaveProgress($test, $user, $progress));

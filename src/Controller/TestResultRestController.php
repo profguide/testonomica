@@ -10,7 +10,7 @@ use App\Repository\TestRepository;
 use App\Service\CalculatorService;
 use App\Service\ResultService;
 use App\Service\TestSourceService;
-use App\Test\Progress\ProgressConverter;
+use App\Test\Progress\RawAnswersConverter;
 use App\Test\ResultRenderer;
 use App\Test\ViewFormat;
 use Symfony\Component\HttpFoundation\Request;
@@ -67,7 +67,7 @@ class TestResultRestController extends AbstractRestController implements AccessT
             $progress = $json['progress'];
         } else {
             // new way
-            $progress = (new ProgressConverter())->convert($request->get('progress'));
+            $progress = (new RawAnswersConverter())->convert($request->get('progress'));
         }
         $answers = [];
         foreach ($progress as $qId => $values) {

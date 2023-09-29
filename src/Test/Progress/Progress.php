@@ -8,6 +8,9 @@ use App\Entity\Answer;
 
 final readonly class Progress
 {
+    /***
+     * @param Answer[] $answers
+     */
     public function __construct(public array $answers)
     {
         if (get_class(reset($answers)) !== Answer::class) {
