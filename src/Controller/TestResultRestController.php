@@ -61,7 +61,8 @@ class TestResultRestController extends AbstractRestController implements AccessT
     {
         $test = $this->getTest($testId);
 
-        // old style legacy for widget v 2.0.4
+        // не знаю что тут происходит. помню только, что old style legacy for widget v 2.0.4
+        // старый формат - это $request->get('progress')? или нет? а зачем?
         $json = json_decode($request->getContent(), true);
         $answers = !empty($json['progress']) ? $json['progress'] : $request->get('progress');
 
