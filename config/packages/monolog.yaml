@@ -47,8 +47,6 @@ when@prod:
         excluded_http_codes: [ 405 ]
         buffer_size: 50 # How many messages should be saved? Prevent memory leaks
         formatter: 'monolog.formatter.line'
-        formatter_options:
-          include_stacktraces: true
       nested:
         type: stream
         path: "%kernel.logs_dir%/%kernel.environment%.log"
