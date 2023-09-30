@@ -31,7 +31,7 @@ class ExceptionListener implements EventSubscriberInterface
             $event->setResponse(new JsonResponse([
                 'type' => 'https://tools.ietf.org/html/rfc2616#section-10',
                 'title' => 'An error occurred',
-                'status' => $event->getThrowable()->getStatusCode(),
+                'status' => $event->getThrowable()->getStatusCode() ?? 500,
                 'detail' => $event->getThrowable()->getMessage()
             ]));
         }
