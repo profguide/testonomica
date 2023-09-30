@@ -1,31 +1,30 @@
 <?php
-//
-//declare(strict_types=1);
-//
-//namespace App\Event;
-//
-//use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-//use Symfony\Component\HttpFoundation\JsonResponse;
-//use Symfony\Component\HttpKernel\Event\ExceptionEvent;
-//use Symfony\Component\HttpKernel\KernelEvents;
-//
-///**
-// * Transforms errors to JSON format for JSON requests.
-// * Если в коннтроллере указать формат (format="json"), то
-// * ошибка будет в json, но к сожалениею почему-то без подробностей.
-// * Здесь ошибка наделяется подробностями.
-// */
-//class ExceptionListener implements EventSubscriberInterface
-//{
-//    public static function getSubscribedEvents(): array
-//    {
-//        return [
-//            KernelEvents::EXCEPTION => 'onKernelException'
-//        ];
-//    }
-//
-//    public function onKernelException(ExceptionEvent $event)
-//    {
+
+declare(strict_types=1);
+
+namespace App\Event;
+
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpKernel\Event\ExceptionEvent;
+use Symfony\Component\HttpKernel\KernelEvents;
+
+/**
+ * Transforms errors to JSON format for JSON requests.
+ * Если в коннтроллере указать формат (format="json"), то
+ * ошибка будет в json, но к сожалениею почему-то без подробностей.
+ * Здесь ошибка наделяется подробностями.
+ */
+class ExceptionListener implements EventSubscriberInterface
+{
+    public static function getSubscribedEvents(): array
+    {
+        return [
+            KernelEvents::EXCEPTION => 'onKernelException'
+        ];
+    }
+
+    public function onKernelException(ExceptionEvent $event)
+    {
 //        $event->getRequest()->getAcceptableContentTypes();
 //        if ($event->getRequest()->getContentType() === 'json') {
 //            $event->setResponse(new JsonResponse([
@@ -35,5 +34,5 @@
 //                'detail' => $event->getThrowable()->getMessage()
 //            ]));
 //        }
-//    }
-//}
+    }
+}
