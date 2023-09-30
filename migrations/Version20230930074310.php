@@ -21,7 +21,6 @@ final class Version20230930074310 extends AbstractMigration
     {
         // this up() migration is auto-generated, please modify it to your needs
         $this->addSql('ALTER TABLE provider_user_result CHANGE result_id result_id INT NOT NULL');
-        $this->addSql('ALTER TABLE result ADD new_id BINARY(16) NOT NULL AFTER id');
         $this->addSql('ALTER TABLE test CHANGE moderator_comment moderator_comment LONGTEXT DEFAULT NULL');
     }
 
@@ -29,7 +28,6 @@ final class Version20230930074310 extends AbstractMigration
     {
         // this down() migration is auto-generated, please modify it to your needs
         $this->addSql('ALTER TABLE provider_user_result CHANGE result_id result_id INT DEFAULT NULL');
-        $this->addSql('ALTER TABLE result DROP new_id, CHANGE id id INT AUTO_INCREMENT NOT NULL');
         $this->addSql('ALTER TABLE test CHANGE moderator_comment moderator_comment TEXT DEFAULT NULL');
     }
 }
