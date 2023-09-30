@@ -25,6 +25,8 @@ class ExceptionListener implements EventSubscriberInterface
 
     public function onKernelException(ExceptionEvent $event)
     {
+        // Теперь ясно почему у меня логи всегда были в json, да ещё и без стектрейса!!!!!!
+        // сколько лет я мучился и как бы не настраивал монолог - всё было без толку...
 //        $event->getRequest()->getAcceptableContentTypes();
 //        if ($event->getRequest()->getContentType() === 'json') {
 //            $event->setResponse(new JsonResponse([

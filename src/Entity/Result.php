@@ -9,11 +9,15 @@ namespace App\Entity;
 use App\Test\Progress\Progress;
 use App\Test\Progress\ProgressSerializer;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Types\UuidType;
 use Symfony\Component\Uid\Uuid;
 
 /**
  * @author: adavydov
  * @since: 20.10.2020
+ *
+ * По хорошему эту структуру нужно назвать не Result, а Progress.
+ *
  */
 #[ORM\Table]
 #[ORM\Index(columns: ['uuid'])]
@@ -21,11 +25,25 @@ use Symfony\Component\Uid\Uuid;
 #[ORM\HasLifecycleCallbacks]
 class Result
 {
-    // todo change id to uuid (что делать со старыми?)
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
     private $id;
+
+    /**
+     * Начинаю замену id на uuid
+     * Алгоритм:
+     * 0 очистить provider_user_result
+     * 1 создаю неуникальное nullable поле newId
+     * 2 генерирую uuid для старых записей
+     * 3 удаляю старый id
+     * 4 provider_user_result установить id результата - bin(16)
+     * 5 настроить unique: true
+     */
+    #[ORM\Column(type: UuidType::NAME, unique: false, nullable: true)]
+    #[ORM\GeneratedValue(strategy: 'CUSTOM')]
+    #[ORM\CustomIdGenerator(class: 'doctrine.uuid_generator')]
+    private ?Uuid $newId;
 
     #[ORM\ManyToOne(targetEntity: 'Test')]
     #[ORM\JoinColumn(name: 'test_id')]
@@ -107,6 +125,16 @@ class Result
     public function setCreatedAtValue()
     {
         $this->createdAt = new \DateTime();
+    }
+
+    public function getNewId(): ?Uuid
+    {
+        return $this->newId;
+    }
+
+    public function setNewId(?Uuid $newId): void
+    {
+        $this->newId = $newId;
     }
 
     /*
