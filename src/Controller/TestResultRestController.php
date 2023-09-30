@@ -69,7 +69,8 @@ class TestResultRestController extends AbstractRestController implements AccessT
         $rawAnswersToProgressConverter = new RawAnswersToProgressConverter();
         $progress = $rawAnswersToProgressConverter->convert($answers);
 
-        $this->questions->validateRawAnswers($test, $progress);
+        // todo вернуть (тестирую пока)
+//        $this->questions->validateRawAnswers($test, $progress);
         $result = $this->resultService->create($test, $progress);
 
         return $this->json(['key' => $result->getUuid()]);

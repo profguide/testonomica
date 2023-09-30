@@ -9,7 +9,6 @@ namespace App\Entity;
 use App\Test\Progress\Progress;
 use App\Test\Progress\ProgressSerializer;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Bridge\Doctrine\IdGenerator\UuidGenerator;
 use Symfony\Bridge\Doctrine\Types\UuidType;
 use Symfony\Component\Uid\Uuid;
 
@@ -30,6 +29,9 @@ class Result
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
     private $id;
+
+    #[ORM\Column(type: UuidType::NAME)]
+    private ?Uuid $newId;
 
     #[ORM\ManyToOne(targetEntity: 'Test')]
     #[ORM\JoinColumn(name: 'test_id')]
@@ -55,6 +57,11 @@ class Result
     public function getId(): int
     {
         return $this->id;
+    }
+
+    public function getNewId(): Uuid
+    {
+        return $this->newId;
     }
 
     public function getTest(): Test
@@ -124,7 +131,8 @@ class Result
     {
         $result = new self();
         $result->setTest($test);
-        $result->setUuid(Uuid::v4()->toBase58());
+        $result->newId = Uuid::v4();
+        $result->setUuid($result->newId->toBase58());
         $result->setData($serializer->serialize($progress));
         $result->setHash($progress->hashSum());
         return $result;
