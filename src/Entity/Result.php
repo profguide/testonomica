@@ -31,21 +31,6 @@ class Result
     #[ORM\Column(type: 'integer')]
     private $id;
 
-    /**
-     * Начинаю замену id на uuid
-     * Алгоритм:
-     * 0 очистить provider_user_result
-     * 1 создаю неуникальное nullable поле newId
-     * 2 генерирую uuid для старых записей
-     * 3 удаляю старый id
-     * 4 provider_user_result установить id результата - bin(16)
-     * 5 настроить unique: true
-     */
-    #[ORM\Column(type: UuidType::NAME, unique: true)]
-    #[ORM\GeneratedValue(strategy: 'CUSTOM')]
-    #[ORM\CustomIdGenerator(class: 'doctrine.uuid_generator')]
-    private ?Uuid $newId;
-
     #[ORM\ManyToOne(targetEntity: 'Test')]
     #[ORM\JoinColumn(name: 'test_id')]
     private $test;
@@ -128,16 +113,6 @@ class Result
         $this->createdAt = new \DateTime();
     }
 
-    public function getNewId(): ?Uuid
-    {
-        return $this->newId;
-    }
-
-    public function setNewId(?Uuid $newId): void
-    {
-        $this->newId = $newId;
-    }
-
     /*
      * todo
      *  использовать ID с типом UUID вместо старого поля 'uuid', который и не uuid вовсе.
@@ -149,7 +124,6 @@ class Result
     {
         $result = new self();
         $result->setTest($test);
-        $result->setNewId(Uuid::v4());
         $result->setUuid(Uuid::v4()->toBase58());
         $result->setData($serializer->serialize($progress));
         $result->setHash($progress->hashSum());
