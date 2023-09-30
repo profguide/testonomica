@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Table]
 #[ORM\Entity(repositoryClass: 'App\Repository\ProviderUsersResultsRepository')]
 #[ORM\HasLifecycleCallbacks]
-final class ProviderUserResult
+class ProviderUserResult
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
