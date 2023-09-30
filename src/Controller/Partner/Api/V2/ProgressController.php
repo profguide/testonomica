@@ -35,7 +35,6 @@ final class ProgressController extends AbstractRestController
     }
 
     /**
-     * todo test, замокать MessageBusInterface и проверить его аргумент. Интересует разбор параметров запроса.
      * todo POST тк отправка чего-либо - это POST
      * Сохраняет прогресс и возвращает его ключ.
      * Далее с этим ключом можно запросить результат.
