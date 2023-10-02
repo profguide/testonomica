@@ -8,6 +8,8 @@ namespace App\Repository;
 
 
 use App\Entity\Result;
+use App\Test\Result\ResultKey;
+use App\Test\Result\ResultUuidKey;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;
@@ -29,10 +31,22 @@ class ResultRepository extends ServiceEntityRepository
         return $result;
     }
 
+    /**
+     * @param string $uuid
+     * @return Result|null
+     * @deprecated, use findByKey
+     */
     public function findByUuid(string $uuid): ?Result
     {
-        /**@var Result $result */
-        $result = $this->findOneBy(['uuid' => $uuid]);
-        return $result;
+        return $this->findOneBy(['uuid' => $uuid]);
+    }
+
+    public function findByKey(ResultKey $key): ?Result
+    {
+        if (get_class($key) === ResultUuidKey::class) {
+            return $this->find($key->getValue());
+        } else {
+            return $this->findOneBy(['uuid' => $key->getValue()]);
+        }
     }
 }
