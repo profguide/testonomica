@@ -29,10 +29,30 @@ class Result
     #[ORM\Column(type: 'integer')]
     private $id;
 
+    /*
+     * todo
+     *  использовать ID с типом UUID вместо старого поля 'uuid', который и не uuid вовсе.
+     *  и возвращать только ID всем и всегда. Пока при поиске результата валидировать UUID,
+     *  и если это не UUID, то искать по старому полю 'uuid'
+     *  Старое поле 'uuid' удалить через 3 года.
+     *
+     * План перехода:
+     * сделать new_id binary(16) nullable неуникальный (готово)
+     * заполнить поле для старых записей (готово)
+     * сделаь дамп таблицы
+     * удалить ячейчку id и сделать alter new_id уникальный, not nullable, сделать полю генерацию
+     */
     // introduced 30.09.2023
     // todo сделать автогенерацию и уникальность, когда старый id будет удалён
-    //  если сделать сейчас, то доктрина немного путается
-    #[ORM\Column(type: UuidType::NAME)]
+    //  если сделать сейчас первичным, то доктрина немного путается и пытается удалить auto_increment в id.
+    //  2.10.2023
+    //  я удалил id, сделал migration:diff и запустил миграцию.
+    //  Шаги были такие: удалить старый foreign key на provider_user_result.result_id, поменять тип provider_user_result.result_id
+    //  а затем добавить снова foreign key на provider_user_result.result_id
+    //  и здесь произошла ошибка General error: 1215 Cannot add foreign key constraint
+    //  при этом существуют другие места, где foreign binary(16) работает.
+    //  я не разобрался, плюнул и пошёл делать другие дела.
+    #[ORM\Column(type: UuidType::NAME, unique: true)]
     private ?Uuid $newId;
 
     #[ORM\ManyToOne(targetEntity: 'Test')]
@@ -122,19 +142,6 @@ class Result
         $this->createdAt = new \DateTime();
     }
 
-    /*
-     * todo
-     *  использовать ID с типом UUID вместо старого поля 'uuid', который и не uuid вовсе.
-     *  и возвращать только ID всем и всегда. Пока при поиске результата валидировать UUID,
-     *  и если это не UUID, то искать по старому полю 'uuid'
-     *  Старое поле 'uuid' удалить через 3 года.
-     *
-     * План перехода:
-     * сделать new_id binary(16) nullable неуникальный (готово)
-     * заполнить поле для старых записей (готово)
-     * сделаь дамп таблицы
-     * удалить ячейчку id и сделать alter new_id уникальный, not nullable, сделать полю генерацию
-     */
     public static function createAutoKey(Test $test, Progress $progress, ProgressSerializer $serializer): Result
     {
         $result = new self();
