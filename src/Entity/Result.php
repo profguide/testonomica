@@ -24,11 +24,6 @@ use Symfony\Component\Uid\Uuid;
 #[ORM\HasLifecycleCallbacks]
 class Result
 {
-//    #[ORM\Id]
-//    #[ORM\GeneratedValue]
-//    #[ORM\Column(type: 'integer')]
-//    private $id;
-
     /*
      * todo
      *  использовать ID с типом UUID вместо старого поля 'uuid', который и не uuid вовсе.
@@ -43,23 +38,19 @@ class Result
      * удалить ячейчку id и сделать alter new_id уникальный, not nullable, сделать полю генерацию
      */
     // introduced 30.09.2023
-    // todo сделать автогенерацию и уникальность, когда старый id будет удалён
-    //  если сделать сейчас первичным, то доктрина немного путается и пытается удалить auto_increment в id.
-    //  2.10.2023
-    //  я удалил id, сделал migration:diff и запустил миграцию.
-    //  Шаги были такие: удалить старый foreign key на provider_user_result.result_id, поменять тип provider_user_result.result_id
-    //  а затем добавить снова foreign key на provider_user_result.result_id
-    //  и здесь произошла ошибка General error: 1215 Cannot add foreign key constraint
-    //  при этом существуют другие места, где foreign binary(16) работает.
-    //  я не разобрался, плюнул и пошёл делать другие дела.
     #[ORM\Id]
     #[ORM\Column(type: UuidType::NAME, unique: true)]
+    #[ORM\GeneratedValue(strategy: 'CUSTOM')]
+    #[ORM\CustomIdGenerator(class: 'doctrine.uuid_generator')]
     private ?Uuid $newId;
 
     #[ORM\ManyToOne(targetEntity: 'Test')]
     #[ORM\JoinColumn(name: 'test_id')]
     private $test;
 
+    /**
+     * @deprecated, use primary key
+     */
     #[ORM\Column(type: 'string', length: 36)]
     private $uuid;
 
@@ -97,6 +88,9 @@ class Result
         $this->test = $test;
     }
 
+    /**
+     * @deprecated, use getId (getNewId)
+     */
     public function getUuid(): string
     {
         return $this->uuid;
@@ -147,8 +141,7 @@ class Result
     {
         $result = new self();
         $result->setTest($test);
-        $result->newId = Uuid::v4();
-        $result->setUuid($result->newId->toBase58());
+        $result->setUuid(Uuid::v4()->toBase58());
         $result->setData($serializer->serialize($progress));
         $result->setHash($progress->hashSum());
         return $result;
