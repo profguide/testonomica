@@ -17,7 +17,6 @@ use Symfony\Component\Uid\Uuid;
  * @since: 20.10.2020
  *
  * По хорошему эту структуру нужно назвать не Result, а Progress.
- *
  */
 #[ORM\Table]
 #[ORM\Index(columns: ['uuid'])]
@@ -30,6 +29,9 @@ class Result
     #[ORM\Column(type: 'integer')]
     private $id;
 
+    // introduced 30.09.2023
+    // todo сделать автогенерацию и уникальность, когда старый id будет удалён
+    //  если сделать сейчас, то доктрина немного путается
     #[ORM\Column(type: UuidType::NAME)]
     private ?Uuid $newId;
 
@@ -126,6 +128,12 @@ class Result
      *  и возвращать только ID всем и всегда. Пока при поиске результата валидировать UUID,
      *  и если это не UUID, то искать по старому полю 'uuid'
      *  Старое поле 'uuid' удалить через 3 года.
+     *
+     * План перехода:
+     * сделать new_id binary(16) nullable неуникальный (готово)
+     * заполнить поле для старых записей (готово)
+     * сделаь дамп таблицы
+     * удалить ячейчку id и сделать alter new_id уникальный, not nullable, сделать полю генерацию
      */
     public static function createAutoKey(Test $test, Progress $progress, ProgressSerializer $serializer): Result
     {
