@@ -12,6 +12,7 @@ use App\Exception\ProgressValidationException;
 use App\Exception\TestNotFoundException;
 use App\Repository\ProviderUserRepository;
 use App\Repository\TestRepository;
+use App\Tests\Controller\Partner\Api\V2\ProgressControllerTest;
 use App\V2\Progress\Command\Save\SaveProgress;
 use App\V2\Progress\RawAnswersToProgressConverter;
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
@@ -23,6 +24,9 @@ use Symfony\Component\Messenger\Stamp\HandledStamp;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Uid\Uuid;
 
+/**
+ * @see ProgressControllerTest
+ */
 final class ProgressController extends AbstractRestController
 {
     const REQUEST_PARAM_TEST = 'test';
@@ -65,7 +69,7 @@ final class ProgressController extends AbstractRestController
             /**@var Result $result */
             $result = $handledStamp->getResult();
 
-            return $this->json([self::RESPONSE_PARAM_RESULT_KEY => $result->getUuid()]);
+            return $this->json([self::RESPONSE_PARAM_RESULT_KEY => $result->getNewId()]);
         } catch (BadRequestException $e) {
             return $this->json(['error' => ['message' => $e->getMessage()]], 400);
         } catch (TestNotFoundException $e) {

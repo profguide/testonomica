@@ -19,11 +19,11 @@ final class Version20230930095059 extends AbstractMigration
 
     public function up(Schema $schema): void
     {
-        $this->addSql('ALTER TABLE provider_user_result ADD CONSTRAINT FK_B3A757DC7A7B643 FOREIGN KEY (result_id) REFERENCES result (id)');
+//        $this->addSql('ALTER TABLE provider_user_result ADD CONSTRAINT FK_B3A757DC7A7B643 FOREIGN KEY (result_id) REFERENCES result (id)');
     }
 
     public function down(Schema $schema): void
     {
-        $this->addSql('ALTER TABLE provider_user_result DROP FOREIGN KEY FK_B3A757DC7A7B643');
+//        $this->addSql('ALTER TABLE provider_user_result DROP FOREIGN KEY FK_B3A757DC7A7B643');
     }
 }

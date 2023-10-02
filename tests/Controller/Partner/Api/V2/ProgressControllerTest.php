@@ -14,6 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\Messenger\Stamp\HandledStamp;
+use Symfony\Component\Uid\Uuid;
 
 final class ProgressControllerTest extends WebTestCase
 {
@@ -27,8 +28,7 @@ final class ProgressControllerTest extends WebTestCase
     {
         // Arrange
         $expectedResult = new Result();
-        $expectedResult->setUuid('result-code');
-//        $expectedResult->setId(new Uuid('018ad6f5-7164-7568-8a00-a95cfc8958c9'));
+        $expectedResult->setNewId(new Uuid('018ad6f5-7164-7568-8a00-a95cfc8958c9'));
 
         $testRepository = $this->createMock(TestRepository::class);
         $testRepository
@@ -65,6 +65,6 @@ final class ProgressControllerTest extends WebTestCase
         // Assert
         $this->assertResponseIsSuccessful();
         self::assertEquals(200, $client->getResponse()->getStatusCode());
-        self::assertEquals('{"result_key":"result-code"}', $client->getResponse()->getContent());
+        self::assertEquals('{"result_key":"018ad6f5-7164-7568-8a00-a95cfc8958c9"}', $client->getResponse()->getContent());
     }
 }

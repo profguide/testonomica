@@ -30,14 +30,8 @@ class Result
      *  и возвращать только ID всем и всегда. Пока при поиске результата валидировать UUID,
      *  и если это не UUID, то искать по старому полю 'uuid'
      *  Старое поле 'uuid' удалить через 3 года.
-     *
-     * План перехода:
-     * сделать new_id binary(16) nullable неуникальный (готово)
-     * заполнить поле для старых записей (готово)
-     * сделаь дамп таблицы
-     * удалить ячейчку id и сделать alter new_id уникальный, not nullable, сделать полю генерацию
      */
-    // introduced 30.09.2023
+    // introduced 02.10.2023
     #[ORM\Id]
     #[ORM\Column(type: UuidType::NAME, unique: true)]
     #[ORM\GeneratedValue(strategy: 'CUSTOM')]
@@ -68,14 +62,15 @@ class Result
     #[ORM\Column(type: 'datetime', name: 'created_at')]
     private $createdAt;
 
-    public function getId(): int
-    {
-        return $this->id;
-    }
-
     public function getNewId(): Uuid
     {
         return $this->newId;
+    }
+
+
+    public function setNewId(Uuid $uuid): void
+    {
+        $this->newId = $uuid;
     }
 
     public function getTest(): Test
