@@ -21,7 +21,7 @@ class ProviderUserResult
     private ?ProviderUser $user = null;
 
     #[ORM\ManyToOne(targetEntity: 'Result')]
-    #[ORM\JoinColumn(name: 'result_id', nullable: false)]
+    #[ORM\JoinColumn(name: 'result_id', referencedColumnName: 'new_id', nullable: false)]
     private ?Result $result = null;
 
     #[ORM\ManyToOne(targetEntity: 'Test')]

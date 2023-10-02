@@ -24,10 +24,10 @@ use Symfony\Component\Uid\Uuid;
 #[ORM\HasLifecycleCallbacks]
 class Result
 {
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
-    private $id;
+//    #[ORM\Id]
+//    #[ORM\GeneratedValue]
+//    #[ORM\Column(type: 'integer')]
+//    private $id;
 
     /*
      * todo
@@ -52,6 +52,7 @@ class Result
     //  и здесь произошла ошибка General error: 1215 Cannot add foreign key constraint
     //  при этом существуют другие места, где foreign binary(16) работает.
     //  я не разобрался, плюнул и пошёл делать другие дела.
+    #[ORM\Id]
     #[ORM\Column(type: UuidType::NAME, unique: true)]
     private ?Uuid $newId;
 
