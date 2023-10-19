@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/tests/api/v1", format="json")
  */
-class TestProgressRestController extends AbstractTestRestController implements AccessTokenAuthenticatedController
+class TestProgressRestController extends AbstractTestRestController
 {
     /**
      * @Route("/first/{testId<\d+>}/")
