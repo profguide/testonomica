@@ -24,4 +24,9 @@ class ViewFormat
     {
         return $this->value;
     }
+
+    public function is(string $value): bool
+    {
+        return $this->value === $value;
+    }
 }
