@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class TestInfoRestController extends AbstractTestRestController
 {
     /**
-     * @Route("/info/{testId<\d+>}/")
+     * @Route("/info/{testId<[\w-]+>}/")
      * @param string $testId
      * @param Request $request
      * @return Response
