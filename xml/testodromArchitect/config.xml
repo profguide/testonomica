@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <!-- Минимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40">
+                <label>
+                    <ru>Это вы</ru>
+                    <en>This is you</en>
+                </label>
+                <levels>
+                    <level up="100" color="danger"/>
+                </levels>
+            </scale>
+            <conditions>
+                <condition var="SUM" operator="меньше_или_равно" value="10"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>Похоже, профессия архитектора – не ваша стезя. Архитектура – не то, что вас поглощает и
+                        увлекает.
+                    </p>
+                    <p>У вас есть отдельные полезные архитектору способности и умения, но дело в том, что нужен целый
+                        букет, набор таких качеств.
+                    </p>
+                    <p>Если у вас есть цель стать архитектором, возможно, эта цель – ложная. Или вы просто примеряете на
+                        себя эту профессию?
+                    </p>
+                    <p>Вероятно, вам стоит присмотреться к другим профессиям, где ваши способности раскроются наиболее
+                        полно. Рекомендуем обратиться за консультацией к специалисту-психологу из центра профориентации.
+                    </p>
+                </ru>
+                <en>
+                    <p>It seems like the profession of an architect is not your path. Architecture is not something that
+                        engrosses and captivates you.
+                    </p>
+                    <p>You do have certain useful abilities and skills for an architect, but the thing is, a whole
+                        bouquet, a set of such qualities is needed.
+                    </p>
+                    <p>If your goal is to become an architect, perhaps this goal is not the right one. Or are you simply
+                        trying on this profession for size?
+                    </p>
+                    <p>It's likely that you should consider other professions where your abilities can fully flourish.
+                        We recommend seeking advice from a psychologist at the career guidance center.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Средний уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40">
+                <label>
+                    <ru>Это вы</ru>
+                    <en>This is you</en>
+                </label>
+                <levels>
+                    <level up="100" color="warning"/>
+                </levels>
+            </scale>
+            <conditions>
+                <condition var="SUM" operator="больше" value="10"/>
+                <condition var="SUM" operator="меньше_или_равно" value="30"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>У вас средние результаты. Взгляните на шкалу – ваш балл выше или ниже среднего? Если вы набрали
+                        больше 20 баллов, ваши шансы стать профессиональным архитектором неплохие, хотя не самые
+                        высокие. Если вы набрали меньше 20 баллов (особенно ближе к 10 баллам), ваши шансы ощутимо ниже.
+                    </p>
+                    <p>Вопрос в том, действительно ли вы хотите стать архитектором или пока лишь рассматриваете разные
+                        варианты. Второй вопрос – у вас хорошие специальные способности, есть «архитектурное мышление»?
+                    </p>
+                    <p>Если у вас есть твердое желание посвятить себя архитектуре, постарайтесь серьезно к этому
+                        готовиться. Больше читайте, узнавайте об искусстве архитектуры, о великих именах и достижениях,
+                        пытайтесь представить себя внутри этой сферы жизни.
+                    </p>
+                    <p>Развивайте свои творческие способности, «набивайте руку», быть может, запишитесь в
+                        кружок/сообщество архитекторов, ходите на специальные занятия и лекции.
+                    </p>
+                    <p>Осваивайте архитектуру, которая вокруг вас, «под рукой», вглядывайтесь в нее, анализируйте разные
+                        стили. Если вы будете развивать свои творческие задатки, будете трудолюбивы, упорны и
+                        настойчивы, то сможете преодолеть все трудности.
+                    </p>
+                    <p>Если вы сомневаетесь в своем выборе, рекомендуем обратиться за советом в центр профориентации.
+                    </p>
+                </ru>
+                <en>
+                    <p>You have average results. Look at the scale – is your score above or below average? If you've
+                        scored more than 20 points, your chances of becoming a professional architect are decent, though
+                        not the highest. If you've scored less than 20 points (especially closer to 10 points), your
+                        chances are significantly lower.
+                    </p>
+                    <p>The question is, do you really want to become an architect, or are you just considering different
+                        options for now? The second question is, do you have good special abilities, do you have
+                        "architectural thinking"?
+                    </p>
+                    <p>If you have a strong desire to dedicate yourself to architecture, make a serious effort to
+                        prepare for it. Read more, learn about the art of architecture, about great names and
+                        achievements, try to imagine yourself within this sphere of life.
+                    </p>
+                    <p>Develop your creative abilities, "hone your skills," perhaps join a circle/community of
+                        architects, attend special classes and lectures.
+                    </p>
+                    <p>Master the architecture that's around you, "at your fingertips," observe it, analyze different
+                        styles. If you nurture your creative talents, are diligent, persevering, and persistent, you can
+                        overcome all difficulties.
+                    </p>
+                    <p>If you're unsure about your choice, we recommend seeking advice from a career guidance center.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+
+        <!-- Максимальный уровень -->
+        <scenario>
+            <scale percentVar="SCALE" showVar="SUM" showMaxVal="40">
+                <label>
+                    <ru>Это вы</ru>
+                    <en>This is you</en>
+                </label>
+                <levels>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <conditions>
+                <condition var="SUM" operator="больше" value="30"/>
+            </conditions>
+            <text>
+                <ru>
+                    <p>У вас высокие результаты. Вы имеете хорошие шансы стать профессиональным архитектором, поскольку
+                        обладаете спектром необходимых качеств.
+                    </p>
+                    <p>У вас есть знания об искусстве архитектуры, есть специальные способности и навыки, например
+                        способность видеть пространство как архитектурное единство и тонко воспринимать особенности
+                        разных архитектурных стилей, способность самому творить новое.
+                    </p>
+                    <p>Помимо специальных, у вас есть и другие необходимые свойства и умения. Вы способны налаживать
+                        эффективную коммуникацию с людьми, грамотно планировать свои действия и добиваться своих целей.
+                    </p>
+                    <p>Если вы уверены, что хотите стать архитектором, все в ваших руках. Желаем успеха.</p>
+                </ru>
+                <en>
+                    <p>You have high results. You have good chances of becoming a professional architect because you
+                        possess a range of necessary qualities.
+                    </p>
+                    <p>You have knowledge of the art of architecture, special abilities, and skills, such as the ability
+                        to see space as an architectural whole and to finely perceive the characteristics of different
+                        architectural styles. You also have the ability to create something new.
+                    </p>
+                    <p>In addition to these special qualities, you possess other necessary attributes and skills. You
+                        can establish effective communication with people, plan your actions wisely, and achieve your
+                        goals.
+                    </p>
+                    <p>If you are confident that you want to become an architect, everything is in your hands. We wish
+                        you success.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>

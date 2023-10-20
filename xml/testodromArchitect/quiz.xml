@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>
+                <ru>Вы хорошо рисуете?</ru>
+                <en>Can you draw well?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, неплохо</ru>
+                    <en>Yes, not bad</en>
+                </option>
+                <option value="1">
+                    <ru>Не очень хорошо</ru>
+                    <en>Not very well</en>
+                </option>
+                <option value="0">
+                    <ru>Не умею рисовать</ru>
+                    <en>I can't draw</en>
+                </option>
+            </options>
+        </item>
+        <item id="2">
+            <name>
+                <ru>У вас хорошее чувство цвета?</ru>
+                <en>Do you have a good sense of color?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Не знаю</ru>
+                    <en>I don't know</en>
+                </option>
+            </options>
+        </item>
+        <item id="3">
+            <name>
+                <ru>У вас спрашивают совета, как лучше расположить мебель и разные предметы в квартире, комнате?</ru>
+                <en>Do people ask you for advice on how to arrange furniture and various items in the apartment or
+                    room?
+                </en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, то и дело</ru>
+                    <en>Yes, from time to time</en>
+                </option>
+                <option value="1">
+                    <ru>Изредка</ru>
+                    <en>Occasionally</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>
+                <ru>Кто построил Успенский собор в московском Кремле?</ru>
+                <en>Who built the Assumption Cathedral in the Moscow Kremlin?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Аристотель Фиораванти</ru>
+                    <en>Aristotle Fioravanti</en>
+                </option>
+                <option value="0">
+                    <ru>Барма и Постник</ru>
+                    <en>Barma and Postnik</en>
+                </option>
+                <option value="0">
+                    <ru>Василий Блаженный</ru>
+                    <en>Vasily the Blessed</en>
+                </option>
+            </options>
+        </item>
+        <item id="5">
+            <name>
+                <ru>Что такое кульман?</ru>
+                <en>What is a kuhlmann?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Чертежная доска</ru>
+                    <en>Drawing board</en>
+                </option>
+                <option value="0">
+                    <ru>Круглая логарифмическая линейка</ru>
+                    <en>Round logarithmic ruler</en>
+                </option>
+                <option value="0">
+                    <ru>Старинный циркуль</ru>
+                    <en>Antique compass</en>
+                </option>
+            </options>
+        </item>
+        <item id="6">
+            <name>
+                <ru>Есть ли в России здания, построенные по проекту Ле Корбюзье?</ru>
+                <en>Are there buildings in Russia designed by Le Corbusier?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, одно, в Москве</ru>
+                    <en>Yes, one, in Moscow</en>
+                </option>
+                <option value="0">
+                    <ru>Да, одно, в Санкт-Петербурге</ru>
+                    <en>Yes, one, in St. Petersburg</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>
+                <ru>Вы хорошо ориентируетесь в пространстве?</ru>
+                <en>Are you good at spatial orientation?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Средне</ru>
+                    <en>Moderately</en>
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>
+                <ru>Вам интересны книги, фильмы, сайты, посвященные истории искусств?</ru>
+                <en>Are you interested in books, movies, and websites dedicated to the history of art?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Не очень</ru>
+                    <en>Not very much</en>
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>
+                <ru>У вас есть любимый архитектурный стиль?</ru>
+                <en>Do you have a favorite architectural style?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="0">
+                    <ru>Не разбираюсь в разных стилях</ru>
+                    <en>I'm not familiar with different styles</en>
+                </option>
+            </options>
+        </item>
+        <item id="10">
+            <name>
+                <ru>Почему в жарких странах дома часто имеют белый цвет?</ru>
+                <en>Why do houses in hot countries often have a white color?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Такие дома меньше нагреваются на солнце</ru>
+                    <en>Such houses heat up less in the sun</en>
+                </option>
+                <option value="0">
+                    <ru>Белый красиво сочетается с южной зеленью</ru>
+                    <en>White complements the southern greenery beautifully</en>
+                </option>
+                <option value="0">
+                    <ru>Это случайно возникшая традиция</ru>
+                    <en>It's a tradition that originated by chance</en>
+                </option>
+            </options>
+        </item>
+        <item id="11">
+            <name>
+                <ru>Вы замечаете диспропорции в строении зданий?</ru>
+                <en>Do you notice disproportions in the structure of buildings?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, это происходит само собой</ru>
+                    <en>Yes, it happens naturally</en>
+                </option>
+                <option value="0">
+                    <ru>Не обращаю на это внимание</ru>
+                    <en>I don't pay attention to it</en>
+                </option>
+                <option value="1">
+                    <ru>Не знаю</ru>
+                    <en>I don't know</en>
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>
+                <ru>Вам легко давалась в школе геометрия?</ru>
+                <en>Did you find geometry easy in school?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, без проблем</ru>
+                    <en>Yes, without any problems</en>
+                </option>
+                <option value="1">
+                    <ru>С трудом, но оценки у меня хорошие</ru>
+                    <en>With difficulty, but I had good grades</en>
+                </option>
+                <option value="0">
+                    <ru>Еле-еле удавалось справляться</ru>
+                    <en>I could barely manage</en>
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>
+                <ru>Вы бы хотели прославиться?</ru>
+                <en>Would you like to become famous?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, пожалуй</ru>
+                    <en>Yes, perhaps</en>
+                </option>
+                <option value="0">
+                    <ru>Мне это безразлично</ru>
+                    <en>I don't care about it</en>
+                </option>
+                <option value="1">
+                    <ru>Не знаю</ru>
+                    <en>I don't know</en>
+                </option>
+            </options>
+        </item>
+        <item id="14">
+            <name>
+                <ru>Вы умеете чертить вручную, хотя бы что-то несложное?</ru>
+                <en>Can you draw by hand, even something simple?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="1">
+                    <ru>Нет, но хочу научиться</ru>
+                    <en>No, but I want to learn</en>
+                </option>
+                <option value="0">
+                    <ru>Не умею – нет нужды, когда есть компьютеры</ru>
+                    <en>I don't know how - no need when there are computers</en>
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>
+                <ru>Вы можете ради достижения общих целей отказаться от собственных идей, которые считаете
+                    правильными?
+                </ru>
+                <en>Can you give up your own ideas that you consider right for the sake of achieving common goals?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, без проблем</ru>
+                    <en>Yes, no problem</en>
+                </option>
+                <option value="1">
+                    <ru>Да, но мне это трудно</ru>
+                    <en>Yes, but it's hard for me</en>
+                </option>
+                <option value="0">
+                    <ru>Ни за что</ru>
+                    <en>Never</en>
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>
+                <ru>Вы готовы много времени посвятить изучению свойств разных материалов?</ru>
+                <en>Are you ready to dedicate a lot of time to studying the properties of various materials?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, конечно</ru>
+                    <en>Yes, of course</en>
+                </option>
+                <option value="1">
+                    <ru>Да, раз уж без этого не обойтись</ru>
+                    <en>Yes, since it's necessary</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>
+                <ru>Вы могли бы найти общий язык со своенравной строительной бригадой?</ru>
+                <en>Could you find common ground with an independent-minded construction crew?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Думаю, да</ru>
+                    <en>I think so</en>
+                </option>
+                <option value="1">
+                    <ru>Вряд ли</ru>
+                    <en>Unlikely</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, это не мое</ru>
+                    <en>No, it's not my thing</en>
+                </option>
+            </options>
+        </item>
+        <item id="18">
+            <name>
+                <ru>Вы любили в детстве лепить из пластилина?</ru>
+                <en>Did you enjoy sculpting with clay in your childhood?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Не помню</ru>
+                    <en>I don't remember</en>
+                </option>
+            </options>
+        </item>
+        <item id="19">
+            <name>
+                <ru>У вас возникает желание переделать тесные, некрасивые, неудобные для людей пространства?</ru>
+                <en>Do you feel the desire to redesign cramped, unattractive, and uncomfortable spaces for people?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, регулярно</ru>
+                    <en>Yes, regularly</en>
+                </option>
+                <option value="0">
+                    <ru>Нет, это не мое дело</ru>
+                    <en>No, it's not my thing</en>
+                </option>
+                <option value="0">
+                    <ru>Не обращаю на это внимания</ru>
+                    <en>I don't pay attention to it</en>
+                </option>
+            </options>
+        </item>
+        <item id="20">
+            <name>
+                <ru>Вам хотелось бы участвовать в планировании совершенно нового города на пустом месте?</ru>
+                <en>Would you like to participate in planning an entirely new city from scratch?</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Да, очень</ru>
+                    <en>Yes, very much</en>
+                </option>
+                <option value="1">
+                    <ru>Пожалуй, нет</ru>
+                    <en>Perhaps not</en>
+                </option>
+                <option value="0">
+                    <ru>Не интересуюсь градостроительством</ru>
+                    <en>I'm not interested in urban planning</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
+
+
