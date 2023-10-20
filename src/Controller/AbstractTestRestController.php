@@ -20,9 +20,13 @@ abstract class AbstractTestRestController extends AbstractRestController
         $this->questions = $questions;
     }
 
-    protected function getTest(int $id): Test
+    protected function getTest(string|int $id): Test
     {
-        $test = $this->tests->findOneById($id);
+        if (is_numeric($id)) {
+            $test = $this->tests->findOneById((int) $id);
+        } else {
+            $test = $this->tests->findOneBySlug($id);
+        }
         if (!$test) {
             throw self::createNotFoundException();
         }

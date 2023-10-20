@@ -15,11 +15,11 @@ class TestInfoRestController extends AbstractTestRestController
 {
     /**
      * @Route("/info/{testId<\d+>}/")
-     * @param int $testId
+     * @param string $testId
      * @param Request $request
      * @return Response
      */
-    public function info(int $testId, Request $request): Response
+    public function info(string $testId, Request $request): Response
     {
         $locale = $request->getLocale();
         $test = $this->getTest($testId);
