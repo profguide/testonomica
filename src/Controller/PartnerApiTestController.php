@@ -81,16 +81,28 @@ class PartnerApiTestController extends AbstractRestController
      */
     public function calculate(string $id, Request $request, CalculatorService $calculatorService): Response
     {
+        $format = new ViewFormat($request->get('format', ViewFormat::JSON));
+
         $result = new Result();
         $result->setData($request->get('progress'));
-        $result->setTest($this->getTest((int)$id));
+        $result->setTest($this->getTest($id));
 
-        return $this->json($calculatorService->calculate($result));
+        $data = $calculatorService->calculate($result);
+
+        if ($format->is(ViewFormat::JSON)) {
+            return $this->json($data);
+        } else {
+            return $this->renderer->render($result->getTest(), $data, $format);
+        }
     }
 
-    protected function getTest(int $id): Test
+    protected function getTest(int|string $id): Test
     {
-        $test = $this->tests->findOneById($id);
+        if (is_numeric($id)) {
+            $test = $this->tests->findOneById((int) $id);
+        } else {
+            $test = $this->tests->findOneBySlug($id);
+        }
         if (!$test) {
             throw self::createNotFoundException();
         }
