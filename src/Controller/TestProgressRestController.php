@@ -16,23 +16,23 @@ use Symfony\Component\Routing\Annotation\Route;
 class TestProgressRestController extends AbstractTestRestController
 {
     /**
-     * @Route("/first/{testId<\d+>}/")
-     * @param int $testId
+     * @Route("/first/{testId<[\w-]+>}/")
+     * @param string $testId
      * @return Response
      */
-    public function first(int $testId): Response
+    public function first(string $testId): Response
     {
         $test = $this->getTest($testId);
         return $this->json($this->questionResponseData($test, $this->questions->getFirstQuestion($test)));
     }
 
     /**
-     * @Route("/next/{testId<\d+>}/")
-     * @param int $testId
+     * @Route("/next/{testId<[\w-]+>}/")
+     * @param string $testId
      * @param Request $request
      * @return Response
      */
-    public function next(int $testId, Request $request): Response
+    public function next(string $testId, Request $request): Response
     {
         $test = $this->getTest($testId);
         $questionId = $this->getRequestParameter($request, 'q');
@@ -45,12 +45,12 @@ class TestProgressRestController extends AbstractTestRestController
     }
 
     /**
-     * @Route("/prev/{testId<\d+>}/")
-     * @param int $testId
+     * @Route("/prev/{testId<[\w-]+>}/")
+     * @param string $testId
      * @param Request $request
      * @return Response
      */
-    public function prev(int $testId, Request $request): Response
+    public function prev(string $testId, Request $request): Response
     {
         $test = $this->getTest($testId);
         $questionId = $this->getRequestParameter($request, 'q');
