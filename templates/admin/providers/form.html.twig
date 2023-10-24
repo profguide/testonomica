@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% if form.vars.value.id %}
+            {% include "_components/browse_button.html.twig" with {
+                'pathName': 'tests.view',
+            } %}
+        {% endif %}
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ path('admin') }}">Панель управления</a></li>
+                <li class="breadcrumb-item"><a href="{{ path('admin.providers') }}">Компании</a></li>
+                <li class="breadcrumb-item active">{{ title }}</li>
+            </ol>
+        </nav>
+
+        <h1 class="mb-4">{{ title }}</h1>
+
+        {{ form_errors(form) }}
+
+        {{ form_start(form) }}
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

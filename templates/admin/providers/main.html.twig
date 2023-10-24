@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Компании{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ path('admin') }}">Панель управления</a></li>
+                <li class="breadcrumb-item active">Компании</li>
+            </ol>
+        </nav>
+
+        <h1>Компании</h1>
+
+        <div class="mb-4">
+            <a href="{{ path('admin.providers.create') }}" class="btn btn-sm btn-primary">Добавить компанию</a>
+        </div>
+
+        <div>
+            Всего: {{ pagination.getTotalItemCount }}
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>{{ knp_pagination_sortable(pagination, 'Id', 'a.id') }}</th>
+                <th{% if pagination.isSorted('a.name') %} class="sorted"{% endif %}>
+                    {{ knp_pagination_sortable(pagination, 'Название', 'a.name') }}
+                </th>
+                <th>CLIENT_KEY</th>
+                <th>Политика оплаты</th>
+                <th>Статистика пользователей</th>
+                <th>Действие</th>
+            </tr>
+            </thead>
+            {% for provider in pagination %}
+                <tr>
+                    <td>{{ provider.id }}</td>
+                    <td>{{ provider.name }}</td>
+                    <td>{{ provider.token }}</td>
+                    <td>{{ provider.paymentPolicy.rus }}</td>
+                    <td>{{ provider.accessCount }} из {{ provider.accessLimit }}</td>
+                    <td>{% include "_components/grid_action.html.twig" with {
+                            'edit': path('admin.providers.edit', {id: provider.id})
+                        } %}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    </div>
+{% endblock %}

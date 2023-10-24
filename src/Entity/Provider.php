@@ -51,7 +51,7 @@ class Provider
     private int $accessCount = 0;
 
     /**
-     * Лимит доступов
+     * Лимит доступов (пользователей)
      */
     #[ORM\Column(type: 'integer', nullable: false)]
     private int $accessLimit = 0;
@@ -79,7 +79,7 @@ class Provider
         return $provider;
     }
 
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }

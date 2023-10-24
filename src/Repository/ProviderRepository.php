@@ -21,6 +21,11 @@ class ProviderRepository extends ServiceEntityRepository
         parent::__construct($registry, Provider::class);
     }
 
+    public function findOneById(int $id): ?Provider
+    {
+        return $this->findOneBy(['id' => $id]);
+    }
+
     public function findBySlug(string $slug): ?Provider
     {
         /**@var Provider $provider */
