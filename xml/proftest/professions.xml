@@ -114,20 +114,30 @@ l * 100
         <name>
             <ru>Архитектор</ru>
             <en>Architect</en>
+            <hy>ճարտարապետ</hy>
+            <az>Mimar</az>
+            <kk>Архитектор</kk>
+            <mn>Зодчин</mn>
+            <fr>Architecte</fr>
         </name>
         <combs>
             <!--            <comb comb="art,tech"/>-->
-            <comb comb="math:50,art:50"/>
+            <comb comb="math:50,art:50" />
             <!--            <comb comb="math:40,art:40,com:20"/>-->
         </combs>
         <values>
-            <value value="art,intel,benefit,result,promotion,work-alone,prestige"/>
+            <value value="art,intel,benefit,result,promotion,work-alone,prestige" />
         </values>
         <description>
             <kind>
                 <name>
                     <ru>Архитектор</ru>
                     <en>Architect</en>
+                    <hy>ճարտարապետ</hy>
+                    <az>Mimar</az>
+                    <kk>Архитектор</kk>
+                    <mn>Зодчин</mn>
+                    <fr>Architecte</fr>
                 </name>
                 <pic>https://www.profguide.io/images/article/a/5/KQEVJGQA9r.jpg</pic>
                 <link>https://www.profguide.io/professions/architect.html</link>
@@ -141,7 +151,13 @@ l * 100
                     <en>Architects design buildings, their external and internal structure, master plans of
                         settlements.
                     </en>
+                    <hy>Ճարտարապետը նախագծում է շենքեր, դրանց արտաքին եւ ներսի կառուցվածքը, բնակավայրերի ընդհանուր պլանները:</hy>
+                    <az>Mimar binaları, onların xarici və daxili quruluşunu, yaşayış məntəqələrinin ümumi planlarını layihələşdirir.</az>
+                    <kk>Архитектор ғимараттарды, олардың сыртқы және ішкі құрылымын, тұратын орындардың жалпы жоспарын жобалауда.</kk>
+                    <mn>Зодчин барилгууды, тэдгээрийн гадаад ба дотоод бүтцийг, амьдрах газрын толгой төлөвлөгөөг төсөлдөж байдаг.</mn>
+                    <fr>L'architecte conçoit des bâtiments, leur structure externe et interne, les plans directeurs des établissements.</fr>
                 </text>
+
             </kind>
         </description>
     </profession>
@@ -149,21 +165,31 @@ l * 100
         <name>
             <ru>Актёр</ru>
             <en>Actor</en>
+            <hy>Ակտեր</hy>
+            <az>Aktor</az>
+            <kk>Актёр</kk>
+            <mn>Тодотгон</mn>
+            <fr>Acteur</fr>
         </name>
         <combs>
             <!--            <comb comb="human,body,art,com"/>-->
             <!--            <comb comb="body,art,com"/>-->
-            <comb comb="human:25,body:25,art:25,com:25"/>
-            <comb comb="body:33,art:33,com:34"/>
+            <comb comb="human:25,body:25,art:25,com:25" />
+            <comb comb="body:33,art:33,com:34" />
         </combs>
         <values>
-            <value value="art,publicity,difference,people,body"/>
+            <value value="art,publicity,difference,people,body" />
         </values>
         <description>
             <kind>
                 <name>
                     <ru>Актёр</ru>
                     <en>Actor</en>
+                    <hy>Ակտեր</hy>
+                    <az>Aktor</az>
+                    <kk>Актёр</kk>
+                    <mn>Тодотгон</mn>
+                    <fr>Acteur</fr>
                 </name>
                 <pic>https://www.profguide.io/images/article/a/7/mZ3cMyfhgX.jpg</pic>
                 <link>https://www.profguide.io/professions/actor.html</link>
@@ -178,6 +204,11 @@ l * 100
                         специальности 52.02.04), поступление через творческий конкурс.
                     </ru>
                     <en>Actors perform roles in theater and movies.</en>
+                    <hy>Ակտերը դերերի կատարողականն է թատրոնում և կինոյում:</hy>
+                    <az>Aktor teatr və kinoda rolların icracısıdır.</az>
+                    <kk>Актёр - бұл театр мен кинода ролдардың орындаушысы.</kk>
+                    <mn>Тодотгон нь театр ба кинонд дүрүүдийг гүйцэтгэнэ.</mn>
+                    <fr>L'acteur interprète des rôles au théâtre et au cinéma.</fr>
                 </text>
             </kind>
         </description>
@@ -186,23 +217,33 @@ l * 100
         <name>
             <ru>Режиссёр</ru>
             <en>Director</en>
+            <hy>Ռեժիսոր</hy>
+            <az>Rejissor</az>
+            <kk>Режиссер</kk>
+            <mn>Найруулагч</mn>
+            <fr>Réalisateur</fr>
         </name>
         <combs>
             <!--            <comb comb="human,art,com"/>-->
             <!--            <comb comb="human,art"/>-->
             <!--            <comb comb="art"/>-->
-            <comb comb="human:33,art:34,com:33"/>
-            <comb comb="art:50,com:50"/>
+            <comb comb="human:33,art:34,com:33" />
+            <comb comb="art:50,com:50" />
             <!--            <comb comb="art:100"/>-->
         </combs>
         <values>
-            <value value="art,intel,difference,people,promotion,result"/>
+            <value value="art,intel,difference,people,promotion,result" />
         </values>
         <description>
             <kind>
                 <name>
                     <ru>Режиссёр</ru>
                     <en>Director</en>
+                    <hy>Ռեժիսոր</hy>
+                    <az>Rejissor</az>
+                    <kk>Режиссер</kk>
+                    <mn>Найруулагч</mn>
+                    <fr>Réalisateur</fr>
                 </name>
                 <pic>https://www.profguide.io/images/article/a/10/SNcY8CL_a3.jpg</pic>
                 <link>https://www.profguide.io/professions/rezhisser.html</link>
@@ -222,6 +263,11 @@ l * 100
                         supervise all the specialists involved in the creation of the play/movie: scriptwriters,
                         cameramen, actors, artists, etc. They are responsible for the final product.
                     </en>
+                    <hy>Ռեժիսորը դերասանական դիտարկությունների, թատրոնական դիտարկությունների, ֆիլմերի, սերիալների, գովազդային ռոլիկների եւ կլիպերի պատմողն է։ Նա ղեկավարում է բոլոր մասնագետներին, ովքեր մասնակցում են դերասանական/ֆիլմի ստեղծմանը: սցենարիստներ, կամերային մասնագետներ, դերասաններ, արվեստագետներ և այլն։ Նա պատասխանատու է վերջնական արդյունքի համար։</hy>
+                    <az>Rejissor spektakl, teatr tamaşası, film, serial, reklam rolikinin və klipin tərtibatçısıdır. O, spektakl/filmin yaradılmasında iştirak edən bütün ixtisaslaşmış mütəxəssisləri idarə edir: ssenaristlər, operatorlar, aktyorlar, rəssamlar və s. O, nəticəvi məhsul üçün məsuliyyət daşıyır.</az>
+                    <kk>Режиссер - бұл спектакль, театрлық көрсеткіш, фильм, сериал, реклама ролигі және клипті құрастырушы. Ол спектакль/фильмді жасауда қатысатын барлық мамандарды басқарады: сценаристтер, операторлар, актёрлер, суретшілер және т.б. Ол соңғы өнімге жауапты.</kk>
+                    <mn>Найруулагч нь тоглолтын, театрын үзэгдэл, кино, сериал, сурталчилгааны ролик, клипийн байгуулагч юм. Тэрээр тоглолт/киноны үүсгэлтэд оролцсон бүх мэргэжилтэнүүдийг удирддаг: сценари бичигчид, операторууд, тодотгонууд, уран зургийн зохиогчид гэх мэт. Тэрээр итгэлцсэн бүтээгдэлд хариуцдаг.</mn>
+                    <fr>Un réalisateur est le metteur en scène d'une pièce de théâtre, d'un spectacle théâtralisé, d'un film, d'une série, d'un spot publicitaire, d'un clip. Il supervise tous les spécialistes impliqués dans la création de la pièce/film : scénaristes, cameramen, acteurs, artistes, etc. Il est responsable du produit final.</fr>
                 </text>
             </kind>
         </description>
@@ -230,22 +276,32 @@ l * 100
         <name>
             <ru>Кинооператор</ru>
             <en>Cameraman</en>
+            <hy>Տեսագրիչ</hy>
+            <az>Kamera operatoru</az>
+            <kk>Камера операторы</kk>
+            <mn>Камерын оператор</mn>
+            <fr>Caméraman</fr>
         </name>
         <combs>
             <!--            <comb comb="art"/>-->
-            <comb comb="art:80,tech:20"/>
+            <comb comb="art:80,tech:20" />
             <!--            <comb comb="art:100"/>-->
             <!--            <comb comb="art:50,body:30,tech:20"/>-->
             <!--            <comb comb="art:70,body:30"/>-->
         </combs>
         <values>
-            <value value="hands,art,result,people,travel"/>
+            <value value="hands,art,result,people,travel" />
         </values>
         <description>
             <kind>
                 <name>
                     <ru>Кинооператор</ru>
                     <en>Cameraman</en>
+                    <hy>Տեսագրիչ</hy>
+                    <az>Kamera operatoru</az>
+                    <kk>Камера операторы</kk>
+                    <mn>Камерын оператор</mn>
+                    <fr>Caméraman</fr>
                 </name>
                 <pic>https://www.profguide.io/images/article/a/7/BO8dihB_Fv.jpg</pic>
                 <link>https://www.profguide.io/professions/kinooperator.html</link>
@@ -261,6 +317,11 @@ l * 100
                         creative collaborators, they also have a good understanding of filmmaking techniques and the
                         physics of light.
                     </en>
+                    <hy>Տեսագրիչը կինոմաստատության կարևոր մասնագետն է։ Նա տեսանյութը կատարում է կամերայով։ Նա ստեղծագործ աշխատակիցն է, որը լավագույնը հասկանում է կինոստեղծագործական տեխնիկան եւ լուսաբառականության ֆիզիկան:</hy>
+                    <az>Kamera operatoru kino istehsalında önəmli ixtisaslaşmış şəxsiyyətdir. O, filmləri çəkən adamdır. O, yaradıcı işdaşıdır və kinoçəkmə texnikasını və işığın fizikasını yaxşı başa düşür.</az>
+                    <kk>Камера операторы - киношылықта маңызды маман. Ол фильмді камерамен суретке түсіреді. Ол шығармашылықты жұмысшы, киносуретке түсіретін техника пен жарықтың физикасын жақсы түсінеді.</kk>
+                    <mn>Камерын оператор нь кино үйлдвэрлэлд гол мэргэжилтэн юм. Тэрээр кинонууды бичдэг. Тэд творческ хамтран ажилладаг бөгөөд кино бичих техникийг ба гэрлийн физикийг сайн ойлгосон байдаг.</mn>
+                    <fr>Les caméramans sont des spécialistes importants dans la production de films. Ils tournent les films. En tant que collaborateurs créatifs, ils ont également une bonne compréhension des techniques de réalisation de films et de la physique de la lumière.</fr>
                 </text>
             </kind>
         </description>
@@ -269,20 +330,30 @@ l * 100
         <name>
             <ru>Звукорежиссер</ru>
             <en>Sound engineer</en>
+            <hy>Ձայնագծող</hy>
+            <az>Səs rejissoru</az>
+            <kk>Дыбыс режиссері</kk>
+            <mn>Дуугийн найруулагч</mn>
+            <fr>Ingénieur du son</fr>
         </name>
         <combs>
             <!--            <comb comb="art"/>-->
-            <comb comb="art:100"/>
+            <comb comb="art:100" />
             <!--            <comb comb="art:34,tech:33,it:33"/>-->
         </combs>
         <values>
-            <value value="work-alone,result,art,indoor,safe"/>
+            <value value="work-alone,result,art,indoor,safe" />
         </values>
         <description>
             <kind>
                 <name>
-                    <ru>Звукорежиссёр</ru>
+                    <ru>Звукорежиссер</ru>
                     <en>Sound engineer</en>
+                    <hy>Ձայնագծող</hy>
+                    <az>Səs rejissoru</az>
+                    <kk>Дыбыс режиссері</kk>
+                    <mn>Дуугийн найруулагч</mn>
+                    <fr>Ingénieur du son</fr>
                 </name>
                 <pic>https://www.profguide.io/images/article/a/7/agOud2iaNF.jpg</pic>
                 <link>https://www.profguide.io/professions/zvukorezhisser.html</link>
@@ -304,6 +375,11 @@ l * 100
                         and concerts using a variety of sound engineering equipment. They need a strong audio sense and
                         to know the physics of sound.
                     </en>
+                    <hy>Ձայնագծողները, օգտագործելով տարբեր ձայնատեխնիկական սարքեր, ստեղծում են ձայնական պատկերներ՝ հեռուստացույցի/ինտերնետի հրատարակությունների, ռադիոյի, կինոյի, թատրոնի և համերգների համար: Նախընտրանքային պետք է ձայնը լավ զգալ՝ ճանաչելով ձայնի ֆիզիկան:</hy>
+                    <az>Səs rejissorları müxtəlif səs texnikası qurğularından istifadə edərək televiziya/internet nəşrləri, radio, kino, teatr və konsertlər üçün səs fonları yaradırlar. Onların səsi dərin başa düşməsi və səsin fizikasını bilməsi lazımdır.</az>
+                    <kk>Дыбыс режиссерлері теледидар/интернет жарияланымдары, радио, кино, театр және концерттер үшін дыбыс әр түрлі дыбыс техника құрылғыларымен жасайды. Олардың куатты аудио сезгісі болуы және дыбыс физикасын білуі керек.</kk>
+                    <mn>Дуугийн найруулагч нар телевиз/интернетийн хэвлэл, радио, кино, театр болон тоглолтуудад дууны ардыг хийдэг. Тэдэнд дууны нарийвчлал болон дууны физикийг мэдэх хэрэгтэй.</mn>
+                    <fr>Les ingénieurs du son créent des ambiances sonores pour les émissions de télévision/internet, la radio, les films, les théâtres et les concerts en utilisant divers équipements de sonorisation. Ils doivent avoir une sensibilité audio prononcée et connaître la physique du son.</fr>
                 </text>
             </kind>
         </description>
@@ -312,22 +388,32 @@ l * 100
         <name>
             <ru>Визажист, гримёр</ru>
             <en>Visagiste, Make-up artist</en>
+            <hy>Վիզաժիստ, Գրիմեր</hy>
+            <az>Vişajist, Grimyer</az>
+            <kk>Визажист, Гримші</kk>
+            <mn>Визажист, Гриммер</mn>
+            <fr>Visagiste, Maquilleur</fr>
         </name>
         <combs>
             <!--            <comb comb="art,craft"/>-->
-            <comb comb="art:50,craft:50"/>
+            <comb comb="art:50,craft:50" />
             <!--            <comb comb="art:50,craft:25,com:25"/>-->
         </combs>
         <values>
-            <value value="hands,art,people,result,indoor,light-work,self-employ"/>
+            <value value="hands,art,people,result,indoor,light-work,self-employ" />
         </values>
         <description>
             <kind>
                 <name>
                     <ru>Визажист</ru>
                     <en>Visagiste</en>
+                    <hy>Վիզաժիստ</hy>
+                    <az>Vişajist</az>
+                    <kk>Визажист</kk>
+                    <mn>Визажист</mn>
+                    <fr>Visagiste</fr>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/0DDhY1aVTY.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/Du4ZA1jhns.webp</pic>
                 <link>https://www.profguide.io/professions/Vizazhist.html</link>
                 <text>
                     <ru>
@@ -338,12 +424,22 @@ l * 100
                     </ru>
                     <en>Visagistes are specialists who use makeup to create a certain look.
                     </en>
+                    <hy>Վիզաժիստները մակիչաժի միջոցներով ստեղծում են որոշակի դիմանկարը:</hy>
+                    <az>Vişajistlər makiyaj vasitələri ilə müəyyən bir üzlük yaradan mütəxəssislərdir.</az>
+                    <kk>Визажисттер макияж құралдары арқылы арнайы бет образын жасайды.</kk>
+                    <mn>Визажистүүд макияжийн хэрэгслийг ашиглан тодорхой харагдац үүсгэдэг.</mn>
+                    <fr>Les visagistes sont des spécialistes qui utilisent le maquillage pour créer un certain look.</fr>
                 </text>
             </kind>
             <kind>
                 <name>
                     <ru>Гримёр</ru>
                     <en>Makeup artists</en>
+                    <hy>Գրիմեր</hy>
+                    <az>Grimyer</az>
+                    <kk>Гримші</kk>
+                    <mn>Гриммер</mn>
+                    <fr>Maquilleur</fr>
                 </name>
                 <pic>https://www.profguide.io/images/article/a/7/x8MdPOr5re.jpg</pic>
                 <link>https://www.profguide.io/professions/grimer-postizher.html</link>
@@ -356,6 +452,11 @@ l * 100
                     </ru>
                     <en>Makeup artists transform actors’ appearance with makeup, paint, stickers, and more.
                     </en>
+                    <hy>Գրիմերները ձևափոխում են դերասանի արտաքին տեսքը գրիմով, գուներով, տաքածառուներով և այլ եղանակներով:</hy>
+                    <az>Grimyerlər aktorun xaricini grim, rəng, stikerlər və daha bir çox şeylərlə dəyişdirirlər.</az>
+                    <kk>Гримшілердің актёрдің сыртқы көрінісін грим, бояу, стикерлер және басқа әдістермен өзгертеді.</kk>
+                    <mn>Гриммерүүд нь тоглогчдын гадаад байдалтай грим, өнгө, ташлалт, болон бусад аргуудаар хөрвүүлдэг.</mn>
+                    <fr>Les maquilleurs transforment l'apparence des acteurs à l'aide de maquillage, de peinture, d'autocollants et plus encore.</fr>
                 </text>
             </kind>
         </description>
@@ -364,25 +465,35 @@ l * 100
         <name>
             <ru>Мастер маникюра</ru>
             <en>Manicurist</en>
+            <hy>Մանիկյուրիստ</hy>
+            <az>Manikyur ustası</az>
+            <kk>Маникюршы</kk>
+            <mn>Маникюрист</mn>
+            <fr>Manucure</fr>
         </name>
         <combs>
             <!--            <comb comb="com,craft"/>-->
             <!--            <comb comb="craft"/>-->
-            <comb comb="com:50,craft:50"/>
-            <comb comb="craft:100"/>
+            <comb comb="com:50,craft:50" />
+            <comb comb="craft:100" />
             <!--            <comb comb="com:40,craft:45,art:15"/>-->
             <!--            <comb comb="craft:100"/>-->
         </combs>
         <values>
-            <value value="hands,people,result,indoor,self-employ"/>
+            <value value="hands,people,result,indoor,self-employ" />
         </values>
         <description>
             <kind>
                 <name>
                     <ru>Мастер маникюра</ru>
                     <en>Manicurist</en>
+                    <hy>Մանիկյուրիստ</hy>
+                    <az>Manikyur ustası</az>
+                    <kk>Маникюршы</kk>
+                    <mn>Маникюрист</mn>
+                    <fr>Manucure</fr>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/TWysE_-Lff.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/Lz7jz-m5jh.webp</pic>
                 <link>https://www.profguide.io/professions/master-manikura.html</link>
                 <text>
                     <ru>
@@ -391,6 +502,11 @@ l * 100
                         специальности мастер по предоставлению маникюрных и педикюрных услуг 33.003) или на курсах.
                     </ru>
                     <en>Manicurists are specialists who help to care of nails and skin on the hands and feet.</en>
+                    <hy>Մանիկյուրիստները մասնագետներ են, ովքեր հատկապես մասնակցում են ձեռքերի և ոտքերի մաշկերում և մատախմբերի խնամքին:</hy>
+                    <az>Manikyur ustaları əllərin və ayaqların dırnaq və dərisinə qulluq göstərən mütəxəssislərdir.</az>
+                    <kk>Маникюршылар қол және аяқ дырнақтары және терісіне көмек етуші мамандандырған болады.</kk>
+                    <mn>Маникюристүүд гар, хөлний тархалт, үр арчлагддаг тархалтыг үзэмжлэхэд туслах мэргэжилтэн юм.</mn>
+                    <fr>Les manucures sont des spécialistes qui aident à prendre soin des ongles et de la peau des mains et des pieds.</fr>
                 </text>
             </kind>
         </description>
@@ -399,20 +515,30 @@ l * 100
         <name>
             <ru>Дизайнер</ru>
             <en>Designer</en>
+            <hy>Դիզայներ</hy>
+            <az>Dizayner</az>
+            <kk>Дизайнер</kk>
+            <mn>Дизайнер</mn>
+            <fr>Designer</fr>
         </name>
         <combs>
             <!--            <comb comb="art"/>-->
-            <comb comb="art:100"/>
+            <comb comb="art:100" />
             <!--            <comb comb="art:60,com:40"/>-->
         </combs>
         <values>
-            <value value="art,result,intel,promotion,self-employ,light-work,work-alone"/>
+            <value value="art,result,intel,promotion,self-employ,light-work,work-alone" />
         </values>
         <description>
             <kind>
                 <name>
                     <ru>Дизайнер</ru>
                     <en>Designer</en>
+                    <hy>Դիզայներ</hy>
+                    <az>Dizayner</az>
+                    <kk>Дизайнер</kk>
+                    <mn>Дизайнер</mn>
+                    <fr>Designer</fr>
                 </name>
                 <pic>https://www.profguide.io/images/article/a/10/3_xrq13rav.jpg</pic>
                 <link>https://www.profguide.io/professions/designer.html</link>
@@ -428,6 +554,11 @@ l * 100
                         designer), technical (industrial designer), clothes (clothing designer), interiors (interior
                         designer), landscapes (landscape designer).
                     </en>
+                    <hy>Դիզայներները պատրաստում են օբյեկտի վիզուալ մասը - տպագրության (գրաֆիկական դիզայներ), առարկա (առարկայական դիզայներ), տեխնիկական (արդյունաբերական դիզայներ), հագուստ (հագուստի դիզայներ), ներքին շինանկարավաճառական (ներքին դիզայներ), լանդշաֆտ (լանդշաֆտական դիզայներ):</hy>
+                    <az>Dizaynerlər nəşr (qrafik dizayner), mövzu (mövzu dizayner), texniki (sənaye dizayner), geyim (geyim dizayner), interyer (interyer dizayner) və peyzaj (peyzaj dizayner) kimi obyektin görsel hissəsini hazırlayırlar.</az>
+                    <kk>Дизайнерлер объекттің көрнекілік бөлігін дайындайды - баспа (графикалық дизайнер), тақырып (тақырыптық дизайнер), техникалық (өндірістік дизайнер), киім (киім дизайнер), ішкі құрылым (ішкі дизайнер), пейзаж (пейзаж дизайнер).</kk>
+                    <mn>Дизайнерууд объектын зургийн хэсгийг хөгжүүлдэг - полиграф (график дизайнер), субъект (субъектив дизайнер), техник (промышленный дизайнер), хувцас (хувцас дизайнер), дотор байдал (дотор дизайнер), газрын төлөөлөл (газрын дизайнер).</mn>
+                    <fr>Les designers développent la partie visuelle de l'objet - l'impression (graphiste), le sujet (designer d'objet), le technique (designer industriel), les vêtements (styliste), les intérieurs (designer d'intérieur), les paysages (architecte paysagiste).</fr>
                 </text>
             </kind>
         </description>
@@ -436,19 +567,29 @@ l * 100
         <name>
             <ru>Дизайнер интерьера</ru>
             <en>Interior designer</en>
+            <hy>Ներքին դիզայներ</hy>
+            <az>İnteryer dizayneri</az>
+            <kk>Ішкі дизайнер</kk>
+            <mn>Дотор дизайнер</mn>
+            <fr>Designer d'intérieur</fr>
         </name>
         <combs>
             <!--            <comb comb="art,com,math"/>-->
-            <comb comb="art:34,com:33,math:33"/>
+            <comb comb="art:34,com:33,math:33" />
         </combs>
         <values>
-            <value value="art,result,benefit,difference,promotion,intel,self-employ,free-time"/>
+            <value value="art,result,benefit,difference,promotion,intel,self-employ,free-time" />
         </values>
         <description>
             <kind>
                 <name>
                     <ru>Дизайнер интерьера</ru>
                     <en>Interior designer</en>
+                    <hy>Ներքին դիզայներ</hy>
+                    <az>İnteryer dizayneri</az>
+                    <kk>Ішкі дизайнер</kk>
+                    <mn>Дотор дизайнер</mn>
+                    <fr>Designer d'intérieur</fr>
                 </name>
                 <pic>https://www.profguide.io/images/article/a/3/s8BeHwOaly.jpg</pic>
                 <link>https://www.profguide.io/professions/interior-designer.html</link>
@@ -460,6 +601,11 @@ l * 100
                     <en>Interior designers create new projects of harmonious environment to improve human living
                         conditions.
                     </en>
+                    <hy>Դիզայները ներքին դիզայներներ են, որոնք ստեղծում են նոր նախագծեր հարմոնիական միջավայրի համար մարդկանոց կենսաբարի պայմանների լավացման համար:</hy>
+                    <az>İnteryer dizaynerləri insanların yaşayış şəraitini yaxşılaşdırmaq üçün harmonik mühit yaratmaqda ixtisaslaşırlar.</az>
+                    <kk>Ішкі дизайнерлер адамның тіршілік шараларын жақсарту үшін үйімді орта жасауда мамандандырылған.</kk>
+                    <mn>Дотор дизайнерууд хүнд там байдалыг хөгжүүлэхийн тулд үйл амьдралын орчинд таарсан орчныг бүтээдэг.</mn>
+                    <fr>Les designers d'intérieur sont spécialisés dans la création de nouveaux projets d'environnement harmonieux pour améliorer les conditions de vie des personnes.</fr>
                 </text>
             </kind>
         </description>
@@ -468,20 +614,30 @@ l * 100
         <name>
             <ru>Ландшафтный дизайнер</ru>
             <en>Landscape designer</en>
+            <hy>Լանդշաֆտային դիզայներ</hy>
+            <az>Landşaft dizayneri</az>
+            <kk>Ландшафттық дизайнер</kk>
+            <mn>Газрын дизайнер</mn>
+            <fr>Designer paysagiste</fr>
         </name>
         <combs>
             <!--            <comb comb="natural,art"/>-->
-            <comb comb="natural:50,art:50"/>
+            <comb comb="natural:50,art:50" />
             <!--            <comb comb="art:35,com:30,natural:25,math:10"/>-->
         </combs>
         <values>
-            <value value="art,result,benefit,outdoor,difference,intel,promotion,free-time"/>
+            <value value="art,result,benefit,outdoor,difference,intel,promotion,free-time" />
         </values>
         <description>
             <kind>
                 <name>
                     <ru>Ландшафтный дизайнер</ru>
                     <en>Landscape designer</en>
+                    <hy>Լանդշաֆտային դիզայներ</hy>
+                    <az>Landşaft dizayneri</az>
+                    <kk>Ландшафттық дизайнер</kk>
+                    <mn>Газрын дизайнер</mn>
+                    <fr>Designer paysagiste</fr>
                 </name>
                 <pic>https://www.profguide.io/images/article/a/6/gzhs4VMvvE.jpg</pic>
                 <link>https://www.profguide.io/professions/Landshaftnyy_dizayner.html</link>
@@ -494,6 +650,11 @@ l * 100
                     <en>Landscape designers are engaged in design of landscape gardening plots, private territories,
                         they are familiar with the issues of gardening and landscape architecture.
                     </en>
+                    <hy>Լանդշաֆտային դիզայներները զբաղվում են այգության-այգական հատվածների, հասարակական տարածքների դիզայնով։ Դրանք հայտնի են բագառական և լանդշաֆտային ճարտարապետության հետ։</hy>
+                    <az>Landşaft dizaynerləri bağ-bağça sahələrinin, şəxsi ərazilərin layihələşdirilməsi ilə məşğuldurlar, bağçılıq və landşaft memarlığı məsələləri ilə tanışdırlar.</az>
+                    <kk>Ландшафттық дизайнерлер бақ-бағдарламалық аймақтарды, жеке аймақтарды жобалауда мамандандырылған, олар бақша салуды және ландшафттық архитектура мәселелерімен таныс.</kk>
+                    <mn>Газрын дизайнерууд багийн баазын, хувийн талбайды төлөвлөж, тэд багшилалт болон газрын барилгын асуудалтай танилцсан.</mn>
+                    <fr>Les designers paysagistes s'occupent de la conception des espaces verts, des territoires privés, ils sont familiarisés avec les questions de jardinage et d'architecture paysagère.</fr>
                 </text>
             </kind>
         </description>
@@ -502,20 +663,30 @@ l * 100
         <name>
             <ru>Промышленный дизайнер</ru>
             <en>Industrial designer</en>
+            <hy>Փոխարարական դիզայներ</hy>
+            <az>Sənaye dizayneri</az>
+            <kk>Өнеркәсіп дизайнері</kk>
+            <mn>Промышлен дизайнер</mn>
+            <fr>Designer industriel</fr>
         </name>
         <combs>
             <!--            <comb comb="art,tech"/>-->
-            <comb comb="art:50,tech:50"/>
+            <comb comb="art:50,tech:50" />
             <!--            <comb comb="art:25,tech:25,com:25,math:25"/>-->
         </combs>
         <values>
-            <value value="art,result,benefit,indoor,intel,promotion,light-work"/>
+            <value value="art,result,benefit,indoor,intel,promotion,light-work" />
         </values>
         <description>
             <kind>
                 <name>
                     <ru>Промышленный дизайнер</ru>
                     <en>Industrial designer</en>
+                    <hy>Փոխարարական դիզայներ</hy>
+                    <az>Sənaye dizayneri</az>
+                    <kk>Өнеркәсіп дизайнері</kk>
+                    <mn>Промышлен дизайнер</mn>
+                    <fr>Designer industriel</fr>
                 </name>
                 <pic>https://www.profguide.io/images/article/a/6/GSId3Od8kK.jpg</pic>
                 <link>https://www.profguide.io/professions/industrial_designer.html</link>
@@ -530,6 +701,11 @@ l * 100
                     <en>Industrial designers develops a design concept for household appliances, vehicles, furniture,
                         toys, etc.
                     </en>
+                    <hy>Արդյունաբերական դիզայները մշակում է դիզայնի կոնցեպցիան բնականման տեխնիկայի, տրանսպորտի, կահույքի, խաղալիքների եւ այլն համար:</hy>
+                    <az>Sənaye dizayneri məişət texnikası, nəqliyyat vasitələri, mebel, oyuncaqlar və s. üçün dizayn konsepsiyasını hazırlayır.</az>
+                    <kk>Өнеркәсіп дизайнері тұрмыстық техника, көлік құралы, мебель, ойыншықтар және т.б. үшін дизайн концепциясын дайындайды.</kk>
+                    <mn>Промышлен дизайнер нь гэртэй техник, тээврийн хэрэгсэл, тавилга, тоглоомын гэх мэт зүйлсийн дизайны концепцийг хөгжүүлдэг.</mn>
+                    <fr>Les designers industriels développent un concept de design pour les appareils ménagers, les véhicules, les meubles, les jouets, etc.</fr>
                 </text>
             </kind>
         </description>
@@ -538,20 +714,30 @@ l * 100
         <name>
             <ru>Композитор</ru>
             <en>Composer</en>
+            <hy>Կոմպոզիտոր</hy>
+            <az>Kompozitor</az>
+            <kk>Композитор</kk>
+            <mn>Зохиолч</mn>
+            <fr>Compositeur</fr>
         </name>
         <combs>
             <!--            <comb comb="art"/>-->
             <!--            <comb comb="art:75,com:25"/>-->
-            <comb comb="art:100"/>
+            <comb comb="art:100" />
         </combs>
         <values>
-            <value value="art,result,intel,free-time,light-work,indoor,work-alone,self-employ,promotion,safe"/>
+            <value value="art,result,intel,free-time,light-work,indoor,work-alone,self-employ,promotion,safe" />
         </values>
         <description>
             <kind>
                 <name>
                     <ru>Композитор</ru>
                     <en>Composer</en>
+                    <hy>Կոմպոզիտոր</hy>
+                    <az>Kompozitor</az>
+                    <kk>Композитор</kk>
+                    <mn>Зохиолч</mn>
+                    <fr>Compositeur</fr>
                 </name>
                 <pic>https://www.profguide.io/images/article/a/7/SZfOxXr6cm.jpg</pic>
                 <link>https://www.profguide.io/professions/composer.html</link>
@@ -565,6 +751,11 @@ l * 100
                     <en>Composers write music. They are also musicians, the difference being that they author their
                         music themselves.
                     </en>
+                    <hy>Կոմպոզիտորը երաժշտական ստեղծագործությունների հեղինակն է։ Այս մարդը ստեղծում է (ստեղծում է) երաժշտություն։ Կոմպոզիտորը նույնպես երաժշտական է, տարբերվում է կատարողից միայն այն պատճառով, որ իսկ իրենից գրում է երաժշտություն։</hy>
+                    <az>Kompozitor musiqi əsərlərinin müəllifidir; musiqi yaratmağa məşğuldur. Kompozitor həm də musiqiçidir, tək fərq onun öz musiqisini yazması ilədir.</az>
+                    <kk>Композитор - музыкалық жұмыстардың авторы; адам музыка жасайды. Композитор сондай-ақ музыкант, тек сол жерде айырмашылық болады, өзі музыка жазады.</kk>
+                    <mn>Зохиолч нь хөгжмийн үйлдвэрлэгч юм. Тэд мөн хамтлагийн гишүүн юм, зөвхөн тэд өөрсдийн хөгжимийг бичдэггүй.</mn>
+                    <fr>Les compositeurs écrivent de la musique. Ils sont aussi musiciens, la différence étant qu'ils écrivent eux-mêmes leur musique.</fr>
                 </text>
             </kind>
         </description>
@@ -573,20 +764,30 @@ l * 100
         <name>
             <ru>Музыкант-исполнитель</ru>
             <en>Musician</en>
+            <hy>Երաժշտական կատարող</hy>
+            <az>Musiqiçi-icracı</az>
+            <kk>Музыкант-орындаушы</kk>
+            <mn>Музыкчин-гарчигч</mn>
+            <fr>Musicien interprète</fr>
         </name>
         <combs>
             <!--            <comb comb="art"/>-->
             <!--            <comb comb="art:80,com:20"/>-->
-            <comb comb="art:100"/>
+            <comb comb="art:100" />
         </combs>
         <values>
-            <value value="publicity,travel,art,free-time,light-work,people,indoor,body"/>
+            <value value="publicity,travel,art,free-time,light-work,people,indoor,body" />
         </values>
         <description>
             <kind>
                 <name>
                     <ru>Музыкант-исполнитель</ru>
                     <en>Musician</en>
+                    <hy>Երաժշտական կատարող</hy>
+                    <az>Musiqiçi-icracı</az>
+                    <kk>Музыкант-орындаушы</kk>
+                    <mn>Музыкчин-гарчигч</mn>
+                    <fr>Musicien interprète</fr>
                 </name>
                 <pic>https://www.profguide.io/images/article/a/11/7Wqn8RlAdv.jpg</pic>
                 <link>https://www.profguide.io/professions/muzykant.html</link>
@@ -603,6 +804,11 @@ l * 100
                     <en>Musicians perform music on keyboard, string, percussion, wind, and other instruments.
                         Vocalists are also performers, but their instrument is their voice.
                     </en>
+                    <hy>Երաժշտական կատարողը կատարում է երաժշտական ստեղծագործություններ ստեղնաշարային, լարային, պարապման, հոսակային և այլ տեսակի գործիքներով։ Վոկալիստը նույնպես երաժշտական կատարող է, բայց նրա գործիքը նրա ձայնն է։</hy>
+                    <az>Musiqiçi-icracı klaviatura, simli, zərb, küləkli və digər alətlərdə musiqi əsərlərini icra edir. Vokalist də icracıdır, ancaq onun aləti onun səsidir.</az>
+                    <kk>Музыкант-орындаушы музыкалық жұмыстарды пернелі, жіптік, ұрпақ, желді және басқа түрлердегі құралдарда орындайды. Вокалист де орындаушы, бірақ оның құралы - оның дыбысы.</kk>
+                    <mn>Музыкчин-гарчигч нь төмөр хуруу, тат, бөмбөг, салхи, бусад төрлийн хөгжмийн үйлдвэрлэгчдэд хөгжмийг тоглодог. Өргөгчид мөн гарчигч юм, гэхдээ тэдний хөгжим нь тэдний дуу юм.</mn>
+                    <fr>Les musiciens interprètent des œuvres musicales sur des instruments à clavier, à cordes, à percussion, à vent et autres. Les chanteurs sont également des interprètes, mais leur instrument est leur voix.</fr>
                 </text>
             </kind>
         </description>
@@ -611,19 +817,29 @@ l * 100
         <name>
             <ru>Скульптор</ru>
             <en>Sculptor</en>
+            <hy>Կանաչարագին</hy>
+            <az>Heykəltəraş</az>
+            <kk>Сүиекші</kk>
+            <mn>Чулуунч</mn>
+            <fr>Sculpteur</fr>
         </name>
         <combs>
             <!--            <comb comb="craft,art"/>-->
-            <comb comb="craft:50,art:50"/>
+            <comb comb="craft:50,art:50" />
         </combs>
         <values>
-            <value value="art,hands,body,result,work-alone,self-employ,indoor,free-time"/>
+            <value value="art,hands,body,result,work-alone,self-employ,indoor,free-time" />
         </values>
         <description>
             <kind>
                 <name>
                     <ru>Скульптор</ru>
                     <en>Sculptor</en>
+                    <hy>Կանաչարագին</hy>
+                    <az>Heykəltəraş</az>
+                    <kk>Сүиекші</kk>
+                    <mn>Чулуунч</mn>
+                    <fr>Sculpteur</fr>
                 </name>
                 <pic>https://www.profguide.io/images/article/a/7/yUs91DFJc6.jpg</pic>
                 <link>https://www.profguide.io/professions/sculptor.html</link>
@@ -634,6 +850,11 @@ l * 100
                         (коды специальности для вузов: 54.05.04, 54.05.01, 54.03.02, 50.03.02, для колледжей: 54.02.07).
                     </ru>
                     <en>Sculptors are artists who creates sculptures, or physical, three-dimensional objects.</en>
+                    <hy>Սքուլպտորը լավագույնը է, որը վերաբերվում է սքուլպտուրայի ստեղծմանը, այսինքն համալիրվածական ձևաչափի, երեքաչափական և զավական ստեղծագործությունները։</hy>
+                    <az>Heykəltəraş - bu sənətkar, heykəllər yaratmağa məşğul olan, yəni üçölçülü və toxunulan əsərlər olan həcm-şəkilli şəklin tərtib edilməsidir.</az>
+                    <kk>Сүиекші - бұл өлшемді-көлігінді пішінді, үш мөлшерді және тігізді тұратын өнермен айналысушы суретші.</kk>
+                    <mn>Чулуунч нь баримтлагдсан зургийн зургийг үүсгэх урлагын хийдэг зурган дүрслэгч юм. Тэр нь гурван хэмжээст, татаж болох зургийг үүсгэдэг.</mn>
+                    <fr>Un sculpteur est un artiste qui se consacre à la création de sculptures, c'est-à-dire d'œuvres de forme tridimensionnelle et palpable.</fr>
                 </text>
             </kind>
         </description>
@@ -642,20 +863,30 @@ l * 100
         <name>
             <ru>Художник-иллюстратор</ru>
             <en>Illustrator</en>
+            <hy>Նկարիչ-իլլյուստրատոր</hy>
+            <az>Rəssam-illüstrator</az>
+            <kk>Суретші-иллюстратор</kk>
+            <mn>Зурган дүрслэгч</mn>
+            <fr>Illustrateur</fr>
         </name>
         <combs>
             <!--            <comb comb="art"/>-->
-            <comb comb="art:100"/>
+            <comb comb="art:100" />
             <!--            <comb comb="art:70,com:30"/>-->
         </combs>
         <values>
-            <value value="art,result,indoor,work-alone,intel,hands,light-work,self-employ,free-time,safe"/>
+            <value value="art,result,indoor,work-alone,intel,hands,light-work,self-employ,free-time,safe" />
         </values>
         <description>
             <kind>
                 <name>
                     <ru>Художник-иллюстратор</ru>
                     <en>Illustrator</en>
+                    <hy>Նկարիչ-իլլյուստրատոր</hy>
+                    <az>Rəssam-illüstrator</az>
+                    <kk>Суретші-иллюстратор</kk>
+                    <mn>Зурган дүрслэгч</mn>
+                    <fr>Illustrateur</fr>
                 </name>
                 <pic>https://www.profguide.io/images/article/a/6/geEqwwHud_.jpg</pic>
                 <link>https://www.profguide.io/professions/artist_illustrator.html</link>
@@ -672,6 +903,11 @@ l * 100
                         They can also work in advertising or for websites, movies, or animation with additional
                         training.
                     </en>
+                    <hy>Իլլյուստրատորները աշխատում են գրքերի և ամսագրերի հրատարակչություններում, ստեղծում են նկարազարդումներ գրքերի և ամսագրերի համար: Նրանք կարող են նաև աշխատել գովազդի ոլորտում կամ վեբ կայքերի, կինոյի, անիմացիայի համար լրացուցիչ պատրաստման դեպքում:</hy>
+                    <az>İllüstratorlar kitab və jurnal nəşriyyatlarında işləyir, kitablar və jurnallar üçün illüstrasiyalar yaradır. Onlar həm də reklamda və ya əlavə hazırlıqla saytlar, filmlər və animasiya üçün işləyə bilərlər.</az>
+                    <kk>Иллюстраторлар кітап және журнал баспалыдарында жұмыс істейді, кітаптар мен журналдар үшін иллюстрациялар жасайды. Олар сондай-ақ реклама үшін немесе қосымша дайындықпен веб-сайттар, кино, анимация үшін жұмыс істей алады.</kk>
+                    <mn>Зурган дүрслэгчид ном болон сарын сэтгүүлүүдийн гарын авлагад ажилладаг, ном, сарын сэтгүүлүүдийн зурган дүрслэг үүсгэдэг. Тэд нь зарын үйлдвэрлэл, вэб сайт, кино, анимаци утгууртай нэмэлт сургалттай ажиллах боломжтой.</mn>
+                    <fr>Les illustrateurs travaillent dans les maisons d'édition de livres et de magazines et créent des illustrations pour les livres et les magazines. Ils peuvent également travailler dans la publicité ou, avec une formation supplémentaire, pour des sites web, des films ou des animations.</fr>
                 </text>
             </kind>
         </description>
@@ -680,21 +916,31 @@ l * 100
         <name>
             <ru>Искусствовед</ru>
             <en>Art historian</en>
+            <hy>Արվեստագետ</hy>
+            <az>İncəsənətşünas</az>
+            <kk>Өнертанушы</kk>
+            <mn>Урлагийн түүхч</mn>
+            <fr>Historien de l'art</fr>
         </name>
         <combs>
             <!--            <comb comb="human,art,com"/>-->
             <!--            <comb comb="human,com"/>-->
-            <comb comb="human:34,art:33,com:33"/> <!-- с одной стороны art - это про рисовать самому, с другой стороны искусствоведу лучше иметь art, чем не иметь. -->
-            <comb comb="human:50,com:50"/>
+            <comb comb="human:34,art:33,com:33" /> <!-- с одной стороны art - это про рисовать самому, с другой стороны искусствоведу лучше иметь art, чем не иметь. -->
+            <comb comb="human:50,com:50" />
         </combs>
         <values>
-            <value value="intel,people,travel,self-employ,indoor,safe,free-time,light-work,art"/>
+            <value value="intel,people,travel,self-employ,indoor,safe,free-time,light-work,art" />
         </values>
         <description>
             <kind>
                 <name>
                     <ru>Искусствовед</ru>
                     <en>Art historian</en>
+                    <hy>Արվեստագետ</hy>
+                    <az>İncəsənətşünas</az>
+                    <kk>Өнертанушы</kk>
+                    <mn>Урлагийн түүхч</mn>
+                    <fr>Historien de l'art</fr>
                 </name>
                 <pic>https://www.profguide.io/images/article/a/7/eMiHh845yz.jpg</pic>
                 <link>https://www.profguide.io/professions/iskusstvoved.html</link>
@@ -725,12 +971,12 @@ l * 100
             <!--            <comb comb="com,boss,art"/>-->
             <!--            <comb comb="com,boss"/>-->
             <!--            <comb comb="boss,art"/>-->
-            <comb comb="com:40,boss:40,art:20"/>
-            <comb comb="com:50,boss:50"/>
+            <comb comb="com:40,boss:40,art:20" />
+            <comb comb="com:50,boss:50" />
             <!--            <comb comb="boss:50,art:50"/>-->
         </combs>
         <values>
-            <value value="self-employ,travel,intel,salary,free-time,difference,people,art,light-work"/>
+            <value value="self-employ,travel,intel,salary,free-time,difference,people,art,light-work" />
         </values>
         <description>
             <kind>
@@ -760,10 +1006,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art,craft"/>-->
-            <comb comb="art:50,craft:50"/>
+            <comb comb="art:50,craft:50" />
         </combs>
         <values>
-            <value value="art,hands,result,indoor,work-alone,safe"/>
+            <value value="art,hands,result,indoor,work-alone,safe" />
         </values>
         <description>
             <kind>
@@ -797,10 +1043,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art,body,com"/>-->
-            <comb comb="art:33,body:34,com:33"/>
+            <comb comb="art:33,body:34,com:33" />
         </combs>
         <values>
-            <value value="art,body,people,free-time,indoor,difference,publicity,travel"/>
+            <value value="art,body,people,free-time,indoor,difference,publicity,travel" />
         </values>
         <description>
             <kind>
@@ -808,7 +1054,7 @@ l * 100
                     <ru>Хореограф</ru>
                     <en>Choreographer</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/smDgy8rzM-.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/LP8z7RWx_q.webp</pic>
                 <link>https://www.profguide.io/professions/choreographer.html</link>
                 <text>
                     <ru>
@@ -833,10 +1079,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art,com"/>-->
-            <comb comb="art:20,com:80"/>
+            <comb comb="art:20,com:80" />
         </combs>
         <values>
-            <value value="people,travel,result,body,art,free-time,light-work,difference,indoor"/>
+            <value value="people,travel,result,body,art,free-time,light-work,difference,indoor" />
         </values>
         <description>
             <kind>
@@ -844,7 +1090,7 @@ l * 100
                     <ru>Стилист-имиджмейкер</ru>
                     <en>Image-maker</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/INb31qt5YN.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/tQ2e2fgxpV.webp</pic>
                 <link>https://www.profguide.io/professions/stylist_imagemaker.html</link>
                 <text>
                     <ru>
@@ -871,12 +1117,12 @@ l * 100
         <combs>
             <!--            <comb comb="com,craft"/>-->
             <!--            <comb comb="craft"/>-->
-            <comb comb="com:30,craft:70"/>
-            <comb comb="craft:100"/>
+            <comb comb="com:30,craft:70" />
+            <comb comb="craft:100" />
             <!--            <comb comb="craft:70,com:30"/>-->
         </combs>
         <values>
-            <value value="hands,people,result,benefit,indoor,self-employ,art"/>
+            <value value="hands,people,result,benefit,indoor,self-employ,art" />
         </values>
         <description>
             <kind>
@@ -884,7 +1130,7 @@ l * 100
                     <ru>Парикмахер</ru>
                     <en>Hairdresser</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/1/l-urmXmk6V.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/WZnQF-ukAO.webp</pic>
                 <link>https://www.profguide.io/professions/parikmaher.html</link>
                 <text>
                     <ru>
@@ -904,11 +1150,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art,body"/>-->
-            <comb comb="art:50,body:50"/>
+            <comb comb="art:50,body:50" />
             <!--            <comb comb="art:20,body:50,com:30"/>-->
         </combs>
         <values>
-            <value value="art,publicity,body,people,indoor,travel"/>
+            <value value="art,publicity,body,people,indoor,travel" />
         </values>
         <description>
             <kind>
@@ -936,12 +1182,12 @@ l * 100
             <en>Brand marketer</en>
         </name>
         <combs>
-            <comb comb="boss:25,com:25,human:25,math:25"/>
-            <comb comb="human:34,math:33,com:33"/>
-            <comb comb="human:50,math:50"/>
+            <comb comb="boss:25,com:25,human:25,math:25" />
+            <comb comb="human:34,math:33,com:33" />
+            <comb comb="human:50,math:50" />
         </combs>
         <values>
-            <value value="intel,difference,salary,benefit,result,promotion,people,big-company,indoor"/>
+            <value value="intel,difference,salary,benefit,result,promotion,people,big-company,indoor" />
         </values>
         <description>
             <kind>
@@ -972,11 +1218,11 @@ l * 100
             <en>Marketing analysts</en>
         </name>
         <combs>
-            <comb comb="boss:25,human:25,math:25"/>
-            <comb comb="human:50,math:50"/>
+            <comb comb="boss:25,human:25,math:25" />
+            <comb comb="human:50,math:50" />
         </combs>
         <values>
-            <value value="intel,difference,salary,benefit,result,promotion,people,big-company,indoor"/>
+            <value value="intel,difference,salary,benefit,result,promotion,people,big-company,indoor" />
         </values>
         <description>
             <kind>
@@ -1008,12 +1254,12 @@ l * 100
             <en>Trade marketers</en>
         </name>
         <combs>
-            <comb comb="boss:25,com:25,human:25,math:25"/>
-            <comb comb="human:34,math:33,com:33"/>
-            <comb comb="human:50,math:50"/>
+            <comb comb="boss:25,com:25,human:25,math:25" />
+            <comb comb="human:34,math:33,com:33" />
+            <comb comb="human:50,math:50" />
         </combs>
         <values>
-            <value value="intel,difference,salary,benefit,result,promotion,people,big-company,indoor"/>
+            <value value="intel,difference,salary,benefit,result,promotion,people,big-company,indoor" />
         </values>
         <description>
             <kind>
@@ -1046,11 +1292,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="com,math"/>-->
-            <comb comb="com:50,math:50"/>
+            <comb comb="com:50,math:50" />
             <!--            <comb comb="boss:20,com:40,math:40"/>-->
         </combs>
         <values>
-            <value value="intel,big-company,result,people,benefit,indoor,travel,promotion"/>
+            <value value="intel,big-company,result,people,benefit,indoor,travel,promotion" />
         </values>
         <description>
             <kind>
@@ -1086,11 +1332,11 @@ l * 100
         <combs>
             <!--            <comb comb="com,math"/>-->
             <!--            <comb comb="math"/>-->
-            <comb comb="com:40,math:40,art:20"/>
+            <comb comb="com:40,math:40,art:20" />
             <!--            <comb comb="boss:20,com:60,math:20"/>-->
         </combs>
         <values>
-            <value value="travel,people,result,benefit,indoor,light-work,difference"/>
+            <value value="travel,people,result,benefit,indoor,light-work,difference" />
         </values>
         <description>
             <kind>
@@ -1126,11 +1372,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="math"/>-->
-            <comb comb="math:100"/>
+            <comb comb="math:100" />
             <!--            <comb comb="math:80,com:20"/>-->
         </combs>
         <values>
-            <value value="gov,indoor,work-alone,light-work,big-company"/>
+            <value value="gov,indoor,work-alone,light-work,big-company" />
         </values>
         <description>
             <kind>
@@ -1166,11 +1412,11 @@ l * 100
         <combs>
             <!--            <comb comb="com,math"/>-->
             <!--            <comb comb="com"/>-->
-            <comb comb="com:70,math:30"/>
-            <comb comb="com:100"/>
+            <comb comb="com:70,math:30" />
+            <comb comb="com:100" />
         </combs>
         <values>
-            <value value="people,indoor,difference,result,intel,salary,big-company"/>
+            <value value="people,indoor,difference,result,intel,salary,big-company" />
         </values>
         <description>
             <kind>
@@ -1199,10 +1445,10 @@ l * 100
             <en>Realtor</en>
         </name>
         <combs>
-            <comb comb="com:80,math:20"/>
+            <comb comb="com:80,math:20" />
         </combs>
         <values>
-            <value value="people,free-time,difference,result,salary,self-employ,benefit"/>
+            <value value="people,free-time,difference,result,salary,self-employ,benefit" />
         </values>
         <description>
             <kind>
@@ -1237,13 +1483,13 @@ l * 100
             <!--            <comb comb="art,hoz,com,boss"/>-->
             <!--            <comb comb="art,com,boss"/>-->
             <!--            <comb comb="com,boss"/>-->
-            <comb comb="art:45,hoz:20,com:20,boss:15"/>
-            <comb comb="art:33,com:33,boss:34"/>
-            <comb comb="art:20,boss:80"/>
+            <comb comb="art:45,hoz:20,com:20,boss:15" />
+            <comb comb="art:33,com:33,boss:34" />
+            <comb comb="art:20,boss:80" />
             <!--            <comb comb="boss:45,hoz:20,com:20,human:15"/>-->
         </combs>
         <values>
-            <value value="people,intel,travel,art,difference,self-employ,free-time,result"/>
+            <value value="people,intel,travel,art,difference,self-employ,free-time,result" />
         </values>
         <description>
             <kind>
@@ -1251,7 +1497,7 @@ l * 100
                     <ru>Продюсер</ru>
                     <en>Producer</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/4/ikvRoS-AkV.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/49/1PqVd0rSvP.webp</pic>
                 <link>https://www.profguide.io/professions/produser.html</link>
                 <text>
                     <ru>
@@ -1275,11 +1521,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="math"/>-->
-            <comb comb="math:100"/>
+            <comb comb="math:100" />
             <!--            <comb comb="math:80,com:20"/>-->
         </combs>
         <values>
-            <value value="indoor,big-company,people,intel"/>
+            <value value="indoor,big-company,people,intel" />
         </values>
         <description>
             <kind>
@@ -1312,10 +1558,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="com,human"/>-->
-            <comb comb="com:40,human:60"/>
+            <comb comb="com:40,human:60" />
         </combs>
         <values>
-            <value value="intel,people,benefit,indoor,big-company,gov,salary,promotion"/>
+            <value value="intel,people,benefit,indoor,big-company,gov,salary,promotion" />
         </values>
         <description>
             <kind>
@@ -1359,15 +1605,15 @@ l * 100
             <!--            <comb comb="hoz,war"/>-->
             <!--            <comb comb="war"/>-->
             <!--            <comb comb="hoz:33,com:34,tech:33"/>-->
-            <comb comb="body:33,war:34,com:33"/>
-            <comb comb="body:50,war:50"/>
-            <comb comb="com:50,war:50"/>
-            <comb comb="math:50,war:50"/>
-            <comb comb="craft:50,war:50"/>
-            <comb comb="hoz:50,war:50"/>
+            <comb comb="body:33,war:34,com:33" />
+            <comb comb="body:50,war:50" />
+            <comb comb="com:50,war:50" />
+            <comb comb="math:50,war:50" />
+            <comb comb="craft:50,war:50" />
+            <comb comb="hoz:50,war:50" />
         </combs>
         <values>
-            <value value="gov,body,people,travel,difference,outdoor,promotion"/>
+            <value value="gov,body,people,travel,difference,outdoor,promotion" />
         </values>
         <description>
             <kind>
@@ -1407,13 +1653,13 @@ l * 100
             <!--            <comb comb="body,war,com"/>-->
             <!--            <comb comb="body,war"/>-->
             <!--            <comb comb="war"/>-->
-            <comb comb="body:30,war:30,com:40"/>
-            <comb comb="body:40,war:60"/>
-            <comb comb="war:100"/>
+            <comb comb="body:30,war:30,com:40" />
+            <comb comb="body:40,war:60" />
+            <comb comb="war:100" />
             <!--            <comb comb="body:30,war:30,com:40"/>-->
         </combs>
         <values>
-            <value value="gov,people,difference,body,outdoor,promotion,benefit"/>
+            <value value="gov,people,difference,body,outdoor,promotion,benefit" />
         </values>
         <description>
             <kind>
@@ -1442,11 +1688,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural,war"/>-->
-            <comb comb="natural:45,tech:45,war:10"/>
+            <comb comb="natural:45,tech:45,war:10" />
             <!--            <comb comb="natural:50,tech:50"/>-->
         </combs>
         <values>
-            <value value="gov,benefit,outdoor,promotion,intel"/>
+            <value value="gov,benefit,outdoor,promotion,intel" />
         </values>
         <description>
             <kind>
@@ -1482,11 +1728,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="human,math"/>-->
-            <comb comb="human:50,math:50"/>
+            <comb comb="human:50,math:50" />
             <!--            <comb comb="human:50,math:30,com:20"/>-->
         </combs>
         <values>
-            <value value="intel,people,indoor,light-work,big-company,safe"/>
+            <value value="intel,people,indoor,light-work,big-company,safe" />
         </values>
         <description>
             <kind>
@@ -1494,7 +1740,7 @@ l * 100
                     <ru>Социолог</ru>
                     <en>Sociologist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/R1R8dFqedz.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/2PirYz_iwy.webp</pic>
                 <link>https://www.profguide.io/professions/Sotsiolog.html</link>
                 <text>
                     <ru>
@@ -1519,11 +1765,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="human"/>-->
-            <comb comb="human:100"/>
+            <comb comb="human:100" />
             <!--            <comb comb="human:70,com:30"/>-->
         </combs>
         <values>
-            <value value="intel,indoor,light-work,free-time,safe"/>
+            <value value="intel,indoor,light-work,free-time,safe" />
         </values>
         <description>
             <kind>
@@ -1557,11 +1803,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="human"/>-->
-            <comb comb="human:100"/>
+            <comb comb="human:100" />
             <!--            <comb comb="human:50,com:50"/>-->
         </combs>
         <values>
-            <value value="intel,people,indoor,publicity,free-time,light-work,difference"/>
+            <value value="intel,people,indoor,publicity,free-time,light-work,difference" />
         </values>
         <description>
             <kind>
@@ -1600,14 +1846,14 @@ l * 100
             <!--            <comb comb="human,com,natural"/>-->
             <!--            <comb comb="human,com"/>-->
             <!--            <comb comb="human,natural"/>-->
-            <comb comb="human:40,com:40,natural:20"/>
-            <comb comb="human:50,com:50"/>
-            <comb comb="human:50,natural:50"/>
+            <comb comb="human:40,com:40,natural:20" />
+            <comb comb="human:50,com:50" />
+            <comb comb="human:50,natural:50" />
             <!--            <comb comb="human:30,com:50,natural:20"/>-->
             <!--            <comb comb="human:40,com:60"/>-->
         </combs>
         <values>
-            <value value="intel,people,benefit,indoor,free-time,light-work,difference"/>
+            <value value="intel,people,benefit,indoor,free-time,light-work,difference" />
         </values>
         <description>
             <kind>
@@ -1615,7 +1861,7 @@ l * 100
                     <ru>Социальный психолог</ru>
                     <en>Social Psychologist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/6/Jvn6IIPryk.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/4BixxBbhiW.webp</pic>
                 <link>https://www.profguide.io/professions/socialniy_psiholog.html</link>
                 <text>
                     <ru>
@@ -1657,7 +1903,7 @@ l * 100
                     <ru>Психолог-консультант</ru>
                     <en>Consulting psychologist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/9rixAEUn_O.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/bu9SxmtN1_.webp</pic>
                 <link>https://www.profguide.io/professions/psychologist.html</link>
                 <text>
                     <ru>
@@ -1675,7 +1921,7 @@ l * 100
                     <ru>Зоопсихолог</ru>
                     <en>Zoopsychologist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/FfSyBWOrbL.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/52/9aoEaSeM5b.webp</pic>
                 <link>https://www.profguide.io/professions/Zoopsychologist.html</link>
                 <text>
                     <ru>
@@ -1694,11 +1940,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="human"/>-->
-            <comb comb="human:100"/>
+            <comb comb="human:100" />
             <!--            <comb comb="human:80,com:20"/>-->
         </combs>
         <values>
-            <value value="intel,work-alone,indoor,light-work,result,safe"/>
+            <value value="intel,work-alone,indoor,light-work,result,safe" />
         </values>
         <description>
             <kind>
@@ -1733,10 +1979,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="com,human"/>-->
-            <comb comb="com:50,human:50"/>
+            <comb comb="com:50,human:50" />
         </combs>
         <values>
-            <value value="intel,art,people,indoor,difference,publicity,promotion,light-work"/>
+            <value value="intel,art,people,indoor,difference,publicity,promotion,light-work" />
         </values>
         <description>
             <kind>
@@ -1766,13 +2012,13 @@ l * 100
             <en>Translator/interpreter</en>
         </name>
         <combs>
-            <comb comb="human:50,com:50"/>
-            <comb comb="human:100"/>
+            <comb comb="human:50,com:50" />
+            <comb comb="human:100" />
             <!--            <comb comb="human,com"/>-->
             <!--            <comb comb="human"/>-->
         </combs>
         <values>
-            <value value="intel,indoor,light-work,result,safe,work-alone,free-time"/>
+            <value value="intel,indoor,light-work,result,safe,work-alone,free-time" />
         </values>
         <description>
             <kind>
@@ -1801,10 +2047,10 @@ l * 100
             <en>Language instructor</en>
         </name>
         <combs>
-            <comb comb="human:50,com:50"/>
+            <comb comb="human:50,com:50" />
         </combs>
         <values>
-            <value value="intel,indoor,light-work,result,safe,work-alone,free-time"/>
+            <value value="intel,indoor,light-work,result,safe,work-alone,free-time" />
         </values>
         <description>
             <kind>
@@ -1812,7 +2058,7 @@ l * 100
                     <ru>Преподаватель языков</ru>
                     <en>Language instructor</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/5/jEcCaLqbJO.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/prDPAGqdIN.webp</pic>
                 <link>https://www.profguide.io/professions/uchitel_inostrannogo_yazika.html</link>
                 <text>
                     <ru>
@@ -1833,11 +2079,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="human"/>-->
-            <comb comb="human:80,com:20"/>
-            <comb comb="human:100"/>
+            <comb comb="human:80,com:20" />
+            <comb comb="human:100" />
         </combs>
         <values>
-            <value value="intel,indoor,safe,light-work,free-time"/>
+            <value value="intel,indoor,safe,light-work,free-time" />
         </values>
         <description>
             <kind>
@@ -1845,7 +2091,7 @@ l * 100
                     <ru>Филолог</ru>
                     <en>Philologist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/oFyRgnx7Wc.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/UiZ-i2R43I.webp</pic>
                 <link>https://www.profguide.io/professions/philologist.html</link>
                 <text>
                     <ru>
@@ -1866,10 +2112,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="human,com"/>-->
-            <comb comb="human:50,com:50"/>
+            <comb comb="human:50,com:50" />
         </combs>
         <values>
-            <value value="intel,people,art,difference,publicity,free-time"/>
+            <value value="intel,people,art,difference,publicity,free-time" />
         </values>
         <description>
             <kind>
@@ -1903,10 +2149,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="com,human"/>-->
-            <comb comb="com:60,human:40"/>
+            <comb comb="com:60,human:40" />
         </combs>
         <values>
-            <value value="gov,intel,people,travel,high-society,light-work,indoor"/>
+            <value value="gov,intel,people,travel,high-society,light-work,indoor" />
         </values>
         <description>
             <kind>
@@ -1938,10 +2184,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="com"/>-->
-            <comb comb="com:100"/>
+            <comb comb="com:100" />
         </combs>
         <values>
-            <value value="gov,people,benefit,body,indoor"/>
+            <value value="gov,people,benefit,body,indoor" />
         </values>
         <description>
             <kind>
@@ -1980,13 +2226,13 @@ l * 100
             <!--            <comb comb="human,com"/>-->
             <!--            <comb comb="tech,com"/>-->
             <!--            <comb comb="natural,com"/>-->
-            <comb comb="human:40,com:60"/>
-            <comb comb="tech:40,com:60"/>
-            <comb comb="natural:40,com:60"/>
-            <comb comb="body:40,com:60"/>
+            <comb comb="human:40,com:60" />
+            <comb comb="tech:40,com:60" />
+            <comb comb="natural:40,com:60" />
+            <comb comb="body:40,com:60" />
         </combs>
         <values>
-            <value value="intel,people,indoor,benefit,self-employ"/>
+            <value value="intel,people,indoor,benefit,self-employ" />
         </values>
         <description>
             <kind>
@@ -1994,7 +2240,7 @@ l * 100
                     <ru>Школьный учитель</ru>
                     <en>School teacher</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/7TOnS64e7A.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/tC-VR7EbQX.webp</pic>
                 <link>https://www.profguide.io/professions/teacher.html</link>
                 <text>
                     <ru>
@@ -2030,11 +2276,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="craft,body"/>-->
-            <comb comb="craft:70,body:30"/>
+            <comb comb="craft:70,body:30" />
             <!--            <comb comb="craft:60,body:10,hoz:20,com:10"/>-->
         </combs>
         <values>
-            <value value="indoor,hands,result,art,safe,people"/>
+            <value value="indoor,hands,result,art,safe,people" />
         </values>
         <description>
             <kind>
@@ -2042,7 +2288,7 @@ l * 100
                     <ru>Повар</ru>
                     <en>Cook</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/3/fZ1pAQFinc.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/JlYQclBbM4.webp</pic>
                 <link>https://www.profguide.io/professions/cook.html</link>
                 <text>
                     <ru>
@@ -2064,10 +2310,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="tech,math"/>-->
-            <comb comb="tech:30,math:70"/>
+            <comb comb="tech:30,math:70" />
         </combs>
         <values>
-            <value value="intel,body,travel,difference,outdoor,work-alone"/>
+            <value value="intel,body,travel,difference,outdoor,work-alone" />
         </values>
         <description>
             <kind>
@@ -2101,10 +2347,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural"/>-->
-            <comb comb="natural:100"/>
+            <comb comb="natural:100" />
         </combs>
         <values>
-            <value value="intel,outdoor,difference,travel,promotion,body"/>
+            <value value="intel,outdoor,difference,travel,promotion,body" />
         </values>
         <description>
             <kind>
@@ -2112,7 +2358,7 @@ l * 100
                     <ru>Биолог</ru>
                     <en>Biologists</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/6/Eftfswy2N0.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/fRdfH5iXZo.webp</pic>
                 <link>https://www.profguide.io/professions/biolog.html</link>
                 <text>
                     <ru>
@@ -2145,10 +2391,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural,craft"/>-->
-            <comb comb="natural:50,craft:50"/>
+            <comb comb="natural:50,craft:50" />
         </combs>
         <values>
-            <value value="intel,outdoor,hands,body,result,safe,difference,travel"/>
+            <value value="intel,outdoor,hands,body,result,safe,difference,travel" />
         </values>
         <description>
             <kind>
@@ -2156,7 +2402,7 @@ l * 100
                     <ru>Селекционер</ru>
                     <en>Breeder</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/4/Ce6XvfkLes.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/eJW0c66203.webp</pic>
                 <link>https://www.profguide.io/professions/selectionist.html</link>
                 <text>
                     <ru>
@@ -2205,12 +2451,12 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural"/>-->
-            <comb comb="natural:70,math:30"/>
-            <comb comb="natural:100"/>
+            <comb comb="natural:70,math:30" />
+            <comb comb="natural:100" />
             <!--            <comb comb="natural:80,math:20"/>-->
         </combs>
         <values>
-            <value value="intel,result,benefit,outdoor,body,safe,people,big-company"/>
+            <value value="intel,result,benefit,outdoor,body,safe,people,big-company" />
         </values>
         <description>
             <kind>
@@ -2218,7 +2464,7 @@ l * 100
                     <ru>Агроном</ru>
                     <en>Agronomist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/4/tAMigK7qqm.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/BQ58MfY8iZ.webp</pic>
                 <link>https://www.profguide.io/professions/agronom.html</link>
                 <text>
                     <ru>
@@ -2257,11 +2503,11 @@ l * 100
         <combs>
             <!--            <comb comb="natural,math"/>-->
             <!--            <comb comb="natural"/>-->
-            <comb comb="natural:70,math:30"/>
-            <comb comb="natural:100"/>
+            <comb comb="natural:70,math:30" />
+            <comb comb="natural:100" />
         </combs>
         <values>
-            <value value="intel,indoor,benefit,light-work,safe"/>
+            <value value="intel,indoor,benefit,light-work,safe" />
         </values>
         <description>
             <kind>
@@ -2269,7 +2515,7 @@ l * 100
                     <ru>Генетик</ru>
                     <en>Geneticist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/N49He5I3Hs.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/0MbFwnUjUM.webp</pic>
                 <link>https://www.profguide.io/professions/geneticist.html</link>
                 <text>
                     <ru>
@@ -2320,13 +2566,13 @@ l * 100
             <!--            <comb comb="natural,it,math"/>-->
             <!--            <comb comb="natural,math"/>-->
             <!--            <comb comb="natural,it"/>-->
-            <comb comb="natural:30,it:40,math:30"/>
-            <comb comb="natural:30,math:70"/>
-            <comb comb="natural:30,it:70"/>
+            <comb comb="natural:30,it:40,math:30" />
+            <comb comb="natural:30,math:70" />
+            <comb comb="natural:30,it:70" />
             <!--            <comb comb="natural:20,it:40,math:40"/>-->
         </combs>
         <values>
-            <value value="intel,indoor,benefit,safe,light-work,result,high-society"/>
+            <value value="intel,indoor,benefit,safe,light-work,result,high-society" />
         </values>
         <description>
             <kind>
@@ -2357,10 +2603,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural,math"/>-->
-            <comb comb="natural:70,math:30"/>
+            <comb comb="natural:70,math:30" />
         </combs>
         <values>
-            <value value="intel,outdoor,hands,body,travel,safe,benefit"/>
+            <value value="intel,outdoor,hands,body,travel,safe,benefit" />
         </values>
         <description>
             <kind>
@@ -2368,7 +2614,7 @@ l * 100
                     <ru>Почвовед</ru>
                     <en>Soil Scientist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/6/m6sbX0XjIs.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/pREWRyVOZy.webp</pic>
                 <link>https://www.profguide.io/professions/pochvoved.html</link>
                 <text>
                     <ru>
@@ -2391,10 +2637,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural,math"/>-->
-            <comb comb="natural:50,math:50"/>
+            <comb comb="natural:50,math:50" />
         </combs>
         <values>
-            <value value="intel,safe,benefit,big-company"/>
+            <value value="intel,safe,benefit,big-company" />
         </values>
         <description>
             <kind>
@@ -2402,7 +2648,7 @@ l * 100
                     <ru>Эколог</ru>
                     <en>Ecologist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/vHJ01W14VH.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/uTxSgJYCWs.webp</pic>
                 <link>https://www.profguide.io/professions/ecologist.html</link>
                 <text>
                     <ru>
@@ -2438,12 +2684,14 @@ l * 100
         <combs>
             <!--            <comb comb="natural,tech,math"/> &lt;!&ndash;химик-технолог&ndash;&gt;-->
             <!--            <comb comb="natural,math"/> &lt;!&ndash;химик-исследователь&ndash;&gt;-->
-            <comb comb="natural:34,tech:33,math:33"/> <!--химик-технолог-->
-            <comb comb="natural:50,math:50"/> <!--химик-исследователь-->
+            <comb comb="natural:34,tech:33,math:33" />
+            <!--химик-технолог-->
+            <comb comb="natural:50,math:50" />
+            <!--химик-исследователь-->
             <!--            <comb comb="natural:34,tech:33,math:33"/>-->
         </combs>
         <values>
-            <value value="intel,indoor,safe,result,benefit,hands,promotion"/>
+            <value value="intel,indoor,safe,result,benefit,hands,promotion" />
         </values>
         <description>
             <kind>
@@ -2451,7 +2699,7 @@ l * 100
                     <ru>Химик</ru>
                     <en>Chemist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/Svdh8GOuJT.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/TxR89qlUtt.webp</pic>
                 <link>https://www.profguide.io/professions/chemist.html</link>
                 <text>
                     <ru>
@@ -2473,7 +2721,7 @@ l * 100
                     <ru>Химик-технолог</ru>
                     <en>Process chemist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/5/cmjOy_zils.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/Af52qs36Qz.webp</pic>
                 <link>https://www.profguide.io/professions/himik_technolog.html</link>
                 <text>
                     <ru>
@@ -2513,7 +2761,7 @@ l * 100
                     <ru>Биохимик</ru>
                     <en>Biochemist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/5/b989PABnML.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/Yfnb8MgOIE.webp</pic>
                 <link>https://www.profguide.io/professions/biohimik.html</link>
                 <text>
                     <ru>
@@ -2538,11 +2786,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="tech,math"/>-->
-            <comb comb="tech:50,math:50"/>
-            <comb comb="math:80,natural:20"/>
+            <comb comb="tech:50,math:50" />
+            <comb comb="math:80,natural:20" />
         </combs>
         <values>
-            <value value="intel,indoor,safe,promotion,gov,light-work"/>
+            <value value="intel,indoor,safe,promotion,gov,light-work" />
         </values>
         <description>
             <kind>
@@ -2550,7 +2798,7 @@ l * 100
                     <ru>Физик-теоретик</ru>
                     <en>Theoretical physicists</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/49/E5NCs2GPvT.webp</pic>
+                <pic>https://www.profguide.io/images/article/a/51/wD_gWb409R.webp</pic>
                 <text>
                     <ru>
                         Ученый, научный сотрудник Университета или Физического института (НИИ). Изучает с помощью
@@ -2577,11 +2825,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="math,tech"/>-->
-            <comb comb="tech:50,math:50"/>
-            <comb comb="math:80,natural:20"/>
+            <comb comb="tech:50,math:50" />
+            <comb comb="math:80,natural:20" />
         </combs>
         <values>
-            <value value="intel,indoor,safe,promotion,gov,light-work"/>
+            <value value="intel,indoor,safe,promotion,gov,light-work" />
         </values>
         <description>
             <kind>
@@ -2616,10 +2864,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="tech,math"/>-->
-            <comb comb="math:75,tech:25"/>
+            <comb comb="math:75,tech:25" />
         </combs>
         <values>
-            <value value="intel,big-company,benefit,result,safe,promotion,difference"/>
+            <value value="intel,big-company,benefit,result,safe,promotion,difference" />
         </values>
         <description>
             <kind>
@@ -2652,12 +2900,12 @@ l * 100
         <combs>
             <!--            <comb comb="natural,hoz"/>-->
             <!--            <comb comb="natural"/>-->
-            <comb comb="natural:50,hoz:50"/>
-            <comb comb="natural:100"/>
+            <comb comb="natural:50,hoz:50" />
+            <comb comb="natural:100" />
             <!--            <comb comb="natural:60,hoz:40"/>-->
         </combs>
         <values>
-            <value value="body,outdoor,result,benefit"/>
+            <value value="body,outdoor,result,benefit" />
         </values>
         <description>
             <kind>
@@ -2665,7 +2913,8 @@ l * 100
                     <ru>Зооинженер</ru>
                     <en>Livestock engineer</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/21/vBKpOdmWsp.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/dPUMN0hL35.webp</pic>
+                <link>https://www.profguide.io/professions/zooinzhener.html</link>
                 <text>
                     <ru>
                         Это высококвалифицированный животновод, занимается разведением, кормлением, содержанием
@@ -2693,12 +2942,15 @@ l * 100
             <!--            <comb comb="natural,tech"/> -->
             <!--            <comb comb="natural,math"/>-->
             <!--            <comb comb="natural"/>-->
-            <comb comb="natural:50,math:30,tech:20"/> <!--океанолог-геолог-->
-            <comb comb="natural:50,math:50"/> <!--океанолог-геолог-->
-            <comb comb="natural:100"/> <!--океанолог-биолог-->
+            <comb comb="natural:50,math:30,tech:20" />
+            <!--океанолог-геолог-->
+            <comb comb="natural:50,math:50" />
+            <!--океанолог-геолог-->
+            <comb comb="natural:100" />
+            <!--океанолог-биолог-->
         </combs>
         <values>
-            <value value="intel,outdoor,benefit,promotion,travel,difference,body,gov"/>
+            <value value="intel,outdoor,benefit,promotion,travel,difference,body,gov" />
         </values>
         <description>
             <kind>
@@ -2706,7 +2958,7 @@ l * 100
                     <ru>Океанолог</ru>
                     <en>Oceanologist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/aD1c6Cw_3o.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/hAAvBy7M1z.webp</pic>
                 <link>https://www.profguide.io/professions/Okeanolog.html</link>
                 <text>
                     <ru>
@@ -2733,13 +2985,13 @@ l * 100
             <!--                        <comb comb="natural,craft,hoz"/>-->
             <!--                        <comb comb="natural,craft"/>-->
             <!--                        <comb comb="natural,hoz"/>-->
-            <comb comb="natural:33,craft:33,hoz:34"/>
-            <comb comb="natural:50,craft:50"/>
-            <comb comb="natural:50,hoz:50"/>
+            <comb comb="natural:33,craft:33,hoz:34" />
+            <comb comb="natural:50,craft:50" />
+            <comb comb="natural:50,hoz:50" />
             <!--            <comb comb="natural:33,craft:33,hoz:34"/>-->
         </combs>
         <values>
-            <value value="outdoor,hands,body,result,benefit,work-alone,difference"/>
+            <value value="outdoor,hands,body,result,benefit,work-alone,difference" />
         </values>
         <description>
             <kind>
@@ -2747,7 +2999,7 @@ l * 100
                     <ru>Пчеловод</ru>
                     <en>Beekeeper</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/WeYq7jOmVq.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/52/2ouI-exrmJ.webp</pic>
                 <link>https://www.profguide.io/professions/Pchelovod.html</link>
                 <text>
                     <ru>
@@ -2769,10 +3021,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art,craft"/>-->
-            <comb comb="art:40,craft:40,com:20"/>
+            <comb comb="art:40,craft:40,com:20" />
         </combs>
         <values>
-            <value value="hands,body,art,indoor,result,safe,people"/>
+            <value value="hands,body,art,indoor,result,safe,people" />
         </values>
         <description>
             <kind>
@@ -2803,11 +3055,11 @@ l * 100
         <combs>
             <!--            <comb comb="natural,body,com"/>-->
             <!--            <comb comb="body,com"/>-->
-            <comb comb="body:34,com:33,natural:33"/>
-            <comb comb="body:50,com:50"/>
+            <comb comb="body:34,com:33,natural:33" />
+            <comb comb="body:50,com:50" />
         </combs>
         <values>
-            <value value="outdoor,body,hands,benefit,result,free-time,self-employ"/>
+            <value value="outdoor,body,hands,benefit,result,free-time,self-employ" />
         </values>
         <description>
             <kind>
@@ -2841,11 +3093,11 @@ l * 100
         <combs>
             <!--            <comb comb="tech,math"/>-->
             <!--            <comb comb="tech"/>-->
-            <comb comb="tech:50,math:50"/>
-            <comb comb="tech:100"/>
+            <comb comb="tech:50,math:50" />
+            <comb comb="tech:100" />
         </combs>
         <values>
-            <value value="intel,result,benefit,indoor,promotion,people"/>
+            <value value="intel,result,benefit,indoor,promotion,people" />
         </values>
         <description>
             <kind>
@@ -2884,12 +3136,12 @@ l * 100
         <combs>
             <!--            <comb comb="tech,math,war"/>-->
             <!--            <comb comb="tech,math"/>-->
-            <comb comb="tech:45,math:30,com:25"/>
-            <comb comb="tech:50,math:30,war:20"/>
-            <comb comb="tech:50,math:50"/>
+            <comb comb="tech:45,math:30,com:25" />
+            <comb comb="tech:50,math:30,war:20" />
+            <comb comb="tech:50,math:50" />
         </combs>
         <values>
-            <value value="travel,big-company,outdoor,high-society,salary,body,people,result,benefit"/>
+            <value value="travel,big-company,outdoor,high-society,salary,body,people,result,benefit" />
         </values>
         <description>
             <kind>
@@ -2897,7 +3149,7 @@ l * 100
                     <ru>Пилот</ru>
                     <en>Pilot</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/8/l8Y2p0Ge9g.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/5fqpMaTFeR.webp</pic>
                 <link>https://www.profguide.io/professions/Pilot.html</link>
                 <text>
                     <ru>
@@ -2924,10 +3176,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="tech,math,it"/>-->
-            <comb comb="tech:34,math:33,it:33"/>
+            <comb comb="tech:34,math:33,it:33" />
         </combs>
         <values>
-            <value value="intel,indoor,result,benefit,difference,big-company,promotion,people,safe"/>
+            <value value="intel,indoor,result,benefit,difference,big-company,promotion,people,safe" />
         </values>
         <description>
             <kind>
@@ -2956,11 +3208,11 @@ l * 100
         <combs>
             <!--            <comb comb="tech,war"/>-->
             <!--            <comb comb="tech"/>-->
-            <comb comb="tech:80,com:20"/>
-            <comb comb="tech:100"/>
+            <comb comb="tech:80,com:20" />
+            <comb comb="tech:100" />
         </combs>
         <values>
-            <value value="intel,body,hands,result,benefit,difference"/>
+            <value value="intel,body,hands,result,benefit,difference" />
         </values>
         <description>
             <kind>
@@ -2993,10 +3245,10 @@ l * 100
             <!--            <comb comb="tech,math,natural"/>-->
             <!--            <comb comb="tech,math"/>-->
             <!--            <comb comb="tech,war"/> &lt;!&ndash;разработчик военного оборудования&ndash;&gt;-->
-            <comb comb="tech:50,math:50"/>
+            <comb comb="tech:50,math:50" />
         </combs>
         <values>
-            <value value="intel,indoor,promotion,light-work,people,safe"/>
+            <value value="intel,indoor,promotion,light-work,people,safe" />
         </values>
         <description>
             <kind>
@@ -3027,10 +3279,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="tech,craft"/>-->
-            <comb comb="tech:50,craft:50"/>
+            <comb comb="tech:50,craft:50" />
         </combs>
         <values>
-            <value value="hands,body,result,benefit,work-alone"/>
+            <value value="hands,body,result,benefit,work-alone" />
         </values>
         <description>
             <kind>
@@ -3060,11 +3312,11 @@ l * 100
         <combs>
             <!--            <comb comb="tech,it,math"/>-->
             <!--            <comb comb="tech,it"/>-->
-            <comb comb="tech:34,it:33,math:33"/>
-            <comb comb="tech:50,it:50"/>
+            <comb comb="tech:34,it:33,math:33" />
+            <comb comb="tech:50,it:50" />
         </combs>
         <values>
-            <value value="intel,indoor,result,benefit,promotion,people,light-work,big-company,gov"/>
+            <value value="intel,indoor,result,benefit,promotion,people,light-work,big-company,gov" />
         </values>
         <description>
             <kind>
@@ -3106,10 +3358,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="craft,hoz"/>-->
-            <comb comb="art:20,craft:80"/>
+            <comb comb="art:20,craft:80" />
         </combs>
         <values>
-            <value value="hands,art,work-alone,result,indoor,safe"/>
+            <value value="hands,art,work-alone,result,indoor,safe" />
         </values>
         <description>
             <kind>
@@ -3117,7 +3369,7 @@ l * 100
                     <ru>Реставратор</ru>
                     <en>Restorer</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/NQBVZtAmVJ.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/JuPqUCcehy.webp</pic>
                 <link>https://www.profguide.io/professions/restavrator.html</link>
                 <text>
                     <ru>
@@ -3138,11 +3390,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="tech,craft"/>-->
-            <comb comb="tech:15,craft:65,math:20"/>
-            <comb comb="tech:50,craft:50"/>
+            <comb comb="tech:15,craft:65,math:20" />
+            <comb comb="tech:50,craft:50" />
         </combs>
         <values>
-            <value value="hands,body,indoor,work-alone,result,benefit"/>
+            <value value="hands,body,indoor,work-alone,result,benefit" />
         </values>
         <description>
             <kind>
@@ -3150,7 +3402,7 @@ l * 100
                     <ru>Фрезеровщик</ru>
                     <en>Mill operator</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/8/jPkTcSiP-_.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/K8O6CLNbxg.webp</pic>
                 <link>https://www.profguide.io/professions/Frezerovshchik.html</link>
                 <text>
                     <ru>
@@ -3169,10 +3421,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="tech,craft"/>-->
-            <comb comb="tech:50,craft:50"/>
+            <comb comb="tech:50,craft:50" />
         </combs>
         <values>
-            <value value="hands,body,work-alone,result,benefit"/>
+            <value value="hands,body,work-alone,result,benefit" />
         </values>
         <description>
             <kind>
@@ -3180,7 +3432,7 @@ l * 100
                     <ru>Слесарь</ru>
                     <en>Locksmith</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/8/ZsWSEKboiW.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/15uccfLXPg.webp</pic>
                 <link>https://www.profguide.io/professions/Slesar.html</link>
                 <text>
                     <ru>
@@ -3202,12 +3454,12 @@ l * 100
         <combs>
             <!--            <comb comb="tech,craft"/>-->
             <!--            <comb comb="craft"/>-->
-            <comb comb="craft:40,tech:30,math:30"/>
-            <comb comb="craft:50,tech:50"/>
-            <comb comb="craft:100"/>
+            <comb comb="craft:40,tech:30,math:30" />
+            <comb comb="craft:50,tech:50" />
+            <comb comb="craft:100" />
         </combs>
         <values>
-            <value value="hands,body,work-alone,result,benefit"/>
+            <value value="hands,body,work-alone,result,benefit" />
         </values>
         <description>
             <kind>
@@ -3253,13 +3505,13 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="tech,craft"/>-->
-            <comb comb="craft:25,tech:25,math:25,com:25"/>
-            <comb comb="craft:50,tech:50"/>
-            <comb comb="craft:100"/>
+            <comb comb="craft:25,tech:25,math:25,com:25" />
+            <comb comb="craft:50,tech:50" />
+            <comb comb="craft:100" />
             <!--            <comb comb="tech:15,craft:65,body:20"/>-->
         </combs>
         <values>
-            <value value="hands,body,people,result,benefit"/>
+            <value value="hands,body,people,result,benefit" />
         </values>
         <description>
             <kind>
@@ -3288,11 +3540,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="tech,craft"/>-->
-            <comb comb="tech:50,craft:50"/>
+            <comb comb="tech:50,craft:50" />
             <!--            <comb comb="tech:30,craft:50,body:20"/>-->
         </combs>
         <values>
-            <value value="hands,body,work-alone,result,benefit,art,indoor"/>
+            <value value="hands,body,work-alone,result,benefit,art,indoor" />
         </values>
         <description>
             <kind>
@@ -3300,7 +3552,7 @@ l * 100
                     <ru>Кузнец</ru>
                     <en>Blacksmith</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/8/YJL8-JlXl9.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/DQ0nJ8YP1S.webp</pic>
                 <link>https://www.profguide.io/professions/Kuznec.html</link>
                 <text>
                     <ru>
@@ -3323,11 +3575,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="tech,craft"/>-->
-            <comb comb="tech:50,craft:50"/>
+            <comb comb="tech:50,craft:50" />
             <!--            <comb comb="tech:40,craft:40,body:20"/>-->
         </combs>
         <values>
-            <value value="hands,body,result,benefit,indoor"/>
+            <value value="hands,body,result,benefit,indoor" />
         </values>
         <description>
             <kind>
@@ -3335,7 +3587,7 @@ l * 100
                     <ru>Сварщик</ru>
                     <en>Welder</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/8/RMiAZLyJOd.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/MMhCodxoi2.webp</pic>
                 <link>https://www.profguide.io/professions/svarshik.html</link>
                 <text>
                     <ru>
@@ -3358,11 +3610,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="tech,craft"/>-->
-            <comb comb="tech:50,craft:50"/>
+            <comb comb="tech:50,craft:50" />
             <!--            <comb comb="tech:40,craft:40,body:20"/>-->
         </combs>
         <values>
-            <value value="hands,body,result,people,benefit"/>
+            <value value="hands,body,result,people,benefit" />
         </values>
         <description>
             <kind>
@@ -3370,7 +3622,7 @@ l * 100
                     <ru>Автомеханик</ru>
                     <en>Automechanic</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/4/JTZflhiEgu.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/r5HXsPpsjC.webp</pic>
                 <link>https://www.profguide.io/professions/Avtomekhanik.html</link>
                 <text>
                     <ru>
@@ -3392,11 +3644,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="tech,craft"/>-->
-            <comb comb="tech:50,craft:50"/>
+            <comb comb="tech:50,craft:50" />
             <!--            <comb comb="tech:40,craft:40,body:20"/>-->
         </combs>
         <values>
-            <value value="hands,body,result,people,benefit"/>
+            <value value="hands,body,result,people,benefit" />
         </values>
         <description>
             <kind>
@@ -3425,12 +3677,12 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="tech"/>-->
-            <comb comb="tech:70,math:30"/>
-            <comb comb="tech:100"/>
+            <comb comb="tech:70,math:30" />
+            <comb comb="tech:100" />
             <!--            <comb comb="tech:60,math:30,com:10"/>-->
         </combs>
         <values>
-            <value value="travel,outdoor,result,benefit,work-alone,gov"/>
+            <value value="travel,outdoor,result,benefit,work-alone,gov" />
         </values>
         <description>
             <kind>
@@ -3438,7 +3690,7 @@ l * 100
                     <ru>Машинист поезда</ru>
                     <en>Train Driver</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/8/W3E8FFe6oI.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/0QR-v9jyF8.webp</pic>
                 <link>https://www.profguide.io/professions/train-driver.html</link>
                 <text>
                     <ru>
@@ -3461,11 +3713,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural,math"/>-->
-            <comb comb="natural:75,math:25"/>
+            <comb comb="natural:75,math:25" />
             <!--            <comb comb="natural:35,math:15,com:30,hoz:20"/>-->
         </combs>
         <values>
-            <value value="intel,people,result,benefit,indoor,promotion,hands"/>
+            <value value="intel,people,result,benefit,indoor,promotion,hands" />
         </values>
         <description>
             <kind>
@@ -3473,7 +3725,7 @@ l * 100
                     <ru>Технолог пищевого производства</ru>
                     <en>Food technologist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/3/e9ItBVWgEQ.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/bM_XWrZMm5.webp</pic>
                 <link>https://www.profguide.io/professions/technolog_obshestvennogo_proizvodstva.html</link>
                 <text>
                     <ru>
@@ -3498,14 +3750,14 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="tech"/>-->
-            <comb comb="tech:25,hoz:25,math:25,com:25"/>
-            <comb comb="tech:34,hoz:33,math:33"/>
-            <comb comb="tech:50,hoz:50"/>
-            <comb comb="tech:100"/>
+            <comb comb="tech:25,hoz:25,math:25,com:25" />
+            <comb comb="tech:34,hoz:33,math:33" />
+            <comb comb="tech:50,hoz:50" />
+            <comb comb="tech:100" />
             <!--            <comb comb="tech:30,com:30,hoz:20,math:20"/>-->
         </combs>
         <values>
-            <value value="travel,outdoor,result,benefit,people,gov,high-society"/>
+            <value value="travel,outdoor,result,benefit,people,gov,high-society" />
         </values>
         <description>
             <kind>
@@ -3513,7 +3765,7 @@ l * 100
                     <ru>Капитан судна</ru>
                     <en>Captain of a river or sea ship</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/11/yBZFdxR0Ba.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/49/bO0t1846md.webp</pic>
                 <link>https://www.profguide.io/professions/kapitan-sudna.html</link>
                 <text>
                     <ru>
@@ -3537,12 +3789,12 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="com"/>-->
-            <comb comb="com:50,human:50"/>
-            <comb comb="com:100"/>
+            <comb comb="com:50,human:50" />
+            <comb comb="com:100" />
             <!--            <comb comb="com:60,human:20"/>-->
         </combs>
         <values>
-            <value value="people,result,intel,free-time,difference,light-work,travel"/>
+            <value value="people,result,intel,free-time,difference,light-work,travel" />
         </values>
         <description>
             <kind>
@@ -3550,7 +3802,7 @@ l * 100
                     <ru>MICE-менеджер</ru>
                     <en>MICE Manager</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/iFaImxEGeg.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/cWYhjLfqTH.webp</pic>
                 <link>https://www.profguide.io/professions/mice.html</link>
                 <text>
                     <ru>
@@ -3574,11 +3826,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="com"/>-->
-            <comb comb="com:100"/>
+            <comb comb="com:100" />
             <!--            <comb comb="com:50,body:25,craft:25"/>-->
         </combs>
         <values>
-            <value value="people,travel,hands,body,big-company,benefit"/>
+            <value value="people,travel,hands,body,big-company,benefit" />
         </values>
         <description>
             <kind>
@@ -3586,7 +3838,7 @@ l * 100
                     <ru>Бортпроводник</ru>
                     <en>Flight Attendant</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/9/mEzcfGo28t.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/-nfDw998XS.webp</pic>
                 <link>https://www.profguide.io/professions/Bortprovodnik.html</link>
                 <text>
                     <ru>
@@ -3609,10 +3861,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="math"/>-->
-            <comb comb="math:100"/>
+            <comb comb="math:100" />
         </combs>
         <values>
-            <value value="intel,work-alone,safe,big-company,result,indoor,free-time,light-work"/>
+            <value value="intel,work-alone,safe,big-company,result,indoor,free-time,light-work" />
         </values>
         <description>
             <kind>
@@ -3649,11 +3901,11 @@ l * 100
         <combs>
             <!--            <comb comb="math,it"/>-->
             <!--            <comb comb="math"/>-->
-            <comb comb="math:50,it:50"/>
-            <comb comb="math:100"/>
+            <comb comb="math:50,it:50" />
+            <comb comb="math:100" />
         </combs>
         <values>
-            <value value="intel,work-alone,safe,big-company,result,indoor,free-time,light-work"/>
+            <value value="intel,work-alone,safe,big-company,result,indoor,free-time,light-work" />
         </values>
         <description>
             <kind>
@@ -3661,7 +3913,7 @@ l * 100
                     <ru>Аналитик больших данных</ru>
                     <en>Big data analysts</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/21/qh97sWKg23.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/Pe-c6xPh99.webp</pic>
                 <link>https://www.profguide.io/professions/big-data-analyst.html</link>
                 <text>
                     <ru>
@@ -3691,12 +3943,12 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural,boss,hoz"/>-->
-            <comb comb="natural:20,boss:20,hoz:20,com:20,craft:20"/>
-            <comb comb="natural:33,boss:33,hoz:34"/>
-            <comb comb="natural:40,hoz:60"/>
+            <comb comb="natural:20,boss:20,hoz:20,com:20,craft:20" />
+            <comb comb="natural:33,boss:33,hoz:34" />
+            <comb comb="natural:40,hoz:60" />
         </combs>
         <values>
-            <value value="outdoor,hands,body,people,difference,result,benefit,self-employ"/>
+            <value value="outdoor,hands,body,people,difference,result,benefit,self-employ" />
         </values>
         <description>
             <kind>
@@ -3737,13 +3989,13 @@ l * 100
             <!--            <comb comb="body,natural,com"/>-->
             <!--            <comb comb="body,natural"/>-->
             <!--            <comb comb="natural,craft"/>-->
-            <comb comb="natural:25,com:25,craft:25,body:25"/>
-            <comb comb="natural:33,com:33,craft:34"/>
-            <comb comb="natural:50,craft:50"/>
+            <comb comb="natural:25,com:25,craft:25,body:25" />
+            <comb comb="natural:33,com:33,craft:34" />
+            <comb comb="natural:50,craft:50" />
             <!--            <comb comb="body:25,natural:25,com:25,craft:25"/>-->
         </combs>
         <values>
-            <value value="people,hands,hands,body,result,benefit,indoor,difference"/>
+            <value value="people,hands,hands,body,result,benefit,indoor,difference" />
         </values>
         <description>
             <kind>
@@ -3772,11 +4024,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="com,hoz"/>-->
-            <comb comb="com:50,hoz:50"/>
+            <comb comb="com:50,hoz:50" />
             <!--            <comb comb="com:40,hoz:45,math:15"/>-->
         </combs>
         <values>
-            <value value="people,light-work,intel,indoor,safe,promotion,high-society"/>
+            <value value="people,light-work,intel,indoor,safe,promotion,high-society" />
         </values>
         <description>
             <kind>
@@ -3813,10 +4065,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural,com"/>-->
-            <comb comb="natural:50,com:50"/>
+            <comb comb="natural:50,com:50" />
         </combs>
         <values>
-            <value value="people,intel,result,benefit,indoor,body"/>
+            <value value="people,intel,result,benefit,indoor,body" />
         </values>
         <description>
             <kind>
@@ -3850,11 +4102,11 @@ l * 100
         <combs>
             <!--            <comb comb="natural,craft,tech"/>-->
             <!--            <comb comb="natural,craft"/>-->
-            <comb comb="natural:34,com:33,craft:33"/>
-            <comb comb="natural:50,craft:50"/>
+            <comb comb="natural:34,com:33,craft:33" />
+            <comb comb="natural:50,craft:50" />
         </combs>
         <values>
-            <value value="people,intel,result,benefit,indoor,hands,body,high-society"/>
+            <value value="people,intel,result,benefit,indoor,hands,body,high-society" />
         </values>
         <description>
             <kind>
@@ -3887,11 +4139,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural"/>-->
-            <comb comb="natural:100"/>
+            <comb comb="natural:100" />
             <!--            <comb comb="natural:75,math:25"/>-->
         </combs>
         <values>
-            <value value="intel,result,benefit,indoor,work-alone,hands,safe"/>
+            <value value="intel,result,benefit,indoor,work-alone,hands,safe" />
         </values>
         <description>
             <kind>
@@ -3922,14 +4174,14 @@ l * 100
             <!--            <comb comb="natural,body"/>-->
             <!--            <comb comb="natural,craft"/>-->
             <!--            <comb comb="body"/>-->
-            <comb comb="natural:20,body:20,craft:40,com:20"/>
-            <comb comb="natural:34,body:33,com:33"/>
-            <comb comb="natural:50,craft:50"/>
-            <comb comb="craft:100"/>
+            <comb comb="natural:20,body:20,craft:40,com:20" />
+            <comb comb="natural:34,body:33,com:33" />
+            <comb comb="natural:50,craft:50" />
+            <comb comb="craft:100" />
             <!--            <comb comb="natural:20,body:30,craft:30,com:20"/>-->
         </combs>
         <values>
-            <value value="hands,body,people,result,benefit,indoor,self-employ"/>
+            <value value="hands,body,people,result,benefit,indoor,self-employ" />
         </values>
         <description>
             <kind>
@@ -3937,7 +4189,7 @@ l * 100
                     <ru>Массажист</ru>
                     <en>Massage Therapist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/RsLoIm7LgK.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/bnrNytBCz7.webp</pic>
                 <link>https://www.profguide.io/professions/massazhist.html</link>
                 <text>
                     <ru>
@@ -3958,11 +4210,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural,com"/>-->
-            <comb comb="natural:75,com:25"/>
+            <comb comb="natural:75,com:25" />
             <!--            <comb comb="natural:40,com:20,math:20,hoz:20"/>-->
         </combs>
         <values>
-            <value value="intel,benefit,result,indoor,people,promotion,difference,light-work,safe"/>
+            <value value="intel,benefit,result,indoor,people,promotion,difference,light-work,safe" />
         </values>
         <description>
             <kind>
@@ -4003,11 +4255,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural,human,com"/>-->
-            <comb comb="natural:10,human:40,com:50"/>
-            <comb comb="human:50,com:50"/>
+            <comb comb="natural:10,human:40,com:50" />
+            <comb comb="human:50,com:50" />
         </combs>
         <values>
-            <value value="people,benefit,intel,free-time,indoor,light-work"/>
+            <value value="people,benefit,intel,free-time,indoor,light-work" />
         </values>
         <description>
             <kind>
@@ -4036,11 +4288,11 @@ l * 100
         <combs>
             <!--            <comb comb="natural,human,com"/>-->
             <!--            <comb comb="natural,human"/>-->
-            <comb comb="natural:34,human:33,com:33"/>
+            <comb comb="natural:34,human:33,com:33" />
             <!--            <comb comb="natural:50,human:50"/>-->
         </combs>
         <values>
-            <value value="people,intel,benefit,result,indoor,light-work"/>
+            <value value="people,intel,benefit,result,indoor,light-work" />
         </values>
         <description>
             <kind>
@@ -4067,10 +4319,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural,body,com"/>-->
-            <comb comb="natural:33,body:33,com:34"/>
+            <comb comb="natural:33,body:33,com:34" />
         </combs>
         <values>
-            <value value="body,people,intel,result,safe"/>
+            <value value="body,people,intel,result,safe" />
         </values>
         <description>
             <kind>
@@ -4102,11 +4354,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural,body"/>-->
-            <comb comb="natural:40,craft:40,com:20"/>
-            <comb comb="natural:50,craft:50"/>
+            <comb comb="natural:40,craft:40,com:20" />
+            <comb comb="natural:50,craft:50" />
         </combs>
         <values>
-            <value value="intel,hands,body,result,benefit,indoor,self-employ"/>
+            <value value="intel,hands,body,result,benefit,indoor,self-employ" />
         </values>
         <description>
             <kind>
@@ -4147,12 +4399,12 @@ l * 100
             <!--            <comb comb="natural,human,com"/>-->
             <!--            <comb comb="human,natural"/>-->
             <!--            <comb comb="human,com"/>-->
-            <comb comb="human:30,com:50,natural:20"/>
-            <comb comb="human:70,natural:30"/>
-            <comb comb="human:40,com:60"/>
+            <comb comb="human:30,com:50,natural:20" />
+            <comb comb="human:70,natural:30" />
+            <comb comb="human:40,com:60" />
         </combs>
         <values>
-            <value value="people,intel,result,benefit,self-employ,indoor,light-work"/>
+            <value value="people,intel,result,benefit,self-employ,indoor,light-work" />
         </values>
         <description>
             <kind>
@@ -4160,7 +4412,7 @@ l * 100
                     <ru>Дефектолог</ru>
                     <en>Defectologist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/u2iEqWdXKS.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/HsCbYlQeek.webp</pic>
                 <link>https://www.profguide.io/professions/defectolog.html</link>
                 <text>
                     <ru>
@@ -4180,7 +4432,7 @@ l * 100
                     <ru>Логопед</ru>
                     <en>Speech therapist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/cI7ui-XP9E.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/NXDNlFzJv5.webp</pic>
                 <link>https://www.profguide.io/professions/Logoped.html</link>
                 <text>
                     <ru>
@@ -4202,11 +4454,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="human,com"/>-->
-            <comb comb="human:30,com:55,math:15"/>
-            <comb comb="human:30,com:70"/>
+            <comb comb="human:30,com:55,math:15" />
+            <comb comb="human:30,com:70" />
         </combs>
         <values>
-            <value value="people,intel,result,safe,light-work,indoor,promotion,big-company"/>
+            <value value="people,intel,result,safe,light-work,indoor,promotion,big-company" />
         </values>
         <description>
             <kind>
@@ -4214,7 +4466,7 @@ l * 100
                     <ru>Менеджер по персоналу</ru>
                     <en>Human Resources Manager</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/5/bREBEwWkSH.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/49/Ba2shzpAuU.webp</pic>
                 <link>https://www.profguide.io/professions/hr-manager.html</link>
                 <text>
                     <ru>
@@ -4239,10 +4491,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="com,math,boss"/>-->
-            <comb comb="com:33,math:33,boss:34"/>
+            <comb comb="com:33,math:33,boss:34" />
         </combs>
         <values>
-            <value value="people,result,light-work,free-time,travel,difference,safe"/>
+            <value value="people,result,light-work,free-time,travel,difference,safe" />
         </values>
         <description>
             <kind>
@@ -4250,7 +4502,7 @@ l * 100
                     <ru>Спортивный менеджер</ru>
                     <en>Sports manager</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/19/wRwfrnqL-b.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/49/7YvkEKyZ_R.webp</pic>
                 <link>https://www.profguide.io/professions/sportivnyj-menedzher.html</link>
                 <text>
                     <ru>
@@ -4283,13 +4535,13 @@ l * 100
         <combs>
             <!--            <comb comb="math,com"/>-->
             <!--            <comb comb="math"/>-->
-            <comb comb="math:40,tech:40,com:20"/>
-            <comb comb="math:50,tech:50"/>
-            <comb comb="math:70,com:30"/>
-            <comb comb="tech:70,com:30"/>
+            <comb comb="math:40,tech:40,com:20" />
+            <comb comb="math:50,tech:50" />
+            <comb comb="math:70,com:30" />
+            <comb comb="tech:70,com:30" />
         </combs>
         <values>
-            <value value="intel,result,light-work,people,indoor,big-company,benefit"/>
+            <value value="intel,result,light-work,people,indoor,big-company,benefit" />
         </values>
         <description>
             <kind>
@@ -4297,7 +4549,7 @@ l * 100
                     <ru>Менеджер качества</ru>
                     <en>Quality manager</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/5/g0nATv8vZz.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/49/9ntnCoKF04.webp</pic>
                 <link>https://www.profguide.io/professions/Menedzher_po_kachestvu.html</link>
                 <text>
                     <ru>
@@ -4352,11 +4604,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="com,hoz"/>-->
-            <comb comb="com:40,hoz:40,math:20"/>
-            <comb comb="com:50,hoz:50"/>
+            <comb comb="com:40,hoz:40,math:20" />
+            <comb comb="com:50,hoz:50" />
         </combs>
         <values>
-            <value value="people,indoor,difference,promotion"/>
+            <value value="people,indoor,difference,promotion" />
         </values>
         <description>
             <kind>
@@ -4364,7 +4616,7 @@ l * 100
                     <ru>Менеджер гостиницы (отельер)</ru>
                     <en>Hotel managers (hoteliers)</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/QgOUls5RxF.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/Fr9HTMG_cE.webp</pic>
                 <link>https://www.profguide.io/professions/hotel-manager.html</link>
                 <text>
                     <ru>
@@ -4390,7 +4642,7 @@ l * 100
                     <ru>Менеджер ресторана</ru>
                     <en>Restaurant manager</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/12/n8bc1ntn8l.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/-OLpjxtwFE.webp</pic>
                 <link>https://www.profguide.io/professions/manager-restorana.html</link>
                 <text>
                     <ru>
@@ -4421,11 +4673,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="com,hoz"/>-->
-            <comb comb="com:50,hoz:50"/>
+            <comb comb="com:50,hoz:50" />
             <!--            <comb comb="com:40,hoz:45,math:15"/>-->
         </combs>
         <values>
-            <value value="people,indoor,high-society,light-work,difference,safe"/>
+            <value value="people,indoor,high-society,light-work,difference,safe" />
         </values>
         <description>
             <kind>
@@ -4465,10 +4717,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="com,hoz"/>-->
-            <comb comb="com:50,hoz:50"/>
+            <comb comb="com:50,hoz:50" />
         </combs>
         <values>
-            <value value="indoor,people,benefit,result,safe"/>
+            <value value="indoor,people,benefit,result,safe" />
         </values>
         <description>
             <kind>
@@ -4507,12 +4759,12 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="hoz"/>-->
-            <comb comb="hoz:70,craft:30"/>
-            <comb comb="hoz:100"/>
+            <comb comb="hoz:70,craft:30" />
+            <comb comb="hoz:100" />
             <!--            <comb comb="hoz:45,craft:45,math:10"/>-->
         </combs>
         <values>
-            <value value="indoor,people,benefit,result,hands"/>
+            <value value="indoor,people,benefit,result,hands" />
         </values>
         <description>
             <kind>
@@ -4520,7 +4772,7 @@ l * 100
                     <ru>Экономка, помощник по хозяйству, кладовщик, кастелянша</ru>
                     <en>Housekeeper, home care assistant, storekeeper, chatelaine</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/24/663MJ2paSh.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/47/7jEagVT7OH.jpg</pic>
                 <link>https://www.profguide.io/professions/Kastelyansha.html</link>
                 <text>
                     <ru>
@@ -4549,14 +4801,14 @@ l * 100
             <!--            <comb comb="tech,math,hoz"/>-->
             <!--            <comb comb="math,hoz"/>-->
             <!--            <comb comb="tech,hoz"/>-->
-            <comb comb="tech:25,math:25,hoz:25,com:25"/>
-            <comb comb="tech:33,math:33,hoz:34"/>
-            <comb comb="math:50,hoz:50"/>
-            <comb comb="tech:50,hoz:50"/>
+            <comb comb="tech:25,math:25,hoz:25,com:25" />
+            <comb comb="tech:33,math:33,hoz:34" />
+            <comb comb="math:50,hoz:50" />
+            <comb comb="tech:50,hoz:50" />
             <!--            <comb comb="tech:25,math:25,hoz:25,com:25"/>-->
         </combs>
         <values>
-            <value value="people,benefit,result,difference,indoor"/>
+            <value value="people,benefit,result,difference,indoor" />
         </values>
         <description>
             <kind>
@@ -4590,11 +4842,11 @@ l * 100
             <!--            <comb comb="com,tech,math,hoz,boss"/>-->
             <!--            <comb comb="com,math,hoz,boss"/>-->
             <!--            <comb comb="com,math,hoz"/>-->
-            <comb comb="com:35,hoz:35,math:20,tech:10"/>
-            <comb comb="com:40,hoz:40,math:20"/>
+            <comb comb="com:35,hoz:35,math:20,tech:10" />
+            <comb comb="com:40,hoz:40,math:20" />
         </combs>
         <values>
-            <value value="people,indoor,big-company,high-society"/>
+            <value value="people,indoor,big-company,high-society" />
         </values>
         <description>
             <kind>
@@ -4602,7 +4854,7 @@ l * 100
                     <ru>Управляющий недвижимостью</ru>
                     <en>Property managers</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/2/pSkLne7kAF.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/49/ON4-LWcjbs.webp</pic>
                 <link>https://www.profguide.io/professions/upravlyaushiy_nedvijimostiu.html</link>
                 <text>
                     <ru>
@@ -4640,10 +4892,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="human,com"/>-->
-            <comb comb="human:50,com:50"/>
+            <comb comb="human:50,com:50" />
         </combs>
         <values>
-            <value value="people,body,travel,outdoor,publicity,intel,benefit,free-time,self-employ"/>
+            <value value="people,body,travel,outdoor,publicity,intel,benefit,free-time,self-employ" />
         </values>
         <description>
             <kind>
@@ -4651,7 +4903,7 @@ l * 100
                     <ru>Гид-экскурсовод</ru>
                     <en>Tour Guide</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/7/R6SOKO1hAK.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/hVtTq7jGHi.webp</pic>
                 <link>https://www.profguide.io/professions/Guide.html</link>
                 <text>
                     <ru>
@@ -4679,12 +4931,12 @@ l * 100
         <combs>
             <!--            <comb comb="body,war"/>-->
             <!--            <comb comb="war"/>-->
-            <comb comb="body:50,war:40,tech:10"/>
-            <comb comb="body:50,war:50"/>
-            <comb comb="war:100"/>
+            <comb comb="body:50,war:40,tech:10" />
+            <comb comb="body:50,war:50" />
+            <comb comb="war:100" />
         </combs>
         <values>
-            <value value="hands,body,benefit,gov,outdoor,travel,result,difference"/>
+            <value value="hands,body,benefit,gov,outdoor,travel,result,difference" />
         </values>
         <description>
             <kind>
@@ -4709,7 +4961,7 @@ l * 100
                     <ru>Спасатель МЧС</ru>
                     <en>EMERCOM rescuer</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/5/tTCqC9tAo5.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/47/CpBOGtQ7zM.webp</pic>
                 <link>https://www.profguide.io/professions/Spasatel.html</link>
                 <text>
                     <ru>
@@ -4734,11 +4986,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="body"/>-->
-            <comb comb="body:80,com:20"/>
-            <comb comb="body:100"/>
+            <comb comb="body:80,com:20" />
+            <comb comb="body:100" />
         </combs>
         <values>
-            <value value="body,travel,people,publicity,result"/>
+            <value value="body,travel,people,publicity,result" />
         </values>
         <description>
             <kind>
@@ -4746,7 +4998,7 @@ l * 100
                     <ru>Спортсмен</ru>
                     <en>Athlete</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/11/TKaP0xoiC-.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/FrU1rPT5EK.webp</pic>
                 <link>https://www.profguide.io/professions/professional-sportsman.html</link>
                 <text>
                     <ru>
@@ -4769,10 +5021,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="body,com"/>-->
-            <comb comb="body:50,com:50"/>
+            <comb comb="body:50,com:50" />
         </combs>
         <values>
-            <value value="people,indoor,benefit,body,self-employ,free-time"/>
+            <value value="people,indoor,benefit,body,self-employ,free-time" />
         </values>
         <description>
             <kind>
@@ -4780,7 +5032,7 @@ l * 100
                     <ru>Спортивный тренер</ru>
                     <en>Sports coach</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/8/hm63kiuobw.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/50/-pdW4w_GvO.webp</pic>
                 <link>https://www.profguide.io/professions/Sportivnyy_trener.html</link>
                 <text>
                     <ru>
@@ -4804,11 +5056,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="tech,math"/>-->
-            <comb comb="tech:35,math:35,com:30"/>
-            <comb comb="tech:50,math:50"/>
+            <comb comb="tech:35,math:35,com:30" />
+            <comb comb="tech:50,math:50" />
         </combs>
         <values>
-            <value value="intel,result,benefit,people,indoor,big-company,promotion"/>
+            <value value="intel,result,benefit,people,indoor,big-company,promotion" />
         </values>
         <description>
             <kind>
@@ -4841,12 +5093,12 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="math"/>-->
-            <comb comb="math:55,boss:25,com:20"/>
-            <comb comb="math:55,boss:45"/>
-            <comb comb="math:100"/>
+            <comb comb="math:55,boss:25,com:20" />
+            <comb comb="math:55,boss:45" />
+            <comb comb="math:100" />
         </combs>
         <values>
-            <value value="intel,big-company,indoor,work-alone,promotion,light-work,result"/>
+            <value value="intel,big-company,indoor,work-alone,promotion,light-work,result" />
         </values>
         <description>
             <kind>
@@ -4880,11 +5132,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="math"/>-->
-            <comb comb="math:80,com:20"/>
-            <comb comb="math:100"/>
+            <comb comb="math:80,com:20" />
+            <comb comb="math:100" />
         </combs>
         <values>
-            <value value="intel,promotion,indoor,light-work,people"/>
+            <value value="intel,promotion,indoor,light-work,people" />
         </values>
         <description>
             <kind>
@@ -4932,10 +5184,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="com,math"/>-->
-            <comb comb="com:50,math:50"/>
+            <comb comb="com:50,math:50" />
         </combs>
         <values>
-            <value value="people,intel,free-time,indoor,light-work,safe,promotion"/>
+            <value value="people,intel,free-time,indoor,light-work,safe,promotion" />
         </values>
         <description>
             <kind>
@@ -4943,7 +5195,7 @@ l * 100
                     <ru>Специалист по страхованию финансовых рисков</ru>
                     <en>Financial risk insurance specialists</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/19/e6joNtjLSy.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/12/35ObdvLpRE.jpg</pic>
                 <text>
                     <ru>
                         Разрабатывает методологические и нормативные документы по страхованию ипотеки, страхованию
@@ -4968,10 +5220,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="math"/>-->
-            <comb comb="math:100"/>
+            <comb comb="math:100" />
         </combs>
         <values>
-            <value value="intel,result,indoor,light-work,safe,work-alone"/>
+            <value value="intel,result,indoor,light-work,safe,work-alone" />
         </values>
         <description>
             <kind>
@@ -5002,10 +5254,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="math"/>-->
-            <comb comb="math:50,com:50"/>
+            <comb comb="math:50,com:50" />
         </combs>
         <values>
-            <value value="intel,result,indoor,light-work,safe,people"/>
+            <value value="intel,result,indoor,light-work,safe,people" />
         </values>
         <description>
             <kind>
@@ -5037,11 +5289,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="math"/>-->
-            <comb comb="math:80,com:20"/>
-            <comb comb="math:100"/>
+            <comb comb="math:80,com:20" />
+            <comb comb="math:100" />
         </combs>
         <values>
-            <value value="intel,result,indoor,light-work,safe"/>
+            <value value="intel,result,indoor,light-work,safe" />
         </values>
         <description>
             <kind>
@@ -5074,10 +5326,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="math,com"/>-->
-            <comb comb="math:50,com:50"/>
+            <comb comb="math:50,com:50" />
         </combs>
         <values>
-            <value value="intel,indoor,light-work,promotion,gov,safe,people"/>
+            <value value="intel,indoor,light-work,promotion,gov,safe,people" />
         </values>
         <description>
             <kind>
@@ -5136,11 +5388,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="math"/>-->
-            <comb comb="math:80,com:20"/>
-            <comb comb="math:100"/>
+            <comb comb="math:80,com:20" />
+            <comb comb="math:100" />
         </combs>
         <values>
-            <value value="intel,result,indoor,people,light-work"/>
+            <value value="intel,result,indoor,people,light-work" />
         </values>
         <description>
             <kind>
@@ -5183,16 +5435,16 @@ l * 100
             <!--            <comb comb="it,math"/>-->
             <!--            <comb comb="tech,math"/>-->
             <!--            <comb comb="it"/>-->
-            <comb comb="it:25,tech:25,math:25,com:25"/>
-            <comb comb="it:60,tech:20,com:20"/>
-            <comb comb="it:60,math:20,com:20"/>
-            <comb comb="it:50,tech:50"/>
-            <comb comb="it:50,math:50"/>
-            <comb comb="it:80,com:20"/>
-            <comb comb="it:100"/>
+            <comb comb="it:25,tech:25,math:25,com:25" />
+            <comb comb="it:60,tech:20,com:20" />
+            <comb comb="it:60,math:20,com:20" />
+            <comb comb="it:50,tech:50" />
+            <comb comb="it:50,math:50" />
+            <comb comb="it:80,com:20" />
+            <comb comb="it:100" />
         </combs>
         <values>
-            <value value="intel,result,indoor,promotion,people,difference,light-work,safe,salary,self-employ"/>
+            <value value="intel,result,indoor,promotion,people,difference,light-work,safe,salary,self-employ" />
         </values>
         <description>
             <kind>
@@ -5227,15 +5479,15 @@ l * 100
         <combs>
             <!--            <comb comb="tech,math,it"/>-->
             <!--            <comb comb="tech,it"/>-->
-            <comb comb="it:30,tech:20,math:30,com:20"/>
-            <comb comb="it:60,tech:20,com:20"/>
-            <comb comb="it:60,math:20,com:20"/>
-            <comb comb="it:50,tech:50"/>
-            <comb comb="it:50,com:50"/>
-            <comb comb="it:100"/>
+            <comb comb="it:30,tech:20,math:30,com:20" />
+            <comb comb="it:60,tech:20,com:20" />
+            <comb comb="it:60,math:20,com:20" />
+            <comb comb="it:50,tech:50" />
+            <comb comb="it:50,com:50" />
+            <comb comb="it:100" />
         </combs>
         <values>
-            <value value="intel,result,indoor,promotion,people,difference,big-company,hands,benefit"/>
+            <value value="intel,result,indoor,promotion,people,difference,big-company,hands,benefit" />
         </values>
         <description>
             <kind>
@@ -5269,12 +5521,12 @@ l * 100
         <combs>
             <!--            <comb comb="math,it"/>-->
             <!--            <comb comb="it"/>-->
-            <comb comb="math:30,it:30,tech:20,com:20"/>
-            <comb comb="math:30,it:70"/>
-            <comb comb="it:100"/>
+            <comb comb="math:30,it:30,tech:20,com:20" />
+            <comb comb="math:30,it:70" />
+            <comb comb="it:100" />
         </combs>
         <values>
-            <value value="intel,light-work,result,indoor,promotion,people,big-company,benefit"/>
+            <value value="intel,light-work,result,indoor,promotion,people,big-company,benefit" />
         </values>
         <description>
             <kind>
@@ -5307,11 +5559,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="math,com"/>-->
-            <comb comb="math:34,com:33,it:33"/>
-            <comb comb="math:50,com:50"/>
+            <comb comb="math:34,com:33,it:33" />
+            <comb comb="math:50,com:50" />
         </combs>
         <values>
-            <value value="intel,people,result,benefit,indoor,promotion,difference,big-company,light-work"/>
+            <value value="intel,people,result,benefit,indoor,promotion,difference,big-company,light-work" />
         </values>
         <description>
             <kind>
@@ -5345,13 +5597,13 @@ l * 100
             <!--            <comb comb="it,com,math"/>-->
             <!--            <comb comb="it,com"/>-->
             <!--            <comb comb="com,math"/>-->
-            <comb comb="com:25,math:25,human:25,art:25"/>
-            <comb comb="com:50,math:25,human:25"/>
-            <comb comb="it:50,com:50"/>
-            <comb comb="com:50,math:50"/>
+            <comb comb="com:25,math:25,human:25,art:25" />
+            <comb comb="com:50,math:25,human:25" />
+            <comb comb="it:50,com:50" />
+            <comb comb="com:50,math:50" />
         </combs>
         <values>
-            <value value="intel,result,safe,free-time,light-work,people,benefit,indoor"/>
+            <value value="intel,result,safe,free-time,light-work,people,benefit,indoor" />
         </values>
         <description>
             <kind>
@@ -5359,7 +5611,7 @@ l * 100
                     <ru>Uх-дизайнер</ru>
                     <en>Ux-designer</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/10/bmiTGapHLe.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/jwb27xdfeT.webp</pic>
                 <link>https://www.profguide.io/professions/ux-designer.html</link>
                 <text>
                     <ru>
@@ -5383,12 +5635,12 @@ l * 100
         <combs>
             <!--            <comb comb="it,math"/>-->
             <!--            <comb comb="it"/>-->
-            <comb comb="it:34,math:33,com:33"/>
-            <comb comb="it:70,com:30"/>
-            <comb comb="it:100"/>
+            <comb comb="it:34,math:33,com:33" />
+            <comb comb="it:70,com:30" />
+            <comb comb="it:100" />
         </combs>
         <values>
-            <value value="intel,indoor,result,light-work,benefit,people,safe"/>
+            <value value="intel,indoor,result,light-work,benefit,people,safe" />
         </values>
         <description>
             <kind>
@@ -5430,11 +5682,11 @@ l * 100
         <combs>
             <!--            <comb comb="human,math,it"/>-->
             <!--            <comb comb="human,math"/>-->
-            <comb comb="human:33,math:33,com:34"/>
-            <comb comb="human:50,math:50"/>
+            <comb comb="human:33,math:33,com:34" />
+            <comb comb="human:50,math:50" />
         </combs>
         <values>
-            <value value="intel,result,people,benefit,indoor,difference,free-time,light-work"/>
+            <value value="intel,result,people,benefit,indoor,difference,free-time,light-work" />
         </values>
         <description>
             <kind>
@@ -5494,10 +5746,10 @@ l * 100
         <combs>
             <!--            <comb comb="art,com,it,human"/>-->
             <!--            <comb comb="art,com,it"/>-->
-            <comb comb="human:50,art:25,com:25"/>
+            <comb comb="human:50,art:25,com:25" />
         </combs>
         <values>
-            <value value="intel,people,art,result,safe,free-time,high-society,light-work,difference,indoor"/>
+            <value value="intel,people,art,result,safe,free-time,high-society,light-work,difference,indoor" />
         </values>
         <description>
             <kind>
@@ -5541,12 +5793,12 @@ l * 100
             <!--            <comb comb="art,it,com"/>-->
             <!--            <comb comb="art,it"/>-->
             <!--            <comb comb="art"/>-->
-            <comb comb="art:60,com:20,it:20"/>
-            <comb comb="art:80,com:20"/>
-            <comb comb="art:100"/>
+            <comb comb="art:60,com:20,it:20" />
+            <comb comb="art:80,com:20" />
+            <comb comb="art:100" />
         </combs>
         <values>
-            <value value="intel,art,indoor,difference,people,promotion,light-work,safe"/>
+            <value value="intel,art,indoor,difference,people,promotion,light-work,safe" />
         </values>
         <description>
             <kind>
@@ -5577,7 +5829,7 @@ l * 100
                     <ru>UI-дизайнер</ru>
                     <en>UI-designer</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/11/anF9vckhmr.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/0j1PP6mbEL.webp</pic>
                 <link>https://www.profguide.io/professions/ui-designer.html</link>
                 <text>
                     <ru>
@@ -5621,11 +5873,11 @@ l * 100
         <combs>
             <!--            <comb comb="human,math,it"/>-->
             <!--            <comb comb="human,it"/>-->
-            <comb comb="human:33,math:34,it:33"/>
-            <comb comb="human:50,it:50"/>
+            <comb comb="human:33,math:34,it:33" />
+            <comb comb="human:50,it:50" />
         </combs>
         <values>
-            <value value="intel,result,light-work,safe,people,indoor,big-company"/>
+            <value value="intel,result,light-work,safe,people,indoor,big-company" />
         </values>
         <description>
             <kind>
@@ -5633,7 +5885,7 @@ l * 100
                     <ru>Компьютерный лингвист</ru>
                     <en>Computer linguist</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/12/QT1k_UhTVc.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/51/zeM_RVrIKP.webp</pic>
                 <link>https://www.profguide.io/professions/compyuterniy-lingvist.html</link>
                 <text>
                     <ru>
@@ -5655,11 +5907,11 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="human"/>-->
-            <comb comb="human:80,com:20"/>
-            <comb comb="human:100"/>
+            <comb comb="human:80,com:20" />
+            <comb comb="human:100" />
         </combs>
         <values>
-            <value value="intel,free-time,light-work,safe,people,indoor,travel,work-alone"/>
+            <value value="intel,free-time,light-work,safe,people,indoor,travel,work-alone" />
         </values>
         <description>
             <kind>
@@ -5692,10 +5944,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="human"/>-->
-            <comb comb="human:100"/>
+            <comb comb="human:100" />
         </combs>
         <values>
-            <value value="safe,gov,indoor,work-alone,light-work"/>
+            <value value="safe,gov,indoor,work-alone,light-work" />
         </values>
         <description>
             <kind>
@@ -5748,12 +6000,13 @@ l * 100
         <combs>
             <!--            <comb comb="com,it,boss"/>-->
             <!--            <comb comb="com,it"/>-->
-            <comb comb="com:25,boss:25,math:25,it:25"/> <!--продакт менеджер в IT-->
-            <comb comb="com:34,boss:33,math:33"/>
-            <comb comb="com:50,it:50"/>
+            <comb comb="com:25,boss:25,math:25,it:25" />
+            <!--продакт менеджер в IT-->
+            <comb comb="com:34,boss:33,math:33" />
+            <comb comb="com:50,it:50" />
         </combs>
         <values>
-            <value value="people,indoor,result,safe,difference,promotion"/>
+            <value value="people,indoor,result,safe,difference,promotion" />
         </values>
         <description>
             <kind>
@@ -5762,7 +6015,7 @@ l * 100
                     <en>Product manager
                     </en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/2/dc-Fd009D2.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/49/e_N1YYaYow.webp</pic>
                 <link>https://www.profguide.io/professions/pruduct_manager.html</link>
                 <text>
                     <ru>
@@ -5786,12 +6039,12 @@ l * 100
         <combs>
             <!--            <comb comb="com,it"/>-->
             <!--            <comb comb="com"/>-->
-            <comb comb="com:33,it:33,boss:34"/>
-            <comb comb="com:60,it:40"/>
-            <comb comb="com:100"/>
+            <comb comb="com:33,it:33,boss:34" />
+            <comb comb="com:60,it:40" />
+            <comb comb="com:100" />
         </combs>
         <values>
-            <value value="intel,people,result,indoor,promotion,difference,light-work"/>
+            <value value="intel,people,result,indoor,promotion,difference,light-work" />
         </values>
         <description>
             <kind>
@@ -5799,7 +6052,7 @@ l * 100
                     <ru>Менеджер IT-проекта</ru>
                     <en>IT project manager</en>
                 </name>
-                <pic>https://www.profguide.io/images/article/a/11/QklOsVsCW4.jpg</pic>
+                <pic>https://www.profguide.io/images/article/a/49/oHlLpuLhW1.webp</pic>
                 <link>https://www.profguide.io/professions/manager-it-proektov.html</link>
                 <text>
                     <ru>
@@ -5833,12 +6086,12 @@ l * 100
             <!--            <comb comb="boss,it,com"/>-->
             <!--            <comb comb="boss,com"/>-->
             <!--            <comb comb="boss"/>-->
-            <comb comb="boss:60,com:25,math:15"/>
-            <comb comb="boss:70,com:30"/>
-            <comb comb="boss:100"/>
+            <comb comb="boss:60,com:25,math:15" />
+            <comb comb="boss:70,com:30" />
+            <comb comb="boss:100" />
         </combs>
         <values>
-            <value value="intel,people,result,difference,free-time,self-employ"/>
+            <value value="intel,people,result,difference,free-time,self-employ" />
         </values>
         <description>
             <kind>
@@ -5881,10 +6134,10 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="boss,math"/>-->
-            <comb comb="boss:50,math:50"/>
+            <comb comb="boss:50,math:50" />
         </combs>
         <values>
-            <value value="intel,result,self-employ,work-alone,indoor,light-work,free-time"/>
+            <value value="intel,result,self-employ,work-alone,indoor,light-work,free-time" />
         </values>
         <description>
             <kind>
