@@ -12,6 +12,7 @@ use App\Entity\Test;
 use App\Repository\ResultRepository;
 use App\Test\Progress\Progress;
 use App\Test\Progress\ProgressSerializer;
+use App\Test\Result\ResultKey;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class ResultService
@@ -33,6 +34,11 @@ class ResultService
     public function findByUuid(string $uuid): ?Result
     {
         return $this->repository->findByUuid($uuid);
+    }
+
+    public function findByKey(ResultKey $uuid): ?Result
+    {
+        return $this->repository->findByKey($uuid);
     }
 
     public function saveSessionResult(Result $result): void
