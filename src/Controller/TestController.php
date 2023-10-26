@@ -10,6 +10,7 @@ use App\Service\CalculatorService;
 use App\Service\ResultService;
 use App\Service\TestService;
 use App\Subscriber\Locale;
+use App\Test\Result\ResultKeyFactory;
 use App\Test\ResultRenderer;
 use App\Test\TestStatus;
 use App\Test\ViewFormat;
@@ -103,7 +104,10 @@ class TestController extends AbstractController
 
     private function getResult(string $uuid): Result
     {
-        $result = $this->resultService->findByUuid($uuid);
+        $keyFactory = new ResultKeyFactory();
+        $key = $keyFactory->create($uuid);
+        $result = $this->resultService->findByKey($key);
+
         if (!$result) {
             throw self::createNotFoundException();
         }
