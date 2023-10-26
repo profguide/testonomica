@@ -9,6 +9,11 @@
     {% block stylesheets %}
         {{ parent() }}
         {{ encore_entry_link_tags('test') }}
+        {% if app.environment == 'dev' %}
+            <link rel="stylesheet" href="http://tn_widget/build/main.css">
+        {% else %}
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/davidtema/testonomica_widget@2.0.0/build/main.css">
+        {% endif %}
     {% endblock %}
     <section class="tnc-welcome container" id="app-preload-screen">
         <h1 class="tnc-welcome__title">{{ test.name(app.request.locale) }}</h1>
@@ -41,20 +46,17 @@
             border-color: #f8f9fa !important;
         }
     </style>
-    <div id="testonomica_app"
-         data-test="{{ test.id }}"
-            {#         data-token="SOME_PUBLIC_TOKEN" #}
-         data-init="auto"
-         data-host="{{ host }}">
-    </div>
+    <div id="testonomica_app"></div>
     {% block javascripts %}
         {{ parent() }}
         {{ encore_entry_script_tags('test') }}
     {% endblock %}
+    {% if app.environment == 'dev' %}
+        <script src="http://tn_widget/build/bundle.js"></script>
+    {% else %}
+        <script src="https://cdn.jsdelivr.net/gh/davidtema/testonomica_widget@2.0.0/build/bundle.js"></script>
+    {% endif %}
     <script>
-        // removes preload screen on App load.
-        window.testonomica.addEventListener('loaded', function () {
-            document.getElementById('app-preload-screen').remove();
-        });
+        window.initWidget('{{ test.slug }}', '{{ host }}');
     </script>
 {% endblock %}

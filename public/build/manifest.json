@@ -1,19 +1,10 @@
 {
   "build/app.css": "/build/app.cb79c0ba.css",
-  "build/app.js": "/build/app.26196f29.js",
-  "build/test.css": "/build/test.2771dc9c.css",
-  "build/test.js": "/build/test.c0fd6da0.js",
+  "build/app.js": "/build/app.d7acf3b4.js",
+  "build/test.js": "/build/test.ceb7d39b.js",
   "build/admin.css": "/build/admin.90429ea1.css",
-  "build/admin.js": "/build/admin.e5d4ad2e.js",
+  "build/admin.js": "/build/admin.bed6928c.js",
   "build/runtime.js": "/build/runtime.ec2b70cf.js",
-  "build/865.b51a966e.js": "/build/865.b51a966e.js",
-  "build/498.d6b792dd.js": "/build/498.d6b792dd.js",
-  "build/767.a176bbcc.js": "/build/767.a176bbcc.js",
-  "build/images/proc_back_1_lg.png": "/build/images/proc_back_1_lg.8b9c4215.png",
-  "build/fonts/CeraRoundProBold.woff2": "/build/fonts/CeraRoundProBold.d57949bc.woff2",
-  "build/fonts/CeraRoundProMedium.woff2": "/build/fonts/CeraRoundProMedium.08c865df.woff2",
-  "build/fonts/CeraRoundProLight.woff2": "/build/fonts/CeraRoundProLight.1681735f.woff2",
-  "build/images/plant_sm_1.png": "/build/images/plant_sm_1.12974e72.png",
-  "build/images/pencil_sm_1.png": "/build/images/pencil_sm_1.e469b100.png",
+  "build/487.40e7e57c.js": "/build/487.40e7e57c.js",
   "build/images/clock.svg": "/build/images/clock.f52a9bc5.svg"
 }
