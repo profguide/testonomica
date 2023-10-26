@@ -21,7 +21,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/tests/api/v1")
  */
-class TestResultRestController extends AbstractRestController implements AccessTokenAuthenticatedController
+class TestResultRestController extends AbstractRestController
 {
     private TestRepository $tests;
 
@@ -52,12 +52,12 @@ class TestResultRestController extends AbstractRestController implements AccessT
     //
 
     /**
-     * @Route("/save/{testId<\d+>}/")
-     * @param int $testId
+     * @Route("/save/{testId<[\w-]+>}/")
+     * @param string $testId
      * @param Request $request
      * @return Response
      */
-    public function save(int $testId, Request $request): Response
+    public function save(string $testId, Request $request): Response
     {
         $test = $this->getTest($testId);
 
@@ -69,11 +69,10 @@ class TestResultRestController extends AbstractRestController implements AccessT
         $rawAnswersToProgressConverter = new RawAnswersToProgressConverter();
         $progress = $rawAnswersToProgressConverter->convert($answers);
 
-        // todo вернуть (тестирую пока)
-//        $this->questions->validateRawAnswers($test, $progress);
+        $this->questions->validateRawAnswers($test, $progress);
         $result = $this->resultService->create($test, $progress);
 
-        return $this->json(['key' => $result->getUuid()]);
+        return $this->json(['key' => $result->getNewId()]);
     }
 
     /**
@@ -116,9 +115,13 @@ class TestResultRestController extends AbstractRestController implements AccessT
         return $data[$name];
     }
 
-    private function getTest(int $id): Test
+    private function getTest(string $id): Test
     {
-        $test = $this->tests->findOneById($id);
+        if (is_numeric($id)) {
+            $test = $this->tests->findOneById((int)$id);
+        } else {
+            $test = $this->tests->findOneBySlug($id);
+        }
         if (!$test) {
             throw new NotFoundHttpException();
         }
