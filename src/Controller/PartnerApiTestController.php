@@ -46,7 +46,7 @@ class PartnerApiTestController extends AbstractRestController
      */
     public function result(string $key, Request $request, CalculatorService $calculatorService): Response
     {
-        $result = $this->results->findByUuid($key);
+        $result = $this->getResult($key);
         $data = $calculatorService->calculate($result);
         $format = new ViewFormat($request->get('format', ViewFormat::JSON));
         return $this->renderer->render($result->getTest(), $data, $format);
