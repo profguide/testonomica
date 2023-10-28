@@ -9,6 +9,7 @@ use App\Entity\Test;
 use App\Repository\ResultRepository;
 use App\Repository\TestRepository;
 use App\Service\CalculatorService;
+use App\Test\Result\ResultKeyFactory;
 use App\Test\ResultRenderer;
 use App\Test\ViewFormat;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -27,7 +28,7 @@ class PartnerApiTestController extends AbstractRestController
 
     private ResultRenderer $renderer;
 
-    public function __construct(TestRepository $tests, ResultRepository $results, ResultRenderer $renderer)
+    public function __construct(TestRepository $tests, ResultRepository $results, ResultRenderer $renderer, private readonly ResultKeyFactory $resultKeyFactory)
     {
         $this->tests = $tests;
         $this->results = $results;
@@ -60,10 +61,7 @@ class PartnerApiTestController extends AbstractRestController
      */
     public function actionProgress(string $uuid): Response
     {
-        $result = $this->results->findByUuid($uuid);
-        if (!$result) {
-            throw self::createNotFoundException();
-        }
+        $result = $this->getResult($uuid);
         return $this->json([
             'progress' => $result->getData()
         ]);
@@ -99,7 +97,7 @@ class PartnerApiTestController extends AbstractRestController
     protected function getTest(int|string $id): Test
     {
         if (is_numeric($id)) {
-            $test = $this->tests->findOneById((int) $id);
+            $test = $this->tests->findOneById((int)$id);
         } else {
             $test = $this->tests->findOneBySlug($id);
         }
@@ -107,5 +105,17 @@ class PartnerApiTestController extends AbstractRestController
             throw self::createNotFoundException();
         }
         return $test;
+    }
+
+    private function getResult(string $key): Result
+    {
+        $resultKey = $this->resultKeyFactory->create($key);
+
+        $result = $this->results->findByKey($resultKey);
+        if (!$result) {
+            throw self::createNotFoundException();
+        }
+
+        return $result;
     }
 }
