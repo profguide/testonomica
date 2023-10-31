@@ -10,7 +10,7 @@ use Doctrine\ORM\PersistentCollection;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
 
-#[ORM\Entity(repositoryClass: 'App\Repository\TestRepository')]
+#[ORM\Entity(repositoryClass: \App\Repository\TestRepository::class)]
 #[ORM\Index(columns: ['slug'])]
 #[UniqueEntity('slug')]
 class Test

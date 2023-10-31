@@ -22,6 +22,7 @@ use Symfony\Component\Messenger\Exception\HandlerFailedException;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\Messenger\Stamp\HandledStamp;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Exception\UserNotFoundException;
 use Symfony\Component\Uid\Uuid;
 
 /**
@@ -120,7 +121,7 @@ final class ProgressController extends AbstractRestController
 
         $user = $this->users->find($key);
         if (!$user) {
-            throw new TestNotFoundException('User not found with the provided key.');
+            throw new UserNotFoundException('User not found with the provided key.');
         }
 
         return $user;
