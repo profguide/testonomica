@@ -1,0 +1,1653 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<professions>
+    <profession>
+        <name>
+            <ru>Архитектор</ru>
+            <en>Architect</en>
+        </name>
+        <combs>
+            <!--            <comb comb="art,tech"/>-->
+            <comb comb="math:50,art:50"/>
+            <!--            <comb comb="math:40,art:40,com:20"/>-->
+        </combs>
+        <values>
+            <value value="art,intel,benefit,result,promotion,work-alone,prestige"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Архитектор</ru>
+                    <en>Architect</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/5/KQEVJGQA9r.jpg</pic>
+                <link>https://www.profguide.io/professions/architect.html</link>
+                <text>
+                    <ru>
+                        Архитектор проектирует здания, их внешнее и внутренее строение, генеральные планы населённых
+                        пунктов. Архитекторов учат в институтах (код специальности 07.03.01), при поступлении сдают
+                        профильную математику, русский язык, рисунок и черчение. Также есть архитектурные колледжи (код
+                        специальности 07.02.01), условия поступления: творческий экзамен и конкурс аттестатов.
+                    </ru>
+                    <en>Architects design buildings, their external and internal structure, master plans of
+                        settlements.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Дизайнер</ru>
+            <en>Designer</en>
+        </name>
+        <combs>
+            <!--            <comb comb="art"/>-->
+            <comb comb="art:100"/>
+            <!--            <comb comb="art:60,com:40"/>-->
+        </combs>
+        <values>
+            <value value="art,result,intel,promotion,self-employ,light-work,work-alone"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Дизайнер</ru>
+                    <en>Designer</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/10/3_xrq13rav.jpg</pic>
+                <link>https://www.profguide.io/professions/designer.html</link>
+                <text>
+                    <ru>
+                        Разрабатывает визуальную часть объекта - полиграфического (графический дизайнер), предметного
+                        (предметный дизайнер), технического (промышленный дизайнер), одежды (дизайнер одежды),
+                        интерьеров
+                        (дизайнер интерьеров), ландшафтов (ландшафтный дизайнер). Обучают в колледжах (по творческому
+                        конкурсу, или в вузах (сдают русский, литературу и рисунок).
+                    </ru>
+                    <en>Designers develop visual part of the object - printing (graphic designer), subject (object
+                        designer), technical (industrial designer), clothes (clothing designer), interiors (interior
+                        designer), landscapes (landscape designer).
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Дизайнер интерьера</ru>
+            <en>Interior designer</en>
+        </name>
+        <combs>
+            <!--            <comb comb="art,com,math"/>-->
+            <comb comb="art:34,com:33,math:33"/>
+        </combs>
+        <values>
+            <value value="art,result,benefit,difference,promotion,intel,self-employ,free-time"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Дизайнер интерьера</ru>
+                    <en>Interior designer</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/3/s8BeHwOaly.jpg</pic>
+                <link>https://www.profguide.io/professions/interior-designer.html</link>
+                <text>
+                    <ru>
+                        Дизайнер интерьера – это специалист по созданию новых проектов гармоничной среды для улучшения
+                        условий жизни человека.
+                    </ru>
+                    <en>Interior designers create new projects of harmonious environment to improve human living
+                        conditions.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Ландшафтный дизайнер</ru>
+            <en>Landscape designer</en>
+        </name>
+        <combs>
+            <!--            <comb comb="natural,art"/>-->
+            <comb comb="natural:50,art:50"/>
+            <!--            <comb comb="art:35,com:30,natural:25,math:10"/>-->
+        </combs>
+        <values>
+            <value value="art,result,benefit,outdoor,difference,intel,promotion,free-time"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Ландшафтный дизайнер</ru>
+                    <en>Landscape designer</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/6/gzhs4VMvvE.jpg</pic>
+                <link>https://www.profguide.io/professions/Landshaftnyy_dizayner.html</link>
+                <text>
+                    <ru>
+                        Занимается проектированием садово-парковых участков, частных территорий, знаком с вопросами
+                        садоводства и архитектуры ландшафтов. Обучают в колледжах и вузах (сдают профильную математику,
+                        биологию и русский язык).
+                    </ru>
+                    <en>Landscape designers are engaged in design of landscape gardening plots, private territories,
+                        they are familiar with the issues of gardening and landscape architecture.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Промышленный дизайнер</ru>
+            <en>Industrial designer</en>
+        </name>
+        <combs>
+            <!--            <comb comb="art,tech"/>-->
+            <comb comb="art:50,tech:50"/>
+            <!--            <comb comb="art:25,tech:25,com:25,math:25"/>-->
+        </combs>
+        <values>
+            <value value="art,result,benefit,indoor,intel,promotion,light-work"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Промышленный дизайнер</ru>
+                    <en>Industrial designer</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/6/GSId3Od8kK.jpg</pic>
+                <link>https://www.profguide.io/professions/industrial_designer.html</link>
+                <text>
+                    <ru>
+                        Промышленный дизайнер разрабатывает дизайн-концепцию бытовой техники, транспорта, мебели,
+                        игрушек и
+                        т.д. Готовят промышленных дизайнеров в вузах (код специальности 53.03.01, 29.03.01, 29.03.02,
+                        29.03.04), при поступлении, как правило, сдают русский язык, литературу и проходят творческий
+                        экзамен (рисунок). Есть и колледжи. Код специальности 54.02.01.
+                    </ru>
+                    <en>Industrial designers develops a design concept for household appliances, vehicles, furniture,
+                        toys, etc.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>PR-менеджер</ru>
+            <en>PR manager</en>
+        </name>
+        <combs>
+            <!--            <comb comb="com,human"/>-->
+            <comb comb="com:50,human:50"/>
+        </combs>
+        <values>
+            <value value="intel,art,people,indoor,difference,publicity,promotion,light-work"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>PR-менеджер</ru>
+                    <en>PR manager</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/1/zRylZA4-r-.jpg</pic>
+                <link>https://www.profguide.io/professions/pr_manager.html</link>
+                <text>
+                    <ru>
+                        PR-менеджер или пиар-менеджер — это специалист, отвечающий за создание и поддержание
+                        благоприятного
+                        имиджа фирмы или конкретной торговой марки, принадлежащей этой фирме. Обучают в вузах (коды
+                        специальности 38.03.02, 42.03.01, 39.03.01) или колледжах (код специальности: 42.02.01).
+                    </ru>
+                    <en>PR managers are responsible for creating and maintaining a favorable image of their company or
+                        one of its brands.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Биоинформатик</ru>
+            <en>Bioinformatician</en>
+        </name>
+        <combs>
+            <!--            <comb comb="natural,it,math"/>-->
+            <!--            <comb comb="natural,math"/>-->
+            <!--            <comb comb="natural,it"/>-->
+            <comb comb="natural:30,it:40,math:30"/>
+            <comb comb="natural:30,math:70"/>
+            <comb comb="natural:30,it:70"/>
+            <!--            <comb comb="natural:20,it:40,math:40"/>-->
+        </combs>
+        <values>
+            <value value="intel,indoor,benefit,safe,light-work,result,high-society"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Биоинформатик</ru>
+                    <en>Bioinformatician</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/5/0xAxJ0RI5h.jpg</pic>
+                <link>https://www.profguide.io/professions/bioinformatik.html</link>
+                <text>
+                    <ru>
+                        Биоинформатик – человек, занимающийся анализом медико-биологических данных. Он разрабатывает, а
+                        также применяет алгоритмические, вычислительные и иные методы, позволяющие узнать больше об
+                        информации, заключенной в наших клетках, иных биологических данных. Код специальности: 06.05.01.
+                    </ru>
+                    <en>Bioinformaticians analyze biomedical data. They develop and apply algorithmic, computational,
+                        and other methods to learn more about the information contained in our cells as well as other
+                        biological data.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Мехатроник (робототехник)</ru>
+            <en>Mechatronics engineer (robotics technician)</en>
+        </name>
+        <combs>
+            <!--            <comb comb="tech,math,it"/>-->
+            <comb comb="tech:34,math:33,it:33"/>
+        </combs>
+        <values>
+            <value value="intel,indoor,result,benefit,difference,big-company,promotion,people,safe"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Мехатроник (робототехник)</ru>
+                    <en>Mechatronics engineer (robotics technician)</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/5/IQ6pnDQM5O.jpg</pic>
+                <link>https://www.profguide.io/professions/robotics.html</link>
+                <text>
+                    <ru>
+                        Робототехник (мехатроник) разрабатывает роботов. Готовят робототехников в некоторых технических
+                        вузах. При поступлении сдают профильную математику, физику и русский язык. Коды специальности:
+                        15.03.06, 11.03.03. А также готовят в колледжах по коду специальности 15.02.11.
+                    </ru>
+                    <en>Robotics engineers (mechatronic engineers) develop robots.</en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Аналитик больших данных</ru>
+            <en>Big data analysts</en>
+        </name>
+        <combs>
+            <!--            <comb comb="math,it"/>-->
+            <!--            <comb comb="math"/>-->
+            <comb comb="math:50,it:50"/>
+            <comb comb="math:100"/>
+        </combs>
+        <values>
+            <value value="intel,work-alone,safe,big-company,result,indoor,free-time,light-work"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Аналитик больших данных</ru>
+                    <en>Big data analysts</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/21/qh97sWKg23.jpg</pic>
+                <link>https://www.profguide.io/professions/big-data-analyst.html</link>
+                <text>
+                    <ru>
+                        Собирает, обрабатывает и интерпретирует числовые данные, полученные в результате взаимодействия
+                        с
+                        рынком, исследования природы и общества.
+                        Результат его труда нужен для принятия решений во всех видах бизнеса, науке и политике. Хороший
+                        аналитик данных - это математик с навыками программиста, он должен понимать в бизнесе, для
+                        которого
+                        он работает. Готовят в вузах по специальностям "математика" (01.03.01), "прикладная математика"
+                        (01.03.04), "прикладная математика и информатика" (01.03.02), "статистика" (01.03.05). При
+                        поступлении в вузы сдают профильную математику, русский язык и информатику или физику.
+                    </ru>
+                    <en>Collect, process, and interpret numerical data from market interactions, nature, and social
+                        research. Their work is needed for decision- making at all levels of business, science, and
+                        politics. Good data analysts are mathematicians with programming skills who understand the
+                        business context of their work.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession not="art,it,tech,war,math,boss">
+        <name>
+            <ru>Медсестра (медбрат)</ru>
+            <en>Nurse</en>
+        </name>
+        <combs>
+            <!--            <comb comb="body,natural,com"/>-->
+            <!--            <comb comb="body,natural"/>-->
+            <!--            <comb comb="natural,craft"/>-->
+            <comb comb="natural:25,com:25,craft:25,body:25"/>
+            <comb comb="natural:33,com:33,craft:34"/>
+            <comb comb="natural:50,craft:50"/>
+            <!--            <comb comb="body:25,natural:25,com:25,craft:25"/>-->
+        </combs>
+        <values>
+            <value value="people,hands,hands,body,result,benefit,indoor,difference"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Медсестра (медбрат)</ru>
+                    <en>Nurse</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/8/TGj0PCaETH.jpg</pic>
+                <link>https://www.profguide.io/professions/medsestra.html</link>
+                <text>
+                    <ru>
+                        Медсестра (медицинская сестра, брат) – специалист в области сестринского дела, профессиональный
+                        помощник лечащего врача. Готовят медсестер в медицинских колледжах, куда поступают сегодня без
+                        экзаменов, но
+                        по результату тестирования. Коды специальности: 34.02.01, 31.02.01.
+                    </ru>
+                    <en>Nurses are a specialists in nursing, a professional assistants to attending physician.</en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession not="art,it,tech,war,craft,boss">
+        <name>
+            <ru>Главная медсестра</ru>
+            <en>Head nurse</en>
+        </name>
+        <combs>
+            <!--            <comb comb="com,hoz"/>-->
+            <comb comb="com:50,hoz:50"/>
+            <!--            <comb comb="com:40,hoz:45,math:15"/>-->
+        </combs>
+        <values>
+            <value value="people,light-work,intel,indoor,safe,promotion,high-society"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Главная медсестра</ru>
+                    <en>Head nurse</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/8/3lCsaHEBXs.jpg</pic>
+                <link>https://www.profguide.io/professions/home_nurse.html</link>
+                <text>
+                    <ru>
+                        Управляет средним медицинским персоналом и контролирует его работу: медицинские сёстры,
+                        администраторы: формирует рабочие смены, ведет табель, подбирает персонал, оформляет документы
+                        для
+                        выписки больных, распределяет, хранит и ведет учёт использования перевязочных материалов,
+                        медикаментов и лекарственных средств. Обучают в медицинском колледже (сестринское дело,
+                        фельдшерское
+                        дело - поступают без экзаменов, коды специальности: 34.02.01, 31.02.01.) и в медицинском вузе на
+                        факультете Сестринское дело (при поступлении
+                        сдают биологию, химию и русский язык, код специальности: 34.03.01).
+                    </ru>
+                    <en>Head nurses manage paramedical personnel (nurses, administrators) and control their work: form
+                        work shifts, maintain a time sheet, select personnel, draw up documents for discharge of
+                        patients, distribute, stores and keep records of the use of dressings, medicines and medicines.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession not="art,human,it,tech">
+        <name>
+            <ru>Фармацевт</ru>
+            <en>Pharmacists Or druggists</en>
+        </name>
+        <combs>
+            <!--            <comb comb="natural,com"/>-->
+            <comb comb="natural:75,com:25"/>
+            <!--            <comb comb="natural:40,com:20,math:20,hoz:20"/>-->
+        </combs>
+        <values>
+            <value value="intel,benefit,result,indoor,people,promotion,difference,light-work,safe"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Фармацевт</ru>
+                    <en>Pharmacists Or druggists</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/8/FxfJP0WKcP.jpg</pic>
+                <link>https://www.profguide.io/professions/provizor.html</link>
+                <text>
+                    <ru>
+                        Он же провизор. Как правило, работает в аптеке, знает всё о лекарствах, их составе и свойствах,
+                        консультирует покупателей о наличии лекарственных средств в аптеке, продаёт их покупателям,
+                        занимается
+                        учётом товара в аптеке. Провизоры работают также в заготовительных подразделениях фабрик (сбор и
+                        обработка
+                        лекарственных растений), на аптечных складах и в аналитических лабораториях контролирующих
+                        органов.
+                        А также
+                        в организациях, занимающихся оптовой продажей медицинских препаратов. Обучают в фармацевтических
+                        или
+                        медицинских колледжах, в медицинских вузах (сдают биологию, химию и русския язык).
+                    </ru>
+                    <en>As a rule, they work at pharmacies, know everything there is to know about medicines, advise
+                        customers regarding medicine availability, sell medicines to customers, and track pharmacy
+                        products. Pharmacists also work in factory procurement units (collection and processing at
+                        medicinal plants), pharmacy warehouses, the analytical laboratories of regulatory agencies, and
+                        wholesale medicine distributors.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Менеджер по персоналу</ru>
+            <en>Human Resources Manager</en>
+        </name>
+        <combs>
+            <!--            <comb comb="human,com"/>-->
+            <comb comb="human:30,com:55,math:15"/>
+            <comb comb="human:30,com:70"/>
+        </combs>
+        <values>
+            <value value="people,intel,result,safe,light-work,indoor,promotion,big-company"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Менеджер по персоналу</ru>
+                    <en>Human Resources Manager</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/5/bREBEwWkSH.jpg</pic>
+                <link>https://www.profguide.io/professions/hr-manager.html</link>
+                <text>
+                    <ru>
+                        Менеджер по персоналу (HR-менеджер) — специалист, отвечающий за формирование кадровых ресурсов в
+                        организации, их адаптацию, обучение, развитие, аттестацию, мотивацию. Готовят специалистов в
+                        вузах
+                        различного профиля на факультете Управление персоналом. Сдают профильную математику,
+                        обществознание
+                        и русский язык. Коды специальности: 38.03.02, 38.03.03, 37.03.01.
+                    </ru>
+                    <en>Personnel managers (HR-managers) are responsible for the formation of human resources in the
+                        organization, their adaptation, training, development, certification, motivation.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Менеджер гостиницы, менеджер ресторана</ru>
+            <en>Hotel managers (hoteliers)</en>
+        </name>
+        <combs>
+            <!--            <comb comb="com,hoz"/>-->
+            <comb comb="com:40,hoz:40,math:20"/>
+            <comb comb="com:50,hoz:50"/>
+        </combs>
+        <values>
+            <value value="people,indoor,difference,promotion"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Менеджер гостиницы (отельер)</ru>
+                    <en>Hotel managers (hoteliers)</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/7/QgOUls5RxF.jpg</pic>
+                <link>https://www.profguide.io/professions/hotel-manager.html</link>
+                <text>
+                    <ru>
+                        Управляющий отелем — верхняя ступень в карьерной лестнице персонала гостиницы. Он руководит
+                        всеми
+                        подразделениями отеля: службами по бронированию мест, приему и размещению гостей, организацией
+                        телефонной и информационной службы, сервисными подразделениями, рестораном, салонами красоты.
+                        Готовят гостиничных менеджеров в колледжах (поступают без экзаменов, коды специальности:
+                        43.02.14,
+                        43.02.11) и в вузах (сдают английский,
+                        язык, обществознание и русский язык или русский язык, историю и обществознание, код
+                        специальности:
+                        43.03.03).
+                    </ru>
+                    <en>Hotel managers are at the top of the hotel staff career ladder.
+                        They manage all hotel departments: reservation services, reception and accommodation, the phone
+                        and information service, service departments, restaurants, and beauty salons.
+                    </en>
+                </text>
+            </kind>
+            <kind>
+                <name>
+                    <ru>Менеджер ресторана</ru>
+                    <en>Restaurant manager</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/12/n8bc1ntn8l.jpg</pic>
+                <link>https://www.profguide.io/professions/manager-restorana.html</link>
+                <text>
+                    <ru>
+                        Организовывает всю работу ресторана: взаимодействие подразделений между собой), распределяет
+                        работу
+                        сотрудников, составляет расписание работы смен, заказывает посуду и т.п., набирает и увольняет
+                        сотрудников, ведёт документооборот, организовывает и контролирует проведения заказных
+                        мероприятий,
+                        решает конфликтные ситуации.
+                        Знает стандарты качества обслуживания и приучает сотрудников к ним. Обучают в колледжах и в
+                        вузах на
+                        факультете "Технология продукции и организация ресторанного дела" (сдают профильную математику,
+                        химию и русский язык).
+                    </ru>
+                    <en>Restaurant manager organize all the work of the restaurant: interaction of departments among
+                        themselves), distributes the work of employees, schedules shifts, orders dishes, etc., hire and
+                        fire employees, maintain paperwork, organize and monitor events, resolve conflict situations.
+                        They know quality standards of service and trains employees to them.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession not="human,art,it,natural">
+        <name>
+            <ru>Управляющий недвижимостью</ru>
+            <en>Property managers</en>
+        </name>
+        <combs>
+            <!--            <comb comb="com,tech,math,hoz,boss"/>-->
+            <!--            <comb comb="com,math,hoz,boss"/>-->
+            <!--            <comb comb="com,math,hoz"/>-->
+            <comb comb="com:35,hoz:35,math:20,tech:10"/>
+            <comb comb="com:40,hoz:40,math:20"/>
+        </combs>
+        <values>
+            <value value="people,indoor,big-company,high-society"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Управляющий недвижимостью</ru>
+                    <en>Property managers</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/2/pSkLne7kAF.jpg</pic>
+                <link>https://www.profguide.io/professions/upravlyaushiy_nedvijimostiu.html</link>
+                <text>
+                    <ru>
+                        Комплексно управляет крупными объектами недвижимости: 1) коммерческими (торговые, офисные
+                        центры).
+                        Цель - чтобы недвижимость приносила деньги владельцам. Поэтому он организует процесс привлечения
+                        арендаторов и сбора арендных платежей. Обучает сотрудников и контролирует их работу, в том числе
+                        и
+                        технических служб, ведь здание должно находиться в хорошем состоянии. 2) Управление
+                        некоммерческой
+                        недвижимостью не предполагает сдачи помещений в аренду, но предполагает содержание его в
+                        надлежащем
+                        виде.
+                        Для этой работы возможно и высшее строительное образование (сдают физику, математику, русский
+                        язык),
+                        образование ЖКХ (сдают профильную математику, обществознание и русский язык), высшее финансовое
+                        или
+                        управленческое (управление недвижимостью: сдают профильную математику, обществознание и русский
+                        язык).
+                    </ru>
+                    <en>Manage large properties: 1) Commercial (shopping, office centers). The goal is for the property
+                        to make money for the owners, so they attract tenants and collect rent. Train employees and
+                        supervise their work, including technical services, since the buildings in their charge must be
+                        in good condition. 2) Non-commercial. Managing non-commercial real estate does not involve
+                        renting out the premises, though it does involve keeping them in good condition.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Финансовый аналитик</ru>
+            <en>Financial analyst</en>
+        </name>
+        <combs>
+            <!--            <comb comb="math"/>-->
+            <comb comb="math:55,boss:25,com:20"/>
+            <comb comb="math:55,boss:45"/>
+            <comb comb="math:100"/>
+        </combs>
+        <values>
+            <value value="intel,big-company,indoor,work-alone,promotion,light-work,result"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Финансовый аналитик</ru>
+                    <en>Financial analyst</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/6/UR1vY7WcoH.jpg</pic>
+                <link>https://www.profguide.io/professions/finansoviy_analitik.html</link>
+                <text>
+                    <ru>
+                        Финансовый аналитик принимает активное участие в управлении финансами и его оптимизации. Он
+                        оценивает риски и потенциальную выгоду для каждого конкретного рыночного предложения, помогает
+                        выбрать перспективные направления инвестиций, оценивает финансовое состояние контрагента или
+                        рыночной отрасли. Обучают в вузе на факультете Финансы и кредит, на факультете Экономика
+                        предприятия. При поступлении сдают профильную математику, обществознание и русский язык. Код
+                        специальности: 38.03.01.
+                    </ru>
+                    <en>Financial analysts play an active role in financial management and optimization. They assess
+                        risks and potential benefits for specific proposals, help identify promising areas for
+                        investment, and assess the financial state of counterparties or industries.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession not="human,art,it,tech,war,natural">
+        <name>
+            <ru>Бухгалтер, аудитор</ru>
+            <en>Accountant, Auditor</en>
+        </name>
+        <combs>
+            <!--            <comb comb="math"/>-->
+            <comb comb="math:80,com:20"/>
+            <comb comb="math:100"/>
+        </combs>
+        <values>
+            <value value="intel,promotion,indoor,light-work,people"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Бухгалтер</ru>
+                    <en>Accountant</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/9/cL-JpXzSEa.jpg</pic>
+                <link>https://www.profguide.io/professions/buhgalter.html</link>
+                <text>
+                    <ru>
+                        Бухгалтер — это специалист, ведущий бухгалтерский учёт в организации. Обучают в колледжах
+                        (поступление без экзаменов, код специальности 38.02.01) и в вузах (сдают профильную математику,
+                        обществознание и русский язык, код специальности 38.03.01).
+                    </ru>
+                    <en>Accountants keep accounts in an organization.</en>
+                </text>
+            </kind>
+            <kind>
+                <name>
+                    <ru>Аудитор</ru>
+                    <en>Auditor</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/4/nBXF_pijCI.jpg</pic>
+                <link>https://www.profguide.io/professions/auditor.html</link>
+                <text>
+                    <ru>
+                        Аудитор — специалист, занимающийся аудитом (проверкой документов, финансовой и налоговой
+                        отчетности)
+                        и консультационной деятельностью, связанной с наладкой бухгалтерского учета. Обучают в колледжах
+                        (поступление без экзаменов, код специальности 38.02.01) и в вузах (сдают профильную математику,
+                        обществознание и русский язык, код специальности 38.03.01).
+                    </ru>
+                    <en>Auditors are engaged in auditing (verification of documents, financial and tax reporting) and
+                        consulting activities related to the adjustment of accounting.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession not="human,art,tech,war,natural">
+        <name>
+            <ru>Экономист, специалист по управленческому учёту</ru>
+            <en>Economist, managerial accounting specialist</en>
+        </name>
+        <combs>
+            <!--            <comb comb="math"/>-->
+            <comb comb="math:80,com:20"/>
+            <comb comb="math:100"/>
+        </combs>
+        <values>
+            <value value="intel,result,indoor,light-work,safe"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Экономист, специалист по управленческому учёту</ru>
+                    <en>Economist, managerial accounting specialist</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/4/xetOmwoaxc.jpg</pic>
+                <link>https://www.profguide.io/professions/economist.html</link>
+                <text>
+                    <ru>
+                        Разрабатывает систему управленческого финансового учета предприятия, фирмы. Ведет управленческий
+                        финансовый учёт в компании, участвует в бюджетировании, формирует финансовые отчеты руководству
+                        компании. Обучают на факультетах "Экономика предприятия", "Финансы и кредит" (сдают профильную
+                        математику,
+                        обществознание и русский язык).
+                    </ru>
+                    <en>Develop a system of financial management accounting enterprise, company, keep financial
+                        management accounts, participate in budgeting, and prepares financial reports for the company's
+                        management.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession not="human,art,tech,war,natural">
+        <name>
+            <ru>Налоговый консультант, налоговый инспектор</ru>
+            <en>Tax Consultant</en>
+        </name>
+        <combs>
+            <!--            <comb comb="math,com"/>-->
+            <comb comb="math:50,com:50"/>
+        </combs>
+        <values>
+            <value value="intel,indoor,light-work,promotion,gov,safe,people"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Налоговый консультант</ru>
+                    <en>Tax Consultant</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/2/SNoJ3wq1p7.jpg</pic>
+                <link>https://www.profguide.io/professions/Nalogovyy_konsultant.html</link>
+                <text>
+                    <ru>
+                        Консультирует руководителей компаний по вопросам налогообложения, дает рекомендации по уплате
+                        налогов законным способом, помогает компании избежать налоговых рисков. Анализирует договоры
+                        компании на соответствие налоговому законодательству. Решает вопросы по налоговому аудиту и
+                        участвует в переговорах с УБЭП и другими государственными организациями. Образование налогового
+                        консультанта предполгает знание финансов предприятия и знание юриспруденции. Обучают на
+                        факультетах
+                        Финансы и кредит (сдают профильную математику, обществознание и русский язык) или на факультете
+                        Налоги, аудит и бизнес-анализ (сдают профильную математику, обществознание и русския язык). Коды
+                        специальности: 38.05.01, 38.03.01.
+
+                    </ru>
+                    <en>Advise company executives on taxation issues, makes recommendations on how to pay taxes legally,
+                        and helps the company avoid tax risks. Analyze company contracts for compliance with tax law.
+                        Resolve tax audit issues and participates in negotiations with the DEA and other government
+                        agencies.
+                    </en>
+                </text>
+            </kind>
+            <kind>
+                <name>
+                    <ru>Налоговый инспектор</ru>
+                    <en>Tax inspector</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/9/NavSHDzTlj.jpg</pic>
+                <link>https://www.profguide.io/professions/nalogoviy-inspector.html</link>
+                <text>
+                    <ru>
+                        Налоговый инспектор работает в Государственной Налоговой Инспекции, он проверяет точность оплаты
+                        налогов, получает образование там же, где и налоговый консультант. Обучают на факультетах
+                        Финансы и кредит (сдают профильную математику, обществознание и русский язык) или на факультете
+                        Налоги, аудит и бизнес-анализ (сдают профильную математику, обществознание и русския язык). Коды
+                        специальности: 38.05.01, 38.03.01.
+                    </ru>
+                    <en>Tax inspectors work for the State Tax Inspectorate, check the accuracy of t ax payments, and is
+                        educated in the same place as a tax consultant.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Специалист рынка ценных бумаг, инвестиционный консультант</ru>
+            <en>Securities specialists, investment consultants</en>
+        </name>
+        <combs>
+            <!--            <comb comb="math"/>-->
+            <comb comb="math:80,com:20"/>
+            <comb comb="math:100"/>
+        </combs>
+        <values>
+            <value value="intel,result,indoor,people,light-work"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Специалист рынка ценных бумаг, инвестиционный консультант</ru>
+                    <en>Securities specialists, investment consultants</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/24/ktr7mWKGCe.jpg</pic>
+                <text>
+                    <ru>
+                        Совершает торговые операции с ценными бумагами, валютой и производными финансовыми инструментами
+                        на
+                        биржах и внебиржевых рынках; управляет ликвидностью портфеля компании, оценивает риски и
+                        доходность
+                        ценных бумаг и т.п. Обучение на факультетах Финансы и кредит (сдают профильную математику,
+                        оществознание и русский язык) и Математика (сдают математику, физику либо информатику и русский
+                        язык).
+                    </ru>
+                    <en>Trade securities, currencies, and derivative financial instruments on exchanges and OTC markets,
+                        manage company portfolio liquidity, assess security risks and yields of securities, and more.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Разработчик компьютерных программ</ru>
+            <en>Developer of computer programs</en>
+        </name>
+        <text>
+            <ru>
+                Примеры: frontend-разработчик, программист PHP/JAVA/Python
+            </ru>
+            <en>Examples: frontend developer, PHP/JAVA/Python programmer</en>
+        </text>
+        <combs>
+            <!--            <comb comb="it,tech,math"/>-->
+            <!--            <comb comb="it,tech"/>-->
+            <!--            <comb comb="it,math"/>-->
+            <!--            <comb comb="tech,math"/>-->
+            <!--            <comb comb="it"/>-->
+            <comb comb="it:25,tech:25,math:25,com:25"/>
+            <comb comb="it:60,tech:20,com:20"/>
+            <comb comb="it:60,math:20,com:20"/>
+            <comb comb="it:50,tech:50"/>
+            <comb comb="it:50,math:50"/>
+            <comb comb="it:80,com:20"/>
+            <comb comb="it:100"/>
+        </combs>
+        <values>
+            <value value="intel,result,indoor,promotion,people,difference,light-work,safe,salary,self-employ"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Программист</ru>
+                    <en>Programmer</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/7/9UWbiqR8ZP.jpg</pic>
+                <link>https://www.profguide.io/professions/programmer.html</link>
+                <text>
+                    <ru>
+                        Занимается созданием компьютерных программ для всех видов человеческой деятельности: бизнес,
+                        производство, наука, образование, игры, кино и т.д. Обучают в колледжах (поступление без
+                        экзаменов
+                        по среднему баллу аттестата) и в вузах. В вузах на факультете "Прикладная информатика",
+                        "Программная
+                        инженерия". При поступлении сдают профильную математику, информатику или физику, а также русский
+                        язык.
+                    </ru>
+                    <en>Programmers create computer programs for all kinds of human activities: business, manufacturing,
+                        science, education, games, movies, etc.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Системный администратор</ru>
+            <en>System administrator</en>
+        </name>
+        <combs>
+            <!--            <comb comb="tech,math,it"/>-->
+            <!--            <comb comb="tech,it"/>-->
+            <comb comb="it:30,tech:20,math:30,com:20"/>
+            <comb comb="it:60,tech:20,com:20"/>
+            <comb comb="it:60,math:20,com:20"/>
+            <comb comb="it:50,tech:50"/>
+            <comb comb="it:50,com:50"/>
+            <comb comb="it:100"/>
+        </combs>
+        <values>
+            <value value="intel,result,indoor,promotion,people,difference,big-company,hands,benefit"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Системный администратор</ru>
+                    <en>System administrator</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/7/Coj3YrQCGa.jpg</pic>
+                <link>https://www.profguide.io/professions/system-administrator.html</link>
+                <text>
+                    <ru>
+                        Системный администратор – это специалист по обслуживанию компьютеров и локальных компьютерных
+                        сетей.
+                        Обучают системных администраторов в колледжах по специальности Компьютерные системы и сети
+                        (поступают в колледж без экзаменов, но по среднему баллу аттестата, коды специальности:
+                        09.02.07,
+                        09.02.06, 09.02.01, 09.02.04) и в технических вузах (сдают
+                        физику и профильную математику, а также русский язык, коды специальности: 09.03.03, 09.03.01,
+                        10.03.01, 02.03.03).
+                    </ru>
+                    <en>System administrators maintain computers and local computer networks.</en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Специалист по информационной безопасности</ru>
+            <en>Information security specialists</en>
+        </name>
+        <combs>
+            <!--            <comb comb="math,it"/>-->
+            <!--            <comb comb="it"/>-->
+            <comb comb="math:30,it:30,tech:20,com:20"/>
+            <comb comb="math:30,it:70"/>
+            <comb comb="it:100"/>
+        </combs>
+        <values>
+            <value value="intel,light-work,result,indoor,promotion,people,big-company,benefit"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Специалист по информационной безопасности</ru>
+                    <en>Information security specialists</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/7/fP5DnksDm4.jpg</pic>
+                <link>https://www.profguide.io/professions/specialist_in_information_security.html</link>
+                <text>
+                    <ru>
+                        Специалисты по информационной безопасности принимают непосредственное участие в создании системы
+                        защиты информации, ее аудите и мониторинге, анализируют информационные риски, разрабатывают и
+                        внедряют мероприятия по их предотвращению. Обучают специалистов ИБ в вузах, при поступлении
+                        сдают
+                        профиотную математику и физику, а также русский язык. Коды специальности: 10.05.03, 10.03.01.
+                    </ru>
+                    <en>Information security specialists are directly involved in creating an information protection
+                        system, auditing and monitoring it, analyzing information risks, and developing and implementing
+                        measures to mitigate those risks.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Бизнес-аналитик</ru>
+            <en>Business Analyst</en>
+        </name>
+        <combs>
+            <!--            <comb comb="math,com"/>-->
+            <comb comb="math:34,com:33,it:33"/>
+            <comb comb="math:50,com:50"/>
+        </combs>
+        <values>
+            <value value="intel,people,result,benefit,indoor,promotion,difference,big-company,light-work"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Бизнес-аналитик</ru>
+                    <en>Business Analyst</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/7/iwQYQUZ5tR.jpg</pic>
+                <link>https://www.profguide.io/professions/system_analyst.html</link>
+                <text>
+                    <ru>
+                        Бизнес-аналитик (системный аналитик) — это специалист в области анализа предметной области и
+                        формулирования требований к разрабатываемым информационным системам и прикладному программному
+                        обеспечению. Обучают в вузах по специальности Бизнес-информатика (сдают профильную математику,
+                        обществознание или иностранный язык, также русский язык) или архитектура предприятия (сдают
+                        профильную математику, обществознание). Коды специальности: 38.03.05, 09.03.03, 09.03.02.
+                    </ru>
+                    <en>Business analysts analyze subject area and formulate requirements for information systems and
+                        application software to be developed.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Uх-дизайнер</ru>
+            <en>Ux-designer</en>
+        </name>
+        <combs>
+            <!--            <comb comb="it,com,math"/>-->
+            <!--            <comb comb="it,com"/>-->
+            <!--            <comb comb="com,math"/>-->
+            <comb comb="com:25,math:25,human:25,art:25"/>
+            <comb comb="com:50,math:25,human:25"/>
+            <comb comb="it:50,com:50"/>
+            <comb comb="com:50,math:50"/>
+        </combs>
+        <values>
+            <value value="intel,result,safe,free-time,light-work,people,benefit,indoor"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Uх-дизайнер</ru>
+                    <en>Ux-designer</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/10/bmiTGapHLe.jpg</pic>
+                <link>https://www.profguide.io/professions/ux-designer.html</link>
+                <text>
+                    <ru>
+                        UX-дизайнер – это специалист, который отвечает за разработку удобного дизайна взаимодействия с
+                        пользователем. Профессия находится на стыке программирования, дизайна и инженерной психологии.
+                        Коды
+                        специальности для высшего образования: 54.03.01, 54.05.03.
+                    </ru>
+                    <en>UX-designers develop user-friendly design of interaction with the user. This profession is at
+                        the intersection of programming, design and engineering psychology.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Тестировщик программного обеспечения</ru>
+            <en>Software tester</en>
+        </name>
+        <combs>
+            <!--            <comb comb="it,math"/>-->
+            <!--            <comb comb="it"/>-->
+            <comb comb="it:34,math:33,com:33"/>
+            <comb comb="it:70,com:30"/>
+            <comb comb="it:100"/>
+        </combs>
+        <values>
+            <value value="intel,indoor,result,light-work,benefit,people,safe"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Тестировщик программного обеспечения</ru>
+                    <en>Software tester</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/7/tyGHzmJ1AM.jpg</pic>
+                <link>https://www.profguide.io/professions/software_tester.html</link>
+                <text>
+                    <ru>
+                        Тестировщики программного обеспечения оценивают программное обеспечение с точки зрения экспертов
+                        и
+                        обычных пользователей, главная цель их деятельности – выявление и устранение ошибок ПО. Чтобы
+                        стать
+                        тестировщиком ПО, можно пройти курсы или окончить факультет программирования в вузе (сдают
+                        профильную математику, физику или инорфматику и русский язык, коды специальности: 01.04.02,
+                        09.03.01, 10.05.04, 10.03.01) или в колледже (поступают без
+                        экзаменов, но часто по среднему баллу аттестата, коды специальности: 09.02.07, 09.02.02).
+                    </ru>
+                    <en>Software testers evaluate software from the perspective of both experts and ordinary users with
+                        the main objective being to identify and eliminate software bugs.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Интернет-маркетолог</ru>
+            <en>Internet Marketer</en>
+        </name>
+        <text>
+            <ru>
+                Виды: SMM, SEO, SMM
+            </ru>
+            <en>Types: SMM, SEO, SMM</en>
+        </text>
+        <combs>
+            <!--            <comb comb="human,math,it"/>-->
+            <!--            <comb comb="human,math"/>-->
+            <comb comb="human:33,math:33,com:34"/>
+            <comb comb="human:50,math:50"/>
+        </combs>
+        <values>
+            <value value="intel,result,people,benefit,indoor,difference,free-time,light-work"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Интернет-маркетолог</ru>
+                    <en>Internet marketer</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/6/jm3xwn65gS.jpg</pic>
+                <link>https://www.profguide.io/professions/internet_marketer.html</link>
+                <text>
+                    <ru>
+                        Интернет-маркетолог — это специалист, который осуществляет комплекс маркетинговых мероприятий в
+                        сфере сетевых технологий с целью продвижения на рынке товаров и различных услуг. Обучают на
+                        курсах.
+                        В качестве базового образования можно взять маркетинг (сдают профильную математику,
+                        обществознание и
+                        русский язык). Коды специальности: 38.03.02, 38.03.05, 39.03.01.
+                    </ru>
+                    <en>Internet marketers are specialists who execute marketing strategies online to promote goods and
+                        services.
+                    </en>
+                </text>
+            </kind>
+            <kind>
+                <name>
+                    <ru>SEO-специалист</ru>
+                    <en>SEO specialist</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/7/9FbcgsrhLm.jpg</pic>
+                <link>https://www.profguide.io/professions/seo_specialist.html</link>
+                <text>
+                    <ru>
+                        SEO-специалист осуществляет поисковую оптимизацию сайтов. Его основной задачей является
+                        настройка
+                        сайта под требования топовых поисковых систем. Необходимо выполнить это с минимальными затратами
+                        времени и средств, стараясь удержать/занять высокие позиции поисковой выдачи. Обучают на курсах.
+                        В
+                        качесвте базового обрзования можно взять любое айти образование (сдают физику, профильную
+                        математику
+                        или ИКТ, а также русский язык) или маркетинговое образование (сдают русский, профильную
+                        математику и
+                        обществознание). Примерные коды специальности: 38.03.05, 09.03.02.
+                    </ru>
+                    <en>SEO specialists optimize websites for search engines. Their main job is making sure sites meet
+                        the requirements of the top search engines. That needs to happen at a minimum of time and money,
+                        trying to achieve and maintain a high position in search results.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Гейм-дизайнер</ru>
+            <en>Game designer</en>
+        </name>
+        <combs>
+            <!--            <comb comb="art,com,it,human"/>-->
+            <!--            <comb comb="art,com,it"/>-->
+            <comb comb="human:50,art:25,com:25"/>
+        </combs>
+        <values>
+            <value value="intel,people,art,result,safe,free-time,high-society,light-work,difference,indoor"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Гейм-дизайнер</ru>
+                    <en>Game designer</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/7/bnbi2bKHKY.jpg</pic>
+                <link>https://www.profguide.io/professions/Geym_dizayner.html</link>
+                <text>
+                    <ru>
+                        Гейм-дизайнер (game designer, геймдиз) — это создатель игр в широком смысле этого слова. Его
+                        можно
+                        назвать продюсером игр, ответственным за игровой дизайн проекта. Обучают на курсах и в вузах
+                        (сдают
+                        русский язык и литературу, а также риснок). Коды специальности: 54.03.01, 09.03.02, 09.03.03,
+                        54.05.03.
+                    </ru>
+                    <en>Game designers create games in the broadest sense of the word. They can be called a game
+                        producer, responsible for the game design of the project.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Графический дизайнер</ru>
+            <en>Graphic Designer</en>
+        </name>
+        <text>
+            <ru>
+                UI-дизайнер, 3D-визуализатор, Web-дизайнер, Дизайнер упаковки, дизайн логотипов и прочее.
+            </ru>
+            <en>UI-designer, 3D-visualizer, Web-designer,packaging designer, logo design and more. Graphic designers
+                develop logos, websites, corporate identity of companies, printing products, billboards, pointers,
+                fonts, computer games, etc. by means of graphics.
+            </en>
+        </text>
+        <combs>
+            <!--            <comb comb="art,it,com"/>-->
+            <!--            <comb comb="art,it"/>-->
+            <!--            <comb comb="art"/>-->
+            <comb comb="art:60,com:20,it:20"/>
+            <comb comb="art:80,com:20"/>
+            <comb comb="art:100"/>
+        </combs>
+        <values>
+            <value value="intel,art,indoor,difference,people,promotion,light-work,safe"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Графический дизайнер</ru>
+                    <en>Graphic Designer</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/6/dyDmEpXQWg.jpg</pic>
+                <link>https://www.profguide.io/professions/Graficheskiy_dizayner.html</link>
+                <text>
+                    <ru>
+                        Графический дизайнер разрабатывает средствами графики логотипы, сайты, фирменный стиль компаний,
+                        полиграфическую продукцию, рекламные щиты, указатели, шрифты, компьютерные игры и прочее.
+                        Готовят
+                        графических дизайнеров в вузах (код специальности 54.03.01, 54.05.03), при поступлении сдают
+                        русский
+                        язык, литературу, проходят творческий конкурс. Есть и колледжи графических дизайнеров. Сюда
+                        поступают по творческому конкурсу. Код специальности 54.01.20.
+                    </ru>
+                    <en>UI-designer, 3D-visualizer, Web-designer,packaging designer, logo design and more. Graphic
+                        designers develop logos, websites, corporate identity of companies, printing products,
+                        billboards, pointers, fonts, computer games, etc. by means of graphics.
+                    </en>
+                </text>
+            </kind>
+            <kind>
+                <name>
+                    <ru>UI-дизайнер</ru>
+                    <en>UI-designer</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/11/anF9vckhmr.jpg</pic>
+                <link>https://www.profguide.io/professions/ui-designer.html</link>
+                <text>
+                    <ru>
+                        UI-дизайнер отвечает за интерактивную и визуальную реализацию удобного интерфейса какого-либо
+                        программного продукта. Обучают в колледжах по специальности Графический дизайн (при поступлении
+                        сдают рисунок) и в вузах (сдают русский, литературу и рисунок).
+                    </ru>
+                    <en>UI designers are responsible for interactive and visual implementation of a user-friendly
+                        interface of a software product.
+                    </en>
+                </text>
+            </kind>
+            <kind>
+                <name>
+                    <ru>Web-дизайнер</ru>
+                    <en>Web designer</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/7/xmleWmnny4.jpg</pic>
+                <link>https://www.profguide.io/professions/web_designer.html</link>
+                <text>
+                    <ru>
+                        Web-дизайнер — это человек, обладающий художественным вкусом и знаниями интернет-технологий,
+                        который
+                        создает Web-страницы и объединяет их в Web-сайты. Главная задача web-дизайнера — оформить
+                        интернет-проект так, чтобы как можно больше пользователей им заинтересовалось. Обучают в
+                        колледжах (сдают рисунок) и вузах (сдают русский язык, литературу, рисунок и композицию).
+                    </ru>
+                    <en>Web designers are people with an artistic flair and knowledge of internet technology who create
+                        web pages and combine them into websites. Their main job is to design internet projects in such
+                        a way that they attract as many users as possible.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Компьютерный лингвист</ru>
+            <en>Computer linguist</en>
+        </name>
+        <combs>
+            <!--            <comb comb="human,math,it"/>-->
+            <!--            <comb comb="human,it"/>-->
+            <comb comb="human:33,math:34,it:33"/>
+            <comb comb="human:50,it:50"/>
+        </combs>
+        <values>
+            <value value="intel,result,light-work,safe,people,indoor,big-company"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Компьютерный лингвист</ru>
+                    <en>Computer linguist</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/12/QT1k_UhTVc.jpg</pic>
+                <link>https://www.profguide.io/professions/compyuterniy-lingvist.html</link>
+                <text>
+                    <ru>
+                        Компьютерный лингвист – специалист, разрабатывающий алгоритмы распознавания звучащей речи,
+                        QA-систем, систем машинного перевода и т.д. Готовят в вузах, при поступлении сдают профильную
+                        математику, иностранный и русския языки. Коды специальности: 45.03.03, 45.03.04, 45.03.02.
+                    </ru>
+                    <en>Computer linguists develop algorithms for speech recognition, QA-systems, machine translation
+                        systems, etc
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession not="boss">
+        <name>
+            <ru>Историк</ru>
+            <en>Historian</en>
+        </name>
+        <combs>
+            <!--            <comb comb="human"/>-->
+            <comb comb="human:80,com:20"/>
+            <comb comb="human:100"/>
+        </combs>
+        <values>
+            <value value="intel,free-time,light-work,safe,people,indoor,travel,work-alone"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Историк</ru>
+                    <en>Historian</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/24/YSG3LsIfuV.jpg</pic>
+                <text>
+                    <ru>
+                        Специалист - исследователь прошлого. Специализируется на эпохе, на предмете (история искусства,
+                        история
+                        костюма, история науки, история оружия, история еды, архитектуры и прочего). Зарабатывает
+                        преподаванием, популяризацией знаний, написанием статей, книг. Обучают в институтах на
+                        исторических
+                        факультетах (при поступлении сдают: историю, иностранный, русский языки или обществознание).
+                    </ru>
+                    <en>Historians research the past. They specialize in an era or subject (the history of art,
+                        clothing, science, weapons, food, architecture, or something else). They earn money by teaching
+                        and writing articles and books to popularize knowledge.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession not="com" is="introvert">
+        <name>
+            <ru>Архивариус, библиотекарь</ru>
+            <en>Librarian, Archivist</en>
+        </name>
+        <combs>
+            <!--            <comb comb="human"/>-->
+            <comb comb="human:100"/>
+        </combs>
+        <values>
+            <value value="safe,gov,indoor,work-alone,light-work"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Библиотекарь</ru>
+                    <en>Librarian</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/6/pE9GfKIA1k.jpg</pic>
+                <link>https://www.profguide.io/professions/Bibliotekar.html</link>
+                <text>
+                    <ru>
+                        Библиотекарь – это сотрудник, который принимает участие в комплектовании библиотечного фонда,
+                        создании каталогов, справочно-информационных фондов, популяризации литературы и чтения, и
+                        обслуживает посетителей библиотеки. Обучают в библиотечных колледжах (поступление без экзамена,
+                        код специальности 51.02.03),
+                        в вузах (сдают историю, обществознание и русский язык, коды специальности 51.03.06, 46.03.02).
+                    </ru>
+                    <en>Librarians acquire books, complete catalogs, build reference materials, popularize literature
+                        and reading, and serve library visitors.
+                    </en>
+                </text>
+            </kind>
+            <kind>
+                <name>
+                    <ru>Архивариус</ru>
+                    <en>Archivist</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/6/ca7NBxIXuD.jpg</pic>
+                <link>https://www.profguide.io/professions/archivist.html</link>
+                <text>
+                    <ru>
+                        Архивист — это хранитель или сотрудник архива, отвечающий за систематизацию и учет документов,
+                        доверенных на хранение. Готовят в колледжах (поступление без экзамена, код специальности
+                        46.02.01),
+                        в вузах (сдают историю,
+                        обществознание и русский язык, код специальности 46.03.02).
+                    </ru>
+                    <en>Archivists are custodians or the archive employees responsible for systematizing and accounting
+                        for documents entrusted for safekeeping.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Продакт-менеджер</ru>
+            <en>Product manager</en>
+        </name>
+        <combs>
+            <!--            <comb comb="com,it,boss"/>-->
+            <!--            <comb comb="com,it"/>-->
+            <comb comb="com:25,boss:25,math:25,it:25"/> <!--продакт менеджер в IT-->
+            <comb comb="com:34,boss:33,math:33"/>
+            <comb comb="com:50,it:50"/>
+        </combs>
+        <values>
+            <value value="people,indoor,result,safe,difference,promotion"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Продакт-менеджер</ru>
+                    <en>Product manager
+                    </en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/2/dc-Fd009D2.jpg</pic>
+                <link>https://www.profguide.io/professions/pruduct_manager.html</link>
+                <text>
+                    <ru>
+                        Продукт-менеджер – это специалист, ответственный за создание нового продукта высокого качества.
+                        Чтобы стать продукт-менеджером, можно окончить факультет маркетинга (сдают профильную
+                        математику,
+                        обществознание, русский язык, иногда иностранный язык), инноватики (сдают профильную математику,
+                        физику или информатику) и/или технологический факультет (сдают профильную математику, физику или
+                        химию). Коды специальностей: 27.03.03, 38.03.02, 38.03.01.
+                    </ru>
+                    <en>Product managers create new high-quality product.</en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Проджект-менеджер, менеджер IT-проекта</ru>
+            <en>IT project manager</en>
+        </name>
+        <combs>
+            <!--            <comb comb="com,it"/>-->
+            <!--            <comb comb="com"/>-->
+            <comb comb="com:33,it:33,boss:34"/>
+            <comb comb="com:60,it:40"/>
+            <comb comb="com:100"/>
+        </combs>
+        <values>
+            <value value="intel,people,result,indoor,promotion,difference,light-work"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Менеджер IT-проекта</ru>
+                    <en>IT project manager</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/11/QklOsVsCW4.jpg</pic>
+                <link>https://www.profguide.io/professions/manager-it-proektov.html</link>
+                <text>
+                    <ru>
+                        Менеджер IT-проектов (Project Manager, PM) – это специалист, в обязанности которого входит
+                        беспрерывное управление проектом. В IT-команде он выполняет административно-управленческие
+                        функции:
+                        соблюдение сроков, решение текущих проблем, коммуникация. Обучают в вузах на специальности
+                        бизнес-информатика (сдают профильную математику и обществознание, также русский язык).
+                    </ru>
+                    <en>IT Project Managers (PM) are responsible for the day-to-day management of the project. In the IT
+                        team, they perform administrative and management functions: meeting deadlines, solving current
+                        problems, and communicating.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Предприниматель</ru>
+            <en>Entrepreneurs</en>
+        </name>
+        <text>
+            <ru>
+                Например, директор магазина
+            </ru>
+            <en>For example, store owners</en>
+        </text>
+        <combs>
+            <!--            <comb comb="hoz,boss,com"/>-->
+            <!--            <comb comb="boss,it,com"/>-->
+            <!--            <comb comb="boss,com"/>-->
+            <!--            <comb comb="boss"/>-->
+            <comb comb="boss:60,com:25,math:15"/>
+            <comb comb="boss:70,com:30"/>
+            <comb comb="boss:100"/>
+        </combs>
+        <values>
+            <value value="intel,people,result,difference,free-time,self-employ"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Предприниматель</ru>
+                    <en>Entrepreneurs</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/4/yVgZL-6PN2.jpg</pic>
+                <text>
+                    <ru>
+                        Предприниматель - любой человек, который зарабатывает деньги самостоятельно, не работая наёмно.
+                        Он
+                        сам находит тему для производства, торговли или услуг. Он сам ставит себе задачи, сам управляет
+                        собой и своими сотрудниками, понимает про налоги, про рыночные отношения и про маркетинг, сам
+                        принимает все текущие решения. Где обучаться на предпринимателя?
+                        Есть колледжи со специальностью Коммерция, есть в
+                        вузах факультеты маркетинга, торгового дела (сдают математику, обществознание и русский язык).
+                        Бизнесы возможны в разных сферах: рестораны, инженерия, торговля, строительство, перевозки,
+                        кино,
+                        медицина, образование и так далее. Поэтому предпринимателем можно стать и после обучения
+                        в одной из перечисленных сфер. Нужно лишь будет к специальному образованию добавить
+                        доподготовку, например, по экономике или маркетингу.
+                    </ru>
+                    <en>Entrepreneurs are people who earn money on their own without working for another company.
+                        They find their own niche for production, trade, or services; set their own goals; manage
+                        themselves and their staff; understand taxes, market relations, and marketing; and make all the
+                        day-to-day decisions by themselves. Businesses are possible in different areas: restaurants,
+                        engineering, trade, construction, transportation, cinema, medicine, education, and so on.It’s
+                        possible to become an entrepreneur after receiving an education in one of those areas.
+                        All you would have to do is undergo additional training, for example, in economics or marketing.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+    <profession>
+        <name>
+            <ru>Брокер</ru>
+            <en>Financial broker</en>
+        </name>
+        <combs>
+            <!--            <comb comb="boss,math"/>-->
+            <comb comb="boss:50,math:50"/>
+        </combs>
+        <values>
+            <value value="intel,result,self-employ,work-alone,indoor,light-work,free-time"/>
+        </values>
+        <description>
+            <kind>
+                <name>
+                    <ru>Финансовый брокер</ru>
+                    <en>Financial broker</en>
+                </name>
+                <pic>https://www.profguide.io/images/article/a/1/L-sm2A_S1U.jpg</pic>
+                <link>https://www.profguide.io/professions/broker.html</link>
+                <text>
+                    <ru>
+                        Финансовый брокер – посредник между банком (или другой финансовой компанией, биржей) и клиентом
+                        (компания или частное лицо). Он всегда знает про финансовые продукты банка (ценные бумаги) и
+                        условия кредитования и помогает клиенту выбрать самые выгодные условия кредитования или покупки
+                        ценных бумаг. И готовит документы для кредитования или покупки ценных бумаг. Брокер получает
+                        комиссию от сделки. Обучается финансовый брокер на факультете Финансы и кредит университета. При
+                        поступлении сдают профильную математику, обществознание и русский язык.
+                    </ru>
+                    <en>Financial brokers are intermediaries between banks or other financial companies or exchanges and
+                        clients (companies or individuals). They know everything about the bank's financial products
+                        (securities) and loan conditions, helping clients choose the best terms for lending or buying
+                        securities and preparing the required documents. Brokers earn a commission from those
+                        transactions.
+                    </en>
+                </text>
+            </kind>
+        </description>
+    </profession>
+
+
+    <!--    <profession>-->
+    <!--        <name>-->
+    <!--            <ru>???</ru>-->
+    <!--            <en>???</en>-->
+    <!--        </name>-->
+    <!--        <combs>-->
+    <!--            <comb comb="craft:25,art:25,boss:25,human:25"/>-->
+    <!--        </combs>-->
+    <!--        <values>-->
+    <!--            <value value="people,indoor,result,safe,difference,promotion"/>-->
+    <!--        </values>-->
+    <!--        <description>-->
+    <!--            <kind>-->
+    <!--                <name>-->
+    <!--                    <ru>???</ru>-->
+    <!--                    <en>???-->
+    <!--                    </en>-->
+    <!--                </name>-->
+    <!--                <pic>???</pic>-->
+    <!--                <link>???</link>-->
+    <!--                <text>-->
+    <!--                    <ru>-->
+    <!--                        ???-->
+    <!--                    </ru>-->
+    <!--                    <en>???</en>-->
+    <!--                </text>-->
+    <!--            </kind>-->
+    <!--        </description>-->
+    <!--    </profession>-->
+
+
+    <!--
+        TODO добавить:
+            Но помнить сперва, что нужно стремиться к объединению похожих профессий в одну.
+            Например, спелеолог - подотряд геологов. Значит нужен только геолог, а в нём написать, что он может быть спелеологом.
+            - SCRAM-мастер (может быть подотрядом для менеджер ИТ проекта или продакт менеджера)
+            - Тьютор
+            - Продюсер образовательных проектов
+            - UX-исследователь
+            - UX-писатель
+            - Копирайтер
+            - Фотограф
+            - (профессии из нетологии/яндекс.практикум/гикбрейнс)
+            - Блогер
+            - Сценарист
+            - Наративный дизайнер
+            - Психологический тренер
+            - Проектировщик инженерных систем здания
+            - Флайт-менеджер
+            - Авиадиспетчер
+            - Каскадёр
+            - Клоун
+            - Мастер кукол
+            - Зоолог
+            - Ботаник
+            - Садовник
+            - Сметчик
+            - Spa-терапевт
+            - Маляр
+            - Печник
+            - Священнослужитель
+            - Грумер
+            - Бармен, Бариста
+            - Инструктор по туризму
+            - Менеджер проектов (Менеджер инженерных проектов, Менеджер строительных проектов)
+            - Аудитор
+            - Аналитик финансовых рынков
+            - SEO-специалист
+            - SMM
+            - Проводник вагонов
+            - Девопс-инженер
+    -->
+</professions>
