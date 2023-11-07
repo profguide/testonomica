@@ -4,20 +4,12 @@ namespace App\Repository;
 
 use App\Entity\Test;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;
 
-/**
- * @author: adavydov
- * @since: 20.10.2020
- */
 class TestRepository extends ServiceEntityRepository implements TestRepositoryInterface
 {
-    private $em;
-
-    public function __construct(ManagerRegistry $registry, EntityManagerInterface $entityManager)
+    public function __construct(ManagerRegistry $registry)
     {
-        $this->em = $entityManager;
         parent::__construct($registry, Test::class);
     }
 
@@ -67,8 +59,8 @@ class TestRepository extends ServiceEntityRepository implements TestRepositoryIn
      */
     public function save(Test $test): Test
     {
-        $this->em->persist($test);
-        $this->em->flush();
+        $this->getEntityManager()->persist($test);
+        $this->getEntityManager()->flush();
         return $test;
     }
 
@@ -78,14 +70,14 @@ class TestRepository extends ServiceEntityRepository implements TestRepositoryIn
      */
     public function update(Test $test): Test
     {
-        $this->em->flush();
+        $this->getEntityManager()->flush();
         return $test;
     }
 
     public function getWithSearchQueryBuilder(?string $getQueryString)
     {
         $dql = "SELECT t FROM App:Test t";
-        return $this->em->createQuery($dql);
+        return $this->getEntityManager()->createQuery($dql);
 //        return $this->em->createQueryBuilder()->getQuery();
     }
 }

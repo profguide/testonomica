@@ -6,15 +6,15 @@
 
 namespace App\Test\Calculator;
 
-class ProftestCalculator extends AbstractProforientationCalculator
+class ProftestDemoCalculator extends AbstractProforientationCalculator
 {
     protected function professionsFileName(): string
     {
-        return '/xml/proftest/professions.xml';
+        return '/xml/proftestDemo/professions.xml';
     }
 
     protected function configFileName(): string
     {
-        return '/xml/proftest/config.xml';
+        return '/xml/proftestDemo/config.xml';
     }
 }

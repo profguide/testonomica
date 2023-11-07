@@ -3,9 +3,8 @@
     "app": {
       "js": [
         "/build/runtime.ec2b70cf.js",
-        "/build/865.b51a966e.js",
-        "/build/498.d6b792dd.js",
-        "/build/app.26196f29.js"
+        "/build/487.40e7e57c.js",
+        "/build/app.d7acf3b4.js"
       ],
       "css": [
         "/build/app.cb79c0ba.css"
@@ -14,20 +13,14 @@
     "test": {
       "js": [
         "/build/runtime.ec2b70cf.js",
-        "/build/865.b51a966e.js",
-        "/build/767.a176bbcc.js",
-        "/build/test.c0fd6da0.js"
-      ],
-      "css": [
-        "/build/test.2771dc9c.css"
+        "/build/test.ceb7d39b.js"
       ]
     },
     "admin": {
       "js": [
         "/build/runtime.ec2b70cf.js",
-        "/build/865.b51a966e.js",
-        "/build/498.d6b792dd.js",
-        "/build/admin.e5d4ad2e.js"
+        "/build/487.40e7e57c.js",
+        "/build/admin.bed6928c.js"
       ],
       "css": [
         "/build/admin.90429ea1.css"

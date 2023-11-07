@@ -271,13 +271,17 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
      */
     private function getProfessions(): array
     {
-        $xml = $this->kernel->getProjectDir() . '/xml/proftest/professions.xml';
+        $xml = $this->kernel->getProjectDir() . $this->professionsFileName();
         return (new ProfessionsMapper(file_get_contents($xml), $this->locale))->getProfessions();
     }
 
-    private function initConfig()
+    private function initConfig(): void
     {
-        $xml = $this->kernel->getProjectDir() . '/xml/proftest/config.xml';
+        $xml = $this->kernel->getProjectDir() . $this->configFileName();
         $this->config = (new ConfigMapper(file_get_contents($xml), $this->locale))->parse();
     }
+
+    abstract protected function professionsFileName(): string;
+
+    abstract protected function configFileName(): string;
 }
