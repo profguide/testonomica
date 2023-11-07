@@ -57,7 +57,7 @@
         <script src="https://cdn.jsdelivr.net/gh/davidtema/testonomica_widget@3.0.0/build/bundle.js"></script>
     {% endif %}
     <script>
-        window.addEventListener("load", () => {
+        document.addEventListener("DOMContentLoaded", function () {
             window.initWidget('{{ test.slug }}', '{{ host }}');
         });
     </script>
