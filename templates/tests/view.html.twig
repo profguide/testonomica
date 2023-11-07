@@ -12,7 +12,7 @@
         {% if app.environment == 'dev' %}
             <link rel="stylesheet" href="http://tn_widget/build/main.css">
         {% else %}
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/davidtema/testonomica_widget@2.0.0/build/main.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/davidtema/testonomica_widget@3.0.0/build/main.css">
         {% endif %}
     {% endblock %}
     <section class="tnc-welcome container" id="app-preload-screen">
@@ -54,7 +54,7 @@
     {% if app.environment == 'dev' %}
         <script src="http://tn_widget/build/bundle.js"></script>
     {% else %}
-        <script src="https://cdn.jsdelivr.net/gh/davidtema/testonomica_widget@2.0.0/build/bundle.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/davidtema/testonomica_widget@3.0.0/build/bundle.js"></script>
     {% endif %}
     <script>
         window.initWidget('{{ test.slug }}', '{{ host }}');
