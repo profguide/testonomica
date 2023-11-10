@@ -3530,53 +3530,91 @@
         <collectivist>
             <name>
                 <ru>Коллективист</ru>
-                <en></en>
+                <en>Collectivist</en>
             </name>
 
             <about>
                 <label>
-                    <ru>Что такое коллективист?</ru>
+                    <ru>Кто такой коллективист?</ru>
                     <en>What is creativity?</en>
                 </label>
                 <text>
                     <ru>
-
+                        <p>
+                            Это человек, который может работать в коллективе, выполняя определенную роль, внутренне
+                            принимая коллективность труда и способный к продуктивному сотрудничеству.
+                        </p>
                     </ru>
-                    <en>English about...</en>
+                    <en>
+                        <p>
+                            This is a person who can work in a team, taking on a specific role, embracing teamwork
+                            internally, and capable of productive collaboration.
+                        </p>
+                    </en>
                 </text>
             </about>
 
             <unique>
                 <label>
-                    <ru></ru>
-                    <en>English label here...</en>
+                    <ru>В чем выражается ваш коллективизм?</ru>
+                    <en>What does your collectivism look like?</en>
                 </label>
                 <text>
                     <ru>
                         <p>
-
+                            Работать в команде единомышленников для вас немалая ценность. Вы можете придерживаться
+                            своего эго ради благополучного коллективного существования и ради целей, к которым идет
+                            коллектив. Если команда сплоченная, если вы внутренне согласны с её ценностями и целями - вы
+                            готовы без обиды принять критику от товарищей. И вы стремитесь к тому, чтобы решения, важные
+                            для дела, принимались с участием мнений всех участников коллектива. Вы готовы отстаивать
+                            идею доверия даже если, доверяя кому-то, вы ошибетесь. Коллективные ценности для вас превыше
+                            всего. Вы не создаете конфликтных ситуаций по мелочам, но ради общего коллективного блага -
+                            можете поспорить и покритиковать результат дела и коллег. Все знают, что вы это делаете не
+                            потому, что хотите себя показать и принизить других. Трудиться в коллективе вам гораздо
+                            комфортнее, чем одному. Это качество очень ценно для команд, в которых вы работаете. Команда
+                            приобретает новые силы благодаря вашему качеству, и жизнеспособность команды повышается.
+                            Потенциальная опасность может быть лишь в следующем: если ради хороших отношений вы станете
+                            заниматься соглашательством с деструктивными моментами в работе.
                         </p>
                     </ru>
                     <en>
-                        English text here....
+                        <p>
+                            Working in a team of like-minded individuals is a significant value for you. You're willing
+                            to set aside your ego for the sake of a prosperous collective existence and the goals
+                            pursued by the team. If the team is cohesive and you internally align with its values and
+                            objectives, you're ready to accept criticism from colleagues without resentment. You aim for
+                            important decisions for the business to involve the opinions of all team members. You're
+                            prepared to defend the idea of trust, even if trusting someone leads to a mistake.
+                            Collective values are paramount for you. You avoid creating conflicts over trivial matters,
+                            but for the common good, you're willing to argue and criticize the results and colleagues.
+                            Everyone knows you do this not to show off or belittle others. Working in a team is much
+                            more comfortable for you than going solo. This quality is highly valuable for the teams you
+                            work with. Your presence strengthens the team, and its viability increases. The only
+                            potential danger could be if, for the sake of good relations, you start compromising with
+                            destructive aspects of the work.
+                        </p>
                     </en>
                 </text>
             </unique>
 
             <success>
                 <label>
-                    <ru></ru>
-                    <en>English label here...</en>
+                    <ru>Как коллективизм ведет к успеху?</ru>
+                    <en>How does collectivism lead to success?</en>
                 </label>
                 <text>
                     <ru>
                         <p>
-
+                            Коллективизм ведет к вашему личному успеху, если вы выполняете свою роль с достоинством и
+                            повышаете свою квалификацию, служите общему делу, способствуете здоровым отношениям в
+                            коллективе: сотрудничество, товарищество, общее благо.
                         </p>
                     </ru>
                     <en>
                         <p>
-                            English success here...
+                            Collectivism leads to your personal success when you fulfill your role with dignity, enhance
+                            your qualifications, serve the common cause, and contribute to healthy relationships within
+                            the team: cooperation, camaraderie, and mutual well-being.
                         </p>
                     </en>
                 </text>
@@ -3584,34 +3622,53 @@
 
             <warnings>
                 <label>
-                    <ru></ru>
-                    <en>English label here...</en>
+                    <ru>Скрытые угрозы и советы как их преодолеть.</ru>
+                    <en>Hidden Threats and Tips on How to Overcome Them.</en>
                 </label>
                 <text>
                     <ru>
                         <p>
-
+                            Есть одна единственная угроза. Коллектив как живое социальное существо - динамичен, в нем
+                            меняются роли, могут незаметно для всех поменяться ценности коллектива. Если коллектив
+                            начнет двигаться в неприемлемую для вас сторону и вы не сможете этому воспротивиться, вы
+                            внутренне тоже можете поменяться или будете во внутренней оппозиции. Рекомендация: будучи
+                            коллективистом, следите за тем, в кого превращаетесь лично вы, когда стараетесь оставаться в
+                            этом коллективе. Ради сохранения своей личности, порой лучше покинуть коллектив, чем самому
+                            претерпеть нежелательные для вас изменения.
                         </p>
                     </ru>
                     <en>
-                        English text here...
+                        <p>
+                            There is one single threat. The collective, as a living social entity, is dynamic. Roles
+                            change, and the values of the collective can shift unnoticed by everyone. If the team starts
+                            moving in a direction that is unacceptable to you and you can't resist it, you might
+                            internally change or find yourself in internal opposition. Recommendation: as a
+                            collectivist, keep an eye on who you are becoming personally when you try to stay in this
+                            collective. For the sake of preserving your individuality, sometimes it's better to leave
+                            the team than to undergo unwanted changes yourself.
+                        </p>
                     </en>
                 </text>
             </warnings>
 
             <maximize>
                 <label>
-                    <ru></ru>
-                    <en>English label here...</en>
+                    <ru>Как развивать коллективизм в себе?</ru>
+                    <en>How to develop collectivism within oneself?</en>
                 </label>
                 <text>
                     <ru>
                         <p>
-
+                            Чтобы быть коллективистом, нужно по возможности преодолеть в себе эгоцентризм и эгоизм. И
+                            нужно научиться договариваться, нужно научиться открытому диалогу, без манипуляций.
                         </p>
                     </ru>
                     <en>
-                        English text here...
+                        <p>
+                            To be a collectivist, it's necessary to overcome egocentrism and selfishness as much as
+                            possible. You also need to learn how to negotiate and engage in open dialogue without
+                            manipulation.
+                        </p>
                     </en>
                 </text>
             </maximize>
