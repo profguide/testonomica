@@ -301,11 +301,11 @@
                 <en>Usually I need a reproach or praise to study or work well.</en>
             </name>
             <options>
-                <option value="1">
+                <option value="0">
                     <ru>Да</ru>
                     <en>Yes</en>
                 </option>
-                <option value="0">
+                <option value="1">
                     <ru>Нет</ru>
                     <en>No</en>
                 </option>
@@ -346,8 +346,7 @@
         <item id="53" group="leader">
             <name>
                 <ru>Если ты чувствуешь свою правоту, то твердо ли ты отстаиваешь своё мнение, даже если большинство
-                    думает
-                    иначе?
+                    думает иначе?
                 </ru>
                 <en>Do you always stick to your opinion if you think you're right, even when others disagree?</en>
             </name>
@@ -466,9 +465,9 @@
         </item>
         <item id="60" group="leader">
             <name>
-                <ru>Моя тревога за ответственное дело чаще всего бывает так велика, что лучше от этого дела отказаться.
+                <ru>Моя тревога за ответственное дело часто бывает велика, но я не отказываюсь от него.
                 </ru>
-                <en>I am often so anxious about an important business that I'd rather pass on it.</en>
+                <en>My anxiety for a responsible cause is often great, but I do not give up on it.</en>
             </name>
             <options>
                 <option value="1">
@@ -483,8 +482,8 @@
         </item>
         <item id="61" group="leader">
             <name>
-                <ru>Я уступчивый и склонный к компромиссу человек.</ru>
-                <en>I am an acquiescent and amenable person.</en>
+                <ru>В сложных ситуациях я слушаю разные мнения и принимаю взвешенное решение самостоятельно.</ru>
+                <en>In difficult situations, I listen to different opinions and make an informed decision on my own.</en>
             </name>
             <options>
                 <option value="1">
@@ -503,11 +502,11 @@
                 <en>I easily give up under pressure, even if the matter is important to me.</en>
             </name>
             <options>
-                <option value="1">
+                <option value="0">
                     <ru>Да</ru>
                     <en>Yes</en>
                 </option>
-                <option value="0">
+                <option value="1">
                     <ru>Нет</ru>
                     <en>No</en>
                 </option>
