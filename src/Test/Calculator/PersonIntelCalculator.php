@@ -26,7 +26,7 @@ class PersonIntelCalculator extends AbstractCalculator
 
         return [
             'creator' => round($sums['creator'] * 100 / 36),
-            'leader' => round($sums['leader'] * 100 / 39),
+            'leader' => round($sums['leader'] * 100 / 13),
             'communicator' => round($sums['communicator'] * 100 / 14),
             'pretension' => [
                 'potential' => round($sums['pretension-potential'] * 100 / 12),
