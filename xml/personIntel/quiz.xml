@@ -313,8 +313,9 @@
         </item>
         <item id="51" group="leader">
             <name>
-                <ru>Нужно организовать дежурство в школе. Охотно ли ты возьмёшься за эту задачу?</ru>
-                <en>You have been asked to become a class monitor. Will you agree?</en>
+                <ru>У меня есть свойство вдохновляюще действовать на людей.</ru>
+                <en>I have the ability to inspire people.
+                </en>
             </name>
             <options>
                 <option value="1">
@@ -329,8 +330,8 @@
         </item>
         <item id="52" group="leader">
             <name>
-                <ru>Если в коллективе обсуждают сложную проблему, интересуются ли твоим мнением?</ru>
-                <en>Do people want to hear your opinion when discussing a difficult problem in a team?</en>
+                <ru>Все, что я планирую на год работы, как правило, полностью выполняется.</ru>
+                <en>Everything that I plan for a year of work is usually fully implemented.</en>
             </name>
             <options>
                 <option value="1">
@@ -340,6 +341,10 @@
                 <option value="0">
                     <ru>Нет</ru>
                     <en>No</en>
+                </option>
+                <option value="0">
+                    <ru>Я не ставлю перед собой задачи на год</ru>
+                    <en>I don't set myself goals for the year</en>
                 </option>
             </options>
         </item>
@@ -361,42 +366,46 @@
                 </option>
             </options>
         </item>
-        <item id="54" group="leader">
-            <name>
-                <ru>Во мне буйствует ревность, когда кому-то другому поручили ответственное дело.</ru>
-                <en>I feel jealous when someone else is trusted with an important matter and not me.</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
-        <item id="55" group="leader">
-            <name>
-                <ru>Если у тебя появилась здравая идея, ты будешь настаивать на том, чтобы она была реализована.</ru>
-                <en>If you have a sound idea, will you insist on implementing it?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
+        <!--    Убрали, потому что это скорее демонстративность. Руоводитель - это тот, кто может спокойно дать задание, вдохновить и защитить своих подчинённых -->
+        <!--        <item id="54" group="leader">-->
+        <!--            <name>-->
+        <!--                <ru>Во мне буйствует ревность, когда кому-то другому поручили ответственное дело.</ru>-->
+        <!--                <en>I feel jealous when someone else is trusted with an important matter and not me.</en>-->
+        <!--            </name>-->
+        <!--            <options>-->
+        <!--                <option value="1">-->
+        <!--                    <ru>Да</ru>-->
+        <!--                    <en>Yes</en>-->
+        <!--                </option>-->
+        <!--                <option value="0">-->
+        <!--                    <ru>Нет</ru>-->
+        <!--                    <en>No</en>-->
+        <!--                </option>-->
+        <!--            </options>-->
+        <!--        </item>-->
+        <!--    Убрали, потому что непонятно о чём он. -->
+        <!--        <item id="55" group="leader">-->
+        <!--            <name>-->
+        <!--                <ru>Если у тебя появилась здравая идея, ты будешь настаивать на том, чтобы она была реализована.</ru>-->
+        <!--                <en>If you have a sound idea, will you insist on implementing it?</en>-->
+        <!--            </name>-->
+        <!--            <options>-->
+        <!--                <option value="1">-->
+        <!--                    <ru>Да</ru>-->
+        <!--                    <en>Yes</en>-->
+        <!--                </option>-->
+        <!--                <option value="0">-->
+        <!--                    <ru>Нет</ru>-->
+        <!--                    <en>No</en>-->
+        <!--                </option>-->
+        <!--            </options>-->
+        <!--        </item>-->
         <item id="56" group="leader">
             <name>
-                <ru>Начинаешь ли ты беспокоиться и прикладывать усилия, когда твои дела стабильно хороши?</ru>
-                <en>Do you worry and take extra effort even when your situation is good and stable?</en>
+                <ru>Чувствуешь ли ты потребность работать над улучшением ситуации, когда твои дела стабильно хороши?
+                </ru>
+                <en>Do you feel the need to work on improving the situation when your business is consistently good?
+                </en>
             </name>
             <options>
                 <option value="1">
@@ -411,19 +420,23 @@
         </item>
         <item id="57" group="leader">
             <name>
-                <ru>Есть ли у тебя опыт управления командой в школе (ты был старостой, капитаном команды, ставил
-                    спектакли
-                    и тд)?
+                <ru>Есть ли у тебя опыт управления командой в детские и юношеские годы (ты был старостой, капитаном
+                    команды, ставил
+                    спектакли, руководил небольшими проектами и т.д.)?
                 </ru>
-                <en>Have you had experience of being a manager at school (being a class monitor, leading a sports team,
-                    directing a
-                    school play, etc.)?
+                <en>Do you have any experience of managing a team in childhood and adolescence (you were the headman,
+                    the captain of the team, put
+                    performances, directed small projects, etc.)?
                 </en>
             </name>
             <options>
                 <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
+                    <ru>Да, и мне понравилось</ru>
+                    <en>Yes, I liked it</en>
+                </option>
+                <option value="0">
+                    <ru>Да, но мне не понравилось</ru>
+                    <en>Yes, but I did not like it</en>
                 </option>
                 <option value="0">
                     <ru>Нет</ru>
@@ -433,8 +446,8 @@
         </item>
         <item id="58" group="leader">
             <name>
-                <ru>Ты часто анализируешь результаты своего труда, свои достижения, предъявляешь к себе требования.</ru>
-                <en>Do you often analyze your work and your achievements, demanding yourself to do more?</en>
+                <ru>Есть ли у тебя привычка анализировать причины своих успехов и неудач?</ru>
+                <en>Do you have a habit of analyzing the reasons for your successes and failures?</en>
             </name>
             <options>
                 <option value="1">
@@ -449,8 +462,12 @@
         </item>
         <item id="59" group="leader">
             <name>
-                <ru>Я готов отвечать не только за себя, но и за вверенных мне людей?</ru>
-                <en>I am ready to be responsible not only for myself, but also for my subordinates.</en>
+                <ru>Мне понравилось бы ставить перед людьми задачи, контролировать выполнение и ответчать за результаты
+                    команды.
+                </ru>
+                <en>I would like to set tasks for people, monitor their performance and be responsible for the team's
+                    results.
+                </en>
             </name>
             <options>
                 <option value="1">
@@ -465,9 +482,9 @@
         </item>
         <item id="60" group="leader">
             <name>
-                <ru>Моя тревога за ответственное дело часто бывает велика, но я не отказываюсь от него.
+                <ru>Моя тревога за важное дело часто бывает велика, но я не отказываюсь от него.
                 </ru>
-                <en>My anxiety for a responsible cause is often great, but I do not give up on it.</en>
+                <en>My anxiety for an important cause is often great, but I do not give up on it.</en>
             </name>
             <options>
                 <option value="1">
@@ -483,7 +500,8 @@
         <item id="61" group="leader">
             <name>
                 <ru>В сложных ситуациях я слушаю разные мнения и принимаю взвешенное решение самостоятельно.</ru>
-                <en>In difficult situations, I listen to different opinions and make an informed decision on my own.</en>
+                <en>In difficult situations, I listen to different opinions and make an informed decision on my own.
+                </en>
             </name>
             <options>
                 <option value="1">
@@ -496,22 +514,23 @@
                 </option>
             </options>
         </item>
-        <item id="62" group="leader">
-            <name>
-                <ru>Если на меня оказывают сильное давление, то я уступаю, даже если этот вопрос важен для меня.</ru>
-                <en>I easily give up under pressure, even if the matter is important to me.</en>
-            </name>
-            <options>
-                <option value="0">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="1">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
+        <!--        Убрали, потому что всегда найдётся достаточное давление, чтобы сломать кого угодно -->
+        <!--        <item id="62" group="leader">-->
+        <!--            <name>-->
+        <!--                <ru>Если на меня оказывают сильное давление, то я уступаю, даже если этот вопрос важен для меня.</ru>-->
+        <!--                <en>I easily give up under pressure, even if the matter is important to me.</en>-->
+        <!--            </name>-->
+        <!--            <options>-->
+        <!--                <option value="0">-->
+        <!--                    <ru>Да</ru>-->
+        <!--                    <en>Yes</en>-->
+        <!--                </option>-->
+        <!--                <option value="1">-->
+        <!--                    <ru>Нет</ru>-->
+        <!--                    <en>No</en>-->
+        <!--                </option>-->
+        <!--            </options>-->
+        <!--        </item>-->
         <!--Тест Айзенка на интроверсию/экстраверсию (коммуникативность, в команде) -->
         <item id="100" group="communicator">
             <name>
@@ -3048,6 +3067,62 @@
                 <option value="5" img="https://testonomica.com/images/tests/4/535/g_3_5.svg"/>
             </options>
         </item>
+        <item id="536" group="iq-attention">
+            <name>
+                <ru>Сколько из приведенных ниже пар слов являются полностью идентичными?</ru>
+                <en>How many of the following pairs of words are completely identical?</en>
+            </name>
+            <text>
+                <ru>
+                    <![CDATA[
+                       <table>
+                        <tr><td>Валиев М.С.</td><td> Валиев М.С.</td></tr>
+                        <tr><td>Герцен А.И.</td><td> Герцен А.Н.</td></tr>
+                        <tr><td>Крамер Н.И.</td><td> Крамор Н.И.</td></tr>
+                        <tr><td>Махмутов О.Т.</td><td> Махмудов О.Т.</td></tr>
+                        <tr><td>Стародубов Р.Е.</td><td> Стародубов В.Е.</td></tr>
+                       </table>
+                   ]]>
+                </ru>
+                <en>
+                    <![CDATA[
+                       <table>
+                        <tr><td>Sharp M.C.</td><td>	Sharp M.C.</td></tr>
+                        <tr><td>Filder E.H.</td><td> Filder E.N.</td></tr>
+                        <tr><td>Connor M.G.</td><td> Conner M.G.</td></tr>
+                        <tr><td>Woesner O.W.</td><td> Woerner O.W.</td></tr>
+                        <tr><td>Soderquist P.E.</td><td> Soderquist B.E.</td></tr>
+                       </table>
+                   ]]>
+                </en>
+            </text>
+            <options>
+                <option value="0">
+                    <ru>0</ru>
+                    <en>0</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>1</ru>
+                    <en>1</en>
+                </option>
+                <option value="0">
+                    <ru>2</ru>
+                    <en>2</en>
+                </option>
+                <option value="0">
+                    <ru>3</ru>
+                    <en>3</en>
+                </option>
+                <option value="0">
+                    <ru>4</ru>
+                    <en>4</en>
+                </option>
+                <option value="0">
+                    <ru>5</ru>
+                    <en>5</en>
+                </option>
+            </options>
+        </item>
         <!-- Абстрактное мышление -->
         <item id="550" group="iq-abstract">
             <name>
@@ -3537,4 +3612,3 @@
         </item>
     </items>
 </quiz>
-

@@ -26,7 +26,7 @@ class PersonIntelCalculator extends AbstractCalculator
 
         return [
             'creator' => round($sums['creator'] * 100 / 36),
-            'leader' => round($sums['leader'] * 100 / 13),
+            'leader' => round($sums['leader'] * 100 / 10),
             'communicator' => round($sums['communicator'] * 100 / 14),
             'pretension' => [
                 'potential' => round($sums['pretension-potential'] * 100 / 12),
@@ -70,7 +70,7 @@ class PersonIntelCalculator extends AbstractCalculator
                 'logic' => round($sums['iq-logic'] * 100 / 10),
                 'math' => round($sums['iq-math'] * 100 / 10),
                 'spatial' => round($sums['iq-spatial'] * 100 / 4),
-                'attention' => round($sums['iq-attention'] * 100 / 2),
+                'attention' => round($sums['iq-attention'] * 100 / 3),
                 'abstract' => round($sums['iq-abstract'] * 100 / 10),
                 'erudition' => round($sums['iq-erudition'] * 100 / 10),
                 'total' => round(
