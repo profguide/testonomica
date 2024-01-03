@@ -228,7 +228,7 @@ l * 100
             <!--            <comb comb="human,art"/>-->
             <!--            <comb comb="art"/>-->
             <comb comb="human:33,art:34,com:33" />
-            <comb comb="art:50,com:50" />
+<!--            <comb comb="art:50,com:50" />-->
             <!--            <comb comb="art:100"/>-->
         </combs>
         <values>
