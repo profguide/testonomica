@@ -1636,7 +1636,7 @@ l * 100
             <fr>Analyste marketing</fr>
         </name>
         <combs>
-            <comb comb="boss:25,human:25,math:25"/>
+            <comb comb="human:50,math:25,boss:25"/>
             <comb comb="human:50,math:50"/>
         </combs>
         <values>
