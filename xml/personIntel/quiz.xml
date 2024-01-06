@@ -2545,9 +2545,9 @@
             <options>
                 <option value="0" img="https://testonomica.com/images/tests/4/513/pic-1.svg"/>
                 <option value="0" img="https://testonomica.com/images/tests/4/513/pic-2.svg"/>
-                <option value="0" img="https://testonomica.com/images/tests/4/513/pic-3.svg"/>
+                <option value="1" img="https://testonomica.com/images/tests/4/513/pic-3.svg" correct="true"/>
                 <option value="0" img="https://testonomica.com/images/tests/4/513/pic-4.svg"/>
-                <option value="1" img="https://testonomica.com/images/tests/4/513/pic-5.svg" correct="true"/>
+                <option value="0" img="https://testonomica.com/images/tests/4/513/pic-5.svg"/>
             </options>
         </item>
         <item id="514" group="iq-math" method="TEXT">
@@ -3060,11 +3060,11 @@
                 <en>Which of the shapes differs the most from the rest?</en>
             </name>
             <options>
-                <option value="1" img="https://testonomica.com/images/tests/4/535/g_2_4.svg"/>
-                <option value="2" img="https://testonomica.com/images/tests/4/535/g_3_3.svg"/>
-                <option value="3" img="https://testonomica.com/images/tests/4/535/g_2_1.svg" correct="true"/>
-                <option value="4" img="https://testonomica.com/images/tests/4/535/g_2_5.svg"/>
-                <option value="5" img="https://testonomica.com/images/tests/4/535/g_3_5.svg"/>
+                <option value="0" img="https://testonomica.com/images/tests/4/535/g_2_4.svg"/>
+                <option value="0" img="https://testonomica.com/images/tests/4/535/g_3_3.svg"/>
+                <option value="0" img="https://testonomica.com/images/tests/4/535/g_2_1.svg"/>
+                <option value="1" img="https://testonomica.com/images/tests/4/535/g_2_5.svg" correct="true"/>
+                <option value="0" img="https://testonomica.com/images/tests/4/535/g_3_5.svg"/>
             </options>
         </item>
         <item id="536" group="iq-attention">
