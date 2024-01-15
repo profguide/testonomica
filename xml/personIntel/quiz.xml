@@ -849,8 +849,8 @@
         <!-- Мотив избегания -->
         <item id="154" group="pretension-avoid">
             <name>
-                <ru>В школе я не стремлюсь стать отличником, я стремлюсь не стать троечником.</ru>
-                <en>At school, I don`t try to get all A's, but I try not to get C's.</en>
+                <ru>В школе я не стремился стать отличником, я стремился не стать троечником.</ru>
+                <en>At school, I din`t try to get all A's, but I tried not to get C's.</en>
             </name>
             <options>
                 <option value="0">
@@ -969,15 +969,15 @@
         <!-- Инициативность -->
         <item id="158" group="pretension-initiative">
             <name>
-                <ru>Я сам ставлю себе цели.</ru>
-                <en>I set my own goals.</en>
+                <ru>В жизни у меня нет определённых целей.</ru>
+                <en>I don't have specific goals in life.</en>
             </name>
             <options>
-                <option value="0">
-                    <ru>Нет</ru>
+                <option value="4">
+                    <ru>Нет, у меня есть цели в жизни</ru>
                     <en>No</en>
                 </option>
-                <option value="1">
+                <option value="3">
                     <ru>Скорее нет</ru>
                     <en>Mostly no</en>
                 </option>
@@ -985,20 +985,20 @@
                     <ru>Не уверен</ru>
                     <en>Not sure</en>
                 </option>
-                <option value="3">
+                <option value="1">
                     <ru>Скорее да</ru>
                     <en>Mostly yes</en>
                 </option>
-                <option value="4">
-                    <ru>Да</ru>
+                <option value="0">
+                    <ru>Да, у меня нет определённых целей</ru>
                     <en>Yes</en>
                 </option>
             </options>
         </item>
         <item id="159" group="pretension-initiative">
             <name>
-                <ru>Я не люблю, когда мне цели навязывают.</ru>
-                <en>I don't like when goals are imposed on me.</en>
+                <ru>Я чаще сам инициирую события в моей жизни, чем следую за инициативным человеком.</ru>
+                <en>I initiate events in my life more often than I follow an initiative person.</en>
             </name>
             <options>
                 <option value="0">
@@ -1137,17 +1137,19 @@
                 </option>
             </options>
         </item>
+        <!--
+        Убрали вопрос, потому что не понятно о чём он - о силе воли или всё-таки о мотивации - важно кому - мне или учителю.
         <item id="164" group="pretension-effort">
             <name>
-                <ru>Даже когда задача важная, я работаю вполсилы</ru>
+                <ru>Даже когда задача важная, я работаю вполсилы.</ru>
                 <en>Even if the work is important, I do it half-heartedly.</en>
             </name>
             <options>
-                <option value="0">
+                <option value="4">
                     <ru>Нет</ru>
                     <en>No</en>
                 </option>
-                <option value="1">
+                <option value="3">
                     <ru>Скорее нет</ru>
                     <en>Mostly no</en>
                 </option>
@@ -1155,16 +1157,17 @@
                     <ru>Не уверен</ru>
                     <en>Not sure</en>
                 </option>
-                <option value="3">
+                <option value="1">
                     <ru>Скорее да</ru>
                     <en>Mostly yes</en>
                 </option>
-                <option value="4">
+                <option value="0">
                     <ru>Да</ru>
                     <en>Yes</en>
                 </option>
             </options>
         </item>
+        -->
         <!-- Темперамент Белова -->
         <!-- Флегматик -->
         <item id="201" group="temp-fleg">
