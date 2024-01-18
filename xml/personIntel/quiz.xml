@@ -761,91 +761,6 @@
             </options>
         </item>
         <!-- Уровень притязаний (Гербачевский) -->
-        <!-- Оценка своего потенциала -->
-        <item id="151" group="pretension-potential">
-            <name>
-                <ru>Я чувствую себя сильным человеком.</ru>
-                <en>I think I am a strong person.</en>
-            </name>
-            <options>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-                <option value="1">
-                    <ru>Скорее нет</ru>
-                    <en>Mostly no</en>
-                </option>
-                <option value="2">
-                    <ru>Не уверен</ru>
-                    <en>Not sure</en>
-                </option>
-                <option value="3">
-                    <ru>Скорее да</ru>
-                    <en>Mostly yes</en>
-                </option>
-                <option value="4">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-            </options>
-        </item>
-        <item id="152" group="pretension-potential">
-            <name>
-                <ru>Я чувствую, что могу преодолеть все трудности на пути к цели.</ru>
-                <en>I feel I am capable of overcoming all difficulties on my way to my goal.</en>
-            </name>
-            <options>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-                <option value="1">
-                    <ru>Скорее нет</ru>
-                    <en>Mostly no</en>
-                </option>
-                <option value="2">
-                    <ru>Не уверен</ru>
-                    <en>Not sure</en>
-                </option>
-                <option value="3">
-                    <ru>Скорее да</ru>
-                    <en>Mostly yes</en>
-                </option>
-                <option value="4">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-            </options>
-        </item>
-        <item id="153" group="pretension-potential">
-            <name>
-                <ru>Когда я берусь за дело, обычно я чувствую, что у меня ничего не выйдет.</ru>
-                <en>When I start doing something, I usually think I'm going to fail.</en>
-            </name>
-            <options>
-                <option value="4">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-                <option value="3">
-                    <ru>Скорее нет</ru>
-                    <en>Mostly no</en>
-                </option>
-                <option value="2">
-                    <ru>Не уверен</ru>
-                    <en>Not sure</en>
-                </option>
-                <option value="1">
-                    <ru>Скорее да</ru>
-                    <en>Mostly yes</en>
-                </option>
-                <option value="0">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-            </options>
-        </item>
         <!-- Мотив избегания -->
         <item id="154" group="pretension-avoid">
             <name>
@@ -1023,8 +938,9 @@
                 </option>
             </options>
         </item>
+        <!-- Убрали. Потому что Оценка своего потенциала уже раскрывает эти вопросы -->
         <!-- Ожидаемый уровень результатов -->
-        <item id="160" group="pretension-expect">
+        <!--<item id="160" group="pretension-expect">
             <name>
                 <ru>Если мне нравится какое-то дело, то я уверен, что у меня всё получится.</ru>
                 <en>If I like doing something, I'm sure I'll succeed.</en>
@@ -1080,6 +996,7 @@
                 </option>
             </options>
         </item>
+        -->
         <!-- Волевое усилие -->
         <item id="162" group="pretension-effort">
             <name>
@@ -1557,7 +1474,8 @@
                 </option>
             </options>
         </item>
-        <!-- Уверенность в себе, социальная смелость (Давыдова ЭХ, Давыдов АЮ) -->
+
+        <!-- Уверенность в себе (Давыдова ЭХ, Давыдов АЮ) -->
         <item id="250" group="confidence">
             <name>
                 <ru>Вам всегда страшно выступать на собрании</ru>
@@ -1624,7 +1542,7 @@
         </item>
         <item id="254" group="confidence">
             <name>
-                <ru>Вы легко говорите "нет" людям, если вы не согласны что-то делать</ru>
+                <ru>Вы легко говорите "нет" людям, если вы не согласны что-то делать для них</ru>
                 <en>It is easy for you to say "no" to people if you don't want to do what they ask you to do.</en>
             </name>
             <options>
@@ -1635,6 +1553,91 @@
                 <option value="0">
                     <ru>Нет</ru>
                     <en>No</en>
+                </option>
+            </options>
+        </item>
+        <!-- todo сделать 0 и 1 или всем сделать по 4 -->
+        <item id="255" group="confidence">
+            <name>
+                <ru>Я чувствую себя сильным человеком.</ru>
+                <en>I think I am a strong person.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>Mostly no</en>
+                </option>
+                <option value="2">
+                    <ru>Не уверен</ru>
+                    <en>Not sure</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Mostly yes</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="256" group="confidence">
+            <name>
+                <ru>Я чувствую, что могу преодолеть все трудности на пути к цели.</ru>
+                <en>I feel I am capable of overcoming all difficulties on my way to my goal.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>Mostly no</en>
+                </option>
+                <option value="2">
+                    <ru>Не уверен</ru>
+                    <en>Not sure</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Mostly yes</en>
+                </option>
+                <option value="4">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="257" group="confidence">
+            <name>
+                <ru>Когда я берусь за дело, обычно я чувствую, что у меня ничего не выйдет.</ru>
+                <en>When I start doing something, I usually think I'm going to fail.</en>
+            </name>
+            <options>
+                <option value="4">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее нет</ru>
+                    <en>Mostly no</en>
+                </option>
+                <option value="2">
+                    <ru>Не уверен</ru>
+                    <en>Not sure</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее да</ru>
+                    <en>Mostly yes</en>
+                </option>
+                <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
                 </option>
             </options>
         </item>
@@ -2218,6 +2221,34 @@
                     <en>Disagree</en>
                 </option>
                 <option value="0">
+                    <ru>Не согласен</ru>
+                    <en>Strongly disagree</en>
+                </option>
+            </options>
+        </item>
+        <item id="410" group="business-freedom">
+            <name>
+                <ru>Мне комфортнее, когда у меня есть руководитель.</ru>
+                <en>I feel more comfortable when I have a supervisor.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Согласен</ru>
+                    <en>Strongly agree</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее согласен</ru>
+                    <en>Agree</en>
+                </option>
+                <option value="2">
+                    <ru>Трудно сказать</ru>
+                    <en>Neutral</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее не согласен</ru>
+                    <en>Disagree</en>
+                </option>
+                <option value="4">
                     <ru>Не согласен</ru>
                     <en>Strongly disagree</en>
                 </option>

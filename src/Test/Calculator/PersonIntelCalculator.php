@@ -29,23 +29,19 @@ class PersonIntelCalculator extends AbstractCalculator
             'leader' => round($sums['leader'] * 100 / 10),
             'communicator' => round($sums['communicator'] * 100 / 14),
             'pretension' => [
-                'potential' => round($sums['pretension-potential'] * 100 / 12),
                 'avoid' => round($sums['pretension-avoid'] * 100 / 8),
                 'competition' => round($sums['pretension-competition'] * 100 / 8),
                 'initiative' => round($sums['pretension-initiative'] * 100 / 8),
-                'expect' => round($sums['pretension-expect'] * 100 / 8),
                 'effort' => round($sums['pretension-effort'] * 100 / 12),
                 'total' => round(
-                    ($sums['pretension-potential'] +
-                        $sums['pretension-avoid'] +
+                    ($sums['pretension-avoid'] +
                         $sums['pretension-competition'] +
                         $sums['pretension-initiative'] +
-                        $sums['pretension-expect'] +
-                        $sums['pretension-effort']) * 100 / 56 // 56 is a sum of maximum values for the questions
+                        $sums['pretension-effort']) * 100 / 36 // sum of maximum values for the questions
                 )
             ],
             'businessman' => [
-                'freedom' => round($sums['business-freedom'] * 100 / 4),
+                'freedom' => round($sums['business-freedom'] * 100 / 8),
                 'stable' => round($sums['business-stable'] * 100 / 8),
                 'responsibility' => round($sums['business-responsibility'] * 100 / 12),
                 'risk' => round($sums['business-risk'] * 100 / 8),
@@ -63,7 +59,7 @@ class PersonIntelCalculator extends AbstractCalculator
                 'hol' => round($sums['temp-hol'] * 100 / 6),
                 'san' => round($sums['temp-san'] * 100 / 6),
             ],
-            'confidence' => round($sums['confidence'] * 100 / 5),
+            'confidence' => round($sums['confidence'] * 100 / 8),
             'empathy' => round($sums['empathy'] * 100 / 13),
             'iq' => [
                 'verbal' => round($sums['iq-verbal'] * 100 / 10),
