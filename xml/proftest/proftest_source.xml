@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<quiz version="2.0.1">
+<quiz version="2.0.2">
     <items>
         <!-- Естественник: Усилия -->
         <!-- или/или-->
@@ -49,8 +49,8 @@
         <!-- или/или -->
         <item id="3" group="natural-force">
             <name>
-                <ru>Какое из этих мест вы посещаете чаще?</ru>
-                <en>Which of these places do you visit more often?</en>
+                <ru>Какое из этих мест вы посещаете с бо́льшим удовольствием?</ru>
+                <en>Which of these places do you visit with great pleasure?</en>
             </name>
             <options>
                 <option value="1">
@@ -73,29 +73,30 @@
                     <ru>Картинная галерея</ru>
                     <en>Art gallery</en>
                 </option>
+                <!-- todo химическая лаборатория, хим кружок и тп - если такое существует -->
                 <option value="0">
                     <ru>Никакое из этих мест</ru>
                     <en>None of these places</en>
                 </option>
             </options>
         </item>
-        <item id="4" group="natural-force">
-            <name>
-                <ru>Химии или биологии вы посвящали/посвящаете больше своего внимания, чем другим предметам в школе?
-                </ru>
-                <en>Do you devote most of your time to Chemistry and Biology over any other subjects at school?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
-                </option>
-            </options>
-        </item>
+        <!--        <item id="4" group="natural-force">-->
+        <!--            <name>-->
+        <!--                <ru>Химии или биологии вы посвящали/посвящаете больше своего внимания, чем другим предметам в школе?-->
+        <!--                </ru>-->
+        <!--                <en>Do you devote most of your time to Chemistry and Biology over any other subjects at school?</en>-->
+        <!--            </name>-->
+        <!--            <options>-->
+        <!--                <option value="1">-->
+        <!--                    <ru>Да</ru>-->
+        <!--                    <en>Yes</en>-->
+        <!--                </option>-->
+        <!--                <option value="0">-->
+        <!--                    <ru>Нет</ru>-->
+        <!--                    <en>No</en>-->
+        <!--                </option>-->
+        <!--            </options>-->
+        <!--        </item>-->
         <!-- или/или -->
         <item id="5" group="natural-force">
             <name>
@@ -226,6 +227,10 @@
                     <ru>Нет</ru>
                     <en>No</en>
                 </option>
+                <option value="0">
+                    <ru>Не помню</ru>
+                    <en>I don't remember</en>
+                </option>
             </options>
         </item>
         <item id="13" group="natural-interest">
@@ -242,23 +247,34 @@
                     <ru>Нет</ru>
                     <en>No</en>
                 </option>
+                <option value="0">
+                    <ru>Затрудняюсь ответить</ru>
+                    <en>I find it difficult to answer</en>
+                </option>
             </options>
         </item>
         <!-- Естественник: Способности -->
         <item id="20" group="natural-skills">
             <name>
-                <ru>Есть ли у вас успехи хотя бы в одном из этих предметов в школе: химия, биология?
-                </ru>
-                <en>Do you have good marks in Chemistry or Biology at school?</en>
+                <ru>Какой из этих предметов в школе вам давался лучше всего?</ru>
+                <en>Which of these subjects did you do best in school?</en>
             </name>
             <options>
                 <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
+                    <ru>Химия</ru>
+                    <en>Chemistry</en>
+                </option>
+                <option value="1">
+                    <ru>Биология</ru>
+                    <en>Biology</en>
+                </option>
+                <option value="1">
+                    <ru>И то, и другое</ru>
+                    <en>Both</en>
                 </option>
                 <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
+                    <ru>Ни то, ни другое</ru>
+                    <en>Neither one nor the other</en>
                 </option>
             </options>
         </item>
@@ -1003,9 +1019,12 @@
         <!-- Телесник: Интересы -->
         <item id="310" group="body-interest" qtype="easy">
             <name>
-                <ru>Вы в парикмахерской ждёте свой очереди. На столе лежат журналы разной направленности. Какой журнал вы бы взяли в первую очередь?
+                <ru>Вы в парикмахерской ждёте свой очереди. На столе лежат журналы разной направленности. Какой журнал
+                    вы бы взяли в первую очередь?
                 </ru>
-                <en>In a hair salon, you are waiting for your turn. There are magazines of different types on the table. Which magazine would you choose first?</en>
+                <en>In a hair salon, you are waiting for your turn. There are magazines of different types on the table.
+                    Which magazine would you choose first?
+                </en>
             </name>
             <options>
                 <option value="1">
@@ -2056,7 +2075,9 @@
                 <ru>Хорошо ли вы делаете что-то из этого: рисуете, сочиняете музыку, придумываете
                     сюжеты, снимаете видео?
                 </ru>
-                <en>Do you do any of the following well: drawing, composing music, coming up with stories, or making videos?</en>
+                <en>Do you do any of the following well: drawing, composing music, coming up with stories, or making
+                    videos?
+                </en>
             </name>
             <options>
                 <option value="1">
