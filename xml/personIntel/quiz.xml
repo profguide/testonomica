@@ -421,8 +421,7 @@
         <item id="57" group="leader">
             <name>
                 <ru>Есть ли у тебя опыт управления командой в детские и юношеские годы (ты был старостой, капитаном
-                    команды, ставил
-                    спектакли, руководил небольшими проектами и т.д.)?
+                    команды, ставил спектакли, руководил небольшими проектами и т.д.)?
                 </ru>
                 <en>Do you have any experience of managing a team in childhood and adolescence (you were the headman,
                     the captain of the team, put
@@ -462,7 +461,7 @@
         </item>
         <item id="59" group="leader">
             <name>
-                <ru>Мне понравилось бы ставить перед людьми задачи, контролировать выполнение и ответчать за результаты
+                <ru>Мне понравилось бы ставить перед людьми задачи, контролировать выполнение и отвечать за результаты
                     команды.
                 </ru>
                 <en>I would like to set tasks for people, monitor their performance and be responsible for the team's
@@ -761,7 +760,7 @@
             </options>
         </item>
         <!-- todo мотивация успеха в отчёте -->
-        <!-- Мотивация успеха / Мотивация и воля к успеху / Качества личности, необходимые для успеха / (ex-Уровень притязаний (Гербачевский)) -->
+        <!-- Уровень притязаний (Гербачевский), ещё думали над другими названиями, но так и не решились: Мотивация успеха / Мотивация и воля к успеху / Качества личности, необходимые для успеха -->
         <!-- Оценка своего потенциала -->
         <item id="151" group="pretension-potential">
             <name>
@@ -842,6 +841,34 @@
                     <en>Mostly yes</en>
                 </option>
                 <option value="0">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+            </options>
+        </item>
+        <item id="170" group="pretension-potential">
+            <name>
+                <ru>Вы уверены, что можете сдать экзамены, если хорошо подготовитесь</ru>
+                <en>You are sure you can pass your exams if you study well.</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+                <option value="1">
+                    <ru>Скорее нет</ru>
+                    <en>Mostly no</en>
+                </option>
+                <option value="2">
+                    <ru>Не уверен</ru>
+                    <en>Not sure</en>
+                </option>
+                <option value="3">
+                    <ru>Скорее да</ru>
+                    <en>Mostly yes</en>
+                </option>
+                <option value="4">
                     <ru>Да</ru>
                     <en>Yes</en>
                 </option>
@@ -1561,7 +1588,7 @@
             </options>
         </item>
 
-        <!-- Уверенность в себе (Давыдова ЭХ, Давыдов АЮ) -->
+        <!-- Социальная уверенность в себе (Давыдова ЭХ, Давыдов АЮ) -->
         <item id="250" group="confidence">
             <name>
                 <ru>Вам всегда страшно выступать на собрании</ru>
@@ -1607,22 +1634,6 @@
                 <option value="0">
                     <ru>Да</ru>
                     <en>Yes</en>
-                </option>
-            </options>
-        </item>
-        <item id="253" group="confidence">
-            <name>
-                <ru>Вы уверены, что можете сдать экзамены, если хорошо подготовитесь</ru>
-                <en>You are sure you can pass your exams if you study well.</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
                 </option>
             </options>
         </item>

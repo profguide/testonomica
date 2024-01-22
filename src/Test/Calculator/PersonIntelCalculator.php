@@ -29,7 +29,7 @@ class PersonIntelCalculator extends AbstractCalculator
             'leader' => round($sums['leader'] * 100 / 10),
             'communicator' => round($sums['communicator'] * 100 / 14),
             'pretension' => [
-                'potential' => round($sums['pretension-potential'] * 100 / 12),
+                'potential' => round($sums['pretension-potential'] * 100 / 16),
                 'avoid' => round($sums['pretension-avoid'] * 100 / 8),
                 'competition' => round($sums['pretension-competition'] * 100 / 8),
                 'initiative' => round($sums['pretension-initiative'] * 100 / 8),
@@ -39,7 +39,7 @@ class PersonIntelCalculator extends AbstractCalculator
                         $sums['pretension-avoid'] +
                         $sums['pretension-competition'] +
                         $sums['pretension-initiative'] +
-                        $sums['pretension-effort']) * 100 / 48 // the sum of maximum values for the questions
+                        $sums['pretension-effort']) * 100 / 52 // the sum of maximum values for the questions
                 )
             ],
             'businessman' => [
@@ -61,7 +61,7 @@ class PersonIntelCalculator extends AbstractCalculator
                 'hol' => round($sums['temp-hol'] * 100 / 6),
                 'san' => round($sums['temp-san'] * 100 / 6),
             ],
-            'confidence' => round($sums['confidence'] * 100 / 5),
+            'confidence' => round($sums['confidence'] * 100 / 4),
             'empathy' => round($sums['empathy'] * 100 / 13),
             'iq' => [
                 'verbal' => round($sums['iq-verbal'] * 100 / 10),
