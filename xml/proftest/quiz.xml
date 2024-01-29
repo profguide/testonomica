@@ -560,9 +560,12 @@
         </item>
     <item id="310" group="body-interest" qtype="easy">
             <name>
-                <ru>Вы в парикмахерской ждёте свой очереди. На столе лежат журналы разной направленности. Какой журнал вы бы взяли в первую очередь?
+                <ru>Вы в парикмахерской ждёте свой очереди. На столе лежат журналы разной направленности. Какой журнал
+                    вы бы взяли в первую очередь?
                 </ru>
-                <en>In a hair salon, you are waiting for your turn. There are magazines of different types on the table. Which magazine would you choose first?</en>
+                <en>In a hair salon, you are waiting for your turn. There are magazines of different types on the table.
+                    Which magazine would you choose first?
+                </en>
             </name>
             <options>
                 <option value="1">
@@ -1056,31 +1059,31 @@
                 <en>If your company decided to put on a performance, which role would you choose?</en>
             </name>
             <options>
-                <option value="1">
+                <option value="type::viz" correct="true">
                     <ru>создать декорацию</ru>
                     <en>Make the scenery</en>
                 </option>
-                <option value="1">
+                <option value="type::viz" correct="true">
                     <ru>создать компьютерные видеоэффекты</ru>
                     <en>Work on the video effects</en>
                 </option>
-                <option value="1">
-                    <ru>сочинить музыку</ru>
-                    <en>Compose the music</en>
+                <option value="type::muz" correct="true">
+                    <ru>сочинить или подобрать музыку</ru>
+                    <en>Compose or select the music</en>
                 </option>
-                <option value="1">
+                <option value="1" correct="true">
                     <ru>придумать танец</ru>
                     <en>Choreograph a dance</en>
                 </option>
-                <option value="1">
+                <option value="1" correct="true">
                     <ru>сшить костюм</ru>
                     <en>Sew the costumes</en>
                 </option>
-                <option value="1">
+                <option value="1" correct="true">
                     <ru>сыграть роль</ru>
                     <en>Act in a role</en>
                 </option>
-                <option value="1">
+                <option value="1" correct="true">
                     <ru>придумать идею спектакля</ru>
                     <en>Come up with the script or storyline</en>
                 </option>
@@ -1388,8 +1391,8 @@
         </item>
     <item id="3" group="natural-force">
             <name>
-                <ru>Какое из этих мест вы посещаете чаще?</ru>
-                <en>Which of these places do you visit more often?</en>
+                <ru>Какое из этих мест вы посещаете с бо́льшим удовольствием?</ru>
+                <en>Which of these places do you visit with great pleasure?</en>
             </name>
             <options>
                 <option value="1">
@@ -1412,26 +1415,10 @@
                     <ru>Картинная галерея</ru>
                     <en>Art gallery</en>
                 </option>
+                <!-- todo химическая лаборатория, хим кружок и тп - если такое существует -->
                 <option value="0">
                     <ru>Никакое из этих мест</ru>
                     <en>None of these places</en>
-                </option>
-            </options>
-        </item>
-    <item id="4" group="natural-force">
-            <name>
-                <ru>Химии или биологии вы посвящали/посвящаете больше своего внимания, чем другим предметам в школе?
-                </ru>
-                <en>Do you devote most of your time to Chemistry and Biology over any other subjects at school?</en>
-            </name>
-            <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
-                </option>
-                <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
                 </option>
             </options>
         </item>
@@ -1489,6 +1476,10 @@
                     <ru>Нет</ru>
                     <en>No</en>
                 </option>
+                <option value="0">
+                    <ru>Не помню</ru>
+                    <en>I don't remember</en>
+                </option>
             </options>
         </item>
     <item id="13" group="natural-interest">
@@ -1505,22 +1496,33 @@
                     <ru>Нет</ru>
                     <en>No</en>
                 </option>
+                <option value="0">
+                    <ru>Затрудняюсь ответить</ru>
+                    <en>I find it difficult to answer</en>
+                </option>
             </options>
         </item>
     <item id="20" group="natural-skills">
             <name>
-                <ru>Есть ли у вас успехи хотя бы в одном из этих предметов в школе: химия, биология?
-                </ru>
-                <en>Do you have good marks in Chemistry or Biology at school?</en>
+                <ru>Какой из этих предметов в школе вам давался лучше всего?</ru>
+                <en>Which of these subjects did you do best in school?</en>
             </name>
             <options>
                 <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
+                    <ru>Химия</ru>
+                    <en>Chemistry</en>
+                </option>
+                <option value="1">
+                    <ru>Биология</ru>
+                    <en>Biology</en>
+                </option>
+                <option value="1">
+                    <ru>И то, и другое</ru>
+                    <en>Both</en>
                 </option>
                 <option value="0">
-                    <ru>Нет</ru>
-                    <en>No</en>
+                    <ru>Ни то, ни другое</ru>
+                    <en>Neither one nor the other</en>
                 </option>
             </options>
         </item>
@@ -2075,35 +2077,37 @@
         </item>
     <item id="712" group="art-interest">
             <name>
-                <ru>Если бы за всё платили одинаково, что бы вы выбрали
-                    делать каждый день с утра до вечера?
-                </ru>
+                <ru>Если бы за всё платили одинаково, что бы вы выбрали делать каждый день с утра до вечера?</ru>
                 <en>If money were not in the equation, what would you choose to do all day every day?</en>
             </name>
             <options>
-                <option value="1">
+                <option value="type::viz" correct="true">
                     <ru>придумывать одежду, образы</ru>
                     <en>Design clothes and draw the designs</en>
                 </option>
-                <option value="1">
+                <option value="type::viz" correct="true">
                     <ru>рисовать</ru>
                     <en>Draw</en>
                 </option>
-                <option value="1">
+                <option value="type::viz" correct="true">
                     <ru>делать компьютерный дизайн предметов, интерьеров, игр, рекламы, сайтов и т.п.</ru>
                     <en>Computer design of objects, interiors, games, adverts or websites</en>
                 </option>
-                <option value="1">
+                <option value="type::viz" correct="true">
                     <ru>фотографировать и снимать видео</ru>
                     <en>Do photography or videography</en>
                 </option>
-                <option value="1">
+                <option value="1" correct="true">
                     <ru>придумывать сценарии, стихи, рассказы</ru>
                     <en>Write scripts, poems, stories</en>
                 </option>
-                <option value="1">
+                <option value="type::muz" correct="true">
                     <ru>играть на музыкальных инструментах или петь</ru>
                     <en>Play musical instruments or sing</en>
+                </option>
+                <option value="type::muz" correct="true">
+                    <ru>сочинять музыку</ru>
+                    <en>Compose music</en>
                 </option>
                 <option value="0">
                     <ru>ничего из этого я бы не стал делать</ru>
@@ -2113,45 +2117,77 @@
         </item>
     <item id="721" group="art-skills">
             <name>
-                <ru>Как часто вас хвалили за ваши произведения (рисунок, фотографию,
-                    песню, стихотворение, рассказ и т.д.)?
-                </ru>
-                <en>How often have you been praised for your work (drawing, photography, singing, poetry,
-                    story-writing)?
-                </en>
+                <ru>За что вас хвалили чаще, подчёркивали ваш талант, поощрали и даже награждали?</ru>
+                <en>Why were you praised more often, emphasized your talent, encouraged and even rewarded?</en>
             </name>
             <options>
-                <option value="1">
-                    <ru>Часто</ru>
-                    <en>Often</en>
+                <option value="type::viz" correct="true">
+                    <ru>рисунки</ru>
+                    <en>drawings</en>
+                </option>
+                <option value="type::viz" correct="true">
+                    <ru>фотоработы, видеоработы</ru>
+                    <en>photo works, video works</en>
+                </option>
+                <option value="type::muz" correct="true">
+                    <ru>пение, игра на инструменте</ru>
+                    <en>singing, playing an instrument</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>рассказы</ru>
+                    <en>stories</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>танцы</ru>
+                    <en>dances</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>игра на сцене</ru>
+                    <en>playing on stage</en>
                 </option>
                 <option value="0">
-                    <ru>Редко</ru>
-                    <en>Seldom</en>
-                </option>
-                <option value="0">
-                    <ru>Никогда</ru>
-                    <en>Never</en>
+                    <ru>ничего из этого</ru>
+                    <en>None of this</en>
                 </option>
             </options>
         </item>
     <item id="722" group="art-skills">
             <name>
-                <ru>Легко ли вы придумываете что-нибудь из этого: орнаменты и узоры, логотипы,
-                    идеи для костюма, истории, мелодии, идеи интерьера и т.д.?
-                </ru>
-                <en>Is it easy for you to come up with and design any of the following: ornaments and patterns, logos,
-                    costumes, story ideas, melodies or interior designs?
-                </en>
+                <ru>Что из этого вам легко даётся?</ru>
+                <en>Which of these is easy for you?</en>
             </name>
             <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
+                <option value="type::viz" correct="true">
+                    <ru>придумывать орнаменты и узоры</ru>
+                    <en>come up with ornaments and patterns</en>
+                </option>
+                <option value="type::viz" correct="true">
+                    <ru>придумывать логотипы</ru>
+                    <en>come up with logos</en>
+                </option>
+                <option value="type::viz" correct="true">
+                    <ru>создавать идеи для костюма</ru>
+                    <en>create costume ideas</en>
+                </option>
+                <option value="type::viz" correct="true">
+                    <ru>создавать идеи для интерьера</ru>
+                    <en>create interior ideas</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>сочинять истории</ru>
+                    <en>Making up stories</en>
+                </option>
+                <option value="type::muz" correct="true">
+                    <ru>играть на музыкальном инструменте</ru>
+                    <en>Play a musical instrument</en>
+                </option>
+                <option value="type::muz" correct="true">
+                    <ru>придумывать мелодии</ru>
+                    <en>Come up with melodies</en>
                 </option>
                 <option value="0">
-                    <ru>Нет, мне такие вещи трудно придумывать</ru>
-                    <en>No, I find this kind of thing hard</en>
+                    <ru>ничего из этого</ru>
+                    <en>None of this</en>
                 </option>
             </options>
         </item>
@@ -2160,7 +2196,9 @@
                 <ru>Хорошо ли вы делаете что-то из этого: рисуете, сочиняете музыку, придумываете
                     сюжеты, снимаете видео?
                 </ru>
-                <en>Do you do any of the following well: drawing, composing music, coming up with stories, or making videos?</en>
+                <en>Do you do any of the following well: drawing, composing music, coming up with stories, or making
+                    videos?
+                </en>
             </name>
             <options>
                 <option value="1">

@@ -17,7 +17,7 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypesTest extends KernelTestC
         $professionTypes = new Types([new TypesCombination(['art' => 50, 'math' => 50])]);
         $professionTypesNot = new TypesCombination([]);
 
-        $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes);
+        $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes, []);
         self::assertEquals(0, $calculator->calculate($professionTypes, $professionTypesNot)->value());
     }
 
@@ -27,7 +27,7 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypesTest extends KernelTestC
         $professionTypes = new Types([new TypesCombination(['art' => 50, 'math' => 50])]);
         $professionTypesNot = new TypesCombination([]);
 
-        $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes);
+        $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes, []);
         // (100 + 100 + complexAward) / 2 = 107.5
         self::assertEquals(107.5, $calculator->calculate($professionTypes, $professionTypesNot)->value());
     }
@@ -41,7 +41,7 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypesTest extends KernelTestC
         ]);
         $professionTypesNot = new TypesCombination([]);
 
-        $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes);
+        $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes, []);
         // (100 + 100 + complexAward) / 2 = 107.5
         // косвенно узнали, что выбрана комбинация, где все по 100.
         self::assertEquals(107.5, $calculator->calculate($professionTypes, $professionTypesNot)->value());

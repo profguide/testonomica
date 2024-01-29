@@ -28,26 +28,115 @@ class AnswersUtilTest extends KernelTestCase
     }
 
     /**
-     * Сумма значений с методом OPTION (radio).
-     * При этом OPTION может иметь "правильные ответы", а может не иметь.
-     * Если вопрос предполагает "правильный ответ", и ответ действительно правильный, то это должно прибавить единицу.
-     * А если вопрос не предполагает "правильного ответа", то прибавляется значение ответа.
+     * Проверяем, что сумма значений равна числовому значению выбранного варианта
      */
-    public function testSumOptions()
+    public function testSumOptionsIntegerBased()
     {
-        $questions = self::buildQuestions([
-            1 => [0 => 'correct', 1, 2], // +1
-            2 => [0, 1 => 'correct', 2 => 'correct'], // +2
-            3 => [0, 1, 2 => 'correct'], // +1
-            4 => [0, 1, 2] // depends on choice: +0 or +1 or +2
-        ]);
-        $answers = self::buildAnswers([
-            1 => 0, // 1 option correct
-            2 => [1, 2], // 2 options correct
-            3 => 0, // wrong + 0
-            4 => 2 // value + 2
-        ]);
-        $this->assertEquals(4, AnswersUtil::sum(new QuestionsHolder($questions), new AnswersHolder($answers)));
+        $question = new Question();
+        $question->setId(1);
+        $question->setType(Question::TYPE_OPTION);
+        $question->addItem(QuestionItem::createMinimal('1', 'Один'));
+        $question->addItem(QuestionItem::createMinimal('2', 'Два'));
+        $question->addItem(QuestionItem::createMinimal('3', 'Три'));
+        $questions = [$question];
+
+        // сумма ответов - числовое значение
+        $this->assertEquals(3, AnswersUtil::sum(new QuestionsHolder($questions), new AnswersHolder(self::buildAnswers([
+            1 => [3]
+        ]))));
+    }
+
+    /**
+     * Проверяем, что сумма "корректных" значений равна единице
+     */
+    public function testSumOptionsWithCorrectOption()
+    {
+        $question = new Question();
+        $question->setId(1);
+        $question->setType(Question::TYPE_OPTION);
+        $question->addItem(QuestionItem::createMinimal('1', 'Один'));
+        $question->addItem(QuestionItem::createMinimal('2', 'Два'));
+        $question->addItem(QuestionItem::createMinimal('3', 'Три', null, true));
+        $questions = [$question];
+
+        // сумма "корректных" ответов равна единице - потому что "корректный" - значит +1
+        $this->assertEquals(1, AnswersUtil::sum(new QuestionsHolder($questions), new AnswersHolder(self::buildAnswers([
+            1 => [3]
+        ]))));
+
+        // сумма "некорректных" ответов равна нулю
+        $this->assertEquals(0, AnswersUtil::sum(new QuestionsHolder($questions), new AnswersHolder(self::buildAnswers([
+            1 => [2]
+        ]))));
+    }
+
+    /**
+     * Правильный ответ - любой из корректных
+     */
+    public function testAnyOptionIsCorrect()
+    {
+        $question = new Question();
+        $question->setId(1);
+        $question->setType(Question::TYPE_OPTION);
+        $question->addItem(QuestionItem::createMinimal('1', 'Один', null, true));
+        $question->addItem(QuestionItem::createMinimal('2', 'Два', null, true));
+        $question->addItem(QuestionItem::createMinimal('3', 'Три'));
+        $questions = [$question];
+
+        // вариант корректный
+        $this->assertEquals(1, AnswersUtil::sum(new QuestionsHolder($questions), new AnswersHolder(self::buildAnswers([
+            1 => [1]
+        ]))));
+
+        // вариант корректный
+        $this->assertEquals(1, AnswersUtil::sum(new QuestionsHolder($questions), new AnswersHolder(self::buildAnswers([
+            1 => [2]
+        ]))));
+
+        // вариант не корректный
+        $this->assertEquals(0, AnswersUtil::sum(new QuestionsHolder($questions), new AnswersHolder(self::buildAnswers([
+            1 => [3]
+        ]))));
+    }
+
+    /**
+     * Правильный ответ - ровное число правильных ответов
+     */
+    public function testStrictAmountOptionsIsCorrect()
+    {
+        $question = new Question();
+        $question->setId(1);
+        $question->setCount(2); // << два обязательных
+        $question->setType(Question::TYPE_OPTION);
+        $question->addItem(QuestionItem::createMinimal('1', 'Один', null, true));
+        $question->addItem(QuestionItem::createMinimal('2', 'Два', null, true));
+        $question->addItem(QuestionItem::createMinimal('3', 'Три'));
+        $questions = [$question];
+
+        // строго оба корректных - правильно
+        $this->assertEquals(1, AnswersUtil::sum(new QuestionsHolder($questions), new AnswersHolder(self::buildAnswers([
+            1 => [1, 2]
+        ]))));
+
+        // один из корректных - неправильно
+        $this->assertEquals(0, AnswersUtil::sum(new QuestionsHolder($questions), new AnswersHolder(self::buildAnswers([
+            1 => [1]
+        ]))));
+
+        // некорректный - неправильно
+        $this->assertEquals(0, AnswersUtil::sum(new QuestionsHolder($questions), new AnswersHolder(self::buildAnswers([
+            1 => [3]
+        ]))));
+
+        // один корректный и один некорректный - неправильно
+        $this->assertEquals(0, AnswersUtil::sum(new QuestionsHolder($questions), new AnswersHolder(self::buildAnswers([
+            1 => [1, 3]
+        ]))));
+
+        // оба корректных вместе с некорректным - неправильно
+        $this->assertEquals(0, AnswersUtil::sum(new QuestionsHolder($questions), new AnswersHolder(self::buildAnswers([
+            1 => [1, 2, 3]
+        ]))));
     }
 
     /**

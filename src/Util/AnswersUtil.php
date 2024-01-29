@@ -268,7 +268,10 @@ class AnswersUtil
     }
 
     /**
-     * Checks if all answer's values match question's expected ones
+     * Checks if the answer is correct (value(s))
+     * - текстовый тип ожидает число ответов равное числу полей;
+     * - нетекстовый тип ожидает установленное количество ответов (по умолчанию единица);
+     * - правильным считается любой корректный ответ если ожидаемое количество равно единице (по умолчанию);
      *
      * @param Question $question
      * @param AnswersHolder $answersHolder
@@ -278,10 +281,33 @@ class AnswersUtil
     {
         $correctValues = $question->getCorrectValues();
         $scoredValues = $answersHolder->getValues($question->getId());
-        return empty(array_merge(
-            array_diff($scoredValues, $correctValues),
-            array_diff($correctValues, $scoredValues)
-        ));
+
+        // текстовый тип предполагает, что все значения должны быть правильными (их количество и значения)
+        if ($question->getType() === Question::TYPE_TEXT) {
+            return empty(array_merge(
+                array_diff($scoredValues, $correctValues),
+                array_diff($correctValues, $scoredValues)
+            ));
+        }
+
+        // для остальных типов вопросов количество ожидаемых ответов устанавливается индивидуально
+        // по умолчанию ожидается один правильный ответ (если не установлено иное)
+        // если ожидается ответ в единственном числе, а корректных вариантов может быть несколько,
+        // то правильным ответом будет считаться любой из них (используется в профтесте для подтипов)
+        $DEFAULT_CORRECT_EXPECT_AMOUNT = 1;
+        $amountExpect = $question->getCount() ?? $DEFAULT_CORRECT_EXPECT_AMOUNT;
+        if ($amountExpect !== count($scoredValues)) {
+            return false;
+        }
+
+        // проверяем набранные значения
+        foreach ($scoredValues as $scoredValue) {
+            if (!in_array($scoredValue, $correctValues)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     /**

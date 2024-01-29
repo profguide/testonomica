@@ -1832,7 +1832,7 @@
 
         <!-- Художник -->
         <!-- Художник: Усилия -->
-        <!-- todo сомнительный вопрос -->
+        <!-- сомнительный вопрос -->
         <item id="700" group="art-force">
             <name>
                 <ru>Через неделю у важного для вас человека день рождения.
@@ -1918,31 +1918,31 @@
                 <en>If your company decided to put on a performance, which role would you choose?</en>
             </name>
             <options>
-                <option value="1">
+                <option value="type::viz" correct="true">
                     <ru>создать декорацию</ru>
                     <en>Make the scenery</en>
                 </option>
-                <option value="1">
+                <option value="type::viz" correct="true">
                     <ru>создать компьютерные видеоэффекты</ru>
                     <en>Work on the video effects</en>
                 </option>
-                <option value="1">
-                    <ru>сочинить музыку</ru>
-                    <en>Compose the music</en>
+                <option value="type::muz" correct="true">
+                    <ru>сочинить или подобрать музыку</ru>
+                    <en>Compose or select the music</en>
                 </option>
-                <option value="1">
+                <option value="1" correct="true">
                     <ru>придумать танец</ru>
                     <en>Choreograph a dance</en>
                 </option>
-                <option value="1">
+                <option value="1" correct="true">
                     <ru>сшить костюм</ru>
                     <en>Sew the costumes</en>
                 </option>
-                <option value="1">
+                <option value="1" correct="true">
                     <ru>сыграть роль</ru>
                     <en>Act in a role</en>
                 </option>
-                <option value="1">
+                <option value="1" correct="true">
                     <ru>придумать идею спектакля</ru>
                     <en>Come up with the script or storyline</en>
                 </option>
@@ -1972,35 +1972,37 @@
         </item>
         <item id="712" group="art-interest">
             <name>
-                <ru>Если бы за всё платили одинаково, что бы вы выбрали
-                    делать каждый день с утра до вечера?
-                </ru>
+                <ru>Если бы за всё платили одинаково, что бы вы выбрали делать каждый день с утра до вечера?</ru>
                 <en>If money were not in the equation, what would you choose to do all day every day?</en>
             </name>
             <options>
-                <option value="1">
+                <option value="type::viz" correct="true">
                     <ru>придумывать одежду, образы</ru>
                     <en>Design clothes and draw the designs</en>
                 </option>
-                <option value="1">
+                <option value="type::viz" correct="true">
                     <ru>рисовать</ru>
                     <en>Draw</en>
                 </option>
-                <option value="1">
+                <option value="type::viz" correct="true">
                     <ru>делать компьютерный дизайн предметов, интерьеров, игр, рекламы, сайтов и т.п.</ru>
                     <en>Computer design of objects, interiors, games, adverts or websites</en>
                 </option>
-                <option value="1">
+                <option value="type::viz" correct="true">
                     <ru>фотографировать и снимать видео</ru>
                     <en>Do photography or videography</en>
                 </option>
-                <option value="1">
+                <option value="1" correct="true">
                     <ru>придумывать сценарии, стихи, рассказы</ru>
                     <en>Write scripts, poems, stories</en>
                 </option>
-                <option value="1">
+                <option value="type::muz" correct="true">
                     <ru>играть на музыкальных инструментах или петь</ru>
                     <en>Play musical instruments or sing</en>
+                </option>
+                <option value="type::muz" correct="true">
+                    <ru>сочинять музыку</ru>
+                    <en>Compose music</en>
                 </option>
                 <option value="0">
                     <ru>ничего из этого я бы не стал делать</ru>
@@ -2027,45 +2029,77 @@
         </item>
         <item id="721" group="art-skills">
             <name>
-                <ru>Как часто вас хвалили за ваши произведения (рисунок, фотографию,
-                    песню, стихотворение, рассказ и т.д.)?
-                </ru>
-                <en>How often have you been praised for your work (drawing, photography, singing, poetry,
-                    story-writing)?
-                </en>
+                <ru>За что вас хвалили чаще, подчёркивали ваш талант, поощрали и даже награждали?</ru>
+                <en>Why were you praised more often, emphasized your talent, encouraged and even rewarded?</en>
             </name>
             <options>
-                <option value="1">
-                    <ru>Часто</ru>
-                    <en>Often</en>
+                <option value="type::viz" correct="true">
+                    <ru>рисунки</ru>
+                    <en>drawings</en>
+                </option>
+                <option value="type::viz" correct="true">
+                    <ru>фотоработы, видеоработы</ru>
+                    <en>photo works, video works</en>
+                </option>
+                <option value="type::muz" correct="true">
+                    <ru>пение, игра на инструменте</ru>
+                    <en>singing, playing an instrument</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>рассказы</ru>
+                    <en>stories</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>танцы</ru>
+                    <en>dances</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>игра на сцене</ru>
+                    <en>playing on stage</en>
                 </option>
                 <option value="0">
-                    <ru>Редко</ru>
-                    <en>Seldom</en>
-                </option>
-                <option value="0">
-                    <ru>Никогда</ru>
-                    <en>Never</en>
+                    <ru>ничего из этого</ru>
+                    <en>None of this</en>
                 </option>
             </options>
         </item>
         <item id="722" group="art-skills">
             <name>
-                <ru>Легко ли вы придумываете что-нибудь из этого: орнаменты и узоры, логотипы,
-                    идеи для костюма, истории, мелодии, идеи интерьера и т.д.?
-                </ru>
-                <en>Is it easy for you to come up with and design any of the following: ornaments and patterns, logos,
-                    costumes, story ideas, melodies or interior designs?
-                </en>
+                <ru>Что из этого вам легко даётся?</ru>
+                <en>Which of these is easy for you?</en>
             </name>
             <options>
-                <option value="1">
-                    <ru>Да</ru>
-                    <en>Yes</en>
+                <option value="type::viz" correct="true">
+                    <ru>придумывать орнаменты и узоры</ru>
+                    <en>come up with ornaments and patterns</en>
+                </option>
+                <option value="type::viz" correct="true">
+                    <ru>придумывать логотипы</ru>
+                    <en>come up with logos</en>
+                </option>
+                <option value="type::viz" correct="true">
+                    <ru>создавать идеи для костюма</ru>
+                    <en>create costume ideas</en>
+                </option>
+                <option value="type::viz" correct="true">
+                    <ru>создавать идеи для интерьера</ru>
+                    <en>create interior ideas</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>сочинять истории</ru>
+                    <en>Making up stories</en>
+                </option>
+                <option value="type::muz" correct="true">
+                    <ru>играть на музыкальном инструменте</ru>
+                    <en>Play a musical instrument</en>
+                </option>
+                <option value="type::muz" correct="true">
+                    <ru>придумывать мелодии</ru>
+                    <en>Come up with melodies</en>
                 </option>
                 <option value="0">
-                    <ru>Нет, мне такие вещи трудно придумывать</ru>
-                    <en>No, I find this kind of thing hard</en>
+                    <ru>ничего из этого</ru>
+                    <en>None of this</en>
                 </option>
             </options>
         </item>
@@ -2934,4 +2968,3 @@
         </item>
     </items>
 </quiz>
-

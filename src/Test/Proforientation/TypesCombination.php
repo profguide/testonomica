@@ -8,6 +8,11 @@ final class TypesCombination
 {
     const ALL = ['natural', 'tech', 'human', 'body', 'math', 'it', 'craft', 'art', 'hoz', 'com', 'boss', 'war'];
 
+    const SUB = [
+        'viz' => 'art',
+        'muz' => 'art'
+    ];
+
     /**
      * @var string[]
      */

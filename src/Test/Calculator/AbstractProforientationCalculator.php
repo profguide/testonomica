@@ -14,6 +14,7 @@ use App\Test\Helper\ProfessionsMapper;
 use App\Test\Proforientation\Calc\CalculationTypesValues;
 use App\Test\Proforientation\Calc\ProfessionsPercentCalculator;
 use App\Test\Proforientation\Calc\ProfessionTypeScoreCalculatorBasedOnTopTypes;
+use App\Test\Proforientation\Calc\UserSubtypesCalculator;
 use App\Test\Proforientation\Calc\UserTypesCalculator;
 use App\Test\Proforientation\Mapper\ConfigMapper;
 use App\Test\Proforientation\Profession;
@@ -101,10 +102,10 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
     private ProftestConfig $config;
 
     public function __construct(
-        AnswersHolder $answersHolder,
+        AnswersHolder   $answersHolder,
         QuestionsHolder $questionsHolder,
         KernelInterface $kernel,
-        string $locale = 'ru')
+        string          $locale = 'ru')
     {
         parent::__construct($answersHolder, $questionsHolder, $kernel, $locale);
         $this->initConfig();
@@ -115,13 +116,16 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
         $this->fitVersion();
 
         // считаем сколько набрали в каждом типе: усилия, интересы, скилы
-        $userTypes = (new UserTypesCalculator($this->questionsHolder, $this->answersHolder))->calculate();
+        $types = (new UserTypesCalculator($this->questionsHolder, $this->answersHolder))->calculate();
         // считаем среднее для каждого типа
-        $avgUserTypes = self::avgValueByTypes($userTypes); // [art => 65]
+        $avgTypes = self::avgValueByTypes($types); // [art => 65]
+
+        $subtypes = (new UserSubtypesCalculator($this->questionsHolder, $this->answersHolder))->calculate();
 
         $professions = $this->getProfessions();
+
         // расчитаем и выставим очки профессиям
-        self::scoreProfessions($professions, $avgUserTypes);
+        self::scoreProfessions($professions, $avgTypes, $subtypes);
         // отфильтруем профессии с низкими очками
         self::filterLowScoredProfessions($professions);
         // отсортируем профессии по очкам
@@ -131,8 +135,8 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
 
         return [
             'professions' => $professions,
-            'types_descriptions' => $this->typesDescriptions($userTypes),
-            'types' => $avgUserTypes
+            'types_descriptions' => $this->typesDescriptions($types),
+            'types' => $avgTypes
         ];
     }
 
@@ -153,15 +157,16 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
     }
 
     /**
-     * Рассчитывает и выставляет очки профессии с использованием набранных значений
+     * Рассчитывает и выставляет очки профессиям
      * @param Profession[] $professions
      * @param array $userTypes ['tech' => 20, 'body' => 50, 'human' => 0]
+     * @param array $subTypes ['muz' => 1, 'viz' => 0]
      * @return void with added scores
      */
-    private static function scoreProfessions(array $professions, array $userTypes): void
+    private static function scoreProfessions(array $professions, array $userTypes, array $subTypes): void
     {
 //        $calculator = new ProfessionTypeScoreCalculatorBasedOnParts($userTypes);
-        $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes);
+        $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes, $subTypes);
         foreach ($professions as $profession) {
             $score = $calculator->calculate($profession->types(), $profession->typesNot());
             $profession->setRating($score->value());

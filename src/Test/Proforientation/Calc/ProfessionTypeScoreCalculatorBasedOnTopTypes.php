@@ -50,7 +50,7 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypes
 {
     private array $userTypes;
 
-    public function __construct(array $userTypes)
+    public function __construct(array $userTypes, private readonly array $subTypes)
     {
         // Топовые типы
         $this->userTypes = (new TopTypesCalculator)->calc($userTypes);
@@ -157,6 +157,32 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypes
         $sum += $award;
 
         $score = $sum / count($types->values());
+
+        /**
+         * убавка за недобор подтипа
+         * подтип - это art::viz или art::muz
+         * @see UserSubtypesCalculator
+         */
+        foreach ($this->subTypes as $typeName => $subtypes) {
+            // профессия должна иметь такой же тип и подтип
+            $professionSubtypeName = $types->values()[$typeName] ?? null;
+            if ($professionSubtypeName) {
+                $value = $subtypes[$professionSubtypeName] ?? 1; // значение должно быть 100%, но пусть будет на всякий
+                if ($value < 1) {
+//                    $sum - $value * .....
+                    // допустим, набрали 0. Неужели нужно удалить совсем?
+                    // 0 превратить в 0.5
+                    // 0.5 превратить в 0.9
+                    // 0.9 превратить в ... 1?
+                    // неее.
+                    // 0 - это 0
+                    // а 0.9?
+                    //
+                    $score = $score * $value;
+                }
+            }
+        }
+
         return new Score(round($score, 2), [$types->values(), 'award' => $award]);
     }
 }
