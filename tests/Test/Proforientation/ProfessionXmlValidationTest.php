@@ -39,12 +39,12 @@ final class ProfessionXmlValidationTest extends KernelTestCase
     {
         foreach ($this->professions as $profession) {
             foreach ($profession->types()->combinations() as $i => $comb) {
-                $sum = 0;
                 foreach ($comb->values() as $name => $value) {
-                    $sum += $value;
                     self::assertContains($name, TypesCombination::ALL, "Assert that type name is correct at {$profession->name()}.");
+                    if (!is_numeric($value)) {
+                        self::assertContains($value, array_keys(TypesCombination::SUB), "Assert that subtype name is correct at {$profession->name()}.");
+                    }
                 }
-                self::assertEquals(100, $sum, "Assert that {$profession->name()}`s types sum equals 100 at combination #$i.");
             }
         }
     }
