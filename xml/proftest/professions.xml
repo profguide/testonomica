@@ -122,7 +122,7 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art,tech"/>-->
-            <comb comb="math:50,art:50"/>
+            <comb comb="math:50,art:viz"/>
             <!--            <comb comb="math:40,art:40,com:20"/>-->
         </combs>
         <values>
@@ -237,7 +237,7 @@ l * 100
             <!--            <comb comb="human,art,com"/>-->
             <!--            <comb comb="human,art"/>-->
             <!--            <comb comb="art"/>-->
-            <comb comb="human:33,art:34,com:33"/>
+            <comb comb="human:33,art:viz,com:33"/>
             <!--            <comb comb="art:50,com:50" />-->
             <!--            <comb comb="art:100"/>-->
         </combs>
@@ -312,7 +312,7 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art"/>-->
-            <comb comb="art:80,tech:20"/>
+            <comb comb="art:viz,tech:20"/>
             <!--            <comb comb="art:100"/>-->
             <!--            <comb comb="art:50,body:30,tech:20"/>-->
             <!--            <comb comb="art:70,body:30"/>-->
@@ -378,7 +378,7 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art"/>-->
-            <comb comb="art:100"/>
+            <comb comb="art:muz"/>
             <!--            <comb comb="art:34,tech:33,it:33"/>-->
         </combs>
         <values>
@@ -450,7 +450,7 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art,craft"/>-->
-            <comb comb="art:50,craft:50"/>
+            <comb comb="art:viz,craft:50"/>
             <!--            <comb comb="art:50,craft:25,com:25"/>-->
         </combs>
         <values>
@@ -590,7 +590,7 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art"/>-->
-            <comb comb="art:100"/>
+            <comb comb="art:viz"/>
             <!--            <comb comb="art:60,com:40"/>-->
         </combs>
         <values>
@@ -657,7 +657,7 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art,com,math"/>-->
-            <comb comb="art:34,com:33,math:33"/>
+            <comb comb="art:viz,com:33,math:33"/>
         </combs>
         <values>
             <value value="art,result,benefit,difference,promotion,intel,self-employ,free-time"/>
@@ -714,7 +714,7 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="natural,art"/>-->
-            <comb comb="natural:50,art:50"/>
+            <comb comb="natural:50,art:viz"/>
             <!--            <comb comb="art:35,com:30,natural:25,math:10"/>-->
         </combs>
         <values>
@@ -773,7 +773,7 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art,tech"/>-->
-            <comb comb="art:50,tech:50"/>
+            <comb comb="art:viz,tech:50"/>
             <!--            <comb comb="art:25,tech:25,com:25,math:25"/>-->
         </combs>
         <values>
@@ -835,7 +835,7 @@ l * 100
         <combs>
             <!--            <comb comb="art"/>-->
             <!--            <comb comb="art:75,com:25"/>-->
-            <comb comb="art:100"/>
+            <comb comb="art:muz"/>
         </combs>
         <values>
             <value value="art,result,intel,free-time,light-work,indoor,work-alone,self-employ,promotion,safe"/>
@@ -894,8 +894,8 @@ l * 100
             <fr>???</fr>
         </name>
         <combs>
-            <comb comb="art:80,tech:20"/>
-            <comb comb="art:100"/>
+            <comb comb="art:viz,tech:20"/>
+            <comb comb="art:viz"/>
         </combs>
         <values>
             <value value="hands,art,result,people,travel"/>
@@ -955,7 +955,7 @@ l * 100
         <combs>
             <!--            <comb comb="art"/>-->
             <!--            <comb comb="art:80,com:20"/>-->
-            <comb comb="art:100"/>
+            <comb comb="art:muz"/>
         </combs>
         <values>
             <value value="publicity,travel,art,free-time,light-work,people,indoor,body"/>
@@ -1019,7 +1019,7 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="craft,art"/>-->
-            <comb comb="craft:50,art:50"/>
+            <comb comb="craft:50,art:viz"/>
         </combs>
         <values>
             <value value="art,hands,body,result,work-alone,self-employ,indoor,free-time"/>
@@ -1075,7 +1075,7 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art"/>-->
-            <comb comb="art:100"/>
+            <comb comb="art:viz"/>
             <!--            <comb comb="art:70,com:30"/>-->
         </combs>
         <values>
@@ -1282,7 +1282,7 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art,craft"/>-->
-            <comb comb="art:50,craft:50"/>
+            <comb comb="art:viz,craft:50"/>
         </combs>
         <values>
             <value value="art,hands,result,indoor,work-alone,safe"/>
@@ -1403,7 +1403,7 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="art,com"/>-->
-            <comb comb="art:20,com:80"/>
+            <comb comb="art:viz,com:80"/>
         </combs>
         <values>
             <value value="people,travel,result,body,art,free-time,light-work,difference,indoor"/>
@@ -5471,7 +5471,7 @@ l * 100
         </name>
         <combs>
             <!--            <comb comb="craft,hoz"/>-->
-            <comb comb="art:20,craft:80"/>
+            <comb comb="art:viz,craft:80"/>
         </combs>
         <values>
             <value value="hands,art,work-alone,result,indoor,safe"/>
@@ -9600,7 +9600,7 @@ l * 100
             <!--            <comb comb="it,com,math"/>-->
             <!--            <comb comb="it,com"/>-->
             <!--            <comb comb="com,math"/>-->
-            <comb comb="com:25,math:25,human:25,art:25"/>
+            <comb comb="com:25,math:25,human:25,art:viz"/>
             <comb comb="com:50,math:25,human:25"/>
             <comb comb="it:50,com:50"/>
             <comb comb="com:50,math:50"/>
@@ -9882,7 +9882,7 @@ l * 100
         <combs>
             <!--            <comb comb="art,com,it,human"/>-->
             <!--            <comb comb="art,com,it"/>-->
-            <comb comb="human:50,art:25,com:25"/>
+            <comb comb="human:50,art:viz,com:25"/>
         </combs>
         <values>
             <value value="intel,people,art,result,safe,free-time,high-society,light-work,difference,indoor"/>
@@ -9971,9 +9971,9 @@ l * 100
             <!--            <comb comb="art,it,com"/>-->
             <!--            <comb comb="art,it"/>-->
             <!--            <comb comb="art"/>-->
-            <comb comb="art:60,com:20,it:20"/>
-            <comb comb="art:80,com:20"/>
-            <comb comb="art:100"/>
+            <comb comb="art:viz,com:20,it:20"/>
+            <comb comb="art:viz,com:20"/>
+            <comb comb="art:viz"/>
         </combs>
         <values>
             <value value="intel,art,indoor,difference,people,promotion,light-work,safe"/>
