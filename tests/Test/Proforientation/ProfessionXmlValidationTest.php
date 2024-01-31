@@ -6,6 +6,7 @@ namespace App\Tests\Test\Proforientation;
 
 use App\Test\Helper\ProfessionsMapper;
 use App\Test\Proforientation\Profession;
+use App\Test\Proforientation\Sex;
 use App\Test\Proforientation\TypesCombination;
 use App\Test\Proforientation\ValueSystem;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
@@ -55,6 +56,15 @@ final class ProfessionXmlValidationTest extends KernelTestCase
             foreach ($profession->typesNot()->values() as $value) {
                 self::assertContains($value, TypesCombination::ALL, "Assert that types are correct at {$profession->name()}.");
             }
+        }
+    }
+
+    public function testSexCorrect()
+    {
+        $all = [Sex::MALE, Sex::FEMALE, Sex::NONE];
+
+        foreach ($this->professions as $profession) {
+            self::assertContains($profession->sex, $all, "Assert that sex is correct at {$profession->name()}.");
         }
     }
 

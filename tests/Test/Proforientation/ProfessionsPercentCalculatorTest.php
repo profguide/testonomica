@@ -6,6 +6,7 @@ namespace App\Tests\Test\Proforientation;
 
 use App\Test\Proforientation\Profession;
 use App\Test\Proforientation\Calc\ProfessionsPercentCalculator;
+use App\Test\Proforientation\Sex;
 use App\Test\Proforientation\Types;
 use App\Test\Proforientation\TypesCombination;
 use App\Test\Proforientation\ValueSystem;
@@ -15,9 +16,9 @@ final class ProfessionsPercentCalculatorTest extends KernelTestCase
 {
     public function testCalculator()
     {
-        $one = new Profession('Маркетолог', new Types([new TypesCombination(['art' => 100, 'math' => 100])]), new TypesCombination([]), new ValueSystem([]), []);
+        $one = new Profession('Маркетолог', new Types([new TypesCombination(['art' => 100, 'math' => 100])]), new TypesCombination([]), Sex::NONE, new ValueSystem([]), []);
         $one->setRating(50);
-        $two = new Profession('Архитектор', new Types([new TypesCombination(['art' => 100, 'math' => 100])]), new TypesCombination([]), new ValueSystem([]), []);
+        $two = new Profession('Архитектор', new Types([new TypesCombination(['art' => 100, 'math' => 100])]), new TypesCombination([]), Sex::NONE, new ValueSystem([]), []);
         $two->setRating(80);
 
         $professions = [

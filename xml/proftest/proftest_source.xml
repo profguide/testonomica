@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<quiz version="2.0.2">
+<quiz version="2.0.3">
     <items>
         <!-- Естественник: Усилия -->
         <!-- или/или-->
@@ -2963,6 +2963,26 @@
                 <option value="0">
                     <ru>Нет</ru>
                     <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="2000">
+            <name>
+                <ru>Укажите ваш пол</ru>
+                <en>Specify your gender</en>
+            </name>
+            <options>
+                <option value="2">
+                    <ru>Мужской</ru>
+                    <en>Male</en>
+                </option>
+                <option value="1">
+                    <ru>Женский</ru>
+                    <en>Female</en>
+                </option>
+                <option value="0">
+                    <ru>Не важно</ru>
+                    <en>It doesn't matter</en>
                 </option>
             </options>
         </item>

@@ -5516,7 +5516,7 @@ l * 100
             </kind>
         </description>
     </profession>
-    <profession not="it,human,natural,art">
+    <profession not="it,human,natural,art" sex="male">
         <name>
             <ru>Фрезеровщик</ru>
             <en>Mill operator</en>
@@ -5565,7 +5565,7 @@ l * 100
             </kind>
         </description>
     </profession>
-    <profession not="it,human,natural,art">
+    <profession not="it,human,natural,art" sex="male">
         <name>
             <ru>Слесарь</ru>
             <en>Locksmith</en>
@@ -5614,7 +5614,7 @@ l * 100
             </kind>
         </description>
     </profession>
-    <profession not="it,human,natural">
+    <profession not="it,human,natural" sex="male">
         <name>
             <ru>Столяр, плотник</ru>
             <en>Woodsmen, Carpenter</en>
@@ -5698,7 +5698,7 @@ l * 100
             </kind>
         </description>
     </profession>
-    <profession not="it,human,natural,art,math">
+    <profession not="it,human,natural,art,math" sex="male">
         <name>
             <ru>Сантехник</ru>
             <en>Plumber</en>
@@ -5757,7 +5757,7 @@ l * 100
             </kind>
         </description>
     </profession>
-    <profession not="it,human,natural,math">
+    <profession not="it,human,natural,math" sex="male">
         <name>
             <ru>Кузнец</ru>
             <en>Blacksmith</en>
@@ -5834,7 +5834,7 @@ l * 100
             </kind>
         </description>
     </profession>
-    <profession not="it,human,natural,art">
+    <profession not="it,human,natural,art" sex="male">
         <name>
             <ru>Сварщик</ru>
             <en>Welder</en>
@@ -5900,7 +5900,7 @@ l * 100
             </kind>
         </description>
     </profession>
-    <profession not="it,human,natural,art">
+    <profession not="it,human,natural,art" sex="male">
         <name>
             <ru>Автомеханик</ru>
             <en>Automechanic</en>
@@ -5960,7 +5960,7 @@ l * 100
             </kind>
         </description>
     </profession>
-    <profession not="it,human,natural,art">
+    <profession not="it,human,natural,art" sex="male">
         <name>
             <ru>Электрик (электромонтер)</ru>
             <en>Electrician (wireman)</en>
@@ -8046,7 +8046,7 @@ l * 100
             </kind>
         </description>
     </profession>
-    <profession not="human,art,it,natural,tech,boss,war">
+    <profession not="human,art,it,natural,tech,boss,war" sex="female">
         <name>
             <ru>Экономка, помощник по хозяйству, кладовщик, кастелянша</ru>
             <en>Housekeeper, home care assistant, storekeeper, chatelaine</en>
@@ -8367,7 +8367,7 @@ l * 100
             </kind>
         </description>
     </profession>
-    <profession not="human,art,it,natural,boss">
+    <profession not="human,art,it,natural,boss" sex="male">
         <name>
             <ru>Спасатель МЧС, пожарный</ru>
             <en>EMERCOM rescuer, firefighter</en>

@@ -12,6 +12,7 @@ use App\Test\AbstractCalculator;
 use App\Test\AnswersHolder;
 use App\Test\Helper\ProfessionsMapper;
 use App\Test\Proforientation\Calc\CalculationTypesValues;
+use App\Test\Proforientation\Calc\ProfessionSexScoreCalculator;
 use App\Test\Proforientation\Calc\ProfessionsPercentCalculator;
 use App\Test\Proforientation\Calc\ProfessionTypeScoreCalculatorBasedOnTopTypes;
 use App\Test\Proforientation\Calc\UserSubtypesCalculator;
@@ -19,6 +20,7 @@ use App\Test\Proforientation\Calc\UserTypesCalculator;
 use App\Test\Proforientation\Mapper\ConfigMapper;
 use App\Test\Proforientation\Profession;
 use App\Test\Proforientation\ProftestConfig;
+use App\Test\Proforientation\Sex;
 use App\Test\QuestionsHolder;
 use Symfony\Component\HttpKernel\KernelInterface;
 
@@ -99,6 +101,8 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
 {
     const MAXIMUM_PROFESSIONS_NUMBER = 15;
 
+    const SEX_QUESTION_ID = '2000';
+
     private ProftestConfig $config;
 
     public function __construct(
@@ -122,10 +126,13 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
 
         $subtypes = (new UserSubtypesCalculator($this->questionsHolder, $this->answersHolder))->calculate();
 
+        // пол
+        $sex = $this->sex();
+
         $professions = $this->getProfessions();
 
         // расчитаем и выставим очки профессиям
-        self::scoreProfessions($professions, $avgTypes, $subtypes);
+        self::scoreProfessions($professions, $avgTypes, $subtypes, $sex);
         // отфильтруем профессии с низкими очками
         self::filterLowScoredProfessions($professions);
         // отсортируем профессии по очкам
@@ -163,13 +170,25 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
      * @param array $subTypes ['muz' => 1, 'viz' => 0]
      * @return void with added scores
      */
-    private static function scoreProfessions(array $professions, array $userTypes, array $subTypes): void
+    private static function scoreProfessions(array $professions, array $userTypes, array $subTypes, Sex $sex): void
     {
 //        $calculator = new ProfessionTypeScoreCalculatorBasedOnParts($userTypes);
-        $calculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes, $subTypes);
+        $typeCalculator = new ProfessionTypeScoreCalculatorBasedOnTopTypes($userTypes, $subTypes);
+        $sexCalculator = new ProfessionSexScoreCalculator($sex);
         foreach ($professions as $profession) {
-            $score = $calculator->calculate($profession->types(), $profession->typesNot());
-            $profession->setRating($score->value());
+            $typeScore = $typeCalculator->calculate($profession->types(), $profession->typesNot());
+            $sexScore = $sexCalculator->calculate($profession->sex);
+
+            // средний рейтинг
+            // не расчитывается, если один из рейтингов категорическое ноль
+            $min = min($typeScore->value(), $sexScore->value());
+            if ($min == 0) {
+                $totalScore = 0;
+            } else {
+                $totalScore = (float)(($typeScore->value() + $sexScore->value()) / 2);
+            }
+
+            $profession->setRating($totalScore);
         }
 
         (new ProfessionsPercentCalculator())->calculate($professions);
@@ -178,7 +197,7 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
     /**
      * @param Profession[] $professions
      */
-    private static function filterLowScoredProfessions(array &$professions)
+    private static function filterLowScoredProfessions(array &$professions): void
     {
         foreach ($professions as $i => $profession) {
             if ($profession->getRating() == 0) {
@@ -289,4 +308,19 @@ abstract class AbstractProforientationCalculator extends AbstractCalculator
     abstract protected function professionsFileName(): string;
 
     abstract protected function configFileName(): string;
+
+    private function sex(): Sex
+    {
+        $sexQuestionId = '2000';
+        if ($this->answersHolder->has($sexQuestionId)) {
+            $answer = $this->answersHolder->get($sexQuestionId);
+            if ($answer->value[0] === '2') {
+                return Sex::MALE;
+            } elseif ($answer->value[0] === '1') {
+                return Sex::FEMALE;
+            }
+        }
+
+        return Sex::NONE;
+    }
 }

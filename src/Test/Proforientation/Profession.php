@@ -20,6 +20,8 @@ class Profession implements JsonSerializable
 
     private TypesCombination $typesNot;
 
+    public readonly Sex $sex;
+
     private array $description;
 
     private ValueSystem $systemValues;
@@ -30,11 +32,12 @@ class Profession implements JsonSerializable
 
     private array $log = [];
 
-    public function __construct(string $name, Types $types, TypesCombination $typesNot, ValueSystem $valueSystem, $description = [])
+    public function __construct(string $name, Types $types, TypesCombination $typesNot, Sex $sex, ValueSystem $valueSystem, $description = [])
     {
         $this->name = $name;
         $this->types = $types;
         $this->typesNot = $typesNot;
+        $this->sex = $sex;
         $this->description = $description;
         $this->systemValues = $valueSystem;
     }

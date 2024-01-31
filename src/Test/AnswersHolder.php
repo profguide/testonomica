@@ -76,7 +76,7 @@ class AnswersHolder
 
     public function has(string $id): bool
     {
-        return isset($this->asnwers[$id]);
+        return isset($this->answers[$id]);
     }
 
     public function remove(string $id): void

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Tests\Test\Proforientation;
 
 use App\Test\Proforientation\Profession;
+use App\Test\Proforientation\Sex;
 use App\Test\Proforientation\Types;
 use App\Test\Proforientation\TypesCombination;
 use App\Test\Proforientation\ValueSystem;
@@ -20,6 +21,6 @@ final class ProfessionTest extends KernelTestCase
         $valueSystem = new ValueSystem([]);
         $description = [];
 
-        self::assertNotNull(new Profession($name, $types, $typesNot, $valueSystem, $description));
+        self::assertNotNull(new Profession($name, $types, $typesNot, Sex::NONE, $valueSystem, $description));
     }
 }

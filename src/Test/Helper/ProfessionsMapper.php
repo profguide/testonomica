@@ -6,6 +6,7 @@ namespace App\Test\Helper;
 
 use App\Test\CrawlerUtil;
 use App\Test\Proforientation\Profession;
+use App\Test\Proforientation\Sex;
 use App\Test\Proforientation\Types;
 use App\Test\Proforientation\TypesCombination;
 use App\Test\Proforientation\ValueSystem;
@@ -21,6 +22,9 @@ final class ProfessionsMapper
     private string $content;
 
     private string $locale;
+
+    const SEX_MALE = 'male';
+    const SEX_FEMALE = 'female';
 
     public function __construct(string $xmlContent, string $locale)
     {
@@ -46,6 +50,7 @@ final class ProfessionsMapper
             $this->langText($crawler->children('name')),
             $this->parseTypes($crawler),
             $this->parseTypesNot($crawler),
+            $this->parseSex($crawler),
             $this->parseValueSystem($crawler),
             $this->parseProfessionDescription($crawler));
     }
@@ -134,5 +139,19 @@ final class ProfessionsMapper
         } else {
             return $crawler->children($this->locale)->text();
         }
+    }
+
+    private function parseSex(Crawler $crawler): Sex
+    {
+        $value = $crawler->attr('sex');
+        if (!empty($value)) {
+            if ($value === self::SEX_MALE) {
+                return Sex::MALE;
+            } elseif ($value === self::SEX_FEMALE) {
+                return Sex::FEMALE;
+            }
+        }
+
+        return Sex::NONE;
     }
 }
