@@ -167,17 +167,8 @@ final class ProfessionTypeScoreCalculatorBasedOnTopTypes
             // профессия должна иметь такой же тип и подтип
             $professionSubtypeName = $types->values()[$typeName] ?? null;
             if ($professionSubtypeName) {
-                $value = $subtypes[$professionSubtypeName] ?? 1; // значение должно быть 100%, но пусть будет на всякий
+                $value = $subtypes[$professionSubtypeName] ?? 1; // значение должно быть точно, но на всякий случай подстрахуемся
                 if ($value < 1) {
-//                    $sum - $value * .....
-                    // допустим, набрали 0. Неужели нужно удалить совсем?
-                    // 0 превратить в 0.5
-                    // 0.5 превратить в 0.9
-                    // 0.9 превратить в ... 1?
-                    // неее.
-                    // 0 - это 0
-                    // а 0.9?
-                    //
                     $score = $score * $value;
                 }
             }
