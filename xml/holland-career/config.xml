@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <texts>
+        <intro>
+            <ru>
+                <p>Интерес представляют типы, набравшие наибольшее количество баллов. Предпочтительный «профессиональный
+                    тип» или «тип профессиональной» среды является совокупностью двух-трех типов, набравших наибольшее
+                    количество плюсов.
+                </p>
+            </ru>
+        </intro>
+    </texts>
+    <scenarios>
+        <scenario>
+            <scale percentVar="VALUES.q.percentage_value">
+                <label>
+                    <ru>Рейтинг</ru>
+                    <en>Rating</en>
+                </label>
+                <levels>
+                    <level up="33" color="danger"/>
+                    <level up="66" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <ru>1. Реалистический (или практический)</ru>
+                <en>1. Realistic (or practical)</en>
+            </name>
+            <text>
+                <ru>
+                    <p>
+                        Профессионалы данного типа склонны заниматься конкретными вещами и их использованием, отдают
+                        предпочтение занятиям, требующим применения физической силы, ловкости. Ориентированы, в
+                        основном, на практический труд, быстрый результат деятельности.
+                        <br/>
+                        В интеллектуальной сфере, в большой степени, преобладают математические способности. Способности
+                        к общению с людьми, формулировке и изложению мыслей развиты слабее.
+                        <br/>
+                        Чаще всего люди этого типа выбирают профессию механика, электрика, инженера, агронома, садовода,
+                        кондитера, повара и другие профессии, которые предполагают решение конкретных задач, наличие
+                        подвижности, настойчивости, связь с техникой Общение не является ведущим в структуре
+                        деятельности, а связано, скорее, с приемом и переработкой информации.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        Professionals of this type tend to deal with specific things and their use, give
+                        preference for activities that require the use of physical strength and dexterity.
+                        They are mainly focused on practical work, quick results of activity.
+                        <br/>
+                        In the intellectual sphere, mathematical abilities prevail to a large extent. Abilities
+                        They are less developed for communicating with people, formulating and expressing thoughts.
+                        <br/>
+                        Most often, people of this type choose the profession of a mechanic, electrician, engineer,
+                        agronomist, gardener,
+                        pastry chefs, cooks and other professions that involve solving specific tasks, the presence of
+                        mobility, perseverance, connection with technology Communication is not leading in the structure
+                        Rather, it is related to the reception and processing of information.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+        <scenario>
+            <scale percentVar="VALUES.w.percentage_value">
+                <label>
+                    <ru>Рейтинг</ru>
+                    <en>Rating</en>
+                </label>
+                <levels>
+                    <level up="33" color="danger"/>
+                    <level up="66" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <ru>2. Интеллектуальный (или исследовательский)</ru>
+                <en>2. Realistic (or practical)</en>
+            </name>
+            <text>
+                <ru>
+                    <p>
+                        Профессионалы данного типа отличаются аналитичностью, рационализмом, независимостью,
+                        оригинальностью, не склонны ориентироваться на социальные нормы Обладают достаточно развитыми
+                        математическими способностями, хорошей формулировкой и изложением мыслей, склонностью к решению
+                        логических. абстрактных задач.
+                        <br/>
+                        Люди этого типа предпочитают профессии научно-исследовательского направления: ботаник, физик,
+                        философ, программист и другие, в деятельности которых необходимы творческие способности и
+                        нестандартное мышление. Межличностные отношения в структуре деятельности играют незначительную
+                        роль.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        Professionals of this type are distinguished by their analyticity, rationalism, independence,
+                        originality, are not inclined to focus on social norms, have sufficiently developed mathematical
+                        abilities, good formulation and presentation of thoughts, and a tendency to solve logical ones.
+                        abstract tasks.
+                        <br/>
+                        People of this type prefer professions of scientific research: botanist, physicist, philosopher,
+                        programmer and others whose activities require creative abilities and non-standard thinking.
+                        Interpersonal relationships play a minor role in the structure of activities.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+        <scenario>
+            <scale percentVar="VALUES.e.percentage_value">
+                <label>
+                    <ru>Рейтинг</ru>
+                    <en>Rating</en>
+                </label>
+                <levels>
+                    <level up="33" color="danger"/>
+                    <level up="66" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <label>
+                    <ru>3. Артистический</ru>
+                    <en>3. Artistic</en>
+                </label>
+            </name>
+            <text>
+                <ru>
+                    <p>
+                        Профессионалы данного типа оригинальны, независимы, в принятии решений, редко ориентируются на
+                        социальные нормы и одобрение, обладают собственным (часто сложным) взглядом на жизнь, гибкостью
+                        и скоростью мышления, высокой эмоциональной чувствительностью.
+                        <br/>
+                        Отношения с окружающими строят, опираясь на свои ощущения, эмоции, воображение, интуицию.
+                        Обладают хорошей реакцией, координацией, развитым восприятием. В достаточной степени развиты
+                        коммуникативные способности.
+                        <br/>
+                        Профессиональная предрасположенность в наибольшей степени связана с актерско-сценической,
+                        музыкальной, изобразительной деятельностью.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        Professionals of this type are original, independent, in decision-making, rarely guided by
+                        social norms and approval, have their own (often complex) outlook on life, flexibility
+                        and the speed of thinking, high emotional sensitivity.
+                        <br/>
+                        They build relationships with others based on their feelings, emotions, imagination, and
+                        intuition.
+                        They have a good reaction, coordination, and developed perception. They are sufficiently
+                        developed
+                        communication skills.
+                        <br/>
+                        Professional predisposition is most associated with acting and stage,
+                        musical and visual activities.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+        <scenario>
+            <scale percentVar="VALUES.r.percentage_value">
+                <label>
+                    <ru>Рейтинг</ru>
+                    <en>Rating</en>
+                </label>
+                <levels>
+                    <level up="33" color="danger"/>
+                    <level up="66" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <ru>4. Социальный</ru>
+                <en>4. Social</en>
+            </name>
+            <text>
+                <ru>
+                    <p>Профессионалы данного типа гуманны, чувствительны, активны, ориентированы на социальные нормы.
+                        Способны к
+                        сопереживанию, умению войти и понять эмоциональное состояние другого человека.
+                        <br/>
+                        Обладают хорошими вербальными способностями, готовы входить в контакт с людьми (нуждаются в
+                        большом
+                        количестве контактов). Математические способности развиты слабее.
+                        <br/>
+                        В основном, люди этого типа ориентированы на труд, главным содержанием которого является
+                        взаимодействие с
+                        другими людьми, возможность решать задачи, предполагающие анализ поведения и обучения людей.
+                        Возможные сферы
+                        деятельности: обучение, лечение, обслуживание и другие, требующие постоянного контакта и общения
+                        с людьми,
+                        способностей к убеждению.
+                    </p>
+                </ru>
+                <en>
+                    <p>Professionals of this type are humane, sensitive, active, and oriented towards social norms. They
+                        are capable of
+                        empathy, the ability to enter and understand the emotional state of another person.
+                        <br/>
+                        They have good verbal abilities, are ready to get in touch with people (they need a lot
+                        the number of contacts). Mathematical abilities are less developed.
+                        <br/>
+                        Basically, people of this type are focused on work, the main content of which is interaction
+                        with
+                        by other people, the ability to solve problems involving the analysis of behavior and learning
+                        of people. Possible areas
+                        activities: training, treatment, maintenance and others that require constant contact and
+                        communication with people,
+                        the ability to convince.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+        <scenario>
+            <scale percentVar="VALUES.t.percentage_value">
+                <label>
+                    <ru>Рейтинг</ru>
+                    <en>Rating</en>
+                </label>
+                <levels>
+                    <level up="33" color="danger"/>
+                    <level up="66" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <ru>5. Конвенциальный (или стандартный)</ru>
+                <en>5. Conventional (or standard)</en>
+            </name>
+            <text>
+                <ru>
+                    <p>Профессионалы данного типа практичны, конкретны, не любят отступать от задуманного, обладают
+                        хорошей энергией, ориентированы на социальные нормы.
+                        <br/>
+                        Проявляют склонность к миру обозначений, часто переводя предметные свойства окружающего мира в
+                        знаковую систему.
+                        <br/>
+                        Отдают предпочтение четко определенной деятельности, выбирают из окружающей среды цели и задачи,
+                        поставленные перед ними обычаями и обществом. В основном выбирают профессии, связанные с
+                        канцелярскими и расчетными работами, созданием и оформлением документов, установлением
+                        количественных соотношении между числами, системами
+                        условных знаков: бухгалтер, патентовед, нотариус, топограф, корректор и другие, направленные на
+                        обработку информации, представленной в виде условных знаков, цифр, формул, текстов.
+                        <br/>
+                        Сфера общения в таких видах деятельности ограничена и не является ведущей, что вполне устраивает
+                        данный профессиональный тип. Коммуникативные и организаторские способности развиты слабо, но
+                        обладают достаточно высокими исполнительскими качествами.
+                    </p>
+                </ru>
+                <en>
+                    <p>Professionals of this type are practical, specific, do not like to deviate from their plans, have
+                        good energy, oriented towards social norms.
+                        <br/>
+                        They show a penchant for the world of designations, often translating the objective properties
+                        of the surrounding world into
+                        the sign system.
+                        <br/>
+                        They prefer well-defined activities, choose goals and objectives from the environment,
+                        set before them by customs and society. They mostly choose professions related to
+                        clerical and settlement work, creation and registration of documents, establishment
+                        quantitative relations between numbers, systems
+                        conventional signs: accountant, patent examiner, notary, topographer, proofreader and others
+                        aimed at
+                        processing of information presented in the form of conventional signs, numbers, formulas, texts.
+                        <br/>
+                        The sphere of communication in such types of activities is limited and is not the leading one,
+                        which is quite satisfactory
+                        this is a professional type. Communication and organizational skills are poorly developed, but
+                        they have fairly high performance qualities.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+        <scenario>
+            <scale percentVar="VALUES.y.percentage_value">
+                <label>
+                    <ru>Рейтинг</ru>
+                    <en>Rating</en>
+                </label>
+                <levels>
+                    <level up="33" color="danger"/>
+                    <level up="66" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <ru>6. Предприимчивый (или инцициативный)</ru>
+                <en>6. Enterprising (or incisive)</en>
+            </name>
+            <text>
+                <ru>
+                    <p>
+                        Профессионалы данного типа находчивы, практичны, быстро ориентируются в сложной обстановке,
+                        склонны к самостоятельному принятию решений, социальной активности, лидерству, имеют тягу к
+                        приключениям (возможно, авантюрным). Обладают достаточно развитыми коммуникативными
+                        способностями.<br/>
+                        Не предрасположены к занятиям, требующим усидчивости, большой и длительной концентрации
+                        внимания. Предпочтительной является деятельность, позволяющая проявлять энергию, организаторские
+                        способности. Сюда относятся профессии товароведа, директора, журналиста, телерепортера и другие,
+                        связанные с руководством, управлением и общением в разных ситуациях с разными людьми, влиянием
+                        на убеждения людей.<br/>
+                        Тип всегда неудовлетворенного человека.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        Professionals of this type are resourceful, practical, and quickly navigate difficult situations,
+                        they are prone to independent decision-making, social activity, leadership, and have a craving for
+                        adventures (possibly adventurous). They have sufficiently developed communication skills
+                        abilities.<br/>
+                        They are not predisposed to activities that require perseverance, great and prolonged concentration
+                        attention. The preferred activity is one that allows you to show energy, organizational skills
+                        abilities. This includes the professions of a commodity expert, director, journalist, TV reporter and others,
+                        related to leadership, management and communication in different situations with different people, influence
+                        on people's beliefs.<br/>
+                        The type of person who is always dissatisfied.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>

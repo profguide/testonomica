@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="q">
+                    <ru>Инженер</ru>
+                    <en>Engineer</en>
+                </option>
+                <option value="w">
+                    <ru>Социолог</ru>
+                    <en>Sociologist</en>
+                </option>
+            </options>
+        </item>
+        <item id="2">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="q">
+                    <ru>Кондитер</ru>
+                    <en>Confectioner</en>
+                </option>
+                <option value="w">
+                    <ru>Священнослужитель</ru>
+                    <en>The priest</en>
+                </option>
+            </options>
+        </item>
+        <item id="3">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="q">
+                    <ru>Повар</ru>
+                    <en>Cook</en>
+                </option>
+                <option value="r">
+                    <ru>Статистик</ru>
+                    <en>Statistician</en>
+                </option>
+            </options>
+        </item>
+        <item id="4">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="q">
+                    <ru>Фотограф</ru>
+                    <en>Photographer</en>
+                </option>
+                <option value="t">
+                    <ru>Администратор торгового зала</ru>
+                    <en>Retail floor manager</en>
+                </option>
+            </options>
+        </item>
+        <item id="5">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="q">
+                    <ru>Механик</ru>
+                    <en>Mechanic</en>
+                </option>
+                <option value="y">
+                    <ru>Дизайнер</ru>
+                    <en>Designer</en>
+                </option>
+            </options>
+        </item>
+        <item id="6">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="w">
+                    <ru>Философ</ru>
+                    <en>Philosopher</en>
+                </option>
+                <option value="e">
+                    <ru>Врач</ru>
+                    <en>Doctor</en>
+                </option>
+            </options>
+        </item>
+        <item id="7">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="w">
+                    <ru>Эколог</ru>
+                    <en>Ecologist</en>
+                </option>
+                <option value="r">
+                    <ru>Бухгалтер</ru>
+                    <en>Accountant</en>
+                </option>
+            </options>
+        </item>
+        <item id="8">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="w">
+                    <ru>Программист</ru>
+                    <en>Programmer</en>
+                </option>
+                <option value="t">
+                    <ru>Адвокат</ru>
+                    <en>Lawyer</en>
+                </option>
+            </options>
+        </item>
+        <item id="9">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="w">
+                    <ru>Кинолог</ru>
+                    <en>Canine specialist</en>
+                </option>
+                <option value="y">
+                    <ru>Переводчик художественной литературы</ru>
+                    <en>Literary translator</en>
+                </option>
+            </options>
+        </item>
+        <item id="10">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="e">
+                    <ru>Страховой агент</ru>
+                    <en>Insurance agent</en>
+                </option>
+                <option value="r">
+                    <ru>Архивист</ru>
+                    <en>Archivist</en>
+                </option>
+            </options>
+        </item>
+        <item id="11">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="e">
+                    <ru>Тренер</ru>
+                    <en>Coach</en>
+                </option>
+                <option value="t">
+                    <ru>Телерепортёр</ru>
+                    <en>Teleporter</en>
+                </option>
+            </options>
+        </item>
+        <item id="12">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="e">
+                    <ru>Следователь</ru>
+                    <en>Investigator</en>
+                </option>
+                <option value="y">
+                    <ru>Искусствовед</ru>
+                    <en>Art historian</en>
+                </option>
+            </options>
+        </item>
+        <item id="13">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="r">
+                    <ru>Нотариус</ru>
+                    <en>Notary</en>
+                </option>
+                <option value="t">
+                    <ru>Брокер</ru>
+                    <en>Broker</en>
+                </option>
+            </options>
+        </item>
+        <item id="14">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="r">
+                    <ru>Оператор ПК</ru>
+                    <en>Computer operator</en>
+                </option>
+                <option value="y">
+                    <ru>Манекенщица</ru>
+                    <en>Mannequin</en>
+                </option>
+            </options>
+        </item>
+        <item id="15">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="t">
+                    <ru>Фотокорреспондент</ru>
+                    <en>Photojournalist</en>
+                </option>
+                <option value="y">
+                    <ru>Реставратор</ru>
+                    <en>Restorer</en>
+                </option>
+            </options>
+        </item>
+        <item id="16">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="q">
+                    <ru>Озеленитель</ru>
+                    <en>Landscaper</en>
+                </option>
+                <option value="w">
+                    <ru>Биолог-исследователь</ru>
+                    <en>Biological researcher</en>
+                </option>
+            </options>
+        </item>
+        <item id="17">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="q">
+                    <ru>Водитель автотранспорта</ru>
+                    <en>Driver</en>
+                </option>
+                <option value="e">
+                    <ru>Бортпроводник</ru>
+                    <en>Flight attendant</en>
+                </option>
+            </options>
+        </item>
+        <item id="18">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="q">
+                    <ru>Метеоролог</ru>
+                    <en>Meteorologist</en>
+                </option>
+                <option value="r">
+                    <ru>Картограф</ru>
+                    <en>Cartographer</en>
+                </option>
+            </options>
+        </item>
+        <item id="19">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="q">
+                    <ru>Радиомонтажник</ru>
+                    <en>Radio installer</en>
+                </option>
+                <option value="y">
+                    <ru>Художник росписи по дереву</ru>
+                    <en>Wood painting artist</en>
+                </option>
+            </options>
+        </item>
+        <item id="20">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="w">
+                    <ru>Геолог</ru>
+                    <en>Geologist</en>
+                </option>
+                <option value="e">
+                    <ru>Переводчик-гид</ru>
+                    <en>Tour guide</en>
+                </option>
+            </options>
+        </item>
+        <item id="21">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="t">
+                    <ru>Журналист</ru>
+                    <en>Journalist</en>
+                </option>
+                <option value="y">
+                    <ru>Режиссер</ru>
+                    <en>Director</en>
+                </option>
+            </options>
+        </item>
+        <item id="22">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="w">
+                    <ru>Библиограф</ru>
+                    <en>Bibliographer</en>
+                </option>
+                <option value="r">
+                    <ru>Аудитор</ru>
+                    <en>Auditor</en>
+                </option>
+            </options>
+        </item>
+        <item id="23">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="w">
+                    <ru>Фармацевт</ru>
+                    <en>Pharmacist</en>
+                </option>
+                <option value="e">
+                    <ru>Юрисконсульт</ru>
+                    <en>Legal consultant</en>
+                </option>
+            </options>
+        </item>
+        <item id="24">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="w">
+                    <ru>Генетик</ru>
+                    <en>Geneticist</en>
+                </option>
+                <option value="y">
+                    <ru>Архитектор</ru>
+                    <en>Architect</en>
+                </option>
+            </options>
+        </item>
+        <item id="25">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="e">
+                    <ru>Продавец</ru>
+                    <en>Salesperson</en>
+                </option>
+                <option value="r">
+                    <ru>Оператор почтовой связи</ru>
+                    <en>Postal operator</en>
+                </option>
+            </options>
+        </item>
+        <item id="26">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="e">
+                    <ru>Социальный работник</ru>
+                    <en>Social worker</en>
+                </option>
+                <option value="t">
+                    <ru>Предприниматель</ru>
+                    <en>Entrepreneur</en>
+                </option>
+            </options>
+        </item>
+        <item id="27">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="e">
+                    <ru>Преподаватель вуза</ru>
+                    <en>University lecturer</en>
+                </option>
+                <option value="y">
+                    <ru>Музыкант-исполнитель</ru>
+                    <en>Performing musician</en>
+                </option>
+            </options>
+        </item>
+        <item id="28">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="r">
+                    <ru>Экономист</ru>
+                    <en>Economist</en>
+                </option>
+                <option value="t">
+                    <ru>Менеджер</ru>
+                    <en>Manager</en>
+                </option>
+            </options>
+        </item>
+        <item id="29">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="r">
+                    <ru>Корректор</ru>
+                    <en>Proofreader</en>
+                </option>
+                <option value="y">
+                    <ru>Дирижер</ru>
+                    <en>Conductor</en>
+                </option>
+            </options>
+        </item>
+        <item id="30">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="t">
+                    <ru>Инспектор таможни</ru>
+                    <en>Customs inspector</en>
+                </option>
+                <option value="y">
+                    <ru>Модельер</ru>
+                    <en>Fashion designer</en>
+                </option>
+            </options>
+        </item>
+        <item id="31">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="q">
+                    <ru>Телефонист</ru>
+                    <en>Telephonist</en>
+                </option>
+                <option value="w">
+                    <ru>Орнитолог</ru>
+                    <en>Ornithologist</en>
+                </option>
+            </options>
+        </item>
+        <item id="32">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="q">
+                    <ru>Агроном</ru>
+                    <en>Agronomist</en>
+                </option>
+                <option value="r">
+                    <ru>Топограф</ru>
+                    <en>Topographer</en>
+                </option>
+            </options>
+        </item>
+        <item id="33">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="q">
+                    <ru>Лесник</ru>
+                    <en>Forester</en>
+                </option>
+                <option value="t">
+                    <ru>Директор</ru>
+                    <en>Director</en>
+                </option>
+            </options>
+        </item>
+        <item id="34">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="q">
+                    <ru>Мастер по ремонту одежды</ru>
+                    <en>Garment repairer</en>
+                </option>
+                <option value="y">
+                    <ru>Хореограф</ru>
+                    <en>Choreographer</en>
+                </option>
+            </options>
+        </item>
+        <item id="35">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="w">
+                    <ru>Историк</ru>
+                    <en>Historian</en>
+                </option>
+                <option value="r">
+                    <ru>Инспектор</ru>
+                    <en>Inspector</en>
+                </option>
+            </options>
+        </item>
+        <item id="36">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="w">
+                    <ru>Антрополог</ru>
+                    <en>Anthropologist</en>
+                </option>
+                <option value="e">
+                    <ru>Экскурсовод</ru>
+                    <en>Tour guide</en>
+                </option>
+            </options>
+        </item>
+        <item id="37">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="w">
+                    <ru>Вирусолог</ru>
+                    <en>Virologist</en>
+                </option>
+                <option value="y">
+                    <ru>Актёр</ru>
+                    <en>Actor</en>
+                </option>
+            </options>
+        </item>
+        <item id="38">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="e">
+                    <ru>Официант</ru>
+                    <en>Waiter</en>
+                </option>
+                <option value="t">
+                    <ru>Товаровед</ru>
+                    <en>Merchandiser</en>
+                </option>
+            </options>
+        </item>
+        <item id="39">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="r">
+                    <ru>Главный бухгалтер</ru>
+                    <en>Chief accountant</en>
+                </option>
+                <option value="t">
+                    <ru>Инспектор уголовного розыска</ru>
+                    <en>Criminal investigator</en>
+                </option>
+            </options>
+        </item>
+        <item id="40">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="y">
+                    <ru>Парикмахер-модельер</ru>
+                    <en>Hairdresser-stylist</en>
+                </option>
+                <option value="e">
+                    <ru>Психолог</ru>
+                    <en>Psychologist</en>
+                </option>
+            </options>
+        </item>
+        <item id="41">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="q">
+                    <ru>Пчеловод</ru>
+                    <en>Beekeeper</en>
+                </option>
+                <option value="t">
+                    <ru>Коммерсант</ru>
+                    <en>Businessman</en>
+                </option>
+            </options>
+        </item>
+        <item id="42">
+            <name>
+                <ru>Какая профессия Вам больше нравится?</ru>
+                <en>Which profession do you prefer?</en>
+            </name>
+            <options>
+                <option value="e">
+                    <ru>Судья</ru>
+                    <en>Judge</en>
+                </option>
+                <option value="r">
+                    <ru>Стенографист</ru>
+                    <en>Stenographer</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>
