@@ -30,7 +30,7 @@ class ProgressSerializer
         $jsonData = json_decode($json, true);
         $answers = [];
         foreach ($jsonData as $id => $values) {
-            $answers[$id] = new Answer($id, $values);
+            $answers[$id] = new Answer((string)$id, $values);
         }
         return new Progress($answers);
     }

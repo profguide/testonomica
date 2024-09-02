@@ -22,6 +22,13 @@ class AnswersHolder
         $this->answers = $answers;
     }
 
+    private static function castValuesToInt(array $values): array
+    {
+        return array_map(function (mixed $value) {
+            return (int) $value;
+        }, $values);
+    }
+
     /**
      * @return Answer[]
      */
@@ -47,12 +54,12 @@ class AnswersHolder
 
     /**
      * Calculates sum of values
-     * @param $questionId
-     * @return float|int
+     * @param string $questionId
+     * @return int
      */
-    public function getValuesSum(string $questionId)
+    public function getValuesSum(string $questionId): int
     {
-        return array_sum($this->getValues($questionId));
+        return array_sum(self::castValuesToInt($this->getValues($questionId)));
     }
 
     private function answersByQuestionId(): array
