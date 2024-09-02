@@ -6,6 +6,7 @@ use App\Domain\Test\TestSearchForm;
 use App\Entity\Result;
 use App\Entity\Test;
 use App\Repository\AuthorRepository;
+use App\Service\AnswersExplainService;
 use App\Service\CalculatorService;
 use App\Service\ResultService;
 use App\Service\TestService;
@@ -22,13 +23,14 @@ use Symfony\Component\Routing\Annotation\Route;
 class TestController extends AbstractController
 {
     public function __construct(
-        private readonly TestSearchForm    $testSearchForm,
-        private readonly TestService       $testService,
-        private readonly ResultService     $resultService,
-        private readonly CalculatorService $calculatorService,
-        private readonly ResultRenderer    $resultRenderer,
-        private readonly AuthorRepository  $authors,
-        private readonly Locale            $locale,
+        private readonly TestSearchForm        $testSearchForm,
+        private readonly TestService           $testService,
+        private readonly AnswersExplainService $answersExplainService,
+        private readonly ResultService         $resultService,
+        private readonly CalculatorService     $calculatorService,
+        private readonly ResultRenderer        $resultRenderer,
+        private readonly AuthorRepository      $authors,
+        private readonly Locale                $locale,
     )
     {
     }
@@ -85,6 +87,13 @@ class TestController extends AbstractController
             'uuid' => $result->getUuid(),
             'result' => $this->resultRenderer->render($test, $data, new ViewFormat(ViewFormat::HTML))->getContent()
         ]);
+    }
+
+    #[Route('/tests/answers/{uuid}/', name: 'tests.answers')]
+    public function answers(string $uuid): Response
+    {
+        $result = $this->getResult($uuid);
+        return $this->json($this->answersExplainService->rows($result));
     }
 
     #[Route('/tests/iframe/', name: 'tests.iframe')]

@@ -21,6 +21,10 @@ interface SourceRepositoryInterface
 
     function getLastQuestion(Test $test): Question;
 
+    /**
+     * @param Test $test
+     * @return Question[]
+     */
     function getAllQuestions(Test $test): array;
 
     function getTotalCount(Test $test): int;

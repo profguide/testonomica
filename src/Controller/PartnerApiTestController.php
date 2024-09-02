@@ -8,6 +8,7 @@ use App\Entity\Result;
 use App\Entity\Test;
 use App\Repository\ResultRepository;
 use App\Repository\TestRepository;
+use App\Service\AnswersExplainService;
 use App\Service\CalculatorService;
 use App\Test\Result\ResultKeyFactory;
 use App\Test\ResultRenderer;
@@ -17,26 +18,18 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/partner/api/test", name="partner.api.test.")
- */
+#[Route('/partner/api/test', name: 'partner.api.test.')]
 class PartnerApiTestController extends AbstractRestController
 {
-    private TestRepository $tests;
-
-    private ResultRepository $results;
-
-    private ResultRenderer $renderer;
-
-    public function __construct(TestRepository $tests, ResultRepository $results, ResultRenderer $renderer, private readonly ResultKeyFactory $resultKeyFactory)
+    public function __construct(
+        private readonly TestRepository        $tests,
+        private readonly ResultRepository      $results,
+        private readonly ResultRenderer        $renderer,
+        private readonly ResultKeyFactory      $resultKeyFactory)
     {
-        $this->tests = $tests;
-        $this->results = $results;
-        $this->renderer = $renderer;
     }
 
     /**
-     * @Route("/result/{key}/", name="result")
      * additional params:
      * - format: html/pdf/json (json by default).
      * @param string $key
@@ -44,6 +37,7 @@ class PartnerApiTestController extends AbstractRestController
      * @param CalculatorService $calculatorService
      * @return JsonResponse
      */
+    #[Route('/result/{key}/', name: 'result')]
     public function result(string $key, Request $request, CalculatorService $calculatorService): Response
     {
         $result = $this->getResult($key);
@@ -53,12 +47,11 @@ class PartnerApiTestController extends AbstractRestController
     }
 
     /**
-     * @Route("/progress/{uuid}/", name="progress")
-     *
      * Прогресс теста
      * @param string $uuid
      * @return Response
      */
+    #[Route('/progress/{uuid}/', name: 'progress')]
     public function actionProgress(string $uuid): Response
     {
         $result = $this->getResult($uuid);
@@ -68,8 +61,6 @@ class PartnerApiTestController extends AbstractRestController
     }
 
     /**
-     * @Route("/calculate/{id}/", name="calculate")
-     *
      * Расчёт результата
      *
      * @param string $id
@@ -77,6 +68,7 @@ class PartnerApiTestController extends AbstractRestController
      * @param CalculatorService $calculatorService
      * @return Response
      */
+    #[Route('/calculate/{id}/', name: 'calculate')]
     public function calculate(string $id, Request $request, CalculatorService $calculatorService): Response
     {
         $format = new ViewFormat($request->get('format', ViewFormat::JSON));

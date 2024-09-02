@@ -18,8 +18,8 @@ class TestFixture extends Fixture implements DependentFixtureInterface
 
     const TEST_1_SLUG = 'test_1'; // xml-based
     const TEST_2_SLUG = 'test_2'; // db-based
-    const TEST_3_SLUG = 'test_3'; // профтест
-    const TEST_5_SLUG = 'test_5'; // личность и структура
+    const TEST_3_SLUG = 'proforientation-v2'; // профтест
+    const TEST_5_SLUG = 'personality-intelligence'; // личность и структура
     const TEST_6_SLUG = 'test_6'; // complex
 
     public function load(ObjectManager $manager)
