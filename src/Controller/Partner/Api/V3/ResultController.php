@@ -88,7 +88,7 @@ final class ResultController extends AbstractRestController
             throw new BadRequestException('The required "' . self::REQUEST_PARAM_FORMAT . '" parameter is missing.');
         }
 
-        if (!in_array($format, [ViewFormat::JSON, ViewFormat::PDF])) {
+        if (!in_array($format, [ViewFormat::JSON, ViewFormat::PDF, ViewFormat::HTML])) {
             throw new BadRequestException("Unsupported \"" . self::REQUEST_PARAM_FORMAT . "\" value: \"$format\".");
         }
 
