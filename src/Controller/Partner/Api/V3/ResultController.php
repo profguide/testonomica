@@ -9,6 +9,7 @@ use App\Controller\Partner\Api\V3\Extractor\ResultExtractor;
 use App\Controller\Partner\Api\V3\Extractor\ViewFormatExtractor;
 use App\Exception\ResultNotFoundException;
 use App\Service\AnswersExplainService;
+use App\V3\Result\Exception\ResultUserAssociationMissingException;
 use App\V3\Result\Service\ResultService;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
@@ -26,7 +27,8 @@ final class ResultController extends AbstractRestController
 
     private const ERROR_MAP = [
         BadRequestException::class => [400],
-        ResultNotFoundException::class => [404]
+        ResultNotFoundException::class => [404],
+        ResultUserAssociationMissingException::class => [403],
     ];
 
     public function __construct(protected readonly LoggerInterface $logger)
@@ -34,7 +36,7 @@ final class ResultController extends AbstractRestController
     }
 
     /**
-     * Возвращает результат калькуляции в указанном формате
+     * Выводит результат калькуляции в указанном формате
      *
      * @param Request $request
      * @param ResultExtractor $resultExtractor
@@ -54,14 +56,14 @@ final class ResultController extends AbstractRestController
             $result = $resultExtractor->extract($request, self::REQUEST_PARAM_RESULT_KEY);
             $format = $formatExtractor->extract($request, self::REQUEST_PARAM_FORMAT);
 
-            return $resultService->getResultResponse($result, $format);
+            return $resultService->getCheckedResultResponse($result, $format);
         } catch (\Throwable $e) {
             return $this->handleError($e, self::ERROR_MAP);
         }
     }
 
     /**
-     * Возвращает вопросы и ответы к результату.
+     * Выводит список вопросов и ответов к результату.
      * Используется службой контроля качества тестирования.
      *
      * @param Request $request

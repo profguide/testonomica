@@ -15,7 +15,7 @@ use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
 
-readonly class ResultRenderer
+class ResultRenderer
 {
     public function __construct(
         private Environment          $twig,

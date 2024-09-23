@@ -22,7 +22,7 @@ use App\Test\QuestionsHolder;
 use App\Test\ResultUtil;
 use Symfony\Component\HttpKernel\KernelInterface;
 
-readonly class CalculatorService
+class CalculatorService
 {
     public function __construct(
         private CalculatorNameResolver    $calculatorNameResolver,

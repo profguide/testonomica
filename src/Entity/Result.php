@@ -22,7 +22,7 @@ use Symfony\Component\Uid\Uuid;
 #[ORM\Index(columns: ['uuid'])]
 #[ORM\Entity(repositoryClass: 'App\Repository\ResultRepository')]
 #[ORM\HasLifecycleCallbacks]
-class Result
+class Result implements \Stringable
 {
     /*
      * todo
@@ -140,5 +140,10 @@ class Result
         $result->setData($serializer->serialize($progress));
         $result->setHash($progress->hashSum());
         return $result;
+    }
+
+    public function __toString()
+    {
+        return $this?->newId?->toBase58() ?? $this->uuid ?? "Result " . spl_object_id($this);
     }
 }

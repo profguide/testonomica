@@ -21,6 +21,16 @@ class ProviderUsersResultsRepository extends ServiceEntityRepository
         parent::__construct($registry, ProviderUserResult::class);
     }
 
+    public function hasRecordByResult(Result $result): bool
+    {
+        return $this->createQueryBuilder('l')
+                ->select('count(l.id)')
+                ->andWhere('l.result = :result')
+                ->setParameter('result', $result->getNewId()->toBinary())
+                ->getQuery()
+                ->getSingleScalarResult() > 0;
+    }
+
     public function hasByResultAndUser(Result $result, ProviderUser $user): bool
     {
         return $this->createQueryBuilder('l')
