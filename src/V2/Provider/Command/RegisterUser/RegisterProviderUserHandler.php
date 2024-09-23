@@ -44,10 +44,7 @@ class RegisterProviderUserHandler
             return $user;
         }
 
-        $paymentPolicyValidator = $this->paymentPolicyValidatorFactory->createValidator($provider->getPaymentPolicy());
-        if (!$paymentPolicyValidator->validate($provider)) {
-            throw new PaymentPolicyValidationException($paymentPolicyValidator->getMessage());
-        }
+        $this->guardPaymentPolicy($provider);
 
         $user = ProviderUser::create($provider, $userId);
         $provider->addUser($user);
@@ -57,5 +54,13 @@ class RegisterProviderUserHandler
         $this->entityManager->flush();
 
         return $user;
+    }
+
+    private function guardPaymentPolicy(\App\Entity\Provider $provider): void
+    {
+        $paymentPolicyValidator = $this->paymentPolicyValidatorFactory->createValidator($provider->getPaymentPolicy());
+        if (!$paymentPolicyValidator->validate($provider)) {
+            throw new PaymentPolicyValidationException($paymentPolicyValidator->getMessage());
+        }
     }
 }

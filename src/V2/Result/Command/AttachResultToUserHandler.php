@@ -42,7 +42,7 @@ class AttachResultToUserHandler
         }
 
         $this->guardAnotherUserAttached($result, $user);
-        $this->guardTestPolicy($provider, $user, $test);
+        $this->guardLicensePolicy($provider, $user, $test);
 
         $this->attach($result, $user, $test);
     }
@@ -67,7 +67,7 @@ class AttachResultToUserHandler
         }
     }
 
-    private function guardTestPolicy(Provider $provider, ProviderUser $user, Test $test)
+    private function guardLicensePolicy(Provider $provider, ProviderUser $user, Test $test)
     {
         // todo Test Policy Validator
         //  проверить разрешён ли пользовталелю доступ к тесту,

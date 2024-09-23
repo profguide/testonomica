@@ -24,7 +24,7 @@ class ProviderUser
     private ?Provider $provider = null;
 
     #[ORM\Column(type: 'string', nullable: false)]
-    private ?string $extUserId = null;
+    private ?string $extUserId = null; // todo store hash instead of direct value.
 
     #[ORM\Column(name: 'created_at', type: 'datetime')]
     private \DateTime $createdAt;

@@ -7,7 +7,7 @@
 namespace App\Entity;
 
 use App\V2\Provider\Policy\Payment\PaymentPolicy;
-use App\V2\Provider\Policy\Test\TestPolicy;
+use App\V2\Provider\Policy\Test\LicensePolicy;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -41,8 +41,8 @@ class Provider
     /**
      * Политика тестов или какие тесты доступны для сохранения
      */
-    #[ORM\Column(type: 'string', length: 50, enumType: TestPolicy::class)]
-    private TestPolicy $testPolicy = TestPolicy::ONE_PROFTEST;
+    #[ORM\Column(type: 'string', length: 50, enumType: LicensePolicy::class)]
+    private LicensePolicy $testPolicy = LicensePolicy::ONE_PROFTEST;
 
     /**
      * Счётчик выданных доступов
@@ -62,7 +62,7 @@ class Provider
         string        $slug,
         string        $token,
         PaymentPolicy $paymentPolicy,
-        TestPolicy    $testPolicy,
+        LicensePolicy $testPolicy,
         int           $accessLimit,
         int           $accessCount,
     ): self
@@ -129,12 +129,12 @@ class Provider
         $this->paymentPolicy = $paymentPolicy;
     }
 
-    public function getTestPolicy(): TestPolicy
+    public function getTestPolicy(): LicensePolicy
     {
         return $this->testPolicy;
     }
 
-    public function setTestPolicy(TestPolicy $testPolicy): void
+    public function setTestPolicy(LicensePolicy $testPolicy): void
     {
         $this->testPolicy = $testPolicy;
     }

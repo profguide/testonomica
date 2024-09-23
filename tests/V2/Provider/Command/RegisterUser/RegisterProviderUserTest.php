@@ -11,7 +11,7 @@ use App\V2\Provider\Command\RegisterUser\RegisterProviderUser;
 use App\V2\Provider\Command\RegisterUser\RegisterProviderUserHandler;
 use App\V2\Provider\Policy\Payment\PaymentPolicy;
 use App\V2\Provider\Policy\Payment\Validator\Exception\PaymentPolicyValidationException;
-use App\V2\Provider\Policy\Test\TestPolicy;
+use App\V2\Provider\Policy\Test\LicensePolicy;
 use Doctrine\ORM\EntityManagerInterface;
 use Exception;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
@@ -150,7 +150,7 @@ final class RegisterProviderUserTest extends KernelTestCase
             'umbrella',
             'umbrella',
             $paymentPolicy,
-            TestPolicy::ONE_PROFTEST,
+            LicensePolicy::ONE_PROFTEST,
             $accessLimit,
             $accessCount
         );

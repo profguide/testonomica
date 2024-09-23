@@ -64,7 +64,7 @@ class RobokassaControllerTest extends WebTestCase
         $response = $this->client->getResponse();
 
         $this->assertEquals(302, $response->getStatusCode());
-        $this->assertEquals('/tests/view/test_3/', $response->headers->get('location'));
+        $this->assertEquals('/tests/view/proforientation-v2/', $response->headers->get('location'));
         $this->assertCookie($response, 'access');
     }
 

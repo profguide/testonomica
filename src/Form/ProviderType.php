@@ -6,7 +6,7 @@ namespace App\Form;
 
 use App\Entity\Provider;
 use App\V2\Provider\Policy\Payment\PaymentPolicy;
-use App\V2\Provider\Policy\Test\TestPolicy;
+use App\V2\Provider\Policy\Test\LicensePolicy;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Exception\TransformationFailedException;
 use Symfony\Component\Form\Extension\Core\Type\EnumType;
@@ -43,12 +43,12 @@ final class ProviderType extends AbstractType
                 'label' => 'Предел количества пользователей компании (при выбранной политике предоплаты)',
             ])
             ->add('test_policy', EnumType::class, [
-                'class' => TestPolicy::class,
+                'class' => LicensePolicy::class,
                 'label' => 'Политика тестов',
                 'choice_label' => fn($choice) => match ($choice) {
-                    TestPolicy::ONE_PROFTEST => 'Профтест',
-                    TestPolicy::ONE_PROFTEST_ONE_BONUS => 'Профтест + Бонус',
-                    TestPolicy::UNLIMITED_PROFTEST => 'Безлимитка',
+                    LicensePolicy::ONE_PROFTEST => 'Профтест',
+                    LicensePolicy::ONE_PROFTEST_ONE_BONUS => 'Профтест + Бонус',
+                    LicensePolicy::UNLIMITED_PROFTEST => 'Безлимитка',
                 },
                 'help' => 'Какие тесты доступны пользователям компании',
             ])

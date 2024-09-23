@@ -4,9 +4,251 @@
 
 {% block body %}
     <div class="container">
-        <h1>Интеграция</h1>
 
-        <p>На данной странице описаны все доступные варианты интеграции.</p>
+        <h1 id="v3" class="mb-4">API v3</h1>
+
+        <p class="mb-0"><b>Оглавление</b></p>
+        <ul>
+            <li><a href="##therms">Словарь терминов</a></li>
+            <li><a href="#principles">Принцип работы</a></li>
+            <li><a href="#api">API</a></li>
+            <li><a href="#widget">Интеграция html-виджета для сайтов</a></li>
+        </ul>
+
+        <h2 id="#therms" class="mb-4"><b>Словарь терминов</b></h2>
+        <h4 id="-">Платформа</h4>
+        <p>Платформа — это Тестодром и его API, предоставляющие доступ клиенту к тестированию и просмотру
+            результатов.</p>
+        <h4 id="-">Клиент</h4>
+        <p>Клиент — это зарегистрированный на платформе сайт или приложение, которое взаимодействует с платформой от
+            имени своих
+            пользователей.</p>
+        <h4 id="-">Пользователь</h4>
+        <p>Пользователь — это лицо в системе клиента, обладающее уникальным идентификатором. Для платформы один
+            зарегистрированный
+            пользователь соответствует одной выданной лицензии. Платформа предоставляет результаты тестов только если
+            они
+            ассоциированы с пользователем. Поэтому платформе необходимо знать ID пользователя. В качестве ID
+            пользователя могут
+            использоваться также email, ID сессии, IP-адрес и т.д.</p>
+        <h4 id="-">Лицензия</h4>
+        <p>Лицензия — это разрешение, предоставляющее пользователю право быть ассоциированным с результатами
+            теста. Количество результатов пользователя в рамках одной лицензии регулирует политика лицензий.</p>
+        <h4 id="-">Платёжная политика</h4>
+        <ol>
+            <li><em>Политика предоплаты</em> — это модель взаимодействия клиента с платформой, при которой установлен
+                лимит на количество
+                выдаваемых лицензий. Увеличение лимита становится возможным после внесения оплаты.
+            </li>
+            <li><em>Политика постоплаты</em> — это модель взаимодействия клиента с платформой, при которой отсутствует
+                предварительный лимит
+                на лицензий. Оплата за выданные доступы производится по факту, на основании количества выданных
+                лицензий.
+            </li>
+        </ol>
+        <h4 id="-">Политика лицензий</h4>
+        <p><em>Политика лицензий</em> регулирует количество результатов, которые могут быть ассоциированы с
+            пользователем в рамках
+            одной лицензии.</p>
+        <br/>
+        <hr>
+        <br/>
+        <h1 id="principles" class="mb-4">Принцип работы</h1>
+        <h2 id="-">Регистрация клиента</h2>
+        <p>Клиент регистрируется на платформе и получает постоянный ключ доступа — CLIENT_KEY. При регистрации клиент
+            принимает <a href="#платёжная-политика">платёжную политику</a>, а также <a href="#политика-лицензий">политику
+                лицензий</a>. Регистрация
+            клиента происходит по заявкам вручную. Напишите нам на почту: info@profguide.ru.</p>
+        <h2 id="-">Прохождение теста</h2>
+        <p>Клиент <a href="#описание-теста">запрашивает</a> у платформы описание теста и <a href="#вопросы-к-тесту">вопросы</a>
+            к
+            нему. Эти данные доступны без специального разрешения. В процессе прохождения теста клиент накапливает
+            ответы
+            пользователя. По достижению конца теста клиент <a href="#сохранение-ответов-и-получение-resultkey-1">отправляет
+                ответы</a>
+            пользователя на
+            платформу в специальном формате с целью их сохранения.</p>
+        <h2 id="-result_key">Сохранение ответов и получение RESULT_KEY</h2>
+        <p>Клиент <a href="#сохранение-ответов-и-получение-resultkey-1">сохраняет ответы</a> пользователя на платформе и
+            получает RESULT_KEY.
+            Однако
+            результат всё ещё не ассоциирован с пользователем, поэтому его нельзя получить. Для ассоциации результата с
+            пользователем необходимо выполнить <a href="#ассоциация-результата-с-пользователем">следующий шаг</a>.</p>
+        <h2 id="-">Ассоциация результата с пользователем</h2>
+        <p>Клиент <a href="#ассоциация-результата-с-пользователем-1">отправляет специальный запрос</a> на ассоциацию
+            результата с
+            пользователем, включая RESULT_KEY и <a href="#пользователь">идентификатор пользователя</a>.
+            Платформа регистрирует пользователя, предварительно проверяя условия <a href="#платёжная-политика">платёжной
+                политики</a> (
+            например, достаточно ли лицензий доступно для использования). Для ассоциации результата
+            проверяется <a href="#политика-лицензий">политика лицензий</a> (например, не превышает ли пользователь лимит
+            по результатам). Если
+            условия не выполняются, платформа может отклонить регистрацию или ассоциацию.</p>
+        <h2 id="-">Получение результата</h2>
+        <p>Клиент может <a href="#получение-результата-1">запрашивать результаты</a> теста любое количество раз,
+            используя RESULT_KEY.</p>
+        <br/>
+        <hr>
+        <br/>
+        <h1 id="api" class="mb-4">API</h1>
+        <h2 id="-">Описание теста</h2>
+        <p>Описание теста не ограничено правами.</p>
+        <p><strong>URL</strong>: <code>GET /tests/api/v1/info/{TEST}/</code></p>
+        <h3 id="-">Результат:</h3>
+        <ul>
+            <li><strong>Код состояния:</strong> 200 ОК</li>
+            <li><strong>Пример успешного ответа:</strong></li>
+        </ul>
+        <pre><code class="lang-json">{
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Тест на профориентацию"</span>,
+  <span class="hljs-attr">"description"</span>: <span
+                        class="hljs-string">"&lt;div&gt;Описание теста&lt;\/div&gt;"</span>,
+  <span class="hljs-attr">"instruction"</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-attr">"authors"</span>: [
+    {
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"ПрофГид"</span>
+    }
+  ],
+  <span class="hljs-attr">"duration"</span>: <span class="hljs-number">20</span>,
+  <span class="hljs-attr">"length"</span>: <span class="hljs-number">125</span>,
+  <span class="hljs-attr">"paid"</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+        <h2 id="-">Вопросы к тесту</h2>
+        <p><strong>URL первый вопрос</strong> <code>GET /tests/api/v1/first/{TEST}/</code>
+            <strong>URL следующий вопрос</strong> <code>GET /tests/api/v1/next/{TEST}/</code>
+            <strong>URL предыдущий вопрос</strong> <code>GET /tests/api/v1/prev/{TEST}/</code></p>
+        <h3 id="-">Результат</h3>
+        <ul>
+            <li><strong>Код состояния:</strong> 200 ОК</li>
+            <li><strong>Пример успешного ответа:</strong></li>
+        </ul>
+        <pre><code class="lang-json">{
+  <span class="hljs-attr">"question"</span>: {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"option"</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Какая профессия Вам больше нравится?"</span>,
+    <span class="hljs-attr">"text"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"img"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"count"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"gradient"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"timer"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"wrong"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"correct"</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-attr">"enabledBack"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"enabledForward"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"showAnswer"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"items"</span>: [
+      {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"value"</span>: <span class="hljs-string">"q"</span>,
+        <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Инженер"</span>,
+        <span class="hljs-attr">"img"</span>: <span class="hljs-string">""</span>
+      },
+      {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"value"</span>: <span class="hljs-string">"w"</span>,
+        <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Социолог"</span>,
+        <span class="hljs-attr">"img"</span>: <span class="hljs-string">""</span>
+      }
+    ]
+  },
+  <span class="hljs-attr">"number"</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-attr">"length"</span>: <span class="hljs-number">42</span>
+}
+</code></pre>
+        <h2 id="-result_key">Сохранение ответов и получение RESULT_KEY</h2>
+        <p>Сохраняет ответы пользователя (прогресс - синоним) и возвращает идентификатор результата.</p>
+        <p><strong>URL</strong>: <code>POST /partner/api/v3/progress/save</code></p>
+        <h3 id="-">Параметры:</h3>
+        <ul>
+            <li><code>test</code> (обязательный): идентификатор теста. Этот параметр должен быть строкой.</li>
+            <li><code>progress</code> (обязательный): прогресс (ответы на вопросы).</li>
+            <li><code>user_id</code> (необязательный): id пользователя в системе клиента.</li>
+        </ul>
+        <h3 id="-">Результат:</h3>
+        <ul>
+            <li><strong>Код состояния:</strong> 200 ОК</li>
+            <li><strong>Пример успешного ответа:</strong></li>
+        </ul>
+        <pre><code class="lang-json">{
+  <span class="hljs-attr">"result_key"</span>: <span class="hljs-string">"92f50432-dd78-4f57-b407-6bb273c78f62"</span>
+}
+</code></pre>
+        <h2 id="-">Ассоциация результата с пользователем</h2>
+        <p>Устанавливает связь пользователя с результатом и возвращает статус операции.</p>
+        <p><strong>URL</strong>: <code>POST /partner/api/v3/result/attach</code></p>
+        <h3 id="-">Параметры:</h3>
+        <ul>
+            <li><code>client_key</code> (обязательный): Секретный постоянный ключ вашего сайта, который вы получили при
+                регистрации вашего
+                сайта или приложения.
+                Этот параметр должен быть строкой.
+            </li>
+            <li><code>user_id</code> (обязательный): уникальный идентификатор пользователя системы клиента, например id,
+                email, sess_id. Этот
+                параметр должен быть строкой.
+            </li>
+            <li><code>result_key</code> (обязательный): идентификатор результата. Этот параметр должен быть строкой.
+            </li>
+        </ul>
+        <h3 id="-">Результат:</h3>
+        <ul>
+            <li><strong>Код состояния:</strong> 200 ОК</li>
+        </ul>
+        <h3 id="-">Возможные ошибки:</h3>
+        <ul>
+            <li>Не указаны обязательные параметры.</li>
+            <li>Не найден пользователь.</li>
+            <li>Не найден результат.</li>
+            <li>Достигнут предел выданных доступов (см. Политика доступов).</li>
+            <li>Достигнут предел сохранённых результатов на одного пользователя (см. Политика тестов).</li>
+        </ul>
+        <p><strong>Пример ошибки:</strong></p>
+        <pre><code class="lang-json">{
+  <span class="hljs-attr">"error"</span>: {
+    <span class="hljs-attr">"code"</span>: <span class="hljs-number">404</span>,
+    <span class="hljs-attr">"message"</span>: <span class="hljs-string">"User not found with the provided key."</span>
+  }
+}
+</code></pre>
+        <h2 id="-">Получение результата</h2>
+        <p><strong>URL</strong> <code>GET /partner/api/v3/result/get</code></p>
+        <h3 id="-">Параметры:</h3>
+        <ul>
+            <li><code>result_key</code> (RESULT_KEY, обязательный): идентификатор результата. Этот параметр должен быть
+                строкой.
+            </li>
+            <li><code>format</code> (обязательный): возможные значения: json, html, pdf.</li>
+        </ul>
+        <h3 id="-">Результат:</h3>
+        <ul>
+            <li><strong>Код состояния:</strong> 200 ОК</li>
+            <li><strong>Пример успешного ответа:</strong></li>
+        </ul>
+        <pre><code class="lang-json">{
+  <span class="hljs-attr">"VALUES"</span>: {
+    <span class="hljs-attr">"it"</span>: {
+      <span class="hljs-attr">"sum"</span>: <span class="hljs-number">2</span>,
+      <span class="hljs-attr">"percentage"</span>: <span class="hljs-number">20</span>,
+      <span class="hljs-attr">"percentage_value"</span>: <span class="hljs-number">20</span>
+    },
+    <span class="hljs-attr">"design"</span>: {
+      <span class="hljs-attr">"sum"</span>: <span class="hljs-number">8</span>,
+      <span class="hljs-attr">"percentage"</span>: <span class="hljs-number">80</span>,
+      <span class="hljs-attr">"percentage_value"</span>: <span class="hljs-number">80</span>
+    }
+  }
+}
+</code></pre>
+
+        <br/>
+        <hr>
+        <br/>
+
+        <h1 id="widget">Интеграция html-виджета</h1>
+
+        <p>Здесь описаны все возможные варианты интеграции вашего сайта с Тестодромом.</p>
         <p>На Тестодроме представлены как бесплатные, так и платные тесты. Это определяет различие в способе установки
             тестов на ваш сайт.</p>
 

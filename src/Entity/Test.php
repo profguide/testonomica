@@ -100,7 +100,6 @@ class Test
         $test->setActiveEn(0);
         return $test;
     }
-
     public function getId(): ?int
     {
         return $this->id;
@@ -152,9 +151,10 @@ class Test
         throw new \DomainException("Unsupported locale $locale.");
     }
 
-    public function setName(string $name): void
+    public function setName(string $name): self
     {
         $this->name = $name;
+        return $this;
     }
 
     public function getNameEn()
