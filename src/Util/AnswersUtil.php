@@ -227,7 +227,7 @@ class AnswersUtil
             }
             $answer = $answersHolder->get($question->getId());
             if (count($answer->getValue()) > 1) { // по-моему устарело, щас все ответы на основе массива. надо проверить
-                throw new \LogicException('This method does not involve range values.');
+                throw new \LogicException('SumValuesMap does not involve range values.');
             }
             $value = $answer->getValue()[0];
             if (!isset($map[$value])) {

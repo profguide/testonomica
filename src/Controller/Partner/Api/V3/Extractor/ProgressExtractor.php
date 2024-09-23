@@ -9,18 +9,14 @@ use App\V3\Progress\RawAnswersToProgressConverter;
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
 use Symfony\Component\HttpFoundation\Request;
 
-final class ProgressExtractor
+final class ProgressExtractor extends AbstractParamExtractor
 {
     public function extract(Request $request, string $paramName): Progress
     {
-        $answers = $request->get($paramName);
+        $answers = $this->getJsonRequestParam($request, $paramName);
 
         if (!$answers) {
-            throw new BadRequestException('The required "' . $paramName . '" parameter is missing.');
-        }
-
-        if (!is_array($answers)) {
-            throw new BadRequestException('The "' . $paramName . '" parameter must be in array format.');
+            throw new BadRequestException('The required "' . $paramName . '" parameter is missing!');
         }
 
         return (new RawAnswersToProgressConverter())->convert($answers);

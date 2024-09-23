@@ -115,8 +115,8 @@
 }
 </code></pre>
         <h2 id="-">Вопросы к тесту</h2>
-        <p><strong>URL первый вопрос</strong> <code>GET /tests/api/v1/first/{TEST}/</code>
-            <strong>URL следующий вопрос</strong> <code>GET /tests/api/v1/next/{TEST}/</code>
+        <p><strong>URL первый вопрос</strong> <code>GET /tests/api/v1/first/{TEST}/</code><br/>
+            <strong>URL следующий вопрос</strong> <code>GET /tests/api/v1/next/{TEST}/</code><br/>
             <strong>URL предыдущий вопрос</strong> <code>GET /tests/api/v1/prev/{TEST}/</code></p>
         <h3 id="-">Результат</h3>
         <ul>
@@ -163,8 +163,10 @@
         <h3 id="-">Параметры:</h3>
         <ul>
             <li><code>test</code> (обязательный): идентификатор теста. Этот параметр должен быть строкой.</li>
-            <li><code>progress</code> (обязательный): прогресс (ответы на вопросы).</li>
-            <li><code>user_id</code> (необязательный): id пользователя в системе клиента.</li>
+            <li><code>progress</code> (JSON, обязательный): ответы на вопросы. Пример: <code>[["1", ["a"]], ["2", ["b",
+                    "c"]]]</code>. Структура JSON представляет собой массив, где id вопроса это ключ, а ответы это
+                значения. Некоторые вопросы поддерживают несколько ответов, поэтому ответы на вопрос являются массивом.
+            </li>
         </ul>
         <h3 id="-">Результат:</h3>
         <ul>
