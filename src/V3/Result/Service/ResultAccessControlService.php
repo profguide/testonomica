@@ -21,13 +21,33 @@ class ResultAccessControlService
 
     public function guardResultAccess(Result $result): void
     {
+        // Игнорируем проверку для очень старых результатов
+        if ($this->isLegacyResult($result)) {
+            return;
+        }
+
         $test = $result->getTest();
         if ($test->isFree()) {
             return;
         }
 
-        if (!$this->usersResultsRepository->hasRecordByResult($result)) {
+        // Выполняем проверку ассоциации для новых результатов
+        if (!$this->isResultAssociatedWithUser($result)) {
             throw new ResultUserAssociationMissingException($result);
         }
+    }
+
+    public function isResultAssociatedWithUser(Result $result): bool
+    {
+        return $this->usersResultsRepository->hasRecordByResult($result);
+    }
+
+    private function isLegacyResult(Result $result): bool
+    {
+        // This is the date when we started providing access
+        // only to those results that were associated with the user.
+        // Very old results do not have it.
+        $userAssociationRequirementStartDate = new \DateTime('2024-09-24');
+        return $result->getCreatedAt() < $userAssociationRequirementStartDate;
     }
 }

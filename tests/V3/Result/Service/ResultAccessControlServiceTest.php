@@ -34,6 +34,7 @@ final class ResultAccessControlServiceTest extends KernelTestCase
         // Создаем результат с этим тестом
         $result = $this->createMock(Result::class);
         $result->method('getTest')->willReturn($test);
+        $result->method('getCreatedAt')->willReturn(new \DateTime('2024-09-25')); // Не старый результат
 
         // Проверка, что исключение не выбрасывается
         $this->service->guardResultAccess($result);
@@ -50,6 +51,7 @@ final class ResultAccessControlServiceTest extends KernelTestCase
         // Создаем результат с этим тестом
         $result = $this->createMock(Result::class);
         $result->method('getTest')->willReturn($test);
+        $result->method('getCreatedAt')->willReturn(new \DateTime('2024-09-25')); // Не старый результат
 
         // Настраиваем репозиторий, чтобы возвращал true, т.е. пользователь проассоциирован
         $this->usersResultsRepository
@@ -72,6 +74,7 @@ final class ResultAccessControlServiceTest extends KernelTestCase
         // Создаем результат с этим тестом
         $result = $this->createMock(Result::class);
         $result->method('getTest')->willReturn($test);
+        $result->method('getCreatedAt')->willReturn(new \DateTime('2024-09-25')); // Не старый результат
 
         // Настраиваем репозиторий, чтобы возвращал false, т.е. пользователь не проассоциирован
         $this->usersResultsRepository
@@ -83,5 +86,24 @@ final class ResultAccessControlServiceTest extends KernelTestCase
         $this->expectException(ResultUserAssociationMissingException::class);
 
         $this->service->guardResultAccess($result);
+    }
+
+    public function testLegacyResultIgnoresUserAssociationCheck(): void
+    {
+        $test = $this->createMock(Test::class);
+        $test->method('isFree')->willReturn(false);
+
+        $result = $this->createMock(Result::class);
+        $result->method('getTest')->willReturn($test);
+        // Старый результат - должен привести к ошибке
+        $result->method('getCreatedAt')->willReturn(new \DateTime('2024-09-23'));
+
+        // Репозиторий не должен вызываться, т.к. результат старый
+        $this->usersResultsRepository
+            ->expects($this->never()) // Проверяем, что метод репозитория не вызывается
+            ->method('hasRecordByResult');
+
+        $this->service->guardResultAccess($result);
+        $this->addToAssertionCount(1);
     }
 }
