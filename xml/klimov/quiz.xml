@@ -3,28 +3,23 @@
     <items>
         <item id="1">
             <name>
-                <ru>
-                    Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
                 <option value="nature">
-                    <ru>Ухаживать за животными
-                    </ru>
+                    <ru>Ухаживать за животными</ru>
                     <en>Taking care of animals</en>
                 </option>
                 <option value="technic">
-                    <ru>Обслуживать машины, приборы
-                    </ru>
+                    <ru>Обслуживать машины, приборы</ru>
                     <en>Operating machinery, devices</en>
                 </option>
             </options>
         </item>
         <item id="2">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -40,14 +35,12 @@
         </item>
         <item id="3">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
                 <option value="artist">
-                    <ru>Следить за качеством книжных иллюстраций, плакатов, художественных открыток
-                    </ru>
+                    <ru>Следить за качеством книжных иллюстраций, плакатов, художественных открыток</ru>
                     <en>Controlling quality of book illustrations, posters, picture cards</en>
                 </option>
                 <option value="nature">
@@ -58,8 +51,7 @@
         </item>
         <item id="4">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -75,8 +67,7 @@
         </item>
         <item id="5">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -92,8 +83,7 @@
         </item>
         <item id="6">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -113,8 +103,7 @@
         </item>
         <item id="7">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -132,8 +121,7 @@
         </item>
         <item id="8">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -157,8 +145,7 @@
         </item>
         <item id="9">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -174,8 +161,7 @@
         </item>
         <item id="10">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -191,8 +177,7 @@
         </item>
         <item id="11">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -210,8 +195,7 @@
         </item>
         <item id="12">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -233,8 +217,7 @@
         </item>
         <item id="13">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -250,8 +233,7 @@
         </item>
         <item id="14">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -268,8 +250,7 @@
         </item>
         <item id="15">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -290,8 +271,7 @@
         </item>
         <item id="16">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -308,8 +288,7 @@
         </item>
         <item id="17">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -325,8 +304,7 @@
         </item>
         <item id="18">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -346,8 +324,7 @@
         </item>
         <item id="19">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -364,8 +341,7 @@
         </item>
         <item id="20">
             <name>
-                <ru>Вы бы предпочли:
-                </ru>
+                <ru>Вы бы предпочли:</ru>
                 <en>What would you prefer:</en>
             </name>
             <options>
@@ -374,9 +350,7 @@
                     <en>Fighting plant diseases, forest and garden pests</en>
                 </option>
                 <option value="sign">
-                    <ru>Работать на клавишных машинах (пишущей машинке, телетайпе, наборной машине и
-                        др.)
-                    </ru>
+                    <ru>Работать на клавишных машинах (пишущей машинке, телетайпе, наборной машине и др.)</ru>
                     <en>Working on key machines (a typewriter, a teletype, a typesetter, etc.)</en>
                 </option>
             </options>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <texts>
+        <outro>
+            <ru>
+                <p>
+                    Сделать безошибочный выбор профессии, взвесив все "за" и "против" и
+                    разобраться во внутренних противоречиях можно с опытным специалистом по выбору профессии,
+                    кандидатом психологических наук Эльмирой Давыдовой на консультации по профориентации онлайн/очно:
+                    <a href="https://www.profguide.io/proforientation-adult/" target="_blank">для взрослых</a>,
+                    <a href="https://www.profguide.io/proforientation-school/" target="_blank">для школьников</a>.
+                </p>
+            </ru>
+        </outro>
+    </texts>
+    <scenarios>
+        <scenario>
+            <scale percentVar="VALUES.nature.percentage_value">
+                <levels>
+                    <level up="33" color="danger"/>
+                    <level up="66" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <ru>Человек-природа</ru>
+                <en>Nature person</en>
+            </name>
+            <text>
+                <ru>
+                    <p>
+                        Это профессии, в которых человек работает с живой и неживой природой. Это может быть
+                        ученый-исследователь физических, химических и биологических процессов природы. Это может быть
+                        технолог, создающий в лаборатории новые лекарства, новые материалы, новые живые организмы (как
+                        селекционер и генный инженер). Это может быть и медик который ставит диагноз и лечит человека.
+                        Это может быть и геолог, и океанолог, и эколог, и почвовед, и энолог, агроном, а также кинолог,
+                        растениевод, зоолог, и даже логопед и дефектолог. Главное - объект труда данного специалиста -
+                        како-либо природное явление или объект природы.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        These are professions in which a person works with both living and non-living nature. This can
+                        include a researcher studying the physical, chemical, and biological processes of nature. It may
+                        also be a technologist creating new medicines, new materials, or new living organisms in a
+                        laboratory (such as a breeder or genetic engineer). It can also be a medical professional
+                        diagnosing and treating patients. Additionally, this can encompass geologists, oceanologists,
+                        ecologists, soil scientists, enologists, agronomists, as well as dog breeders, horticulturists,
+                        zoologists, and even speech therapists and defectologists. The key aspect is that the focus of
+                        this specialist's work is some natural phenomenon or object of nature.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+        <scenario>
+            <scale percentVar="VALUES.technic.percentage_value">
+                <levels>
+                    <level up="33" color="danger"/>
+                    <level up="66" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <ru>Человек-техника</ru>
+                <en>Technology person</en>
+            </name>
+            <text>
+                <ru>
+                    <p>
+                        Это профессии, в которых человек работает с техникой. Он технику разрабатывает, чинит,
+                        обслуживает, эксплуатирует. Это может быть инженер любого рода: энергетик, робототехник,
+                        самолётостроитель, автомобилестроитель, строитель поездов, лифтов, холодильников, станков,
+                        трубопроводов, медицинской техники, звукотехники и видеотехники, компьютерной техники… Все эти
+                        виды техники можно не только создавать, но и обслуживать (сервисный инженер, наладчик), а также
+                        эксплуатировать её. Учителя, врачи, продавцы тоже используют технику на своей работе - но она
+                        для них не объект труда, а инструмент. Например, все они пользуются компьютером. Поэтому их
+                        нельзя отнести к категории человек-техника.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        These are professions in which a person works with technology. They design, repair, maintain,
+                        and operate various technologies. This can include engineers of all kinds: energy engineers,
+                        robotic engineers, aircraft engineers, automotive engineers, and those involved in the
+                        construction of trains, elevators, refrigerators, machines, pipelines, medical equipment, sound
+                        engineering, video technology, and computer technology. All these types of technology can not
+                        only be created but also maintained (service engineers, adjusters) and operated. Teachers,
+                        doctors, and salespeople also use technology in their work, but it serves as a tool rather than
+                        the focus of their labor. For example, they all use computers. Therefore, they cannot be
+                        categorized as technology people.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+        <scenario>
+            <scale percentVar="VALUES.human.percentage_value">
+                <levels>
+                    <level up="33" color="danger"/>
+                    <level up="66" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <ru>Человек-человек</ru>
+                <en>People person</en>
+            </name>
+            <text>
+                <ru>
+                    <p>
+                        Это профессии, в которых человек работает с человеком или несколькими людьми. Он может работать
+                        как
+                        с телом человека, так и с его душой, сознанием, поведением. Он может лечить людей, обучать их,
+                        продавать им что-то, управлять ими, выступать перед ними, судить их, помогать им, выслушивать,
+                        проповедовать им, изучать их, развлекать их и т. д. К этой группе относятся врачи, медсестры,
+                        массажисты, учителя, воспитатели, социологи, психологи, логопеды, политики, продавцы, менеджеры
+                        (пиар, HR, event, mice, отельеры, рестораторы и т.п.), парикмахеры, гиды-экскурсоводы,
+                        журналисты и
+                        прочие люди, которые напрямую общаются с людьми на работе и этим зарабатывают.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        These are professions in which a person works with one or several people. They may work with the
+                        human body, mind, consciousness, or behavior. They can treat people, educate them, sell them
+                        something, manage them, perform in front of them, judge them, help them, listen to them, preach
+                        to them, study them, entertain them, and so on. This group includes doctors, nurses, masseurs,
+                        teachers, educators, sociologists, psychologists, speech therapists, politicians, salespeople,
+                        managers (in PR, HR, events, MICE, hotel management, restaurant management, etc.), hairdressers,
+                        tour guides, journalists, and others who directly interact with people in their work and earn
+                        their living that way.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+        <scenario>
+            <scale percentVar="VALUES.sign.percentage_value">
+                <levels>
+                    <level up="33" color="danger"/>
+                    <level up="66" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <ru>Человек-знаковая система</ru>
+                <en>Sign system person</en>
+            </name>
+            <text>
+                <ru>
+                    <p>
+                        Это профессии, в которых человек работает с числами, таблицами, графиками, схемами, буквами,
+                        шифрами. Сюда относятся бухгалтеры, экономисты, финансовые брокеры, математики, проектировщики
+                        оборудования и зданий, архитекторы, конструкторы одежды, корректоры, редакторы, звукорежиссеры,
+                        картографы, кадастровые инженеры, шифровальщики и все остальные работники чисел, таблиц, схем,
+                        графиков и букв.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        These are professions in which a person works with numbers, tables, graphs, diagrams, letters,
+                        and codes. This includes accountants, economists, financial brokers, mathematicians, equipment
+                        and building designers, architects, fashion designers, proofreaders, editors, sound engineers,
+                        cartographers, cadastral engineers, cryptographers, and all other workers dealing with numbers,
+                        tables, diagrams, graphs, and letters.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+        <scenario>
+            <scale percentVar="VALUES.artist.percentage_value">
+                <levels>
+                    <level up="33" color="danger"/>
+                    <level up="66" color="primary"/>
+                    <level up="100" color="success"/>
+                </levels>
+            </scale>
+            <name>
+                <ru>Человек-художественный образ</ru>
+                <en>Artistic image person</en>
+            </name>
+            <text>
+                <ru>
+                    <p>
+                        Это профессии, в которых человек работает с художественными образами, создавая их визуальное
+                        изображение, звуковой образ, литературный образ. Это такие профессионалы: дизайнеры, художники,
+                        иллюстраторы, композиторы, саунд-дизайнеры, звукорежиссеры, поэты, сценаристы, писатели,
+                        парикмахеры, стилисты, визажисты, гримеры, тату-мастера… Относятся ли к этой группе
+                        искусствоведы, литературоведы? Да, если они глубоко изучают произведение литературы и искусства,
+                        созданной другими людьми.
+                    </p>
+                </ru>
+                <en>
+                    <p>
+                        These are professions in which a person works with artistic images, creating their visual
+                        representation, sound representation, or literary representation. This includes professionals
+                        such as designers, artists, illustrators, composers, sound designers, sound engineers, poets,
+                        screenwriters, writers, hairdressers, stylists, makeup artists, makeup specialists, and tattoo
+                        artists. Do art historians and literary scholars belong to this group? Yes, if they study
+                        in-depth the works of literature and art created by others.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>
