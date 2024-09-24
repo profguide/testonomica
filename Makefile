@@ -29,6 +29,7 @@ clear-cache:
 #	sudo chown -R www-data:www-data var
 #	sudo chown -R adavydov:adavydov var
 	APP_ENV=prod APP_DEBUG=0 php bin/console cache:clear
+	chown -R www-data:www-data var/*
 #	echo "php bin/console cache:clear"
 #	php bin/console cache:clear
 #	rm var/cache/ -r
