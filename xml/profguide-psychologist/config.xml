@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config>
+    <scenarios>
+        <!-- Всё плохо -->
+        <scenario>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Уровень соответствия профессии</ru>
+                    <en>The level of compliance with the profession</en>
+                </label>
+            </scale>
+            <conditions>
+                <condition var="GROUPS.iq.SUM" operator="меньше_или_равно" value="2"/>
+                <condition var="GROUPS.interest.SUM" operator="меньше_или_равно" value="0"/>
+            </conditions>
+            <name>
+                <ru>Психологом вам лучше не работать</ru>
+                <en>It’s better for you not to work as a psychologist</en>
+            </name>
+            <text>
+                <ru>
+                    <p>У вас нет глубокого интереса к человеку, вы не готовы ему
+                        помогать в качестве психолога. Однако это не значит, что вы не можете работать с людьми в
+                        коллективе и даже как с клиентами.
+                    </p>
+                    <p>Среди профессий есть ваша. С ней вы будете счастливы и добьётесь успеха!</p>
+                </ru>
+                <en>
+                    <p>You do not have a deep interest in people,
+                        and you are not ready to help them as a psychologist. However, this doesn’t mean you can’t work
+                        with people in a team and even as clients.
+                    </p>
+                    <p>Among the professions, there is one for you. With it, you will be happy and achieve success!</p>
+                </en>
+            </text>
+        </scenario>
+        <!-- плохо с интеллектом, мотивация средняя -->
+        <scenario>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Уровень соответствия профессии</ru>
+                    <en>The level of compliance with the profession</en>
+                </label>
+            </scale>
+            <conditions>
+                <condition var="GROUPS.iq.SUM" operator="меньше_или_равно" value="2"/>
+                <condition var="GROUPS.interest.SUM" operator="больше" value="0"/>
+                <condition var="GROUPS.interest.SUM" operator="меньше_или_равно" value="3"/>
+            </conditions>
+            <name>
+                <ru>У вас есть интерес к психологии</ru>
+                <en>You have an interest in psychology</en>
+            </name>
+            <text>
+                <ru>
+                    <p>И это очень хорошо. Чтение книг и статей по психологии обогатит
+                        вас интеллектуально и духовно.
+                    </p>
+                    <p>Однако психология вас интересует скорее для решения ваших личных проблем, а не для того чтобы
+                        заниматься чужими психологическими проблемами. Знание психологии пригодится вам в другой
+                        профессии, ведь кругом люди, и с ними нужно строить отношения.
+                    </p>
+                </ru>
+                <en>
+                    <p>And that's very good. Reading books and articles on
+                        psychology will enrich you intellectually and spiritually.
+                    </p>
+                    <p>However, you are more interested in psychology for solving your personal problems rather than
+                        dealing with others' psychological issues. Knowledge of psychology will be useful to you in
+                        another profession, as there are people all around, and you need to build relationships with
+                        them.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+        <!-- плохо с интеллектом, мотивация максимальная -->
+        <scenario>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Уровень соответствия профессии</ru>
+                    <en>The level of compliance with the profession</en>
+                </label>
+            </scale>
+            <conditions>
+                <condition var="GROUPS.iq.SUM" operator="меньше_или_равно" value="2"/>
+                <condition var="GROUPS.interest.SUM" operator="больше_или_равно" value="4"/>
+            </conditions>
+            <name>
+                <ru>Вам очень интересна психология</ru>
+                <en>You are very interested in psychology</en>
+            </name>
+            <text>
+                <ru>
+                    <p>Вы хотите работать с людьми. Но почему именно психология?
+                        Подумайте о других, околопсихологических профессиях: педагог, менеджер по продажам. Эти
+                        специалисты тоже используют психологию.
+                    </p>
+                </ru>
+                <en>
+                    <p>You want to work with people. But why specifically
+                        psychology? Consider other related professions, such as teaching or sales management. These
+                        specialists also use psychology.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+        <!-- интеллект максимальный, мотивация нулевая -->
+        <scenario>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Уровень соответствия профессии</ru>
+                    <en>The level of compliance with the profession</en>
+                </label>
+            </scale>
+            <conditions>
+                <condition var="GROUPS.iq.SUM" operator="больше_или_равно" value="3"/>
+                <condition var="GROUPS.interest.SUM" operator="меньше_или_равно" value="0"/>
+            </conditions>
+            <name>
+                <ru>У вас хорошая свежая голова</ru>
+                <en>You have a good, fresh mind</en>
+            </name>
+            <text>
+                <ru>
+                    <p>Но сильного желания работать психологом, принимать людей каждый день, разбираться в их
+                        проблемах у вас нет. Значит вам нужна какая-то другая профессия, где нужно думать
+                        головой, но не обязательно со внутренним миром других людей.
+                    </p>
+                </ru>
+                <en>
+                    <p>But you lack a strong desire to work as a psychologist, to meet people every day, and to
+                        understand their problems. This means you need another profession where you can use your mind,
+                        but it doesn’t necessarily involve the inner world of others.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+        <!-- интеллект максимальный, мотивация средняя -->
+        <scenario>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Уровень соответствия профессии</ru>
+                    <en>The level of compliance with the profession</en>
+                </label>
+            </scale>
+            <conditions>
+                <condition var="GROUPS.iq.SUM" operator="больше_или_равно" value="3"/>
+                <condition var="GROUPS.interest.SUM" operator="больше" value="0"/>
+                <condition var="GROUPS.interest.SUM" operator="меньше_или_равно" value="3"/>
+            </conditions>
+            <name>
+                <ru>У вас хорошая светлая голова, вы интересуетесь психологией</ru>
+                <en>You have a bright mind, and you are interested in psychology</en>
+            </name>
+            <text>
+                <ru>
+                    <p>Однако ваш интерес к психологии не настолько велик, чтобы вы захотели бы работать психологом
+                        каждый день. Скорее вам интересны вы сами и ваши отношения с другими людьми. А профессия вам
+                        нужна другая! Возможно даже гуманитарная.
+                    </p>
+                </ru>
+                <en>
+                    <p>However, your interest in psychology is not strong enough for you to want to work as a
+                        psychologist every day. Rather, you are more interested in yourself and your relationships with
+                        others. You need another profession! Perhaps even a humanitarian one.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+        <!-- интеллект максимальный, мотивация максимальная -->
+        <scenario>
+            <scale percentVar="SCALE">
+                <label>
+                    <ru>Уровень соответствия профессии</ru>
+                    <en>The level of compliance with the profession</en>
+                </label>
+            </scale>
+            <conditions>
+                <condition var="GROUPS.iq.SUM" operator="больше_или_равно" value="3"/>
+                <condition var="GROUPS.interest.SUM" operator="больше_или_равно" value="4"/>
+            </conditions>
+            <name>
+                <ru>Вы сможете быть хорошим психологом</ru>
+                <en>You can be a good psychologist</en>
+            </name>
+            <text>
+                <ru>
+                    <p>Вас интересуют люди, вы готовы разбираться в их сложном внутреннем мире, помогать им. У вас
+                        хороший интеллект, и вы готовы читать профессиональную психологическую литературу.
+                    </p>
+                </ru>
+                <en>
+                    <p>You are interested in people, and you are ready to understand their complex inner world and help
+                        them. You have good intelligence, and you are willing to read professional psychological
+                        literature.
+                    </p>
+                </en>
+            </text>
+        </scenario>
+    </scenarios>
+</config>

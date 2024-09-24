@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<quiz>
+    <items>
+        <item id="1" group="iq">
+            <name>
+                <ru>Верно ли утверждение, что психика есть у всех?</ru>
+                <en>Is it true that everyone has a psyche?</en>
+            </name>
+            <options>
+                <option value="-1">
+                    <ru>Нет, психика есть только у сумасшедших</ru>
+                    <en>No, only crazy people have a psyche</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>Да, психика есть у всех</ru>
+                    <en>Yes, everyone has a psyche</en>
+                </option>
+                <option value="0">
+                    <ru>Я пока не разобрался в этом вопросе</ru>
+                    <en>I haven't figured this out yet</en>
+                </option>
+            </options>
+        </item>
+        <item id="2" group="interest">
+            <name>
+                <ru>Интересно ли тебе думать о причинах человеческого поведения?</ru>
+                <en>Are you interested in thinking about the reasons behind human behavior?</en>
+            </name>
+            <options>
+                <option value="1" correct="true">
+                    <ru>Да, я всегда об этом думаю</ru>
+                    <en>Yes, I always think about it</en>
+                </option>
+                <option value="0">
+                    <ru>Интересно, но я не готов углубляться в этот вопрос</ru>
+                    <en>It's interesting, but I'm not ready to dive deeper into it</en>
+                </option>
+                <option value="-1">
+                    <ru>Нет, есть вещи поинтереснее</ru>
+                    <en>No, there are more interesting things</en>
+                </option>
+            </options>
+        </item>
+        <item id="3" group="interest">
+            <name>
+                <ru>Готов ли ты углублённо изучить анатомию и физиологию мозга?</ru>
+                <en>Are you ready to study the anatomy and physiology of the brain in depth?</en>
+            </name>
+            <options>
+                <option value="1" correct="true">
+                    <ru>Готов с удовольствием</ru>
+                    <en>I'm ready with pleasure</en>
+                </option>
+                <option value="-1">
+                    <ru>Биология... фу</ru>
+                    <en>Biology... ugh</en>
+                </option>
+                <option value="0">
+                    <ru>Я готов общаться с людьми, но при чём тут их мозг?</ru>
+                    <en>I'm ready to communicate with people, but what does their brain have to do with it?</en>
+                </option>
+            </options>
+        </item>
+        <item id="4" group="interest">
+            <name>
+                <ru>Представьте себе неприятного вам человека. Могли бы вы встречаться с этим человеком раз в неделю по
+                    часу и работать с ним над его проблемами?
+                </ru>
+                <en>Imagine a person you dislike. Would you be able to meet with this person once a week for an hour and
+                    work on their problems?
+                </en>
+            </name>
+            <options>
+                <option value="1" correct="true">
+                    <ru>Да, я готов, мне интересны все люди</ru>
+                    <en>Yes, I'm ready; I'm interested in all people</en>
+                </option>
+                <option value="0">
+                    <ru>Я не уверен, надо подумать</ru>
+                    <en>I'm not sure; I need to think</en>
+                </option>
+                <option value="-1">
+                    <ru>Нет, я не смогу</ru>
+                    <en>No, I can't</en>
+                </option>
+            </options>
+        </item>
+        <item id="5" group="iq">
+            <name>
+                <ru>Какая из трёх фраз ближе всего по смыслу к фразе «На всякого мудреца довольно простоты»?</ru>
+                <en>Which of the three phrases is closest in meaning to the phrase "For every sage, there is enough
+                    simplicity"?
+                </en>
+            </name>
+            <options>
+                <option value="-1">
+                    <ru>Не рой яму другому - сам в неё попадёшь</ru>
+                    <en>Don't dig a pit for others; you will fall into it yourself</en>
+                </option>
+                <option value="-1">
+                    <ru>Сколько голов - столько умов</ru>
+                    <en>As many heads, so many minds</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>На всякую старуху бывает проруха</ru>
+                    <en>Every old woman has her mistake</en>
+                </option>
+            </options>
+        </item>
+        <item id="6" group="iq">
+            <name>
+                <ru>Реши задачу</ru>
+                <en>Solve the problem</en>
+            </name>
+            <text>
+                <ru>Сергей за 3 часа может повесить 24 полки. Иван может за полчаса повесить 8 полок. Если
+                    Сергей и Иван будут работать в таком же темпе вместе в течение 6 часов, сколько полок они сумеют
+                    повесить?
+                </ru>
+                <en>
+                    Sergey can hang 24 shelves in 3 hours. Ivan can hang 8 shelves in half an hour.
+                    If Sergey and Ivan work together at the same pace for 6 hours, how many shelves will they hang?
+                </en>
+            </text>
+            <options>
+                <option value="-1">
+                    <ru>192</ru>
+                    <en>192</en>
+                </option>
+                <option value="-1">
+                    <ru>94</ru>
+                    <en>94</en>
+                </option>
+                <option value="-1">
+                    <ru>86</ru>
+                    <en>86</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>144</ru>
+                    <en>144</en>
+                </option>
+            </options>
+        </item>
+        <item id="7" group="garbage">
+            <name>
+                <ru>Ты любишь выступать на сцене?</ru>
+                <en>Do you like performing on stage?</en>
+            </name>
+            <options>
+                <option value="1" correct="true">
+                    <ru>Я выискиваю любую возможность чтобы выступить</ru>
+                    <en>I look for any opportunity to perform</en>
+                </option>
+                <option value="0">
+                    <ru>Не люблю, потому что боюсь сцены</ru>
+                    <en>I don't like it because I'm afraid of the stage</en>
+                </option>
+                <option value="0">
+                    <ru>Не люблю, я не демонстративный человек</ru>
+                    <en>I don't like it; I'm not an exhibitionist</en>
+                </option>
+            </options>
+        </item>
+        <item id="8" group="interest">
+            <name>
+                <ru>Готовы ли вы иногда иметь дело с такими текстами?
+                </ru>
+                <en>Are you sometimes ready to deal with texts like this?
+                </en>
+            </name>
+            <text>
+                <ru>Именно в ситуации экзистенциального выбора обнаруживается то, что окончательно и бесповоротно
+                    выводит проблематику выбора за пределы когнитивного подхода: то, что мы на самом деле осуществляем.
+                    Переход от принятия решения, от формирования цели к её реализации - одна из главных загадок
+                    человеческой психологии.
+                </ru>
+                <en>
+                    It is precisely in the situation of existential choice that one discovers what definitively and
+                    irrevocably moves the problem of choice beyond the cognitive approach: what we actually do. The
+                    transition from making a decision, from formulating a goal to its implementation, is one of the main
+                    mysteries of human psychology.
+                </en>
+            </text>
+            <options>
+                <option value="1" correct="true">
+                    <ru>Да</ru>
+                    <en>Yes</en>
+                </option>
+                <option value="0">
+                    <ru>Не уверен</ru>
+                    <en>Not sure</en>
+                </option>
+                <option value="-1">
+                    <ru>Нет</ru>
+                    <en>No</en>
+                </option>
+            </options>
+        </item>
+        <item id="9" group="interest">
+            <name>
+                <ru>Верно ли следующее утверждение?</ru>
+                <en>Is the following statement true?</en>
+            </name>
+            <text>
+                <ru>Меня интересуют люди, но я не готов с ними работать</ru>
+                <en>I'm interested in people, but I'm not ready to work with them</en>
+            </text>
+            <options>
+                <option value="-1">
+                    <ru>Верно! Я не готов работать с людьми</ru>
+                    <en>True! I'm not ready to work with people</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>Нет, не верно. Мне люди интересны и я готов с ними работать как с клиентами</ru>
+                    <en>No, that's not true. I'm interested in people and I'm ready to work with them as clients</en>
+                </option>
+                <option value="0">
+                    <ru>Я ещё не знаю</ru>
+                    <en>I still don't know</en>
+                </option>
+            </options>
+        </item>
+        <item id="10" group="iq">
+            <name>
+                <ru>Какое число следующее?</ru>
+                <en>What is the next number?</en>
+            </name>
+            <text>
+                <ru>85, 91, 76, 82, ?</ru>
+                <en>85, 91, 76, 82, ?</en>
+            </text>
+            <options>
+                <option value="-1">
+                    <ru>65</ru>
+                    <en>65</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>67</ru>
+                    <en>67</en>
+                </option>
+                <option value="-1">
+                    <ru>88</ru>
+                    <en>88</en>
+                </option>
+                <option value="-1">
+                    <ru>97</ru>
+                    <en>97</en>
+                </option>
+            </options>
+        </item>
+        <item id="11" group="interest">
+            <name>
+                <ru>Готов ли ты работать с детьми каждый день?</ru>
+                <en>Are you ready to work with children every day?</en>
+            </name>
+            <options>
+                <option value="0">
+                    <ru>Смотря с какими детьми</ru>
+                    <en>It depends on what kind of children</en>
+                </option>
+                <option value="1" correct="true">
+                    <ru>Да, я готов</ru>
+                    <en>Yes, I'm ready</en>
+                </option>
+                <option value="-1">
+                    <ru>Я не выношу чужих детей</ru>
+                    <en>I can't stand other people's children</en>
+                </option>
+            </options>
+        </item>
+    </items>
+</quiz>

@@ -61,10 +61,8 @@ class AutoCalculator extends AbstractCalculator
         }
 
         // todo добавить в VALUES значения, которые ни разу не были выбраны
-//        dd($groups);
 
-
-        return [
+        $output = [
             'SUM' => $sum,
             'SCALE' => $percentage,
             'VALUES' => $integerValuesPercentageWithValues,
@@ -72,5 +70,9 @@ class AutoCalculator extends AbstractCalculator
             'NON_NEGATIVE_ANSWER_VALUES_SUM' => $nonNegativeValuesSum,
             'GROUPS' => $groups,
         ];
+
+//        dd($output);
+
+        return $output;
     }
 }
