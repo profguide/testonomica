@@ -34,7 +34,7 @@ final class ResultAccessControlServiceTest extends KernelTestCase
         // Создаем результат с этим тестом
         $result = $this->createMock(Result::class);
         $result->method('getTest')->willReturn($test);
-        $result->method('getCreatedAt')->willReturn(new \DateTime('2024-09-25')); // Не старый результат
+        $result->method('getCreatedAt')->willReturn(new \DateTime('2024-09-26')); // Не старый результат
 
         // Проверка, что исключение не выбрасывается
         $this->service->guardResultAccess($result);
@@ -51,7 +51,7 @@ final class ResultAccessControlServiceTest extends KernelTestCase
         // Создаем результат с этим тестом
         $result = $this->createMock(Result::class);
         $result->method('getTest')->willReturn($test);
-        $result->method('getCreatedAt')->willReturn(new \DateTime('2024-09-25')); // Не старый результат
+        $result->method('getCreatedAt')->willReturn(new \DateTime('2024-09-26')); // Не старый результат
 
         // Настраиваем репозиторий, чтобы возвращал true, т.е. пользователь проассоциирован
         $this->usersResultsRepository
@@ -74,7 +74,7 @@ final class ResultAccessControlServiceTest extends KernelTestCase
         // Создаем результат с этим тестом
         $result = $this->createMock(Result::class);
         $result->method('getTest')->willReturn($test);
-        $result->method('getCreatedAt')->willReturn(new \DateTime('2024-09-25')); // Не старый результат
+        $result->method('getCreatedAt')->willReturn(new \DateTime('2024-09-26')); // Не старый результат
 
         // Настраиваем репозиторий, чтобы возвращал false, т.е. пользователь не проассоциирован
         $this->usersResultsRepository
@@ -96,7 +96,7 @@ final class ResultAccessControlServiceTest extends KernelTestCase
         $result = $this->createMock(Result::class);
         $result->method('getTest')->willReturn($test);
         // Старый результат - должен привести к ошибке
-        $result->method('getCreatedAt')->willReturn(new \DateTime('2024-09-23'));
+        $result->method('getCreatedAt')->willReturn(new \DateTime('2024-09-24'));
 
         // Репозиторий не должен вызываться, т.к. результат старый
         $this->usersResultsRepository
