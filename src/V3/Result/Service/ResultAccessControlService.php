@@ -47,7 +47,7 @@ class ResultAccessControlService
         // This is the date when we started providing access
         // only to those results that were associated with the user.
         // Very old results do not have it.
-        $userAssociationRequirementStartDate = new \DateTime('2024-09-25');
+        $userAssociationRequirementStartDate = new \DateTime('2024-09-26');
         return $result->getCreatedAt() < $userAssociationRequirementStartDate;
     }
 }
