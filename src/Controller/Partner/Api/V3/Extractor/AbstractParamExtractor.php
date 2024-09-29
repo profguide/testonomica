@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 abstract class AbstractParamExtractor
 {
-    function getStringRequestParam(Request $request, string $paramName)
+    protected function getStringRequestParam(Request $request, string $paramName)
     {
         // 1. Попытка получить параметр через стандартный метод
         $paramValue = $request->get($paramName);
@@ -19,12 +19,6 @@ abstract class AbstractParamExtractor
             $content = $request->getContent();
             if (!empty($content)) {
                 $data = json_decode($content, true);
-
-                // Проверяем на ошибки при декодировании
-                if (json_last_error() !== JSON_ERROR_NONE) {
-                    // Если JSON невалидный, просто игнорируем это
-                }
-
                 $paramValue = $data[$paramName] ?? null;
             }
         }
