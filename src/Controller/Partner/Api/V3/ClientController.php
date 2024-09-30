@@ -22,7 +22,7 @@ class ClientController extends AbstractRestController
 
     private const ERROR_CODE_MAP = [
         BadRequestException::class => [400],
-        ProviderNotFoundException::class => [422, self::LOG_WARNING]
+        ProviderNotFoundException::class => [401, self::LOG_WARNING]
     ];
 
     public function __construct(protected readonly LoggerInterface $logger)
