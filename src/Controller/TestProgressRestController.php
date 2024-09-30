@@ -10,28 +10,17 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/tests/api/v1", format="json")
- */
+#[Route('/tests/api/v1', format: "json")]
 class TestProgressRestController extends AbstractTestRestController
 {
-    /**
-     * @Route("/first/{testId<[\w-]+>}/")
-     * @param string $testId
-     * @return Response
-     */
+    #[Route("/first/{testId<[\w-]+>}/", methods: ["GET"])]
     public function first(string $testId): Response
     {
         $test = $this->getTest($testId);
         return $this->json($this->questionResponseData($test, $this->questions->getFirstQuestion($test)));
     }
 
-    /**
-     * @Route("/next/{testId<[\w-]+>}/")
-     * @param string $testId
-     * @param Request $request
-     * @return Response
-     */
+    #[Route("/next/{testId<[\w-]+>}/", methods: ["GET"])]
     public function next(string $testId, Request $request): Response
     {
         $test = $this->getTest($testId);
@@ -44,12 +33,7 @@ class TestProgressRestController extends AbstractTestRestController
         return $this->json($this->questionResponseData($test, $question));
     }
 
-    /**
-     * @Route("/prev/{testId<[\w-]+>}/")
-     * @param string $testId
-     * @param Request $request
-     * @return Response
-     */
+    #[Route("/prev/{testId<[\w-]+>}/", methods: ["GET"])]
     public function prev(string $testId, Request $request): Response
     {
         $test = $this->getTest($testId);
@@ -61,6 +45,7 @@ class TestProgressRestController extends AbstractTestRestController
     {
         $number = $this->questions->getQuestionNumber($test, $question->getId());
         $length = $this->questions->getTotalCount($test);
+
         return [
             'question' => $question,
             'number' => $number,

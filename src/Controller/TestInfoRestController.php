@@ -4,40 +4,32 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Controller\Extractor\BoolParamExtractor;
+use App\Repository\TestRepository;
+use App\Service\TestSourceService;
+use App\Test\TestDetailsService;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/tests/api/v1", format="json")
- */
+#[Route('/tests/api/v1', format: "json")]
 class TestInfoRestController extends AbstractTestRestController
 {
-    /**
-     * @Route("/info/{testId<[\w-]+>}/")
-     * @param string $testId
-     * @param Request $request
-     * @return Response
-     */
-    public function info(string $testId, Request $request): Response
+    public function __construct(
+        private readonly TestDetailsService $detailsService,
+        TestRepository                      $tests,
+        TestSourceService                   $questions)
+    {
+        parent::__construct($tests, $questions);
+    }
+
+    #[Route("/info/{testId<[\w-]+>}/", methods: ["GET"])]
+    public function info(string $testId, Request $request, BoolParamExtractor $boolParamExtractor): Response
     {
         $locale = $request->getLocale();
         $test = $this->getTest($testId);
-        $length = $this->questions->getTotalCount($test);
-        $instruction = $this->questions->getInstruction($test);
+        $withQuestions = $boolParamExtractor->extract($request, 'questions') ?? false;
 
-        $authors = [];
-        foreach ($test->getAuthors() as $author) {
-            $authors[] = ['name' => $author->getName($locale), 'url' => $this->generateUrl('tests.author', ['slug' => $author->getSlug()])];
-        }
-        return $this->json([
-            'name' => $test->getName($locale),
-            'description' => $test->getDescription($locale),
-            'instruction' => $instruction,
-            'authors' => $authors,
-            'duration' => $test->getDuration(),
-            'length' => $length,
-            'paid' => !$test->isFree()
-        ]);
+        return $this->json($this->detailsService->get($test, $locale, $withQuestions));
     }
 }

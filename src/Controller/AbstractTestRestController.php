@@ -23,7 +23,7 @@ abstract class AbstractTestRestController extends AbstractRestController
     protected function getTest(string|int $id): Test
     {
         if (is_numeric($id)) {
-            $test = $this->tests->findOneById((int) $id);
+            $test = $this->tests->findOneById((int)$id);
         } else {
             $test = $this->tests->findOneBySlug($id);
         }

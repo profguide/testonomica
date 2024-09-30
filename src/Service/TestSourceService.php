@@ -21,6 +21,15 @@ class TestSourceService
         $this->repository = $sourceParser;
     }
 
+    /**
+     * @param Test $test
+     * @return Question[]
+     */
+    function getAll(Test $test): array
+    {
+        return $this->repository->getAllQuestions($test);
+    }
+
     public function getQuestion(Test $test, $id): Question
     {
         return $this->repository->getQuestion($test, $id);
